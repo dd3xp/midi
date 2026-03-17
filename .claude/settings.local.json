@@ -22,7 +22,14 @@
       "Bash(python3 src/preprocess.py)",
       "Bash(python3 c:/lxr/study/final/src/synthesize.py)",
       "Bash(rm -rf /c/lxr/study/final/datagen/processed_violin/*)",
-      "Bash(python3 c:/lxr/study/final/src/preprocess.py)"
+      "Bash(python3 c:/lxr/study/final/src/preprocess.py)",
+      "Bash(python src/data/verify_data.py)",
+      "Bash(python -c \":*)",
+      "Bash(pip list:*)",
+      "Bash(pip install:*)",
+      "Bash(py -3.11 --version)",
+      "Bash(py -3.12 --version)",
+      "Bash(py --list)"
     ]
   }
 }

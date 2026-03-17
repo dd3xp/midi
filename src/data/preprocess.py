@@ -20,12 +20,13 @@ import glob
 import numpy as np
 import librosa
 import soundfile as sf
+import midiutil
 
 
 # ============ 配置 ============
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.dirname(os.path.dirname(SCRIPT_DIR))
-URMP_DIR = os.path.join(PROJECT_ROOT, "dataset", "URMP")
+URMP_DIR = os.path.join(PROJECT_ROOT, "dataset")
 OUTPUT_BASE = os.path.join(PROJECT_ROOT, "datagen")
 HOP_TIME = 0.01    # 10ms，与 URMP F0s 标注一致
 TARGET_SR = 16000   # 下采样到 16kHz，减少计算量
@@ -120,7 +121,6 @@ def find_tracks(urmp_dir, instrument):
 
             f0s_pattern = os.path.join(piece_dir, f"F0s_{track_num}_{instrument}_*.txt")
             notes_pattern = os.path.join(piece_dir, f"Notes_{track_num}_{instrument}_*.txt")
-
             f0s_files = glob.glob(f0s_pattern)
             notes_files = glob.glob(notes_pattern)
 
@@ -137,6 +137,21 @@ def find_tracks(urmp_dir, instrument):
             })
 
     return tracks
+
+
+def notes_to_midi(notes, output_path):
+    """将 notes (N,4) [onset, offset, midi_pitch, velocity] 转为单轨 MIDI 文件。"""
+    midi = midiutil.MIDIFile(1)
+    midi.addTempo(0, 0, 120)  # BPM 仅影响内部编码，不影响实际时间
+    bps = 120 / 60  # beats per second
+    for onset, offset, pitch, vel in notes:
+        start_beat = onset * bps
+        duration_beat = (offset - onset) * bps
+        if duration_beat <= 0:
+            continue
+        midi.addNote(0, 0, int(pitch), start_beat, duration_beat, int(vel))
+    with open(output_path, "wb") as f:
+        midi.writeFile(f)
 
 
 def synthesize(f0, amp, hop_time, sr):
@@ -206,6 +221,9 @@ def process_track(track_info, output_dir):
         hop_time=np.float32(HOP_TIME),
         sr=np.int32(TARGET_SR),
     )
+
+    # 从 notes 生成单乐器 MIDI 文件（方便对比听）
+    notes_to_midi(notes, os.path.join(track_dir, "notes.mid"))
 
     # 合成验证音频
     audio = synthesize(f0, amp, HOP_TIME, TARGET_SR)
