@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:labsites.rochester.edu)",
+      "WebFetch(domain:datadryad.org)",
+      "Bash(curl -L -o /c/lxr/study/final/dataset/URMP.tar.gz \"https://datadryad.org/downloads/file_stream/99348\" --progress-bar)",
+      "Bash(curl -L -o /c/lxr/study/final/dataset/URMP.tar.gz -H \"User-Agent: Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/131.0.0.0 Safari/537.36\" -H \"Accept: */*\" -H \"Referer: https://datadryad.org/stash/dataset/doi:10.5061/dryad.ng3r749\" \"https://datadryad.org/downloads/file_stream/99348\" -w \"\\\\n%{http_code} %{size_download}\")",
+      "Bash(pip3 --version)",
+      "Bash(python3 -c \"import numpy; print\\(''numpy'', numpy.__version__\\)\")",
+      "Bash(python3 -c \"import librosa; print\\(''librosa'', librosa.__version__\\)\")",
+      "Bash(python3 -c \"import mido; print\\(''mido'', mido.__version__\\)\")",
+      "Bash(python3 -c \"import scipy; print\\(''scipy'', scipy.__version__\\)\")",
+      "Bash(python3 -c \"import torch; print\\(''torch'', torch.__version__\\)\")",
+      "Bash(pip3 install:*)",
+      "Bash(pip3 list:*)",
+      "Bash(python3 preprocess.py)",
+      "Bash(python3 verify_data.py)",
+      "Bash(python3 -c \":*)",
+      "Bash(python3 -c \"import matplotlib\")",
+      "Bash(python3 src/view_npz.py --export)",
+      "Bash(python3 src/preprocess.py)",
+      "Bash(python3 c:/lxr/study/final/src/synthesize.py)",
+      "Bash(rm -rf /c/lxr/study/final/datagen/processed_violin/*)",
+      "Bash(python3 c:/lxr/study/final/src/preprocess.py)"
+    ]
+  }
+}

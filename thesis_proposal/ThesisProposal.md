@@ -1,0 +1,132 @@
+---
+header-includes:
+  - \usepackage{indentfirst}
+  - \setlength{\parindent}{2em}
+---
+
+# 毕业论文开题报告
+
+```{=latex}
+\setlength{\parindent}{0pt}
+\noindent
+```
+
+**论文题目**：从 MIDI 到连续演奏信息的生成  
+**姓名**：张景铭  
+**学号**：22300246005  
+**专业**：计算机科学与技术  
+**导师姓名**：李伟  
+**导师职称**：教授  
+
+```{=latex}
+\setlength{\parindent}{2em}
+```
+
+## 1. 相关研究状况
+
+### 1.1 问题背景
+
+MIDI（Musical Instrument Digital Interface）是一种用于记录和传输演奏信息的数字协议与文件格式，存储音符音高，起止时间，力度，节拍，控制器变化等离散指令，而不包含实际波形。相比直接录制音频，MIDI 更容易编辑，在作曲和编曲阶段有很高的实用价值。对于钢琴等按键触发的乐器，MIDI 可以较好地表达演奏情况；但对于小号，小提琴等连续发声的乐器，演奏时的颤音，滑音等连续变化很难被 MIDI 准确描述。本次工作的任务就是从这种离散符号恢复到连续演奏表达。
+
+在更广泛的领域内，条件音频合成或生成是近年来研究的热点。MusicLM（Agostinelli et al.，2023）将文本到音乐的生成建模为层次化序列到序列任务，MusicGen（Copet et al.，2023）采用单阶段 Transformer 在压缩离散 token 上建模，支持文本或旋律条件控制，AudioLDM 2（Liu et al.，2024）则通过统一的音频表示实现跨模态生成，ACE-Step（Gong et al., 2025）更是通过扩散生成，DCAE（Deep Compression AutoEncoder）和轻量线性 Transformer 在保证旋律质量的情况下大幅增加了生成速度。这类端到端方法虽然已经在生成方面取得了很好的效果，但通常需要大规模数据和大量计算资源，且输入多为文本或高层语义，输出直接为波形，缺乏对演奏细节（如帧级基频，振幅包络）的显式可控性。若将 MIDI 作为条件直接做端到端的波形生成，同样面临训练成本高，数据需求大，可解释性不足等问题。
+
+### 1.2 分层建模
+
+在符号层面的演奏表达建模方面，已经有人研究过 expressive performance modeling 问题。expressive performance modeling 是指在给定乐谱或基础 MIDI 音符序列的情况下，学习预测演奏中的影响表现性的变量，如力度变化，时值微偏移等，从而使生成的演奏更接近真实人类表演。
+
+Performance RNN（Oore et al.，2018）将钢琴演奏建模为包含时值偏移与力度变化的序列生成任务，通过 LSTM 结构生成带有表现力的 MIDI 演奏数据。随后，基于 Transformer 的方法进一步提升了长时依赖建模能力，例如 Music Transformer（Huang et al.，2019）通过相对位置编码增强对音乐结构的建模能力。REMI 表示方法（Huang & Yang，2020）将力度，拍号与节奏等表达控制变量编码为离散 token，使序列模型能够学习更丰富的演奏表达。然而，这类方法主要停留在符号层面的表达控制变量建模，因此对于给定的乐谱或机械的 MIDI，模型的工作仅仅是对离散 MIDI 事件进行增强然后输出，而非直接预测帧级连续演奏信号。
+
+为了解决上述问题，研究者提出引入演奏表达层作为中间表示，将符号，演奏表达与音色解耦，从而兼顾可控性和可解释性。DDSP（Engel et al.，2020）将谐波振荡器，滤波器等传统信号处理模块嵌入可微分框架，在可微分的情况下，梯度就可以反向传播，从而使神经网络依赖梯度学习预测帧级基频 $f_{0}(t)$ 和响度 $loudness$，再通过可微合成器生成波形，该波形即为声波。这种以 $f_{0}(t)$ 和 $loudness$ 为显式控制变量的设计兼顾了可解释性与合成质量，为后续分层建模工作奠定了基础。MIDI-DDSP（Wu et al.，2022）进一步将建模分层，将符号信息映射为演奏表达参数再合成音频。近期工作将 DDSP 思路扩展到吉他等多乐器场景，如（Jonason et al.，2023）研究了从弦级 MIDI 到吉他音频的合成，并比较了控制特征预测中分类与回归的优劣；（Tan et al.，2020）针对钢琴演奏的可控合成，研究了 articulation 与 dynamics 等表达特征的建模。在符号表示方面，MidiTok（Fradet et al.，2023）提供了统一的 MIDI 分词接口，便于序列模型处理。此外，DDSP 的扩展工作将可解释建模思路延伸到更多信号处理模块，例如（Yu et al.，2024）将时变滤波器纳入可微框架，使相位器，压缩器等动态的音频系统的参数也可以端到端学习，保持了显式信号处理的可解释性。最新工作 （Dhiman, 2026）比较了基于音频的基础模型与传统符号方法在钢琴演奏评估上的表现，结果显示音频模型整体性能优于符号基线；该研究还发现音频和符号融合的增益有限，仅用音频表示即可达到较好效果，说明连续，帧级的音频表示确实在评估中优于离散符号。
+
+话虽如此，但现有分层建模工作大多关于整体音频合成效果，对于符号到连续帧级表达信号预测这一问题的建模形式讨论较少。本次工作的内容就在分层建模中的符号到演奏表达这一环节，而不是创造一个端到端的 MIDI 到波形映射。通过中间层，可以降低训练与数据成本，并为真正学习音色生成的模型提供具有物理意义，时间连续且可解释的中间表示。
+
+### 1.3 数据评估
+
+符号与音频配对数据是表达建模的关键基础。MAESTRO（Hawthorne et al.，2018）提供高精度对齐的钢琴音频与 MIDI，被广泛用于音频生成与对齐研究；URMP（Li et al.，2018），ASAP（Foscarin et al.，2020）等数据集可作为多乐器与对齐研究的补充。帧级 $f_{0}(t)$ 和 $amp(t)$ 的提取技术已较为成熟（如 CREPE 用于音高，RMS 或能量包络用于振幅），可从音频中可靠获得监督标签。这些数据与技术为本次任务提供了基础支持。
+
+## 2. 选题意义
+
+如上面所述，MIDI 作为离散符号难以准确描述连续发声乐器的演奏细节。相关研究状况中提到的各类工作，无论是 DDSP，MIDI-DDSP 的演奏表达参数，MusicGen 的压缩离散 token，还是 AudioLDM 2 的统一音频表示，都体现了引入中间表示层的共同思路，即通过将符号，演奏表达，音色等解耦到不同表示层，同时保证可控性和可解释性，并降低各环节的建模难度。本次工作采用与上述研究一脉相承的思路，主要研究分层建模中的符号到演奏表达的表示层。
+
+本次工作的目标是从离散的 MIDI 信号中生成连续的帧级表达信号，尤其是基频 $f_{0}(t)$ 和振幅 $amp(t)$。基频决定音高轨迹，刻画颤音，滑音等音高变化；振幅包络刻画力度与响度随时间的变化，二者正好对应 MIDI 无法表达的两种连续变化。因此通过这两个参数将离散符号转换成连续演奏信息，显式地恢复演奏方式，可以为后续学习乐器音色的模型提供更具物理意义，时间连续且可解释的中间表示。相比直接做 MIDI 到波形的端到端映射，本工作主要服务于生成这一表示层，在保证可控性的同时降低训练与数据成本，并为后续真正学习乐器音色的模型提供可靠的基础模型。
+
+## 3. 研究内容和时间安排
+
+### 3.1 研究内容
+
+**数据和表示方法**：研究如何构建适用于 MIDI 到连续表达建模的配对数据集。主要包括：如何从单音乐器音频中可靠提取帧级 $f_{0}(t)$ 和 $amp(t)$ 作为监督标签；如何保证 MIDI 与音频的时间对齐；单音数据在规模与质量上如何满足训练需求。在此基础上，研究多音场景下数据构建的扩展方式，以及多音与单音在标注与对齐上的差异。
+
+**建模方法**：研究如何从离散 MIDI 符号建模到连续帧级演奏表达。主要包括：MIDI 的序列化表示：如何将音符音高，起止时间，力度等信息转换为可供序列模型学习的输入，并与帧级时间轴对齐；模型结构与输出设计：基于 Transformer 等结构设计生成模型，联合预测 $f_{0}(t)$ 和 $amp(t)$ 并研究输出形式（回归，分类或混合），多任务损失权重，以及针对连续信号预测的平滑优化对恢复效果的影响；单音到多音的扩展：在单音建模稳定的前提下，研究多音场景下模型的表现，并根据表现调整策略，包括多音叠加，声部分离等处理方式。
+
+**评估验证**：研究连续演奏表达恢复质量的评估方法。通过误差指标和轨迹可视化等方式评估模型对连续表达的恢复能力，具体评估 $f_{0}(t)$ 和 $amp(t)$ 误差和轨迹质量，必要时设计 baseline 实验和消融实验评估各个参数对恢复结果的影响。如果有条件，可以将该模型放入完整的音色生成系统中测试音色生成的表现，或自己设计 $f_{0}(t)$ 和 $amp(t)$ 的音频合成器直观展示音频质量。
+
+### 3.2 时间安排
+
+1. **构建数据集**：第1周至第3周
+2. **MIDI 到帧级表达信号建模（含模型结构，输出头与损失设计）**：第4周至第7周
+3. **扩展到多音**：第8周
+4. **模型评估和修改**：第9周至第10周
+5. **论文写作**：第11周至第13周
+
+## 4. 可行性分析
+
+本次工作在前期采用单音乐器配对数据，可以避免多音场景下声部叠加，对齐复杂等不稳定性，有效保证监督信号的质量。在单音建模稳定后再扩展到多音，即便多音扩展遇到困难，系统也足以在单音表现中完成闭环，满足毕业论文的基本要求。数据方面，MAESTRO（Hawthorne et al.，2018），URMP（Li et al.，2018），ASAP（Foscarin et al.，2020）等公开数据集可提供符号与音频的配对样本，帧级 $f_{0}(t)$ 和 $amp(t)$ 的提取技术（如 CREPE，RMS 包络）已较为成熟，数据构建与更换的成本可控。模型方面，Transformer 在序列建模中表现良好，$f_{0}(t)$ 和 $amp(t)$ 的联合预测可借鉴 MIDI-DDSP 等工作的设计，实现难度适中。评估方面，误差指标与轨迹可视化已有成熟做法，必要时可设计 baseline 与消融实验。以上几点形成的逻辑链足够支撑论文撰写，若时间允许可在多音扩展，下游合成验证等方面进一步深化。
+
+## 5. 难点分析
+
+### 5.1 MIDI 与音频的时间对齐问题
+
+由于 $f_{0}(t)$ 和 $amp(t)$ 是从真实音频中提取的，MIDI 时间轴需要与真实音频严格对齐才能保证监督标签的正确性。但真实录音往往存在起奏延迟，节奏微偏差等问题，人工演奏与乐谱的细微差异也会导致对齐困难。目前可采用的解决方式包括：使用工具手动对齐 MIDI 与音频的起始时间；利用 DTW 等算法进行自动对齐；或选用 MAESTRO 等已提供对齐标注的数据集。若使用自建数据，需要建立一套可靠的对齐流程，并在数据构建阶段投入相应精力。
+
+### 5.2 连续表达信号的稳定建模
+
+$f_{0}(t)$ 和 $amp(t)$ 虽是连续信号，但真实音频中的噪声，泛音，多音叠加等可能导致提取结果出现跳变或异常值。若为抑制噪声而过度平滑，又可能丢失颤音，滑音等演奏细节。因此，让模型既保留颤音等细节，又保持整体轨迹平滑，避免不合理跳变，是建模的难点。目前考虑的解决思路包括：在无声段不监督 $f_{0}(t)$，避免无效学习；在损失函数中加入平滑正则项限制跳变；针对 $f_{0}(t)$ 采用对数尺度或分类辅助回归等方式提升稳定性。具体效果需要通过预测曲线与真实曲线的对比分析，针对颤音等典型片段进行调试与策略调整。
+
+## 6. 创新性分析
+
+### 6.1 表达与音色的分层建模
+
+本次工作不采用端到端的 MIDI 到波形建模，而是将任务拆分为离散符号到连续演奏表达的恢复，再将恢复的 $f_{0}(t)$ 和 $amp(t)$ 作为下游音色生成模型的输入。这种分层方式使演奏表达与音色解耦，各环节可独立优化与替换，为分层建模的完整链路提供可复用的中间模块，也便于后续在音色，乐器扩展等方面做针对性改进。
+
+### 6.2 帧级 $f_{0}(t)$ 和 $amp(t)$ 的联合预测
+
+在共享序列表示下联合预测 $f_{0}(t)$ 和 $amp(t)$，利用二者在时间上的相关性（如力度变化往往伴随振幅变化），提升表达轨迹的一致性。相较于分别预测，联合建模有助于约束输出在物理上更合理，并可在后续扩展更多表达参数（如 vibrato 深度，articulation 等）。
+
+## 7. 预期成果和形式
+
+### 7.1 预期成果
+
+一套完整的 MIDI 到连续表达信号建模流程，包括：数据预处理与对齐流程（MIDI 与音频配对，$f_{0}(t)$ 和 $amp(t)$ 提取）；基于 Transformer 或类似结构的生成模型与训练方法；评估与可视化工具（误差指标，轨迹对比图等）。在单音场景下实现可用的 MIDI 到连续表达映射，并形成可复现的实验结论。若条件允许，可进一步扩展到多音场景或接入下游合成系统进行端到端验证。
+
+### 7.2 成果形式
+
+1. 毕业论文
+2. 可运行的模型推理代码和训练代码
+3. 可运行的自动化测试与评估工具
+4. 与论文内实验对应的数据与结果
+
+## 8. 参考文献
+
+```{=latex}
+\setlength{\parindent}{0pt}
+\noindent
+```
+
+[1] Agostinelli, A., et al.  MusicLM: Generating Music From Text. arXiv:2301.11325, 2023.  
+[2] Copet, J., et al. Simple and Controllable Music Generation. NeurIPS, 2023.  
+[3] Engel, J., et al. DDSP: Differentiable Digital Signal Processing. ICLR, 2020.  
+[4] Fradet, N., et al. MidiTok: A Python package for MIDI file tokenization. arXiv:2310.17202, 2023.  
+[5] Hawthorne, C., et al. MAESTRO: A dataset for audio and MIDI alignment. 2018.  
+[6] Tan, H., et al. Generative Modelling for Controllable Audio Synthesis of Expressive Piano Performance. arXiv:2006.09833, 2020.  
+[7] Jonason, N., et al. DDSP-based Neural Waveform Synthesis of Polyphonic Guitar Performance from String-wise MIDI Input. arXiv:2309.07658, 2023.  
+[8] Kim, J. W., et al. CREPE: A Convolutional Representation for Pitch Estimation. ICASSP, 2018.  
+[9] Liu, H., et al. AudioLDM 2: Learning Holistic Audio Generation with Self-supervised Pretraining. ICLR, 2024.  
+[10] Wu, Y., et al. MIDI-DDSP: Detailed Control of Musical Performance via Hierarchical Modeling. ICLR, 2022.  
+[11] Li, B., et al. Creating a multi-track classical music performance dataset for multi-modal music analysis. IEEE Trans. Multimedia, 2018.  
+[12] Foscarin, F., et al. ASAP: a dataset of aligned scores and performances for piano transcription. ISMIR, 2020.  
+[13] Yu, C.-Y., et al. Differentiable All-pole Filters for Time-varying Audio Systems. DAFx, 2024.  
+[14] Oore, S., et al. This Time with Feeling: Learning Expressive Musical Performance. arXiv:1808.03715, 2018.  
+[15] Huang, C.-Z. A., et al. Music Transformer: Generating Music with Long-Term Structure. ICLR, 2019.  
+[16] Huang, Y.-S., & Yang, Y.-H. Pop Music Transformer: Beat-based Modeling and Generation of Expressive Pop Piano Compositions. arXiv:2002.00212, 2020.  
+[17] Dhiman, J. Audio Foundation Models Outperform Symbolic Representations for Piano Performance Evaluation. arXiv:2601.19029, 2026.  
+[18] Gong, J., et al. ACE-Step: A Step Towards Music Generation Foundation Model. arXiv:2506.00045, 2025.  
