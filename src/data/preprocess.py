@@ -24,7 +24,7 @@ import soundfile as sf
 
 # ============ 配置 ============
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-PROJECT_ROOT = os.path.dirname(SCRIPT_DIR)
+PROJECT_ROOT = os.path.dirname(os.path.dirname(SCRIPT_DIR))
 URMP_DIR = os.path.join(PROJECT_ROOT, "dataset", "URMP")
 OUTPUT_BASE = os.path.join(PROJECT_ROOT, "datagen")
 HOP_TIME = 0.01    # 10ms，与 URMP F0s 标注一致

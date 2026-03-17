@@ -46,7 +46,7 @@ def main():
 
     if not args:
         script_dir = os.path.dirname(os.path.abspath(__file__))
-        project_root = os.path.dirname(script_dir)
+        project_root = os.path.dirname(os.path.dirname(script_dir))
         data_dir = os.path.join(project_root, "datagen")
         # 找第一个文件夹
         folders = sorted([d for d in os.listdir(data_dir)
