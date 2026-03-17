@@ -1,27 +1,50 @@
 """
 URMP 数据预处理脚本
-将小提琴音轨处理为 (notes, f0, amp) 三元组，用于 MIDI→连续演奏表达 模型训练。
+将指定乐器的音轨处理为 (notes, f0, amp) 三元组，用于 MIDI→连续演奏表达 模型训练。
 
 输入: URMP 数据集目录
 输出: 每条音轨一个文件夹，包含:
   - data.npz: notes(N,4), f0(T,), amp(T,), hop_time, sr
   - synth.wav: 用 f0+amp 正弦波合成的音频（用于验证）
+
+用法:
+  python preprocess.py                  # 处理所有支持的乐器
+  python preprocess.py vn               # 只处理小提琴
+  python preprocess.py vn fl            # 处理小提琴和长笛
+  python preprocess.py tpt              # 只处理小号
 """
 
+import sys
 import os
 import glob
 import numpy as np
 import librosa
 import soundfile as sf
-from pathlib import Path
 
 
 # ============ 配置 ============
-URMP_DIR = "c:/lxr/study/final/dataset/URMP"
-OUTPUT_DIR = "c:/lxr/study/final/datagen/processed_violin"
-INSTRUMENT = "vn"  # 小提琴
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(SCRIPT_DIR)
+URMP_DIR = os.path.join(PROJECT_ROOT, "dataset", "URMP")
+OUTPUT_BASE = os.path.join(PROJECT_ROOT, "datagen")
 HOP_TIME = 0.01    # 10ms，与 URMP F0s 标注一致
 TARGET_SR = 16000   # 下采样到 16kHz，减少计算量
+
+# URMP 中的单音乐器: 缩写 -> 中文名
+SUPPORTED_INSTRUMENTS = {
+    "vn": "小提琴",
+    "va": "中提琴",
+    "vc": "大提琴",
+    "db": "低音提琴",
+    "fl": "长笛",
+    "ob": "双簧管",
+    "cl": "单簧管",
+    "bn": "巴松管",
+    "tpt": "小号",
+    "hn": "圆号",
+    "tbn": "长号",
+    "tba": "大号",
+}
 
 
 def hz_to_midi(f0_hz):
@@ -78,9 +101,9 @@ def extract_amp(audio, sr, hop_time):
     return rms.astype(np.float32)
 
 
-def find_violin_tracks(urmp_dir):
+def find_tracks(urmp_dir, instrument):
     """
-    扫描 URMP 目录，找到所有小提琴音轨。
+    扫描 URMP 目录，找到指定乐器的所有音轨。
     返回: list of dict, 每个包含 audio_path, f0s_path, notes_path, track_id
     """
     tracks = []
@@ -89,17 +112,14 @@ def find_violin_tracks(urmp_dir):
             continue
         piece_name = os.path.basename(piece_dir)
 
-        # 找该 piece 中的所有小提琴分轨
-        audio_files = glob.glob(os.path.join(piece_dir, f"AuSep_*_{INSTRUMENT}_*.wav"))
+        audio_files = glob.glob(os.path.join(piece_dir, f"AuSep_*_{instrument}_*.wav"))
         for audio_path in sorted(audio_files):
             fname = os.path.basename(audio_path)
-            # AuSep_1_vn_01_Jupiter.wav -> 提取编号
             parts = fname.replace(".wav", "").split("_")
-            track_num = parts[1]  # "1", "2", etc.
+            track_num = parts[1]
 
-            # 对应的 F0s 和 Notes 文件
-            f0s_pattern = os.path.join(piece_dir, f"F0s_{track_num}_{INSTRUMENT}_*.txt")
-            notes_pattern = os.path.join(piece_dir, f"Notes_{track_num}_{INSTRUMENT}_*.txt")
+            f0s_pattern = os.path.join(piece_dir, f"F0s_{track_num}_{instrument}_*.txt")
+            notes_pattern = os.path.join(piece_dir, f"Notes_{track_num}_{instrument}_*.txt")
 
             f0s_files = glob.glob(f0s_pattern)
             notes_files = glob.glob(notes_pattern)
@@ -108,7 +128,7 @@ def find_violin_tracks(urmp_dir):
                 print(f"  [SKIP] Missing F0s or Notes for {fname}")
                 continue
 
-            track_id = f"{piece_name}_track{track_num}_{INSTRUMENT}"
+            track_id = f"{piece_name}_track{track_num}_{instrument}"
             tracks.append({
                 "audio_path": audio_path,
                 "f0s_path": f0s_files[0],
@@ -204,28 +224,29 @@ def process_track(track_info, output_dir):
     }
 
 
-def main():
+def process_instrument(instrument, urmp_dir, output_base):
+    """处理单个乐器的所有音轨。"""
+    inst_name = SUPPORTED_INSTRUMENTS[instrument]
+    output_dir = os.path.join(output_base, f"processed_{instrument}")
+
     print("=" * 60)
-    print("URMP 小提琴数据预处理")
+    print(f"处理乐器: {inst_name} ({instrument})")
     print("=" * 60)
 
-    # 创建输出目录
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
+    os.makedirs(output_dir, exist_ok=True)
 
-    # 扫描所有小提琴音轨
-    tracks = find_violin_tracks(URMP_DIR)
-    print(f"\n找到 {len(tracks)} 条小提琴音轨\n")
+    tracks = find_tracks(urmp_dir, instrument)
+    print(f"\n找到 {len(tracks)} 条 {inst_name} 音轨\n")
 
     if not tracks:
-        print("未找到音轨，请检查 URMP 目录。")
-        return
+        print(f"未找到 {inst_name} 音轨，跳过。\n")
+        return []
 
-    # 处理每条音轨
     results = []
     for i, track in enumerate(tracks):
         print(f"[{i+1}/{len(tracks)}] 处理 {track['track_id']}...")
         try:
-            result = process_track(track, OUTPUT_DIR)
+            result = process_track(track, output_dir)
             results.append(result)
             print(f"  -> {result['n_notes']} notes, {result['n_frames']} frames, "
                   f"{result['duration_sec']:.1f}s, "
@@ -234,26 +255,62 @@ def main():
         except Exception as e:
             print(f"  [ERROR] {e}")
 
-    # 汇总统计
-    print("\n" + "=" * 60)
-    print("汇总统计")
-    print("=" * 60)
-    total_frames = sum(r["n_frames"] for r in results)
-    total_notes = sum(r["n_notes"] for r in results)
-    total_duration = sum(r["duration_sec"] for r in results)
-    all_f0_min = min(r["f0_min"] for r in results if r["f0_min"] > 0)
-    all_f0_max = max(r["f0_max"] for r in results)
-    all_amp_min = min(r["amp_min"] for r in results)
-    all_amp_max = max(r["amp_max"] for r in results)
+    if results:
+        print(f"\n--- {inst_name} 汇总 ---")
+        total_frames = sum(r["n_frames"] for r in results)
+        total_notes = sum(r["n_notes"] for r in results)
+        total_duration = sum(r["duration_sec"] for r in results)
+        all_f0_min = min(r["f0_min"] for r in results if r["f0_min"] > 0)
+        all_f0_max = max(r["f0_max"] for r in results)
+        all_amp_min = min(r["amp_min"] for r in results)
+        all_amp_max = max(r["amp_max"] for r in results)
 
-    print(f"成功处理: {len(results)}/{len(tracks)} 条音轨")
-    print(f"总音符数: {total_notes}")
-    print(f"总帧数:   {total_frames}")
-    print(f"总时长:   {total_duration:.1f}s ({total_duration/60:.1f}min)")
-    print(f"f0 范围:  [{all_f0_min:.1f}, {all_f0_max:.1f}] Hz")
-    print(f"amp 范围: [{all_amp_min:.6f}, {all_amp_max:.6f}]")
-    print(f"输出目录: {OUTPUT_DIR}")
-    print(f"输出文件: {len(results)} 个 .npz 文件")
+        print(f"成功处理: {len(results)}/{len(tracks)} 条音轨")
+        print(f"总音符数: {total_notes}")
+        print(f"总帧数:   {total_frames}")
+        print(f"总时长:   {total_duration:.1f}s ({total_duration/60:.1f}min)")
+        print(f"f0 范围:  [{all_f0_min:.1f}, {all_f0_max:.1f}] Hz")
+        print(f"amp 范围: [{all_amp_min:.6f}, {all_amp_max:.6f}]")
+        print(f"输出目录: {output_dir}")
+
+    print()
+    return results
+
+
+def main():
+    # 解析命令行参数：指定乐器，不指定则处理全部
+    args = [a for a in sys.argv[1:] if not a.startswith("-")]
+
+    if args:
+        instruments = []
+        for inst in args:
+            if inst not in SUPPORTED_INSTRUMENTS:
+                print(f"不支持的乐器: {inst}")
+                print(f"支持的乐器: {', '.join(f'{k}({v})' for k, v in SUPPORTED_INSTRUMENTS.items())}")
+                return
+            instruments.append(inst)
+    else:
+        instruments = list(SUPPORTED_INSTRUMENTS.keys())
+
+    print(f"将处理以下乐器: {', '.join(f'{i}({SUPPORTED_INSTRUMENTS[i]})' for i in instruments)}\n")
+
+    all_results = {}
+    for instrument in instruments:
+        results = process_instrument(instrument, URMP_DIR, OUTPUT_BASE)
+        if results:
+            all_results[instrument] = results
+
+    # 总汇总
+    if len(all_results) > 1:
+        print("=" * 60)
+        print("全部乐器汇总")
+        print("=" * 60)
+        for inst, results in all_results.items():
+            inst_name = SUPPORTED_INSTRUMENTS[inst]
+            total_duration = sum(r["duration_sec"] for r in results)
+            print(f"  {inst_name} ({inst}): {len(results)} 条音轨, "
+                  f"{sum(r['n_notes'] for r in results)} 音符, "
+                  f"{total_duration:.1f}s")
 
 
 if __name__ == "__main__":

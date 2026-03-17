@@ -45,7 +45,9 @@ def main():
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
 
     if not args:
-        data_dir = "c:/lxr/study/final/datagen/processed_violin"
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        project_root = os.path.dirname(script_dir)
+        data_dir = os.path.join(project_root, "datagen")
         # 找第一个文件夹
         folders = sorted([d for d in os.listdir(data_dir)
                          if os.path.isdir(os.path.join(data_dir, d))])
