@@ -17,6 +17,7 @@ URMP 数据预处理脚本
 import sys
 import os
 import glob
+import shutil
 import numpy as np
 import librosa
 import soundfile as sf
@@ -251,7 +252,10 @@ def process_instrument(instrument, urmp_dir, output_base):
     print(f"处理乐器: {inst_name} ({instrument})")
     print("=" * 60)
 
-    os.makedirs(output_dir, exist_ok=True)
+    if os.path.exists(output_dir):
+        shutil.rmtree(output_dir)
+        print(f"已清除旧数据: {output_dir}")
+    os.makedirs(output_dir)
 
     tracks = find_tracks(urmp_dir, instrument)
     print(f"\n找到 {len(tracks)} 条 {inst_name} 音轨\n")
