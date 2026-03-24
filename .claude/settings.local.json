@@ -29,7 +29,16 @@
       "Bash(pip install:*)",
       "Bash(py -3.11 --version)",
       "Bash(py -3.12 --version)",
-      "Bash(py --list)"
+      "Bash(py --list)",
+      "Bash(du -sh /c/Codes/midi/*)",
+      "WebFetch(domain:ismir2026.ismir.net)",
+      "WebFetch(domain:dafx26.mit.edu)",
+      "WebFetch(domain:www.audiocontentanalysis.org)",
+      "Bash(python -c \"import torch; print\\(''PyTorch:'', torch.__version__\\); print\\(''CUDA:'', torch.cuda.is_available\\(\\)\\); print\\(''GPU:'', torch.cuda.get_device_name\\(0\\) if torch.cuda.is_available\\(\\) else ''N/A''\\)\")",
+      "Bash(nvidia-smi)",
+      "Bash(\"/c/Program Files/NVIDIA Corporation/NVSMI/nvidia-smi.exe\")",
+      "Bash(\"/c/Windows/System32/nvidia-smi.exe\")",
+      "Bash(python -c \"import subprocess; result = subprocess.run\\([''wmic'', ''path'', ''win32_VideoController'', ''get'', ''name''], capture_output=True, text=True\\); print\\(result.stdout\\)\")"
     ]
   }
 }
