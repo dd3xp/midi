@@ -1,0 +1,19 @@
+Everything is ready. Here's a summary of what was prepared for **exp003**:
+
+## Summary
+
+### Code Fixes Applied
+1. **[C1] CRITICAL — `src/model/dataset.py`**: Changed `extract_piece_id` to extract the **piece name** (e.g., `"Rondeau"`) instead of the piece number (e.g., `"36"`). This fixes the data leakage where identical recordings under different numbers (35/36/37_Rondeau, 38/39_Jerusalem, 15/16_Surprise) were split across train/test sets.
+
+2. **[C2] WARNING — `src/model/diffusion.py`**: Changed `attn_flags` from `[True, False, False]` to `[True, True, False]` to match model.md §5.5.3 ("attention at first two levels, not the deepest"). Only affects Stage 2, but fixed now for readiness.
+
+### New Data Split (verified)
+- **Train**: 59 tracks across 20 pieces — **zero overlap** with test
+- **Test**: 15 tracks across 5 pieces (Allegro, Hark, Jupiter, Nocturne, Surprise)
+- All 3 instruments represented in both sets (vn: 29/5, tpt: 16/6, fl: 14/4)
+
+### Config
+- `experiments/configs/exp003.yaml` — same hyperparams as exp001 (lam=1.0, lr=1e-3, batch=32, dropout=0.3), only the data split changed
+
+### Training Script
+- `experiments/next_train_cmd.sh` — runs Stage 1 training then evaluation, outputting to `experiments/checkpoints/exp003/` and `experiments/results/exp003.json`

@@ -1,0 +1,28 @@
+Everything looks good. Here's a summary of what was prepared:
+
+---
+
+## Summary: exp049 — Pure Amp Diffusion v2
+
+**What**: 1-channel DDPM for amplitude generation, trained as Stage 3 with frozen encoder from exp033.
+
+**Why**: 30 rounds of deterministic AmpPredictor experiments reached a ceiling at Corr ≈ 0.789 (without instrument conditioning). This is a strategic shift to a generative approach that can:
+1. **Break the quality ceiling** via oracle selection from multiple samples
+2. **Provide amp diversity** (currently 0 — the paper's biggest weakness)
+
+**Key improvements over exp021** (previous amp diffusion attempt, Corr=0.407):
+- **Better encoder** (exp033 with velocity input vs exp014 without)
+- **Amp augmentation** (scale=0.2, jitter=0.05)
+- **More training** (300 epochs vs 200)
+
+**No code changes needed** — Stage 3 training and amp_diffusion evaluation are already fully implemented.
+
+**Files created**:
+- `experiments/configs/exp049.yaml` — config with stage3 settings
+- `experiments/next_train_cmd.sh` — training + dual evaluation (η=0.3 with 5 samples, η=0.0 with 1 sample)
+
+**The script will**:
+1. Copy baseline (exp033) and f0 diffusion (exp034) checkpoints to exp049/
+2. Train amp diffusion for 300 epochs (~2-3 hours)
+3. Evaluate with η=0.3 (stochastic, 5 samples for oracle + diversity metrics)
+4. Evaluate with η=0.0 (deterministic baseline comparison)

@@ -1,0 +1,22 @@
+Results logged. Here's the summary:
+
+## exp050 Evaluation Results (Residual Amp Diffusion v2 — Normalized)
+
+| Metric | exp050 (α=1.0) | exp050 (α=0.0, sanity) | exp042 (old residual) | exp039 (best) |
+|--------|----------------|------------------------|-----------------------|---------------|
+| **Amp Corr (mean)** | **0.737** | 0.771 | 0.744 | **0.807** |
+| **Amp Corr (oracle)** | **0.752** | 0.771 | 0.753 | 0.807 |
+| Amp RMSE(log) | 0.960 | 0.865 | 0.699 | 0.582 |
+| **amp_diversity** | **0.008** | 0.000 | 0.004 | ~0 |
+| f0 RPA (mean) | 89.61% | 90.71% | 94.31% | 93.73% |
+
+### Key Findings:
+1. **Residual normalization did NOT improve amp quality** — Corr 0.737 ≈ exp042's 0.744 (-0.9%)
+2. **Diversity improved** — 0.008 vs exp042's 0.004 (+86%), though still below exp041's 0.011
+3. **α=0.0 sanity check passed** — Corr=0.771 ≈ exp045's AmpPredictor (0.781), confirming correct loading
+4. **Core problem confirmed**: Adding residual diffusion noise *hurts* quality (0.737 < 0.771 pure AmpPredictor)
+5. **Residual diffusion direction exhausted** — two attempts (exp042, exp050), both fail to beat deterministic AmpPredictor
+
+**No new records set.** exp039 (Amp Corr 0.807) and exp041 (diversity 0.011) remain the bests. 
+
+The supervisor's 预案 "Amp Corr oracle 0.74-0.78" was triggered — normalization helped little. The residual diffusion approach is now concluded as ineffective for amp quality.

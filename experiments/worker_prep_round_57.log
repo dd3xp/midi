@@ -1,0 +1,33 @@
+Everything is ready. Let me provide a summary.
+
+---
+
+## Summary: exp045 Prepared
+
+**Experiment**: exp045 — Remove instrument embedding only (isolate the cost of removing instrument conditioning)
+
+**What changed vs exp039 (current best, Amp Corr=0.807)**:
+- `amp_instrument_conditioned: false` (was `true`) — the **only** change
+- No note_position (which was shown to be harmful in exp044)
+- All other settings identical: augmentation, attention, lr, dropout, epochs=300
+
+**Background**:
+- exp044 combined two changes (remove instrument + add note_position) and severely degraded (Amp Corr 0.722, -10.5%). The supervisor correctly identified the need to **isolate variables**.
+- exp045 only removes instrument embedding to measure its true cost.
+
+**Expected outcomes** (from supervisor plan):
+- Amp Corr ≥ 0.78 → instrument embedding cost is manageable (~0.02-0.03)
+- Amp Corr ≥ 0.80 → almost no cost! Can proceed with further optimization
+- Amp Corr < 0.75 → instrument embedding is critical, need alternative approach
+
+**Code bugs**: None found. The `amp_instrument_conditioned: false` path is correctly handled in:
+- `train.py`: line 485 reads config, line 592 passes `None` for `instrument_id`
+- `diffusion.py`: AmpPredictor.forward() skips instrument embedding when `instrument_conditioned=False`
+- `evaluate.py`: same logic from config
+
+**Files prepared**:
+- Config: `experiments/configs/exp045.yaml` ✅ (already existed from supervisor)
+- Training script: `experiments/next_train_cmd.sh` ✅ (updated)
+  - Step 1: Train with `--config exp045.yaml --stage 2`
+  - Step 2: Evaluate with 3 samples, DDIM 50 steps, eta=0.3
+  - Diffusion checkpoint loaded via config fallback from `exp034/diffusion_best_ema.pt`

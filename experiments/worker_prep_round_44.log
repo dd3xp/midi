@@ -1,0 +1,44 @@
+Everything looks correct. Let me now provide a summary:
+
+---
+
+## Summary: exp033 prepared
+
+### What was done
+
+**Step 1: Velocity estimation from audio RMS (code changes)**
+
+1. **`src/data/update_velocity.py`** (NEW) — Standalone script that updates velocity in existing .npz files:
+   - Pass 1: For each note, computes peak RMS in 50ms window after onset
+   - Uses 99th percentile as global_max_rms to avoid outlier dominance
+   - Pass 2: Maps to velocity via `velocity = clip(127 * sqrt(peak_rms / global_max_rms), 1, 127)`
+   - **Already executed**: 173 files updated, velocities now range 5-127 (mean=52, std=20)
+
+2. **`src/data/preprocess.py`** (MODIFIED) — Added `estimate_velocity()` function and integrated it into `process_track()` for future preprocessing runs
+
+3. **`src/data/preprocess_bach10.py`** (MODIFIED) — Added velocity estimation call for Bach10 preprocessing
+
+**Step 2: Experiment config**
+
+4. **`experiments/configs/exp033.yaml`** — Stage 1 retrain config (same hyperparams as exp014: lr=0.001, dropout=0.3, patience=15, batch_size=32)
+
+**Step 3: Training script**
+
+5. **`experiments/next_train_cmd.sh`** — Runs Stage 1 training + baseline evaluation
+
+### Velocity distribution (29,080 notes)
+| Range | Count | % |
+|-------|-------|---|
+| 0-20 | 274 | 0.9% |
+| 20-40 | 8,092 | 27.8% |
+| 40-60 | 13,227 | 45.5% |
+| 60-80 | 5,005 | 17.2% |
+| 80-127 | 2,482 | 8.5% |
+
+Before: all notes had velocity=80 (constant). Now: meaningful variation reflecting actual onset loudness.
+
+### Expected outcome
+- The encoder's feature[2] (`velocity/127`) was always 0.63 — now it ranges from 0.04 to 1.0
+- This directly provides the amp predictor with per-note loudness information
+- Stage 1 baseline amp correlation should improve from the current exp014 level
+- The trained encoder from exp033 will be used in exp034 (Stage 2 with AmpPredictor)

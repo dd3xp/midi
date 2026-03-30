@@ -1,0 +1,32 @@
+Both files are correct. Here's a summary of what was prepared:
+
+## Summary: exp040 Prepared
+
+**Experiment**: exp040 — 2x Model + Augmentation (combining capacity & regularization)
+
+**Hypothesis**: exp037's 2x model capacity was masked by overfitting. Adding exp039's augmentation should prevent overfitting, releasing the extra capacity for better amp prediction.
+
+**Key changes vs exp039 (current best, Amp Corr = 0.807)**:
+| Parameter | exp039 | exp040 | Source |
+|-----------|--------|--------|--------|
+| amp_hidden | 256 | **384** | exp037 |
+| amp_gru_hidden | 128 | **192** | exp037 |
+| amp_n_attn_layers | 2 | **4** | exp037 |
+| amp_n_attn_heads | 4 | **8** | exp037 |
+| amp_lr | 5e-5 | **3e-5** | slower for larger model |
+| epochs | 300 | **400** | more training time |
+| amp_augment | true | **true** | kept from exp039 |
+
+**Files created**:
+- `experiments/configs/exp040.yaml` — full config
+- `experiments/next_train_cmd.sh` — training + evaluation script
+
+**Dependencies verified**:
+- ✅ `experiments/checkpoints/exp033/baseline_best.pt` exists (baseline with velocity encoder)
+- ✅ `experiments/checkpoints/exp034/diffusion_best_ema.pt` exists (frozen diffusion)
+- ✅ train.py reads `amp_gru_hidden`, `amp_n_attn_heads`, `amp_n_attn_layers` correctly
+- ✅ evaluate.py reads these params from config's `stage2` section
+- ✅ n_attn_heads=8 divides gru_out_dim=384 (192×2) evenly → 48 per head ✅
+- ✅ No code bugs to fix
+
+**Expected results**: Amp Corr 0.82–0.85 (if augmentation unlocks the 2x model's potential). Estimated training time: ~2–3 hours.

@@ -1,0 +1,30 @@
+The log has been updated correctly. Let me provide a summary of the results:
+
+---
+
+## Round 47 Results Summary
+
+### Two tasks completed this round:
+
+**1. exp035 Re-evaluation (evaluate.py bug fix)**
+- Fixed `evaluate.py` to load frozen diffusion checkpoint from config fallback path
+- f0 metrics now **valid**: RPA = **94.40%** (mean) / **95.72%** (oracle)
+- Amp metrics unchanged: **Amp Corr = 0.800**, Amp RMSE = 0.572
+- VDE = 7.77 / 7.16, VRE = 0.914 / 0.892
+
+**2. exp036: f0-Conditioned AmpPredictor + Scheduled Sampling**
+- 300 epochs completed with full scheduled sampling (GT f0 → generated f0 transition at epochs 50-150)
+- **Result: Amp Corr = 0.797 — slight regression vs exp035's 0.800** ❌
+- Amp RMSE = 0.567 (marginal improvement from 0.572)
+- RPA = 93.18% (mean) / 95.38% (oracle)
+
+### Key findings:
+1. **f0 conditioning works with GT f0** — best test loss at ep52 (0.449) was better than exp035 (0.469), confirming f0 contains useful amplitude information
+2. **But exposure bias persists** — switching to generated f0 degraded test loss from 0.449 → 0.509, and scheduled sampling only partially mitigated this
+3. **Positive discovery: amp diversity** — amp_diversity = 0.000309 (first non-zero!), as different f0 samples → different amp predictions
+4. **exp035 remains the Amp Corr champion at 0.800** — 18 amp optimization attempts across the project, with 0.800 appearing to be near the ceiling for the current data/architecture
+
+### 当前最佳 unchanged:
+- **Amp Corr**: 0.800 (exp035)
+- **Amp RMSE**: 0.567 (exp036) / 0.572 (exp035)
+- **f0 RPA oracle**: 95.72% (exp035 reeval)

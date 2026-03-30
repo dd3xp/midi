@@ -1,0 +1,19 @@
+The results table is now clean with exp006 properly logged. The "当前最佳" section remains unchanged (exp003 for Baseline, exp005 for Diffusion) since exp006 produced no evaluation results.
+
+Here's a summary of what was logged:
+
+## exp006 结果记录完成
+
+**状态**: ❌ 训练被终止 (SIGTERM)
+
+**关键事实**:
+- 训练仅运行了 ~12 分钟（预期 18-30 小时，500 epochs × ~55K steps）
+- 进程被外部终止，log 仅显示 "Terminated"
+- 有 checkpoint 保存（`diffusion_best_ema.pt` @ 20:24），但来自极早期训练，不可用
+- **无评估结果** — evaluate.py 从未运行，无 `exp006.json`
+
+**"当前最佳" 未更新**（无新结果可比较）:
+- Baseline 最佳: exp003 (RPA=97.14%)
+- Diffusion 最佳: exp005 (mean RPA=85.26%, oracle RPA=95.58%)
+
+**待 supervisor 决定**: 代码改动（CosineAnnealingLR + per-metric oracle 修复）已就绪。核心问题是训练时长——500 epochs 需要充足的运行时间，或需要减少 epochs/steps 以适应运行时间限制。

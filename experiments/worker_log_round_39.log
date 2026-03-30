@@ -1,0 +1,19 @@
+The log has been updated successfully. Here's a summary of exp030:
+
+## exp030 Results: Pitch-Anchor Amp Offset — ❌ Failed
+
+**Training**: 200 epochs completed, best test_amp_loss = **0.214** @ epoch 77 (paradoxically much lower than exp028's 0.425)
+
+**Evaluation**:
+| Metric | exp028 (best) | exp030 | Change |
+|--------|--------------|--------|--------|
+| Amp Corr | **0.678** | 0.567 | **-16.4%** ↓ |
+| Amp RMSE | **0.657** | 1.174 | **+78.7%** ↓ |
+| f0 RPA | 95.06% | 95.27% | ≈same |
+
+**Key finding — Training-Evaluation Paradox**: The model learned amp offsets well (lowest test loss ever at 0.214), but converting offsets back to absolute amp introduced massive systematic errors because:
+1. Only 57/128 MIDI pitches had training data — anchor values for the other 71 pitches are unreliable
+2. Unlike f0 (where 12-TET gives a physically precise anchor), pitch→amp mapping has huge variance — the average is a poor anchor
+3. Anchor errors become unavoidable systematic bias in the final prediction
+
+**Conclusion**: The f0 cent-offset analogy does not transfer to amplitude. **exp028 remains the global best**. The 当前最佳 section is unchanged.

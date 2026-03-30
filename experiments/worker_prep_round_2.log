@@ -1,0 +1,17 @@
+Everything is ready. Here's a summary of what was prepared:
+
+## Summary: exp002 Preparation
+
+**Experiment**: exp002 — Baseline with amp loss weight λ=10.0 (Stage 1)
+
+**Following supervisor plan**: Increase `stage1.lam` from 1.0 → 10.0 to boost amplitude learning signal.
+
+**Rationale**: In exp001, f0 CE (~2.7) dominated 82% of total loss while amp MSE (~0.6) only contributed 18%. With λ=10.0, amp loss contribution becomes ~6.0 vs f0 ~2.7, significantly increasing amp gradient signal.
+
+**Files created/updated**:
+1. **`experiments/configs/exp002.yaml`** — Identical to exp001 except `stage1.lam: 10.0` (was 1.0)
+2. **`experiments/next_train_cmd.sh`** — Runs Stage 1 training with exp002 config, then evaluation
+
+**No code fixes needed**: Supervisor warnings (W1: attention flags, W2: data split) only affect Stage 2 or are deferred. No critical bugs.
+
+**Expected results**: amp_corr from 0.61 → 0.70+, f0 RPA may slightly decrease from 96.77% but should stay >94%.

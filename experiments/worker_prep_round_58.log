@@ -1,0 +1,39 @@
+Confirmed: `frame_features[:, :, 2]` is `velocity / 127.0` (normalized 0-1).
+
+Here's a summary of everything prepared for **exp046**:
+
+---
+
+## Summary: exp046 — Velocity Conditioning + Condition Dropout
+
+### Code Changes (3 files modified):
+
+1. **`src/model/diffusion.py` — AmpPredictor**:
+   - Added `velocity_conditioned` parameter: concatenates normalized velocity (0-1) to input (input_dim += 1)
+   - Added `condition_dropout` parameter: during training, randomly zeros out encoder features with probability 0.2 and rescales by `1/(1-p)` to preserve magnitude (inverted dropout)
+   - Both are backward-compatible (default `False`/`0.0`)
+
+2. **`src/model/train.py`**:
+   - Reads `amp_velocity_conditioned` and `amp_condition_dropout` from config
+   - Extracts `velocity = ff[:, :, 2]` from frame_features (index 2 = normalized velocity)
+   - Passes `velocity` to all `amp_predictor()` calls in both train and test loops
+   - Passes new params to AmpPredictor constructor
+
+3. **`src/model/evaluate.py`**:
+   - Detects `velocity_conditioned` attribute on loaded AmpPredictor
+   - Extracts velocity from frame_features and passes to all amp_predictor() calls
+   - Constructs AmpPredictor with velocity_conditioned and condition_dropout from config
+
+### Config: `experiments/configs/exp046.yaml`
+- Based on exp045 with 3 changes:
+  - `amp_velocity_conditioned: true` (NEW)
+  - `amp_condition_dropout: 0.2` (NEW)
+  - `amp_weight_decay: 0.001` (10x increase from 0.0001)
+
+### Training script: `experiments/next_train_cmd.sh`
+- Stage 2 training (frozen diffusion, AmpPredictor only)
+- Evaluation with n_samples=3, ddim_steps=50, eta=0.3
+
+### Expected outcome
+- **Target**: Amp Corr 0.82+ (current best without instrument: 0.781)
+- Velocity provides direct amplitude prior; condition dropout reduces overfitting (best epoch should move from 34 → 60+)

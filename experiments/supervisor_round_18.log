@@ -1,0 +1,36 @@
+Here's the terminal status summary:
+
+---
+
+## Supervisor Review: exp013 (Channel-wise Amp Loss Weighting)
+
+### Experiment Reviewed
+**exp013** — Diffusion with `amp_weight=3.0` channel-wise loss
+
+### Key Metrics
+| Metric | exp013 | exp007 (best) | Change |
+|--------|--------|---------------|--------|
+| f0 RPA mean | **37.15%** | 94.20% | **-57%** ❌ |
+| Amp Corr mean | **0.516** | 0.571 | **-10%** ❌ |
+| f0 diversity | 47.0 cents | 8.92 cents | Incoherent output |
+
+**Verdict**: Catastrophic failure. Training only reached ~70/200 epochs, and even partially-trained results show the approach is fundamentally broken — channel-wise noise prediction weighting distorts the denoiser symmetry.
+
+### Worker's Proposed exp014: **REJECTED**
+Worker proposed retraining diffusion with exp012's Softplus encoder. Rejected because:
+- Sigmoid→Softplus only changes `amp_head`, not `MIDIEncoder` — encoder weights are nearly identical
+- Expected improvement ≈ 0.01 amp_corr, not worth 25 min training cost
+- Previous decision tree already mandated: "if amp_corr < 0.60 → preserve exp007, end experiments"
+
+### What Was Planned
+**🏁 Experiment phase declared complete.** Created `experiments/NEEDS_HUMAN.txt` requesting human review to transition to paper writing.
+
+Final models preserved:
+- **Baseline**: exp012 (f0 RPA=97.14%, Amp Corr=0.660)
+- **Diffusion**: exp007 (f0 RPA=94.20%, VDE=4.80, -45% vs baseline)
+
+### Critical Issues
+None — code changes from exp013 are backward-compatible (amp_weight defaults to 1.0).
+
+### Current Bottleneck
+Amp prediction (0.571-0.660 vs target >0.9) is a **data/task limitation**, not fixable with current dataset (59 tracks, 1 performance per MIDI). Three attempts at amp improvement all failed. The project is ready for paper writing with strong vibrato results as the core contribution.

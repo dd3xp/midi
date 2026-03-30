@@ -1,0 +1,33 @@
+# exp043: Residual Scaling (alpha) + eta Sweep — Quality-Diversity Pareto Frontier
+# This is a PURE EVALUATION experiment (no training needed).
+# Uses checkpoints from exp042 (residual amp diffusion) and exp034 (f0 diffusion).
+#
+# Sweep parameters:
+#   --residual_scale (alpha): 0.0, 0.1, 0.3, 0.5, 0.7, 1.0
+#   --eta: 0.0, 0.3
+#
+# alpha=0.0 => pure AmpPredictor (expected Amp Corr ~0.807)
+# alpha=1.0, eta=0.3 => full residual diffusion (exp042 baseline: Amp Corr ~0.744)
+#
+# Reuses exp042 config for model architecture and checkpoint paths.
+
+output_dir: "experiments/checkpoints/exp043"
+baseline_checkpoint: "experiments/checkpoints/exp033/baseline_best.pt"
+instruments: ["vn", "va", "vc", "fl", "ob", "cl", "sax", "tpt", "tbn", "bn"]
+crop_len: 512
+seed: 42
+
+# For evaluation -- f0 diffusion config (must match exp034)
+stage2:
+  n_diffusion_steps: 1000
+  n_channels: 1
+  # AmpPredictor config (for evaluate.py to load, must match exp039)
+  amp_hidden: 256
+  amp_gru_hidden: 128
+  amp_gru_layers: 2
+  amp_dropout: 0.3
+  amp_use_attention: true
+  amp_n_attn_heads: 4
+  amp_n_attn_layers: 2
+  amp_instrument_conditioned: true
+  diffusion_checkpoint: "experiments/checkpoints/exp034/diffusion_best_ema.pt"

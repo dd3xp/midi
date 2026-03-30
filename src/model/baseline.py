@@ -24,17 +24,18 @@ class BaselineModel(nn.Module):
         )
         gru_out_dim = gru_hidden * 2  # 512
         self.f0_head = nn.Linear(gru_out_dim, n_f0_bins)
-        # amp RMS values empirically in [0, ~0.12]; Sigmoid [0,1] range is valid
+        # amp RMS values empirically in [0, ~0.06] (99th pct);
+        # Softplus ensures positive output without wasting range like Sigmoid [0,1]
         self.amp_head = nn.Sequential(
             nn.Linear(gru_out_dim, 1),
-            nn.Sigmoid(),
+            nn.Softplus(),
         )
         self.n_f0_bins = n_f0_bins
 
     def forward(self, frame_features):
         """
         Args:
-            frame_features: (B, T, 7)
+            frame_features: (B, T, 12)
         Returns:
             f0_logits: (B, T, 81)
             amp_pred: (B, T)
@@ -54,7 +55,7 @@ def compute_baseline_loss(f0_logits, amp_pred, f0_bins, f0_gt, amp_gt, lam=1.0):
 
     Args:
         f0_logits: (B, T, 81)
-        amp_pred: (B, T) in [0, 1]
+        amp_pred: (B, T) positive (Softplus output)
         f0_bins: (B, T) target bin indices
         f0_gt: (B, T) ground truth f0 in Hz (used only for voicing mask)
         amp_gt: (B, T) ground truth amplitude
@@ -111,7 +112,7 @@ def logits_to_f0(f0_logits, notes, hop_time):
     for onset, offset, midi_pitch, _ in notes:
         start = max(0, int(onset / hop_time))
         end = min(T, int(offset / hop_time))
-        note_midi[start:end] = midi_pitch
+        note_midi[start:end] = float(midi_pitch)
 
     f0_midi = note_midi + cent_offset / 100.0
     f0_hz = 440.0 * 2.0 ** ((f0_midi - 69.0) / 12.0)

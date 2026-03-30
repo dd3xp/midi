@@ -1,0 +1,40 @@
+The log has been updated. Here's my **status summary**:
+
+---
+
+## Supervisor Review Summary
+
+### Experiment Reviewed: exp044 (Note Position + Remove Instrument Conditioning)
+
+**Training completed** (300 epochs), **not yet evaluated** (no result file).
+
+### Key Findings
+
+| Metric | exp039 (best ref) | exp044 | Verdict |
+|--------|-------------------|--------|---------|
+| Best test_amp_loss | 0.457 (ep142) | 0.580 (ep38) | ❌ **Severe degradation** |
+| Final overfitting gap | 0.154 | **0.407** | ❌ **Catastrophic overfitting** |
+
+**Root cause**: `note_position` (0→1 scalar) is a **shortcut feature** that the model memorizes from ~124 training tracks by epoch 38, then overfits massively. Combined with removing the 32-dim instrument embedding, the model has less useful conditioning and more overfitting pressure.
+
+### Code Review: ✅ No bugs found
+- AmpPredictor correctly concatenates note_position (proj.weight shape [256, 257] confirmed)
+- Diffusion correctly frozen (loss unchanged across training)
+- train.py/evaluate.py properly pass note_position
+
+### What I Planned Next: exp045
+
+**Strategy: Isolate variables** — exp044 changed TWO things at once. We need to know the true cost of each.
+
+**exp045**: Remove instrument conditioning ONLY (no note_position), everything else identical to exp039. This tells us whether instrument embedding's contribution is small (recoverable) or large (needs alternative).
+
+**Worker tasks**:
+1. Evaluate exp044 (training done, just run evaluate.py)
+2. Create exp045 config (instrument_conditioned=false only)
+3. Train + evaluate exp045
+4. Record results in log.md
+
+### Critical Issues: None (code is correct, this is a strategic learning)
+
+### Biggest Bottleneck
+Amp Corr 0.807 (with instrument) → must remove instrument per requirements → need to find how much this costs and how to compensate. Target remains >0.90.

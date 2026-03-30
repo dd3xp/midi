@@ -1,0 +1,32 @@
+Now let me print the status summary:
+
+---
+
+## 📋 Supervisor Review — Round 59 Summary
+
+### Experiment Reviewed: exp047 (Two-Step Amp Prediction)
+
+**Results:**
+| Metric | Value | vs Baseline |
+|--------|-------|-------------|
+| Amp Corr | 0.787 | +0.6% vs exp045 (0.781) |
+| f0 RPA | 93.88% | ✅ Stable |
+| f0 MAE | 24.58 | Stable |
+| Residual std | 2.95 | ❌ >> gt std (1.10) |
+
+### Key Diagnosis
+1. **Two-step decomposition did NOT work as intended**: residual std (2.95) >> gt std (1.10), meaning the residual network carries the full signal while note_level is nearly ignored
+2. **Root cause**: note_mlp only has velocity+pitch (2 features) → can't predict instrument-specific amp levels → residual must compensate
+3. **Per-instrument analysis reveals**: brass (tpt=0.89, tbn=0.87) are already near-target, while strings (vn=0.73, va=0.75) drag down the average. The model needs implicit instrument awareness.
+
+### Code Review: ✅ No bugs found
+
+### Next Experiment Planned: exp048
+**Enhanced Two-Step with Encoder-Pooled Features + Residual Constraint**
+- Give note_level predictor **smoothed encoder features** (258-dim input, up from 2-dim) → implicit instrument awareness
+- **Remove `.detach()`** → cooperative gradient flow
+- **Add residual L1 penalty** (weight=0.3) → force genuine decomposition
+- Expected: Amp Corr 0.81-0.85, residual std < 1.0
+
+### Critical Issues: None
+### Biggest Bottleneck: Amp Corr (0.787 vs target 0.90) — per-instrument analysis shows strings are the main drag

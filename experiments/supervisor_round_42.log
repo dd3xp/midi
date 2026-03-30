@@ -1,0 +1,36 @@
+The plan is written correctly. Let me provide the terminal summary:
+
+---
+
+## Supervisor Review Summary
+
+### Experiment Reviewed: exp031 (Multi-Scale Temporal Amp Loss)
+
+**Results:**
+| Metric | exp028 (best) | exp031 | Change |
+|--------|--------------|--------|--------|
+| Amp Corr | **0.678** | 0.678 | ±0.000 (no change) |
+| Amp RMSE | **0.657** | 0.713 | +8.5% ❌ |
+| f0 RPA | 95.06% | 95.26% | noise |
+
+**Verdict:** ⚠️ Multi-scale temporal loss failed. Corr is identical; RMSE worsened. exp028 remains best.
+
+### Key Discovery
+MIDI velocity is **hardcoded to 80** (constant) in all data — the model has zero dynamics information in its input. This is a fundamental ceiling on amplitude prediction.
+
+### Code Review
+No critical bugs found. Multi-scale loss code in train.py (lines 601-614, 714-727) is correct but ineffective. Residual code from exp030 (pitch-anchor) is properly gated behind config flags.
+
+### Next Plan: exp032 — Scheduled Sampling f0-Conditioned AmpPredictor
+- **Approach:** Pre-cache diffusion f0 for all training tracks, then train f0-conditioned AmpPredictor with gradual GT→diffusion transition
+- **Rationale:** exp022 proved f0-amp signal exists (training loss 0.386 vs 0.508 without f0), but failed at inference due to exposure bias. Scheduled sampling bridges this gap.
+- **Expected:** Amp Corr 0.70–0.73 (conservative +3-5% over exp028)
+- **Priority:** HIGH
+
+### Progress Toward Goal
+- ✅ f0 RPA: 95.59% (target >85%)
+- ✅ Amp RMSE: 0.657 (beats baseline 0.724)
+- ✅ VDE: 6.54 (beats baseline 8.70)
+- ⚠️ **Amp Corr: 0.678 → target 0.80** (gap = 0.122, 13 approaches tried)
+
+### No Critical Issues — loop continues autonomously.

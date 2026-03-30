@@ -1,0 +1,41 @@
+The plan is correctly written. Let me print the status summary:
+
+---
+
+## 📊 Supervisor Review Summary
+
+### Experiment Reviewed: exp006 (terminated) + exp007 (terminated)
+
+**Status**: Both exp006 and exp007 were terminated by external timeout. No evaluation results.
+
+### Key Findings
+
+| Metric | exp005 (latest with results) | Target |
+|--------|------------------------------|--------|
+| Mean f0 RPA | 85.26% | >90% |
+| Oracle f0 RPA | 95.58% | >96% |
+| Amp Corr | 0.544 / 0.551 | >0.6 |
+| VDE | **6.03** (beats baseline 8.34) | ✅ |
+| VRE | **0.806** (beats baseline 0.880) | ✅ |
+
+### Root Cause of Failures
+- **exp006**: 500 epochs × 1770 spe = 55K steps → estimated 160 min, far exceeds ~20 min worker budget
+- **exp007**: 200 epochs × 1770 spe = 22K steps → estimated 24 min, still too long + no time left after exp006
+
+### Code Review
+- ✅ CosineAnnealingLR correctly implemented (train.py:284-292)
+- ✅ Per-metric oracle correctly implemented (evaluate.py:217-236)
+- ✅ No bugs found — failures are purely environmental (timeout)
+
+### Next Experiment Planned: exp008
+- **Strategy**: CosineAnnealingLR ablation with **same step count as exp005** (14,600 steps)
+- **Key change**: `samples_per_epoch=1180` (not 1770!) + cosine LR 2e-4→1e-5
+- **Expected**: Mean RPA 87-90%, training ~15min (proven feasible)
+- **Critical constraint**: Worker must run only ONE experiment, ≤20 min total
+
+### Critical Issues
+- ⚠️ **2 consecutive terminations** (exp006, exp007) — not a code bug but environmental. Resolved by reducing experiment size to proven-feasible scale.
+- No NEEDS_HUMAN.txt warranted — root cause is clear and solution is straightforward.
+
+### Biggest Bottleneck
+Worker time limit (~20 min) constrains training to ~15K steps per experiment. Future longer runs will need checkpoint resume capability.

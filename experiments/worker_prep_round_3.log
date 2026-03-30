@@ -1,0 +1,21 @@
+Everything is verified and ready. Here's a summary:
+
+---
+
+## Summary: exp002 (Retry) — Prepared and Ready
+
+**What**: Retry exp002 — Baseline (Stage 1) with `lam=10.0` (amp loss weight increased from 1.0 to 10.0)
+
+**Why**: exp001 showed f0 CE (~2.7) dominated 82% of total loss, leaving amp under-trained (amp_corr = 0.61). Raising λ to 10.0 will boost amp loss contribution to ~6.0 vs f0's ~2.7, giving amp stronger gradient signal.
+
+**What changed vs exp001**: Only `stage1.lam: 10.0` (was 1.0). All other hyperparameters identical.
+
+**Bug status**: The UnicodeDecodeError that caused the original exp002 failure is **fixed** — `train.py` now opens configs with `encoding="utf-8"`, and the config file contains only ASCII characters.
+
+**Files ready**:
+- Config: `experiments/configs/exp002.yaml` ✅ 
+- Training script: `experiments/next_train_cmd.sh` ✅
+- Both include `mkdir -p`, training with `--config` + `--stage 1`, and evaluation with `--checkpoint_dir` + `--mode baseline` + `--output`
+- Script exits non-zero on failure (`set -e`)
+
+**Expected outcome**: amp_corr improves from 0.61 → 0.70+; f0 RPA may dip slightly from 96.77% but should stay >94%.

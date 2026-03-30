@@ -1,0 +1,20 @@
+All updates are in place. Here's a summary of the exp054 results:
+
+---
+
+## exp054 Results: Knowledge Distillation ❌ Failed
+
+**Setup**: Teacher = exp039 (GRU+Attn+InstEmbed, Amp Corr=0.807) → Student = GRU (no inst, no attention), kd_weight=0.5
+
+**Key Metrics**:
+| Metric | exp054 (KD) | exp048 (Student baseline) | exp039 (Teacher) |
+|--------|------------|--------------------------|-------------------|
+| **Amp Corr** | **0.764** | 0.789 | 0.807 |
+| Amp RMSE(log) | 0.870 | ~0.62 | 0.582 |
+| f0 RPA (oracle) | 93.63% | ~95% | 95.82% |
+
+**KD actively hurt the student** — Amp Corr dropped from 0.789 (exp048, no KD) to 0.764 (-3.2%). The teacher's ~20% prediction errors became noisy soft targets that conflicted with ground truth, pulling the student in two directions simultaneously.
+
+**Training**: 300 epochs, best at ep300 (still improving but severe overfitting: train=0.77 vs test=1.74). The KD loss inflated the total loss and prevented effective convergence.
+
+**No change to "当前最佳"** — exp039 remains global best (Amp Corr=0.807), exp048 remains instrument-free best (0.789). This is the 37th amp optimization attempt; all known approaches have been tried.

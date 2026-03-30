@@ -1,0 +1,27 @@
+All preparations are complete. Here's a summary:
+
+## exp009 Preparation Summary
+
+### What was done:
+
+1. **Code modification** (`src/model/evaluate.py`):
+   - Added `all_f0_preds` and `all_amp_preds` lists to collect raw predictions across samples
+   - Added inter-sample diversity computation after the sample loop:
+     - **`f0_diversity_cents`**: Standard deviation in cents across samples, averaged over frames that are voiced in ALL samples
+     - **`amp_diversity`**: Standard deviation of amplitude across samples, averaged over all frames
+   - Both metrics are included in the per-track `mean_metrics` output
+
+2. **Config** (`experiments/configs/exp009.yaml`):
+   - Evaluation-only experiment using exp007 checkpoint
+   - 5 samples, 50 DDIM steps, eta=1.0
+
+3. **Training script** (`experiments/next_train_cmd.sh`):
+   - No training — evaluation only
+   - Three evaluation runs:
+     - **eta=1.0** → `exp009_eta10.json` (primary: full DDPM-like stochasticity)
+     - **eta=0.3** → `exp009_eta03.json` (comparison with new diversity metrics)
+     - **eta=0.0** → `exp009_eta00.json` (deterministic baseline for diversity)
+   - This gives us the complete quality-diversity tradeoff curve across eta ∈ {0.0, 0.3, 1.0}
+
+### Purpose:
+Generate the definitive **eta vs (quality, diversity)** data for the paper. The new `f0_diversity_cents` and `amp_diversity` metrics will quantify how much variation the model produces across samples, complementing the existing oracle-mean gap analysis.

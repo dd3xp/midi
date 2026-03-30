@@ -1,0 +1,24 @@
+Everything is in place. Here's a summary of what was prepared:
+
+---
+
+## Summary: exp028 Preparation Complete
+
+### What was done:
+
+1. **Logged exp027 results** (TCN AmpPredictor): Amp Corr=0.622 (❌ -8% vs exp023), confirming GRU+Attention is the better architecture.
+
+2. **Code modifications** (4 files, all backward-compatible):
+   - **`dataset.py`**: Added `INSTRUMENT_TO_ID` dict; `_load()` and `__getitem__` now return `instrument_id`; `collate_fn` batches it as a `torch.long` tensor
+   - **`diffusion.py`**: `AmpPredictor` now accepts `instrument_conditioned=False` (default), `n_instruments=10`, `inst_embed_dim=32` params. When enabled, adds `nn.Embedding(10, 32)` and concatenates to input before projection. Extra params: ~8.5K
+   - **`train.py`**: Reads `amp_instrument_conditioned` from config; extracts `instrument_id` from batch; passes to amp_predictor in both train and test loops
+   - **`evaluate.py`**: Imports `INSTRUMENT_TO_ID`; retrieves instrument from track info; passes `instrument_id` to amp_predictor during evaluation
+
+3. **Config**: `experiments/configs/exp028.yaml` — GRU+Attention base (exp023) + `amp_instrument_conditioned: true`, diffusion frozen
+
+4. **Checkpoints**: Copied baseline (exp014) + diffusion (exp017) + norm_stats to `exp028/`
+
+5. **Training script**: `experiments/next_train_cmd.sh` — runs Stage 2 training then evaluation with η=0.3, 3 samples
+
+### Expected outcome:
+- Amp Corr: 0.69-0.73 (up from 0.676 in exp023) — instrument embedding fills the information gap where different instruments have 11× amplitude range differences

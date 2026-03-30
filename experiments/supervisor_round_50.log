@@ -1,0 +1,32 @@
+The log has been updated successfully. Let me print the status summary:
+
+---
+
+## 📊 Supervisor Round 13 — Status Summary
+
+### Experiment Reviewed: exp039 (Amplitude Augmentation)
+
+**Key Metrics:**
+| Metric | exp035 (prev best) | **exp039** | Delta |
+|--------|-------------------|-----------|-------|
+| **Amp Corr** | 0.800 | **0.807** | **+0.007 ✅ NEW BEST** |
+| f0 RPA oracle | 95.72% | 95.82% | +0.10% |
+| Amp RMSE | 0.572 | 0.582 | +0.010 (expected) |
+| Best epoch | ~54 | **~140** | **2.6x delay!** |
+
+**Critical Finding:** Augmentation confirmed overfitting as the core bottleneck. Best epoch jumped from ep54 → ep140 (2.6x). 9/10 instruments improved. Biggest gains in low-data instruments: bn (+0.016), cl (+0.014).
+
+### Code Review: ✅ No issues
+- Augmentation correctly placed in training loop only (line 663-673)
+- Validation loop (line 788) correctly has no augmentation
+- evaluate.py has no augmentation code ✅
+
+### Next Experiment Planned: exp040
+**Strategy:** Combine exp037's 2x model capacity (amp_hidden=384, 4 attn layers) + exp039's augmentation. The hypothesis: exp037's larger model had potential that was **masked by overfitting**. Now that augmentation prevents overfitting, the extra capacity should translate into better generalization.
+
+**Expected:** Amp Corr 0.82-0.85 (capacity + anti-overfitting = synergy)
+
+### Progress Toward Goal
+- **f0 RPA: 95.8%** → Target >85% ✅✅ (far exceeded)
+- **Amp Corr: 0.807** → Target >0.90 ❌ (gap: 0.093, narrowing)
+- **Biggest bottleneck:** Amp Corr. Augmentation direction validated. If 2x model + augment doesn't reach 0.85+, next move is Amp Diffusion v2.

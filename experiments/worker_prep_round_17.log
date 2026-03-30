@@ -1,0 +1,20 @@
+Done. Here's a summary of what was prepared:
+
+## Summary: exp013 (Restart)
+
+**Experiment**: Diffusion model with channel-wise amp loss weighting (`amp_weight=3.0`)
+
+**What changed from exp007**: The diffusion training loss now separates f0 and amp channels, applying 3× weight to amp loss: `loss = f0_loss + 3.0 * amp_loss`
+
+**Status**:
+- ✅ **No code changes needed** — supervisor confirmed all code modifications are already in place
+- ✅ **Config exists**: `experiments/configs/exp013.yaml` (200 epochs, amp_weight=3.0)
+- ✅ **Baseline checkpoint exists**: `experiments/checkpoints/exp013/baseline_best.pt` (from exp003)
+- ✅ **Training script written**: `experiments/next_train_cmd.sh`
+
+**What the script does**:
+1. Trains Stage 2 diffusion (200 epochs × 110 batches ≈ 22,000 steps) — old interrupted checkpoints will be overwritten
+2. Evaluates with η=0.3 → `experiments/results/exp013.json`
+3. Evaluates with η=0.0 → `experiments/results/exp013_eta00.json`
+
+**This is the final training experiment** — if amp_corr doesn't improve >5%, the project moves to paper writing.

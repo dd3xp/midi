@@ -1,0 +1,36 @@
+# exp014: Expanded dataset baseline (Stage 1) — all 9 URMP instruments + Bach10
+# Purpose: Retrain baseline with full dataset (173 tracks vs 74 tracks before)
+#   to establish stronger baseline before two-stage f0/amp architecture split
+# Dataset changes:
+#   - URMP: 3 instruments (vn,tpt,fl) -> 9 instruments (vn,va,vc,fl,ob,cl,sax,tpt,tbn)
+#   - Added Bach10: 10 pieces x 4 instruments (vn,cl,sax,bn) = 40 tracks
+#   - Total: 133 URMP + 40 Bach10 = 173 tracks (was 74 in exp001-013)
+#   - Train: 124 tracks (30 pieces), Test: 49 tracks (7 pieces)
+# Code changes (all files backed up as .bak):
+#   [C1] dataset.py: ALL_INSTRUMENTS default (10 instruments), BACH10_DIR constant
+#   [C2] dataset.py: ExpressionDataset bach10_dir parameter, Bach10 loading logic
+#   [C3] dataset.py: extract_piece_id supports bach10 naming ("01-AchGottundHerr_vn")
+#   [C4] train.py: DEFAULT_CONFIG data_dir fixed to datagen/solo/URMP, added bach10_dir
+#   [C5] train.py: ExpressionDataset calls pass bach10_dir
+#   [C6] evaluate.py: --config flag for dataset settings in evaluation
+# Architecture: same as exp012 (Softplus amp head)
+# Comparison baseline: exp012 (RPA=97.14%, Amp Corr=0.660, 59 train/15 test tracks)
+# Expected: similar or better RPA/Amp with 2x more training data
+
+# data_dir: uses default (datagen/solo/URMP, absolute path)
+# bach10_dir: uses default (datagen/solo/Bach10, absolute path)
+output_dir: "experiments/checkpoints/exp014"
+instruments: ["vn", "va", "vc", "fl", "ob", "cl", "sax", "tpt", "tbn", "bn"]
+crop_len: 512
+seed: 42
+save_every: 10
+
+stage1:
+  batch_size: 32
+  lr: 0.001
+  epochs: 100
+  lam: 1.0
+  patience: 15
+  lr_patience: 5
+  lr_factor: 0.5
+  dropout: 0.3

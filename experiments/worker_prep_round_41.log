@@ -1,0 +1,30 @@
+Everything looks correct. Here's a summary of what was prepared:
+
+---
+
+## Summary
+
+### What was done:
+
+1. **Code modification — Multi-scale temporal amp loss** (`src/model/train.py`):
+   - **Line 601–614** (training loop): Added multi-scale loss after `amp_loss = mse + ...` and before `loss = ...`. When `amp_multiscale: true` in config, it downsamples `log_amp_pred` and `log_amp_gt` using `avg_pool1d` at scales [8, 32] and adds the MSE at each scale weighted by `ms_weight=0.5`.
+   - **Line 714–727** (test loop): Added the identical multi-scale loss block.
+   - Uses `nn.functional.avg_pool1d` (no new imports needed).
+
+2. **Config created** — `experiments/configs/exp031.yaml`:
+   - Based on exp028 (instrument embedding, GRU+Attention)
+   - New params: `amp_multiscale: true`, `amp_multiscale_scales: [8, 32]`, `amp_multiscale_weight: 0.5`
+   - `amp_dropout: 0.4`, `amp_weight_decay: 0.001` (slightly stronger reg per plan)
+
+3. **Training script** — `experiments/next_train_cmd.sh`:
+   - **Step 1**: Evaluate exp029 (per-instrument norm, missing results) → `experiments/results/exp029.json`
+   - **Step 2**: Copy baseline/diffusion checkpoints into exp031 directory
+   - **Step 3**: Train exp031 (stage 2, multi-scale temporal amp loss)
+   - **Step 4**: Evaluate exp031 → `experiments/results/exp031.json`
+
+### Expected outcomes (from supervisor's plan):
+| Metric | exp028 (best) | exp029 (expected) | exp031 (expected) |
+|--------|--------------|-------------------|-------------------|
+| Amp Corr | 0.678 | 0.67–0.70 | 0.69–0.72 |
+| Amp RMSE | 0.657 | 0.60–0.65 | 0.65–0.67 |
+| f0 RPA | 95.06% | ~95% | ~95% |

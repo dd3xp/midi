@@ -1,0 +1,31 @@
+Everything looks good. Here's a summary of what was prepared:
+
+---
+
+## Summary: exp014 — Expanded Dataset Baseline (Stage 1)
+
+### What was done
+
+**1. Code Changes** (all files backed up as `.bak`):
+
+| File | Change | Details |
+|------|--------|---------|
+| `dataset.py` | [C1] Added constants | `BACH10_DIR`, `ALL_INSTRUMENTS` (10 instruments: 9 URMP + bn) |
+| `dataset.py` | [C2] `extract_piece_id` | Added `dataset_type` param, supports Bach10 naming (`"01-AchGottundHerr_vn"` → `"b10_AchGottundHerr"`), `b10_` prefix prevents URMP name collisions |
+| `dataset.py` | [C3] `ExpressionDataset` | Added `bach10_dir` param, Bach10 loading logic, default instruments changed to all 10 |
+| `train.py` | [C4] `DEFAULT_CONFIG` | Fixed `data_dir` to `datagen/solo/URMP` (was wrong `datagen/`), added `bach10_dir`, updated default instruments |
+| `train.py` | [C5] Stage 1 & 2 | Pass `bach10_dir` to `ExpressionDataset` |
+| `evaluate.py` | [C6] `main()` | Added `--config` flag for dataset settings, defaults to `BACH10_DIR` |
+
+**2. Dataset Expansion**:
+- **Before**: 3 instruments (vn, tpt, fl), URMP only → 74 tracks (59 train / 15 test)
+- **After**: 10 instruments (9 URMP + bn from Bach10), URMP + Bach10 → **173 tracks (124 train / 49 test)**
+- Train/test split by piece name, 0 overlap verified
+
+**3. Experiment Config**: `experiments/configs/exp014.yaml`
+- Stage 1 only, same hyperparams as exp012 (Softplus amp head, lr=1e-3, patience=15)
+- Comparison baseline: exp012 (RPA=97.14%, Amp Corr=0.660)
+
+**4. Training Script**: `experiments/next_train_cmd.sh`
+- Trains Stage 1, then evaluates baseline-only → `experiments/results/exp014.json`
+lization metrics

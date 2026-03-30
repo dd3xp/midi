@@ -1,0 +1,20 @@
+=== exp015b: Results already logged — no new training needed ===
+
+exp015 (1ch Diffusion + AmpPredictor) training completed 200 epochs.
+Results logged to experiments/log.md as exp015b.
+
+Verifying checkpoints...
+  ✓ experiments/checkpoints/exp015/diffusion_best_ema.pt
+  ✓ experiments/checkpoints/exp015/amp_predictor_best.pt
+  ✓ experiments/checkpoints/exp015/stage2_history.json
+  ✓ experiments/results/exp015.json
+
+Key results (from experiments/results/exp015.json):
+  f0 RPA mean:  93.63%
+  f0 RPA oracle:94.75%
+  Amp Corr:     0.624
+  VDE:          6.56
+  f0 diversity: 11.62 cents
+
+=== Awaiting supervisor review to plan next experiment ===
+=== No training was run. Exit 0. ===

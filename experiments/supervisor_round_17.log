@@ -1,0 +1,33 @@
+---
+
+## Supervisor Review Summary
+
+### Experiment Reviewed: **exp013** (Diffusion channel-wise amp loss weighting, amp_weight=3.0)
+
+### Key Metrics
+| Metric | exp013 | exp007 (best) | Change |
+|--------|--------|---------------|--------|
+| f0 RPA mean | **37.15%** | 94.20% | **-57%** ❌ |
+| Amp Corr mean | **0.516** | 0.571 | **-9.6%** ❌ |
+| f0 diversity | 47.0 cents | 8.92 cents | Model incoherent |
+| Mean-oracle gap | 46.9% | 2.7% | Unstable |
+
+### Diagnosis
+**Catastrophic failure** caused by two factors:
+1. **Incomplete training** (70/200 epochs) — but even at this stage exp005/007 were functional
+2. **Fundamental flaw**: Channel-wise noise prediction weighting distorts the diffusion training objective (ε ~ N(0,I) is symmetric across channels). Weighting amp 3x causes f0 to massively underfit while amp doesn't improve either. Training-inference mismatch: weighted training loss but unweighted DDIM sampling.
+
+### Actions Taken
+1. **Updated `experiments/log.md`** with full supervisor analysis (root cause, code verification, final progress tracking, paper data tables)
+2. **Created `experiments/NEEDS_HUMAN.txt`** — experiment loop will pause for human review
+3. **Declared exp007 as final diffusion model** (per pre-established decision tree)
+
+### What Was Planned Next
+**No more experiments**. The experiment phase is complete after 13 experiments:
+- All simple amp improvement strategies exhausted (λ weighting, activation function, channel loss)
+- exp007 diffusion + exp012 baseline are the final models
+- 11 paper figures ready in `experiments/figures/`
+- Recommended next step: **enter AIMC 2026 paper writing phase**
+
+### Critical Issues Found
+None in code (backward compatible, well-documented). The failure is in the experimental approach, not implementation.

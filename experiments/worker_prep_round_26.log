@@ -1,0 +1,37 @@
+Everything is ready. Here's a summary of what was prepared:
+
+---
+
+## Summary: exp018 Prepared
+
+### Goal
+Reduce AmpPredictor overfitting (exp017: best@ep66, train-test gap=0.125) through regularization.
+
+### Code Changes (`src/model/train.py`)
+Following the supervisor's plan exactly:
+
+| Change | Description |
+|--------|-------------|
+| **[C1]** Lines 311-324 | Split single optimizer → `diff_optimizer` + `amp_optimizer` with `weight_decay` |
+| **[C2]** Lines 326-344 | Split scheduler → `diff_scheduler` + `amp_scheduler` (independent CosineAnnealingLR) |
+| **[C3]** Lines 402-412 | Training loop: dual `zero_grad()` → single `loss.backward()` → separate `clip_grad_norm_` → dual `step()` |
+| **[C4]** Lines 478-483 | LR logging: prints both `diff_lr` and `amp_lr` |
+| **[C5]** Lines 485-489 | Both schedulers stepped independently |
+
+### Config (`experiments/configs/exp018.yaml`)
+- **Diffusion**: lr=0.0002 → 0.00001 (same as exp017)
+- **AmpPredictor**: lr=**0.0001** (halved), lr_min=**5e-6**, **weight_decay=0.0001**
+- Architecture unchanged: 2-layer BiGRU, hidden=256, gru_hidden=128, dropout=0.3
+- 200 epochs, encoder frozen from exp014
+
+### Files Created/Modified
+- `src/model/train.py` — modified (backup at `train.py.bak.exp018`)
+- `experiments/configs/exp018.yaml` — new config
+- `experiments/checkpoints/exp018/baseline_best.pt` — copied from exp014
+- `experiments/next_train_cmd.sh` — training + evaluation script
+
+### Expected Results (from supervisor)
+- f0 RPA: ~95-96% (diffusion unaffected)
+- Amp Corr: ~0.64-0.66 (maintained)
+- Amp RMSE(log): **0.76-0.80** (reduced from 0.807 via less overfitting)
+- Best test_amp epoch: **ep100-150** (delayed from ep66)

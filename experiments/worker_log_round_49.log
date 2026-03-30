@@ -1,0 +1,24 @@
+Both tables are updated. The 当前最佳 section does not need updating since exp035 remains the best (Amp Corr=0.800).
+
+---
+
+## exp038 Results Summary
+
+**exp038: Longer Context (crop_len=1024)** — ❌ **Negative result**
+
+| Metric | exp035 (best) | exp038 | Change |
+|--------|:---:|:---:|:---:|
+| **Amp Corr** | **0.800** | 0.789 | **-1.4% 退化** |
+| Amp RMSE | 0.572 | 0.580 | +1.4% 退化 |
+| f0 RPA (mean) | 94.40% | 94.41% | ≈同 |
+| VDE (mean) | 7.77 | 7.41 | -4.6% (改善) |
+| Best epoch | ep54 | **ep15** | 极早过拟合! |
+| Overfit gap | 0.163 | 0.210 | +29% 更严重 |
+
+**Key findings:**
+1. **2x context (1024 frames ≈ 10s) actually hurt** — Amp Corr dropped from 0.800 to 0.789
+2. **Best epoch at ep15** (极早!) — batch_size halved (8 vs 16) caused faster overfitting with less batch diversity
+3. **4 consecutive attempts** (exp036-038) all fail to break 0.800, confirming this is the ceiling for the current method
+4. exp035 remains the global best (Amp Corr=0.800, Amp RMSE=0.572)
+
+**当前最佳 unchanged** — exp035 holds at Amp Corr=0.800. The supervisor will plan the next direction (likely data augmentation or amp diffusion v2).

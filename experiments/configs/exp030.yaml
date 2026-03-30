@@ -1,0 +1,42 @@
+# exp030: Pitch-Anchor Amp Offset + Instrument Embedding
+# Hypothesis: Like f0 cent offset, predict amp as DEVIATION from pitch-based average.
+# pitch_to_avg_amp lookup table (128 values) removes pitch-dependent amplitude variation,
+# model only predicts "how much louder/softer than average for this pitch."
+# Keeps instrument_conditioned=True from exp028 for scale correction.
+output_dir: "experiments/checkpoints/exp030"
+baseline_checkpoint: "experiments/checkpoints/exp014/baseline_best.pt"
+instruments: ["vn", "va", "vc", "fl", "ob", "cl", "sax", "tpt", "tbn", "bn"]
+crop_len: 512
+seed: 42
+save_every: 10
+
+stage2:
+  batch_size: 16
+  lr: 0.0002
+  lr_min: 0.00001
+  epochs: 200
+  ema_decay: 0.995
+  n_diffusion_steps: 1000
+  samples_per_epoch: 1860
+  n_channels: 1
+
+  # GRU+Attention (exp023 best architecture)
+  amp_hidden: 256
+  amp_gru_hidden: 128
+  amp_gru_layers: 2
+  amp_dropout: 0.4
+  amp_use_attention: true
+  amp_n_attn_heads: 4
+  amp_n_attn_layers: 2
+
+  # Instrument conditioning (from exp028)
+  amp_instrument_conditioned: true
+
+  # NEW: Pitch-anchor amp offset (exp030)
+  amp_pitch_anchor: true
+
+  # Optimizer
+  freeze_diffusion: true
+  diffusion_checkpoint: "experiments/checkpoints/exp017/diffusion_best_ema.pt"
+  amp_lr: 0.0001
+  amp_weight_decay: 0.001

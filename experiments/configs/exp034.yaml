@@ -1,0 +1,44 @@
+# exp034: Full Stage 2 with Velocity-Informed Encoder (exp033)
+# Hypothesis: Combining velocity-informed encoder (exp033, Amp Corr 0.756) with
+# GRU+Attention+InstrumentEmbedding AmpPredictor (exp028 architecture) should push
+# Amp Corr past 0.80. Diffusion retrained from scratch because encoder's condition
+# vector distribution changed (velocity/127 now varies 0.01-1.0 vs constant 0.63).
+#
+# Changes vs exp028:
+#   [C1] baseline_checkpoint: exp033 (velocity) instead of exp014 (v=80)
+#   [C2] freeze_diffusion: false — train new diffusion from scratch
+#   [C3] No diffusion_checkpoint — start fresh
+output_dir: "experiments/checkpoints/exp034"
+baseline_checkpoint: "experiments/checkpoints/exp033/baseline_best.pt"
+instruments: ["vn", "va", "vc", "fl", "ob", "cl", "sax", "tpt", "tbn", "bn"]
+crop_len: 512
+seed: 42
+save_every: 10
+
+stage2:
+  batch_size: 16
+  lr: 0.0002
+  lr_min: 0.00001
+  epochs: 200
+  ema_decay: 0.995
+  n_diffusion_steps: 1000
+  samples_per_epoch: 1860
+  n_channels: 1
+
+  # AmpPredictor: GRU+Attention + Instrument Embedding (same as exp028)
+  amp_hidden: 256
+  amp_gru_hidden: 128
+  amp_gru_layers: 2
+  amp_dropout: 0.3
+  amp_use_attention: true
+  amp_n_attn_heads: 4
+  amp_n_attn_layers: 2
+  amp_instrument_conditioned: true
+
+  # Diffusion: train from scratch (NOT frozen)
+  freeze_diffusion: false
+  # No diffusion_checkpoint — fresh training
+
+  # Optimizer
+  amp_lr: 0.0001
+  amp_weight_decay: 0.0001

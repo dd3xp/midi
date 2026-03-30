@@ -1,0 +1,39 @@
+# exp041: Amp Diffusion v2 — velocity-conditioned 1ch DDPM for amp
+# Hypothesis: exp021 amp diffusion failed (0.407) due to no velocity in encoder.
+# With exp033's velocity encoder, conditioning is much stronger.
+# Key benefit: stochastic amp sampling -> amp_diversity > 0 (critical for paper).
+#
+# Changes vs exp021:
+#   [C1] baseline_checkpoint: exp033 (velocity encoder) instead of exp014
+#   [C2] epochs: 300 (was 200) -- more training for convergence
+#   [C3] lr_min: 1e-5 -- cosine annealing
+#   [C4] amp_augment: true -- add augmentation to stage 3
+#   [C5] samples_per_epoch: 1860 -- consistent with other experiments
+output_dir: "experiments/checkpoints/exp041"
+baseline_checkpoint: "experiments/checkpoints/exp033/baseline_best.pt"
+instruments: ["vn", "va", "vc", "fl", "ob", "cl", "sax", "tpt", "tbn", "bn"]
+crop_len: 512
+seed: 42
+save_every: 10
+
+# Stage 3: Amp diffusion training
+stage3:
+  batch_size: 16
+  lr: 0.0002
+  lr_min: 0.00001
+  epochs: 300
+  ema_decay: 0.995
+  n_diffusion_steps: 1000
+  samples_per_epoch: 1860
+
+  # Amplitude augmentation (training only)
+  amp_augment: true
+  amp_augment_scale: 0.2
+  amp_augment_jitter: 0.05
+
+# For evaluation -- f0 diffusion config (must match exp034)
+stage2:
+  n_diffusion_steps: 1000
+  n_channels: 1
+  # Frozen f0 diffusion from exp034 (fallback for evaluate.py)
+  diffusion_checkpoint: "experiments/checkpoints/exp034/diffusion_best_ema.pt"

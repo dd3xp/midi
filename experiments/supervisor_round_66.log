@@ -1,0 +1,30 @@
+The plan is written. Let me print a summary for the terminal.
+
+---
+
+## 📊 Supervisor Review Summary — Round 69
+
+### Experiment Reviewed: exp053 (TCN AmpPredictor)
+- **Result**: Amp Corr = **0.760** — ❌ Worse than GRU (0.789) by 3.7%
+- **Training**: Overfitting (train loss 12.6→0.57 continuous decline, test loss plateaus at ~1.78)
+- **RMSE**: 0.853 (much worse than GRU's 0.649)
+- **Code review**: No bugs found. All exp052 reverts (7-dim features, input_dim=7) confirmed correct.
+
+### Key Finding: Architecture is NOT the Bottleneck
+| Architecture | Amp Corr | Verdict |
+|---|---|---|
+| GRU (exp048) | **0.789** | ✅ Best |
+| GRU+Attention (exp045) | 0.781 | ❌ Slightly worse |
+| **TCN (exp053)** | **0.760** | **❌ Worst** |
+
+**35 experiments** across all major directions (architecture, loss, features, diffusion, conditioning, two-step, adapter, global stats, TCN) confirm a ceiling at ~0.789 without instrument labels.
+
+### Next Plan: exp054 — Knowledge Distillation from exp039
+- **Approach**: Pre-compute teacher (exp039, inst-conditioned, 0.807) amp predictions → train student (GRU, no inst) with combined task + distillation loss
+- **Why**: Only remaining high-priority direction with theoretical justification. Teacher's soft targets implicitly encode instrument-specific amp patterns
+- **Expected**: Amp Corr 0.795-0.805
+- **Code needed**: New `precompute_teacher.py` script + minimal train.py modifications for KD loss
+- **Priority**: HIGH
+
+### Critical Issues
+- [W1] Worker should write full results sections after each experiment (not just update history table)

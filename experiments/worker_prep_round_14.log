@@ -1,0 +1,22 @@
+---
+
+## Summary
+
+**No new experiment to run.** The supervisor's "下一步计划" in `experiments/log.md` explicitly states:
+
+> **实验阶段全部完成。需要人工审查后进入论文写作。**
+
+All 11 experiments (exp001-exp011) have been completed covering the full pipeline:
+
+| Phase | Experiments | Key Results |
+|-------|------------|-------------|
+| Baseline training + tuning | exp001-003 | f0 RPA=**97.14%**, Amp Corr=0.645 |
+| Diffusion training + debug | exp004-007 | Mean RPA=**94.20%**, VDE=**4.84** (42% better than baseline) |
+| Eta sweep + diversity | exp008-009 | ~9 cents f0 diversity, quality insensitive to η |
+| Paper visualization | exp010-011 | **11 figures** ready for paper |
+
+**What I prepared:**
+1. ✅ Created `experiments/NEEDS_HUMAN.txt` with human review checklist
+2. ✅ Updated `experiments/next_train_cmd.sh` to a no-op script that prints the completion status and exits cleanly (exit 0)
+
+**Next action needed:** Human review of the 11 figures in `experiments/figures/`, then proceed to paper writing.

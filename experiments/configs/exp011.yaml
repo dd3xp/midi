@@ -1,0 +1,37 @@
+# exp011: Fix visualization defects + re-evaluate eta=0.5 with diversity data
+# Purpose: (1) Re-run eta=0.5 evaluation to get f0_diversity_cents
+#          (2) Improve vibrato zoom selection algorithm
+#          (3) Update eta sweep plot data source + add baseline reference line
+#          (4) Regenerate all paper figures
+
+evaluation_only: true  # Step 1: re-evaluate eta=0.5
+visualization: true     # Step 2: regenerate all figures
+
+# Evaluation config (eta=0.5 with diversity)
+diffusion_ckpt_dir: experiments/checkpoints/exp007
+mode: diffusion
+n_samples: 5
+ddim_steps: 50
+eta: 0.5
+eval_output: experiments/results/exp011_eta05.json
+
+# Visualization config (same tracks as exp010)
+baseline_ckpt_dir: experiments/checkpoints/exp003
+
+selected_tracks:
+  - path: "datagen/processed_vn/01_Jupiter_vn_vc_track1_vn/data.npz"
+    instrument: vn
+    piece: Jupiter
+  - path: "datagen/processed_tpt/18_Nocturne_vn_fl_tpt_track3_tpt/data.npz"
+    instrument: tpt
+    piece: Nocturne
+  - path: "datagen/processed_fl/17_Nocturne_vn_fl_cl_track2_fl/data.npz"
+    instrument: fl
+    piece: Nocturne
+
+viz_n_samples: 5
+viz_ddim_steps: 50
+viz_eta: 0.0
+seed: 42
+
+output_dir: experiments/figures

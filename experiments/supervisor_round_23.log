@@ -1,0 +1,42 @@
+Now let me print the status summary:
+
+---
+
+## 📋 Supervisor Review Summary — exp015b
+
+### Experiment Reviewed: exp015b (Two-stage: 1ch Diffusion + AmpPredictor)
+
+**Status**: ✅ Successfully completed (200/200 epochs, all checkpoints + history saved)
+
+### Key Metrics
+
+| Metric | exp014 Baseline | exp015b (mean) | Target | Status |
+|--------|----------------|----------------|--------|--------|
+| **f0 RPA** | 96.59% | **93.63%** | ≥93% | ✅ Met |
+| **Amp Corr** | 0.633 | **0.624** | ≥0.60 | ✅ Met (+9.3% vs exp007) |
+| **Amp RMSE(log)** | **0.724** | 0.825 | ≤0.75 | ⚠️ Not met |
+| **VDE** | 8.70 | **6.56** | ≤baseline | ✅ -25% improvement |
+| **f0 diversity** | — | **11.62 cents** | ~9 | ✅ Higher than exp007 |
+
+### Code Review: ✅ All correct, no CRITICAL bugs
+
+- `diffusion.py`: 1-channel UNet + AmpPredictor properly implemented
+- `train.py`: Joint optimizer, EMA only on diffusion, separate loss logging
+- `evaluate.py`: Correct n_channels detection, AmpPredictor integration
+
+### Key Findings
+
+1. **Two-stage architecture works**: Amp Corr jumped from 0.571 (2ch) → 0.624 (AmpPredictor), nearly matching baseline (0.633)
+2. **AmpPredictor overfitting**: train-test amp_loss gap ~0.11, best test_amp at ep110 but checkpoint from ep142
+3. **Amp RMSE(log) is the main remaining issue**: 0.825 vs baseline 0.724. High correlation + high RMSE = correct shape but wrong scale (Softplus bias)
+4. **VDE still better than baseline** (6.56 vs 8.70), though worse than 2ch exp007 (4.80)
+
+### What Was Planned Next: **exp016**
+
+- **AmpPredictor outputs log-space directly** (remove Softplus → eliminates scale bias → should fix RMSE)
+- **Add dropout=0.2** to AmpPredictor (reduces overfitting)  
+- **Separate amp early stopping** (save best amp by test_amp_loss, not total loss)
+- Priority: **HIGH** — pre-approved architecture change targeting Amp RMSE from 0.825 → ≤0.75
+
+### No Critical Issues / No NEEDS_HUMAN
+All within expected bounds, clear improvement path identified.

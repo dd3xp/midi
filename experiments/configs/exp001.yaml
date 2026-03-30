@@ -1,0 +1,20 @@
+# exp001: Baseline with default hyperparameters (Stage 1)
+# Purpose: Establish initial baseline, verify MIDI Encoder + BiGRU functionality
+# Expected: f0 RPA > 60%, Amp Corr > 0.5
+
+# data_dir: uses default (PROJECT_ROOT/datagen)
+output_dir: "experiments/checkpoints/exp001"
+instruments: ["vn", "tpt", "fl"]
+crop_len: 512
+seed: 42
+save_every: 10
+
+stage1:
+  batch_size: 32
+  lr: 0.001
+  epochs: 100
+  lam: 1.0
+  patience: 15
+  lr_patience: 5
+  lr_factor: 0.5
+  dropout: 0.3

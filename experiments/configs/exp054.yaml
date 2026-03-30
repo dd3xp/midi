@@ -1,0 +1,65 @@
+# exp054: Knowledge Distillation from exp039 (inst-conditioned teacher)
+# Goal: Transfer instrument-specific amp knowledge to inst-free student
+# Teacher: exp039 AmpPredictor (Amp Corr 0.807, inst_conditioned=True, GRU+Attn)
+# Student: GRU AmpPredictor (same as exp048 best no-inst architecture, no attention)
+#
+# Changes vs exp048:
+#   [C1] kd_teacher_preds: path to pre-computed teacher predictions
+#   [C2] kd_weight: 0.5 — equal task + distillation loss weight
+#   [C3] amp_two_step: false — back to standard GRU (exp048's best config without two-step)
+#   [C4] No instrument_conditioned, no attention (pure GRU student)
+#
+# Loss = L_task(student, gt) + kd_weight * L_kd(student, teacher)
+# where L_task = MSE + corr_weight*corr_loss + grad_weight*grad_loss
+#       L_kd = MSE(student_pred, teacher_pred.detach())
+
+output_dir: "experiments/checkpoints/exp054"
+baseline_checkpoint: "experiments/checkpoints/exp033/baseline_best.pt"
+instruments: ["vn", "va", "vc", "fl", "ob", "cl", "sax", "tpt", "tbn", "bn"]
+crop_len: 512
+seed: 42
+save_every: 10
+
+stage2:
+  batch_size: 16
+  lr: 0.0002
+  lr_min: 0.00001
+  epochs: 300
+  ema_decay: 0.995
+  n_diffusion_steps: 1000
+  samples_per_epoch: 1860
+  n_channels: 1
+
+  # Student: standard GRU (same as exp048 best no-inst config)
+  amp_type: "gru"
+  amp_hidden: 256
+  amp_gru_hidden: 128
+  amp_gru_layers: 2
+  amp_dropout: 0.3
+  amp_use_attention: false
+  amp_instrument_conditioned: false
+  amp_note_position_conditioned: false
+  amp_f0_conditioned: false
+  amp_velocity_conditioned: false
+  amp_condition_dropout: 0.0
+
+  # Loss: same as exp045/048
+  amp_corr_weight: 0.3
+  amp_grad_weight: 0.2
+
+  # Knowledge Distillation (NEW — exp054)
+  kd_teacher_preds: "experiments/checkpoints/exp054/teacher_preds.pt"
+  kd_weight: 0.5
+
+  # Diffusion: frozen (reuse exp034)
+  freeze_diffusion: true
+  diffusion_checkpoint: "experiments/checkpoints/exp034/diffusion_best_ema.pt"
+
+  # Optimizer: same as exp048
+  amp_lr: 0.00005
+  amp_weight_decay: 0.0001
+
+  # Amplitude augmentation: same as exp039/048
+  amp_augment: true
+  amp_augment_scale: 0.2
+  amp_augment_jitter: 0.05

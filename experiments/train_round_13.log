@@ -1,0 +1,205 @@
+=== exp011: Fix visualization defects ===
+Step 1: Re-evaluate eta=0.5 with diversity metrics
+Step 2: Regenerate all paper figures with improved vibrato zoom
+Backing up old figures to experiments/figures_exp010_backup/
+
+--- Running eta=0.5 evaluation (n_samples=5, ddim_steps=50) ---
+Device: cuda
+Test tracks: 15
+
+--- Evaluating Diffusion ---
+{
+  "diffusion_rpa_mean": {
+    "mean": 0.9421871230852632,
+    "std": 0.034600573253064926,
+    "min": 0.8792594916849701,
+    "max": 0.9833479184898112
+  },
+  "diffusion_rpa_oracle": {
+    "mean": 0.964836760096883,
+    "std": 0.023054634714687355,
+    "min": 0.9131921360053187,
+    "max": 0.9892486560820103
+  },
+  "diffusion_f0_mae_mean": {
+    "mean": 21.783957112630212,
+    "std": 5.074281891252634,
+    "min": 14.548750305175782,
+    "max": 29.140914535522462
+  },
+  "diffusion_f0_mae_oracle": {
+    "mean": 17.553028742472332,
+    "std": 4.129039870637902,
+    "min": 13.870950698852539,
+    "max": 27.25627899169922
+  },
+  "diffusion_amp_corr_mean": {
+    "mean": 0.5728303854055612,
+    "std": 0.2527238184797384,
+    "min": 0.020080684417822302,
+    "max": 0.8172592073550836
+  },
+  "diffusion_amp_corr_oracle": {
+    "mean": 0.5800597415436138,
+    "std": 0.23170708421379851,
+    "min": 0.021328159231697365,
+    "max": 0.8366062233292714
+  },
+  "diffusion_amp_rmse_log_mean": {
+    "mean": 1.054097708861033,
+    "std": 0.3286610092507212,
+    "min": 0.671108889579773,
+    "max": 1.8243056893348695
+  },
+  "diffusion_amp_rmse_log_oracle": {
+    "mean": 0.7794492085774739,
+    "std": 0.1692521391292687,
+    "min": 0.5514671802520752,
+    "max": 1.1105247735977173
+  },
+  "diffusion_vde_mean_avg": {
+    "mean": 4.682752981073321,
+    "std": 1.9055162108183457,
+    "min": 1.395650461062758,
+    "max": 7.581451656046561
+  },
+  "diffusion_vde_mean_oracle": {
+    "mean": 4.592299385117253,
+    "std": 1.7723010231962095,
+    "min": 1.5355564630506464,
+    "max": 7.191508300828014
+  },
+  "diffusion_vre_mean_avg": {
+    "mean": 0.7916867622885796,
+    "std": 0.144651400247701,
+    "min": 0.5405023173629636,
+    "max": 1.026562176151236
+  },
+  "diffusion_vre_mean_oracle": {
+    "mean": 0.7586186982138696,
+    "std": 0.18725106655581386,
+    "min": 0.36853916987791585,
+    "max": 1.0582607005169893
+  },
+  "diffusion_f0_diversity_cents": {
+    "mean": 9.160691165924073,
+    "std": 2.5667484276207624,
+    "min": 6.625673770904541,
+    "max": 13.84317398071289
+  },
+  "diffusion_amp_diversity": {
+    "mean": 0.007865684789915879,
+    "std": 0.0020349634027348176,
+    "min": 0.004897572100162506,
+    "max": 0.013234696350991726
+  },
+  "diffusion_n_vibrato_notes": {
+    "mean": 59.333333333333336,
+    "std": 38.79633430564743,
+    "min": 11.0,
+    "max": 121.0
+  }
+}
+
+Results saved to experiments/results/exp011_eta05.json
+
+--- Verifying diversity data in exp011_eta05.json ---
+OK: f0_diversity_cents = 9.16
+
+--- Regenerating all paper figures (seed=42) ---
+Device: cuda
+Loading models...
+
+Processing vn: Jupiter...
+  Frames: 6264, Duration: 62.6s
+  Predicting baseline...
+  Generating 5 diffusion samples (ddim_steps=50, eta=0.0)...
+  Plotting f0 contour...
+  Saved f0_contour_vn_Jupiter.png
+  Plotting vibrato zoom...
+  Saved vibrato_zoom_vn_Jupiter.png
+  Plotting amp contour...
+  Saved amp_contour_vn_Jupiter.png
+
+Processing tpt: Nocturne...
+  Frames: 9561, Duration: 95.6s
+  Predicting baseline...
+  Generating 5 diffusion samples (ddim_steps=50, eta=0.0)...
+  Plotting f0 contour...
+  Saved f0_contour_tpt_Nocturne.png
+  Plotting vibrato zoom...
+  Saved vibrato_zoom_tpt_Nocturne.png
+  Plotting amp contour...
+  Saved amp_contour_tpt_Nocturne.png
+
+Processing fl: Nocturne...
+  Frames: 9561, Duration: 95.6s
+  Predicting baseline...
+  Generating 5 diffusion samples (ddim_steps=50, eta=0.0)...
+  Plotting f0 contour...
+  Saved f0_contour_fl_Nocturne.png
+  Plotting vibrato zoom...
+  Saved vibrato_zoom_fl_Nocturne.png
+  Plotting amp contour...
+  Saved amp_contour_fl_Nocturne.png
+
+Plotting eta sweep summary...
+  Saved eta_sweep_summary.png
+Plotting instrument comparison...
+  Saved instrument_comparison.png
+
+=== Done! Generated 11 figures in experiments/figures ===
+  f0_contour_vn_Jupiter.png
+  vibrato_zoom_vn_Jupiter.png
+  amp_contour_vn_Jupiter.png
+  f0_contour_tpt_Nocturne.png
+  vibrato_zoom_tpt_Nocturne.png
+  amp_contour_tpt_Nocturne.png
+  f0_contour_fl_Nocturne.png
+  vibrato_zoom_fl_Nocturne.png
+  amp_contour_fl_Nocturne.png
+  eta_sweep_summary.png
+  instrument_comparison.png
+
+--- Verifying eta sweep data completeness ---
+eta=0.0: f0_diversity=9.01 cents OK
+eta=0.3: f0_diversity=8.92 cents OK
+eta=0.5: f0_diversity=9.16 cents OK
+eta=1.0: f0_diversity=7.87 cents OK
+All eta values have diversity data
+{
+  "experiment": "exp011",
+  "type": "visualization_fix",
+  "figures_generated": [
+    "amp_contour_fl_Nocturne.png",
+    "amp_contour_tpt_Nocturne.png",
+    "amp_contour_vn_Jupiter.png",
+    "eta_sweep_summary.png",
+    "f0_contour_fl_Nocturne.png",
+    "f0_contour_tpt_Nocturne.png",
+    "f0_contour_vn_Jupiter.png",
+    "instrument_comparison.png",
+    "vibrato_zoom_fl_Nocturne.png",
+    "vibrato_zoom_tpt_Nocturne.png",
+    "vibrato_zoom_vn_Jupiter.png"
+  ],
+  "n_figures": 11,
+  "eta05_rpa_mean": 0.9421871230852632,
+  "eta05_rpa_oracle": 0.964836760096883,
+  "eta05_f0_diversity_cents": 9.160691165924073,
+  "eta05_amp_diversity": 0.007865684789915879
+}
+
+=== exp011 complete ===
+Figures saved to experiments/figures/
+amp_contour_fl_Nocturne.png
+amp_contour_tpt_Nocturne.png
+amp_contour_vn_Jupiter.png
+eta_sweep_summary.png
+f0_contour_fl_Nocturne.png
+f0_contour_tpt_Nocturne.png
+f0_contour_vn_Jupiter.png
+instrument_comparison.png
+vibrato_zoom_fl_Nocturne.png
+vibrato_zoom_tpt_Nocturne.png
+vibrato_zoom_vn_Jupiter.png

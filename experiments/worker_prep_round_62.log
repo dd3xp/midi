@@ -1,0 +1,37 @@
+Everything looks correct. Let me provide a summary:
+
+---
+
+## Summary: exp050 Prepared
+
+### Experiment: Residual Amp Diffusion v2 — Residual Normalization
+
+**Motivation:** Fix the noise schedule mismatch in residual amp diffusion. Previously (exp042, Corr=0.744), residuals were not normalized, so their std was likely << 1.0, making DDPM training ineffective at most timesteps. By normalizing residuals to unit variance, all diffusion timesteps become useful.
+
+### Code Changes Made
+
+**[C1] `src/model/train.py` — Residual normalization (3 locations):**
+- Line 1184: Initialize `residual_std_value = 1.0`
+- Lines 1209-1213: After diagnostics, compute `residual_std_value = res_cat.std().item()` and save to `amp_norm_stats.pt`
+- Lines 1238, 1285: Training & test loops divide residual by `residual_std_value`
+
+**[C2] `src/model/evaluate.py` — Load and use residual_std (3 locations):**
+- Line 644-650: Load `residual_std` from `amp_norm_stats.pt` (default 1.0 for backward compat)
+- Line 286: Multiply sampled residual by `residual_std` to unscale
+- Line 696: Pass `residual_std` to `evaluate_diffusion()`
+
+**[C3] `src/model/train.py` — Residual augmentation:**
+- Lines 1240-1242: Add light jitter (`amp_augment_jitter=0.02`) to residual during training
+
+**Bonus: Dataset support** — Added `phenicx_dir` and `trios_dir` to `DEFAULT_CONFIG` and all `ExpressionDataset` calls in stages 1/2/3 and evaluate.py.
+
+### Config: `experiments/configs/exp050.yaml`
+- Stage 3 residual mode with frozen exp045 AmpPredictor (no instrument conditioning)
+- 300 epochs, lr=2e-4→1e-5, EMA 0.995
+- Jitter augmentation only (0.02)
+
+### Training Script: `experiments/next_train_cmd.sh`
+1. Train stage 3 (residual amp diffusion)
+2. Evaluate alpha sweep: 0.0, 0.3, 0.5, 1.0 for Pareto curve
+
+**Expected:** alpha=0.0 → Corr~0.781 (validates loading); alpha=0.3 → Corr≥0.77 + diversity > 0.003 = success.

@@ -1,0 +1,32 @@
+Now let me print the status summary:
+
+---
+
+## 📋 Supervisor Review Summary — Round 70
+
+### Experiment Reviewed: exp054 (Knowledge Distillation)
+- **Result**: Amp Corr = **0.764** ❌ (worse than exp048's 0.789 by 2.5%)
+- **Diagnosis**: KD failed because:
+  1. Teacher only 0.807 accuracy → noisy soft targets
+  2. Student architecture (plain GRU) was weaker than the best baseline (exp048 GRU+Attn+two-step)
+  3. Loss conflict between augmented ground truth and fixed teacher predictions
+- **Code review**: No bugs found. Implementation is correct but loss formula differs from plan (additive `L_task + 0.5*L_kd` vs planned `0.5*L_task + 0.5*L_kd`)
+
+### Key Metrics Snapshot
+| Metric | Best (no-inst) | Target | Gap |
+|--------|---------------|--------|-----|
+| f0 RPA | 95.82% | >85% | ✅ |
+| Amp Corr | 0.789 (exp048) | >0.90 | -0.111 |
+| f0 MAE | 23.44 | <20 | -3.44 |
+| VDE | 7.22 | <6.0 | -1.22 |
+
+### Next Plan: exp055 — Encoder Fine-tuning for Amp
+- **Core insight**: All 38 amp experiments used a **frozen encoder** trained for f0. This is the ONE systemic variable never changed.
+- **Approach**: Unfreeze encoder with tiny lr (2e-6, 25x smaller than amp_lr) during amp training
+- **Base config**: exp045 (GRU+Attention, 0.781)
+- **Expected**: Amp Corr 0.79-0.82 if encoder is the bottleneck
+- **Risk**: f0 degradation from encoder drift (mitigated by very small lr)
+- **Code changes**: ~15 lines in train.py + ~5 lines in evaluate.py
+
+### Critical Issues
+None. No bugs to fix before next experiment.

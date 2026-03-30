@@ -1,0 +1,106 @@
+=== exp022: Re-running evaluation (OOM fix) ===
+Starting evaluation with OOM fix...
+C:\Users\17145\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py:1367: UserWarning: expandable_segments not supported on this platform (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\c10/cuda/CUDAAllocatorConfig.h:39.)
+  return t.to(
+C:\lxr\study\final\src\model\evaluate.py:197: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  autocast_ctx = torch.cuda.amp.autocast() if device.type == "cuda" else torch.inference_mode()
+Device: cuda
+Test tracks: 49
+
+--- Evaluating Diffusion ---
+Loaded AmpPredictor (hidden=256, gru_hidden=128, layers=2, dropout=0.3, f0_conditioned=True) from experiments/checkpoints/exp022/amp_predictor_best.pt
+{
+  "diffusion_rpa_mean": {
+    "mean": 0.9550620669539895,
+    "std": 0.029963405292742464,
+    "min": 0.8696969696969696,
+    "max": 0.9900394477317555
+  },
+  "diffusion_rpa_oracle": {
+    "mean": 0.9598569069519285,
+    "std": 0.02765482725142949,
+    "min": 0.8696969696969697,
+    "max": 0.9927021696252466
+  },
+  "diffusion_f0_mae_mean": {
+    "mean": 21.839216556678824,
+    "std": 16.820009741882515,
+    "min": 10.543027559916178,
+    "max": 127.63990275065105
+  },
+  "diffusion_f0_mae_oracle": {
+    "mean": 20.174426370737503,
+    "std": 16.73217338046368,
+    "min": 9.694994926452637,
+    "max": 126.8592529296875
+  },
+  "diffusion_amp_corr_mean": {
+    "mean": 0.5782190024863569,
+    "std": 0.16684016478178829,
+    "min": 0.23465941579490415,
+    "max": 0.836970295934627
+  },
+  "diffusion_amp_corr_oracle": {
+    "mean": 0.5871507773366379,
+    "std": 0.16149366289742395,
+    "min": 0.2349076745581815,
+    "max": 0.8348337933681678
+  },
+  "diffusion_amp_rmse_log_mean": {
+    "mean": 0.9870321037007027,
+    "std": 0.2446631220212458,
+    "min": 0.6988907853762308,
+    "max": 1.839348832766215
+  },
+  "diffusion_amp_rmse_log_oracle": {
+    "mean": 0.9052545136334945,
+    "std": 0.23376167392546923,
+    "min": 0.6024938821792603,
+    "max": 1.7890552282333374
+  },
+  "diffusion_vde_mean_avg": {
+    "mean": 6.774678735954471,
+    "std": 5.8527694565322275,
+    "min": 1.5296787542456336,
+    "max": 32.26182304822752
+  },
+  "diffusion_vde_mean_oracle": {
+    "mean": 6.8515225028717195,
+    "std": 5.982058361347704,
+    "min": 1.5213474856419578,
+    "max": 32.72962493834209
+  },
+  "diffusion_vre_mean_avg": {
+    "mean": 0.8637231682321403,
+    "std": 0.1923531104258248,
+    "min": 0.5291945646344121,
+    "max": 1.2380022689023331
+  },
+  "diffusion_vre_mean_oracle": {
+    "mean": 0.8619564138212805,
+    "std": 0.2214855884365469,
+    "min": 0.4618091135303129,
+    "max": 1.3491240719458346
+  },
+  "diffusion_f0_diversity_cents": {
+    "mean": 8.558729590201864,
+    "std": 2.006538529029493,
+    "min": 5.962306022644043,
+    "max": 14.290993690490723
+  },
+  "diffusion_amp_diversity": {
+    "mean": 0.0025864369152779026,
+    "std": 0.0035422073603317327,
+    "min": 0.0005538684781640768,
+    "max": 0.014770828187465668
+  },
+  "diffusion_n_vibrato_notes": {
+    "mean": 74.18367346938776,
+    "std": 43.8306916368287,
+    "min": 17.0,
+    "max": 144.0
+  }
+}
+
+Results saved to experiments/results/exp022.json
+=== exp022 evaluation complete ===

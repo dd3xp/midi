@@ -1,0 +1,34 @@
+Good, no NEEDS_HUMAN file exists (and shouldn't — this is a strategic pivot, not a failure requiring human intervention).
+
+---
+
+## Status Summary
+
+### Experiment Reviewed: exp048 (Enhanced Two-Step AmpPredictor with Encoder-Pooled Features + Residual L1)
+
+### Key Metrics
+| Metric | exp048 | Best Ever | Target |
+|--------|--------|-----------|--------|
+| **Amp Corr** | **0.789** | 0.807 (exp039 w/inst) | >0.90 |
+| f0 RPA | 94.83% | 94.83% | >85% ✅ |
+| Amp Diversity | ~0 | ~0 (all experiments) | >0 ❌ |
+
+### Diagnosis
+- **Two-Step decomposition FAILED** (2 iterations: exp047=0.787, exp048=0.789)
+- L1 residual penalty was completely ignored (residual std grew from 2.33→2.72)
+- Removing `.detach()` caused note_level and residual networks to compete instead of decompose
+- **30 experiments of deterministic AmpPredictor have hit a hard ceiling at ~0.79 (no inst)**
+- Code is correct — the issue is methodological
+
+### Next Plan: exp049 — Pure Amp Diffusion v2
+**Strategic pivot** from deterministic regression to generative modeling:
+- Train a separate 1-channel DDPM for amplitude (Stage 3 code already exists!)
+- Uses exp033's velocity-aware encoder (major upgrade over exp021's 0.407)
+- **No code changes needed** — just config + training
+- Solves **both** bottlenecks simultaneously:
+  1. Quality: oracle selection from diverse samples should beat deterministic mean
+  2. **Diversity: directly addresses amp_diversity=0 (paper's biggest weakness)**
+- Priority: **HIGH**
+
+### Critical Issues Found
+None (code is correct). The problem is that deterministic amp prediction has reached its fundamental ceiling. The plan is to try a fundamentally different approach (diffusion).

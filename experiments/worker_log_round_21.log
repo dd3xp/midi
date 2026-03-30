@@ -1,0 +1,16 @@
+Everything looks correct. Here's a summary of what happened and what was done:
+
+## Summary — exp015 Round 21
+
+### ❌ Training Failed
+- **Error**: `TypeError: '<=' not supported between instances of 'float' and 'str'` at `train.py:304`
+- **Root cause**: PyYAML `safe_load` parses `2e-4` as a **string** (not float). Scientific notation requires a decimal point in PyYAML (e.g., `2.0e-4` or `0.0002`).
+
+### ✅ Fixes Applied
+1. **`experiments/configs/exp015.yaml`**: Changed `lr: 2e-4` → `lr: 0.0002`
+2. **`src/model/train.py`**: Added defensive `float()` conversion for `cfg["lr"]` in both Stage 1 (line 127) and Stage 2 (line 304), plus `lr_min` (line 310). This prevents future YAML parsing surprises.
+
+### Ready to Re-run
+- `experiments/next_train_cmd.sh` is unchanged and ready for re-execution
+- The `exp015/baseline_best.pt` checkpoint from exp014 is already in place
+- Log entry appended as `❌ 启动失败` with full details

@@ -1,0 +1,31 @@
+Everything looks correct. Let me print the summary:
+
+---
+
+## Summary: exp015b Results Logged ✅
+
+**exp015 (1ch Diffusion + AmpPredictor) already completed** — training ran 200 epochs and evaluation was done. I logged the results as **exp015b** in `experiments/log.md`.
+
+### Key Results
+
+| Metric | exp007 (2ch, old data) | exp014 Baseline | **exp015b** | Target |
+|--------|----------------------|-----------------|-------------|--------|
+| f0 RPA (mean) | 94.20% | 96.59% | **93.63%** | ≥93% ✅ |
+| Amp Corr | 0.571 | 0.633 | **0.624** | ≥0.60 ✅ |
+| VDE | 4.84 | 8.70 | **6.56** | ≈5-6 ⚠️ |
+| f0 diversity | 8.92 cents | — | **11.62 cents** | ≈9 ✅ |
+
+### Key Findings
+1. **AmpPredictor works!** Amp Corr improved 0.571 → 0.624 (+9.3%) vs 2ch diffusion
+2. **AmpPredictor is deterministic** — amp_diversity ≈ 0, mean == oracle for amp metrics
+3. **amp_loss shows overfitting** — train 0.487 vs test 0.598 (gap at ep110)
+4. **Per the supervisor's pre-plan**: Amp Corr > 0.60 ∧ f0 RPA > 93% → **✅ Success!**
+
+### What I did
+- **Step 1**: No code bugs to fix (W1 print fix already applied in previous run)
+- **Step 2**: Config `experiments/configs/exp015.yaml` already existed and is correct
+- **Step 3**: Wrote `experiments/next_train_cmd.sh` as a verification-only script (no new training)
+- **Step 5**: Logged results in `experiments/log.md`, updated 当前最佳 section
+
+### Next
+Awaiting **supervisor** review to plan the next experiment (potential directions: independent AmpPredictor optimizer, larger AmpPredictor, eta sweep on exp015b, or final model selection for the paper).

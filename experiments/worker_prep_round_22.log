@@ -1,0 +1,26 @@
+Everything works. Let me print a summary:
+
+---
+
+## Summary: exp015 prepared (rerun)
+
+**Experiment**: exp015 — Two-stage architecture: 1-channel Diffusion (f0 only) + AmpPredictor
+
+**Background**: A previous attempt crashed due to YAML `lr: 2e-4` being parsed as string. That bug was already fixed (`lr: 0.0002`) and `float()` defensive conversion added to `train.py`. Training reached epoch 20/200 before being interrupted. This rerun starts fresh.
+
+**Code status** (all modifications already in place from prior prep rounds):
+- `diffusion.py`: `ConditionalDDPM(n_channels=1)` → UNet with `input_ch=257`, `output_ch=1`; `AmpPredictor` class (BiGRU + Softplus)
+- `train.py`: Stage 2 handles 1-ch diffusion + AmpPredictor jointly; `float()` defensive conversion for lr
+- `evaluate.py`: Detects `n_channels` from config, loads `AmpPredictor`, predicts amp deterministically (shared across f0 samples)
+
+**Config** (`experiments/configs/exp015.yaml`):
+- `n_channels: 1`, `lr: 0.0002`, `samples_per_epoch: 1860` (→ ~23,200 total steps over 200 epochs)
+- Encoder frozen from exp014 (173 tracks, 10 instruments)
+
+**Training script** (`experiments/next_train_cmd.sh`):
+1. Cleans up incomplete checkpoints from previous interrupted run
+2. Copies exp014 baseline → exp015 (encoder source)
+3. Runs `python src/model/train.py --config experiments/configs/exp015.yaml --stage 2`
+4. Evaluates both baseline + diffusion with `--mode both --n_samples 5 --ddim_steps 50 --eta 0.3`
+
+**Expected results**: f0 RPA ≥ 93%, Amp Corr ≥ 0.60 (vs exp007's 0.571), VDE ≈ 5-6 cents

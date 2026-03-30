@@ -1,0 +1,18 @@
+Here's a summary of what was prepared:
+
+## Summary: exp004 (Re-run) — Stage 2 Conditional Diffusion
+
+**Status**: Ready to train. No code bugs to fix.
+
+**What was verified**:
+1. ✅ **UpBlock fix confirmed**: `diffusion.py:142` — `self.proj = nn.Conv1d(in_ch * 2, out_ch, 1)` (the bug that crashed the first exp004 attempt)
+2. ✅ **Baseline checkpoint exists**: `experiments/checkpoints/exp004/baseline_best.pt` (10MB) + `norm_stats.pt`
+3. ✅ **Config exists**: `experiments/configs/exp004.yaml` — batch=16, lr=2e-4, epochs=200, ema_decay=0.9999, T=1000
+4. ✅ **Training script**: `experiments/next_train_cmd.sh` — runs Stage 2 training then evaluates (both baseline + diffusion, 5 samples, DDIM 50 steps)
+
+**What this experiment tests**: First successful Stage 2 conditional diffusion training. The 1D U-Net denoiser with frozen encoder from exp003 will generate f0 and amp via DDIM sampling. Expected f0 RPA ~80-92%, Amp Corr ~0.5-0.7.
+
+**Key evaluation points** (per supervisor plan):
+- Diffusion vs baseline comparison (exp003: RPA=97.14%, Amp=0.645)
+- Training stability (train/test loss divergence)
+- Multi-sample diversity (oracle vs mean)

@@ -1,0 +1,22 @@
+Everything is logged correctly. Here's a summary of the exp019 results:
+
+## exp019 Results: Mixed Checkpoint Multi-eta Evaluation ✅
+
+**Strategy**: Combined exp017's diffusion model (best f0) + exp018's AmpPredictor (best amp) + exp014's encoder. No training — evaluation only.
+
+### Key Results (4 eta values evaluated):
+
+| η | RPA mean | Amp Corr | Amp RMSE(log) | VDE | f0 diversity |
+|---|---------|----------|---------------|-----|-------------|
+| 0.0 | 94.71% | 0.665 | 0.697 | 6.97 | 10.53 cents |
+| 0.3 | 95.37% | 0.665 | 0.697 | 6.73 | 10.32 cents |
+| 0.5 | 95.34% | 0.665 | 0.697 | 6.55 | 10.08 cents |
+| **1.0** | **95.59%** | 0.665 | 0.697 | **6.54** | 9.07 cents |
+
+### Mixed Strategy Validation:
+- **f0 restored**: RPA 94.33% (exp018) → **95.59%** (exp019 η1.0), recovering exp017's f0 advantage
+- **Amp preserved**: Corr=0.665, RMSE=0.697 — identical to exp018 (same AmpPredictor)
+- **Best of both worlds confirmed** — no performance loss from mixing
+
+### Updated 当前最佳:
+**exp019 is now the project's best diffusion result**, surpassing both exp017 and exp018 individually. Diffusion comprehensively outperforms baseline on amp (+5.1% Corr, -3.7% RMSE) and vibrato (-24.8% VDE), with only 1% lower f0 RPA.

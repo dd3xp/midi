@@ -1,0 +1,23 @@
+# exp006: More training steps + cosine LR decay + fix oracle reporting
+# Purpose: Improve diffusion mean RPA by 3.8x more training steps + LR scheduling
+# Changes from exp005:
+#   [C1] epochs 200->500, samples_per_epoch 1180->1770 (59x30), total ~55K steps
+#   [C2] CosineAnnealingLR: lr 2e-4 -> 1e-5 over 500 epochs
+#   [C3] evaluate.py: separate f0 oracle (by f0_mae) and amp oracle (by amp_rmse_log)
+# Prerequisite: copy exp005/baseline_best.pt -> exp006/baseline_best.pt
+# Expected: Mean RPA 88-92%, Oracle RPA 96-98%, test_loss < 0.028
+
+output_dir: "experiments/checkpoints/exp006"
+instruments: ["vn", "tpt", "fl"]
+crop_len: 512
+seed: 42
+save_every: 50
+
+stage2:
+  batch_size: 16
+  lr: 0.0002
+  lr_min: 0.00001
+  epochs: 500
+  ema_decay: 0.995
+  n_diffusion_steps: 1000
+  samples_per_epoch: 1770

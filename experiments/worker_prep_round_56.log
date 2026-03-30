@@ -1,0 +1,27 @@
+The code handles `amp_instrument_conditioned: false` correctly — when it's false, `instrument_id` is set to `None`, and the AmpPredictor just skips the instrument embedding path. No bugs to fix.
+
+Here's a summary of what I prepared:
+
+## Summary
+
+**Following supervisor's plan for exp045**: Isolate the cost of removing instrument conditioning.
+
+### No code bugs to fix
+The code already correctly handles `amp_instrument_conditioned: false` — when disabled, `instrument_id=None` is passed, and AmpPredictor skips the instrument embedding concatenation.
+
+### Created: `experiments/configs/exp045.yaml`
+- **Only change vs exp039 (best, Amp Corr=0.807)**: `amp_instrument_conditioned: false` (was `true`)
+- Everything else identical: same attention, dropout, augmentation, loss weights, lr, 300 epochs
+- Architecture: input_dim = 256 (encoder only, no +32 instrument embedding) → proj → 256
+
+### Created: `experiments/next_train_cmd.sh`
+Three sequential steps:
+1. **Evaluate exp044** — training completed (300 epochs) but never evaluated. Uses `--n_samples 3 --ddim_steps 50 --eta 0.3`
+2. **Train exp045** — `train.py --stage 2` with frozen diffusion, only training AmpPredictor (300 epochs)  
+3. **Evaluate exp045** — same eval settings as exp044
+
+### Expected outcomes
+| | exp039 (with instrument) | exp044 (no inst + note_pos) | **exp045 (no inst only)** |
+|---|---|---|---|
+| Amp Corr | 0.807 | ~0.75? (pending eval) | **0.78–0.80** (target) |
+| Purpose | Best reference | Two changes conflated | **Isolate instrument cost** |

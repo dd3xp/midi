@@ -1,0 +1,28 @@
+# exp016: Log-space AmpPredictor with dropout
+# Purpose: Reduce Amp RMSE(log) from 0.825 to <=0.74 while maintaining Amp Corr >=0.62
+# Architecture changes:
+#   [C1] diffusion.py: AmpPredictor removes Softplus, outputs log-amp directly
+#   [C2] diffusion.py: AmpPredictor adds dropout=0.2 after GRU
+#   [C3] train.py: amp_loss simplified (no log() on pred, already in log-space)
+#   [C4] train.py: amp_predictor_best.pt saved by best test_amp_loss (independent)
+#   [C5] evaluate.py: exp(log_amp_pred) to convert AmpPredictor output to linear
+# Encoder: frozen from exp014 (173 tracks, 10 instruments)
+# Dataset: same as exp015 (URMP 9 inst + Bach10 4 inst = 173 tracks)
+# Comparison: exp015b (Softplus, no dropout, joint early stop)
+
+output_dir: "experiments/checkpoints/exp016"
+instruments: ["vn", "va", "vc", "fl", "ob", "cl", "sax", "tpt", "tbn", "bn"]
+crop_len: 512
+seed: 42
+save_every: 10
+
+stage2:
+  batch_size: 16
+  lr: 0.0002
+  lr_min: 0.00001
+  epochs: 200
+  ema_decay: 0.995
+  n_diffusion_steps: 1000
+  samples_per_epoch: 1860    # 124 tracks x 15 crops
+  n_channels: 1              # 1ch diffusion (f0 only)
+  amp_dropout: 0.2           # dropout for AmpPredictor

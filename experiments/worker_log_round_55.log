@@ -1,0 +1,18 @@
+Here's a summary of what happened:
+
+**exp044: Note Position Feature + Remove Instrument Conditioning**
+- **Training**: ✅ Completed 300/300 epochs successfully
+- **Best test_amp_loss**: 0.572615 @ epoch 29 (very early — concerning sign of overfitting)
+- **Evaluation**: ❌ Terminated (killed during evaluate.py execution, no results JSON produced)
+
+**Key observations from training**:
+1. Best epoch was **ep29** (vs exp039's ep142) — despite same augmentation, the model overfit much faster
+2. Best test_amp_loss 0.573 is **25% higher** than exp039's 0.457, suggesting quality may have dropped
+3. After ep29, test_amp_loss fluctuated between 0.76–0.96 with no improvement over 271 epochs
+4. The removal of instrument embedding (32-dim) and addition of note_position (1-dim) significantly changed the conditioning signal
+
+**What I did**:
+- Appended a partial row to `experiments/log.md` with training metrics and a "⏳ 需重新评估" status
+- Wrote `experiments/next_train_cmd.sh` to run **evaluation only** (no training needed)
+
+The shell script should now run the evaluation and call back to fill in the actual metrics (Amp Corr, f0 RPA, etc.).

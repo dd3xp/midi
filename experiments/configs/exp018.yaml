@@ -1,0 +1,32 @@
+# exp018: AmpPredictor regularization — separate optimizer + weight_decay
+# Purpose: Reduce AmpPredictor overfitting (exp017 best@ep66, gap=0.125)
+# Changes:
+#   [C1] train.py: separate optimizer for AmpPredictor (amp_lr, amp_weight_decay)
+#   [C2] train.py: separate CosineAnnealingLR for each optimizer
+#   [C3] train.py: two optimizer.step() per batch
+# Architecture: same as exp017 (2-layer BiGRU, hidden=256, gru_hidden=128)
+# Encoder: frozen from exp014 (173 tracks, 10 instruments)
+# Dataset: same as exp017 (URMP 9 inst + Bach10 4 inst = 173 tracks)
+
+output_dir: "experiments/checkpoints/exp018"
+instruments: ["vn", "va", "vc", "fl", "ob", "cl", "sax", "tpt", "tbn", "bn"]
+crop_len: 512
+seed: 42
+save_every: 10
+
+stage2:
+  batch_size: 16
+  lr: 0.0002              # diffusion lr (unchanged)
+  lr_min: 0.00001
+  amp_lr: 0.0001          # AmpPredictor lr (halved)
+  amp_lr_min: 0.000005    # AmpPredictor min lr
+  amp_weight_decay: 0.0001  # L2 regularization for AmpPredictor
+  epochs: 200
+  ema_decay: 0.995
+  n_diffusion_steps: 1000
+  samples_per_epoch: 1860   # 124 tracks x 15 crops
+  n_channels: 1             # 1ch diffusion (f0 only)
+  amp_dropout: 0.3
+  amp_hidden: 256
+  amp_gru_hidden: 128
+  amp_gru_layers: 2

@@ -1,0 +1,18 @@
+Results have been logged. Here's the summary:
+
+## exp047 Results: Two-Step Amp Prediction (NoteMLP + Frame Residual)
+
+| Metric | exp045 (no inst) | **exp047 (two-step)** | exp039 (best, with inst) |
+|--------|-----------------|----------------------|--------------------------|
+| **Amp Corr** | 0.781 | **0.787 (+0.8%)** | 0.807 |
+| Amp RMSE | 0.649 | 0.658 (+1.4%) | 0.582 |
+| Best Epoch | 34 | **71 (2x delayed!)** | 142 |
+| f0 RPA | 93.63% | 93.88% | 94.18% |
+
+**Key findings:**
+- **Marginal Amp Corr improvement**: +0.6% over exp045 (0.781→0.787), still 2.5% below exp039 (0.807)
+- **Overfitting delayed 2x** ✅: Best epoch moved from 34→71, confirming two-step has regularization benefit
+- **Decomposition is not clean** ❌: The critical issue is `residual std=2.95` being 2.7x larger than `gt_amp std=1.10`. The note-level MLP and residual network are "fighting" — note_level overshoots and residual compensates with negative values rather than learning fine-grained envelope shapes
+- `note_aux_loss` converged well (4.81→0.072), but note_level std=2.01 is also larger than expected
+
+**当前最佳 unchanged**: exp039 (Amp Corr=0.807, with instrument conditioning) remains the best. No 下一步计划 written — waiting for supervisor.

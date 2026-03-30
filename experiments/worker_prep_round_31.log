@@ -1,0 +1,24 @@
+Everything is prepared. Here's a summary:
+
+---
+
+## Summary: exp022 Evaluation Re-run (OOM Fix)
+
+### What was done
+
+**Step 1 — Bug fixes (OOM mitigation):**
+1. **`evaluate.py` line 16**: Changed `set_per_process_memory_fraction` from `0.85` → `0.95` (allows PyTorch to use more GPU memory)
+2. **`evaluate.py` line 197-199**: Added `torch.cuda.amp.autocast()` mixed-precision inference inside the diffusion evaluation loop — this halves memory usage for UNet attention layers by running in float16
+
+**Step 2 — Config:** No new config needed. Using existing `experiments/configs/exp022.yaml` (f0-conditioned AmpPredictor, freeze_diffusion=true).
+
+**Step 3 — Training script:** `experiments/next_train_cmd.sh` was already prepared from the previous invocation. It runs **evaluation only** (no training — checkpoints already exist):
+- `PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True`
+- `n_samples=3` (reduced from 5 to lower peak memory)
+- `ddim_steps=50`, `eta=0.3`, `mode=diffusion`
+- Output → `experiments/results/exp022.json`
+
+### Expected outcome
+- **Amp Corr 0.68–0.72** (24% test_amp_loss improvement, partially offset by teacher forcing gap)
+- **f0 metrics** should match exp017 (same diffusion model, frozen)
+- Evaluation should complete in ~15–30 minutes

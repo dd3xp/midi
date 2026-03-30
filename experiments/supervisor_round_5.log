@@ -1,0 +1,36 @@
+Here's the status summary:
+
+---
+
+## Supervisor Review Summary
+
+### Experiment Reviewed: **exp004 (Stage 2 Diffusion — FAILED)**
+- **Status**: Crashed on first training batch due to U-Net UpBlock channel dimension bug
+- **Bug**: `Conv1d(in_ch+out_ch, ...)` should have been `Conv1d(in_ch*2, ...)` — **already fixed** in diffusion.py:142
+- **No result file exists** (no `exp004.json`); only `baseline_best.pt` + `norm_stats.pt` remain
+
+### Code Re-verification (Post-Fix)
+- ✅ UpBlock fix correct: `in_ch * 2` handles skip connections properly
+- ✅ Full U-Net dimension chain verified: 258→128→256→512→256→128→2
+- ✅ DDIM sampling, cosine schedule, FiLM conditioning all correct
+- ✅ f0/amp normalization consistent between training and evaluation
+- ✅ Variable-length input compatible (UpBlock padding handles non-power-of-2)
+- ⚠️ W2 (best ckpt on train_loss) still present — acceptable for first run
+
+### No New Bugs Found
+
+### Key Metrics (Current Best — exp003 Baseline)
+| Metric | Value | Target |
+|--------|-------|--------|
+| f0 RPA | **97.14%** | >85% ✅ |
+| Amp Corr | **0.645** | >0.9 ⚠️ |
+| f0 MAE | 16.39 cents | — |
+
+### Next Plan: **Re-run exp004** (HIGH priority)
+- Same config (batch=16, lr=2e-4, 200 epochs, T=1000)
+- No setup needed — `baseline_best.pt` and `exp004.yaml` already exist
+- Expected: f0 RPA ~80-92%, Amp Corr ~0.5-0.7
+- Contingency plans documented for good/mediocre/bad results
+
+### Biggest Bottleneck
+**Need Stage 2 training to complete.** Baseline is solid; the paper's core contribution (diffusion model for expressive diversity) cannot be evaluated until exp004 succeeds.

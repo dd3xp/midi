@@ -1,0 +1,20 @@
+The experiment results have been logged successfully. Here's a summary of **exp042: Residual Amp Diffusion**:
+
+## Results Summary
+
+| Metric | exp039 (deterministic best) | exp041 (pure amp diffusion) | **exp042 (residual)** |
+|--------|---------------------------|---------------------------|---------------------|
+| **Amp Corr** | **0.807** ✅ | 0.696 | **0.744** |
+| **Amp RMSE** | **0.582** | 0.880 | **0.699** |
+| **amp_diversity** | ~0 | **0.010** ✅ | 0.004 |
+| f0 RPA | 93.73% | 93.92% | 94.31% |
+
+### Key Findings:
+- **Residual approach partially works**: Corr improved +6.9% over pure diffusion (0.696→0.744), RMSE improved -20.6% (0.880→0.699)
+- **But fell short of target (≥0.82)**: Corr 0.744 is still -7.8% below the deterministic best (0.807)
+- **Diversity decreased**: 0.010→0.004 (-57%), because residual variance is small (std=0.3753)
+- **Core problem**: The diffusion model's residual predictions add noise rather than correcting the AmpPredictor's errors — the "denoise" paradigm struggles with small-variance targets
+- Residual stats confirmed: mean=-0.0834, std=0.3753 (much smaller than full amp std=1.0)
+- Training was stable (best@ep218, almost no overfitting gap)
+
+**No records broken** — exp039 remains Amp Corr best (0.807), exp041 remains amp_diversity best (0.010). Supervisor's review is needed for next steps.

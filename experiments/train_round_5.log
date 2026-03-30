@@ -1,0 +1,84 @@
+=== exp004: Stage 2 Conditional Diffusion (first diffusion training) ===
+Start time: Tue Mar 24 14:51:03     2026
+Changes:
+  - First Stage 2 training: conditional DDPM with 1D U-Net denoiser
+  - Frozen encoder from exp003
+  - batch=16, lr=2e-4, epochs=200, ema_decay=0.9999, T=1000
+Device: cuda
+Config: {
+  "data_dir": "C:\\lxr\\study\\final\\datagen",
+  "output_dir": "experiments/checkpoints/exp004",
+  "instruments": [
+    "vn",
+    "tpt",
+    "fl"
+  ],
+  "crop_len": 512,
+  "seed": 42,
+  "stage1": {
+    "batch_size": 32,
+    "lr": 0.001,
+    "epochs": 100,
+    "lam": 1.0,
+    "patience": 15,
+    "lr_patience": 5,
+    "lr_factor": 0.5,
+    "dropout": 0.3
+  },
+  "stage2": {
+    "batch_size": 16,
+    "lr": 0.0002,
+    "epochs": 200,
+    "ema_decay": 0.9999,
+    "n_diffusion_steps": 1000
+  },
+  "save_every": 10
+}
+Loaded baseline from experiments/checkpoints/exp004\baseline_best.pt
+
+============================================================
+Stage 2: Training Conditional Diffusion Model
+============================================================
+Amp log stats: mean=-4.8466, std=1.2020
+Traceback (most recent call last):
+  File "C:\lxr\study\final\src\model\train.py", line 430, in <module>
+    main()
+  File "C:\lxr\study\final\src\model\train.py", line 424, in main
+    train_stage2(config, encoder, device)
+  File "C:\lxr\study\final\src\model\train.py", line 314, in train_stage2
+    loss = diffusion.training_loss(x_0, condition)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\lxr\study\final\src\model\diffusion.py", line 279, in training_loss
+    noise_pred = self.unet(x_t, t, condition)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\17145\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1776, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\17145\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1787, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\lxr\study\final\src\model\diffusion.py", line 235, in forward
+    h = up(h, skip, t_emb)
+        ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\17145\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1776, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\17145\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1787, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\lxr\study\final\src\model\diffusion.py", line 155, in forward
+    h = self.proj(h)
+        ^^^^^^^^^^^^
+  File "C:\Users\17145\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1776, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\17145\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1787, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\17145\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\conv.py", line 375, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\17145\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\conv.py", line 370, in _conv_forward
+    return F.conv1d(
+           ^^^^^^^^^
+RuntimeError: Given groups=1, weight of size [256, 768, 1], expected input[16, 1024, 256] to have 768 channels, but got 1024 channels instead

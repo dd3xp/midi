@@ -1,0 +1,27 @@
+The log has been updated successfully. Here's a summary of the exp026 results:
+
+## exp026: Model Soup — ❌ 失败
+
+**Method**: Arithmetic weight averaging of AmpPredictor checkpoints (Wortsman et al. 2022 "Model Soups"). No training required.
+
+### Results
+
+| Variant | Amp Corr | Amp RMSE(log) | f0 RPA |
+|---------|----------|---------------|--------|
+| exp023 (source 1) | **0.676** | 0.726 | 95.56% |
+| exp024 (source 2) | 0.668 | **0.695** | 95.30% |
+| exp025 (source 3) | 0.665 | 0.731 | 95.09% |
+| **2-way soup** (exp023+024) | **0.601** ❌ | **2.761** ❌ | 95.56% |
+| **3-way soup** (exp023+024+025) | **0.586** ❌ | **3.746** ❌ | 95.32% |
+
+### Key Findings
+
+- **Catastrophic failure**: Amp Corr dropped from 0.676→0.601 (-11%), RMSE exploded from 0.726→2.761 (+280%)
+- **Root cause**: Weight spaces are incompatible — different training configs (dropout 0.3 vs 0.4, MSE vs CorrLoss, weak vs strong regularization) place weights in different loss basins. Averaging crosses high-loss barriers
+- **3-way soup worse than 2-way**, confirming basin incompatibility
+- f0 metrics unchanged (same diffusion model)
+
+### No update to "当前最佳"
+- exp023 remains best for Amp Corr (0.676)
+- exp024 remains best for Amp RMSE (0.695)
+- This was the 8th amp optimization method attempted — all 8 have failed to break the 0.676 ceiling

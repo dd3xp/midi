@@ -1,0 +1,11 @@
+# exp009: Enhanced diversity evaluation with inter-sample metrics + eta=1.0
+# Purpose: (1) Add f0/amp inter-sample diversity metrics, (2) Complete eta curve with eta=1.0
+# Uses exp007 checkpoint — evaluation only
+# Changes: evaluate.py adds f0_diversity_cents and amp_diversity to output
+
+output_dir: "experiments/checkpoints/exp007"  # reuse exp007 checkpoint
+instruments: ["vn", "tpt", "fl"]
+evaluation_only: true
+n_samples: 5
+ddim_steps: 50
+eta_values: [1.0]

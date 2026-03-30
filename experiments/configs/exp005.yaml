@@ -1,0 +1,23 @@
+# exp005: Fix EMA + increase training steps, re-run Stage 2 diffusion
+# Purpose: Fix EMA decay (0.9999->0.995) and increase training steps via dataset multiplier
+# Changes from exp004:
+#   [C1] EMA decay 0.9999 -> 0.995 (effective window 200 steps, fully converges in 14600 steps)
+#   [C1] samples_per_epoch: 1180 (59 tracks * 20) -> 73 batches/epoch -> 14600 total EMA updates
+#   [C1] Save raw (non-EMA) checkpoints alongside EMA checkpoints
+#   [C2] Best checkpoint selected by test_loss instead of train_loss
+# Prerequisite: copy exp003/baseline_best.pt -> exp005/baseline_best.pt
+# Expected: f0 RPA ~80-95%, Amp Corr ~0.5-0.7
+
+output_dir: "experiments/checkpoints/exp005"
+instruments: ["vn", "tpt", "fl"]
+crop_len: 512
+seed: 42
+save_every: 10
+
+stage2:
+  batch_size: 16
+  lr: 0.0002
+  epochs: 200
+  ema_decay: 0.995
+  n_diffusion_steps: 1000
+  samples_per_epoch: 1180

@@ -1,0 +1,26 @@
+# exp010: Paper visualization (no training)
+# Purpose: Generate figures for AIMC 2026 paper
+# Uses exp003 baseline checkpoint + exp007 diffusion checkpoint
+
+visualization_only: true
+
+baseline_ckpt_dir: experiments/checkpoints/exp003
+diffusion_ckpt_dir: experiments/checkpoints/exp007
+
+selected_tracks:
+  - path: "datagen/processed_vn/01_Jupiter_vn_vc_track1_vn/data.npz"
+    instrument: vn
+    piece: Jupiter
+  - path: "datagen/processed_tpt/18_Nocturne_vn_fl_tpt_track3_tpt/data.npz"
+    instrument: tpt
+    piece: Nocturne
+  - path: "datagen/processed_fl/17_Nocturne_vn_fl_cl_track2_fl/data.npz"
+    instrument: fl
+    piece: Nocturne
+
+n_samples: 5
+ddim_steps: 50
+eta: 0.0
+seed: 42
+
+output_dir: experiments/figures

@@ -1,0 +1,23 @@
+Everything is prepared. Here's a summary:
+
+---
+
+## exp007 Preparation Summary
+
+**Experiment**: exp007 — CosineAnnealingLR + 50% more training steps (Stage 2 Diffusion)
+
+**Changes from exp005** (best diffusion so far, Mean RPA=85.26%):
+1. **CosineAnnealingLR**: lr decays from 2e-4 → 1e-5 over 200 epochs (exp005 used fixed lr=2e-4, which caused test_loss rebound from 0.028 to 0.081 after ep80)
+2. **+50% training steps**: samples_per_epoch 1180→1770 (59×30), giving ~22,000 total steps vs exp005's 14,600
+
+**No code changes needed** — exp006's code modifications (CosineAnnealingLR in train.py + oracle separation in evaluate.py) are already in place and verified correct.
+
+**Files created**:
+- `experiments/configs/exp007.yaml` — config with all hyperparameters
+- `experiments/next_train_cmd.sh` — training + evaluation script
+
+**Expected results**:
+- Mean RPA: 87-91% (up from 85.26%)
+- Oracle RPA: 96-97% (up from 95.58%)
+- test_loss: < 0.028, without late-stage rebound
+- Training time: ~1.5× exp005 (should fit within time limits, unlike exp006 which timed out at 500 epochs)

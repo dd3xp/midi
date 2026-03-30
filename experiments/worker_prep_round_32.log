@@ -1,0 +1,28 @@
+Everything checks out. Here's a summary of what was prepared:
+
+---
+
+## Exp023 Preparation Summary
+
+### Code Changes (3 files modified):
+1. **`src/model/diffusion.py`** — `AmpPredictor` class gains 3 new params: `use_attention`, `n_attn_heads`, `n_attn_layers`. When `use_attention=True`, a 2-layer `TransformerEncoder` (Pre-LN, GELU, 4 heads, FFN=512) is applied **after** the BiGRU output. Total params: ~1.7M (up from ~1.0M).
+
+2. **`src/model/train.py`** — Reads `amp_use_attention`, `amp_n_attn_heads`, `amp_n_attn_layers` from stage2 config and passes them to `AmpPredictor()`.
+
+3. **`src/model/evaluate.py`** — Syncs the same attention config from YAML when loading `AmpPredictor` at eval time.
+
+### Config: `experiments/configs/exp023.yaml`
+- **Architecture**: BiGRU + 2-layer TransformerEncoder self-attention (NOT f0-conditioned)
+- **Training**: Freeze encoder (exp014) + freeze diffusion (exp017) → only train AmpPredictor
+- **Optimizer**: Adam lr=0.0001, weight_decay=0.0001, cosine schedule → 1e-5
+- **Epochs**: 200, batch_size=16, dropout=0.3
+
+### Training Script: `experiments/next_train_cmd.sh`
+- Copies baseline checkpoint → exp023 dir
+- Runs `train.py --stage 2` with exp023 config
+- Runs `evaluate.py --mode diffusion` with n_samples=3, ddim_steps=50, eta=0.3
+- Output: `experiments/results/exp023.json`
+
+### Expected Outcome
+- **Amp Corr**: 0.68-0.72 (current best: 0.665)
+- **f0 metrics**: unchanged (diffusion frozen from exp017)

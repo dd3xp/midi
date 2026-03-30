@@ -1,0 +1,18 @@
+The log has been updated. The "当前最佳" does NOT need updating since exp052 did not beat any previous best.
+
+Here's a summary of the exp052 results:
+
+## exp052 Results: Global Statistics 12-dim — ❌ Failed
+
+**Key metrics:**
+- **Baseline Amp Corr**: 0.746 (overall, 30 tracks) — well below target of 0.80-0.82
+- **Common 9 URMP tracks**: 0.890 (exp033) → 0.878 (exp052), **delta = -0.012** (actually worse)
+- **f0 RPA**: 94.46% baseline, 91.75% diffusion oracle — f0 generally OK
+- **Diffusion f0 diversity**: 68.03 cents — healthy
+
+**Why it failed:**
+1. The 5 global statistics (mean_pitch, pitch_range, mean_velocity, note_density, mean_duration) are **constant per track** — every frame has the exact same values. The GRU likely treats these as constant biases and ignores them.
+2. Adding 5 redundant dimensions (12 vs 7) may have interfered with encoder training.
+3. Stage 2 AmpPredictor was extremely unstable — best at epoch 11 out of 300, with test amp loss oscillating wildly (1.4 → 3.8).
+
+**Status**: 34 attempts to improve Amp Corr without instrument embedding, all failed. The 0.79 ceiling without instrument ID appears to be real. The supervisor will decide the next direction.

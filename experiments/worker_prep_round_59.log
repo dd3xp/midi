@@ -1,0 +1,40 @@
+Both checkpoints exist. Here's a summary of everything prepared:
+
+---
+
+## Summary: exp047 — Two-Step Amp Prediction
+
+### What was done:
+
+**1. Code Changes (3 files modified):**
+
+- **`src/model/diffusion.py`** — Added `TwoStepAmpPredictor` class (lines ~461-524):
+  - Step 1: `NoteLevelMLP` (velocity + pitch → per-note mean log-amp, 2→64→32→1)
+  - Step 2: `ResidualPredictor` (BiGRU + attention on encoder condition + detached note_level → frame residual)
+  - Returns `(note_level + residual, note_level)` tuple
+
+- **`src/model/train.py`** — Added support for two-step training:
+  - Import `TwoStepAmpPredictor`
+  - Added `compute_note_mean()` helper function (per-note average of log_amp_gt)
+  - In `train_stage2`: detects `amp_two_step` config, creates TwoStepAmpPredictor, extracts velocity+pitch, handles tuple return, computes auxiliary loss (`note_aux_weight * MSE(note_level, note_mean_gt)`)
+  - Added diagnostic logging every 10 epochs (note_level stats, residual std, note_aux_loss)
+
+- **`src/model/evaluate.py`** — Added TwoStepAmpPredictor loading and inference:
+  - Detects `amp_two_step` from config YAML
+  - Instantiates TwoStepAmpPredictor with correct architecture params
+  - Handles tuple return `(total, note_level)` — uses `total` for evaluation
+
+**2. Config:** `experiments/configs/exp047.yaml`
+  - `amp_two_step: true`, `amp_note_aux_weight: 0.5`
+  - Same base settings as exp045 (no instrument conditioning)
+  - Frozen diffusion from exp034, baseline encoder from exp033
+
+**3. Training script:** `experiments/next_train_cmd.sh`
+  - Stage 2 training + evaluation with n_samples=3, ddim_steps=50, eta=0.3
+
+**4. Backups:** `.bak` files created for all three modified source files
+
+### Expected outcome:
+- Amp Corr target: **0.80-0.84** (vs exp045 baseline 0.781)
+- TwoStepAmpPredictor: ~1.72M params (similar to existing AmpPredictor)
+- The structural decomposition should help note_level handle "how loud" while residual handles "what shape"

@@ -1,0 +1,28 @@
+Everything is properly logged. Here's a summary of what I did:
+
+## exp005 Results Logged ✅
+
+**Training completed successfully** (200 epochs, 14,600 steps with EMA decay=0.995).
+
+### Key Results — EMA Fix Was a Complete Success:
+
+| Metric | Baseline (exp003) | Diffusion mean | Diffusion oracle |
+|--------|-------------------|----------------|------------------|
+| f0 RPA | **97.14%** | 85.26% | 95.58% |
+| f0 MAE | **16.39** cents | 28.62 | 18.43 |
+| Amp Corr | **0.645** | 0.544 | 0.551 |
+| VDE | 8.34 | **6.03** | **5.11** |
+| VRE | 0.880 | **0.806** | **0.755** |
+
+### Highlights:
+1. **EMA fix resolved exp004's failure**: RPA went from 3.09% → 85.26% (mean) / 95.58% (oracle)
+2. **Oracle RPA (95.58%) approaches baseline (97.14%)** — the diffusion model has learned correct f0 distributions
+3. **Diffusion beats baseline on vibrato metrics** (VDE: 6.03 vs 8.34, VRE: 0.806 vs 0.880) — this is a key advantage
+4. **Meaningful diversity**: oracle-mean gap of 10.3% across 5 samples
+5. **Amp remains weaker** than baseline (0.544 vs 0.645)
+
+### Updated "当前最佳":
+- **Baseline best**: exp003 (RPA=97.14%, Amp Corr=0.645)
+- **Diffusion best**: exp005 (RPA=85.26%/95.58%, VDE=6.03/5.11)
+
+The supervisor will review and plan the next experiment.

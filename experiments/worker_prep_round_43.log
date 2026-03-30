@@ -1,0 +1,49 @@
+Good — the test loss uses GT f0 (line 740), which is correct: we want a consistent test loss metric, and the actual inference evaluation (evaluate.py) correctly uses diffusion f0.
+
+Now let me provide a summary:
+
+---
+
+## Summary of exp032 Preparation
+
+### What exp032 does
+**Scheduled Sampling f0-Conditioned AmpPredictor** — combines the f0-conditioning from exp022 (which proved f0→amp signal exists) with scheduled sampling to overcome the exposure bias that caused exp022 to fail at inference.
+
+### Files created/modified
+
+1. **`src/model/cache_diffusion_f0.py`** (NEW)
+   - Pre-generates 3 diffusion f0 samples for each of ~124 training tracks
+   - Saves to `experiments/checkpoints/exp032/cached_f0/`
+   - Uses exp017 diffusion + exp014 encoder, DDIM 50 steps, η=0.3
+   - ~3 minutes total
+
+2. **`src/model/dataset.py`** (MODIFIED)
+   - `__getitem__` now returns `track_idx` and `crop_start` (backward-compatible)
+   - `collate_fn` includes these two new fields
+   - These are needed to align cached f0 with randomly-cropped training batches
+
+3. **`src/model/train.py`** (MODIFIED)
+   - Added `import random, hashlib` at top
+   - After pitch_amp_anchor setup: loads cached f0 data from `cached_f0_dir`
+   - Training loop: scheduled sampling logic
+     - Epochs 1-50: p_gt=1.0 (100% GT f0, same as exp022 warmup)
+     - Epochs 50-150: p_gt linearly decays 1.0→0.0
+     - Epochs 150-200: p_gt=0.0 (100% cached diffusion f0)
+   - Per-batch: if using cached f0, looks up correct track and crop position
+   - Epoch logging: shows `ss_p_gt=X.XX` for monitoring
+
+4. **`experiments/configs/exp032.yaml`** (NEW)
+   - Based on exp028 (best model: inst embedding + attention)
+   - Adds: `amp_f0_conditioned: true`, `amp_scheduled_sampling: true`
+   - Warmup 50 epochs, decay 100 epochs
+
+5. **`experiments/next_train_cmd.sh`** (UPDATED)
+   - Step 1: Cache diffusion f0 (~3 min)
+   - Step 2: Copy checkpoints for eval
+   - Step 3: Train 200 epochs
+   - Step 4: Evaluate with 5 samples
+
+### Expected outcome
+- exp022 (f0-cond, no scheduled sampling): Amp Corr = 0.578 (exposure bias)
+- exp028 (best, no f0-cond): Amp Corr = 0.678
+- **exp032 expected: Amp Corr 0.70-0.73** (conservative estimate)

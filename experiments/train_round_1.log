@@ -1,0 +1,7 @@
+=== exp006: Stochastic DDIM Evaluation (eta=0.5) ===
+Start time: Tue Mar 24 20:08:10     2026
+Changes:
+  - Stochastic DDIM sampling with eta=0.5 (vs exp005 eta=0.0)
+  - Evaluation only, reusing exp005 checkpoint
+  - n_samples=10 for better diversity analysis
+Terminated

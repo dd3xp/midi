@@ -1,0 +1,37 @@
+No NEEDS_HUMAN.txt needed — the project is progressing well with no plateau, no bugs, no anomalies, and the next step is clear.
+
+---
+
+## Supervisor Review Summary
+
+### Experiment Reviewed: **exp019** — Mixed Checkpoint Multi-eta Evaluation
+
+### Key Metrics (best: η=1.0 mean / η=0.3 balanced):
+| Metric | Baseline | Diffusion (η1.0) | Diffusion (η0.3) | Verdict |
+|--------|----------|-------------------|-------------------|---------|
+| f0 RPA | **96.59%** | 95.59% | 95.37% | Baseline slightly better (-1%) |
+| Amp Corr | 0.633 | **0.665** | **0.665** | **Diffusion wins (+5.1%)** |
+| Amp RMSE(log) | 0.724 | **0.697** | **0.697** | **Diffusion wins (-3.7%)** |
+| VDE | 8.70 | **6.54** | 6.73 | **Diffusion wins (-24.8%)** |
+| f0 Diversity | — | 9.07 cents | 10.32 cents | Diffusion unique advantage |
+
+### What Was Planned Next: **exp020** — Publication Figures + Paper Tables
+- Generate 5-7 publication-quality figures using exp019 mixed checkpoint (expanded 10-instrument dataset)
+- Generate 3 formatted results tables (paper_tables.md)
+- Generate training curves plot
+- **Priority: HIGH** — last step before paper writing
+
+### Critical Issues Found: **None**
+- Code is correct; evaluation pipeline verified
+- Mixed checkpoint loading works properly
+- Results are internally consistent (amp metrics identical across eta, f0 varies as expected)
+
+### Incomplete from exp019 Plan:
+- ⚠️ `experiments/figures/final/` is empty (Step 4 not executed)
+- ⚠️ `experiments/results/paper_tables.md` not generated (Step 5 not executed)
+- These are now planned as exp020
+
+### Project Status:
+- **All experimental goals met** — diffusion beats baseline on amp (+5.1%) and VDE (-24.8%), matches on f0 (-1%)
+- **Current phase**: Paper preparation (figures + tables → writing)
+- **Biggest remaining weakness**: f0 diversity is modest (~10 cents) and amp diversity is 0 (deterministic AmpPredictor) — plan includes paper framing suggestions

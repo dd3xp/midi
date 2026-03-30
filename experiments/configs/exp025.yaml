@@ -1,0 +1,49 @@
+# exp025: MSE-only loss + strong regularization + attention
+# Purpose: Combine best of exp023 (MSE-only→best Amp Corr 0.676) and exp024 (strong reg→best RMSE 0.695)
+# Hypothesis: exp023's high Corr was limited by overfitting (gap 0.47); strong reg should improve generalization
+# Changes from exp023:
+#   dropout: 0.3→0.4, weight_decay: 0.0001→0.001 (matches exp024)
+# Changes from exp024:
+#   Remove CorrLoss+GradLoss (amp_corr_weight=0, amp_grad_weight=0), MSE-only
+# Expected: Amp Corr ≥0.676 (exp023), Amp RMSE ≈0.695 (exp024), less overfitting
+# Architecture: Self-Attention AmpPredictor (same as exp023/exp024)
+# Training: freeze encoder (exp014) + freeze diffusion (exp017), only train AmpPredictor
+
+output_dir: "experiments/checkpoints/exp025"
+baseline_checkpoint: "experiments/checkpoints/exp014/baseline_best.pt"
+instruments: ["vn", "va", "vc", "fl", "ob", "cl", "sax", "tpt", "tbn", "bn"]
+crop_len: 512
+seed: 42
+save_every: 10
+
+stage2:
+  batch_size: 16
+  lr: 0.0002
+  lr_min: 0.00001
+  epochs: 200
+  ema_decay: 0.995
+  n_diffusion_steps: 1000
+  samples_per_epoch: 1860
+  n_channels: 1
+
+  # AmpPredictor with attention (same architecture as exp023/exp024)
+  amp_dropout: 0.4           # ↑ from exp023's 0.3 (matches exp024)
+  amp_hidden: 256
+  amp_gru_hidden: 128
+  amp_gru_layers: 2
+  amp_use_attention: true
+  amp_n_attn_heads: 4
+  amp_n_attn_layers: 2
+  amp_f0_conditioned: false
+
+  # Freeze f0 diffusion from exp017 — only train AmpPredictor
+  freeze_diffusion: true
+  diffusion_checkpoint: "experiments/checkpoints/exp017/diffusion_best_ema.pt"
+
+  # Strong regularization from exp024
+  amp_lr: 0.0001
+  amp_weight_decay: 0.001    # ↑ from exp023's 0.0001 (matches exp024, 10x stronger)
+
+  # MSE-only loss — NO CorrLoss/GradLoss (they hurt in exp024)
+  amp_corr_weight: 0.0
+  amp_grad_weight: 0.0

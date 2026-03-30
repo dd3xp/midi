@@ -1,0 +1,38 @@
+The plan has been written successfully. Let me print a status summary:
+
+---
+
+## Supervisor Round 12 — Status Summary
+
+### Experiment Reviewed: exp038 (crop_len=1024, double training context)
+
+**Result: ❌ FAILED — Amp Corr regressed from 0.800 → 0.789**
+
+| Metric | exp035 (best) | exp038 | Verdict |
+|--------|--------------|--------|---------|
+| f0 RPA | 94.40% | 94.41% | ✅ Stable |
+| **Amp Corr** | **0.800** | **0.789** | **❌ Regressed** |
+| Amp RMSE | 0.572 | 0.580 | ⚠️ Slightly worse |
+
+### Key Findings
+- **Longer context did NOT help any instrument** — even violin (the hypothesis target) regressed from 0.722 → 0.707
+- **This is the 4th consecutive failure** to break 0.800: f0-conditioning (0.797), 2x-model (0.799), 2x-context (0.789)
+- **Confirmed non-bottlenecks**: f0 conditioning, model capacity, temporal context
+- **Most consistent signal**: overfitting at epoch ~52-55 regardless of all changes tried
+
+### Next Experiment Planned: exp039 — Amplitude Data Augmentation
+- **What**: Random global scaling (±0.2 in log space) + per-frame jitter (σ=0.05) on amp targets during training
+- **Why**: The ep52-55 overfitting ceiling is the last unexplained signal. With only 138 training tracks, the model memorizes amp patterns fast. Augmentation directly increases effective data diversity.
+- **Code change**: ~8 lines in train.py training loop (after `log_amp_gt = torch.log(amp + eps)`)
+- **Expected**: Best epoch delays to 80-120; Amp Corr 0.82-0.84
+- **Fallback**: If augmentation fails → move to **Amp Diffusion v2** (stochastic prediction, also solves amp_diversity=0)
+
+### Progress Toward Publication Goals
+| Target | Current Best | Goal | Status |
+|--------|-------------|------|--------|
+| f0 RPA | 95.84% | >85% | ✅ Far exceeded |
+| **Amp Corr** | **0.800** | **>0.90** | **❌ Gap = 0.10, 4 failed attempts** |
+| Amp RMSE | 0.567 | beat baseline | ✅ Far exceeded |
+| Amp Diversity | ~0 | >0 (meaningful) | ❌ Still zero (deterministic predictor) |
+
+**Biggest bottleneck**: Amp Corr 0.800 ceiling. Two remaining hypotheses: (1) data diversity via augmentation, (2) fundamental limit of deterministic prediction → amp diffusion v2.

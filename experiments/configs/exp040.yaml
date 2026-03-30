@@ -1,0 +1,56 @@
+# exp040: 2x Model + Augmentation — combine capacity & regularization
+# Hypothesis: exp037's 2x model capacity was masked by overfitting.
+# Adding exp039's augmentation prevents overfitting, releasing the extra capacity.
+#
+# Changes vs exp039 (base):
+#   [C1] amp_hidden: 384 (was 256) — 2x width from exp037
+#   [C2] amp_gru_hidden: 192 (was 128) — 1.5x GRU from exp037
+#   [C3] amp_n_attn_layers: 4 (was 2) — deeper attention from exp037
+#   [C4] amp_n_attn_heads: 8 (was 4) — more heads from exp037
+#   [C5] amp_lr: 0.00003 (was 0.00005) — slower lr for larger model
+#   [C6] epochs: 400 (was 300) — more training for larger model
+#   [C7] amp_augment: true (from exp039) — key regularization
+output_dir: "experiments/checkpoints/exp040"
+baseline_checkpoint: "experiments/checkpoints/exp033/baseline_best.pt"
+instruments: ["vn", "va", "vc", "fl", "ob", "cl", "sax", "tpt", "tbn", "bn"]
+crop_len: 512
+seed: 42
+save_every: 10
+
+stage2:
+  batch_size: 16
+  lr: 0.0002
+  lr_min: 0.00001
+  epochs: 400
+  ema_decay: 0.995
+  n_diffusion_steps: 1000
+  samples_per_epoch: 1860
+  n_channels: 1
+
+  # AmpPredictor: 2x capacity (from exp037)
+  amp_hidden: 384
+  amp_gru_hidden: 192
+  amp_gru_layers: 2
+  amp_dropout: 0.3
+  amp_use_attention: true
+  amp_n_attn_heads: 8
+  amp_n_attn_layers: 4
+  amp_instrument_conditioned: true
+  amp_f0_conditioned: false
+
+  # Loss: same as exp035/039
+  amp_corr_weight: 0.3
+  amp_grad_weight: 0.2
+
+  # Diffusion: frozen (reuse exp034)
+  freeze_diffusion: true
+  diffusion_checkpoint: "experiments/checkpoints/exp034/diffusion_best_ema.pt"
+
+  # Optimizer: slower lr for larger model
+  amp_lr: 0.00003
+  amp_weight_decay: 0.0001
+
+  # Amplitude augmentation (from exp039)
+  amp_augment: true
+  amp_augment_scale: 0.2
+  amp_augment_jitter: 0.05

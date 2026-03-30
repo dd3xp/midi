@@ -1,0 +1,55 @@
+Now let me print a summary for the terminal:
+
+---
+
+## 📊 Supervisor Review: exp009 (Diversity Metrics + eta Sweep)
+
+### Experiment Reviewed
+**exp009**: Enhanced diversity evaluation with inter-sample f0/amp diversity metrics across eta={0.0, 0.3, 1.0}, using exp007 checkpoint (no training).
+
+### Key Metrics (exp007 model, all eta values)
+
+| eta | RPA mean | f0_diversity (cents) | amp_diversity |
+|-----|----------|---------------------|---------------|
+| 0.0 | 94.24% | **9.01** | 0.0106 |
+| 0.3 | 94.20% | 8.92 | 0.0096 |
+| 1.0 | 94.07% | 7.87 | 0.0054 |
+
+**Baseline reference**: RPA=97.14%, VDE=8.34
+
+### Critical Findings
+
+1. **Diversity is very low** (~9 cents = 0.09 semitones). The model is quasi-deterministic — different initial noises converge to nearly the same output.
+
+2. **Counter-intuitive: eta ↑ → diversity ↓**. Stochastic sampling actually reduces diversity because the denoiser "corrects" injected noise, pulling all trajectories toward the distribution mode.
+
+3. **⚠️ Discovered ~1.5% sampling variance**: exp007 reported 92.80% (eta=0.0), but exp009 re-evaluation at eta=0.0 gave 94.24%. The earlier "eta improves quality" finding from exp008 was likely statistical noise. All eta values are statistically indistinguishable.
+
+4. **Vibrato advantage holds**: VDE 4.80 vs baseline 8.34 (42% better) — consistent across all experiments.
+
+### Code Review
+✅ **All code correct** — diversity metrics implementation in evaluate.py verified, stochastic DDIM matches Song et al. 2020 Eq. 12. No bugs found.
+
+### ⚠️ Warnings
+- **[W1]** Evaluation has no seed control → ~1.5% variance between runs. Must fix for paper data.
+- **[W2]** evaluate.py needs `torch.manual_seed(seed)` for reproducibility.
+
+### What I Planned Next
+**exp010: Paper Visualization** — create `src/model/visualize.py` to generate:
+- f0 contour overlays (GT + baseline + 5 diffusion samples) for 3 representative tracks
+- Vibrato zoom figures showing diffusion's superior vibrato
+- eta sweep summary chart
+- Per-instrument comparison bar chart
+
+This is the highest priority remaining work — the experimental phase is approaching completion and the paper needs figures.
+
+### Progress Toward Publication
+
+| Goal | Status |
+|------|--------|
+| Baseline quality | ✅ RPA 97.14% |
+| Diffusion quality | ✅ ~94.2% mean, ~96.6% oracle |
+| Vibrato advantage | ✅ **VDE -42%, VRE -15%** (strong selling point) |
+| Diversity quantified | ✅ Done (~9 cents, low but explainable) |
+| Paper figures | ❌ → **exp010** |
+| Biggest bottleneck | **Need visualization figures for paper** |

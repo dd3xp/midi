@@ -1,0 +1,21 @@
+All correct. Here's a summary of the completed exp014 logging:
+
+## exp014 Results (Training Round 20) — ✅ Logged
+
+**Model**: Baseline (Stage 1) with expanded dataset (9 URMP instruments + Bach10)
+
+| Metric | exp014 (expanded) | exp012 (original) | Delta |
+|--------|-------------------|-------------------|-------|
+| **f0 RPA** | 96.59% | 97.14% | -0.55% |
+| **f0 MAE** | 20.95 cents | 16.48 cents | +4.47 |
+| **Amp Corr** | 0.633 | 0.660 | -0.027 |
+| **Amp RMSE(log)** | 0.724 | 0.727 | -0.003 |
+| **VDE** | 8.70 | 8.77 | -0.07 |
+| **VRE** | 0.770 | 0.717 | +0.053 |
+
+**Training**: Early stop@ep47, best test_loss=3.4323@ep32, lr decayed 1e-3→2.5e-4 (3 reductions).
+
+**Key takeaway**: Slight metric drops vs exp012 are expected — the test set is 3× larger (49 vs 15 tracks) and includes harder instruments (va, vc, ob, etc.) plus cross-domain Bach10 data. This establishes the expanded-dataset baseline reference. The "当前最佳" section has been updated accordingly.
+ for the expanded dataset
+
+Supervisor can now plan the next step (likely diffusion Stage 2 on expanded dataset, or the two-stage f0/amp architecture split).

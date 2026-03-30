@@ -1,0 +1,34 @@
+Now let me print the summary for the terminal:
+
+---
+
+## Supervisor Review — Round 11
+
+### Experiment Reviewed: exp037 (Scaled AmpPredictor 2x)
+- **Amp Corr: 0.799** (vs exp035 best: 0.800) → ❌ No improvement
+- **Amp RMSE: 0.592** (vs exp035: 0.572) → ❌ Worse (more overfitting)
+- **f0 RPA: 93.71%** (diffusion frozen, sampling variance)
+- **Best epoch: ~55** (same as exp035, despite slower LR and 2.6x model)
+- **Code review: ✅** All scaled parameters correctly passed through train.py and evaluate.py
+
+### Diagnosis
+Model capacity is **NOT** the bottleneck. Doubling from 1.72M→4.5M params with deeper attention (4 layers, 8 heads) produced identical Amp Corr and worse RMSE. Three consecutive approaches have all failed at ~0.80:
+- exp036: f0 conditioning → 0.797
+- exp037: 2x model → 0.799  
+- exp035 baseline remains best: 0.800
+
+### Planned Next: exp038 — crop_len=1024 (doubled training context)
+**Hypothesis**: Current 512 frames (~5s) captures only a phrase fragment. Musical phrases are 8-16s. Doubling to 1024 frames (~10.2s) enables learning complete crescendo/diminuendo patterns. All 173 tracks are ≥2519 frames, so no padding needed.
+
+**Key config**: crop_len=1024, batch_size=8 (halved for memory), exp035 architecture (not the failed 2x model), 200 epochs.
+
+### Critical Issues Found: None
+No code bugs. No NEEDS_HUMAN.txt needed — amp improvement experiments continue autonomously.
+
+### Progress Toward Publication Target
+| Metric | Current Best | Target | Status |
+|--------|-------------|--------|--------|
+| f0 RPA | 95.72% | >85% | ✅ Far exceeded |
+| **Amp Corr** | **0.800** | **>0.90** | **Gap: 0.10 — testing temporal context hypothesis** |
+| Amp RMSE | 0.572 | Beat baseline (0.724) | ✅ Far exceeded |
+| Amp Diversity | ~0 | Needs diversity story | ⚠️ Deterministic — may need amp diffusion v2 |

@@ -1,0 +1,25 @@
+The log has been updated correctly. Here's a summary of the exp018 results:
+
+## exp018 Results Summary
+
+**Training**: ✅ Completed 200 epochs successfully. Best test_loss=0.518 @ep112, best test_amp_loss=0.508 @ep112.
+
+**Key Change**: Separate optimizer for AmpPredictor (Adam, lr=1e-4 with weight_decay=1e-4) + independent CosineAnnealingLR scheduler.
+
+**Results (Mean / Oracle)**:
+| Metric | exp017 | exp018 | Change |
+|--------|--------|--------|--------|
+| f0 RPA | 95.45% / 96.17% | 94.33% / 95.34% | -1.12% |
+| f0 MAE | 22.05 / 19.39 | 23.27 / 21.03 | +1.22 cents |
+| **Amp Corr** | 0.645 | **0.665** | **+3.1%** |
+| **Amp RMSE(log)** | 0.807 | **0.697** | **-13.6%** |
+| VDE | 6.63 | 6.47 | -0.16 (better) |
+| f0 diversity | 10.15 | 10.60 cents | +0.45 |
+
+**Key Findings**:
+- **Amp Corr 0.665** — new best, now significantly above baseline (0.633, +5.1%)
+- **Amp RMSE(log) 0.697** — first time beating baseline (0.724)
+- **Overfitting greatly reduced**: best checkpoint @ep112 (was ep66 in exp017), train-test amp gap = 0.048 (was 0.125)
+- f0 RPA slightly decreased (-1.12%) — acceptable trade-off for the major amp improvement
+
+Updated **当前最佳** to reflect exp018 as the new best diffusion model.

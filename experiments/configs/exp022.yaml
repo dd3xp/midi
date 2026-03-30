@@ -1,0 +1,41 @@
+# exp022: Amp conditioned on f0 — AmpPredictor with f0 input
+# Purpose: Let AmpPredictor see generated f0 to leverage vibrato-dynamics correlation
+# Hypothesis: f0 patterns (vibrato, pitch bends) correlate with amp dynamics;
+#   providing f0 as input should improve amp prediction
+# Architecture changes:
+#   [C1] diffusion.py: AmpPredictor gains f0_conditioned=True, input_dim 256->257
+#   [C2] train.py: stage2 supports freeze_diffusion + amp_f0_conditioned flags
+#   [C3] evaluate.py: f0-conditioned AmpPredictor uses sampled f0 from diffusion
+# Training: freeze encoder (exp014) + freeze diffusion (exp017), only train AmpPredictor
+# Comparison: exp018/exp019 (AmpPredictor without f0, Amp Corr 0.665)
+# Dataset: URMP 9 inst + Bach10 4 inst = 173 tracks
+
+output_dir: "experiments/checkpoints/exp022"
+baseline_checkpoint: "experiments/checkpoints/exp014/baseline_best.pt"
+instruments: ["vn", "va", "vc", "fl", "ob", "cl", "sax", "tpt", "tbn", "bn"]
+crop_len: 512
+seed: 42
+save_every: 10
+
+stage2:
+  batch_size: 16
+  lr: 0.0002
+  lr_min: 0.00001
+  epochs: 200
+  ema_decay: 0.995
+  n_diffusion_steps: 1000
+  samples_per_epoch: 1860    # 124 train tracks x 15 crops
+  n_channels: 1              # f0-only diffusion
+
+  # AmpPredictor config (same capacity as exp017/exp018)
+  amp_dropout: 0.3
+  amp_hidden: 256
+  amp_gru_hidden: 128
+  amp_gru_layers: 2
+
+  # NEW: f0-conditioned AmpPredictor
+  amp_f0_conditioned: true
+
+  # Freeze f0 diffusion from exp017 — only train AmpPredictor
+  freeze_diffusion: true
+  diffusion_checkpoint: "experiments/checkpoints/exp017/diffusion_best_ema.pt"

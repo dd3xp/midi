@@ -1,0 +1,36 @@
+The plan is written. Let me print a summary for the terminal:
+
+---
+
+## 📊 Supervisor Review Summary — exp007
+
+### Experiment Reviewed: exp007 (CosineAnnealingLR + 22K steps)
+
+### Key Metrics
+| Metric | Baseline (exp003) | Diffusion exp005 | **Diffusion exp007** | Trend |
+|--------|-------------------|-------------------|----------------------|-------|
+| f0 RPA mean | 97.14% | 85.26% | **92.80%** | ⬆️ +7.5% |
+| f0 RPA oracle | — | 95.58% | **95.51%** | ≈ stable |
+| Amp Corr mean | 0.645 | 0.544 | **0.566** | ⬆️ small |
+| VDE | 8.34 | 6.03 | **4.84** | ⬆️⬆️ |
+| VRE | 0.880 | 0.806 | **0.763** | ⬆️ |
+
+### Per-Instrument Highlights
+- 🎵 **Flute: diffusion BEATS baseline** (RPA 96.0% > 95.7%) — first instrument win!
+- 🎻 **Violin: close** (95.8% vs 98.3%), VDE 43% better
+- 🎺 **Trumpet: main bottleneck** (88.1% vs 97.1%), fast passages are hard
+
+### Code Review: ✅ No bugs found
+All code correct — CosineAnnealingLR, oracle selection, DDIM sampling, dataset cycling.
+
+### Critical Issues: None
+
+### What's Planned Next: **exp008 — Stochastic DDIM Diversity Evaluation**
+- **No training** — evaluation-only using exp007's checkpoint
+- Test eta=0.3 and eta=0.5 (stochastic DDIM) to demonstrate controllable diversity
+- Compare oracle-mean gaps across eta values
+- **This is the missing piece for the paper's diversity story**
+- Estimated time: ~10 min (2 evaluation runs)
+
+### Biggest Bottleneck
+The paper needs a **diversity demonstration** (stochastic DDIM, multiple valid performances from same MIDI). Current eta=0.0 results show only 2.7% oracle-mean gap. Stochastic DDIM should reveal meaningful, controllable diversity.

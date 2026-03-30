@@ -1,0 +1,15 @@
+Everything is in order. Here's a summary of what happened and what I did:
+
+## Summary
+
+**exp002 Training Result: ❌ FAILED**
+
+**Root Cause:** `UnicodeDecodeError: 'gbk' codec can't decode byte 0x92` — The YAML config file (`exp002.yaml`) contained non-ASCII Unicode characters (`→`, `↑`, `λ`) in comments. On this Windows system with Chinese locale, Python's default file encoding is GBK, which cannot decode these UTF-8 characters.
+
+**Fixes Applied:**
+1. **`src/model/train.py` line 395** — Changed `open(args.config, "r")` to `open(args.config, "r", encoding="utf-8")` so YAML configs are always read as UTF-8 regardless of system locale.
+2. **`experiments/configs/exp002.yaml`** — Replaced all non-ASCII characters in comments with ASCII equivalents (`→` → `->`, `↑` → `up`, `λ` → `lam`).
+
+**Log Updated:** Added failure row to `experiments/log.md` results table. 当前最佳 remains exp001 (unchanged).
+
+**Ready for Retry:** `experiments/next_train_cmd.sh` has been rewritten to retry exp002 with the fixes in place. The shell script can execute it immediately.

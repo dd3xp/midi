@@ -1,0 +1,28 @@
+## Status Summary
+
+### Reviewed: exp050 — Residual Amp Diffusion v2 (Residual Normalization)
+
+**Training**: ✅ Completed (300 epochs, residual_std=0.4699 → normalized to ~1.0)  
+**Evaluation**: ❌ OOM failure — O(T²) self-attention on a track with T≈22K frames (7.56 GiB needed, 8 GB GPU)
+
+### Code Review
+- **Residual normalization code**: ✅ Correct — train divides by std, eval multiplies back
+- **amp_predictor_best.pt**: ✅ Correctly copied from exp045 (verified by timestamp)
+- **baseline_amp_corr=0.737**: ✅ Not a bug — this is from BaselineModel, not AmpPredictor
+- **No code bugs found**
+
+### Key Metrics (prior experiments for context)
+| Metric | Best (deterministic) | Best (diffusion) | Target |
+|--------|---------------------|-------------------|--------|
+| Amp Corr | 0.807 (exp039 w/inst) / 0.789 (exp048 no inst) | 0.711 oracle (exp049) | > 0.90 |
+| Amp Diversity | ~0 | 0.011 (exp049) | > 0 ✅ |
+| f0 RPA | 95.82% (exp049 oracle) | — | > 85% ✅ |
+
+### Planned Next: Fix OOM + Re-evaluate exp050
+1. **[Fix-1] CRITICAL**: Add `--max_eval_len 8192` to evaluate.py to truncate long tracks
+2. **[Fix-2] RECOMMENDED**: Offload f0 diffusion to CPU during amp DDIM sampling
+3. **Re-run evaluation** with alpha=1.0 (main result) and alpha=0.0 (deterministic baseline sanity check)
+4. **No new training needed** — only code fix + evaluation
+
+### Critical Issues: None
+### Escalation: Not needed — straightforward OOM fix, no repeated failures or anomalies

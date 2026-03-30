@@ -1,0 +1,31 @@
+Good - exp041 is well-referenced throughout (the supervisor's plan section already mentioned it, plus the new table row and 当前最佳 entry).
+
+Here's a summary of the **exp041 results**:
+
+## exp041: Amp Diffusion v2 — Velocity-Conditioned 1ch DDPM for Amp
+
+**Training**: 300 epochs completed successfully, best test_loss=**0.069** @ ep92 (16.4M params)
+
+### Key Results
+
+| Metric | exp021 (old encoder) | exp039 (det. best) | **exp041** |
+|--------|---------------------|--------------------|----|
+| **Amp Corr** | 0.407 | **0.807** | **0.696** |
+| Amp RMSE(log) | 0.963 | 0.582 | 0.880 |
+| **amp_diversity** | 0.004 | ~0 | **0.010** ✅ |
+| f0 RPA | 93.10% | 93.73% | 93.92% |
+
+### Key Findings
+
+1. **Velocity encoder is decisive for Amp Diffusion**: Amp Corr jumped from 0.407→0.696 (+71%!), proving exp021's failure was due to missing velocity info, not the diffusion approach itself.
+
+2. **amp_diversity = 0.010** — the first meaningful amp diversity in the project! This is 2.5× exp021 and qualitatively different from the ~0 of all deterministic methods.
+
+3. **Quality gap still significant vs deterministic**: Amp Corr 0.696 vs 0.807 (-13.7%), RMSE 0.880 vs 0.582 (+51.2%). Pure diffusion struggles with 173 tracks / 16.4M params.
+
+4. **Falls in supervisor's "0.65-0.75 + diversity>0.002" band** → recommended next direction: **Residual Diffusion** (deterministic AmpPredictor mean + diffusion residuals)
+
+### 当前最佳 Updated
+- **exp039** remains Amp Corr best (0.807)
+- **exp041** added as **Amp Diversity best** (0.010)
+- No other best records changed

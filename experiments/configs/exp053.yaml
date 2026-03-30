@@ -1,0 +1,55 @@
+# exp053: TCN-based AmpPredictor — first test of dilated CNN architecture
+# Goal: Break GRU-based Amp Corr ceiling (0.789) via fundamentally different architecture
+# Changes: amp_type: "tcn" (uses existing TCNAmpPredictor, never tested before)
+# Encoder: exp033 (7-dim, velocity, proven)
+# Diffusion: exp034 (proven f0 quality)
+# Data: URMP + Bach10 (173 tracks — same as exp045 for fair comparison)
+#
+# Bug fixes applied before this experiment:
+#   [C1] encoder.py input_dim reverted from 12 to 7
+#   [C2] dataset.py notes_to_frame_features reverted to 7-dim (removed global stats)
+#   [C3] TCNAmpPredictor.forward() now accepts **kwargs
+
+output_dir: "experiments/checkpoints/exp053"
+baseline_checkpoint: "experiments/checkpoints/exp033/baseline_best.pt"
+instruments: ["vn", "va", "vc", "fl", "ob", "cl", "sax", "tpt", "tbn", "bn"]
+crop_len: 512
+seed: 42
+save_every: 10
+
+stage2:
+  batch_size: 16
+  lr: 0.0002
+  lr_min: 0.00001
+  epochs: 300
+  ema_decay: 0.995
+  n_diffusion_steps: 1000
+  samples_per_epoch: 1860
+  n_channels: 1
+
+  # TCN AmpPredictor (NEW — first test)
+  amp_type: "tcn"
+  tcn_channels: 256        # match GRU param count (~1.6M vs ~1.18M)
+  tcn_layers: 8            # dilations: 1,2,4,8,16,32,64,128 -> receptive field 256 frames
+  tcn_kernel_size: 3       # standard for WaveNet-style
+  amp_dropout: 0.2         # TCN default (lighter than GRU's 0.3)
+
+  # Loss: same as exp045
+  amp_corr_weight: 0.3
+  amp_grad_weight: 0.2
+
+  # Optimizer: same as exp045
+  amp_lr: 0.00005
+  amp_weight_decay: 0.0001
+
+  # Augmentation: same as exp045
+  amp_augment: true
+  amp_augment_scale: 0.2
+  amp_augment_jitter: 0.05
+
+  # Frozen f0 diffusion
+  freeze_diffusion: true
+  diffusion_checkpoint: "experiments/checkpoints/exp034/diffusion_best_ema.pt"
+
+  # Explicit: no instrument conditioning
+  amp_instrument_conditioned: false

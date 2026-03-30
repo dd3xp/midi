@@ -1,0 +1,276 @@
+{
+  "diffusion_per_track": [
+    {
+      "rpa_mean": 0.9765223351993602,
+      "rpa_oracle": 0.9753227464869187,
+      "f0_mae_mean": 16.795598030090332,
+      "f0_mae_oracle": 16.106740951538086,
+      "amp_corr_mean": 0.17152867467889688,
+      "amp_corr_oracle": 0.1731506642064963,
+      "amp_rmse_log_mean": 1.1189727187156677,
+      "amp_rmse_log_oracle": 1.0980907678604126,
+      "vde_mean_avg": 8.73001499092521,
+      "vde_mean_oracle": 9.189111265111757,
+      "vre_mean_avg": 0.8000759706874967,
+      "vre_mean_oracle": 0.9066426330985591,
+      "f0_diversity_cents": 8.087611198425293,
+      "amp_diversity": 0.007047412451356649,
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_vn\\17_Nocturne_vn_fl_cl_track1_vn\\data.npz",
+      "n_vibrato_notes": 121
+    },
+    {
+      "rpa_mean": 0.9457328915800296,
+      "rpa_oracle": 0.954758368559351,
+      "f0_mae_mean": 21.89994716644287,
+      "f0_mae_oracle": 19.694419860839844,
+      "amp_corr_mean": 0.18745201209323964,
+      "amp_corr_oracle": 0.2199245134774967,
+      "amp_rmse_log_mean": 1.0664681196212769,
+      "amp_rmse_log_oracle": 1.0427205562591553,
+      "vde_mean_avg": 8.076208182670522,
+      "vde_mean_oracle": 7.7013373449853395,
+      "vre_mean_avg": 0.8162653843427063,
+      "vre_mean_oracle": 0.8296364892248091,
+      "f0_diversity_cents": 7.213311195373535,
+      "amp_diversity": 0.006309883203357458,
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_vn\\18_Nocturne_vn_fl_tpt_track1_vn\\data.npz",
+      "n_vibrato_notes": 120
+    },
+    {
+      "rpa_mean": 0.9529370751263727,
+      "rpa_oracle": 0.9668816454592993,
+      "f0_mae_mean": 24.580317497253418,
+      "f0_mae_oracle": 20.81707000732422,
+      "amp_corr_mean": 0.3753910043664893,
+      "amp_corr_oracle": 0.35176786244310576,
+      "amp_rmse_log_mean": 0.9803240597248077,
+      "amp_rmse_log_oracle": 0.9327725768089294,
+      "vde_mean_avg": 5.181966001122024,
+      "vde_mean_oracle": 5.5291480174258565,
+      "vre_mean_avg": 0.9853113647357028,
+      "vre_mean_oracle": 0.9285554131819825,
+      "f0_diversity_cents": 6.705029487609863,
+      "amp_diversity": 0.00380328088067472,
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_vn\\26_King_vn_vn_va_vc_track1_vn\\data.npz",
+      "n_vibrato_notes": 37
+    },
+    {
+      "rpa_mean": 0.8322187254130606,
+      "rpa_oracle": 0.8857199055861527,
+      "f0_mae_mean": 34.66239547729492,
+      "f0_mae_oracle": 32.076698303222656,
+      "amp_corr_mean": 0.6800181247215933,
+      "amp_corr_oracle": 0.6743397094475263,
+      "amp_rmse_log_mean": 0.7557007372379303,
+      "amp_rmse_log_oracle": 0.6963663697242737,
+      "vde_mean_avg": 3.7499757015669974,
+      "vde_mean_oracle": 2.971363717621466,
+      "vre_mean_avg": 0.6594181242861907,
+      "vre_mean_oracle": 0.7734780966488617,
+      "f0_diversity_cents": 7.3301472663879395,
+      "amp_diversity": 0.0038203091826289892,
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_vn\\26_King_vn_vn_va_vc_track2_vn\\data.npz",
+      "n_vibrato_notes": 25
+    },
+    {
+      "rpa_mean": 0.9450061007495206,
+      "rpa_oracle": 0.9595607460345128,
+      "f0_mae_mean": 26.442886352539062,
+      "f0_mae_oracle": 22.979616165161133,
+      "amp_corr_mean": 0.37375976678824185,
+      "amp_corr_oracle": 0.40299212633416126,
+      "amp_rmse_log_mean": 1.0122905671596527,
+      "amp_rmse_log_oracle": 0.9213797450065613,
+      "vde_mean_avg": 5.180398316412319,
+      "vde_mean_oracle": 5.348012781777666,
+      "vre_mean_avg": 0.8941231934874004,
+      "vre_mean_oracle": 0.739836057459855,
+      "f0_diversity_cents": 6.5397257804870605,
+      "amp_diversity": 0.00375704700127244,
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_vn\\27_King_vn_vn_va_sax_track1_vn\\data.npz",
+      "n_vibrato_notes": 37
+    },
+    {
+      "rpa_mean": 0.924567269866247,
+      "rpa_oracle": 0.94492525570417,
+      "f0_mae_mean": 26.917524337768555,
+      "f0_mae_oracle": 24.072416305541992,
+      "amp_corr_mean": 0.6660920518749328,
+      "amp_corr_oracle": 0.6870103895963992,
+      "amp_rmse_log_mean": 0.9402106404304504,
+      "amp_rmse_log_oracle": 0.8472156524658203,
+      "vde_mean_avg": 3.716962936516451,
+      "vde_mean_oracle": 3.8155187582964993,
+      "vre_mean_avg": 0.9686170306554402,
+      "vre_mean_oracle": 1.1742418999467572,
+      "f0_diversity_cents": 5.0872483253479,
+      "amp_diversity": 0.0020513650961220264,
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_vn\\27_King_vn_vn_va_sax_track2_vn\\data.npz",
+      "n_vibrato_notes": 25
+    },
+    {
+      "rpa_mean": 0.9528060263653484,
+      "rpa_oracle": 0.9590207156308851,
+      "f0_mae_mean": 25.193110466003418,
+      "f0_mae_oracle": 24.38439178466797,
+      "amp_corr_mean": 0.27427859127966153,
+      "amp_corr_oracle": 0.31338244603012394,
+      "amp_rmse_log_mean": 1.0533867478370667,
+      "amp_rmse_log_oracle": 1.0450555086135864,
+      "vde_mean_avg": 8.12237847288867,
+      "vde_mean_oracle": 7.865415531225837,
+      "vre_mean_avg": 0.9112722889630984,
+      "vre_mean_oracle": 0.9557878483356668,
+      "f0_diversity_cents": 4.834779262542725,
+      "amp_diversity": 0.0035956434439867735,
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_vn\\32_Fugue_vn_vn_va_vc_track1_vn\\data.npz",
+      "n_vibrato_notes": 132
+    },
+    {
+      "rpa_mean": 0.9822649572649572,
+      "rpa_oracle": 0.9818376068376068,
+      "f0_mae_mean": 15.185505867004395,
+      "f0_mae_oracle": 14.876282691955566,
+      "amp_corr_mean": 0.2436851566947261,
+      "amp_corr_oracle": 0.23221398157295803,
+      "amp_rmse_log_mean": 1.0324783325195312,
+      "amp_rmse_log_oracle": 0.9812120199203491,
+      "vde_mean_avg": 6.2618235952863595,
+      "vde_mean_oracle": 6.272720336800589,
+      "vre_mean_avg": 1.0043786013080132,
+      "vre_mean_oracle": 1.1224909321574128,
+      "f0_diversity_cents": 4.713657379150391,
+      "amp_diversity": 0.004880625754594803,
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_vn\\32_Fugue_vn_vn_va_vc_track2_vn\\data.npz",
+      "n_vibrato_notes": 144
+    },
+    {
+      "rpa_mean": 0.953322040278562,
+      "rpa_oracle": 0.9538866930171278,
+      "f0_mae_mean": 18.382869720458984,
+      "f0_mae_oracle": 17.920740127563477,
+      "amp_corr_mean": 0.5429012283330651,
+      "amp_corr_oracle": 0.5509030589654977,
+      "amp_rmse_log_mean": 0.861006885766983,
+      "amp_rmse_log_oracle": 0.8263880014419556,
+      "vde_mean_avg": 8.904925142269029,
+      "vde_mean_oracle": 8.547055391362864,
+      "vre_mean_avg": 0.6284047738673078,
+      "vre_mean_oracle": 0.5088858603508253,
+      "f0_diversity_cents": 6.73109245300293,
+      "amp_diversity": 0.0019996659830212593,
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_va\\26_King_vn_vn_va_vc_track3_va\\data.npz",
+      "n_vibrato_notes": 31
+    },
+    {
+      "rpa_mean": 0.8450969320534538,
+      "rpa_oracle": 0.9228307923960097,
+      "f0_mae_mean": 33.031432151794434,
+      "f0_mae_oracle": 25.439023971557617,
+      "amp_corr_mean": 0.5570387283754772,
+      "amp_corr_oracle": 0.5765777495171588,
+      "amp_rmse_log_mean": 0.8119692504405975,
+      "amp_rmse_log_oracle": 0.7840293049812317,
+      "vde_mean_avg": 8.672613150200515,
+      "vde_mean_oracle": 8.090369786434664,
+      "vre_mean_avg": 0.5928856590966369,
+      "vre_mean_oracle": 0.5134897621660336,
+      "f0_diversity_cents": 27.27416229248047,
+      "amp_diversity": 0.002976298565044999,
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_va\\27_King_vn_vn_va_sax_track3_va\\data.npz",
+      "n_vibrato_notes": 31
+    }
+  ],
+  "diffusion_summary": {
+    "diffusion_rpa_mean": {
+      "mean": 0.9310474353896915,
+      "std": 0.04873094924019082,
+      "min": 0.8322187254130606,
+      "max": 0.9822649572649572
+    },
+    "diffusion_rpa_oracle": {
+      "mean": 0.9504744475712034,
+      "std": 0.026540521256670384,
+      "min": 0.8857199055861527,
+      "max": 0.9818376068376068
+    },
+    "diffusion_f0_mae_mean": {
+      "mean": 24.309158706665038,
+      "std": 6.132688358199497,
+      "min": 15.185505867004395,
+      "max": 34.66239547729492
+    },
+    "diffusion_f0_mae_oracle": {
+      "mean": 21.836740016937256,
+      "std": 4.825694897706214,
+      "min": 14.876282691955566,
+      "max": 32.076698303222656
+    },
+    "diffusion_amp_corr_mean": {
+      "mean": 0.40721453392063245,
+      "std": 0.18239701410002465,
+      "min": 0.17152867467889688,
+      "max": 0.6800181247215933
+    },
+    "diffusion_amp_corr_oracle": {
+      "mean": 0.4182262501590924,
+      "std": 0.1816988044380044,
+      "min": 0.1731506642064963,
+      "max": 0.6870103895963992
+    },
+    "diffusion_amp_rmse_log_mean": {
+      "mean": 0.9632808059453964,
+      "std": 0.11290007089766019,
+      "min": 0.7557007372379303,
+      "max": 1.1189727187156677
+    },
+    "diffusion_amp_rmse_log_oracle": {
+      "mean": 0.9175230503082276,
+      "std": 0.12199464569154746,
+      "min": 0.6963663697242737,
+      "max": 1.0980907678604126
+    },
+    "diffusion_vde_mean_avg": {
+      "mean": 6.65972664898581,
+      "std": 1.9794321656607454,
+      "min": 3.716962936516451,
+      "max": 8.904925142269029
+    },
+    "diffusion_vde_mean_oracle": {
+      "mean": 6.533005293104253,
+      "std": 1.9805733120336424,
+      "min": 2.971363717621466,
+      "max": 9.189111265111757
+    },
+    "diffusion_vre_mean_avg": {
+      "mean": 0.8260752391429994,
+      "std": 0.14537992935667993,
+      "min": 0.5928856590966369,
+      "max": 1.0043786013080132
+    },
+    "diffusion_vre_mean_oracle": {
+      "mean": 0.8453044992570764,
+      "std": 0.2115983022455711,
+      "min": 0.5088858603508253,
+      "max": 1.1742418999467572
+    },
+    "diffusion_f0_diversity_cents": {
+      "mean": 8.45167646408081,
+      "std": 6.36593073886736,
+      "min": 4.713657379150391,
+      "max": 27.27416229248047
+    },
+    "diffusion_amp_diversity": {
+      "mean": 0.004024153156206012,
+      "std": 0.0015662677744787104,
+      "min": 0.0019996659830212593,
+      "max": 0.007047412451356649
+    },
+    "diffusion_n_vibrato_notes": {
+      "mean": 70.3,
+      "std": 48.672476822121965,
+      "min": 25.0,
+      "max": 144.0
+    }
+  }
+}

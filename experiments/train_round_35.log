@@ -1,0 +1,240 @@
+=== exp026: Model Soup — average exp023 + exp024 amp_predictor weights ===
+Loading exp023 amp_predictor...
+Loading exp024 amp_predictor...
+Computing 2-way arithmetic average...
+Saved 2-way soup to experiments/checkpoints/exp026_soup/amp_predictor_best.pt
+  Number of tensors: 44
+  Total parameters: 1,713,153
+Copying encoder from exp014...
+Copying norm_stats from exp023...
+Copying diffusion model from exp017...
+Checkpoint directory contents:
+total 80800
+drwxr-xr-x 1 17145 197609        0 Mar 27 05:09 .
+drwxr-xr-x 1 17145 197609        0 Mar 27 05:09 ..
+-rw-r--r-- 1 17145 197609  6866885 Mar 27 05:09 amp_predictor_best.pt
+-rw-r--r-- 1 17145 197609 10046625 Mar 27 05:09 baseline_best.pt
+-rw-r--r-- 1 17145 197609 65807893 Mar 27 05:09 diffusion_best_ema.pt
+-rw-r--r-- 1 17145 197609     1853 Mar 27 05:09 norm_stats.pt
+
+=== Evaluating 2-way soup (eta=0.3) ===
+C:\lxr\study\final\src\model\diffusion.py:384: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.attn = nn.TransformerEncoder(attn_layer, num_layers=n_attn_layers)
+C:\lxr\study\final\src\model\evaluate.py:197: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  autocast_ctx = torch.cuda.amp.autocast() if device.type == "cuda" else torch.inference_mode()
+Device: cuda
+Test tracks: 49
+
+--- Evaluating Diffusion ---
+Loaded AmpPredictor (hidden=256, gru_hidden=128, layers=2, dropout=0.3, f0_conditioned=False, use_attention=True, n_attn_heads=4, n_attn_layers=2) from experiments/checkpoints/exp026_soup\amp_predictor_best.pt
+{
+  "diffusion_rpa_mean": {
+    "mean": 0.9555823656158623,
+    "std": 0.029026835484176384,
+    "min": 0.86489898989899,
+    "max": 0.9924391847468771
+  },
+  "diffusion_rpa_oracle": {
+    "mean": 0.9611178032342224,
+    "std": 0.027154479574508183,
+    "min": 0.8636363636363636,
+    "max": 0.9935897435897436
+  },
+  "diffusion_f0_mae_mean": {
+    "mean": 21.847874102949287,
+    "std": 16.849699643742213,
+    "min": 10.68369197845459,
+    "max": 126.53968048095703
+  },
+  "diffusion_f0_mae_oracle": {
+    "mean": 19.69958357908288,
+    "std": 16.578777473585806,
+    "min": 10.222604751586914,
+    "max": 125.70751953125
+  },
+  "diffusion_amp_corr_mean": {
+    "mean": 0.6014948668953848,
+    "std": 0.13651801071127848,
+    "min": 0.2788727137809552,
+    "max": 0.8218974996160703
+  },
+  "diffusion_amp_corr_oracle": {
+    "mean": 0.6014948668953848,
+    "std": 0.13651801071127848,
+    "min": 0.2788727137809552,
+    "max": 0.8218974996160703
+  },
+  "diffusion_amp_rmse_log_mean": {
+    "mean": 2.761416498495608,
+    "std": 0.7372218278355313,
+    "min": 1.1576013565063477,
+    "max": 4.223477840423584
+  },
+  "diffusion_amp_rmse_log_oracle": {
+    "mean": 2.761416498495608,
+    "std": 0.7372218278355313,
+    "min": 1.1576013565063477,
+    "max": 4.223477840423584
+  },
+  "diffusion_vde_mean_avg": {
+    "mean": 6.750377709624853,
+    "std": 5.914855564438781,
+    "min": 1.5644185753484292,
+    "max": 32.25103517285303
+  },
+  "diffusion_vde_mean_oracle": {
+    "mean": 6.846499635105348,
+    "std": 6.018529404636234,
+    "min": 1.5184185369084202,
+    "max": 32.84413804535547
+  },
+  "diffusion_vre_mean_avg": {
+    "mean": 0.8626479070716169,
+    "std": 0.18527167488419816,
+    "min": 0.4883119424281337,
+    "max": 1.2721608188149485
+  },
+  "diffusion_vre_mean_oracle": {
+    "mean": 0.8675780155454287,
+    "std": 0.1932856698628396,
+    "min": 0.47570058598203663,
+    "max": 1.2582050495036967
+  },
+  "diffusion_f0_diversity_cents": {
+    "mean": 8.362843367518211,
+    "std": 2.1447327046731286,
+    "min": 5.349201679229736,
+    "max": 15.102497100830078
+  },
+  "diffusion_amp_diversity": {
+    "mean": 6.870652046164318e-10,
+    "std": 6.133544892463778e-10,
+    "min": 0.0,
+    "max": 2.2811654787346924e-09
+  },
+  "diffusion_n_vibrato_notes": {
+    "mean": 74.18367346938776,
+    "std": 43.8306916368287,
+    "min": 17.0,
+    "max": 144.0
+  }
+}
+
+Results saved to experiments/results/exp026.json
+
+=== 2-way soup evaluation complete ===
+
+=== Creating 3-way soup (exp023 + exp024 + exp025) ===
+Loading exp023, exp024, exp025 amp_predictors...
+Computing 3-way arithmetic average...
+Saved 3-way soup to experiments/checkpoints/exp026_soup3/amp_predictor_best.pt
+
+=== Evaluating 3-way soup (eta=0.3) ===
+C:\lxr\study\final\src\model\diffusion.py:384: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.attn = nn.TransformerEncoder(attn_layer, num_layers=n_attn_layers)
+C:\lxr\study\final\src\model\evaluate.py:197: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  autocast_ctx = torch.cuda.amp.autocast() if device.type == "cuda" else torch.inference_mode()
+Device: cuda
+Test tracks: 49
+
+--- Evaluating Diffusion ---
+Loaded AmpPredictor (hidden=256, gru_hidden=128, layers=2, dropout=0.3, f0_conditioned=False, use_attention=True, n_attn_heads=4, n_attn_layers=2) from experiments/checkpoints/exp026_soup3\amp_predictor_best.pt
+{
+  "diffusion_rpa_mean": {
+    "mean": 0.9531936434821232,
+    "std": 0.030457018122090583,
+    "min": 0.8580808080808081,
+    "max": 0.9934253780407626
+  },
+  "diffusion_rpa_oracle": {
+    "mean": 0.9601697233136648,
+    "std": 0.026820987143639695,
+    "min": 0.8647727272727272,
+    "max": 0.9923076923076923
+  },
+  "diffusion_f0_mae_mean": {
+    "mean": 22.627736980412283,
+    "std": 18.038974620511183,
+    "min": 10.135164260864258,
+    "max": 134.42472330729166
+  },
+  "diffusion_f0_mae_oracle": {
+    "mean": 20.357735906328475,
+    "std": 17.48084013141878,
+    "min": 9.831977844238281,
+    "max": 131.85531616210938
+  },
+  "diffusion_amp_corr_mean": {
+    "mean": 0.5863396921988886,
+    "std": 0.14203186439463064,
+    "min": 0.24182990630035583,
+    "max": 0.8151818942466867
+  },
+  "diffusion_amp_corr_oracle": {
+    "mean": 0.5863396921988886,
+    "std": 0.14203186439463064,
+    "min": 0.24182990630035583,
+    "max": 0.8151818942466866
+  },
+  "diffusion_amp_rmse_log_mean": {
+    "mean": 3.745993290628706,
+    "std": 0.8522357278542165,
+    "min": 1.8946776390075684,
+    "max": 5.351519584655762
+  },
+  "diffusion_amp_rmse_log_oracle": {
+    "mean": 3.745993290628706,
+    "std": 0.8522357278542165,
+    "min": 1.8946776390075684,
+    "max": 5.351519584655762
+  },
+  "diffusion_vde_mean_avg": {
+    "mean": 6.695686729676488,
+    "std": 5.677423813404808,
+    "min": 1.4545547145043385,
+    "max": 31.090054745197122
+  },
+  "diffusion_vde_mean_oracle": {
+    "mean": 6.665498139866835,
+    "std": 5.658010617577122,
+    "min": 1.4077424784916674,
+    "max": 29.07810940205346
+  },
+  "diffusion_vre_mean_avg": {
+    "mean": 0.8420733417952481,
+    "std": 0.2065170136120343,
+    "min": 0.4092527839770119,
+    "max": 1.2379316061586687
+  },
+  "diffusion_vre_mean_oracle": {
+    "mean": 0.8484490485101261,
+    "std": 0.25054806936857776,
+    "min": 0.34870150800363403,
+    "max": 1.425767730831057
+  },
+  "diffusion_f0_diversity_cents": {
+    "mean": 8.456408695298798,
+    "std": 2.156930592401129,
+    "min": 5.804328441619873,
+    "max": 14.670915603637695
+  },
+  "diffusion_amp_diversity": {
+    "mean": 6.124857174726532e-09,
+    "std": 1.6891861852977008e-09,
+    "min": 2.636583840143203e-09,
+    "max": 9.528529076874293e-09
+  },
+  "diffusion_n_vibrato_notes": {
+    "mean": 74.18367346938776,
+    "std": 43.8306916368287,
+    "min": 17.0,
+    "max": 144.0
+  }
+}
+
+Results saved to experiments/results/exp026_soup3.json
+
+=== exp026 complete: Both 2-way and 3-way soup evaluated ===
+Results:
+  2-way soup: experiments/results/exp026.json
+  3-way soup: experiments/results/exp026_soup3.json

@@ -1,0 +1,25 @@
+Good, the minor fix is applied. Now let me summarize the situation:
+
+---
+
+## Summary
+
+### 下一步计划 Status: 🏁 实验阶段全部完成
+
+The experiment log's `下一步计划` states: **"实验阶段全部完成。需要人工审查后进入论文写作。"**
+
+There are **no more experiments to run**. All 11 experiments (exp001-exp011) have been completed:
+
+| Phase | Experiments | Key Results |
+|-------|------------|-------------|
+| Baseline training + tuning | exp001-003 | **f0 RPA=97.14%**, Amp Corr=0.645 |
+| Diffusion training + debug | exp004-007 | f0 RPA=94.20% (mean), **VDE=4.84** (42% better than baseline 8.34) |
+| Eta sweep + diversity | exp008-009, exp011 | ~9 cents diversity, η insensitive |
+| Paper visualization | exp010-011 | 11 publication-ready figures |
+
+### What I did:
+1. **Step 1 (Bug fix)**: Applied the one minor code fix mentioned in the log — changed `d.get("f0_diversity", 0)` to filter `None` values in `visualize.py:398`, preventing false zero points in future eta sweeps.
+2. **Steps 2-3**: No new experiment config or training script needed — the `next_train_cmd.sh` already reflects the completed status.
+
+### What's needed next:
+**Human review** of the 11 figures in `experiments/figures/` and the results summary, then proceed to paper writing. This is a human decision point, not an automated experiment step.

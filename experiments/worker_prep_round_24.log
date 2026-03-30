@@ -1,0 +1,34 @@
+All changes are clean and match the supervisor's plan exactly. Let me provide a summary:
+
+---
+
+## Summary: exp016 Prepared
+
+### Code Changes Made (3 files)
+
+**1. `src/model/diffusion.py` — AmpPredictor architecture**
+- **[C1]** Removed `nn.Softplus()` activation → output is now raw log-space values (unbounded)
+- **[C2]** Added `nn.Dropout(0.2)` between GRU output and final Linear layer
+- **[C3]** Updated docstring to clarify log-space output
+
+**2. `src/model/train.py` — Training logic**
+- **[C3]** Simplified amp_loss: no longer calls `torch.log(amp_pred + eps)` on prediction since AmpPredictor already outputs log-space. Now: `mse_loss(log_amp_pred, torch.log(amp + eps))`
+- **[C4]** Added independent amp early stopping: `amp_predictor_best.pt` is now saved based on `best_test_amp_loss` (separate from diffusion's `best_test_loss`)
+- Passes `amp_dropout` from config to AmpPredictor constructor
+
+**3. `src/model/evaluate.py` — Evaluation**
+- **[C5]** Added `torch.exp(log_amp_pred)` to convert AmpPredictor log-space output back to linear amplitude
+- Reads `amp_dropout` from config for correct model construction
+
+### Files Created
+- `experiments/configs/exp016.yaml` — Config (1ch diffusion, dropout=0.2, 200 epochs)
+- `experiments/next_train_cmd.sh` — Training + evaluation script
+- `experiments/checkpoints/exp016/baseline_best.pt` — Copied from exp014
+
+### Expected Outcomes
+| Metric | exp015b | exp016 Expected |
+|--------|---------|-----------------|
+| f0 RPA | 93.63% | ~93-94% (unchanged) |
+| Amp Corr | 0.624 | 0.63-0.65 |
+| Amp RMSE(log) | 0.825 | 0.70-0.75 |
+| VDE | 6.56 | ~6.5 (unchanged) |

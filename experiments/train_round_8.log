@@ -1,0 +1,8 @@
+=== exp006: More training steps + cosine LR decay ===
+Start time: Tue Mar 24 20:12:52     2026
+Changes:
+  - epochs 200->500, samples_per_epoch 1180->1770 (~55K total steps)
+  - CosineAnnealingLR: lr 2e-4 -> 1e-5
+  - evaluate.py: separate f0 oracle (by f0_mae) and amp oracle (by amp_rmse_log)
+Copied baseline_best.pt from exp005 to exp006
+Terminated

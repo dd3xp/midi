@@ -1,0 +1,21 @@
+# exp002: Baseline with amp loss weight lam=10.0 (Stage 1)
+# Purpose: Increase amp gradient signal to improve amp_corr (0.61 -> 0.70+)
+# Change: stage1.lam 1.0 -> 10.0 (only change vs exp001)
+# Expected: amp_corr up, f0 RPA may slightly decrease (still >94%)
+
+# data_dir: uses default (PROJECT_ROOT/datagen)
+output_dir: "experiments/checkpoints/exp002"
+instruments: ["vn", "tpt", "fl"]
+crop_len: 512
+seed: 42
+save_every: 10
+
+stage1:
+  batch_size: 32
+  lr: 0.001
+  epochs: 100
+  lam: 10.0
+  patience: 15
+  lr_patience: 5
+  lr_factor: 0.5
+  dropout: 0.3

@@ -1,0 +1,25 @@
+All files compile cleanly. Here's a summary of what was prepared:
+
+## Summary: exp027 — TCN (Dilated CNN) AmpPredictor
+
+### Code Changes
+1. **`src/model/diffusion.py`** — Added `TCNBlock` and `TCNAmpPredictor` classes after the existing `AmpPredictor` class. TCN uses 8 residual dilated conv blocks with dilation pattern [1, 2, 4, 8, 16, 32, 64, 128], giving a ~1021-frame receptive field (~10 seconds).
+
+2. **`src/model/train.py`** — Added `amp_type` config check (line ~322). When `amp_type: "tcn"`, constructs `TCNAmpPredictor` instead of `AmpPredictor`. Default remains `"gru"` for backward compatibility.
+
+3. **`src/model/evaluate.py`** — Added `amp_type` config check at AmpPredictor loading (line ~448). Loads `TCNAmpPredictor` when config specifies `amp_type: "tcn"`.
+
+### Architecture Stats
+- **Parameters**: ~429K (vs ~2.3M for GRU+Attention) — **6x fewer**
+- **Input/Output**: (B, T, 256) → (B, T), same API as AmpPredictor
+- **Receptive field**: 1021 frames ≈ 10.2 seconds
+
+### Config: `experiments/configs/exp027.yaml`
+- Stage 2 only, diffusion frozen (reuses exp017 diffusion + exp014 encoder)
+- TCN: 128 channels, 8 layers, kernel=3, dropout=0.2
+- LR: 0.0002, weight decay: 0.0001, 200 epochs
+
+### Training Script: `experiments/next_train_cmd.sh`
+- Copies baseline (exp014) and diffusion (exp017) checkpoints
+- Runs stage 2 training with TCN AmpPredictor
+- Evaluates with DDIM (50 steps, η=0.3)

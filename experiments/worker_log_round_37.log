@@ -1,0 +1,22 @@
+The log has been updated successfully. Here's a summary of **exp028 results**:
+
+## exp028: Instrument-Conditioned AmpPredictor — ✅ 新全局最佳!
+
+**训练**: 200 epochs 完成, best test_amp_loss = **0.425** @ epoch 84
+
+### 关键指标
+
+| 指标 | exp023 (prev best Corr) | exp019 (prev best综合) | **exp028** | 变化 |
+|------|------------------------|----------------------|-----------|------|
+| **Amp Corr** | 0.676 | 0.665 | **0.678** | +0.3% / +2.0% ✅ 新最佳 |
+| **Amp RMSE(log)** | 0.726 | 0.697 | **0.657** | -9.5% / -5.7% ✅ 新最佳 |
+| f0 RPA | 95.56% | 95.37% | 95.06% | -0.50% |
+| test_amp_loss | 0.552 | — | **0.425** | -23.0% 泛化大幅提升 |
+| 过拟合gap | 0.47 | — | **0.13** | 乐器嵌入减轻过拟合 |
+
+### 分析
+
+- **乐器嵌入方向成功**: 仅增加 320 参数 (10×32 embedding) 即获得 Amp Corr 新高 + Amp RMSE 大幅改善
+- RMSE 改善 (-9.5%) >> Corr 改善 (+0.3%), 说明乐器信息主要帮助绝对幅度预测 (不同乐器有不同 amp range)
+- test_amp_loss 从 0.552 降至 0.425 (-23%), 过拟合 gap 从 0.47 降至 0.13, 泛化显著改善
+- **当前最佳**: exp028 为新的全局最佳 amp 模型

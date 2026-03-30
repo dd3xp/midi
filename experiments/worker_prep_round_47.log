@@ -1,0 +1,39 @@
+Everything looks correct. Let me provide a summary:
+
+---
+
+## Summary of exp036 Preparation
+
+### Code Fixes Applied
+
+1. **evaluate.py [C1] — Frozen diffusion checkpoint fallback** (line 462-468):
+   - When `diffusion_best_ema.pt` is not found in `checkpoint_dir`, now checks the config's `stage2.diffusion_checkpoint` as a fallback path
+   - This fixes evaluation for all `freeze_diffusion=true` experiments (exp035, exp036, etc.)
+
+2. **train.py — Online DDIM scheduled sampling** (exp036+):
+   - Added `ss_online` flag: when `amp_scheduled_sampling=true` and `freeze_diffusion=true` but no `cached_f0_dir`, uses online DDIM sampling to generate f0 during training
+   - Added support for `amp_ss_start_epoch`/`amp_ss_end_epoch` config params (maps to existing `ss_warmup`/`ss_decay`)
+   - Added `amp_ss_ddim_steps` (default 20) and `amp_ss_eta` (default 0.3) config params
+   - Moved `freeze_diffusion` read earlier so it's available for the scheduled sampling init check
+
+### Config Created: `experiments/configs/exp036.yaml`
+- **Key changes vs exp035**: `amp_f0_conditioned: true`, `amp_scheduled_sampling: true`
+- Schedule: epochs 1-50 = 100% GT f0, 50-150 = linear anneal, 150-300 = 100% generated f0
+- Online DDIM: 20 steps, η=0.3 (faster than full 50 steps)
+- Diffusion frozen from exp034, baseline from exp033
+- 300 epochs total, amp_lr=5e-5, corr_weight=0.3, grad_weight=0.2
+
+### Training Script: `experiments/next_train_cmd.sh`
+1. **Step 1**: Re-evaluate exp035 with fixed evaluate.py → `exp035_reeval.json`
+2. **Step 2**: Train exp036 (stage 2, ~300 epochs with online scheduled sampling)
+3. **Step 3**: Evaluate exp036 → `exp036.json`
+
+### Expected Results
+| Metric | exp035 | exp036 expected |
+|--------|--------|-----------------|
+| f0 RPA | ~94.52% | ~94.52% (frozen) |
+| **Amp Corr** | **0.800** | **0.82-0.86** |
+| Amp RMSE | 0.572 | 0.55-0.58 |
+
+### ⚠️ Note
+Online DDIM sampling adds ~3-5x overhead to training. With 20 DDIM steps (instead of 50), it should be manageable but training will still be slower than exp035. The script is ready to run.

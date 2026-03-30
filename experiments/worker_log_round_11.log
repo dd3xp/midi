@@ -1,0 +1,31 @@
+The log has been updated correctly. Let me provide a summary:
+
+---
+
+## exp009 结果已记录 ✅
+
+**训练状态**: 成功完成 (exit code 0)，三组 eta 评估全部完成。
+
+### 关键结果
+
+使用 exp007 模型，在 eta={1.0, 0.3, 0.0} 下各生成 5 个 sample，测试新增的 inter-sample diversity 指标：
+
+| eta | RPA mean | f0_diversity_cents | amp_diversity |
+|-----|----------|--------------------|---------------|
+| 0.0 | 94.24% | **9.01** | **0.0106** |
+| 0.3 | 94.20% | 8.92 | 0.0096 |
+| 1.0 | 94.07% | 7.87 | 0.0054 |
+
+### 核心发现
+
+1. **多样性极低**: f0 diversity 仅 ~9 cents (< 0.1 半音)，模型本质上是"准确定性"的
+2. **反直觉**: eta=0.0 (确定性) 的 diversity > eta=1.0 (随机)，可能因为 stochastic 采样中的"去噪→加噪→去噪"循环将 samples 拉向分布众数
+3. **质量稳定**: 所有 eta 值的 mean RPA 在 94.0-94.3% 范围内，几乎无差异
+4. **当前最佳不变**: Diffusion 最佳仍为 exp007 模型 (eta=0.3 mean / eta=0.0 oracle)
+
+### 已更新
+- ✅ 结果表新增 exp009 行
+- ✅ 当前最佳已更新（补充 diversity 数据）
+- ✅ 详细多样性分析已添加
+- ✅ 进度追踪已更新
+- ❌ 未写下一步计划（交由 supervisor 决定）

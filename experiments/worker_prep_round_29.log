@@ -1,0 +1,37 @@
+Everything is ready. Here's a summary of what was prepared for **exp021: Amp Diffusion**:
+
+---
+
+## exp021 Summary
+
+**Goal**: Replace the deterministic AmpPredictor (BiGRU, Amp Corr 0.665) with a separate 1-channel DDPM for amplitude generation. This gives stochastic amp sampling and potentially better modeling of complex amplitude distributions.
+
+**Architecture**:
+- **Encoder**: Frozen from exp014 (`baseline_best.pt`)
+- **f0 Diffusion**: Frozen from exp017 (`diffusion_best_ema.pt`) — used only at evaluation
+- **Amp Diffusion**: **NEW** `ConditionalDDPM(n_channels=1)` — same U-Net architecture as f0 diffusion (~16M params)
+- **Amp target**: `log(amp + eps)` → z-score normalized
+
+**Training** (stage 3):
+- Only the amp diffusion is trained; encoder frozen
+- lr: 2e-4 → 1e-5 (cosine annealing), 200 epochs, EMA 0.995
+- batch_size=16, samples_per_epoch=1860
+
+**Evaluation**:
+- f0 sampled from exp017 diffusion (η=0.3)
+- amp sampled from new amp diffusion (η=0.3)
+- Both channels are now stochastic (amp diversity > 0!)
+- 5 samples, 50 DDIM steps
+
+**Files prepared**:
+- `experiments/configs/exp021.yaml` — config
+- `experiments/next_train_cmd.sh` — training + evaluation script
+- `src/model/train.py` — `train_stage3()` function (already present)
+- `src/model/evaluate.py` — amp_diffusion auto-detection (already present)
+
+**Comparison target**: exp019 (Amp Corr 0.665, Amp RMSE(log) 0.697)
+cript: `experiments/next_train_cmd.sh`
+1. Copies encoder from exp014 → exp021
+2. Trains amp diffusion (stage 3, ~200 epochs)
+3. Copies f0 diffusion from exp017 → exp021
+4. Evaluates: f0 from exp017's diffusion + amp from new amp diffusion (5 samples, η=0.3)

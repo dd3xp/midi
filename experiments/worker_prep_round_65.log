@@ -1,0 +1,31 @@
+All checks pass. Let me print a summary:
+
+---
+
+## Summary: exp052 Prepared
+
+### What was done:
+
+**Code changes (following supervisor's plan):**
+1. **`src/model/dataset.py` [C1]**: `notes_to_frame_features()` now outputs **12-dim** features instead of 7-dim. Added 5 global statistics (dims 7-11):
+   - `global_mean_pitch` — mean MIDI pitch / 127
+   - `global_pitch_range` — (max - min pitch) / 127
+   - `global_mean_velocity` — mean velocity / 127
+   - `global_note_density` — notes/sec / 10, clipped [0,1]
+   - `global_mean_duration` — mean duration / 2.0, clipped [0,1]
+
+2. **`src/model/encoder.py` [C2]**: `input_dim` default changed from 7 → 12 (⚠️ breaking change: old checkpoints incompatible)
+
+3. **`src/model/baseline.py`**: Updated docstring to match 12-dim input
+
+**Sanity checks confirmed:**
+- Different instruments show clearly distinguishable global stats (e.g., vc mean_pitch=0.401 vs fl=0.578 vs ob=0.630)
+- 183 tracks available (URMP + Bach10 + PHENICX + TRIOS)
+- Empty notes edge case handled correctly
+- End-to-end forward pass works: (B, T, 12) → encoder → baseline → f0_logits + amp_pred
+
+**Files created:**
+- `experiments/configs/exp052.yaml` — full config with stage1 (200 epochs, lr=5e-4) + stage2 (300 epochs, AmpPredictor with attention)
+- `experiments/next_train_cmd.sh` — runs Stage 1 → Stage 2 → Evaluation
+
+**Expected outcome:** Amp Corr 0.80-0.82 (up from 0.781 without instrument info), recovering most of the 0.018 gap vs instrument-conditioned (0.807).

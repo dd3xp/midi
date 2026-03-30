@@ -1,0 +1,38 @@
+The log is properly updated. Let me print the status summary.
+
+---
+
+## Supervisor Review Summary
+
+### Experiment Reviewed: **exp041** (Amp Diffusion v2 — velocity-conditioned 1ch DDPM)
+
+### Key Metrics
+| Metric | exp041 | Best Previous | Delta |
+|--------|--------|--------------|-------|
+| **f0 RPA** | 93.92% | 93.73% (exp039) | +0.19% ✅ |
+| **Amp Corr mean** | **0.696** | **0.807** (exp039) | **-0.111 ❌** |
+| **Amp Diversity** | **0.010** | ~0 (all prior) | **↑∞ 🎉 BREAKTHROUGH** |
+| Amp RMSE(log) | 0.880 | 0.582 (exp039) | +0.298 ❌ |
+
+### Diagnosis
+- **Velocity encoder massively improved amp diffusion**: 0.407 → 0.696 (+0.289) vs exp021
+- **But direct diffusion still significantly below deterministic**: 0.696 vs 0.807 (-0.111)
+- **amp_diversity = 0.010 is a genuine breakthrough!** First meaningful amplitude diversity in 41 experiments
+- Training unstable: best epoch at 92/300, heavy overfitting afterward
+- Falls into planned scenario: "Amp Corr 0.65-0.75 with diversity > 0.002" → **proceed to Residual Diffusion**
+
+### Code Review
+✅ No bugs found in train.py `train_stage3()` or evaluate.py amp_diffusion handling
+
+### Next Planned: **exp042 — Residual Amp Diffusion**
+- Train diffusion on **residual** (gt_amp - AmpPredictor_mean) instead of full amp
+- Quality floor guaranteed by frozen AmpPredictor (0.807)
+- Diversity through residual sampling
+- Expected: Amp Corr ≥ 0.82, amp_diversity > 0.002
+- **Priority: HIGH** — best chance to achieve both quality AND diversity
+
+### Critical Issues for Worker
+- Must implement `residual: true` mode in `train_stage3()`
+- Must verify instrument_id is available in training batches (AmpPredictor needs it)
+- Must add residual inference mode in evaluate.py
+- Must verify normalization alignment between AmpPredictor output and z-score space

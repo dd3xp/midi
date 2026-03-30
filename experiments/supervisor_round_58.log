@@ -1,0 +1,32 @@
+Good — no NEEDS_HUMAN.txt, as expected. This is a plateau on amp which should be handled autonomously.
+
+---
+
+## Status Summary
+
+### Experiment Reviewed: exp046 (Velocity Conditioning + Condition Dropout)
+
+**Key Metrics:**
+| Metric | exp046 | exp045 (baseline) | exp039 (best) | Target |
+|--------|--------|-------------------|---------------|--------|
+| Amp Corr | 0.778 | 0.781 | 0.807 | > 0.90 |
+| f0 RPA | 93.82% | 93.63% | 93.73% | > 85% ✅ |
+| Best epoch | 35 | 34 | 142 | — |
+
+**Diagnosis:** exp046 failed — velocity was redundant (encoder already encodes it), condition dropout didn't address the real source of overfitting (not encoder-feature dependence, but limited data). This is the 29th amp optimization attempt, all plateauing at ~0.78–0.81.
+
+**No code bugs found.** Implementation was correct; failure was methodological.
+
+### Next Plan: exp047 — Two-Step Amp Prediction
+
+**Core idea:** Structurally decompose amp prediction into:
+1. **NoteLevelMLP** (tiny: 2→64→32→1): velocity + pitch → note-level mean amplitude
+2. **ResidualPredictor** (existing GRU+Attn): encoder features + note_level → frame-level residual  
+3. **Final output:** `amp = note_level + residual`
+
+**Why this is different from exp046:** The additive structure *forces* the model to use velocity for note-level prediction. exp046 just added velocity as an optional input that the model could ignore.
+
+**Expected:** Amp Corr 0.80–0.84 (beat the 0.781 no-instrument baseline). Priority: **HIGH**.
+
+### Critical Issues: None
+No NEEDS_HUMAN.txt created — continuing autonomous experimentation.

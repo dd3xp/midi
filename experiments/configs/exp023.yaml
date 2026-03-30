@@ -1,0 +1,49 @@
+# exp023: Self-Attention AmpPredictor — BiGRU + 2-layer Transformer self-attention
+# Purpose: Capture long-range amplitude patterns (phrase-level dynamics, crescendo/decrescendo)
+# Hypothesis: GRU only captures local patterns; self-attention enables global context
+# Architecture changes:
+#   [C1] diffusion.py: AmpPredictor gains use_attention=True, 2-layer TransformerEncoder
+#   [C2] train.py: reads amp_use_attention/amp_n_attn_heads/amp_n_attn_layers config
+#   [C3] evaluate.py: syncs attention config for loading
+# Training: freeze encoder (exp014) + freeze diffusion (exp017), only train AmpPredictor
+# Comparison: exp018/exp019 (AmpPredictor without attention, Amp Corr 0.665)
+# Dataset: URMP 9 inst + Bach10 4 inst = 173 tracks
+
+output_dir: "experiments/checkpoints/exp023"
+baseline_checkpoint: "experiments/checkpoints/exp014/baseline_best.pt"
+instruments: ["vn", "va", "vc", "fl", "ob", "cl", "sax", "tpt", "tbn", "bn"]
+crop_len: 512
+seed: 42
+save_every: 10
+
+stage2:
+  batch_size: 16
+  lr: 0.0002
+  lr_min: 0.00001
+  epochs: 200
+  ema_decay: 0.995
+  n_diffusion_steps: 1000
+  samples_per_epoch: 1860    # 124 train tracks x 15 crops
+  n_channels: 1              # f0-only diffusion
+
+  # AmpPredictor config (same base capacity as exp017/exp018)
+  amp_dropout: 0.3
+  amp_hidden: 256
+  amp_gru_hidden: 128
+  amp_gru_layers: 2
+
+  # NEW: Self-attention after GRU
+  amp_use_attention: true
+  amp_n_attn_heads: 4
+  amp_n_attn_layers: 2
+
+  # NOT f0-conditioned (exp022 proved exposure bias kills it)
+  amp_f0_conditioned: false
+
+  # Freeze f0 diffusion from exp017 — only train AmpPredictor
+  freeze_diffusion: true
+  diffusion_checkpoint: "experiments/checkpoints/exp017/diffusion_best_ema.pt"
+
+  # Independent optimizer with weight_decay (from exp018)
+  amp_lr: 0.0001
+  amp_weight_decay: 0.0001

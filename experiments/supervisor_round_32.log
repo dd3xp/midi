@@ -1,0 +1,37 @@
+Now let me print the status summary:
+
+---
+
+## 📊 Supervisor Review Summary — exp023
+
+### Experiment Reviewed
+**exp023**: Self-Attention AmpPredictor (BiGRU + 2-layer TransformerEncoder)
+
+### Key Metrics
+| Metric | exp019 (prev best) | exp023 | Change |
+|--------|-------------------|--------|--------|
+| f0 RPA mean | 95.37% | **95.56%** | +0.19% ≈ |
+| Amp Corr mean | 0.665 | **0.676** | **+1.7% ↑ (new best)** |
+| Amp RMSE(log) | 0.697 | 0.726 | +4.2% ❌ |
+| VDE | 6.73 | 6.64 | -1.3% ≈ |
+
+### Code Review
+✅ **No bugs found** — diffusion.py, train.py, evaluate.py all correctly implement self-attention AmpPredictor with backward compatibility.
+
+### Critical Diagnosis
+⚠️ **Severe overfitting**: test_amp_loss best at ep68 (0.552), degraded to 0.899 by ep200 (gap 0.467 vs exp018's 0.048). Attention's 1.3M extra params are too much for 1860 samples/epoch.
+
+🔑 **Key insight discovered**: MSE loss misaligned with amp_corr evaluation metric — exp023 has WORSE test MSE (0.552 vs exp018's 0.508) but BETTER amp_corr (0.676 vs 0.665). This reveals the optimization-evaluation gap.
+
+### Next Experiment Planned
+**exp024**: Correlation-aligned amp loss
+- **New loss**: MSE + 1.0 × CorrLoss (1 − Pearson) + 0.5 × GradLoss (temporal derivative matching)
+- **Stronger regularization**: dropout 0.4, weight_decay 0.001 (10× increase)
+- **Rationale**: Directly optimize the metric we evaluate on, not just pointwise MSE
+- **Expected**: Amp Corr 0.70-0.75
+
+### Progress Toward Goal
+- ✅ f0 RPA: 95.56% (target >85%)
+- ⚠️ Amp Corr: 0.676 (target >0.90, gap 0.224)
+- ✅ Diffusion beats baseline on amp: +6.8% (0.676 vs 0.633)
+- **Bottleneck**: Amp Corr — loss/metric misalignment is the newly identified root cause

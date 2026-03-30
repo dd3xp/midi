@@ -1,0 +1,30 @@
+The exp012 results have already been fully logged by a prior worker invocation. Let me verify the key numbers match the evaluation JSON:
+
+**Verification: exp012 log entry vs exp012.json** ✅
+- f0 RPA: 97.14% ✓ (JSON: 0.9714)
+- f0 MAE: 16.48 cents ✓ (JSON: 16.481)
+- Amp Corr: 0.660 ✓ (JSON: 0.6596)
+- Amp RMSE(log): 0.727 ✓ (JSON: 0.7273)
+- VDE: 8.77 ✓ (JSON: 8.774)
+- VRE: 0.717 ✓ (JSON: 0.717)
+
+**Verification: 当前最佳 updated** ✅ (line 24: exp012 as baseline best, Amp Corr=0.660)
+
+**Verification: 进度追踪 updated** ✅ (lines 1960-1969: all targets updated with exp012 data)
+
+---
+
+## exp012 结果总结
+
+**exp012: Baseline amp head Sigmoid → Softplus** — ✅ 训练+评估完成
+
+| 指标 | exp003 (旧best) | exp012 (Softplus) | 变化 |
+|------|-----------------|-------------------|------|
+| f0 RPA | 97.14% | 97.14% | 不变 |
+| f0 MAE | 16.39 | 16.48 | +0.09 (噪声) |
+| **Amp Corr** | 0.645 | **0.660** | **+0.015 (+2.2%)** |
+| Amp RMSE(log) | 0.738 | **0.727** | **-0.011** |
+| VDE | 8.34 | 8.77 | +0.43 |
+| VRE | 0.880 | **0.717** | **-0.163** |
+
+**结论**: Softplus 带来了 amp 指标的边际改善，属于 supervisor 预案中的"保守情景"——Sigmoid 不是 amp 的主要瓶颈。所有结果已完整记录在 `experiments/log.md` 中，当前最佳和进度追踪均已更新。等待 supervisor 决定下一步方向。

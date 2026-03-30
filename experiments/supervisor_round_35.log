@@ -1,0 +1,33 @@
+The plan is complete and correctly written. Here's my status summary:
+
+---
+
+## Supervisor Review Summary
+
+### Experiment Reviewed: exp026 (Model Soup)
+- **Method**: Weight averaging of exp023 + exp024 AmpPredictor weights
+- **Result**: ❌ Catastrophic failure
+  - 2-way soup: Amp Corr = **0.601** (↓11% from best 0.676), RMSE = **2.761** (4x worse)
+  - 3-way soup: Amp Corr = **0.586**, RMSE = **3.746** (5x worse)
+- **Root cause**: exp023 and exp024 converged to incompatible weight-space basins due to different loss functions (MSE-only vs MSE+CorrLoss+GradLoss)
+
+### Key Metrics (best across all experiments)
+| Metric | Best | Target | Status |
+|--------|------|--------|--------|
+| f0 RPA | 95.56% | >85% | ✅ Far exceeds |
+| Amp Corr | 0.676 (exp023) | >0.90 | ❌ Gap: 0.224 |
+| Amp RMSE | 0.695 (exp024) | beat baseline | ✅ |
+
+### Critical Finding
+**All 8 amp optimization methods used GRU backbone** → all saturated at 0.665-0.676. The GRU architecture itself is likely the bottleneck, not the loss/regularization/post-processing.
+
+### Next Experiment Planned: exp027 — TCN (Dilated CNN) AmpPredictor
+- **What**: Replace GRU+Attention with WaveNet-style dilated convolutions (8 layers, dilations 1→128)
+- **Why**: Fundamentally different inductive bias; multi-scale temporal modeling; 6x fewer parameters (~400K vs ~2.3M) → less overfitting
+- **Expected**: Amp Corr 0.68-0.72, significantly reduced overfitting
+- **Priority**: HIGH
+
+### No Critical Issues Found
+- No code bugs detected
+- exp026 results correctly recorded
+- Plan written to `experiments/log.md` under "下一步计划"

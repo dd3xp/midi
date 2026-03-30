@@ -1,0 +1,27 @@
+Here's a summary of what was prepared for **exp010**:
+
+## Summary
+
+**Experiment**: exp010 — Paper Visualization (no training)
+
+**What the supervisor plan requested**: Generate all figures needed for the AIMC 2026 paper, using existing checkpoints from exp003 (baseline) and exp007 (diffusion).
+
+**Files created/modified**:
+
+1. **`src/model/visualize.py`** (NEW) — Complete visualization module with:
+   - `plot_f0_contour()` — Full f0 contour overlay: GT (black) + Baseline (blue) + 5 Diffusion samples (red, translucent)
+   - `plot_vibrato_zoom()` — Zoomed 3-second window auto-selected for best vibrato region
+   - `plot_amp_contour()` — Amplitude envelope comparison (bonus, not in plan but useful)
+   - `plot_eta_sweep_summary()` — 3-panel figure: RPA/MAE/Diversity vs η (from exp008/exp009 results)
+   - `plot_instrument_comparison()` — 3-panel bar chart: Baseline vs Diffusion per instrument (RPA, VDE, Amp Corr)
+   - Fixed `savefig.bbox_inches` rcParam bug (not a valid matplotlib param)
+
+2. **`experiments/configs/exp010.yaml`** — Config recording tracks, seeds, and parameters
+
+3. **`experiments/next_train_cmd.sh`** — Executable script that:
+   - Runs `visualize.py` with exp003 baseline + exp007 diffusion checkpoints
+   - Generates ~11 PNG figures in `experiments/figures/`
+   - Creates `experiments/results/exp010.json` listing generated files
+   - Expected runtime: ~5-10 minutes (3 tracks × 5 samples × 50 DDIM steps + plotting)
+
+**No training needed** — this experiment only loads existing checkpoints and generates figures.

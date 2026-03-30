@@ -1,0 +1,28 @@
+The log has been updated correctly. Here's a summary of the results:
+
+## exp007 Results — ✅ Training Completed Successfully
+
+**Training**: 200/200 epochs, ~22,000 steps, CosineAnnealingLR (2e-4→1e-5)
+- Best test_loss: **0.031** @ epoch 94
+- Train loss converged from 0.249 → 0.051
+
+**Key Diffusion Metrics** (mean / oracle):
+
+| Metric | exp005 (prev best) | **exp007** | Change |
+|--------|-------------------|------------|--------|
+| f0 RPA | 85.26% / 95.58% | **92.80%** / 95.51% | **+7.5%** mean |
+| f0 MAE | 28.62 / 18.43 | **23.10** / 19.32 | -5.5 cents mean |
+| Amp Corr | 0.544 / 0.551 | **0.566** / 0.575 | +0.022 |
+| VDE | 6.03 / 5.11 | **4.84** / 4.86 | -1.2 (better vibrato) |
+| VRE | 0.806 / 0.755 | **0.763** / 0.727 | -0.04 |
+| Oracle-mean gap | 10.3% | **2.7%** | Much more stable sampling |
+
+**Updated "当前最佳"**: exp007 is the new best diffusion model.
+
+**Key takeaways**:
+1. **CosineAnnealingLR + 50% more steps = huge win**: Mean RPA jumped from 85.26% → 92.80%
+2. **Sampling stability greatly improved**: oracle-mean gap shrunk from 10.3% to 2.7%
+3. **VDE advantage over baseline expanded**: 4.84 vs baseline's 8.34
+4. **Remaining gap**: Mean RPA 92.8% vs baseline 97.1% (4.3% gap); Amp Corr 0.566 vs 0.645
+
+The supervisor can now decide the next experiment direction.

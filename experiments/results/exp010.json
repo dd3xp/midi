@@ -1,0 +1,18 @@
+{
+  "experiment": "exp010",
+  "type": "visualization",
+  "figures_generated": [
+    "amp_contour_fl_Nocturne.png",
+    "amp_contour_tpt_Nocturne.png",
+    "amp_contour_vn_Jupiter.png",
+    "eta_sweep_summary.png",
+    "f0_contour_fl_Nocturne.png",
+    "f0_contour_tpt_Nocturne.png",
+    "f0_contour_vn_Jupiter.png",
+    "instrument_comparison.png",
+    "vibrato_zoom_fl_Nocturne.png",
+    "vibrato_zoom_tpt_Nocturne.png",
+    "vibrato_zoom_vn_Jupiter.png"
+  ],
+  "n_figures": 11
+}

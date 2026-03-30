@@ -1,0 +1,33 @@
+The plan is written. Let me print the status summary:
+
+---
+
+## Supervisor Review Summary — Round 67
+
+### Experiment Reviewed: exp052 (Global Statistics 12-dim)
+- **Verdict**: ❌ FAILED — Global stats hurt performance
+- **Baseline Amp Corr**: 0.746 (30 tracks) / 0.878 (9 common URMP tracks vs exp033's 0.890 = **-0.012**)
+- **Root cause**: 5 constant-per-frame global features ignored by GRU, and 12-dim input degraded encoder learning of core 7-dim features
+- **Stage 2 training unstable**: Best at epoch 11/300, then loss spiked to 3.8
+
+### Critical Issues Found (3)
+1. **[C1] encoder.py input_dim=12 must revert to 7** — breaks all exp033-based experiments
+2. **[C2] dataset.py 12-dim features must revert to 7** — shape mismatch with exp033 checkpoints
+3. **[C3] TCNAmpPredictor.forward() missing kwargs** — will TypeError when called from train.py/evaluate.py (needs `**kwargs`)
+
+### Next Plan: exp053 — TCN-based AmpPredictor
+- **Key insight**: `TCNAmpPredictor` (WaveNet-style dilated CNN) is **already fully implemented** in diffusion.py, train.py, and evaluate.py — but has **never been tested in any experiment**!
+- **Architecture change**: GRU+Attention → Dilated Conv stack (8 layers, dilations 1→128)
+- **Why this might work**: Multi-scale parallel temporal modeling vs sequential GRU; better for smooth amplitude envelopes
+- **Cost**: Fix 3 bugs, create config, train ~30 min
+- **Expected**: 0.78-0.82 Amp Corr
+
+### Progress Toward Goal
+| Target | Current Best | Gap | Status |
+|--------|-------------|-----|--------|
+| f0 RPA > 85% | 95.82% | ✅ Done | Complete |
+| Amp Corr > 0.90 | 0.807 (w/inst) / 0.789 (no inst) | -0.093/-0.111 | **35th attempt next** |
+| f0 MAE < 20 | 23.44 | -3.44 | Deferred |
+| VDE < 6.0 | 7.22 | -1.22 | Deferred |
+
+**Biggest bottleneck**: Amp Corr — 34 attempts all GRU-based, never tested the already-implemented TCN architecture. This is the most promising unexplored direction.

@@ -1,0 +1,22 @@
+Both training and test loops have the multi-scale loss code. Everything looks correct.
+
+## Summary
+
+**Experiment: exp031 — Multi-Scale Temporal Amp Loss (rerun with fix)**
+
+**What was fixed:**
+- Copied `norm_stats.pt` from exp017 → exp031 (previously failed copying from exp014 which didn't have it)
+- Copied `diffusion_best_ema.pt` from exp017 → exp031 (needed for evaluation since diffusion is frozen during training)
+
+**Config:** `experiments/configs/exp031.yaml` (already exists from previous round)
+- Based on exp028 (instrument embedding, current best Amp Corr=0.678)
+- Adds multi-scale temporal loss at scales [8, 32] with weight 0.5
+- Stage 2 only: frozen diffusion, trains AmpPredictor with GRU+Attention
+- Dropout 0.4, lr=0.0001, weight_decay=0.001, 200 epochs
+
+**Training script:** `experiments/next_train_cmd.sh` is ready
+- Step 1: Copy checkpoint files (redundant now but harmless)
+- Step 2: Train stage 2 with multi-scale temporal loss
+- Step 3: Evaluate with 3 samples, DDIM 50 steps, eta=0.3
+
+**Expected outcome:** Amp Corr 0.69-0.72 (vs 0.678 baseline from exp028). The multi-scale temporal loss should force the amp predictor to match coarse phrase-level dynamics patterns.

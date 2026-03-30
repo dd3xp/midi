@@ -1,0 +1,21 @@
+Here's a summary of what was prepared:
+
+## exp008 准备完毕
+
+**实验**: Stochastic DDIM Diversity Evaluation (随机 DDIM 多样性评估)
+
+**目的**: 使用 exp007 已训练好的模型，通过不同 eta 值评估扩散模型的生成多样性
+
+**关键点**:
+- **无需训练** — 仅推理评估，复用 `experiments/checkpoints/exp007/` 的模型
+- **两次评估**:
+  - Run 1: `eta=0.3` (轻度随机) → `experiments/results/exp008_eta03.json`
+  - Run 2: `eta=0.5` (中度随机) → `experiments/results/exp008_eta05.json`
+- 每次评估 `--mode both --n_samples 5 --ddim_steps 50`
+- 预计总运行时间 ~10 分钟
+
+**创建的文件**:
+1. `experiments/configs/exp008.yaml` — 实验配置记录
+2. `experiments/next_train_cmd.sh` — 可执行脚本（两次 evaluate.py 调用）
+
+**无代码修改** — 按照 supervisor 计划确认所有功能（`--eta` 参数、stochastic DDIM 采样）已在 evaluate.py 和 diffusion.py 中就绪。

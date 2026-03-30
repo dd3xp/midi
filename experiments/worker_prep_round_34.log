@@ -1,0 +1,30 @@
+Confirmed — with `amp_corr_weight=0.0` and `amp_grad_weight=0.0`, the loss reduces to pure MSE (`amp_loss = mse + 0 + 0`). No code changes needed.
+
+---
+
+## Summary: exp025 prepared
+
+**Experiment**: exp025 — MSE-only loss + strong regularization + attention
+
+**Rationale**: No supervisor plan exists after exp024. This experiment combines the best elements from the two most recent experiments that were confounded:
+- **exp023** (MSE-only loss): gave best Amp Corr (0.676) but suffered from overfitting (gap 0.47)
+- **exp024** (CorrLoss + strong reg): gave best Amp RMSE (0.695) and lowest overfitting (gap 0.17), but CorrLoss *hurt* Amp Corr
+
+**What's different**: exp025 takes exp024's strong regularization (dropout 0.4, weight_decay 0.001) but drops the CorrLoss/GradLoss that interfered with MSE optimization. This is a clean test of whether strong regularization alone can push Amp Corr beyond 0.676.
+
+**Key hyperparameters vs predecessors**:
+
+| Parameter | exp023 | exp024 | **exp025** |
+|-----------|--------|--------|------------|
+| Loss | MSE-only | MSE+Corr+Grad | **MSE-only** |
+| dropout | 0.3 | 0.4 | **0.4** |
+| weight_decay | 0.0001 | 0.001 | **0.001** |
+| attention | ✅ | ✅ | **✅** |
+
+**Files created**:
+- `experiments/configs/exp025.yaml` — configuration
+- `experiments/next_train_cmd.sh` — training + evaluation script
+
+**No code changes** — the CorrLoss code in `train.py` already handles weight=0.0 by skipping the computation.
+
+**Expected outcome**: Amp Corr ≥0.676, Amp RMSE ≈0.695, reduced overfitting gap.

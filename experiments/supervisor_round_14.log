@@ -1,0 +1,47 @@
+Now I have the complete picture. Let me provide my review.
+
+---
+
+## Supervisor Review — Post exp011
+
+### Experiment Reviewed
+**exp011**: Visualization fix — re-evaluated η=0.5 with diversity metrics + improved vibrato zoom algorithm + regenerated all 11 paper figures.
+
+### Key Metrics (Final State)
+
+| Model | f0 RPA | f0 MAE | Amp Corr | VDE | VRE |
+|-------|--------|--------|----------|-----|-----|
+| **Baseline** (exp003) | **97.14%** | **16.39** | **0.645** | 8.34 | 0.88 |
+| **Diffusion mean** (η=0.3) | 94.20% | 21.11 | 0.571 | **4.84** | **0.76** |
+| **Diffusion oracle** (η=0.0) | 96.63% | 17.16 | 0.575 | **4.80** | **0.75** |
+| **Diversity** (η=0.5) | — | — | — | f0: 9.16 cents | amp: 0.008 |
+
+### Status: ✅ Experiment Phase Complete — NEEDS_HUMAN.txt Already Created
+
+The previous supervisor review was thorough and correct:
+
+1. **exp011 results validated** — η=0.5 RPA=94.22% consistent with other η values (94.0–94.3%), f0_diversity_cents=9.16 fills the missing data point correctly
+2. **All 11 figures present** in `experiments/figures/` — confirmed via glob
+3. **eta_sweep_summary.png** fix verified — diversity panel now has 4 valid data points (no more zero at η=0.5)
+4. **NEEDS_HUMAN.txt** exists with correct content — experiment loop should halt
+
+### No New Experiment Planned
+
+The "下一步计划" in `log.md` correctly states: **实验阶段全部完成。需要人工审查后进入论文写作。**
+
+This is appropriate because:
+- ✅ Baseline exceeds targets (RPA 97.14% >> 85%)
+- ✅ Diffusion quality approaches baseline (94.2% mean, 96.6% oracle)  
+- ✅ Core advantage demonstrated: **VDE improved 42%** (4.80 vs 8.34)
+- ✅ Eta sweep complete (0.0, 0.3, 0.5, 1.0) — no significant effect on quality or diversity
+- ✅ Diversity quantified (~9 cents, interpretable as "consensus interpretation" from single-performance training data)
+- ✅ 11 publication-quality figures generated and validated
+- ⚠️ Amp Corr (0.57–0.65) below original 0.9 target — acknowledged as architectural limitation, not addressable without data/architecture changes
+
+### No Code Issues
+
+No new code was written in exp011 beyond the visualization fixes that were already reviewed. The `visualize.py` modifications (vibrato zoom algorithm, eta sweep data source) were verified correct in the previous review.
+
+### Critical Issues: None
+
+The experiment loop should remain paused waiting for human review of the figures and a decision on whether to proceed to paper writing or request additional experiments.

@@ -1,0 +1,31 @@
+# exp017: Larger AmpPredictor — 2-layer BiGRU, hidden=128
+# Purpose: Increase AmpPredictor capacity to close RMSE(log) gap with baseline
+# Architecture changes:
+#   [C1] diffusion.py: AmpPredictor hidden=256, gru_hidden=128, n_gru_layers=2
+#   [C2] diffusion.py: AmpPredictor dropout=0.3 (increased) + GRU inter-layer dropout
+#   [C3] train.py: read amp_hidden/amp_gru_hidden/amp_gru_layers from config
+#   [C4] evaluate.py: same config params for AmpPredictor construction
+# Encoder: frozen from exp014 (173 tracks, 10 instruments)
+# Diffusion: same architecture as exp016 (1ch f0 only)
+# Dataset: same as exp016 (URMP 9 inst + Bach10 4 inst = 173 tracks)
+# Comparison: exp016 (small AmpPredictor: hidden=128, gru_hidden=64, 1 layer)
+
+output_dir: "experiments/checkpoints/exp017"
+instruments: ["vn", "va", "vc", "fl", "ob", "cl", "sax", "tpt", "tbn", "bn"]
+crop_len: 512
+seed: 42
+save_every: 10
+
+stage2:
+  batch_size: 16
+  lr: 0.0002
+  lr_min: 0.00001
+  epochs: 200
+  ema_decay: 0.995
+  n_diffusion_steps: 1000
+  samples_per_epoch: 1860    # 124 tracks x 15 crops
+  n_channels: 1              # 1ch diffusion (f0 only)
+  amp_dropout: 0.3           # dropout (increased from 0.2)
+  amp_hidden: 256            # projection dim (was 128)
+  amp_gru_hidden: 128        # GRU hidden (was 64)
+  amp_gru_layers: 2          # GRU layers (was 1)

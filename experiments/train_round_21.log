@@ -1,0 +1,67 @@
+=== exp015: 1ch Diffusion (f0 only) + AmpPredictor ===
+Stage 2 — uses frozen encoder from exp014
+Working directory: /c/lxr/study/final
+Copied exp014 baseline_best.pt -> exp015/
+Device: cuda
+Config: {
+  "data_dir": "C:\\lxr\\study\\final\\datagen\\solo\\URMP",
+  "bach10_dir": "C:\\lxr\\study\\final\\datagen\\solo\\Bach10",
+  "output_dir": "experiments/checkpoints/exp015",
+  "instruments": [
+    "vn",
+    "va",
+    "vc",
+    "fl",
+    "ob",
+    "cl",
+    "sax",
+    "tpt",
+    "tbn",
+    "bn"
+  ],
+  "crop_len": 512,
+  "seed": 42,
+  "stage1": {
+    "batch_size": 32,
+    "lr": 0.001,
+    "epochs": 100,
+    "lam": 1.0,
+    "patience": 15,
+    "lr_patience": 5,
+    "lr_factor": 0.5,
+    "dropout": 0.3
+  },
+  "stage2": {
+    "batch_size": 16,
+    "lr": "2e-4",
+    "epochs": 200,
+    "ema_decay": 0.995,
+    "n_diffusion_steps": 1000,
+    "samples_per_epoch": 1860,
+    "lr_min": 1e-05,
+    "amp_predictor_lr": 0.001,
+    "n_channels": 1
+  },
+  "save_every": 10
+}
+Loaded baseline from experiments/checkpoints/exp015\baseline_best.pt
+
+============================================================
+Stage 2: Training 1ch Diffusion (f0) + AmpPredictor
+============================================================
+Train: 124 tracks, samples_per_epoch=1860
+Amp log stats: mean=-4.5382, std=1.2719
+Diffusion n_channels=1
+AmpPredictor enabled, lr=0.001
+Traceback (most recent call last):
+  File "C:\lxr\study\final\src\model\train.py", line 538, in <module>
+    main()
+  File "C:\lxr\study\final\src\model\train.py", line 532, in main
+    train_stage2(config, encoder, device)
+  File "C:\lxr\study\final\src\model\train.py", line 304, in train_stage2
+    optimizer = torch.optim.Adam(all_params, lr=cfg["lr"], betas=(0.9, 0.999))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\17145\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\optim\adam.py", line 58, in __init__
+    if not 0.0 <= lr:
+           ^^^^^^^^^
+TypeError: '<=' not supported between instances of 'float' and 'str'

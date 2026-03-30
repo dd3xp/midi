@@ -1,0 +1,548 @@
+"""
+Training entry point for MIDI-to-expression model.
+Stage 1: Encoder + Baseline (joint), Stage 2: Diffusion (encoder frozen).
+"""
+
+import os
+import sys
+import json
+import copy
+import argparse
+import yaml
+import torch
+import torch.nn as nn
+from torch.utils.data import DataLoader
+
+# Limit GPU memory to 75% to leave room for OS/desktop
+if torch.cuda.is_available():
+    torch.cuda.set_per_process_memory_fraction(0.85)
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(os.path.dirname(SCRIPT_DIR))
+sys.path.insert(0, PROJECT_ROOT)
+
+from src.model.dataset import ExpressionDataset, collate_fn
+from src.model.baseline import BaselineModel, compute_baseline_loss
+from src.model.diffusion import (
+    ConditionalDDPM, AmpPredictor,
+    normalize_f0_cents, normalize_amp_log_zscore,
+)
+
+
+DEFAULT_CONFIG = {
+    "data_dir": os.path.join(PROJECT_ROOT, "datagen", "solo", "URMP"),
+    "bach10_dir": os.path.join(PROJECT_ROOT, "datagen", "solo", "Bach10"),
+    "output_dir": os.path.join(PROJECT_ROOT, "checkpoints"),
+    "instruments": ["vn", "va", "vc", "fl", "ob", "cl", "sax", "tpt", "tbn", "bn"],
+    "crop_len": 512,
+    "seed": 42,
+    "stage1": {
+        "batch_size": 32,
+        "lr": 1e-3,
+        "epochs": 100,
+        "lam": 1.0,
+        "patience": 15,
+        "lr_patience": 5,
+        "lr_factor": 0.5,
+        "dropout": 0.3,
+    },
+    "stage2": {
+        "batch_size": 16,
+        "lr": 2e-4,
+        "epochs": 200,
+        "ema_decay": 0.995,
+        "n_diffusion_steps": 1000,
+        "samples_per_epoch": None,
+    },
+    "save_every": 10,
+}
+
+
+class EMA:
+    def __init__(self, model, decay=0.9999):
+        self.decay = decay
+        self.shadow = {}
+        for name, param in model.named_parameters():
+            if param.requires_grad:
+                self.shadow[name] = param.data.clone()
+
+    def update(self, model):
+        for name, param in model.named_parameters():
+            if param.requires_grad and name in self.shadow:
+                self.shadow[name].mul_(self.decay).add_(
+                    param.data, alpha=1.0 - self.decay
+                )
+
+    def apply(self, model):
+        self.backup = {}
+        for name, param in model.named_parameters():
+            if param.requires_grad and name in self.shadow:
+                self.backup[name] = param.data.clone()
+                param.data.copy_(self.shadow[name])
+
+    def restore(self, model):
+        for name, param in model.named_parameters():
+            if param.requires_grad and name in self.backup:
+                param.data.copy_(self.backup[name])
+        self.backup = {}
+
+
+def get_device():
+    if torch.cuda.is_available():
+        return torch.device("cuda")
+    return torch.device("cpu")
+
+
+def train_stage1(config, device):
+    """Stage 1: Train MIDI Encoder + Baseline jointly."""
+    cfg = config["stage1"]
+    print("=" * 60)
+    print("Stage 1: Training Encoder + Baseline")
+    print("=" * 60)
+
+    train_ds = ExpressionDataset(
+        data_dir=config["data_dir"],
+        bach10_dir=config.get("bach10_dir"),
+        instruments=config["instruments"],
+        split="train",
+        crop_len=config["crop_len"],
+        seed=config["seed"],
+    )
+    test_ds = ExpressionDataset(
+        data_dir=config["data_dir"],
+        bach10_dir=config.get("bach10_dir"),
+        instruments=config["instruments"],
+        split="test",
+        crop_len=config["crop_len"],
+        seed=config["seed"],
+    )
+    train_loader = DataLoader(
+        train_ds, batch_size=cfg["batch_size"], shuffle=True,
+        collate_fn=collate_fn, num_workers=0, drop_last=True,
+    )
+    test_loader = DataLoader(
+        test_ds, batch_size=cfg["batch_size"], shuffle=False,
+        collate_fn=collate_fn, num_workers=0,
+    )
+
+    print(f"Train: {len(train_ds)} tracks, Test: {len(test_ds)} tracks")
+
+    model = BaselineModel(dropout=cfg["dropout"]).to(device)
+    optimizer = torch.optim.Adam(model.parameters(), lr=float(cfg["lr"]))
+    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
+        optimizer, patience=cfg["lr_patience"], factor=cfg["lr_factor"],
+    )
+
+    os.makedirs(config["output_dir"], exist_ok=True)
+    history = {"train_loss": [], "test_loss": [], "train_f0_loss": [], "train_amp_loss": []}
+    best_test_loss = float("inf")
+    no_improve = 0
+
+    for epoch in range(1, cfg["epochs"] + 1):
+        model.train()
+        epoch_loss, epoch_f0, epoch_amp, n_batches = 0.0, 0.0, 0.0, 0
+        for batch in train_loader:
+            ff = batch["frame_features"].to(device)
+            f0 = batch["f0"].to(device)
+            amp = batch["amp"].to(device)
+            f0_bins = batch["f0_bins"].to(device)
+
+            f0_logits, amp_pred = model(ff)
+            loss, f0_loss, amp_loss = compute_baseline_loss(
+                f0_logits, amp_pred, f0_bins, f0, amp, lam=cfg["lam"],
+            )
+
+            optimizer.zero_grad()
+            loss.backward()
+            nn.utils.clip_grad_norm_(model.parameters(), 5.0)
+            optimizer.step()
+
+            epoch_loss += loss.item()
+            epoch_f0 += f0_loss.item()
+            epoch_amp += amp_loss.item()
+            n_batches += 1
+
+        avg_loss = epoch_loss / max(n_batches, 1)
+        avg_f0 = epoch_f0 / max(n_batches, 1)
+        avg_amp = epoch_amp / max(n_batches, 1)
+
+        # Test
+        model.eval()
+        test_loss_sum, test_n = 0.0, 0
+        with torch.no_grad():
+            for batch in test_loader:
+                ff = batch["frame_features"].to(device)
+                f0 = batch["f0"].to(device)
+                amp = batch["amp"].to(device)
+                f0_bins = batch["f0_bins"].to(device)
+                f0_logits, amp_pred = model(ff)
+                loss, _, _ = compute_baseline_loss(
+                    f0_logits, amp_pred, f0_bins, f0, amp, lam=cfg["lam"],
+                )
+                test_loss_sum += loss.item()
+                test_n += 1
+
+        test_loss = test_loss_sum / max(test_n, 1)
+        scheduler.step(test_loss)
+
+        history["train_loss"].append(avg_loss)
+        history["test_loss"].append(test_loss)
+        history["train_f0_loss"].append(avg_f0)
+        history["train_amp_loss"].append(avg_amp)
+
+        lr = optimizer.param_groups[0]["lr"]
+        print(f"Epoch {epoch}/{cfg['epochs']}  "
+              f"train={avg_loss:.4f} (f0={avg_f0:.4f} amp={avg_amp:.4f})  "
+              f"test={test_loss:.4f}  lr={lr:.2e}")
+
+        if test_loss < best_test_loss:
+            best_test_loss = test_loss
+            no_improve = 0
+            torch.save(model.state_dict(),
+                       os.path.join(config["output_dir"], "baseline_best.pt"))
+        else:
+            no_improve += 1
+
+        if epoch % config["save_every"] == 0:
+            torch.save(model.state_dict(),
+                       os.path.join(config["output_dir"], f"baseline_ep{epoch}.pt"))
+
+        if no_improve >= cfg["patience"]:
+            print(f"Early stopping at epoch {epoch}")
+            break
+
+    with open(os.path.join(config["output_dir"], "stage1_history.json"), "w") as f:
+        json.dump(history, f, indent=2)
+
+    # Load best checkpoint
+    model.load_state_dict(
+        torch.load(os.path.join(config["output_dir"], "baseline_best.pt"),
+                    map_location=device, weights_only=True)
+    )
+    return model
+
+
+def compute_amp_stats(dataset, device):
+    """Compute global amp log-space mean and std for normalization."""
+    all_amp_log = []
+    eps = 1e-7
+    # Iterate over actual tracks, not virtual samples_per_epoch length
+    for i in range(len(dataset.tracks)):
+        item = dataset._load(i)
+        amp = torch.from_numpy(item["amp"])
+        amp_log = torch.log(amp + eps)
+        all_amp_log.append(amp_log)
+    all_amp_log = torch.cat(all_amp_log)
+    return all_amp_log.mean().to(device), all_amp_log.std().to(device)
+
+
+def train_stage2(config, encoder, device):
+    """Stage 2: Train f0-only diffusion + AmpPredictor with frozen encoder."""
+    cfg = config["stage2"]
+    eps = 1e-7
+    print("\n" + "=" * 60)
+    print("Stage 2: Training 1ch Diffusion (f0) + AmpPredictor")
+    print("=" * 60)
+
+    samples_per_epoch = cfg.get("samples_per_epoch", None)
+    train_ds = ExpressionDataset(
+        data_dir=config["data_dir"],
+        bach10_dir=config.get("bach10_dir"),
+        instruments=config["instruments"],
+        split="train",
+        crop_len=config["crop_len"],
+        seed=config["seed"],
+        samples_per_epoch=samples_per_epoch,
+    )
+    test_ds = ExpressionDataset(
+        data_dir=config["data_dir"],
+        bach10_dir=config.get("bach10_dir"),
+        instruments=config["instruments"],
+        split="test",
+        crop_len=config["crop_len"],
+        seed=config["seed"],
+    )
+
+    print(f"Train: {len(train_ds.tracks)} tracks, samples_per_epoch={len(train_ds)}")
+
+    # Compute amp normalization stats from training set (for compatibility)
+    amp_mean, amp_std = compute_amp_stats(train_ds, device)
+    print(f"Amp log stats: mean={amp_mean:.4f}, std={amp_std:.4f}")
+    torch.save({"amp_mean": amp_mean, "amp_std": amp_std},
+               os.path.join(config["output_dir"], "norm_stats.pt"))
+
+    train_loader = DataLoader(
+        train_ds, batch_size=cfg["batch_size"], shuffle=True,
+        collate_fn=collate_fn, num_workers=0, drop_last=True,
+    )
+    test_loader = DataLoader(
+        test_ds, batch_size=cfg["batch_size"], shuffle=False,
+        collate_fn=collate_fn, num_workers=0,
+    )
+
+    # Freeze encoder
+    encoder = encoder.to(device)
+    encoder.eval()
+    for param in encoder.parameters():
+        param.requires_grad = False
+
+    # n_channels from config (default 2 for backward compat)
+    n_channels = cfg.get("n_channels", 2)
+    print(f"Diffusion n_channels={n_channels}")
+
+    diffusion = ConditionalDDPM(
+        n_steps=cfg["n_diffusion_steps"], n_channels=n_channels,
+    ).to(device)
+
+    # AmpPredictor (only when n_channels=1, i.e., f0-only diffusion)
+    amp_predictor = None
+    if n_channels == 1:
+        amp_dropout = cfg.get("amp_dropout", 0.2)
+        amp_predictor = AmpPredictor(cond_dim=256, dropout=amp_dropout).to(device)
+        print(f"AmpPredictor enabled (dropout={amp_dropout}, joint optimizer, lr={float(cfg['lr'])})")
+
+    # Optimizer: combine diffusion + amp_predictor params
+    all_params = list(diffusion.parameters())
+    if amp_predictor is not None:
+        all_params += list(amp_predictor.parameters())
+    stage2_lr = float(cfg["lr"])
+    optimizer = torch.optim.Adam(all_params, lr=stage2_lr, betas=(0.9, 0.999))
+
+    # Cosine LR scheduling (if lr_min specified)
+    lr_min = cfg.get("lr_min", None)
+    if lr_min is not None:
+        lr_min = float(lr_min)
+        scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(
+            optimizer, T_max=cfg["epochs"], eta_min=lr_min,
+        )
+        print(f"Using CosineAnnealingLR: lr {cfg['lr']} -> {lr_min} over {cfg['epochs']} epochs")
+    else:
+        scheduler = None
+
+    ema = EMA(diffusion, decay=cfg["ema_decay"])
+
+    os.makedirs(config["output_dir"], exist_ok=True)
+    history = {
+        "train_loss": [], "test_loss": [],
+        "train_diff_loss": [], "train_amp_loss": [],
+        "test_diff_loss": [], "test_amp_loss": [],
+    }
+    best_test_loss = float("inf")
+    best_test_amp_loss = float("inf")  # independent amp early stopping
+
+    for epoch in range(1, cfg["epochs"] + 1):
+        diffusion.train()
+        if amp_predictor is not None:
+            amp_predictor.train()
+        epoch_loss, epoch_diff_loss, epoch_amp_loss, n_batches = 0.0, 0.0, 0.0, 0
+
+        for batch in train_loader:
+            ff = batch["frame_features"].to(device)
+            f0 = batch["f0"].to(device)
+            amp = batch["amp"].to(device)
+
+            with torch.no_grad():
+                condition = encoder(ff)  # (B, T, 256)
+                condition_perm = condition.permute(0, 2, 1)  # (B, 256, T)
+
+            # Normalize f0: cent offset / 200
+            note_pitch = ff[:, :, 1] * 127.0  # denormalize pitch
+            voiced = ff[:, :, 0] > 0.5
+            safe_f0 = torch.clamp(f0, min=1.0)
+            f0_midi = 69.0 + 12.0 * torch.log2(safe_f0 / 440.0)
+            cent_offset = (f0_midi - note_pitch) * 100.0
+            f0_norm = cent_offset / 200.0
+            f0_norm[~voiced] = 0.0
+            f0_norm[f0 <= 0] = 0.0
+
+            if n_channels == 1:
+                # f0-only diffusion
+                x_0 = f0_norm.unsqueeze(1)  # (B, 1, T)
+                diff_loss = diffusion.training_loss(x_0, condition_perm)
+
+                # AmpPredictor loss (pred is already in log-space)
+                log_amp_pred = amp_predictor(condition)  # (B, T) — log-space output
+                amp_loss = nn.functional.mse_loss(
+                    log_amp_pred, torch.log(amp + eps),
+                )
+                loss = diff_loss + amp_loss
+            else:
+                # Legacy 2-channel mode
+                amp_log = torch.log(amp + eps)
+                amp_norm = (amp_log - amp_mean) / amp_std
+                x_0 = torch.stack([f0_norm, amp_norm], dim=1)
+                diff_loss = diffusion.training_loss(x_0, condition_perm)
+                amp_loss = torch.tensor(0.0)
+                loss = diff_loss
+
+            optimizer.zero_grad()
+            loss.backward()
+            nn.utils.clip_grad_norm_(
+                list(diffusion.parameters()) + (
+                    list(amp_predictor.parameters()) if amp_predictor else []
+                ),
+                1.0,
+            )
+            optimizer.step()
+            ema.update(diffusion)
+
+            epoch_loss += loss.item()
+            epoch_diff_loss += diff_loss.item()
+            epoch_amp_loss += amp_loss.item()
+            n_batches += 1
+
+        avg_loss = epoch_loss / max(n_batches, 1)
+        avg_diff = epoch_diff_loss / max(n_batches, 1)
+        avg_amp = epoch_amp_loss / max(n_batches, 1)
+
+        # Test loss
+        diffusion.eval()
+        if amp_predictor is not None:
+            amp_predictor.eval()
+        test_loss_sum, test_diff_sum, test_amp_sum, test_n = 0.0, 0.0, 0.0, 0
+        with torch.no_grad():
+            for batch in test_loader:
+                ff = batch["frame_features"].to(device)
+                f0 = batch["f0"].to(device)
+                amp = batch["amp"].to(device)
+
+                condition = encoder(ff)  # (B, T, 256)
+                condition_perm = condition.permute(0, 2, 1)
+
+                note_pitch = ff[:, :, 1] * 127.0
+                voiced = ff[:, :, 0] > 0.5
+                safe_f0 = torch.clamp(f0, min=1.0)
+                f0_midi = 69.0 + 12.0 * torch.log2(safe_f0 / 440.0)
+                cent_offset = (f0_midi - note_pitch) * 100.0
+                f0_norm = cent_offset / 200.0
+                f0_norm[~voiced] = 0.0
+                f0_norm[f0 <= 0] = 0.0
+
+                if n_channels == 1:
+                    x_0 = f0_norm.unsqueeze(1)
+                    diff_loss = diffusion.training_loss(x_0, condition_perm)
+                    log_amp_pred = amp_predictor(condition)
+                    amp_loss = nn.functional.mse_loss(
+                        log_amp_pred, torch.log(amp + eps),
+                    )
+                    loss = diff_loss + amp_loss
+                else:
+                    amp_log = torch.log(amp + eps)
+                    amp_norm = (amp_log - amp_mean) / amp_std
+                    x_0 = torch.stack([f0_norm, amp_norm], dim=1)
+                    diff_loss = diffusion.training_loss(x_0, condition_perm)
+                    amp_loss = torch.tensor(0.0)
+                    loss = diff_loss
+
+                test_loss_sum += loss.item()
+                test_diff_sum += diff_loss.item()
+                test_amp_sum += amp_loss.item()
+                test_n += 1
+
+        test_loss = test_loss_sum / max(test_n, 1)
+        test_diff = test_diff_sum / max(test_n, 1)
+        test_amp = test_amp_sum / max(test_n, 1)
+
+        history["train_loss"].append(avg_loss)
+        history["test_loss"].append(test_loss)
+        history["train_diff_loss"].append(avg_diff)
+        history["train_amp_loss"].append(avg_amp)
+        history["test_diff_loss"].append(test_diff)
+        history["test_amp_loss"].append(test_amp)
+
+        lr = optimizer.param_groups[0]["lr"]
+        print(f"Epoch {epoch}/{cfg['epochs']}  "
+              f"train={avg_loss:.6f} (diff={avg_diff:.6f} amp={avg_amp:.6f})  "
+              f"test={test_loss:.6f} (diff={test_diff:.6f} amp={test_amp:.6f})  "
+              f"lr={lr:.2e}")
+
+        # Step LR scheduler
+        if scheduler is not None:
+            scheduler.step()
+
+        if test_loss < best_test_loss:
+            best_test_loss = test_loss
+            # Save raw (non-EMA) diffusion
+            torch.save(diffusion.state_dict(),
+                       os.path.join(config["output_dir"], "diffusion_best_raw.pt"))
+            # Save EMA diffusion
+            ema.apply(diffusion)
+            torch.save(diffusion.state_dict(),
+                       os.path.join(config["output_dir"], "diffusion_best_ema.pt"))
+            ema.restore(diffusion)
+            print(f"  -> New best test_loss={test_loss:.6f}, saved diffusion checkpoints")
+
+        # Independent amp early stopping: save amp_predictor by best test_amp_loss
+        if amp_predictor is not None and test_amp < best_test_amp_loss:
+            best_test_amp_loss = test_amp
+            torch.save(amp_predictor.state_dict(),
+                       os.path.join(config["output_dir"], "amp_predictor_best.pt"))
+            print(f"  -> New best test_amp_loss={test_amp:.6f}, saved amp_predictor")
+
+        if epoch % config["save_every"] == 0:
+            torch.save(diffusion.state_dict(),
+                       os.path.join(config["output_dir"], f"diffusion_raw_ep{epoch}.pt"))
+            ema.apply(diffusion)
+            torch.save(diffusion.state_dict(),
+                       os.path.join(config["output_dir"], f"diffusion_ema_ep{epoch}.pt"))
+            ema.restore(diffusion)
+            if amp_predictor is not None:
+                torch.save(amp_predictor.state_dict(),
+                           os.path.join(config["output_dir"], f"amp_predictor_ep{epoch}.pt"))
+
+    with open(os.path.join(config["output_dir"], "stage2_history.json"), "w") as f:
+        json.dump(history, f, indent=2)
+
+    # Load best EMA checkpoint
+    diffusion.load_state_dict(
+        torch.load(os.path.join(config["output_dir"], "diffusion_best_ema.pt"),
+                    map_location=device, weights_only=True)
+    )
+    return diffusion
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Train MIDI-to-expression model")
+    parser.add_argument("--config", type=str, default=None, help="Path to config YAML")
+    parser.add_argument("--stage", type=int, default=0,
+                        help="0=both, 1=baseline only, 2=diffusion only")
+    args = parser.parse_args()
+
+    config = copy.deepcopy(DEFAULT_CONFIG)
+    if args.config and os.path.isfile(args.config):
+        with open(args.config, "r", encoding="utf-8") as f:
+            user_config = yaml.safe_load(f)
+        if user_config:
+            for key, val in user_config.items():
+                if isinstance(val, dict) and key in config:
+                    config[key].update(val)
+                else:
+                    config[key] = val
+
+    device = get_device()
+    print(f"Device: {device}")
+    print(f"Config: {json.dumps(config, indent=2, default=str)}")
+
+    if args.stage in (0, 1):
+        baseline = train_stage1(config, device)
+        encoder = baseline.get_encoder()
+    else:
+        baseline = BaselineModel().to(device)
+        ckpt_path = os.path.join(config["output_dir"], "baseline_best.pt")
+        if os.path.isfile(ckpt_path):
+            baseline.load_state_dict(
+                torch.load(ckpt_path, map_location=device, weights_only=True)
+            )
+            print(f"Loaded baseline from {ckpt_path}")
+        else:
+            print(f"WARNING: No baseline checkpoint at {ckpt_path}, using random init")
+        encoder = baseline.get_encoder()
+
+    if args.stage in (0, 2):
+        train_stage2(config, encoder, device)
+
+    print("\nTraining complete.")
+
+
+if __name__ == "__main__":
+    main()

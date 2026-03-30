@@ -1,0 +1,27 @@
+Everything is in order. Here's a summary of what was prepared:
+
+---
+
+## Summary: exp053 — TCN AmpPredictor
+
+### Bug Fixes Applied (3 critical)
+1. **[C1] encoder.py**: Reverted `input_dim` from 12 → 7 (was changed for exp052's 12-dim global stats)
+2. **[C2] dataset.py**: Reverted `notes_to_frame_features()` to return 7-dim features (removed global statistics features 7-11)
+3. **[C3] diffusion.py**: Added `**kwargs` to `TCNAmpPredictor.forward()` to absorb `instrument_id`, `note_position`, `velocity` kwargs that train.py and evaluate.py pass
+
+### Experiment Config
+- **File**: `experiments/configs/exp053.yaml`
+- **Architecture**: WaveNet-style dilated CNN (`TCNAmpPredictor`) — 256 channels, 8 layers (dilations 1→128), kernel=3, ~1.65M params
+- **Frozen components**: exp033 encoder + exp034 diffusion (only training TCN AmpPredictor)
+- **Loss/optimizer**: Same as exp045 (amp_corr_weight=0.3, amp_grad_weight=0.2, lr=5e-5)
+- **Data**: URMP + Bach10 (173 tracks), same as exp045 for fair comparison
+
+### Training Script
+- **File**: `experiments/next_train_cmd.sh`
+- Runs stage 2 training (~30 min expected) then evaluation
+- No GPU memory overrides (respects existing `set_per_process_memory_fraction(0.85)`)
+
+### Verification
+- exp033 checkpoint loads correctly with 7-dim encoder ✓
+- TCNAmpPredictor instantiates with 1,645,057 params ✓
+- Forward pass with `**kwargs` (instrument_id, note_position, velocity) works ✓

@@ -1,0 +1,21 @@
+The training round 18 was **not a new experiment** — it was the experiment loop's completion signal. The `next_train_cmd.sh` script contains a "no more experiments" message and exits, confirming all 13 experiments (exp001–exp013) have been completed and logged.
+
+**No new results to log.** Here's the final summary:
+
+## Experiment Loop Complete ✅
+
+All 13 experiments are already recorded in `experiments/log.md`:
+
+| Final Models | Checkpoint | Key Metrics |
+|---|---|---|
+| **Baseline best (exp012)** | `exp012/baseline_best.pt` | f0 RPA=97.14%, Amp Corr=**0.660**, MAE=16.48 cents |
+| **Diffusion best (exp007, η=0.3)** | `exp007/diffusion_best_ema.pt` | f0 RPA=94.20% (mean), 96.63% (oracle), VDE=**4.80**, Amp Corr=0.571 |
+
+**Key findings across all experiments:**
+1. **Baseline** achieves excellent f0 (97.14% RPA) with Softplus amp head giving marginal improvement (0.645→0.660)
+2. **Diffusion** excels at vibrato modeling (VDE 4.8 vs baseline 8.3, a 42% reduction) but trades off ~3% f0 RPA
+3. **Amp prediction** remains the main bottleneck for both models — channel-weighted diffusion loss (exp013) was counterproductive
+4. **Eta sensitivity** is minimal — quality nearly identical across η∈[0, 1]
+5. **11 publication-quality figures** generated in `experiments/figures/`
+
+**Next step**: Human review → Paper writing (AIMC 2026). The supervisor declared the loop finished in round 17.

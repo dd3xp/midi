@@ -1,0 +1,37 @@
+The review is complete. Let me print the status summary:
+
+---
+
+## Supervisor Review Complete — exp014 + exp015 Plan Verification
+
+### Experiment Reviewed: exp014 (Expanded Dataset Baseline)
+- **Status**: ✅ Completed successfully
+- **Key metrics** (from JSON):
+  - f0 RPA: **96.59%** (vs exp012's 97.14%, slight drop expected with 3x harder test set)
+  - Amp Corr: **0.633** (vs exp012's 0.660)
+  - f0 MAE: **20.95 cents** (higher due to more diverse instruments)
+  - Training: early stop@ep47, 124 train / 49 test tracks, 10 instruments + Bach10
+
+### Issues Found
+
+**CRITICAL (fixed in plan):**
+1. **[C1] Missing `samples_per_epoch` in exp015 config** — Without it, training would run only 1,400 steps instead of ~23,000. Fixed: added `samples_per_epoch: 1860`.
+2. **[C2] `ConditionalDDPM` needs `n_channels` parameter** — `ddim_sample()` hardcodes `torch.randn(B, 2, T)`. Added `n_channels` design to plan.
+3. **[C3-C4] Detailed AmpPredictor training/eval logic** — Added explicit code snippets for worker.
+
+**WARNING:**
+- 6 metric values in the previous review table don't match the JSON ground truth (likely used deduplicated means without labeling)
+- 9 of 49 test tracks are exact duplicates (not leakage, but biases metrics)
+- Bach10 underperforms URMP significantly (RPA 92% vs 97%)
+
+### Next Experiment Planned: exp015
+- **Two-stage architecture**: Diffusion (1ch, f0 only) + independent AmpPredictor network
+- **Core change**: Architectural separation of f0 and amp prediction paths
+- **Expected outcome**: Amp Corr ≥0.60 (from 0.571), f0 RPA ≥93%
+- **Priority**: HIGH (pre-approved architecture change)
+
+### No Escalation Needed
+- No plateau (this is the first experiment on the expanded dataset)
+- No repeated failures
+- Architecture change is pre-approved per system instructions
+- No NEEDS_HUMAN.txt created

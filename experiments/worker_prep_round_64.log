@@ -1,0 +1,30 @@
+All good. Let me provide the summary.
+
+---
+
+## Summary of exp051 preparation
+
+**Experiment**: exp051 — Encoder Adapter + 185-track AmpPredictor Training
+
+**Core hypothesis**: The encoder's 256-dim condition (trained with f0 CE loss dominance) lacks amp-specific features. A lightweight trainable adapter (bottleneck MLP with residual + zero-init) between encoder and AmpPredictor can learn amp-specific nonlinear feature transformations.
+
+**Architecture changes made**:
+1. **`src/model/diffusion.py`**: Added `EncoderAdapter` class (256→64→256, GELU+Dropout, residual connection, zero-init last layer so it starts as identity)
+2. **`src/model/train.py`**: 
+   - Import `EncoderAdapter`
+   - Create adapter when `amp_encoder_adapter=True` in config
+   - Include adapter params in amp optimizer
+   - Set adapter to train/eval modes alongside amp_predictor
+   - Apply `condition_amp = adapter(condition)` before all amp_predictor calls (diffusion still uses original `condition_perm`)
+   - Save `encoder_adapter_best.pt` alongside `amp_predictor_best.pt`
+   - Gradient clipping for adapter params
+3. **`src/model/evaluate.py`**:
+   - Import `EncoderAdapter`
+   - Auto-detect and load `encoder_adapter_best.pt` if present
+   - Apply adapter to condition before all amp_predictor calls in `evaluate_diffusion()`
+
+**Config**: `experiments/configs/exp051.yaml` — 300 epochs, frozen encoder/diffusion, adapter bottleneck=64, 1 layer, dropout=0.1
+
+**Training script**: `experiments/next_train_cmd.sh` — runs stage 2 training then full evaluation
+
+**Comparison**: exp045 (Amp Corr=0.781, same setup without adapter)

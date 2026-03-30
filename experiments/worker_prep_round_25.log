@@ -1,0 +1,33 @@
+All set. Here's a summary of what was prepared:
+
+---
+
+## exp017 Preparation Summary
+
+### Goal
+Increase AmpPredictor capacity from ~230K to ~659K params (2.87x) to close the Amp RMSE(log) gap with baseline (0.818 → target ≤0.75).
+
+### Code Changes Made
+| File | Change |
+|------|--------|
+| `src/model/diffusion.py` | AmpPredictor: `hidden=128→256`, `gru_hidden=64→128`, added `n_gru_layers=2`, `dropout=0.2→0.3`, GRU inter-layer dropout |
+| `src/model/train.py` | Reads `amp_hidden`, `amp_gru_hidden`, `amp_gru_layers` from stage2 config and passes to AmpPredictor constructor |
+| `src/model/evaluate.py` | Same — reads new params from config for AmpPredictor construction at eval time |
+
+### Files Created
+- `experiments/configs/exp017.yaml` — config with new AmpPredictor params
+- `experiments/next_train_cmd.sh` — training + evaluation script (stage 2)
+- `experiments/checkpoints/exp017/baseline_best.pt` — copied from exp014
+
+### Backups
+- `src/model/diffusion.py.bak.exp017`
+- `src/model/train.py.bak.exp017`
+- `src/model/evaluate.py.bak.exp017`
+
+### Key Numbers
+- **AmpPredictor params**: 658,945 (~659K, up from ~230K)
+- **Training**: 200 epochs, lr=2e-4→1e-5 cosine, batch=16
+- **Diffusion**: unchanged (1ch f0 only, same UNet)
+- **Encoder**: frozen from exp014
+
+The shell script should now run `experiments/next_train_cmd.sh` to start training.

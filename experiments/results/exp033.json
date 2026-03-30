@@ -1,0 +1,538 @@
+{
+  "baseline_per_track": [
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_vn\\17_Nocturne_vn_fl_cl_track1_vn\\data.npz",
+      "rpa": 0.9846909630983662,
+      "f0_mae": 15.273358345031738,
+      "amp_corr": 0.6534057064773118,
+      "amp_rmse_log": 0.5239984393119812,
+      "vde_mean": 11.467093457196453,
+      "vre_mean": 0.9862674694529431,
+      "n_vibrato_notes": 121
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_vn\\18_Nocturne_vn_fl_tpt_track1_vn\\data.npz",
+      "rpa": 0.9846909630983662,
+      "f0_mae": 15.272879600524902,
+      "amp_corr": 0.6460004272299154,
+      "amp_rmse_log": 0.5271421670913696,
+      "vde_mean": 11.422724599703349,
+      "vre_mean": 0.9900126606735024,
+      "n_vibrato_notes": 120
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_vn\\26_King_vn_vn_va_vc_track1_vn\\data.npz",
+      "rpa": 0.9790612458558716,
+      "f0_mae": 16.558822631835938,
+      "amp_corr": 0.6578845164005335,
+      "amp_rmse_log": 0.7030715346336365,
+      "vde_mean": 7.392159102886515,
+      "vre_mean": 0.3258112313937731,
+      "n_vibrato_notes": 37
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_vn\\26_King_vn_vn_va_vc_track2_vn\\data.npz",
+      "rpa": 0.9665222528554549,
+      "f0_mae": 19.29456329345703,
+      "amp_corr": 0.8255119053103809,
+      "amp_rmse_log": 0.6500867605209351,
+      "vde_mean": 5.659664440673039,
+      "vre_mean": 0.3775390821665637,
+      "n_vibrato_notes": 25
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_vn\\27_King_vn_vn_va_sax_track1_vn\\data.npz",
+      "rpa": 0.9790612458558716,
+      "f0_mae": 16.558822631835938,
+      "amp_corr": 0.6578845164005335,
+      "amp_rmse_log": 0.7030715346336365,
+      "vde_mean": 7.392159102886515,
+      "vre_mean": 0.3258112313937731,
+      "n_vibrato_notes": 37
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_vn\\27_King_vn_vn_va_sax_track2_vn\\data.npz",
+      "rpa": 0.9665222528554549,
+      "f0_mae": 19.29456329345703,
+      "amp_corr": 0.8255119053103809,
+      "amp_rmse_log": 0.6500867605209351,
+      "vde_mean": 5.659664440673039,
+      "vre_mean": 0.3775390821665637,
+      "n_vibrato_notes": 25
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_vn\\32_Fugue_vn_vn_va_vc_track1_vn\\data.npz",
+      "rpa": 0.9796640807411313,
+      "f0_mae": 13.344565391540527,
+      "amp_corr": 0.6716960917519706,
+      "amp_rmse_log": 0.6381634473800659,
+      "vde_mean": 10.668510211440383,
+      "vre_mean": 0.871343137649695,
+      "n_vibrato_notes": 132
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_vn\\32_Fugue_vn_vn_va_vc_track2_vn\\data.npz",
+      "rpa": 0.9862545402749092,
+      "f0_mae": 14.059027671813965,
+      "amp_corr": 0.7100192890749554,
+      "amp_rmse_log": 0.5372909307479858,
+      "vde_mean": 8.407444536680945,
+      "vre_mean": 0.9238321271815365,
+      "n_vibrato_notes": 144
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_va\\26_King_vn_vn_va_vc_track3_va\\data.npz",
+      "rpa": 0.947824449048785,
+      "f0_mae": 21.98936653137207,
+      "amp_corr": 0.7971986243491077,
+      "amp_rmse_log": 0.5932939052581787,
+      "vde_mean": 12.220851121638765,
+      "vre_mean": 0.6543081317435087,
+      "n_vibrato_notes": 31
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_va\\27_King_vn_vn_va_sax_track3_va\\data.npz",
+      "rpa": 0.947824449048785,
+      "f0_mae": 21.98936653137207,
+      "amp_corr": 0.7971986243491077,
+      "amp_rmse_log": 0.5932939052581787,
+      "vde_mean": 12.220851121638765,
+      "vre_mean": 0.6543081317435087,
+      "n_vibrato_notes": 31
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_va\\32_Fugue_vn_vn_va_vc_track3_va\\data.npz",
+      "rpa": 0.9821251241310824,
+      "f0_mae": 17.011714935302734,
+      "amp_corr": 0.7341473677873915,
+      "amp_rmse_log": 1.222415566444397,
+      "vde_mean": 5.232804161858788,
+      "vre_mean": 0.8761196719105974,
+      "n_vibrato_notes": 114
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_vc\\26_King_vn_vn_va_vc_track4_vc\\data.npz",
+      "rpa": 0.9867504671309666,
+      "f0_mae": 13.106610298156738,
+      "amp_corr": 0.7555087835610992,
+      "amp_rmse_log": 0.6743698120117188,
+      "vde_mean": 5.536786724102732,
+      "vre_mean": 0.7866024274810927,
+      "n_vibrato_notes": 118
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_vc\\32_Fugue_vn_vn_va_vc_track4_vc\\data.npz",
+      "rpa": 0.9765794299049841,
+      "f0_mae": 14.552675247192383,
+      "amp_corr": 0.7214805200678305,
+      "amp_rmse_log": 0.683381974697113,
+      "vde_mean": 9.30951126358473,
+      "vre_mean": 1.0411297422673034,
+      "n_vibrato_notes": 99
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_fl\\17_Nocturne_vn_fl_cl_track2_fl\\data.npz",
+      "rpa": 0.9875015623047119,
+      "f0_mae": 11.819353103637695,
+      "amp_corr": 0.7983769839651637,
+      "amp_rmse_log": 0.4458940029144287,
+      "vde_mean": 6.104533583310477,
+      "vre_mean": 0.9170407619531643,
+      "n_vibrato_notes": 98
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_fl\\18_Nocturne_vn_fl_tpt_track2_fl\\data.npz",
+      "rpa": 0.9875015623047119,
+      "f0_mae": 11.819353103637695,
+      "amp_corr": 0.7983769839651637,
+      "amp_rmse_log": 0.4458940029144287,
+      "vde_mean": 6.104533583310477,
+      "vre_mean": 0.9170407619531643,
+      "n_vibrato_notes": 98
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_fl\\28_Fugue_fl_ob_cl_bn_track1_fl\\data.npz",
+      "rpa": 0.9847706422018349,
+      "f0_mae": 16.415143966674805,
+      "amp_corr": 0.7984609250873164,
+      "amp_rmse_log": 0.6800891160964966,
+      "vde_mean": 11.403356823890654,
+      "vre_mean": 0.6653553172616142,
+      "n_vibrato_notes": 114
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_fl\\29_Fugue_fl_fl_ob_cl_track1_fl\\data.npz",
+      "rpa": 0.9888494178014604,
+      "f0_mae": 19.22623634338379,
+      "amp_corr": 0.7963117535793086,
+      "amp_rmse_log": 0.634885311126709,
+      "vde_mean": 9.329300476157703,
+      "vre_mean": 0.6636487955007053,
+      "n_vibrato_notes": 111
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_fl\\29_Fugue_fl_fl_ob_cl_track2_fl\\data.npz",
+      "rpa": 0.9834053193907706,
+      "f0_mae": 12.105213165283203,
+      "amp_corr": 0.8462326653831755,
+      "amp_rmse_log": 0.4723222553730011,
+      "vde_mean": 7.024459305962293,
+      "vre_mean": 0.6411459842559701,
+      "n_vibrato_notes": 141
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_fl\\30_Fugue_fl_fl_ob_sax_track1_fl\\data.npz",
+      "rpa": 0.9888494178014604,
+      "f0_mae": 19.22623634338379,
+      "amp_corr": 0.7963117535793086,
+      "amp_rmse_log": 0.634885311126709,
+      "vde_mean": 9.329300476157703,
+      "vre_mean": 0.6636487955007053,
+      "n_vibrato_notes": 111
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_fl\\30_Fugue_fl_fl_ob_sax_track2_fl\\data.npz",
+      "rpa": 0.9834053193907706,
+      "f0_mae": 12.105213165283203,
+      "amp_corr": 0.8462326653831755,
+      "amp_rmse_log": 0.4723222553730011,
+      "vde_mean": 7.024459305962293,
+      "vre_mean": 0.6411459842559701,
+      "n_vibrato_notes": 141
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_ob\\28_Fugue_fl_ob_cl_bn_track2_ob\\data.npz",
+      "rpa": 0.9831272727272727,
+      "f0_mae": 25.241710662841797,
+      "amp_corr": 0.7389850046758262,
+      "amp_rmse_log": 0.5704932808876038,
+      "vde_mean": 2.8843321214913087,
+      "vre_mean": 1.0556088743766148,
+      "n_vibrato_notes": 141
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_ob\\29_Fugue_fl_fl_ob_cl_track3_ob\\data.npz",
+      "rpa": 0.9888898458358453,
+      "f0_mae": 15.228541374206543,
+      "amp_corr": 0.7878401971520435,
+      "amp_rmse_log": 0.4889446794986725,
+      "vde_mean": 2.935963909053118,
+      "vre_mean": 1.08541032568778,
+      "n_vibrato_notes": 117
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_ob\\30_Fugue_fl_fl_ob_sax_track3_ob\\data.npz",
+      "rpa": 0.9888898458358453,
+      "f0_mae": 15.228540420532227,
+      "amp_corr": 0.7878402060120151,
+      "amp_rmse_log": 0.4889446794986725,
+      "vde_mean": 2.93596296827527,
+      "vre_mean": 1.08541032568778,
+      "n_vibrato_notes": 117
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_cl\\17_Nocturne_vn_fl_cl_track3_cl\\data.npz",
+      "rpa": 0.9893020221787345,
+      "f0_mae": 7.803427696228027,
+      "amp_corr": 0.7901753365081768,
+      "amp_rmse_log": 0.5583959817886353,
+      "vde_mean": 3.3406118856427387,
+      "vre_mean": 0.5383434610136987,
+      "n_vibrato_notes": 83
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_cl\\28_Fugue_fl_ob_cl_bn_track3_cl\\data.npz",
+      "rpa": 0.9713077891707141,
+      "f0_mae": 10.607351303100586,
+      "amp_corr": 0.8031211081821774,
+      "amp_rmse_log": 0.5684503316879272,
+      "vde_mean": 4.832147050273296,
+      "vre_mean": 0.7872567454556659,
+      "n_vibrato_notes": 117
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_cl\\29_Fugue_fl_fl_ob_cl_track4_cl\\data.npz",
+      "rpa": 0.9806972293868043,
+      "f0_mae": 12.925064086914062,
+      "amp_corr": 0.8247252914994243,
+      "amp_rmse_log": 0.6621583700180054,
+      "vde_mean": 3.3883450010235303,
+      "vre_mean": 0.8432277941192653,
+      "n_vibrato_notes": 93
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_sax\\16_Surprise_tpt_tpt_sax_track3_sax\\data.npz",
+      "rpa": 0.9267949319568278,
+      "f0_mae": 24.289588928222656,
+      "amp_corr": 0.6436012757314151,
+      "amp_rmse_log": 0.7263539433479309,
+      "vde_mean": 2.9351891758929134,
+      "vre_mean": 0.5281003336002307,
+      "n_vibrato_notes": 37
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_sax\\27_King_vn_vn_va_sax_track4_sax\\data.npz",
+      "rpa": 0.9940291906236178,
+      "f0_mae": 13.539158821105957,
+      "amp_corr": 0.6145042865396505,
+      "amp_rmse_log": 0.8116716742515564,
+      "vde_mean": 1.9638650112025755,
+      "vre_mean": 0.703787783855159,
+      "n_vibrato_notes": 86
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_sax\\30_Fugue_fl_fl_ob_sax_track4_sax\\data.npz",
+      "rpa": 0.977404403244496,
+      "f0_mae": 25.33055877685547,
+      "amp_corr": 0.7126344088214152,
+      "amp_rmse_log": 0.7694028615951538,
+      "vde_mean": 4.366652278453704,
+      "vre_mean": 0.9936855055168574,
+      "n_vibrato_notes": 96
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_tpt\\15_Surprise_tpt_tpt_tbn_track1_tpt\\data.npz",
+      "rpa": 0.9692307692307692,
+      "f0_mae": 20.165119171142578,
+      "amp_corr": 0.948161092164857,
+      "amp_rmse_log": 1.0000860691070557,
+      "vde_mean": 7.465953772729235,
+      "vre_mean": 0.5524620703823195,
+      "n_vibrato_notes": 27
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_tpt\\15_Surprise_tpt_tpt_tbn_track2_tpt\\data.npz",
+      "rpa": 0.961441743503772,
+      "f0_mae": 19.841571807861328,
+      "amp_corr": 0.8732602244714268,
+      "amp_rmse_log": 1.0366969108581543,
+      "vde_mean": 10.605102821146179,
+      "vre_mean": 0.4397413276896817,
+      "n_vibrato_notes": 17
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_tpt\\15_Surprise_tpt_tpt_tbn_track3_tpt\\data.npz",
+      "rpa": 0.9896858884200657,
+      "f0_mae": 15.380697250366211,
+      "amp_corr": 0.9316535240772129,
+      "amp_rmse_log": 0.4204862713813782,
+      "vde_mean": 2.3754378535407095,
+      "vre_mean": 0.9157413174619785,
+      "n_vibrato_notes": 24
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_tpt\\16_Surprise_tpt_tpt_sax_track1_tpt\\data.npz",
+      "rpa": 0.9692307692307692,
+      "f0_mae": 20.165119171142578,
+      "amp_corr": 0.948161092164857,
+      "amp_rmse_log": 1.0000860691070557,
+      "vde_mean": 7.465953772729235,
+      "vre_mean": 0.5524620703823195,
+      "n_vibrato_notes": 27
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_tpt\\16_Surprise_tpt_tpt_sax_track2_tpt\\data.npz",
+      "rpa": 0.961441743503772,
+      "f0_mae": 19.841571807861328,
+      "amp_corr": 0.8732602244714268,
+      "amp_rmse_log": 1.0366969108581543,
+      "vde_mean": 10.605102821146179,
+      "vre_mean": 0.4397413276896817,
+      "n_vibrato_notes": 17
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_tpt\\18_Nocturne_vn_fl_tpt_track3_tpt\\data.npz",
+      "rpa": 0.9887455393906122,
+      "f0_mae": 12.014969825744629,
+      "amp_corr": 0.7944762247897759,
+      "amp_rmse_log": 0.5748059749603271,
+      "vde_mean": 4.590785137431657,
+      "vre_mean": 0.6900101454333649,
+      "n_vibrato_notes": 84
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_tpt\\33_Elise_tpt_tpt_hn_tbn_track1_tpt\\data.npz",
+      "rpa": 0.9691482226693494,
+      "f0_mae": 14.988723754882812,
+      "amp_corr": 0.9379786170749137,
+      "amp_rmse_log": 0.38461315631866455,
+      "vde_mean": 2.625207964757526,
+      "vre_mean": 1.1718410781045039,
+      "n_vibrato_notes": 23
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_tpt\\33_Elise_tpt_tpt_hn_tbn_track2_tpt\\data.npz",
+      "rpa": 0.9446910208262206,
+      "f0_mae": 22.423717498779297,
+      "amp_corr": 0.9285354181564577,
+      "amp_rmse_log": 0.4896799921989441,
+      "vde_mean": 3.9632905717829834,
+      "vre_mean": 0.6220948293476202,
+      "n_vibrato_notes": 23
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_tpt\\34_Fugue_tpt_tpt_hn_tbn_track1_tpt\\data.npz",
+      "rpa": 0.9843288480472596,
+      "f0_mae": 17.853492736816406,
+      "amp_corr": 0.8665518094342046,
+      "amp_rmse_log": 0.680435836315155,
+      "vde_mean": 4.068361041742415,
+      "vre_mean": 1.0292615056802885,
+      "n_vibrato_notes": 115
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_tpt\\34_Fugue_tpt_tpt_hn_tbn_track2_tpt\\data.npz",
+      "rpa": 0.976866373902133,
+      "f0_mae": 16.57494354248047,
+      "amp_corr": 0.9105575693711225,
+      "amp_rmse_log": 0.5185267925262451,
+      "vde_mean": 4.483870273332004,
+      "vre_mean": 0.6524853309212207,
+      "n_vibrato_notes": 137
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_tbn\\33_Elise_tpt_tpt_hn_tbn_track4_tbn\\data.npz",
+      "rpa": 0.9448183041722745,
+      "f0_mae": 16.408159255981445,
+      "amp_corr": 0.9254189463982975,
+      "amp_rmse_log": 0.5474516153335571,
+      "vde_mean": 3.593173120150706,
+      "vre_mean": 0.9768680033439391,
+      "n_vibrato_notes": 22
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_tbn\\34_Fugue_tpt_tpt_hn_tbn_track4_tbn\\data.npz",
+      "rpa": 0.9420866489832007,
+      "f0_mae": 20.908843994140625,
+      "amp_corr": 0.8148541839655824,
+      "amp_rmse_log": 0.6131059527397156,
+      "vde_mean": 6.575378206546632,
+      "vre_mean": 1.1288706668201929,
+      "n_vibrato_notes": 94
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\Bach10\\processed_vn\\04-ChristeDuBeistand\\data.npz",
+      "rpa": 0.9364861149298873,
+      "f0_mae": 20.130117416381836,
+      "amp_corr": 0.3967409888891979,
+      "amp_rmse_log": 0.9010131359100342,
+      "vde_mean": 13.835698646358486,
+      "vre_mean": 1.348675001271715,
+      "n_vibrato_notes": 42
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\Bach10\\processed_vn\\09-Jesus\\data.npz",
+      "rpa": 0.9265151515151515,
+      "f0_mae": 24.905311584472656,
+      "amp_corr": 0.46955712267108424,
+      "amp_rmse_log": 0.9051049947738647,
+      "vde_mean": 19.125848313274435,
+      "vre_mean": 0.9916519749034756,
+      "n_vibrato_notes": 34
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\Bach10\\processed_cl\\04-ChristeDuBeistand\\data.npz",
+      "rpa": 0.9078911190541655,
+      "f0_mae": 47.961299896240234,
+      "amp_corr": 0.7898822681575495,
+      "amp_rmse_log": 0.6172791719436646,
+      "vde_mean": 18.890704411978746,
+      "vre_mean": 1.3492582531500115,
+      "n_vibrato_notes": 41
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\Bach10\\processed_cl\\09-Jesus\\data.npz",
+      "rpa": 0.9223484848484849,
+      "f0_mae": 24.34779167175293,
+      "amp_corr": 0.30265586349812085,
+      "amp_rmse_log": 0.9944162368774414,
+      "vde_mean": 16.188450709088663,
+      "vre_mean": 0.899287671166392,
+      "n_vibrato_notes": 28
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\Bach10\\processed_sax\\04-ChristeDuBeistand\\data.npz",
+      "rpa": 0.9392356337640912,
+      "f0_mae": 24.36107635498047,
+      "amp_corr": 0.7142109378526424,
+      "amp_rmse_log": 0.6046921014785767,
+      "vde_mean": 15.827791408583527,
+      "vre_mean": 0.774548917668639,
+      "n_vibrato_notes": 46
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\Bach10\\processed_sax\\09-Jesus\\data.npz",
+      "rpa": 0.9242424242424242,
+      "f0_mae": 28.180753707885742,
+      "amp_corr": 0.6364022844821398,
+      "amp_rmse_log": 0.6719547510147095,
+      "vde_mean": 13.42533849575864,
+      "vre_mean": 1.2017906256518793,
+      "n_vibrato_notes": 28
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\Bach10\\processed_bn\\04-ChristeDuBeistand\\data.npz",
+      "rpa": 0.9279626065438549,
+      "f0_mae": 28.148937225341797,
+      "amp_corr": 0.6335898020371641,
+      "amp_rmse_log": 0.6245156526565552,
+      "vde_mean": 30.45006315018268,
+      "vre_mean": 0.8706649985346383,
+      "n_vibrato_notes": 40
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\Bach10\\processed_bn\\09-Jesus\\data.npz",
+      "rpa": 0.8772727272727273,
+      "f0_mae": 121.92146301269531,
+      "amp_corr": 0.513467189736715,
+      "amp_rmse_log": 0.7848260402679443,
+      "vde_mean": 36.16759348821556,
+      "vre_mean": 0.8560395065419611,
+      "n_vibrato_notes": 31
+    }
+  ],
+  "baseline_summary": {
+    "baseline_rpa": {
+      "mean": 0.9660401504103446,
+      "std": 0.026021843566664458,
+      "min": 0.8772727272727273,
+      "max": 0.9940291906236178
+    },
+    "baseline_f0_mae": {
+      "mean": 20.56613690512521,
+      "std": 15.946238846386821,
+      "min": 7.803427696228027,
+      "max": 121.92146301269531
+    },
+    "baseline_amp_corr": {
+      "mean": 0.756052132816327,
+      "std": 0.1361428722160864,
+      "min": 0.30265586349812085,
+      "max": 0.948161092164857
+    },
+    "baseline_amp_rmse_log": {
+      "mean": 0.6640254782170666,
+      "std": 0.18299789127951646,
+      "min": 0.38461315631866455,
+      "max": 1.222415566444397
+    },
+    "baseline_vde_mean": {
+      "mean": 8.792292718806127,
+      "std": 6.66467282727876,
+      "min": 1.9638650112025755,
+      "max": 36.16759348821556
+    },
+    "baseline_vre_mean": {
+      "mean": 0.8037546591707047,
+      "std": 0.2542381579736779,
+      "min": 0.3258112313937731,
+      "max": 1.3492582531500115
+    },
+    "baseline_n_vibrato_notes": {
+      "mean": 74.18367346938776,
+      "std": 43.8306916368287,
+      "min": 17.0,
+      "max": 144.0
+    }
+  }
+}

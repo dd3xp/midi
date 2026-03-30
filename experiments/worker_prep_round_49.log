@@ -1,0 +1,20 @@
+Here's a summary of what was prepared for **exp038**:
+
+## Summary: exp038 — Longer Context (crop_len=1024)
+
+**Hypothesis**: Current crop_len=512 (~5.1s) truncates musical phrases (typically 8-16s), preventing the model from learning complete crescendo/diminuendo dynamics. Doubling to crop_len=1024 (~10.2s) should capture more phrase-level structure.
+
+**Key changes vs exp035 (current best, Amp Corr=0.800)**:
+| Parameter | exp035 | exp038 | Reason |
+|-----------|--------|--------|--------|
+| crop_len | 512 | **1024** | Core change — 2x context |
+| batch_size | 16 | **8** | Compensate for 2x sequence memory |
+| epochs | 250 | **200** | Total steps still higher (46,400 vs 29,000) |
+
+**Architecture**: Same as exp035 (NOT exp037's 2x model, which was proven ineffective). amp_hidden=256, gru_hidden=128, 2 attention layers, 4 heads.
+
+**Files created**:
+- `experiments/configs/exp038.yaml` — Full config
+- `experiments/next_train_cmd.sh` — Training + evaluation script
+
+**No code bugs to fix** — the supervisor's plan had no code changes, just config changes. The shell script will train Stage 2 (AmpPredictor only, diffusion frozen from exp034) and evaluate with η=0.3.

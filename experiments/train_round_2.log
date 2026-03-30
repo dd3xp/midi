@@ -1,0 +1,24 @@
+=== exp002: Baseline with λ=10.0 (Stage 1) ===
+Start time: Tue Mar 24 14:25:40     2026
+Traceback (most recent call last):
+  File "C:\lxr\study\final\src\model\train.py", line 430, in <module>
+    main()
+  File "C:\lxr\study\final\src\model\train.py", line 396, in main
+    user_config = yaml.safe_load(f)
+                  ^^^^^^^^^^^^^^^^^
+  File "C:\Users\17145\AppData\Local\Programs\Python\Python312\Lib\site-packages\yaml\__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\17145\AppData\Local\Programs\Python\Python312\Lib\site-packages\yaml\__init__.py", line 79, in load
+    loader = Loader(stream)
+             ^^^^^^^^^^^^^^
+  File "C:\Users\17145\AppData\Local\Programs\Python\Python312\Lib\site-packages\yaml\loader.py", line 34, in __init__
+    Reader.__init__(self, stream)
+  File "C:\Users\17145\AppData\Local\Programs\Python\Python312\Lib\site-packages\yaml\reader.py", line 85, in __init__
+    self.determine_encoding()
+  File "C:\Users\17145\AppData\Local\Programs\Python\Python312\Lib\site-packages\yaml\reader.py", line 124, in determine_encoding
+    self.update_raw()
+  File "C:\Users\17145\AppData\Local\Programs\Python\Python312\Lib\site-packages\yaml\reader.py", line 178, in update_raw
+    data = self.stream.read(size)
+           ^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'gbk' codec can't decode byte 0x92 in position 127: illegal multibyte sequence

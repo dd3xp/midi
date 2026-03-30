@@ -1,0 +1,22 @@
+## Summary
+
+**No new experiment was prepared.** The 下一步计划 explicitly states:
+
+> **实验阶段结束 — 无需训练或代码工作**
+
+### Current State
+- **13 experiments completed** (exp001 → exp013), covering baseline tuning, diffusion training, activation functions, loss weighting, diversity analysis, and visualization
+- **Supervisor declared the loop finished** in round 17 after exp013's catastrophic failure (f0 RPA dropped from 94% → 37%) confirmed that channel-wise diffusion loss weighting is fundamentally flawed
+- **All amp improvement directions exhausted**: λ weighting (exp002), Softplus activation (exp012, +2.2%), channel loss (exp013, failed)
+
+### Final Models
+| Model | Checkpoint | Key Metrics |
+|-------|-----------|-------------|
+| **Baseline** | `exp012/baseline_best.pt` | f0 RPA=97.14%, Amp Corr=0.660 |
+| **Diffusion** | `exp007/diffusion_best_ema.pt` | f0 RPA=94.20% (η0.3), VDE=4.80 (-45% vs baseline) |
+
+### What I Wrote
+- `experiments/next_train_cmd.sh` → A no-op script that prints "EXPERIMENT LOOP COMPLETE" and exits with code 42 to signal the loop should stop
+
+### Recommended Next Step
+**Enter AIMC 2026 paper writing phase.** All 11 figures are ready in `experiments/figures/`, and paper data tables are compiled at the end of `experiments/log.md`.

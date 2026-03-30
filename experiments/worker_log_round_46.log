@@ -1,0 +1,24 @@
+The log is properly updated. Here's a summary of exp035 results:
+
+## exp035 Results Summary
+
+### 🎯 Amp Corr = 0.800 — TARGET REACHED!
+
+**Training**: 250/250 epochs completed. Diffusion frozen from exp034, only AmpPredictor trained with:
+- CorrLoss (α=0.3) — directly optimizes Pearson correlation
+- GradLoss (β=0.2) — temporal gradient matching
+- Lower amp_lr = 5e-5 (vs exp034's 1e-4)
+- Best test_amp_loss = 0.469 @ epoch 54
+
+**Amp Results (VALID ✅)**:
+| Metric | exp034 (prev best) | **exp035** | Change |
+|--------|-------------------|-----------|--------|
+| Amp Corr | 0.789 | **0.800** | +1.4% |
+| Amp RMSE(log) | 0.582 | **0.572** | -1.7% |
+
+**f0 Results (INVALID ⚠️)**:
+- f0 RPA = 6.55% (random noise!) — caused by evaluation bug
+- `freeze_diffusion=true` but the training script didn't copy `exp034/diffusion_best_ema.pt` to exp035's checkpoint directory → evaluate.py used random weights for f0 generation
+- AmpPredictor results are unaffected since it doesn't depend on diffusion output
+
+**Action Needed**: Re-evaluate with exp034's diffusion checkpoint copied to exp035 directory to get valid f0 metrics. The supervisor should plan this as the next step.

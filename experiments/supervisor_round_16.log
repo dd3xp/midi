@@ -1,0 +1,35 @@
+Now let me print a terminal summary for the user.
+
+---
+
+## 📊 Supervisor Review Summary
+
+### Experiment Reviewed: exp012 (Baseline Sigmoid→Softplus)
+**Status**: ✅ Complete
+
+| Metric | exp003 (Sigmoid) | exp012 (Softplus) | Change |
+|--------|-----------------|-------------------|--------|
+| f0 RPA | 97.14% | 97.14% | ±0% |
+| Amp Corr | 0.645 | **0.660** | **+2.3%** |
+| Amp RMSE(log) | 0.738 | 0.727 | -1.5% |
+
+**Per-instrument**: VN +7.2%, FL +3.9%, TPT -1.0%. Softplus helps marginally, especially for violin's small amp values. Confirms Sigmoid is NOT the main amp bottleneck.
+
+### Code Status
+- ✅ Softplus change in `baseline.py` verified correct
+- ✅ `diffusion.py` + `train.py` already modified for exp013 (amp_weight parameter)
+- ✅ `exp013.yaml` config ready (amp_weight=3.0)
+- ⚠️ exp013 training was started but **interrupted at ~ep20** — needs restart
+
+### Next Plan: exp013 (FINAL training experiment)
+**Diffusion amp channel loss weighting** (amp_weight=3.0)
+- One code change: split MSE loss by channel, give amp 3× weight
+- Same training config as exp007 otherwise (200ep, CosineAnnealingLR, spe=1770)
+- Code already in place, just needs `python src/model/train.py --config experiments/configs/exp013.yaml --stage 2`
+- Evaluate with `--mode diffusion --eta 0.3`
+
+### Critical Context
+- **This is the FINAL training experiment** before paper writing
+- If Amp Corr doesn't improve >5%, we accept current results and write the paper
+- 3 amp-focused experiments: exp002 (lam=10, 0%), exp012 (Softplus, +2.3%), exp013 (diffusion amp_weight, pending)
+- No `NEEDS_HUMAN.txt` created — not yet at plateau threshold

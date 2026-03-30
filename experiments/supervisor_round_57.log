@@ -1,0 +1,37 @@
+Good. The worker needs to update:
+- **train.py**: Lines 662, 664, 790, 792 (add `velocity=velocity`)
+- **evaluate.py**: Lines 235, 265, 291 (add `velocity=velocity`)
+- **diffusion.py**: AmpPredictor class (add `velocity_conditioned` and `condition_dropout` params)
+
+The plan is comprehensive. Let me print the summary.
+
+---
+
+## 📊 Supervisor Review Summary — Round 57
+
+**Experiment Reviewed**: exp045 — Remove instrument embedding (isolation test)
+
+**Key Results**:
+| Metric | exp045 | Target | Status |
+|--------|--------|--------|--------|
+| Amp Corr | **0.781** | > 0.90 | ❌ Gap: 0.119 |
+| f0 RPA | 93.63% | > 85% | ✅ Exceeds |
+| f0 MAE | 24.76 | < 20 | ❌ Gap: 4.76 |
+| VDE | 7.64 | < 6.0 | ❌ Gap: 1.64 |
+
+**Key Findings**:
+- ✅ Removing instrument embedding costs only -0.026 (0.807→0.781) — acceptable
+- ❌ note_position confirmed harmful (-0.053), main cause of exp044 degradation
+- ⚠️ Severe overfitting: best at ep34/300, train-test gap ~0.4
+- All 10 instruments degraded by -0.008 to -0.054 without instrument embedding
+
+**Next Experiment Planned**: **exp046 — Velocity conditioning + Condition Dropout**
+- Add velocity (ff[:,:,2]) as direct input to AmpPredictor (+1 dim)
+- Add condition dropout (p=0.2) on encoder features during training
+- Increase weight_decay 10x (0.0001→0.001)
+- Target: Amp Corr 0.82+ with later best epoch (ep60+ instead of ep34)
+- Requires code changes in 3 files: diffusion.py, train.py, evaluate.py
+
+**Rationale**: Velocity is the strongest causal predictor of amplitude in MIDI. Combined with condition dropout to address overfitting, this attacks both the information bottleneck and regularization problems simultaneously.
+
+**No critical issues found**. No NEEDS_HUMAN.txt needed — continuing autonomous experimentation.

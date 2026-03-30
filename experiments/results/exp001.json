@@ -1,0 +1,188 @@
+{
+  "baseline_per_track": [
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\processed_vn\\08_Spring_fl_vn_track2_vn\\data.npz",
+      "rpa": 0.9565524549629106,
+      "f0_mae": 18.33672332763672,
+      "amp_corr": 0.583404241901308,
+      "amp_rmse_log": 0.6424840092658997,
+      "vde_mean": 12.693622675465694,
+      "vre_mean": 0.14334640784207325,
+      "n_vibrato_notes": 13
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\processed_vn\\32_Fugue_vn_vn_va_vc_track1_vn\\data.npz",
+      "rpa": 0.9794381260826994,
+      "f0_mae": 13.431118965148926,
+      "amp_corr": 0.48428562036256706,
+      "amp_rmse_log": 0.7240082025527954,
+      "vde_mean": 8.617487284243362,
+      "vre_mean": 0.980425090284104,
+      "n_vibrato_notes": 50
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\processed_vn\\32_Fugue_vn_vn_va_vc_track2_vn\\data.npz",
+      "rpa": 0.9865394202692116,
+      "f0_mae": 13.634862899780273,
+      "amp_corr": 0.5353188443087125,
+      "amp_rmse_log": 0.6505122780799866,
+      "vde_mean": 8.728074954804448,
+      "vre_mean": 0.747991447841646,
+      "n_vibrato_notes": 69
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\processed_vn\\36_Rondeau_vn_vn_va_vc_track1_vn\\data.npz",
+      "rpa": 0.9480588548129765,
+      "f0_mae": 16.796777725219727,
+      "amp_corr": 0.37380833097969735,
+      "amp_rmse_log": 0.6284235715866089,
+      "vde_mean": 10.615660574135116,
+      "vre_mean": 0.8899902753867761,
+      "n_vibrato_notes": 26
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\processed_vn\\36_Rondeau_vn_vn_va_vc_track2_vn\\data.npz",
+      "rpa": 0.981448837404516,
+      "f0_mae": 13.303186416625977,
+      "amp_corr": 0.4260582784307353,
+      "amp_rmse_log": 0.5750160217285156,
+      "vde_mean": 5.632689141933617,
+      "vre_mean": 0.6022251820605358,
+      "n_vibrato_notes": 17
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\processed_vn\\39_Jerusalem_vn_vn_va_sax_db_track1_vn\\data.npz",
+      "rpa": 0.9830260996532214,
+      "f0_mae": 14.430790901184082,
+      "amp_corr": 0.27916278100855324,
+      "amp_rmse_log": 0.7312037944793701,
+      "vde_mean": 10.309283877356659,
+      "vre_mean": 1.111749358970971,
+      "n_vibrato_notes": 40
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\processed_vn\\39_Jerusalem_vn_vn_va_sax_db_track2_vn\\data.npz",
+      "rpa": 0.9846637102734663,
+      "f0_mae": 12.3048677444458,
+      "amp_corr": 0.39239181732686285,
+      "amp_rmse_log": 0.64418625831604,
+      "vde_mean": 7.71845432519593,
+      "vre_mean": 0.9275815194360655,
+      "n_vibrato_notes": 62
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\processed_tpt\\05_Entertainer_tpt_tpt_track1_tpt\\data.npz",
+      "rpa": 0.9575400423088546,
+      "f0_mae": 19.96833038330078,
+      "amp_corr": 0.7688618093033249,
+      "amp_rmse_log": 0.9090140461921692,
+      "vde_mean": 3.9176247204974697,
+      "vre_mean": 0.926859383506814,
+      "n_vibrato_notes": 26
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\processed_tpt\\05_Entertainer_tpt_tpt_track2_tpt\\data.npz",
+      "rpa": 0.9431721798134012,
+      "f0_mae": 20.1603946685791,
+      "amp_corr": 0.8531029683577427,
+      "amp_rmse_log": 0.7315822243690491,
+      "vde_mean": 5.276155580652806,
+      "vre_mean": 0.31604911166428173,
+      "n_vibrato_notes": 84
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\processed_tpt\\16_Surprise_tpt_tpt_sax_track1_tpt\\data.npz",
+      "rpa": 0.9667189952904238,
+      "f0_mae": 19.359174728393555,
+      "amp_corr": 0.762436101675326,
+      "amp_rmse_log": 0.9430165886878967,
+      "vde_mean": 7.587252483488607,
+      "vre_mean": 0.8036672091355331,
+      "n_vibrato_notes": 21
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\processed_tpt\\16_Surprise_tpt_tpt_sax_track2_tpt\\data.npz",
+      "rpa": 0.9585079631181894,
+      "f0_mae": 19.494224548339844,
+      "amp_corr": 0.8668788519170719,
+      "amp_rmse_log": 0.9433000087738037,
+      "vde_mean": 10.099547835261392,
+      "vre_mean": 0.6328421119426171,
+      "n_vibrato_notes": 12
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\processed_tpt\\42_Arioso_tpt_tpt_hn_tbn_tba_track1_tpt\\data.npz",
+      "rpa": 0.9708747873601732,
+      "f0_mae": 18.048398971557617,
+      "amp_corr": 0.641203196296716,
+      "amp_rmse_log": 0.5306705832481384,
+      "vde_mean": 6.723448665692541,
+      "vre_mean": 0.6779419566042221,
+      "n_vibrato_notes": 115
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\processed_tpt\\42_Arioso_tpt_tpt_hn_tbn_tba_track2_tpt\\data.npz",
+      "rpa": 0.9698068387822717,
+      "f0_mae": 19.081562042236328,
+      "amp_corr": 0.8170523656645765,
+      "amp_rmse_log": 0.5517370700836182,
+      "vde_mean": 6.137656248469805,
+      "vre_mean": 0.8376316721155792,
+      "n_vibrato_notes": 130
+    },
+    {
+      "track": "C:\\lxr\\study\\final\\datagen\\processed_fl\\08_Spring_fl_vn_track1_fl\\data.npz",
+      "rpa": 0.9611774744027304,
+      "f0_mae": 17.25804328918457,
+      "amp_corr": 0.7618160752234718,
+      "amp_rmse_log": 0.9620425701141357,
+      "vde_mean": 10.579660897014902,
+      "vre_mean": 1.4257728662790334,
+      "n_vibrato_notes": 11
+    }
+  ],
+  "baseline_summary": {
+    "baseline_rpa": {
+      "mean": 0.9676804131810748,
+      "std": 0.013527188654936365,
+      "min": 0.9431721798134012,
+      "max": 0.9865394202692116
+    },
+    "baseline_f0_mae": {
+      "mean": 16.82917547225952,
+      "std": 2.7239251521511196,
+      "min": 12.3048677444458,
+      "max": 20.1603946685791
+    },
+    "baseline_amp_corr": {
+      "mean": 0.6104129487683333,
+      "std": 0.19066913281939196,
+      "min": 0.27916278100855324,
+      "max": 0.8668788519170719
+    },
+    "baseline_amp_rmse_log": {
+      "mean": 0.7262283733912877,
+      "std": 0.1473073762713737,
+      "min": 0.5306705832481384,
+      "max": 0.9620425701141357
+    },
+    "baseline_vde_mean": {
+      "mean": 8.18832994744374,
+      "std": 2.4011747116068016,
+      "min": 3.9176247204974697,
+      "max": 12.693622675465694
+    },
+    "baseline_vre_mean": {
+      "mean": 0.7874338280764465,
+      "std": 0.30602078814284817,
+      "min": 0.14334640784207325,
+      "max": 1.4257728662790334
+    },
+    "baseline_n_vibrato_notes": {
+      "mean": 48.285714285714285,
+      "std": 37.56979898693054,
+      "min": 11.0,
+      "max": 130.0
+    }
+  }
+}

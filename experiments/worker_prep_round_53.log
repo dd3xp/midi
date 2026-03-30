@@ -1,0 +1,34 @@
+The AmpPredictor loads correctly from exp039. Let me print a summary:
+
+---
+
+## Summary of exp042 Preparation
+
+### What was done:
+
+**1. Code modifications (residual diffusion support):**
+
+- **`src/model/train.py`** — Modified `train_stage3()`:
+  - Added `residual_mode = cfg.get("residual", False)` flag
+  - When `residual=true`: loads frozen AmpPredictor from checkpoint, computes `residual = gt_amp_norm - predictor_amp_norm` in z-score space, trains diffusion on this residual instead of raw amp
+  - Added residual diagnostics (mean, std, min, max) printed before training starts — warns if std > 0.5 (normalization mismatch)
+  - Both training loop and test loss loop handle residual mode
+
+- **`src/model/evaluate.py`** — Modified for residual inference:
+  - Changed amp loading from `elif` to also load AmpPredictor when amp_diffusion is present (needed for residual mode)
+  - Added new priority path: when BOTH `amp_diffusion` AND `amp_predictor` are loaded → RESIDUAL mode: `amp = exp(AmpPredictor_mean_norm + diffusion_residual) * amp_std + amp_mean)`
+  - Added detection message for residual mode
+
+**2. Config file**: `experiments/configs/exp042.yaml`
+  - `residual: true`, `amp_predictor_checkpoint: exp039`, `amp_augment: false`
+  - Same architecture/hyperparams as exp041 except training on residual
+
+**3. Training script**: `experiments/next_train_cmd.sh`
+  - Copies exp039 AmpPredictor + exp033 baseline to exp042 checkpoint dir
+  - Runs `train.py --stage 3` then `evaluate.py` with residual mode
+  - η=0.3, 5 samples, 50 DDIM steps
+
+### Expected outcome:
+- **Amp Corr ≥ 0.80** (quality floor from frozen AmpPredictor)
+- **amp_diversity > 0.002** (residual sampling provides variation)
+- **f0 RPA ~93.9%** (frozen from exp034)

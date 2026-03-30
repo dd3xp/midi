@@ -1,0 +1,36 @@
+The plan is written. Here's a summary of my review:
+
+---
+
+## Supervisor Review Summary — Round 66
+
+### Experiment Reviewed: exp051 (Encoder Adapter + 185-track AmpPredictor)
+
+**Key Metrics:**
+| Metric | Result | vs exp045 | Assessment |
+|--------|--------|-----------|------------|
+| Amp Corr (9 common tracks) | 0.872 | -0.007 (was 0.879) | ❌ No improvement |
+| Amp Corr (overall, 30 tracks) | 0.775 | N/A (different test set) | — |
+| f0 RPA (oracle) | 93.0% | ~same | ✅ OK |
+| Adapter weights | norm 2-5 | — | Learning happened but unhelpful |
+
+**Code Review:** ✅ No bugs found. EncoderAdapter, train.py integration, and evaluate.py loading are all correctly implemented.
+
+**Diagnosis:** The "encoder information bottleneck" hypothesis is **disproven**. The 256-dim encoder condition already contains sufficient amp information. The bottleneck is elsewhere — likely the **missing instrument identity information** (0.807 with instrument → 0.789 without = 0.018 gap).
+
+### Plan: exp052 — Global Statistics Features (12-dim frame_features + Full Retrain)
+
+**What:** Add 5 global statistics (mean_pitch, pitch_range, mean_velocity, note_density, mean_duration) to frame_features, making it 12-dim. Retrain full pipeline (Stage 1 encoder + Stage 2 diffusion/AmpPredictor) with 185 tracks.
+
+**Why:** Only remaining evidence-backed direction. Global stats implicitly encode instrument type without explicit labels. Targets recovering the 0.018 instrument information gap.
+
+**Expected:** Amp Corr 0.80-0.82 (approaching the 0.807 with-instrument benchmark)
+
+### Critical Issues Found: None
+
+### Progress Toward Goal:
+- **f0 RPA > 85%**: ✅ Achieved (93%+ consistently)
+- **Amp Corr > 0.90**: ❌ Still at 0.789 (34th attempt planned)
+- **f0 MAE < 20**: ❌ Current 23.44 (not priority)
+- **VDE < 6.0**: ❌ Current 7.22 (not priority)
+- **Biggest bottleneck**: Amp Corr — all architectural interventions exhausted except global statistics approach

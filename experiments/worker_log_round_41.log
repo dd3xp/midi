@@ -1,0 +1,17 @@
+Everything is properly logged. Here's a summary of what happened in this round:
+
+## Round 41 Results Summary
+
+### exp029 — Per-Instrument Amp Normalization (Evaluation Only)
+- **Status**: ✅ Evaluation completed (was trained in a previous round but never evaluated)
+- **Results**: Amp Corr = **0.670**, Amp RMSE(log) = **0.691**
+- **vs exp028 (best)**: Amp Corr -1.2% (0.678→0.670), Amp RMSE +5.2% (0.657→0.691)
+- **Conclusion**: ⚠️ Per-instrument normalization is **redundant** with instrument embedding — the embedding already captures instrument-level scale differences. The explicit z-score normalization adds inverse-transform error.
+
+### exp031 — Multi-Scale Temporal Amp Loss
+- **Status**: ❌ **Failed to start** — the script tried to copy `norm_stats.pt` from `experiments/checkpoints/exp014/` but that file doesn't exist (exp014 is stage 1 baseline, doesn't produce `norm_stats.pt`). `set -e` caused the script to exit.
+- **Needs**: Fix the checkpoint preparation script and re-run.
+
+### 当前最佳: **exp028** remains the best (Amp Corr=0.678, Amp RMSE=0.657)
+
+No "下一步计划" written — leaving that for the supervisor.

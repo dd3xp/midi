@@ -1,0 +1,194 @@
+{
+  "diffusion_per_track": [
+    {
+      "rpa_mean": 0.951787958414258,
+      "rpa_oracle": 0.9774934308237175,
+      "f0_mae_mean": 20.415377934773762,
+      "f0_mae_oracle": 15.220592498779297,
+      "amp_corr_mean": 0.7063280678795191,
+      "amp_corr_oracle": 0.7063280678795191,
+      "amp_rmse_log_mean": 0.5238639116287231,
+      "amp_rmse_log_oracle": 0.5238639116287231,
+      "vde_mean_avg": 8.72681780176711,
+      "vde_mean_oracle": 8.573224604238172,
+      "vre_mean_avg": 0.8121270724728388,
+      "vre_mean_oracle": 0.7502397103693537,
+      "f0_diversity_cents": 11.873692512512207,
+      "amp_diversity": 1.916390240941368e-10,
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_vn\\17_Nocturne_vn_fl_cl_track1_vn\\data.npz",
+      "n_vibrato_notes": 121
+    },
+    {
+      "rpa_mean": 0.9539967249324043,
+      "rpa_oracle": 0.9792071289843483,
+      "f0_mae_mean": 20.333956718444824,
+      "f0_mae_oracle": 14.757624626159668,
+      "amp_corr_mean": 0.6973376538720389,
+      "amp_corr_oracle": 0.6973376538720389,
+      "amp_rmse_log_mean": 0.5255754590034485,
+      "amp_rmse_log_oracle": 0.5255754590034485,
+      "vde_mean_avg": 8.93024818855521,
+      "vde_mean_oracle": 8.731560541932629,
+      "vre_mean_avg": 0.8034370567291012,
+      "vre_mean_oracle": 0.7657183232743355,
+      "f0_diversity_cents": 11.558539390563965,
+      "amp_diversity": 2.034619833723994e-10,
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_vn\\18_Nocturne_vn_fl_tpt_track1_vn\\data.npz",
+      "n_vibrato_notes": 120
+    },
+    {
+      "rpa_mean": 0.9246993202021963,
+      "rpa_oracle": 0.9478821683806867,
+      "f0_mae_mean": 29.81426429748535,
+      "f0_mae_oracle": 26.09672737121582,
+      "amp_corr_mean": 0.6872851068785506,
+      "amp_corr_oracle": 0.6872851068785506,
+      "amp_rmse_log_mean": 0.7272818684577942,
+      "amp_rmse_log_oracle": 0.7272818684577942,
+      "vde_mean_avg": 5.881388384197254,
+      "vde_mean_oracle": 7.139027087393799,
+      "vre_mean_avg": 0.9476404920020755,
+      "vre_mean_oracle": 1.0809007448983459,
+      "f0_diversity_cents": 8.073554992675781,
+      "amp_diversity": 1.938022520242555e-10,
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_vn\\26_King_vn_vn_va_vc_track1_vn\\data.npz",
+      "n_vibrato_notes": 37
+    },
+    {
+      "rpa_mean": 0.6969577760293731,
+      "rpa_oracle": 0.8867033831628639,
+      "f0_mae_mean": 42.78385670979818,
+      "f0_mae_oracle": 32.492950439453125,
+      "amp_corr_mean": 0.8339001921558581,
+      "amp_corr_oracle": 0.8339001921558581,
+      "amp_rmse_log_mean": 0.5583305954933167,
+      "amp_rmse_log_oracle": 0.5583305954933167,
+      "vde_mean_avg": 3.433579391710475,
+      "vde_mean_oracle": 3.810046304747254,
+      "vre_mean_avg": 0.8504281553004974,
+      "vre_mean_oracle": 1.025238218412973,
+      "f0_diversity_cents": 9.3255033493042,
+      "amp_diversity": 1.2628520451585246e-10,
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_vn\\26_King_vn_vn_va_vc_track2_vn\\data.npz",
+      "n_vibrato_notes": 25
+    },
+    {
+      "rpa_mean": 0.858172099238859,
+      "rpa_oracle": 0.9471849398640404,
+      "f0_mae_mean": 33.676052729288735,
+      "f0_mae_oracle": 27.63334846496582,
+      "amp_corr_mean": 0.6872851068785506,
+      "amp_corr_oracle": 0.6872851068785506,
+      "amp_rmse_log_mean": 0.7272818684577942,
+      "amp_rmse_log_oracle": 0.7272818684577942,
+      "vde_mean_avg": 5.161384881082699,
+      "vde_mean_oracle": 5.654455621585155,
+      "vre_mean_avg": 0.8251159710695152,
+      "vre_mean_oracle": 0.7508591394382819,
+      "f0_diversity_cents": 9.60004997253418,
+      "amp_diversity": 1.938022520242555e-10,
+      "track": "C:\\lxr\\study\\final\\datagen\\solo\\URMP\\processed_vn\\27_King_vn_vn_va_sax_track1_vn\\data.npz",
+      "n_vibrato_notes": 37
+    }
+  ],
+  "diffusion_summary": {
+    "diffusion_rpa_mean": {
+      "mean": 0.8771227757634181,
+      "std": 0.09650551943983421,
+      "min": 0.6969577760293731,
+      "max": 0.9539967249324043
+    },
+    "diffusion_rpa_oracle": {
+      "mean": 0.9476942102431313,
+      "std": 0.03347008594944611,
+      "min": 0.8867033831628639,
+      "max": 0.9792071289843483
+    },
+    "diffusion_f0_mae_mean": {
+      "mean": 29.404701677958165,
+      "std": 8.491175727652116,
+      "min": 20.333956718444824,
+      "max": 42.78385670979818
+    },
+    "diffusion_f0_mae_oracle": {
+      "mean": 23.240248680114746,
+      "std": 7.061743158558031,
+      "min": 14.757624626159668,
+      "max": 32.492950439453125
+    },
+    "diffusion_amp_corr_mean": {
+      "mean": 0.7224272255329035,
+      "std": 0.05618688241579126,
+      "min": 0.6872851068785506,
+      "max": 0.8339001921558581
+    },
+    "diffusion_amp_corr_oracle": {
+      "mean": 0.7224272255329035,
+      "std": 0.05618688241579126,
+      "min": 0.6872851068785506,
+      "max": 0.8339001921558581
+    },
+    "diffusion_amp_rmse_log_mean": {
+      "mean": 0.6124667406082154,
+      "std": 0.09454766575248665,
+      "min": 0.5238639116287231,
+      "max": 0.7272818684577942
+    },
+    "diffusion_amp_rmse_log_oracle": {
+      "mean": 0.6124667406082154,
+      "std": 0.09454766575248665,
+      "min": 0.5238639116287231,
+      "max": 0.7272818684577942
+    },
+    "diffusion_vde_mean_avg": {
+      "mean": 6.426683729462549,
+      "std": 2.1173310330393753,
+      "min": 3.433579391710475,
+      "max": 8.93024818855521
+    },
+    "diffusion_vde_mean_oracle": {
+      "mean": 6.781662831979402,
+      "std": 1.8569116701788342,
+      "min": 3.810046304747254,
+      "max": 8.731560541932629
+    },
+    "diffusion_vre_mean_avg": {
+      "mean": 0.8477497495148055,
+      "std": 0.052402694740781935,
+      "min": 0.8034370567291012,
+      "max": 0.9476404920020755
+    },
+    "diffusion_vre_mean_oracle": {
+      "mean": 0.874591227278658,
+      "std": 0.14689068829820945,
+      "min": 0.7502397103693537,
+      "max": 1.0809007448983459
+    },
+    "diffusion_f0_diversity_cents": {
+      "mean": 10.086268043518066,
+      "std": 1.4302904536656742,
+      "min": 8.073554992675781,
+      "max": 11.873692512512207
+    },
+    "diffusion_amp_diversity": {
+      "mean": 1.8179814320617994e-10,
+      "std": 2.8057257622465225e-11,
+      "min": 1.2628520451585246e-10,
+      "max": 2.034619833723994e-10
+    },
+    "diffusion_n_vibrato_notes": {
+      "mean": 68.0,
+      "std": 43.09060222368678,
+      "min": 25.0,
+      "max": 121.0
+    }
+  },
+  "amp_only_32track": {
+    "amp_corr_mean": 0.7283,
+    "amp_corr_std": 0.0769,
+    "amp_rmse_log_mean": 0.5567,
+    "amp_rmse_log_std": 0.0978,
+    "n_tracks": 32,
+    "note": "Amp-only evaluation (no DDIM f0 sampling) on all 32 URMP test tracks. evaluate.py bug fixed: baseline loading fallback added."
+  }
+}

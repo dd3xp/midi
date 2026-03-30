@@ -1,0 +1,20 @@
+Both updates are in place. Here's a summary of what was logged:
+
+## exp031 Results Summary
+
+| Metric | exp028 (Best) | exp031 (Multi-Scale) | Change |
+|--------|--------------|---------------------|--------|
+| f0 RPA mean | 95.06% | 95.26% | +0.20% (noise) |
+| f0 MAE mean | 22.79 | 22.38 | -0.41 |
+| **Amp Corr mean** | **0.678** | **0.678** | **0.000 (identical)** |
+| **Amp RMSE(log) mean** | **0.657** | **0.713** | **+8.5% (regression!)** |
+| VDE mean | 6.71 | 6.71 | 0.00 |
+| VRE mean | 0.862 | 0.852 | -0.010 |
+
+**Verdict: ⚠️ Multi-Scale Temporal Loss provides zero improvement to Amp Corr and worsens Amp RMSE by 8.5%.** exp028 remains the global best.
+
+Key findings:
+- Amp Corr is **exactly** 0.678 again — confirming this is a hard ceiling with the current approach
+- Multi-scale coarse temporal matching is not the bottleneck; the model already captures phrase-level dynamics
+- Training was more unstable (test loss range 0.93–1.33, overfitting gap 0.32 vs exp028's 0.13)
+- **14 attempts at Amp optimization, best remains exp028 (Amp Corr=0.678, Amp RMSE=0.657)**

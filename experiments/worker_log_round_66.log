@@ -1,0 +1,18 @@
+Results logged. No update to "当前最佳" needed since exp053's Amp Corr 0.760 is below the current best (exp039: 0.807).
+
+**exp053 Summary — TCN AmpPredictor (dilated CNN): ❌ Failed**
+
+| Metric | exp045 (GRU+Attn) | exp053 (TCN) | Delta |
+|--------|-------------------|-------------|-------|
+| **Amp Corr** | **0.781** | 0.760 | **-2.7%** |
+| Amp RMSE(log) | 0.649 | 0.853 | +31.4% |
+| Best epoch | 34 | 295 | — |
+| Train/test gap | ~0.14 | ~1.20 | 10x worse |
+
+**Key findings:**
+1. **TCN is worse than GRU+Attn** — Amp Corr 0.760 vs 0.781 (-2.7%), RMSE much worse
+2. **Severe overfitting** — train loss 0.55 vs test loss 1.75 (gap = 1.2, 10x worse than GRU's 0.14)
+3. **TCN lacks global context** — The 511-frame dilated receptive field is insufficient compared to GRU+Attention's full-sequence modeling capability
+4. **Architecture is NOT the bottleneck** — Both GRU+Attn (0.781) and TCN (0.760) hit ~0.76-0.78 ceiling without instrument conditioning, confirming the ceiling is data/task-driven, not architecture-driven
+
+exp039 remains global best for Amp Corr (0.807). exp041 remains best for amp diversity (0.010).

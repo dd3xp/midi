@@ -1,0 +1,14 @@
+
+
+The background evaluation task (15-track) failed with exit code 3840 (likely GPU OOM on a long track). This is already handled — I completed the evaluation using a 32-track amp-only approach (no DDIM sampling needed for deterministic AmpPredictor), which successfully yielded **Amp Corr = 0.728 ± 0.077**.
+
+The log has been fully updated with the corrected results. No further action needed for this round — exp045 (isolating instrument removal only) is queued for the next training round.
+sition + instrument removal combination was a disaster
+- **f0 RPA anomaly: 87.71%** — AmpPredictor changes shouldn't affect f0 (encoder/diffusion frozen), needs investigation
+- **Note position confirmed harmful** — acts as a shortcut feature causing rapid overfitting (best@ep29 vs ep142)
+
+### exp045 — Did NOT train this round
+The training script only completed exp044 evaluation. exp045 (isolate instrument removal cost) still needs to run. The `next_train_cmd.sh` is already set up correctly for exp045 train + eval.
+
+### No changes to "当前最佳"
+exp039 remains the global best (Amp Corr = 0.807).

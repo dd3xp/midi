@@ -1,0 +1,48 @@
+# exp024: Correlation-aligned amp loss — MSE + CorrLoss + GradLoss
+# Purpose: Align loss function with amp_corr evaluation metric (Pearson correlation)
+# Key insight: exp023 showed MSE-optimal model != correlation-optimal model
+# Architecture: Self-Attention AmpPredictor (same as exp023)
+# Changes from exp023:
+#   [C1] train.py: amp_loss = MSE + α*CorrLoss + β*GradLoss (α=1.0, β=0.5)
+#   [C2] Stronger regularization: dropout 0.4, weight_decay 0.001
+# Training: freeze encoder (exp014) + freeze diffusion (exp017), only train AmpPredictor
+# Comparison: exp023 (Amp Corr 0.676, MSE-only loss)
+
+output_dir: "experiments/checkpoints/exp024"
+baseline_checkpoint: "experiments/checkpoints/exp014/baseline_best.pt"
+instruments: ["vn", "va", "vc", "fl", "ob", "cl", "sax", "tpt", "tbn", "bn"]
+crop_len: 512
+seed: 42
+save_every: 10
+
+stage2:
+  batch_size: 16
+  lr: 0.0002
+  lr_min: 0.00001
+  epochs: 200
+  ema_decay: 0.995
+  n_diffusion_steps: 1000
+  samples_per_epoch: 1860
+  n_channels: 1
+
+  # AmpPredictor with attention (same architecture as exp023)
+  amp_dropout: 0.4          # ↑ from 0.3 (stronger regularization vs exp023 overfitting)
+  amp_hidden: 256
+  amp_gru_hidden: 128
+  amp_gru_layers: 2
+  amp_use_attention: true
+  amp_n_attn_heads: 4
+  amp_n_attn_layers: 2
+  amp_f0_conditioned: false
+
+  # Freeze f0 diffusion from exp017 — only train AmpPredictor
+  freeze_diffusion: true
+  diffusion_checkpoint: "experiments/checkpoints/exp017/diffusion_best_ema.pt"
+
+  # Stronger regularization
+  amp_lr: 0.0001
+  amp_weight_decay: 0.001   # ↑ from 0.0001 (10x stronger vs exp023)
+
+  # NEW: Correlation-aligned loss weights
+  amp_corr_weight: 1.0      # α: Pearson correlation loss (1 - corr)
+  amp_grad_weight: 0.5      # β: temporal gradient matching loss

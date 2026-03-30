@@ -1,0 +1,85 @@
+=== exp020: Generating paper figures and tables ===
+Checkpoint: experiments/checkpoints/exp019_mixed
+Output figures: experiments/figures/final/
+Output tables: experiments/results/paper_tables.md
+
+Device: cuda
+Output: experiments/figures/final
+
+=== Loading models ===
+Loaded AmpPredictor (hidden=256, gru=128, layers=2, dropout=0.3)
+
+--- Violin: Jupiter ---
+  Frames: 6264, Duration: 62.6s
+  Generating 5 diffusion samples...
+  Saved f0_contour_vn.png
+  Saved vibrato_zoom_vn.png
+  Saved amp_contour_vn.png
+
+--- Flute: Nocturne ---
+  Frames: 9561, Duration: 95.6s
+  Generating 5 diffusion samples...
+  Saved f0_contour_fl.png
+  Saved vibrato_zoom_fl.png
+  Saved amp_contour_fl.png
+
+--- Trumpet: Nocturne ---
+  Frames: 9561, Duration: 95.6s
+  Generating 5 diffusion samples...
+  Saved f0_contour_tpt.png
+  Saved vibrato_zoom_tpt.png
+  Saved amp_contour_tpt.png
+
+--- Eta sweep (Violin) ---
+  Saved eta_sweep.png
+
+--- Instrument comparison ---
+  Saved instrument_comparison.png
+
+--- VDE comparison ---
+  Saved vde_comparison.png
+
+--- Eta metrics ---
+  Saved eta_metrics.png
+
+--- Training curves ---
+  Saved training_curves.png
+
+--- Paper tables ---
+  Saved paper_tables.md to experiments/results/paper_tables.md
+
+=== Done! Generated 14 figures ===
+  f0_contour_vn.png
+  vibrato_zoom_vn.png
+  amp_contour_vn.png
+  f0_contour_fl.png
+  vibrato_zoom_fl.png
+  amp_contour_fl.png
+  f0_contour_tpt.png
+  vibrato_zoom_tpt.png
+  amp_contour_tpt.png
+  eta_sweep.png
+  instrument_comparison.png
+  vde_comparison.png
+  eta_metrics.png
+  training_curves.png
+Tables: experiments/results/paper_tables.md
+
+=== exp020 complete ===
+Checking generated files...
+  OK: experiments/figures/final/f0_contour_vn.png (150329 bytes)
+  OK: experiments/figures/final/f0_contour_fl.png (164386 bytes)
+  OK: experiments/figures/final/f0_contour_tpt.png (143167 bytes)
+  OK: experiments/figures/final/vibrato_zoom_vn.png (153917 bytes)
+  OK: experiments/figures/final/vibrato_zoom_fl.png (122489 bytes)
+  OK: experiments/figures/final/vibrato_zoom_tpt.png (110361 bytes)
+  OK: experiments/figures/final/amp_contour_vn.png (227302 bytes)
+  OK: experiments/figures/final/amp_contour_fl.png (229760 bytes)
+  OK: experiments/figures/final/amp_contour_tpt.png (254412 bytes)
+  OK: experiments/figures/final/eta_sweep.png (250798 bytes)
+  OK: experiments/figures/final/instrument_comparison.png (131227 bytes)
+  OK: experiments/figures/final/vde_comparison.png (87039 bytes)
+  OK: experiments/figures/final/eta_metrics.png (135137 bytes)
+  OK: experiments/figures/final/training_curves.png (153109 bytes)
+  OK: experiments/results/paper_tables.md (1901 bytes)
+All files generated successfully!

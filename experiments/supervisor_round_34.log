@@ -1,0 +1,32 @@
+Good, no NEEDS_HUMAN.txt exists and none should be created — amp plateau is explicitly excluded from escalation conditions.
+
+---
+
+## Status Summary
+
+### Experiment Reviewed: exp025
+
+**What was tried**: MSE-only loss + strong regularization (dropout 0.4, weight_decay 0.001) + self-attention AmpPredictor. This aimed to combine exp023's best Amp Corr with exp024's best regularization, but WITHOUT the CorrLoss/GradLoss.
+
+### Key Metrics (exp025)
+
+| Metric | exp025 | exp023 (best Corr) | exp024 (best RMSE) | exp019 (mixed best) |
+|--------|--------|---------------------|---------------------|---------------------|
+| **Amp Corr** | 0.665 | **0.676** | 0.668 | 0.665 |
+| **Amp RMSE(log)** | 0.731 | 0.726 | **0.695** | 0.697 |
+| f0 RPA | 95.09% | 95.56% | 95.30% | 95.37% |
+
+**Result: ❌ Failed** — exp025 is worse than BOTH exp023 (Corr) and exp024 (RMSE). Strong regularization + MSE-only causes underfitting.
+
+### Diagnosis
+- Strong regularization compresses model capacity too much for MSE-only training
+- CorrLoss was actually providing useful learning signal under strong regularization (exp024 worked, exp025 didn't)
+- Amp Corr is firmly stuck at 0.665-0.676 across 7 approaches
+
+### Next Plan: exp026 — Model Soup
+- **Zero training cost**: Average weights of exp023 (best Corr) and exp024 (best RMSE) — identical architectures confirmed (44 params, same shapes)
+- **Expected**: Amp Corr ~0.670-0.676, RMSE ~0.700-0.715 (balanced compromise, possible super-additivity)
+- **After exp026**: Final model selection regardless of outcome — 8 amp experiments is sufficient
+
+### Critical Issues Found
+None. Code is correct (no new code in exp025). No bugs.

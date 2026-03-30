@@ -12,30 +12,48 @@ import librosa
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.dirname(os.path.dirname(SCRIPT_DIR))
 DATA_DIR = os.path.join(PROJECT_ROOT, "datagen")
-URMP_DIR = os.path.join(PROJECT_ROOT, "dataset")
+URMP_DIR = os.path.join(PROJECT_ROOT, "dataset", "solo", "URMP")
+
+
+BACH10_DIR = os.path.join(PROJECT_ROOT, "dataset", "solo", "Bach10_v1.1")
+
+# Bach10 instrument abbreviation -> wav suffix
+BACH10_INST_MAP = {"vn": "violin", "cl": "clarinet", "sax": "saxphone", "bn": "bassoon"}
 
 
 def find_original_audio(npz_path):
-    """根据输出文件夹名反推原始 AuSep 音频路径。
-    文件夹名格式: {piece_name}_track{N}_{instrument}
-    原始音频格式: AuSep_{N}_{instrument}_{piece_name}.wav
-    """
+    """根据输出文件夹名反推原始音频路径。支持 URMP 和 Bach10。"""
     track_dir = os.path.basename(os.path.dirname(npz_path))
-    # 例: 01_Jupiter_vn_vc_track1_vn -> piece=01_Jupiter_vn_vc, num=1, inst=vn
+
+    # Try URMP: {piece_name}_track{N}_{instrument}
     parts = track_dir.rsplit("_track", 1)
-    if len(parts) != 2:
-        return None
-    piece_name = parts[0]
-    num_inst = parts[1]  # "1_vn"
-    num, instrument = num_inst.split("_", 1)
+    if len(parts) == 2:
+        piece_name = parts[0]
+        num_inst = parts[1]  # "1_vn"
+        num, instrument = num_inst.split("_", 1)
+        piece_dir = os.path.join(URMP_DIR, piece_name)
+        if os.path.isdir(piece_dir):
+            pattern = os.path.join(piece_dir, f"AuSep_{num}_{instrument}_*.wav")
+            matches = glob.glob(pattern)
+            if matches:
+                return matches[0]
 
-    piece_dir = os.path.join(URMP_DIR, piece_name)
-    if not os.path.isdir(piece_dir):
-        return None
+    # Try Bach10: processed_{inst_abbr}/{piece_name}/data.npz
+    # e.g. processed_vn/01-AchGottundHerr/data.npz
+    #   -> dataset/solo/Bach10_v1.1/01-AchGottundHerr/01-AchGottundHerr-violin.wav
+    parent_dir = os.path.basename(os.path.dirname(os.path.dirname(npz_path)))
+    for inst_abbr, wav_suffix in BACH10_INST_MAP.items():
+        if parent_dir == f"processed_{inst_abbr}":
+            piece_name = track_dir  # track_dir is already the piece name
+            piece_dir = os.path.join(BACH10_DIR, piece_name)
+            if os.path.isdir(piece_dir):
+                pattern = os.path.join(piece_dir, f"*-{wav_suffix}.wav")
+                matches = glob.glob(pattern)
+                if matches:
+                    return matches[0]
+            break
 
-    pattern = os.path.join(piece_dir, f"AuSep_{num}_{instrument}_*.wav")
-    matches = glob.glob(pattern)
-    return matches[0] if matches else None
+    return None
 
 
 def compare_audio(synth_path, original_path, sr=16000):

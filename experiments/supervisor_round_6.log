@@ -1,0 +1,44 @@
+Now let me print the status summary:
+
+---
+
+## 🔍 Supervisor Review: exp004 — Root Cause Found
+
+### Experiment Reviewed
+**exp004** — First Stage 2 diffusion training (200 epochs completed)
+
+### Key Metrics
+| Metric | Baseline (exp003) | Diffusion (exp004) | Status |
+|--------|-------------------|-------------------|--------|
+| f0 RPA | **97.14%** | 3.09% | ❌ Near-random |
+| f0 MAE | 16.39 cents | 406.57 cents | ❌ ~4 semitones off |
+| Amp Corr | 0.645 | -0.011 | ❌ Zero correlation |
+| Train loss | — | 1.32 → 0.07 (converged) | ✅ Model learned |
+
+### 🔴 ROOT CAUSE IDENTIFIED: EMA Weights = 94% Random Initialization
+
+The saved EMA checkpoint is essentially a randomly initialized model. Here's why:
+
+- **59 training tracks ÷ batch_size 16 = 3 batches per epoch**
+- **200 epochs × 3 = 600 total EMA updates**
+- **EMA decay 0.9999 → 0.9999^600 = 0.942 → 94.2% of saved weights are still random init**
+- EMA decay=0.9999 needs ~10,000+ updates to converge; we only had 600
+
+The **actual model parameters** (non-EMA) learned to denoise properly (loss: 1.32→0.07), but **no raw checkpoint was ever saved** — every saved file used EMA weights, which are ~94% random.
+
+### What I Planned Next
+**exp005**: Fix EMA + increase training steps, re-train Stage 2
+
+Three critical fixes:
+1. **Lower EMA decay**: 0.9999 → **0.995** (0.995^14600 ≈ 0, fully converged)
+2. **Dataset multiplier ×20**: 59→1180 samples/epoch → 73 batches/epoch → 14,600 total steps (vs 600)
+3. **Save raw (non-EMA) checkpoint** alongside EMA for comparison
+4. **Best checkpoint by test_loss** instead of train_loss
+
+Expected: f0 RPA 80-95%, Amp Corr 0.5-0.7 (model can finally use its trained weights)
+
+### Critical Issues for Worker
+- **[C1]** `train.py:277` — EMA decay 0.9999 yields random weights. Fix: decay→0.995 + dataset multiplier ×20 + save raw checkpoint
+- **[C2]** `train.py:362` — Best checkpoint selected by train_loss. Fix: use test_loss
+
+Full details written to `experiments/log.md` under "下一步计划".

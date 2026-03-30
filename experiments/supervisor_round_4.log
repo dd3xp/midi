@@ -1,0 +1,29 @@
+Everything looks good. Here's my **status summary**:
+
+---
+
+## Supervisor Review Summary
+
+### Experiment Reviewed: exp003 (Baseline, leak-free)
+- **f0 RPA**: 97.14% ✅ (far exceeds 85% target)
+- **f0 MAE**: 16.39 cents
+- **Amp Corr**: 0.645 (below 0.9 target, but > 0.5 threshold for Stage 2)
+- **Status**: Baseline validated, no data leakage, results trustworthy
+
+### Code Review: Stage 2 Readiness
+- ✅ **All Stage 2 code passes review** — diffusion model, training loop, evaluation, normalization all implemented correctly and match design docs
+- ⚠️ **W1**: 4/15 test tracks are duplicates (15/16_Surprise, 17/18_Nocturne share identical recordings) — doesn't affect relative comparisons but needs dedup for final paper
+- ⚠️ **W2**: Stage 2 checkpoint selection uses train loss (not test loss) — acceptable for first run, monitor for overfitting
+
+### Next Experiment Planned: exp004
+- **What**: First Stage 2 conditional diffusion (DDPM) training with frozen exp003 encoder
+- **Config**: batch=16, lr=2e-4, epochs=200, ema_decay=0.9999, T=1000
+- **Expected**: f0 RPA ~80-92%, Amp Corr ~0.5-0.7 (first diffusion run)
+- **Priority**: HIGH
+- **Config file created**: `experiments/configs/exp004.yaml`
+
+### Critical Issues Found
+- **None** — no blocking issues for exp004
+
+### Biggest Bottleneck
+- Baseline amp prediction (corr=0.645) is far from 0.9 target, but this is an architecture limitation. The core paper contribution is the diffusion model's diversity, so we proceed to Stage 2.

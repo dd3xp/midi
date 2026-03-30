@@ -1,0 +1,34 @@
+The plan has been written successfully. Let me provide the status summary.
+
+---
+
+## Supervisor Review Summary
+
+### Experiment Reviewed: **exp030 (Pitch-Anchor Amp Offset)**
+
+### Key Metrics
+| Metric | exp028 (best) | exp030 | Change |
+|--------|--------------|--------|--------|
+| f0 RPA | 95.06% | 95.27% | ≈ (noise) |
+| **Amp Corr** | **0.678** | **0.567** | **-16.4% ❌** |
+| **Amp RMSE** | **0.657** | **1.173** | **+78.5% ❌❌** |
+
+### Diagnosis
+- **Code is correct** — reviewed `compute_pitch_amp_anchor`, training loop targets, evaluation denormalization, device handling. No bugs found.
+- **Failure is conceptual**: Unlike f0 (where MIDI pitch is a precise physical anchor — cent offset < 50 cents), amplitude has no such relationship to pitch. Same pitch can have wildly different amplitudes depending on musical context. The pitch-to-average-amp lookup table is too noisy to serve as a useful anchor.
+
+### Critical Finding: exp029 Never Evaluated
+- exp029 (Per-Instrument Normalization) was **trained** (200 epochs, best at epoch 139) but **never evaluated** — no results JSON exists. This is wasted compute.
+
+### What Was Planned Next (2 steps)
+1. **Evaluate exp029** — run evaluation on already-trained model (free data point)
+2. **exp031: Multi-Scale Temporal Amp Loss** — add MSE at 8× and 32× temporal downsampling to force the model to match coarse-grained dynamic patterns. Based on exp028 (instrument embedding). Different mechanism from exp024's correlation loss. Expected Amp Corr: 0.69-0.72.
+
+### Progress Toward Goals
+| Target | Current Best | Goal | Status |
+|--------|-------------|------|--------|
+| f0 RPA | 95.59% | >85% | ✅ Far exceeded |
+| Amp Corr | 0.678 (exp028) | >0.80 | ❌ Gap: 0.122 |
+| Amp RMSE | 0.657 (exp028) | beat baseline (0.724) | ✅ -9.3% |
+
+**Main bottleneck**: Amp Corr shape prediction — 12 experiments tried, best is 0.678. Multi-scale temporal loss is the next attempt to break through.

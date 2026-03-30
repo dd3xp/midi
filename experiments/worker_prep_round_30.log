@@ -1,0 +1,24 @@
+Everything is ready. Here's a summary of what was prepared:
+
+---
+
+## Summary
+
+### exp021 Results (Logged)
+**Amp Diffusion FAILED** — Amp Corr dropped from 0.665 → 0.407 (-38.8%). Diffusion is not suitable for amplitude generation. The deterministic BiGRU AmpPredictor is clearly superior.
+
+### exp022 Prepared: Amp conditioned on f0
+
+**Hypothesis**: f0 patterns (vibrato, pitch bends) correlate with amplitude dynamics. Providing sampled f0 as additional input to AmpPredictor should improve amp prediction.
+
+**Code changes (3 files)**:
+1. **`diffusion.py`**: `AmpPredictor` gains `f0_conditioned=True` flag → input dim 256→257, concatenates normalized f0 with condition
+2. **`train.py`**: Stage 2 supports `freeze_diffusion` + `amp_f0_conditioned` config flags. When frozen, only AmpPredictor trains; GT f0 is used during training.
+3. **`evaluate.py`**: f0-conditioned AmpPredictor predicts amp inside the sample loop using diffusion-sampled f0 (not pre-computed deterministically)
+
+**Training strategy**: Freeze encoder (exp014) + freeze f0 diffusion (exp017), only train the f0-conditioned AmpPredictor for 200 epochs.
+
+**Files**:
+- Config: `experiments/configs/exp022.yaml`
+- Training script: `experiments/next_train_cmd.sh`
+- Backups: `*.py.bak` for all 3 modified files

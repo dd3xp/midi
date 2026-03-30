@@ -1,0 +1,36 @@
+Works correctly. Let me now provide a brief summary.
+
+---
+
+## Summary of exp054 Preparation
+
+### What was planned (from 下一步计划)
+**exp054: Knowledge Distillation** — Transfer instrument-specific amp knowledge from exp039 (instrument-conditioned teacher, Amp Corr 0.807) to an instrument-free student model.
+
+### What was implemented
+
+1. **New file: `src/model/precompute_teacher.py`**
+   - Loads exp033 encoder + exp039 AmpPredictor (instrument_conditioned=True, GRU+Attention)
+   - Runs inference on all training tracks to produce full-length teacher predictions
+   - Saves `{track_idx: tensor(T,)}` dict to `teacher_preds.pt`
+
+2. **Modified: `src/model/train.py`** (2 additions)
+   - **KD loading** (lines 662-675): Before training starts, loads pre-computed teacher predictions if `kd_teacher_preds` path is in config
+   - **KD loss** (lines 857-872): In the training loop, after all other amp losses, adds `kd_weight * MSE(student_pred, teacher_pred)` using `track_idx` and `crop_start` to index into the teacher predictions
+   - Test loop does NOT include KD loss (teacher was trained on training tracks only)
+
+3. **New config: `experiments/configs/exp054.yaml`**
+   - Student: Standard GRU AmpPredictor (hidden=256, gru_hidden=128, 2 layers, no attention, no instrument)
+   - KD: `kd_weight=0.5`, equal weight between task loss and distillation loss
+   - Same optimizer/augmentation as exp048 (best no-instrument baseline)
+
+4. **Training script: `experiments/next_train_cmd.sh`**
+   - Step 1: Copy checkpoints from exp033/exp034
+   - Step 2: Pre-compute teacher predictions (~5 min)
+   - Step 3: Train student with KD (300 epochs)
+   - Step 4: Evaluate with diffusion f0 + amp metrics
+
+### Expected results
+| Metric | exp048 (no inst) | exp039 (teacher) | exp054 (KD) |
+|--------|-----------------|-----------------|-------------|
+| Amp Corr | 0.789 | 0.807 | **0.795-0.805** |

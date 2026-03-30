@@ -1,0 +1,17 @@
+Results have been logged. Here's the summary:
+
+## exp055 Results: Encoder Fine-tuning — ❌ Failed
+
+| Metric | exp045 (frozen encoder) | exp055 (fine-tuned encoder) | Change |
+|--------|------------------------|---------------------------|--------|
+| **Amp Corr** | 0.781 | 0.777 | **-0.5% (worse!)** |
+| f0 RPA (oracle) | 95.82% | 90.41% | **-5.4% (severe degradation!)** |
+| f0 MAE (oracle) | ~21 | 37.17 | **+77% (much worse)** |
+| Overfitting gap | 0.14 | 1.27 | **9x worse** |
+| Best test_amp_loss | 0.58 | 0.954 | **+64%** |
+
+### Key Findings:
+1. **Amp Corr 0.777 — no improvement** over frozen encoder (0.781). This conclusively proves **the encoder representation is NOT the bottleneck** for amp prediction.
+2. **f0 severely degraded** (RPA 90.41% vs 95.82%) because the fine-tuned encoder shifted away from the distribution the frozen diffusion was trained on.
+3. **Massive overfitting**: train/test gap of 1.27 (9x worse than exp045's 0.14), confirming that unfreezing encoder adds too many effective parameters for this small dataset (173 tracks).
+4. This was the 39th amp optimization attempt. All "system-level" variables have now been exhausted (encoder, architecture, loss functions, KD, diffusion, augmentation, TCN). The current best remains **exp039 (Amp Corr 0.807, with instrument conditioning)** / **exp048 (0.789, without instrument)**.

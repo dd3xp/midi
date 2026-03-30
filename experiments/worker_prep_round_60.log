@@ -1,0 +1,35 @@
+Here's a summary of what was prepared for **exp048**:
+
+## Summary
+
+### Experiment: exp048 — Enhanced Two-Step with Encoder-Pooled Features + Residual L1 Penalty
+
+**Goal:** Fix exp047's weak note_level prediction (residual std=2.95, indicating poor decomposition) by giving the note_level MLP access to encoder features and adding a residual L1 penalty.
+
+### Code Changes Made (3 files):
+
+1. **`src/model/diffusion.py` — TwoStepAmpPredictor class:**
+   - Added `smooth_kernel=31` constructor parameter
+   - Changed note_mlp input: **2-dim → 258-dim** (velocity + pitch + smoothed encoder features)
+   - Added Dropout(0.3) in note_mlp for regularization
+   - Added encoder smooth pooling via `F.avg_pool1d` in forward pass
+   - **Removed `.detach()`** on note_level — allows cooperative gradient training
+
+2. **`src/model/train.py`:**
+   - New config params: `amp_residual_penalty_weight` (default 0.0), `amp_smooth_kernel` (default 31)
+   - Passes `smooth_kernel` to TwoStepAmpPredictor constructor
+   - Added residual L1 penalty to both train and test loss blocks
+   - Enhanced diagnostics: prints residual L1 alongside std
+
+3. **`src/model/evaluate.py`:**
+   - Reads `amp_smooth_kernel` from config and passes to TwoStepAmpPredictor constructor
+
+### Config: `experiments/configs/exp048.yaml`
+- Key differences from exp047: `amp_note_aux_weight: 0.3` (was 0.5), `amp_residual_penalty_weight: 0.3` (new), `amp_smooth_kernel: 31` (new)
+
+### Training Script: `experiments/next_train_cmd.sh`
+- Stage 2 training with frozen diffusion, then evaluation with 3 samples / 50 DDIM steps
+
+### Expected Outcome:
+- Amp Corr: 0.81–0.85 (was 0.787 in exp047)
+- Residual std: 0.3–0.8 (was 2.95 — target effective decomposition)

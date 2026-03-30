@@ -1,0 +1,24 @@
+Good — "当前最佳" remains unchanged since exp006 produced no results.
+
+---
+
+## Summary
+
+**exp006 — ❌ Terminated (no results)**
+
+The training process was terminated externally (SIGTERM) approximately 12 minutes after launch. Key findings:
+
+| Item | Status |
+|------|--------|
+| Training log | 9 lines, ends with "Terminated" |
+| Training duration | ~12 min (expected 18-30 hours) |
+| Epoch checkpoints | None (save_every=50, never reached ep50) |
+| stage2_history.json | Missing |
+| Evaluation results | Missing (evaluation never ran) |
+| diffusion_best_*.pt | Exists but from ~12 min of training — unusable |
+
+**当前最佳 unchanged:**
+- Baseline: **exp003** (RPA=97.14%, Amp Corr=0.645)
+- Diffusion: **exp005** (RPA=85.26% mean / 95.58% oracle)
+
+**Action needed:** exp006's code changes (CosineAnnealingLR + per-metric oracle fix) and config are ready. The experiment needs to be re-run with sufficient runtime allocated (18-30 hours expected for 500 epochs × ~110 batches/epoch ≈ 55K steps).

@@ -1,0 +1,34 @@
+All changes look correct. Let me provide a summary:
+
+---
+
+## Summary: exp055 — Encoder Fine-tuning for Amp Prediction
+
+### What was prepared:
+
+**1. Code Changes (2 files):**
+
+- **`src/model/train.py`** (6 modifications):
+  - Added `unfreeze_encoder` and `encoder_lr` config support (line ~493)
+  - When `unfreeze_encoder=true`, encoder runs in `.train()` mode with gradients flowing through amp loss path
+  - `condition_perm` (for diffusion) is `.detach()`ed to prevent gradients from diffusion path affecting encoder
+  - Optimizer uses `AdamW` with separate param groups: amp_predictor at `5e-5`, encoder at `2e-6`
+  - CosineAnnealingLR `eta_min` automatically clamped to `encoder_lr * 0.1` to prevent encoder LR from increasing
+  - Encoder state_dict saved as `encoder_finetuned.pt` alongside best amp_predictor checkpoint
+  - Encoder set to `.eval()` during test loop, `.train()` during training
+
+- **`src/model/evaluate.py`** (1 modification):
+  - After loading baseline encoder, checks for `encoder_finetuned.pt` and loads it if present
+
+**2. Config:** `experiments/configs/exp055.yaml`
+  - Base: exp045 (GRU+Attention, Amp Corr 0.781)
+  - Only change: `unfreeze_encoder: true`, `encoder_lr: 0.000002`
+
+**3. Training script:** `experiments/next_train_cmd.sh`
+  - Copies baseline and diffusion checkpoints to exp055/
+  - Runs `train.py --stage 2` then `evaluate.py`
+
+### Key design decisions:
+- **Encoder gradients only from amp path**: `condition_perm` for diffusion is detached, so encoder updates are purely driven by amp loss
+- **Risk mitigation**: Encoder LR is 25x smaller than amp_predictor LR (2e-6 vs 5e-5) to limit representation drift
+- **f0 impact monitoring**: Since diffusion was trained on original encoder output, encoder changes may cause f0 quality degradation — this will be checked in evaluation

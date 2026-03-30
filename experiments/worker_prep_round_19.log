@@ -1,0 +1,22 @@
+The file already exists with the right content from a previous invocation. It's already communicating the correct status. No changes needed.
+
+---
+
+## Summary
+
+**No new experiment to prepare.** The supervisor's plan in `experiments/log.md` is unambiguous:
+
+> 🏁 **实验阶段正式结束** — 保留 exp007 (diffusion) 和 exp012 (baseline) 作为最终模型。不再进行额外训练实验。
+
+**What was done:**
+1. ✅ Read `experiments/log.md` — confirmed the "下一步计划" says **no more experiments**
+2. ✅ No code bugs to fix — supervisor confirmed all code is clean
+3. ✅ Created `experiments/NEEDS_HUMAN.txt` to notify the user
+4. ✅ `experiments/next_train_cmd.sh` already exists with exit code 42 (signals "done")
+
+**Current state:**
+- **13 experiments completed** (exp001–exp013)
+- **Final Baseline**: exp012 — f0 RPA=97.14%, Amp Corr=0.660
+- **Final Diffusion**: exp007 — f0 RPA=94.20%, VDE=4.80 (45% better vibrato than baseline)
+- **11 paper figures** generated in `experiments/figures/`
+- **Next step**: Human review → Paper writing (AIMC 2026)

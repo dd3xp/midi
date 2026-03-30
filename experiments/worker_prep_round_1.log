@@ -1,0 +1,30 @@
+Everything is in order. Here's my summary:
+
+---
+
+## Summary: exp006 Prepared (Evaluation Only)
+
+**Experiment**: exp006 — Stochastic DDIM Sampling (eta=0.5) for Diversity Analysis
+
+**Background**: Following the 后续预案 from exp005 (since mean RPA=85.26% > 85%), the next step is to evaluate with stochastic DDIM (eta=0.5) to analyze diversity vs quality tradeoffs.
+
+**What's ready**:
+- ✅ **Config**: `experiments/configs/exp006.yaml` — evaluation-only, reuses exp005 checkpoints
+- ✅ **Code**: `eta` parameter already supported in `diffusion.py:ddim_sample()` (lines 286-335) and `evaluate.py` (line 268 CLI arg, line 193 passed to sampler)
+- ✅ **Script**: `experiments/next_train_cmd.sh` — runs evaluation with eta=0.5, n_samples=10, ddim_steps=50
+- ✅ **Checkpoints**: exp005 checkpoints exist (`diffusion_best_ema.pt`, `baseline_best.pt`, `norm_stats.pt`)
+
+**No code changes needed** — all plumbing for stochastic DDIM was already implemented.
+
+**Key parameters**:
+| Parameter | exp005 (baseline) | exp006 (this) |
+|-----------|-------------------|---------------|
+| eta | 0.0 (deterministic) | **0.5** (stochastic) |
+| n_samples | 5 | **10** |
+| Training | 200 epochs | None (eval only) |
+
+**Expected outcomes**:
+- **Higher inter-sample diversity** (f0/amp std across samples should increase)
+- **Possibly lower mean RPA** (stochastic noise may hurt average quality)
+- **Similar or better oracle RPA** (more diverse samples → higher chance of a good one)
+- **Key comparison**: eta=0.5 diversity vs eta=0.0 diversity to validate diffusion model generates meaningful variation

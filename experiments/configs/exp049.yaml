@@ -1,0 +1,34 @@
+# exp049: Pure Amp Diffusion v2 — 1ch DDPM for amplitude
+# Goal: Break deterministic AmpPredictor ceiling (0.789) + get amp diversity
+# Changes vs exp021:
+#   [C1] Encoder from exp033 (has velocity) vs exp014 (no velocity)
+#   [C2] amp_augment: true (scale=0.2, jitter=0.05)
+#   [C3] epochs: 300 (was 200)
+#   Evaluate with n_samples=5, eta=0.3 for oracle + diversity
+
+output_dir: "experiments/checkpoints/exp049"
+baseline_checkpoint: "experiments/checkpoints/exp033/baseline_best.pt"
+instruments: ["vn", "va", "vc", "fl", "ob", "cl", "sax", "tpt", "tbn", "bn"]
+crop_len: 512
+seed: 42
+save_every: 10
+
+# Stage 3: Amp diffusion training
+stage3:
+  batch_size: 16
+  lr: 0.0002
+  lr_min: 0.00001
+  epochs: 300
+  ema_decay: 0.995
+  n_diffusion_steps: 1000
+  samples_per_epoch: 1860
+
+  # Amp augmentation
+  amp_augment: true
+  amp_augment_scale: 0.2
+  amp_augment_jitter: 0.05
+
+# For evaluation — f0 diffusion config (must match exp034)
+stage2:
+  n_diffusion_steps: 1000
+  n_channels: 1

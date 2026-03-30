@@ -1,0 +1,21 @@
+The log has been properly updated. Here's a summary of the exp004 results:
+
+## exp004 Results Summary
+
+**Training**: ✅ Completed 200 epochs successfully
+- Loss converged normally: train 1.32 → ~0.07, test 1.22 → ~0.04-0.12
+- No overfitting (train/test loss in similar range)
+- EMA checkpoints saved every 10 epochs
+
+**Evaluation**: ⚠️ **DDIM sampling produces essentially random output**
+
+| Metric | Baseline (exp003) | Diffusion (mean) | Diffusion (oracle) |
+|--------|-------------------|------------------|---------------------|
+| f0 RPA | **97.14%** | 3.09% | 3.21% |
+| f0 MAE | **16.39** cents | 406.57 cents | 403.92 cents |
+| Amp Corr | **0.645** | -0.011 | -0.013 |
+| Amp RMSE(log) | **0.738** | 2.989 | 2.994 |
+
+**Diagnosis**: The denoising score matching loss converged normally, proving the model learned to denoise. But DDIM sampling produces garbage — this is a **sampling/denormalization pipeline bug**, not a training failure. The oracle≈mean pattern (no diversity) confirms systematic error, not random noise. Likely causes: DDIM α/β schedule mismatch, x₀ prediction formula error, condition injection failure at inference, or normalization mismatch.
+
+**当前最佳** remains **exp003** (baseline). The supervisor will plan the next debugging steps.

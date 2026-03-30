@@ -1,0 +1,30 @@
+Good, the log is written. Here's my **status summary** for the terminal:
+
+---
+
+## Supervisor Review Complete — exp002
+
+### Experiment Reviewed
+**exp002** (Baseline, lam=10.0): f0 RPA=96.73%, Amp Corr=0.610
+
+### Key Findings
+
+1. **lam=10 had zero effect on amp_corr** (0.610 → 0.610, identical to 3 decimal places). This confirms amp prediction bottleneck is architectural, not loss-related.
+
+2. **🚨 CRITICAL: Severe data leakage discovered (W2 upgraded to CRITICAL)**
+   - Verified that Rondeau (35/36/37), Jerusalem (38/39), and Surprise (15/16) share **identical audio recordings** across different piece numbers (same duration, frame count, and note count to the exact number)
+   - **6 of 14 test tracks (43%) are exact copies of training data**
+   - The reported RPA=96.77% is almost certainly inflated
+   - All experimental conclusions from exp001/002 are unreliable
+
+3. **Diffusion attention flags** (W1) still need fixing: `[True, False, False]` → `[True, True, False]`
+
+### Next Experiment Planned: exp003
+- **Fix data leakage**: Change `extract_piece_id` to extract piece NAME (e.g., "Rondeau") instead of number
+- **Fix diffusion attention flags** for Stage 2 readiness
+- Re-train baseline with same hyperparameters as exp001
+- **Priority: CRITICAL** — all future work depends on honest metrics
+- Config written to `experiments/configs/exp003.yaml`
+
+### Biggest Bottleneck
+**Data leakage makes all metrics untrustable.** Must fix before any further experiments.

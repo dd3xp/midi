@@ -1,0 +1,23 @@
+Everything is ready. Here's a summary of what was prepared for **exp011**:
+
+---
+
+## exp011 Summary: Fix Visualization Defects
+
+### Code Changes Made (3 fixes in `src/model/visualize.py`):
+1. **`find_vibrato_region()` replaced** — New version uses note interiors (skips 15% attack / 10% release), applies linear detrend before scoring, and filters out >80 cents variation (not vibrato). This should produce better vibrato zoom regions showing periodic oscillations.
+2. **`plot_eta_sweep_summary()` data source updated** — Changed `exp008_eta05.json` → `exp011_eta05.json` so the diversity panel uses data from the new evaluation that includes `f0_diversity_cents`.
+3. **Baseline reference line added** — Dotted gray line at RPA=97.14% in the eta sweep RPA panel for comparison.
+
+### Config Created:
+- `experiments/configs/exp011.yaml`
+
+### Script (`experiments/next_train_cmd.sh`) will:
+1. **Backup** existing figures to `experiments/figures_exp010_backup/`
+2. **Re-evaluate eta=0.5** with `evaluate.py` (contains diversity metrics) → `experiments/results/exp011_eta05.json`
+3. **Verify** the output contains `f0_diversity_cents`
+4. **Regenerate all 11 paper figures** with seed=42 using updated `visualize.py`
+5. **Validate** all 4 eta values have diversity data for the sweep plot
+6. **Save** combined results to `experiments/results/exp011.json`
+
+### Expected duration: ~15-20 minutes (evaluation ~10min + visualization ~5min)

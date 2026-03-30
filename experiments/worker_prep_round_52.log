@@ -1,0 +1,35 @@
+Everything is ready. Here's a summary of what was prepared:
+
+---
+
+## exp041 Preparation Summary
+
+### What: Amp Diffusion v2 — velocity-conditioned 1ch DDPM for amplitude
+
+### Why: 
+- The deterministic AmpPredictor has hit a ceiling at Amp Corr ~0.807 after 22 optimization attempts
+- amp_diversity ≈ 0 across ALL experiments (critical flaw for the AIMC 2026 paper)
+- exp021 (first amp diffusion) showed non-zero diversity (0.004) but used an old encoder without velocity → Amp Corr was only 0.407
+- **Hypothesis**: With exp033's velocity encoder, amp diffusion quality should vastly improve while maintaining stochastic diversity
+
+### Code change (1 file modified):
+- **`src/model/train.py`** lines 1004-1036: Added amp augmentation to `train_stage3()`:
+  - Config variables read before epoch loop (lines 1004-1011)
+  - Global scale shift + per-frame jitter applied after z-score normalization, before `x_0` construction (lines 1029-1036)
+  - Print confirmation: `"Amp diffusion augmentation ENABLED: scale=0.2, jitter=0.05"`
+
+### Config: `experiments/configs/exp041.yaml`
+- Stage 3 only (amp diffusion), frozen encoder from exp033
+- 300 epochs, lr=2e-4 → 1e-5 cosine, batch=16
+- Amp augmentation: scale=0.2, jitter=0.05
+- f0 diffusion from exp034 (via config fallback in evaluate.py)
+
+### Script: `experiments/next_train_cmd.sh`
+- Copies `baseline_best.pt` (exp033) and `norm_stats.pt` (exp034) to exp041 dir
+- Trains stage 3: `python src/model/train.py --config exp041.yaml --stage 3`
+- Evaluates with f0 diffusion (exp034) + amp diffusion (exp041): n_samples=5, ddim_steps=50, eta=0.3
+
+### Key metrics to watch:
+- **Amp Corr** vs exp039's 0.807 (target ≥ 0.75)
+- **amp_diversity** (must be > 0 — this is the whole point)
+- Estimated training time: ~2-3 hours

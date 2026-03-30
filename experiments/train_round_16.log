@@ -1,0 +1,59 @@
+==========================================
+ exp012: Baseline Softplus Amp Head
+==========================================
+Training checkpoint found, skipping training (already completed).
+Device: cuda
+Test tracks: 15
+
+--- Evaluating Baseline ---
+{
+  "baseline_rpa": {
+    "mean": 0.9713896807884337,
+    "std": 0.02391924095195518,
+    "min": 0.8933764135702746,
+    "max": 0.9892170651664323
+  },
+  "baseline_f0_mae": {
+    "mean": 16.481361134847006,
+    "std": 3.2217565617195305,
+    "min": 11.855729103088379,
+    "max": 22.964569091796875
+  },
+  "baseline_amp_corr": {
+    "mean": 0.6596478879564829,
+    "std": 0.16472213534754024,
+    "min": 0.3403739494587527,
+    "max": 0.866757440297526
+  },
+  "baseline_amp_rmse_log": {
+    "mean": 0.7273320873578389,
+    "std": 0.17273406709104186,
+    "min": 0.5315716862678528,
+    "max": 0.9838675856590271
+  },
+  "baseline_vde_mean": {
+    "mean": 8.77388781417727,
+    "std": 2.7558200203915173,
+    "min": 2.4463894721847956,
+    "max": 11.776453588447795
+  },
+  "baseline_vre_mean": {
+    "mean": 0.7172321880233736,
+    "std": 0.17672386880589697,
+    "min": 0.44319341282621766,
+    "max": 0.9493613477236912
+  },
+  "baseline_n_vibrato_notes": {
+    "mean": 59.333333333333336,
+    "std": 38.79633430564743,
+    "min": 11.0,
+    "max": 121.0
+  }
+}
+
+Results saved to experiments/results/exp012.json
+
+==========================================
+ exp012 COMPLETE
+==========================================
+Results saved to: experiments/results/exp012.json

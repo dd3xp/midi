@@ -1,0 +1,21 @@
+The log has been updated successfully. Here's a summary of **exp003 results**:
+
+## exp003 — Fix Data Leakage + Rebuild True Baseline ✅
+
+**Training**: Completed successfully. Early stop at epoch 54, best test loss 3.635 at epoch 39.
+
+**Key results** (now with leak-free evaluation):
+
+| Metric | exp001 (leaked) | exp003 (no leak) | Change |
+|--------|-----------------|------------------|--------|
+| f0 RPA | 96.77% | **97.14%** | +0.37% ↑ |
+| f0 MAE | 16.83 cents | **16.39 cents** | -0.44 ↑ |
+| Amp Corr | 0.610 | **0.645** | +0.035 ↑ |
+| Amp RMSE(log) | 0.726 | 0.738 | +0.012 ≈ |
+
+**Key findings**:
+1. **Leakage fix didn't hurt — metrics actually improved**. The old test set happened to include harder tracks (e.g., violin with amp_corr ~0.28), so removing leakage changed the test distribution favorably.
+2. **f0 RPA = 97.14% is now a trustworthy baseline** — well above the 85% target.
+3. **Amp Corr = 0.645 remains the bottleneck** — violin is still the weakest (0.27–0.43), trumpet is strong (0.76–0.88).
+4. **Both critical fixes applied**: [C1] name-based split (no leakage), [C2] attn_flags = [T,T,F] (Stage 2 ready).
+5. **Updated 当前最佳 to exp003**. Stage 2 diffusion is now unblocked.

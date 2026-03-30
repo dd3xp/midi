@@ -1,0 +1,36 @@
+The log is now updated. Let me print the status summary:
+
+---
+
+## Supervisor Review Summary
+
+### Experiment Reviewed: exp006 (terminated) / exp005 (latest completed)
+
+**exp006 Status**: ❌ Training terminated by SIGTERM after reaching epoch 50 (~5,500 steps, ~16 minutes). The planned 500 epochs × 110 batches = 55,000 steps would have required ~160 minutes, exceeding runtime limits. No evaluation results produced.
+
+**exp006 Code Review**: ✅ All clean
+- CosineAnnealingLR implementation correct (`train.py:284-292`)
+- Oracle separation (f0 by MAE, amp by RMSE) in `evaluate.py:217-230` correct
+- No new bugs introduced
+
+### Key Metrics (exp005 — latest completed diffusion experiment)
+
+| Metric | Baseline (exp003) | Diffusion mean | Diffusion oracle |
+|--------|-------------------|----------------|------------------|
+| f0 RPA | **97.14%** | 85.26% | 95.58% |
+| Amp Corr | **0.645** | 0.544 | 0.551 |
+| VDE | 8.34 | **6.03** | **5.11** |
+| VRE | 0.880 | **0.806** | **0.755** |
+
+### What's Planned Next: exp007
+
+**CosineAnnealingLR + 50% more training steps** (22,000 steps vs exp005's 14,600):
+- 200 epochs (proven to complete), samples_per_epoch=1770 (59×30)
+- CosineAnnealingLR: 2e-4 → 1e-5 to address test_loss bouncing in exp005
+- Expected: Mean RPA 87-91%, should complete within runtime limits
+- **No code changes needed** — exp006's changes already in place
+
+### Critical Issues: None
+- No code bugs found
+- No NEEDS_HUMAN escalation triggered (exp006 failure was external timeout, not repeated code bug)
+- Biggest bottleneck: Mean RPA still just at threshold (85.26%), needs improvement through better training schedule

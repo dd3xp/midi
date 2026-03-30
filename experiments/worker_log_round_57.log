@@ -1,0 +1,27 @@
+The log has been updated successfully. Here's a summary of **Round 57 — exp045 results**:
+
+## exp045: 仅去 Instrument Embedding (隔离测试)
+
+**Training**: 300 epochs, exit code 0 ✅
+
+### Key Metrics
+| Metric | exp039 (有 inst) | exp045 (无 inst) | Delta |
+|--------|------------------|------------------|-------|
+| **Amp Corr** | **0.807** | **0.781** | **-3.2%** |
+| Amp RMSE(log) | 0.582 | 0.649 | +11.5% |
+| f0 RPA | 93.73% | 93.63% | ≈same |
+
+### Critical Finding — Causal Separation
+| Change | Amp Corr Impact |
+|--------|----------------|
+| Remove instrument only | **-0.026** (acceptable) |
+| Add note_position only | **-0.053** (harmful!) |
+| Both combined (exp044) | **-0.079** (catastrophic) |
+
+### Conclusions
+- ✅ **Removing instrument embedding is safe** — cost is only -0.026, within target (≥0.78)
+- ❌ **note_position confirmed harmful** — was the main culprit behind exp044's -9.8% degradation
+- **Overfitting remains the bottleneck** — best at epoch 34, massive train/test gap (~0.4)
+- **No-instrument baseline established at 0.781** — all future optimization experiments build from here
+
+**当前最佳**: exp039 (0.807, with instrument) remains the global best. exp045 (0.781) is the best no-instrument result. No 下一步计划 written — waiting for supervisor.

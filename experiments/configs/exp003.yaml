@@ -1,0 +1,23 @@
+# exp003: Fix data leakage + rebuild true baseline (Stage 1)
+# Purpose: Fix W2 (extract_piece_id by name not number), get honest metrics
+# Changes:
+#   1. [C1] dataset.py extract_piece_id -> extract piece NAME (e.g. "Rondeau")
+#   2. [C2] diffusion.py attn_flags -> [True, True, False] (for Stage 2 readiness)
+# Expected: RPA may drop from 96.77% to ~90-95%, amp_corr may change significantly
+
+# data_dir: uses default (PROJECT_ROOT/datagen)
+output_dir: "experiments/checkpoints/exp003"
+instruments: ["vn", "tpt", "fl"]
+crop_len: 512
+seed: 42
+save_every: 10
+
+stage1:
+  batch_size: 32
+  lr: 0.001
+  epochs: 100
+  lam: 1.0
+  patience: 15
+  lr_patience: 5
+  lr_factor: 0.5
+  dropout: 0.3

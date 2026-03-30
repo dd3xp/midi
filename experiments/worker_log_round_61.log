@@ -1,0 +1,29 @@
+The log has been updated. Let me summarize the results:
+
+## exp049 结果总结 — Amp Diffusion v2 (Pure 1ch DDPM)
+
+**训练**: ✅ 300 epochs 完成, best test loss = 0.0612 @ep68
+
+### 核心指标 (η=0.3, 5 samples):
+
+| 指标 | 值 |
+|------|-----|
+| **Amp Corr mean** | **0.687** |
+| **Amp Corr oracle** | **0.711** |
+| **Amp Diversity** | **0.011** ✅ |
+| f0 RPA mean | 94.09% |
+| f0 RPA oracle | 95.82% |
+| f0 MAE | 24.70 |
+| VDE | 7.79 |
+| Amp RMSE(log) | 0.893 |
+
+### 关键发现:
+
+1. **与 exp041 几乎完全一致** — augmentation + 更多 epochs 未带来任何改善 (Corr 0.687 vs 0.696)
+2. **Amp diffusion 质量天花板确认**: ~0.69 (mean) / ~0.71 (oracle), 无论怎么调都不变
+3. **远逊于确定性方法**: 0.687 vs 0.789 (exp048 无inst) / 0.807 (exp039 有inst)
+4. **amp diversity = 0.011**: 唯一优势, 与 exp041 一致
+5. **eta=0 无改善**: deterministic DDIM Corr=0.686 ≈ eta=0.3 的 0.687
+6. **当前最佳未更新**: exp039 (Amp Corr=0.807 含inst) 仍为全局最佳
+
+已记录到 `experiments/log.md`, 等待 supervisor 规划下一步。

@@ -1,0 +1,20 @@
+The training log and experiment log confirm that **no new training was run this round**. The `next_train_cmd.sh` was a placeholder script that verified exp015b results are already logged and exited cleanly (exit code 0).
+
+Here's the current state:
+
+**exp015b is already fully logged** in `experiments/log.md`:
+- **f0 RPA**: 93.63% (mean) / 94.75% (oracle) ✅
+- **Amp Corr**: 0.624 ✅  
+- **VDE**: 6.56
+- **f0 diversity**: 11.62 cents
+
+**当前最佳** is already up to date with exp015b as the diffusion best on the expanded dataset.
+
+**Status**: The project is awaiting supervisor review to plan the next experiment. The log's "下一步计划" section lists potential directions:
+1. AmpPredictor with separate optimizer (lr=1e-3)
+2. Larger AmpPredictor (hidden=256, 2-layer GRU)
+3. AmpPredictor early stopping
+4. Eta sweep on exp015b
+5. Final model selection + visualization
+
+No changes are needed — everything is already correctly logged. The supervisor should be invoked next to decide the next experiment direction.

@@ -1,0 +1,604 @@
+=== exp019: Final Mixed Checkpoint Evaluation ===
+Strategy: exp017 diffusion (best f0) + exp018 AmpPredictor (best amp)
+
+--- Step 1: Preparing mixed checkpoint directory ---
+Mixed checkpoint prepared:
+  - baseline_best.pt      <- exp014 (frozen encoder)
+  - norm_stats.pt         <- exp017 (same dataset)
+  - diffusion_best_ema.pt <- exp017 (best f0: RPA=95.45%)
+  - amp_predictor_best.pt <- exp018 (best amp: Corr=0.665, RMSE=0.697)
+
+--- Step 2a: Evaluating eta=0.0 (deterministic DDIM) ---
+Device: cuda
+Test tracks: 49
+
+--- Evaluating Baseline ---
+{
+  "baseline_rpa": {
+    "mean": 0.9658827741755006,
+    "std": 0.02573364969930534,
+    "min": 0.8776515151515152,
+    "max": 0.9935869084475896
+  },
+  "baseline_f0_mae": {
+    "mean": 20.954221706001125,
+    "std": 15.969347029404771,
+    "min": 8.145237922668457,
+    "max": 122.34555053710938
+  },
+  "baseline_amp_corr": {
+    "mean": 0.6332069846311413,
+    "std": 0.13835512521763138,
+    "min": 0.320714556864434,
+    "max": 0.8655917342413089
+  },
+  "baseline_amp_rmse_log": {
+    "mean": 0.7236840530317656,
+    "std": 0.16298941088433436,
+    "min": 0.5068249702453613,
+    "max": 1.2144718170166016
+  },
+  "baseline_vde_mean": {
+    "mean": 8.700343201008295,
+    "std": 6.728204279801596,
+    "min": 1.5698935944278334,
+    "max": 36.20258526982324
+  },
+  "baseline_vre_mean": {
+    "mean": 0.7699104583787418,
+    "std": 0.23356828770879728,
+    "min": 0.3327695309401144,
+    "max": 1.1718410781045039
+  },
+  "baseline_n_vibrato_notes": {
+    "mean": 74.18367346938776,
+    "std": 43.8306916368287,
+    "min": 17.0,
+    "max": 144.0
+  }
+}
+
+--- Evaluating Diffusion ---
+Loaded AmpPredictor (hidden=256, gru_hidden=128, layers=2, dropout=0.3) from experiments/checkpoints/exp019_mixed\amp_predictor_best.pt
+{
+  "diffusion_rpa_mean": {
+    "mean": 0.9470972116606806,
+    "std": 0.04297917475504594,
+    "min": 0.8068939393939395,
+    "max": 0.9889940828402366
+  },
+  "diffusion_rpa_oracle": {
+    "mean": 0.9627278808965087,
+    "std": 0.027430137729318498,
+    "min": 0.8723484848484848,
+    "max": 0.994378698224852
+  },
+  "diffusion_f0_mae_mean": {
+    "mean": 23.111171298124347,
+    "std": 17.601860911329425,
+    "min": 9.439802742004394,
+    "max": 132.36114196777345
+  },
+  "diffusion_f0_mae_oracle": {
+    "mean": 19.100333291657115,
+    "std": 16.15103088191552,
+    "min": 8.461800575256348,
+    "max": 121.33722686767578
+  },
+  "diffusion_amp_corr_mean": {
+    "mean": 0.6646289681758569,
+    "std": 0.10898499364622107,
+    "min": 0.4440418275677474,
+    "max": 0.8902002307142463
+  },
+  "diffusion_amp_corr_oracle": {
+    "mean": 0.6646289681758569,
+    "std": 0.10898499364622107,
+    "min": 0.4440418275677474,
+    "max": 0.8902002307142461
+  },
+  "diffusion_amp_rmse_log_mean": {
+    "mean": 0.6968917311454306,
+    "std": 0.14743307726378085,
+    "min": 0.48234689235687256,
+    "max": 1.245940089225769
+  },
+  "diffusion_amp_rmse_log_oracle": {
+    "mean": 0.6968917311454306,
+    "std": 0.14743307726378085,
+    "min": 0.48234689235687256,
+    "max": 1.245940089225769
+  },
+  "diffusion_vde_mean_avg": {
+    "mean": 6.968393256255934,
+    "std": 5.970729406233871,
+    "min": 1.4529987377329312,
+    "max": 31.66475899480601
+  },
+  "diffusion_vde_mean_oracle": {
+    "mean": 7.014692507564208,
+    "std": 6.195862058556881,
+    "min": 1.1855655626758905,
+    "max": 33.250761000799656
+  },
+  "diffusion_vre_mean_avg": {
+    "mean": 0.8745796546504864,
+    "std": 0.18680200941995537,
+    "min": 0.5247303968603004,
+    "max": 1.1974233401214256
+  },
+  "diffusion_vre_mean_oracle": {
+    "mean": 0.8923193438168583,
+    "std": 0.20621056933242213,
+    "min": 0.28898694346083065,
+    "max": 1.2929504781797234
+  },
+  "diffusion_f0_diversity_cents": {
+    "mean": 10.529605378909986,
+    "std": 3.3580751175926338,
+    "min": 6.2172770500183105,
+    "max": 20.050745010375977
+  },
+  "diffusion_amp_diversity": {
+    "mean": 1.9612269567724069e-10,
+    "std": 2.7334956554826277e-10,
+    "min": 3.536584566865564e-11,
+    "max": 9.17500464492349e-10
+  },
+  "diffusion_n_vibrato_notes": {
+    "mean": 74.18367346938776,
+    "std": 43.8306916368287,
+    "min": 17.0,
+    "max": 144.0
+  }
+}
+
+Results saved to experiments/results/exp019_eta00.json
+
+--- Step 2b: Evaluating eta=0.3 ---
+Device: cuda
+Test tracks: 49
+
+--- Evaluating Baseline ---
+{
+  "baseline_rpa": {
+    "mean": 0.9658827741755006,
+    "std": 0.02573364969930534,
+    "min": 0.8776515151515152,
+    "max": 0.9935869084475896
+  },
+  "baseline_f0_mae": {
+    "mean": 20.954221706001125,
+    "std": 15.969347029404771,
+    "min": 8.145237922668457,
+    "max": 122.34555053710938
+  },
+  "baseline_amp_corr": {
+    "mean": 0.6332069846311413,
+    "std": 0.13835512521763138,
+    "min": 0.320714556864434,
+    "max": 0.8655917342413089
+  },
+  "baseline_amp_rmse_log": {
+    "mean": 0.7236840530317656,
+    "std": 0.16298941088433436,
+    "min": 0.5068249702453613,
+    "max": 1.2144718170166016
+  },
+  "baseline_vde_mean": {
+    "mean": 8.700343201008295,
+    "std": 6.728204279801596,
+    "min": 1.5698935944278334,
+    "max": 36.20258526982324
+  },
+  "baseline_vre_mean": {
+    "mean": 0.7699104583787418,
+    "std": 0.23356828770879728,
+    "min": 0.3327695309401144,
+    "max": 1.1718410781045039
+  },
+  "baseline_n_vibrato_notes": {
+    "mean": 74.18367346938776,
+    "std": 43.8306916368287,
+    "min": 17.0,
+    "max": 144.0
+  }
+}
+
+--- Evaluating Diffusion ---
+Loaded AmpPredictor (hidden=256, gru_hidden=128, layers=2, dropout=0.3) from experiments/checkpoints/exp019_mixed\amp_predictor_best.pt
+{
+  "diffusion_rpa_mean": {
+    "mean": 0.9537464428399973,
+    "std": 0.02762259275698065,
+    "min": 0.8699242424242424,
+    "max": 0.9881262327416174
+  },
+  "diffusion_rpa_oracle": {
+    "mean": 0.9618565513905534,
+    "std": 0.02616663911747144,
+    "min": 0.8731060606060606,
+    "max": 0.9921104536489151
+  },
+  "diffusion_f0_mae_mean": {
+    "mean": 22.183055414472303,
+    "std": 16.24843555157949,
+    "min": 10.388970947265625,
+    "max": 125.8421142578125
+  },
+  "diffusion_f0_mae_oracle": {
+    "mean": 19.384454610396403,
+    "std": 16.198083539005953,
+    "min": 9.715606689453125,
+    "max": 123.64519500732422
+  },
+  "diffusion_amp_corr_mean": {
+    "mean": 0.6646289681758569,
+    "std": 0.10898499364622107,
+    "min": 0.4440418275677474,
+    "max": 0.8902002307142463
+  },
+  "diffusion_amp_corr_oracle": {
+    "mean": 0.6646289681758569,
+    "std": 0.10898499364622107,
+    "min": 0.4440418275677474,
+    "max": 0.8902002307142461
+  },
+  "diffusion_amp_rmse_log_mean": {
+    "mean": 0.6968917311454306,
+    "std": 0.14743307726378085,
+    "min": 0.48234689235687256,
+    "max": 1.245940089225769
+  },
+  "diffusion_amp_rmse_log_oracle": {
+    "mean": 0.6968917311454306,
+    "std": 0.14743307726378085,
+    "min": 0.48234689235687256,
+    "max": 1.245940089225769
+  },
+  "diffusion_vde_mean_avg": {
+    "mean": 6.730631031803799,
+    "std": 5.735470206250757,
+    "min": 2.074048833882685,
+    "max": 31.640451947677953
+  },
+  "diffusion_vde_mean_oracle": {
+    "mean": 6.550717516290524,
+    "std": 5.9012620293843545,
+    "min": 0.9227181248484921,
+    "max": 32.0979775833529
+  },
+  "diffusion_vre_mean_avg": {
+    "mean": 0.8549246630245428,
+    "std": 0.18152544938521684,
+    "min": 0.536095483600288,
+    "max": 1.1551662974075059
+  },
+  "diffusion_vre_mean_oracle": {
+    "mean": 0.867683250865365,
+    "std": 0.20591655995286817,
+    "min": 0.393519768615987,
+    "max": 1.2152273872971209
+  },
+  "diffusion_f0_diversity_cents": {
+    "mean": 10.323864177781708,
+    "std": 2.027021039227646,
+    "min": 6.749424457550049,
+    "max": 14.661569595336914
+  },
+  "diffusion_amp_diversity": {
+    "mean": 1.9612269567724069e-10,
+    "std": 2.7334956554826277e-10,
+    "min": 3.536584566865564e-11,
+    "max": 9.17500464492349e-10
+  },
+  "diffusion_n_vibrato_notes": {
+    "mean": 74.18367346938776,
+    "std": 43.8306916368287,
+    "min": 17.0,
+    "max": 144.0
+  }
+}
+
+Results saved to experiments/results/exp019_eta03.json
+
+--- Step 2c: Evaluating eta=0.5 ---
+Device: cuda
+Test tracks: 49
+
+--- Evaluating Baseline ---
+{
+  "baseline_rpa": {
+    "mean": 0.9658827741755006,
+    "std": 0.02573364969930534,
+    "min": 0.8776515151515152,
+    "max": 0.9935869084475896
+  },
+  "baseline_f0_mae": {
+    "mean": 20.954221706001125,
+    "std": 15.969347029404771,
+    "min": 8.145237922668457,
+    "max": 122.34555053710938
+  },
+  "baseline_amp_corr": {
+    "mean": 0.6332069846311413,
+    "std": 0.13835512521763138,
+    "min": 0.320714556864434,
+    "max": 0.8655917342413089
+  },
+  "baseline_amp_rmse_log": {
+    "mean": 0.7236840530317656,
+    "std": 0.16298941088433436,
+    "min": 0.5068249702453613,
+    "max": 1.2144718170166016
+  },
+  "baseline_vde_mean": {
+    "mean": 8.700343201008295,
+    "std": 6.728204279801596,
+    "min": 1.5698935944278334,
+    "max": 36.20258526982324
+  },
+  "baseline_vre_mean": {
+    "mean": 0.7699104583787418,
+    "std": 0.23356828770879728,
+    "min": 0.3327695309401144,
+    "max": 1.1718410781045039
+  },
+  "baseline_n_vibrato_notes": {
+    "mean": 74.18367346938776,
+    "std": 43.8306916368287,
+    "min": 17.0,
+    "max": 144.0
+  }
+}
+
+--- Evaluating Diffusion ---
+Loaded AmpPredictor (hidden=256, gru_hidden=128, layers=2, dropout=0.3) from experiments/checkpoints/exp019_mixed\amp_predictor_best.pt
+{
+  "diffusion_rpa_mean": {
+    "mean": 0.9533901317959855,
+    "std": 0.02984603926644826,
+    "min": 0.8621969696969696,
+    "max": 0.9907100591715977
+  },
+  "diffusion_rpa_oracle": {
+    "mean": 0.9593572310404467,
+    "std": 0.026556923384660893,
+    "min": 0.8696969696969697,
+    "max": 0.9912228796844181
+  },
+  "diffusion_f0_mae_mean": {
+    "mean": 22.358525677116546,
+    "std": 16.864855126973204,
+    "min": 10.99671630859375,
+    "max": 128.2343276977539
+  },
+  "diffusion_f0_mae_oracle": {
+    "mean": 20.289184200520417,
+    "std": 16.223367692058574,
+    "min": 9.887619018554688,
+    "max": 123.7430191040039
+  },
+  "diffusion_amp_corr_mean": {
+    "mean": 0.6646289681758569,
+    "std": 0.10898499364622107,
+    "min": 0.4440418275677474,
+    "max": 0.8902002307142463
+  },
+  "diffusion_amp_corr_oracle": {
+    "mean": 0.6646289681758569,
+    "std": 0.10898499364622107,
+    "min": 0.4440418275677474,
+    "max": 0.8902002307142461
+  },
+  "diffusion_amp_rmse_log_mean": {
+    "mean": 0.6968917311454306,
+    "std": 0.14743307726378085,
+    "min": 0.48234689235687256,
+    "max": 1.245940089225769
+  },
+  "diffusion_amp_rmse_log_oracle": {
+    "mean": 0.6968917311454306,
+    "std": 0.14743307726378085,
+    "min": 0.48234689235687256,
+    "max": 1.245940089225769
+  },
+  "diffusion_vde_mean_avg": {
+    "mean": 6.553805696344368,
+    "std": 5.746775426032089,
+    "min": 2.1290519240922636,
+    "max": 31.614942956418616
+  },
+  "diffusion_vde_mean_oracle": {
+    "mean": 6.4925527405992725,
+    "std": 5.709604699845435,
+    "min": 1.6686692767142315,
+    "max": 31.718352896798645
+  },
+  "diffusion_vre_mean_avg": {
+    "mean": 0.8330036147955436,
+    "std": 0.17779493906647453,
+    "min": 0.5104834381354062,
+    "max": 1.1476710008077717
+  },
+  "diffusion_vre_mean_oracle": {
+    "mean": 0.8327379878799296,
+    "std": 0.22131184292002304,
+    "min": 0.3834779136028114,
+    "max": 1.2734640784470923
+  },
+  "diffusion_f0_diversity_cents": {
+    "mean": 10.077191693442208,
+    "std": 1.4870165986973902,
+    "min": 7.55991268157959,
+    "max": 13.7896146774292
+  },
+  "diffusion_amp_diversity": {
+    "mean": 1.9612269567724069e-10,
+    "std": 2.7334956554826277e-10,
+    "min": 3.536584566865564e-11,
+    "max": 9.17500464492349e-10
+  },
+  "diffusion_n_vibrato_notes": {
+    "mean": 74.18367346938776,
+    "std": 43.8306916368287,
+    "min": 17.0,
+    "max": 144.0
+  }
+}
+
+Results saved to experiments/results/exp019_eta05.json
+
+--- Step 2d: Evaluating eta=1.0 (full stochastic) ---
+Device: cuda
+Test tracks: 49
+
+--- Evaluating Baseline ---
+{
+  "baseline_rpa": {
+    "mean": 0.9658827741755006,
+    "std": 0.02573364969930534,
+    "min": 0.8776515151515152,
+    "max": 0.9935869084475896
+  },
+  "baseline_f0_mae": {
+    "mean": 20.954221706001125,
+    "std": 15.969347029404771,
+    "min": 8.145237922668457,
+    "max": 122.34555053710938
+  },
+  "baseline_amp_corr": {
+    "mean": 0.6332069846311413,
+    "std": 0.13835512521763138,
+    "min": 0.320714556864434,
+    "max": 0.8655917342413089
+  },
+  "baseline_amp_rmse_log": {
+    "mean": 0.7236840530317656,
+    "std": 0.16298941088433436,
+    "min": 0.5068249702453613,
+    "max": 1.2144718170166016
+  },
+  "baseline_vde_mean": {
+    "mean": 8.700343201008295,
+    "std": 6.728204279801596,
+    "min": 1.5698935944278334,
+    "max": 36.20258526982324
+  },
+  "baseline_vre_mean": {
+    "mean": 0.7699104583787418,
+    "std": 0.23356828770879728,
+    "min": 0.3327695309401144,
+    "max": 1.1718410781045039
+  },
+  "baseline_n_vibrato_notes": {
+    "mean": 74.18367346938776,
+    "std": 43.8306916368287,
+    "min": 17.0,
+    "max": 144.0
+  }
+}
+
+--- Evaluating Diffusion ---
+Loaded AmpPredictor (hidden=256, gru_hidden=128, layers=2, dropout=0.3) from experiments/checkpoints/exp019_mixed\amp_predictor_best.pt
+{
+  "diffusion_rpa_mean": {
+    "mean": 0.9558708843151614,
+    "std": 0.028006738389841333,
+    "min": 0.8701515151515151,
+    "max": 0.9893688362919132
+  },
+  "diffusion_rpa_oracle": {
+    "mean": 0.9595852532349972,
+    "std": 0.02667812316678009,
+    "min": 0.8700757575757576,
+    "max": 0.9922090729783037
+  },
+  "diffusion_f0_mae_mean": {
+    "mean": 21.50538649656335,
+    "std": 16.008782338261362,
+    "min": 10.83780403137207,
+    "max": 123.3839111328125
+  },
+  "diffusion_f0_mae_oracle": {
+    "mean": 20.236708991381587,
+    "std": 16.01825159412714,
+    "min": 9.282038688659668,
+    "max": 122.7343978881836
+  },
+  "diffusion_amp_corr_mean": {
+    "mean": 0.6646289681758569,
+    "std": 0.10898499364622107,
+    "min": 0.4440418275677474,
+    "max": 0.8902002307142463
+  },
+  "diffusion_amp_corr_oracle": {
+    "mean": 0.6646289681758569,
+    "std": 0.10898499364622107,
+    "min": 0.4440418275677474,
+    "max": 0.8902002307142461
+  },
+  "diffusion_amp_rmse_log_mean": {
+    "mean": 0.6968917311454306,
+    "std": 0.14743307726378085,
+    "min": 0.48234689235687256,
+    "max": 1.245940089225769
+  },
+  "diffusion_amp_rmse_log_oracle": {
+    "mean": 0.6968917311454306,
+    "std": 0.14743307726378085,
+    "min": 0.48234689235687256,
+    "max": 1.245940089225769
+  },
+  "diffusion_vde_mean_avg": {
+    "mean": 6.536670583945152,
+    "std": 5.802775274791638,
+    "min": 1.6285700174161601,
+    "max": 32.241657806217766
+  },
+  "diffusion_vde_mean_oracle": {
+    "mean": 6.422466545517872,
+    "std": 5.908365535738884,
+    "min": 1.370992627016804,
+    "max": 32.89953822996198
+  },
+  "diffusion_vre_mean_avg": {
+    "mean": 0.8377417282184998,
+    "std": 0.18243625282845233,
+    "min": 0.5409640366846105,
+    "max": 1.2736760127412954
+  },
+  "diffusion_vre_mean_oracle": {
+    "mean": 0.8447916402332968,
+    "std": 0.23197168164986448,
+    "min": 0.42538461755170176,
+    "max": 1.4520962383468599
+  },
+  "diffusion_f0_diversity_cents": {
+    "mean": 9.067689233896683,
+    "std": 1.0787984124201047,
+    "min": 7.123523712158203,
+    "max": 11.989168167114258
+  },
+  "diffusion_amp_diversity": {
+    "mean": 1.9612269567724069e-10,
+    "std": 2.7334956554826277e-10,
+    "min": 3.536584566865564e-11,
+    "max": 9.17500464492349e-10
+  },
+  "diffusion_n_vibrato_notes": {
+    "mean": 74.18367346938776,
+    "std": 43.8306916368287,
+    "min": 17.0,
+    "max": 144.0
+  }
+}
+
+Results saved to experiments/results/exp019_eta10.json
+
+=== exp019: All 4 eta evaluations complete ===
+Results saved to:
+  experiments/results/exp019_eta00.json
+  experiments/results/exp019_eta03.json
+  experiments/results/exp019_eta05.json
+  experiments/results/exp019_eta10.json

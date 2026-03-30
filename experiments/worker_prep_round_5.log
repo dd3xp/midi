@@ -1,0 +1,19 @@
+Here's a summary of what I prepared for **exp004**:
+
+## Summary: exp004 — Stage 2 Conditional Diffusion (First Run)
+
+**What**: First Stage 2 training — conditional DDPM with 1D U-Net denoiser, using the frozen MIDI encoder from exp003.
+
+**Config** (`experiments/configs/exp004.yaml`): Already existed from supervisor plan.
+- batch_size=16, lr=2e-4, epochs=200, ema_decay=0.9999, T=1000
+- All default hyperparameters per `training.md §3.2`
+
+**Training script** (`experiments/next_train_cmd.sh`):
+1. Creates `experiments/checkpoints/exp004/` directory
+2. Copies `exp003/baseline_best.pt` → `exp004/` (frozen encoder prerequisite)
+3. Runs `train.py --config exp004.yaml --stage 2`
+4. Runs `evaluate.py --mode both --n_samples 5` (evaluates baseline + diffusion with 5 samples for diversity analysis)
+
+**No code bugs to fix** — supervisor confirmed Stage 2 code passed review.
+
+**Expected results**: f0 RPA ~80-92%, Amp Corr ~0.5-0.7. Key focus: training stability and whether loss converges monotonically.

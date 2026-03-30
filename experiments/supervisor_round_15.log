@@ -1,0 +1,33 @@
+Good. No NEEDS_HUMAN.txt — the architecture change is pre-approved and the worker can proceed.
+
+---
+
+## Supervisor Review Summary
+
+### Experiment Reviewed: **exp011** (Visualization Fix + eta=0.5 Re-evaluation)
+
+### Key Metrics (exp011 eta=0.5):
+- **f0 RPA mean**: 94.22% (consistent with other eta values)
+- **f0 RPA oracle**: 96.48%
+- **f0 diversity**: 9.16 cents (fills the gap in eta sweep data)
+- **Amp Corr mean**: 0.573 (still below baseline 0.645)
+- **VDE**: 4.68 (far superior to baseline 8.34)
+
+### Code Review:
+- ✅ `visualize.py` modifications correct (vibrato zoom, eta sweep data source, baseline reference line)
+- ✅ All 11 figures regenerated and paper-ready
+- ✅ eta=0.5 diversity data gap filled (exp008 had missing data; exp011 fixed it)
+- ✅ No new bugs found
+
+### What Was Planned Next:
+**exp012: Baseline amp head Sigmoid → Softplus** (architecture change, pre-approved)
+- Single code change: `baseline.py:30` — `nn.Sigmoid()` → `nn.Softplus()`
+- Retrain Stage 1 baseline with same hyperparameters as exp003
+- Evaluate and compare amp_corr
+- Expected improvement: amp_corr 0.645 → 0.72-0.80 if Sigmoid is indeed the bottleneck
+
+### Critical Issues:
+None. The previous supervisor incorrectly marked the architecture change as "需人工决策". Per project policy, **architecture changes to improve amp corr are pre-approved**. The NEEDS_HUMAN.txt was NOT created, and the worker can proceed with exp012 immediately.
+
+### Biggest Bottleneck:
+**Amp Corr** (baseline 0.645, diffusion 0.571, target >0.9). The Softplus experiment is the first step in a potential cascade: if baseline amp improves → retrain diffusion Stage 2 with improved encoder → diffusion amp should also improve.

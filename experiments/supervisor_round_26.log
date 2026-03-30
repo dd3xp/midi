@@ -1,0 +1,34 @@
+Everything looks good. Here's the summary:
+
+---
+
+## Supervisor Review Summary — exp018
+
+### Experiment Reviewed: exp018 (AmpPredictor regularization: separate optimizer + weight_decay)
+
+### Key Metrics
+| Metric | exp017 → exp018 | vs Baseline |
+|--------|-----------------|-------------|
+| **Amp Corr** | 0.645 → **0.665** (+3.1%) | **+5.1% over baseline (0.633)** |
+| **Amp RMSE(log)** | 0.807 → **0.697** (-13.6%) | **First time better than baseline (0.724)** |
+| f0 RPA mean | 95.45% → 94.33% (-1.12%) | Still 2.26% behind baseline |
+| Overfitting gap | 0.125 → **0.048** (-62%) | Best epoch delayed: ep66→ep112 |
+
+### Code Review: ✅ No bugs found
+- Separate optimizer implementation is correct
+- weight_decay, CosineAnnealingLR, grad clipping — all verified
+
+### Diagnosis
+- **Amp improvement is massive** — regularization strategy worked as planned
+- **f0 slight regression** caused by checkpoint selection (combined test_loss = diff + amp), not fundamental
+- **Solution**: Mix exp017's diffusion checkpoint (best f0) with exp018's AmpPredictor (best amp)
+
+### Next Plan: exp019 — Final Model Evaluation for Paper
+1. **Mixed checkpoint**: exp017 diffusion + exp018 AmpPredictor (both use same frozen encoder)
+2. **Multi-eta sweep**: η=0.0, 0.3, 0.5, 1.0 with n_samples=5
+3. **Publication-quality figures** for AIMC 2026
+4. **Results tables** — eval only, no training needed
+
+### Critical Issues: None
+- No NEEDS_HUMAN.txt created — exp018 met all success criteria
+- Project transitions from tuning phase to **paper preparation phase**

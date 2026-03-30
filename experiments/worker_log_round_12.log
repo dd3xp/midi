@@ -1,0 +1,19 @@
+Everything is in order. Here's a summary of what was logged:
+
+---
+
+**Round 12 结果: exp010 ✅ 完成 (可视化)**
+
+- **类型**: 论文可视化 (无训练), exit code 0
+- **生成**: 11张 PNG figure 保存在 `experiments/figures/`
+  - 3 乐器 × (f0 contour + vibrato zoom + amp contour) = 9张
+  - eta sweep summary = 1张
+  - instrument comparison bar chart = 1张
+- **使用 checkpoint**: exp003 baseline + exp007 diffusion, seed=42 固定
+- **可视化 tracks**: VN (Jupiter), TPT (Nocturne), FL (Nocturne)
+
+**当前最佳不变** (exp010 为可视化实验, 无新模型指标):
+- Baseline: exp003 (RPA=97.14%, Amp Corr=0.645)
+- Diffusion: exp007 model (Mean RPA~94.2%, Oracle RPA~96.6%, VDE=4.80)
+
+**进度更新**: 论文可视化已完成, 实验阶段基本结束, 可进入论文写作。等待 supervisor 规划下一步。

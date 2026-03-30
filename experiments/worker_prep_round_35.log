@@ -1,0 +1,24 @@
+All checks passed. Here's a summary of what was prepared:
+
+---
+
+## exp026 Preparation Summary
+
+**Experiment**: Model Soup — average amp_predictor weights from exp023 and exp024 (+ optional 3-way with exp025)
+
+**What it does** (zero training cost):
+1. **2-way soup**: Arithmetically averages all 44 weight tensors of `amp_predictor_best.pt` from exp023 and exp024, then copies the shared encoder (exp014), norm_stats (exp023), and diffusion model (exp017)
+2. **3-way soup**: Same but also includes exp025 weights (3-way average)
+3. **Evaluates both** with DDIM 50 steps, η=0.3, 3 samples
+
+**Files created**:
+- `experiments/configs/exp026.yaml` — config with attention AmpPredictor architecture (matching exp023/024)
+- `experiments/next_train_cmd.sh` — script that creates soup weights, copies checkpoints, and evaluates both 2-way and 3-way soups
+
+**Expected results** (from supervisor's plan):
+| Metric | exp023 | exp024 | 2-way Soup (expected) |
+|--------|--------|--------|-----------------------|
+| Amp Corr | **0.676** | 0.668 | 0.670–0.676 |
+| Amp RMSE | 0.726 | **0.695** | 0.700–0.715 |
+
+**Key point**: This is a no-training experiment — pure weight arithmetic + evaluation. Should complete very quickly (just evaluation time).

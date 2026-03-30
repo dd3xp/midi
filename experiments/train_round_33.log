@@ -1,0 +1,347 @@
+=== exp024: Training AmpPredictor with correlation-aligned loss ===
+C:\Users\17145\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py:1367: UserWarning: expandable_segments not supported on this platform (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\c10/cuda/CUDAAllocatorConfig.h:39.)
+  return t.to(
+C:\lxr\study\final\src\model\diffusion.py:384: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.attn = nn.TransformerEncoder(attn_layer, num_layers=n_attn_layers)
+Device: cuda
+Config: {
+  "data_dir": "C:\\lxr\\study\\final\\datagen\\solo\\URMP",
+  "bach10_dir": "C:\\lxr\\study\\final\\datagen\\solo\\Bach10",
+  "output_dir": "experiments/checkpoints/exp024",
+  "instruments": [
+    "vn",
+    "va",
+    "vc",
+    "fl",
+    "ob",
+    "cl",
+    "sax",
+    "tpt",
+    "tbn",
+    "bn"
+  ],
+  "crop_len": 512,
+  "seed": 42,
+  "stage1": {
+    "batch_size": 32,
+    "lr": 0.001,
+    "epochs": 100,
+    "lam": 1.0,
+    "patience": 15,
+    "lr_patience": 5,
+    "lr_factor": 0.5,
+    "dropout": 0.3
+  },
+  "stage2": {
+    "batch_size": 16,
+    "lr": 0.0002,
+    "epochs": 200,
+    "ema_decay": 0.995,
+    "n_diffusion_steps": 1000,
+    "samples_per_epoch": 1860,
+    "lr_min": 1e-05,
+    "n_channels": 1,
+    "amp_dropout": 0.4,
+    "amp_hidden": 256,
+    "amp_gru_hidden": 128,
+    "amp_gru_layers": 2,
+    "amp_use_attention": true,
+    "amp_n_attn_heads": 4,
+    "amp_n_attn_layers": 2,
+    "amp_f0_conditioned": false,
+    "freeze_diffusion": true,
+    "diffusion_checkpoint": "experiments/checkpoints/exp017/diffusion_best_ema.pt",
+    "amp_lr": 0.0001,
+    "amp_weight_decay": 0.001,
+    "amp_corr_weight": 1.0,
+    "amp_grad_weight": 0.5
+  },
+  "stage3": {
+    "batch_size": 16,
+    "lr": 0.0002,
+    "epochs": 200,
+    "ema_decay": 0.995,
+    "n_diffusion_steps": 1000,
+    "samples_per_epoch": null
+  },
+  "save_every": 10,
+  "baseline_checkpoint": "experiments/checkpoints/exp014/baseline_best.pt"
+}
+Loaded baseline from experiments/checkpoints/exp014/baseline_best.pt
+
+============================================================
+Stage 2: Training 1ch Diffusion (f0) + AmpPredictor
+============================================================
+Train: 124 tracks, samples_per_epoch=1860
+Amp log stats: mean=-4.5382, std=1.2719
+Diffusion n_channels=1
+Loaded pre-trained diffusion from experiments/checkpoints/exp017/diffusion_best_ema.pt
+Diffusion FROZEN ¡ª only training AmpPredictor
+AmpPredictor enabled (hidden=256, gru_hidden=128, layers=2, dropout=0.4, f0_conditioned=False, use_attention=True, n_attn_heads=4, n_attn_layers=2)
+AmpPredictor optimizer: lr=0.0001, weight_decay=0.001
+Using CosineAnnealingLR (amp): lr 0.0001 -> 1e-05 over 200 epochs
+Epoch 1/200  train=2.293894 (diff=0.031776 amp=2.293894)  test=2.640829 (diff=0.009015 amp=2.631814)  diff_lr=0.00e+00 amp_lr=1.00e-04
+  -> New best test_loss=2.640829
+  -> New best test_amp_loss=2.631814, saved amp_predictor
+Epoch 2/200  train=1.250039 (diff=0.031396 amp=1.250039)  test=2.161064 (diff=0.009644 amp=2.151420)  diff_lr=0.00e+00 amp_lr=1.00e-04
+  -> New best test_loss=2.161064
+  -> New best test_amp_loss=2.151420, saved amp_predictor
+Epoch 3/200  train=1.183027 (diff=0.033402 amp=1.183027)  test=1.892797 (diff=0.041496 amp=1.851301)  diff_lr=0.00e+00 amp_lr=1.00e-04
+  -> New best test_loss=1.892797
+  -> New best test_amp_loss=1.851301, saved amp_predictor
+Epoch 4/200  train=1.143626 (diff=0.032009 amp=1.143626)  test=1.889342 (diff=0.028749 amp=1.860593)  diff_lr=0.00e+00 amp_lr=1.00e-04
+  -> New best test_loss=1.889342
+Epoch 5/200  train=1.119036 (diff=0.034241 amp=1.119036)  test=1.751653 (diff=0.107724 amp=1.643929)  diff_lr=0.00e+00 amp_lr=9.99e-05
+  -> New best test_loss=1.751653
+  -> New best test_amp_loss=1.643929, saved amp_predictor
+Epoch 6/200  train=1.112884 (diff=0.033728 amp=1.112884)  test=1.733458 (diff=0.013413 amp=1.720045)  diff_lr=0.00e+00 amp_lr=9.99e-05
+  -> New best test_loss=1.733458
+Epoch 7/200  train=1.087945 (diff=0.033449 amp=1.087945)  test=1.695936 (diff=0.020998 amp=1.674938)  diff_lr=0.00e+00 amp_lr=9.98e-05
+  -> New best test_loss=1.695936
+Epoch 8/200  train=1.076325 (diff=0.031338 amp=1.076325)  test=1.633598 (diff=0.041042 amp=1.592556)  diff_lr=0.00e+00 amp_lr=9.97e-05
+  -> New best test_loss=1.633598
+  -> New best test_amp_loss=1.592556, saved amp_predictor
+Epoch 9/200  train=1.049986 (diff=0.031767 amp=1.049986)  test=1.496402 (diff=0.031909 amp=1.464493)  diff_lr=0.00e+00 amp_lr=9.96e-05
+  -> New best test_loss=1.496402
+  -> New best test_amp_loss=1.464493, saved amp_predictor
+Epoch 10/200  train=1.036147 (diff=0.031542 amp=1.036147)  test=1.570426 (diff=0.011116 amp=1.559310)  diff_lr=0.00e+00 amp_lr=9.96e-05
+Epoch 11/200  train=1.053224 (diff=0.035007 amp=1.053224)  test=1.614456 (diff=0.036388 amp=1.578068)  diff_lr=0.00e+00 amp_lr=9.94e-05
+Epoch 12/200  train=1.048231 (diff=0.032111 amp=1.048231)  test=1.424011 (diff=0.038103 amp=1.385907)  diff_lr=0.00e+00 amp_lr=9.93e-05
+  -> New best test_loss=1.424011
+  -> New best test_amp_loss=1.385907, saved amp_predictor
+Epoch 13/200  train=1.037497 (diff=0.033744 amp=1.037497)  test=1.401305 (diff=0.067514 amp=1.333791)  diff_lr=0.00e+00 amp_lr=9.92e-05
+  -> New best test_loss=1.401305
+  -> New best test_amp_loss=1.333791, saved amp_predictor
+Epoch 14/200  train=1.021560 (diff=0.032905 amp=1.021560)  test=1.581682 (diff=0.033527 amp=1.548155)  diff_lr=0.00e+00 amp_lr=9.91e-05
+Epoch 15/200  train=1.025137 (diff=0.033494 amp=1.025137)  test=1.689847 (diff=0.011024 amp=1.678823)  diff_lr=0.00e+00 amp_lr=9.89e-05
+Epoch 16/200  train=1.062784 (diff=0.032343 amp=1.062784)  test=1.597364 (diff=0.019046 amp=1.578318)  diff_lr=0.00e+00 amp_lr=9.88e-05
+Epoch 17/200  train=1.040999 (diff=0.033683 amp=1.040999)  test=1.388846 (diff=0.036597 amp=1.352249)  diff_lr=0.00e+00 amp_lr=9.86e-05
+  -> New best test_loss=1.388846
+Epoch 18/200  train=1.043955 (diff=0.031770 amp=1.043955)  test=1.532825 (diff=0.032722 amp=1.500102)  diff_lr=0.00e+00 amp_lr=9.84e-05
+Epoch 19/200  train=1.033718 (diff=0.030638 amp=1.033718)  test=1.240338 (diff=0.015042 amp=1.225296)  diff_lr=0.00e+00 amp_lr=9.82e-05
+  -> New best test_loss=1.240338
+  -> New best test_amp_loss=1.225296, saved amp_predictor
+Epoch 20/200  train=1.028151 (diff=0.031066 amp=1.028151)  test=1.496187 (diff=0.027756 amp=1.468431)  diff_lr=0.00e+00 amp_lr=9.80e-05
+Epoch 21/200  train=1.041303 (diff=0.033095 amp=1.041303)  test=1.331146 (diff=0.012191 amp=1.318955)  diff_lr=0.00e+00 amp_lr=9.78e-05
+Epoch 22/200  train=1.021898 (diff=0.032885 amp=1.021898)  test=1.294322 (diff=0.045853 amp=1.248469)  diff_lr=0.00e+00 amp_lr=9.76e-05
+Epoch 23/200  train=1.009256 (diff=0.032469 amp=1.009256)  test=1.553786 (diff=0.033406 amp=1.520381)  diff_lr=0.00e+00 amp_lr=9.73e-05
+Epoch 24/200  train=1.021167 (diff=0.032399 amp=1.021167)  test=1.334182 (diff=0.022119 amp=1.312064)  diff_lr=0.00e+00 amp_lr=9.71e-05
+Epoch 25/200  train=1.017508 (diff=0.032831 amp=1.017508)  test=1.377149 (diff=0.028958 amp=1.348191)  diff_lr=0.00e+00 amp_lr=9.68e-05
+Epoch 26/200  train=1.022475 (diff=0.033520 amp=1.022475)  test=1.360418 (diff=0.019537 amp=1.340881)  diff_lr=0.00e+00 amp_lr=9.66e-05
+Epoch 27/200  train=1.016416 (diff=0.032427 amp=1.016416)  test=1.404109 (diff=0.025029 amp=1.379079)  diff_lr=0.00e+00 amp_lr=9.63e-05
+Epoch 28/200  train=1.007958 (diff=0.033368 amp=1.007958)  test=1.649423 (diff=0.015951 amp=1.633472)  diff_lr=0.00e+00 amp_lr=9.60e-05
+Epoch 29/200  train=1.011573 (diff=0.033006 amp=1.011573)  test=1.167317 (diff=0.014370 amp=1.152947)  diff_lr=0.00e+00 amp_lr=9.57e-05
+  -> New best test_loss=1.167317
+  -> New best test_amp_loss=1.152947, saved amp_predictor
+Epoch 30/200  train=1.006399 (diff=0.030591 amp=1.006399)  test=1.223160 (diff=0.033453 amp=1.189706)  diff_lr=0.00e+00 amp_lr=9.54e-05
+Epoch 31/200  train=0.997062 (diff=0.032557 amp=0.997062)  test=1.145746 (diff=0.024980 amp=1.120766)  diff_lr=0.00e+00 amp_lr=9.51e-05
+  -> New best test_loss=1.145746
+  -> New best test_amp_loss=1.120766, saved amp_predictor
+Epoch 32/200  train=1.019613 (diff=0.030824 amp=1.019613)  test=1.454335 (diff=0.028422 amp=1.425913)  diff_lr=0.00e+00 amp_lr=9.48e-05
+Epoch 33/200  train=1.015474 (diff=0.030684 amp=1.015474)  test=1.190211 (diff=0.006300 amp=1.183911)  diff_lr=0.00e+00 amp_lr=9.44e-05
+Epoch 34/200  train=1.007703 (diff=0.030732 amp=1.007703)  test=1.499268 (diff=0.030967 amp=1.468302)  diff_lr=0.00e+00 amp_lr=9.41e-05
+Epoch 35/200  train=1.009561 (diff=0.032337 amp=1.009561)  test=1.231657 (diff=0.038507 amp=1.193150)  diff_lr=0.00e+00 amp_lr=9.37e-05
+Epoch 36/200  train=1.016159 (diff=0.033316 amp=1.016159)  test=1.405149 (diff=0.023277 amp=1.381872)  diff_lr=0.00e+00 amp_lr=9.34e-05
+Epoch 37/200  train=1.000147 (diff=0.033264 amp=1.000147)  test=1.369998 (diff=0.036291 amp=1.333707)  diff_lr=0.00e+00 amp_lr=9.30e-05
+Epoch 38/200  train=0.996787 (diff=0.030973 amp=0.996787)  test=1.117780 (diff=0.020226 amp=1.097554)  diff_lr=0.00e+00 amp_lr=9.26e-05
+  -> New best test_loss=1.117780
+  -> New best test_amp_loss=1.097554, saved amp_predictor
+Epoch 39/200  train=1.002123 (diff=0.031802 amp=1.002123)  test=1.205519 (diff=0.013740 amp=1.191779)  diff_lr=0.00e+00 amp_lr=9.22e-05
+Epoch 40/200  train=0.990523 (diff=0.031581 amp=0.990523)  test=1.515134 (diff=0.028797 amp=1.486338)  diff_lr=0.00e+00 amp_lr=9.18e-05
+Epoch 41/200  train=1.028012 (diff=0.030534 amp=1.028012)  test=1.329620 (diff=0.013604 amp=1.316016)  diff_lr=0.00e+00 amp_lr=9.14e-05
+Epoch 42/200  train=0.998734 (diff=0.031418 amp=0.998734)  test=1.055052 (diff=0.034944 amp=1.020108)  diff_lr=0.00e+00 amp_lr=9.10e-05
+  -> New best test_loss=1.055052
+  -> New best test_amp_loss=1.020108, saved amp_predictor
+Epoch 43/200  train=0.997661 (diff=0.032704 amp=0.997661)  test=1.306725 (diff=0.022729 amp=1.283997)  diff_lr=0.00e+00 amp_lr=9.06e-05
+Epoch 44/200  train=1.005857 (diff=0.032032 amp=1.005857)  test=1.284529 (diff=0.015506 amp=1.269022)  diff_lr=0.00e+00 amp_lr=9.01e-05
+Epoch 45/200  train=1.006871 (diff=0.030983 amp=1.006871)  test=1.284013 (diff=0.013201 amp=1.270812)  diff_lr=0.00e+00 amp_lr=8.97e-05
+Epoch 46/200  train=1.004529 (diff=0.032787 amp=1.004529)  test=1.148180 (diff=0.012694 amp=1.135485)  diff_lr=0.00e+00 amp_lr=8.92e-05
+Epoch 47/200  train=0.999502 (diff=0.032153 amp=0.999502)  test=1.346480 (diff=0.055061 amp=1.291420)  diff_lr=0.00e+00 amp_lr=8.88e-05
+Epoch 48/200  train=0.986971 (diff=0.031023 amp=0.986971)  test=1.168935 (diff=0.022041 amp=1.146894)  diff_lr=0.00e+00 amp_lr=8.83e-05
+Epoch 49/200  train=0.999534 (diff=0.032223 amp=0.999534)  test=1.148957 (diff=0.010424 amp=1.138533)  diff_lr=0.00e+00 amp_lr=8.78e-05
+Epoch 50/200  train=0.998391 (diff=0.032948 amp=0.998391)  test=1.177246 (diff=0.021040 amp=1.156206)  diff_lr=0.00e+00 amp_lr=8.73e-05
+Epoch 51/200  train=1.008289 (diff=0.029906 amp=1.008289)  test=1.253713 (diff=0.022709 amp=1.231004)  diff_lr=0.00e+00 amp_lr=8.68e-05
+Epoch 52/200  train=0.987917 (diff=0.034217 amp=0.987917)  test=1.255032 (diff=0.019762 amp=1.235270)  diff_lr=0.00e+00 amp_lr=8.63e-05
+Epoch 53/200  train=0.993126 (diff=0.032270 amp=0.993126)  test=1.293419 (diff=0.024882 amp=1.268537)  diff_lr=0.00e+00 amp_lr=8.58e-05
+Epoch 54/200  train=0.966588 (diff=0.033824 amp=0.966588)  test=1.176173 (diff=0.023841 amp=1.152332)  diff_lr=0.00e+00 amp_lr=8.53e-05
+Epoch 55/200  train=0.986302 (diff=0.032231 amp=0.986302)  test=1.195434 (diff=0.014727 amp=1.180707)  diff_lr=0.00e+00 amp_lr=8.48e-05
+Epoch 56/200  train=0.990942 (diff=0.031952 amp=0.990942)  test=1.324706 (diff=0.028603 amp=1.296103)  diff_lr=0.00e+00 amp_lr=8.42e-05
+Epoch 57/200  train=0.994632 (diff=0.030374 amp=0.994632)  test=1.285775 (diff=0.019230 amp=1.266545)  diff_lr=0.00e+00 amp_lr=8.37e-05
+Epoch 58/200  train=0.978405 (diff=0.031712 amp=0.978405)  test=1.089024 (diff=0.017555 amp=1.071470)  diff_lr=0.00e+00 amp_lr=8.31e-05
+Epoch 59/200  train=0.982765 (diff=0.033181 amp=0.982765)  test=1.215624 (diff=0.016046 amp=1.199578)  diff_lr=0.00e+00 amp_lr=8.26e-05
+Epoch 60/200  train=0.990102 (diff=0.033929 amp=0.990102)  test=1.314318 (diff=0.014209 amp=1.300109)  diff_lr=0.00e+00 amp_lr=8.20e-05
+Epoch 61/200  train=0.996354 (diff=0.032559 amp=0.996354)  test=1.064368 (diff=0.017250 amp=1.047119)  diff_lr=0.00e+00 amp_lr=8.15e-05
+Epoch 62/200  train=0.996047 (diff=0.030380 amp=0.996047)  test=1.268478 (diff=0.044424 amp=1.224053)  diff_lr=0.00e+00 amp_lr=8.09e-05
+Epoch 63/200  train=0.983333 (diff=0.031802 amp=0.983333)  test=1.258098 (diff=0.032857 amp=1.225241)  diff_lr=0.00e+00 amp_lr=8.03e-05
+Epoch 64/200  train=0.980015 (diff=0.031575 amp=0.980015)  test=1.301729 (diff=0.016943 amp=1.284786)  diff_lr=0.00e+00 amp_lr=7.97e-05
+Epoch 65/200  train=0.967946 (diff=0.033111 amp=0.967946)  test=1.427315 (diff=0.043628 amp=1.383688)  diff_lr=0.00e+00 amp_lr=7.91e-05
+Epoch 66/200  train=0.959885 (diff=0.031605 amp=0.959885)  test=1.086657 (diff=0.016722 amp=1.069935)  diff_lr=0.00e+00 amp_lr=7.85e-05
+Epoch 67/200  train=0.975787 (diff=0.031355 amp=0.975787)  test=1.265397 (diff=0.022436 amp=1.242961)  diff_lr=0.00e+00 amp_lr=7.79e-05
+Epoch 68/200  train=0.997071 (diff=0.032657 amp=0.997071)  test=1.142061 (diff=0.033635 amp=1.108427)  diff_lr=0.00e+00 amp_lr=7.73e-05
+Epoch 69/200  train=0.985559 (diff=0.030755 amp=0.985559)  test=1.451497 (diff=0.023602 amp=1.427895)  diff_lr=0.00e+00 amp_lr=7.67e-05
+Epoch 70/200  train=0.955696 (diff=0.031241 amp=0.955696)  test=1.328564 (diff=0.010941 amp=1.317623)  diff_lr=0.00e+00 amp_lr=7.61e-05
+Epoch 71/200  train=0.994327 (diff=0.031879 amp=0.994327)  test=1.318927 (diff=0.015471 amp=1.303456)  diff_lr=0.00e+00 amp_lr=7.54e-05
+Epoch 72/200  train=0.980761 (diff=0.033281 amp=0.980761)  test=1.459213 (diff=0.035048 amp=1.424165)  diff_lr=0.00e+00 amp_lr=7.48e-05
+Epoch 73/200  train=0.973833 (diff=0.033728 amp=0.973833)  test=1.290317 (diff=0.020704 amp=1.269612)  diff_lr=0.00e+00 amp_lr=7.42e-05
+Epoch 74/200  train=0.986361 (diff=0.031496 amp=0.986361)  test=1.069471 (diff=0.013878 amp=1.055593)  diff_lr=0.00e+00 amp_lr=7.35e-05
+Epoch 75/200  train=0.994222 (diff=0.031083 amp=0.994222)  test=1.221533 (diff=0.054172 amp=1.167361)  diff_lr=0.00e+00 amp_lr=7.29e-05
+Epoch 76/200  train=0.979637 (diff=0.033706 amp=0.979637)  test=1.177857 (diff=0.022747 amp=1.155111)  diff_lr=0.00e+00 amp_lr=7.22e-05
+Epoch 77/200  train=0.964208 (diff=0.033027 amp=0.964208)  test=1.252677 (diff=0.017003 amp=1.235674)  diff_lr=0.00e+00 amp_lr=7.16e-05
+Epoch 78/200  train=0.965271 (diff=0.032389 amp=0.965271)  test=1.242222 (diff=0.025079 amp=1.217143)  diff_lr=0.00e+00 amp_lr=7.09e-05
+Epoch 79/200  train=0.970910 (diff=0.031678 amp=0.970910)  test=1.272388 (diff=0.028398 amp=1.243991)  diff_lr=0.00e+00 amp_lr=7.02e-05
+Epoch 80/200  train=0.978546 (diff=0.033330 amp=0.978546)  test=1.127449 (diff=0.034950 amp=1.092498)  diff_lr=0.00e+00 amp_lr=6.96e-05
+Epoch 81/200  train=0.973503 (diff=0.031875 amp=0.973503)  test=1.482257 (diff=0.041550 amp=1.440707)  diff_lr=0.00e+00 amp_lr=6.89e-05
+Epoch 82/200  train=0.968166 (diff=0.030870 amp=0.968166)  test=1.343379 (diff=0.033889 amp=1.309490)  diff_lr=0.00e+00 amp_lr=6.82e-05
+Epoch 83/200  train=0.967715 (diff=0.033512 amp=0.967715)  test=1.302558 (diff=0.009098 amp=1.293460)  diff_lr=0.00e+00 amp_lr=6.76e-05
+Epoch 84/200  train=0.958937 (diff=0.033006 amp=0.958937)  test=1.529359 (diff=0.024920 amp=1.504439)  diff_lr=0.00e+00 amp_lr=6.69e-05
+Epoch 85/200  train=0.962521 (diff=0.032808 amp=0.962521)  test=1.369030 (diff=0.028191 amp=1.340839)  diff_lr=0.00e+00 amp_lr=6.62e-05
+Epoch 86/200  train=0.965569 (diff=0.031871 amp=0.965569)  test=1.124433 (diff=0.015701 amp=1.108732)  diff_lr=0.00e+00 amp_lr=6.55e-05
+Epoch 87/200  train=0.962336 (diff=0.033287 amp=0.962336)  test=1.255082 (diff=0.020915 amp=1.234167)  diff_lr=0.00e+00 amp_lr=6.48e-05
+Epoch 88/200  train=0.975759 (diff=0.030204 amp=0.975759)  test=1.378127 (diff=0.019619 amp=1.358508)  diff_lr=0.00e+00 amp_lr=6.41e-05
+Epoch 89/200  train=0.969590 (diff=0.030326 amp=0.969590)  test=1.048171 (diff=0.008353 amp=1.039818)  diff_lr=0.00e+00 amp_lr=6.34e-05
+  -> New best test_loss=1.048171
+Epoch 90/200  train=0.968519 (diff=0.032259 amp=0.968519)  test=1.478635 (diff=0.014645 amp=1.463990)  diff_lr=0.00e+00 amp_lr=6.27e-05
+Epoch 91/200  train=0.964247 (diff=0.032722 amp=0.964247)  test=1.179197 (diff=0.023316 amp=1.155881)  diff_lr=0.00e+00 amp_lr=6.20e-05
+Epoch 92/200  train=0.959763 (diff=0.031496 amp=0.959763)  test=1.330446 (diff=0.027822 amp=1.302623)  diff_lr=0.00e+00 amp_lr=6.13e-05
+Epoch 93/200  train=0.967175 (diff=0.033213 amp=0.967175)  test=1.249598 (diff=0.040683 amp=1.208916)  diff_lr=0.00e+00 amp_lr=6.06e-05
+Epoch 94/200  train=0.952432 (diff=0.031638 amp=0.952432)  test=1.121730 (diff=0.026554 amp=1.095176)  diff_lr=0.00e+00 amp_lr=5.99e-05
+Epoch 95/200  train=0.968888 (diff=0.031178 amp=0.968888)  test=1.113677 (diff=0.019313 amp=1.094364)  diff_lr=0.00e+00 amp_lr=5.92e-05
+Epoch 96/200  train=0.964264 (diff=0.033834 amp=0.964264)  test=1.264118 (diff=0.055282 amp=1.208835)  diff_lr=0.00e+00 amp_lr=5.85e-05
+Epoch 97/200  train=0.948767 (diff=0.032619 amp=0.948767)  test=1.570380 (diff=0.027937 amp=1.542443)  diff_lr=0.00e+00 amp_lr=5.78e-05
+Epoch 98/200  train=0.959254 (diff=0.034284 amp=0.959254)  test=1.220222 (diff=0.024419 amp=1.195803)  diff_lr=0.00e+00 amp_lr=5.71e-05
+Epoch 99/200  train=0.954876 (diff=0.030720 amp=0.954876)  test=0.974343 (diff=0.015999 amp=0.958344)  diff_lr=0.00e+00 amp_lr=5.64e-05
+  -> New best test_loss=0.974343
+  -> New best test_amp_loss=0.958344, saved amp_predictor
+Epoch 100/200  train=0.961536 (diff=0.032193 amp=0.961536)  test=1.007446 (diff=0.027338 amp=0.980108)  diff_lr=0.00e+00 amp_lr=5.57e-05
+Epoch 101/200  train=0.951584 (diff=0.031101 amp=0.951584)  test=1.085922 (diff=0.028008 amp=1.057914)  diff_lr=0.00e+00 amp_lr=5.50e-05
+Epoch 102/200  train=0.945382 (diff=0.032577 amp=0.945382)  test=1.151042 (diff=0.034366 amp=1.116676)  diff_lr=0.00e+00 amp_lr=5.43e-05
+Epoch 103/200  train=0.959931 (diff=0.031635 amp=0.959931)  test=1.134548 (diff=0.019250 amp=1.115298)  diff_lr=0.00e+00 amp_lr=5.36e-05
+Epoch 104/200  train=0.970759 (diff=0.032373 amp=0.970759)  test=1.059742 (diff=0.013749 amp=1.045992)  diff_lr=0.00e+00 amp_lr=5.29e-05
+Epoch 105/200  train=0.954165 (diff=0.031163 amp=0.954165)  test=0.975468 (diff=0.019236 amp=0.956233)  diff_lr=0.00e+00 amp_lr=5.22e-05
+  -> New best test_amp_loss=0.956233, saved amp_predictor
+Epoch 106/200  train=0.961393 (diff=0.031495 amp=0.961393)  test=1.220401 (diff=0.012817 amp=1.207584)  diff_lr=0.00e+00 amp_lr=5.15e-05
+Epoch 107/200  train=0.955852 (diff=0.031092 amp=0.955852)  test=1.312734 (diff=0.016824 amp=1.295911)  diff_lr=0.00e+00 amp_lr=5.08e-05
+Epoch 108/200  train=0.942944 (diff=0.033245 amp=0.942944)  test=1.317663 (diff=0.034795 amp=1.282868)  diff_lr=0.00e+00 amp_lr=5.01e-05
+Epoch 109/200  train=0.946350 (diff=0.030930 amp=0.946350)  test=1.393130 (diff=0.013496 amp=1.379634)  diff_lr=0.00e+00 amp_lr=4.94e-05
+Epoch 110/200  train=0.956582 (diff=0.032338 amp=0.956582)  test=1.152074 (diff=0.022692 amp=1.129383)  diff_lr=0.00e+00 amp_lr=4.87e-05
+Epoch 111/200  train=0.950392 (diff=0.031877 amp=0.950392)  test=1.269249 (diff=0.028373 amp=1.240875)  diff_lr=0.00e+00 amp_lr=4.80e-05
+Epoch 112/200  train=0.947923 (diff=0.030933 amp=0.947923)  test=1.330247 (diff=0.034602 amp=1.295645)  diff_lr=0.00e+00 amp_lr=4.73e-05
+Epoch 113/200  train=0.955144 (diff=0.030537 amp=0.955144)  test=1.240191 (diff=0.023108 amp=1.217083)  diff_lr=0.00e+00 amp_lr=4.66e-05
+Epoch 114/200  train=0.937714 (diff=0.032785 amp=0.937714)  test=1.149589 (diff=0.019019 amp=1.130570)  diff_lr=0.00e+00 amp_lr=4.59e-05
+Epoch 115/200  train=0.953816 (diff=0.033523 amp=0.953816)  test=1.176793 (diff=0.009234 amp=1.167559)  diff_lr=0.00e+00 amp_lr=4.52e-05
+Epoch 116/200  train=0.952674 (diff=0.032251 amp=0.952674)  test=1.252429 (diff=0.035911 amp=1.216518)  diff_lr=0.00e+00 amp_lr=4.45e-05
+Epoch 117/200  train=0.952889 (diff=0.031356 amp=0.952889)  test=1.247264 (diff=0.026378 amp=1.220886)  diff_lr=0.00e+00 amp_lr=4.38e-05
+Epoch 118/200  train=0.951176 (diff=0.030803 amp=0.951176)  test=1.288909 (diff=0.013569 amp=1.275340)  diff_lr=0.00e+00 amp_lr=4.31e-05
+Epoch 119/200  train=0.941221 (diff=0.032986 amp=0.941221)  test=1.129486 (diff=0.017405 amp=1.112081)  diff_lr=0.00e+00 amp_lr=4.24e-05
+Epoch 120/200  train=0.962629 (diff=0.033118 amp=0.962629)  test=1.076826 (diff=0.077124 amp=0.999701)  diff_lr=0.00e+00 amp_lr=4.18e-05
+Epoch 121/200  train=0.943015 (diff=0.030670 amp=0.943015)  test=1.040468 (diff=0.026262 amp=1.014206)  diff_lr=0.00e+00 amp_lr=4.11e-05
+Epoch 122/200  train=0.947125 (diff=0.032794 amp=0.947125)  test=1.244894 (diff=0.019434 amp=1.225460)  diff_lr=0.00e+00 amp_lr=4.04e-05
+Epoch 123/200  train=0.948806 (diff=0.034250 amp=0.948806)  test=1.017749 (diff=0.011149 amp=1.006600)  diff_lr=0.00e+00 amp_lr=3.98e-05
+Epoch 124/200  train=0.949393 (diff=0.032274 amp=0.949393)  test=1.138178 (diff=0.016953 amp=1.121225)  diff_lr=0.00e+00 amp_lr=3.91e-05
+Epoch 125/200  train=0.963662 (diff=0.031352 amp=0.963662)  test=1.198735 (diff=0.025223 amp=1.173511)  diff_lr=0.00e+00 amp_lr=3.84e-05
+Epoch 126/200  train=0.951461 (diff=0.032218 amp=0.951461)  test=1.208117 (diff=0.043623 amp=1.164494)  diff_lr=0.00e+00 amp_lr=3.78e-05
+Epoch 127/200  train=0.955245 (diff=0.030594 amp=0.955245)  test=1.195313 (diff=0.018271 amp=1.177042)  diff_lr=0.00e+00 amp_lr=3.71e-05
+Epoch 128/200  train=0.950332 (diff=0.031914 amp=0.950332)  test=1.184602 (diff=0.028884 amp=1.155717)  diff_lr=0.00e+00 amp_lr=3.65e-05
+Epoch 129/200  train=0.938934 (diff=0.033783 amp=0.938934)  test=1.362403 (diff=0.008265 amp=1.354137)  diff_lr=0.00e+00 amp_lr=3.58e-05
+Epoch 130/200  train=0.936826 (diff=0.032104 amp=0.936826)  test=1.168181 (diff=0.052195 amp=1.115985)  diff_lr=0.00e+00 amp_lr=3.52e-05
+Epoch 131/200  train=0.942994 (diff=0.032465 amp=0.942994)  test=1.104563 (diff=0.066462 amp=1.038101)  diff_lr=0.00e+00 amp_lr=3.46e-05
+Epoch 132/200  train=0.947590 (diff=0.031964 amp=0.947590)  test=1.323218 (diff=0.036968 amp=1.286249)  diff_lr=0.00e+00 amp_lr=3.39e-05
+Epoch 133/200  train=0.948023 (diff=0.033439 amp=0.948023)  test=1.251486 (diff=0.038971 amp=1.212515)  diff_lr=0.00e+00 amp_lr=3.33e-05
+Epoch 134/200  train=0.944142 (diff=0.032729 amp=0.944142)  test=1.403699 (diff=0.016117 amp=1.387582)  diff_lr=0.00e+00 amp_lr=3.27e-05
+Epoch 135/200  train=0.942174 (diff=0.032556 amp=0.942174)  test=1.173273 (diff=0.081890 amp=1.091384)  diff_lr=0.00e+00 amp_lr=3.21e-05
+Epoch 136/200  train=0.946267 (diff=0.030969 amp=0.946267)  test=1.037569 (diff=0.009980 amp=1.027589)  diff_lr=0.00e+00 amp_lr=3.15e-05
+Epoch 137/200  train=0.942685 (diff=0.030128 amp=0.942685)  test=1.133377 (diff=0.019107 amp=1.114270)  diff_lr=0.00e+00 amp_lr=3.09e-05
+Epoch 138/200  train=0.933243 (diff=0.031568 amp=0.933243)  test=1.183585 (diff=0.016263 amp=1.167322)  diff_lr=0.00e+00 amp_lr=3.03e-05
+Epoch 139/200  train=0.942458 (diff=0.032501 amp=0.942458)  test=1.305174 (diff=0.048052 amp=1.257122)  diff_lr=0.00e+00 amp_lr=2.97e-05
+Epoch 140/200  train=0.941570 (diff=0.030736 amp=0.941570)  test=1.165233 (diff=0.024905 amp=1.140329)  diff_lr=0.00e+00 amp_lr=2.91e-05
+Epoch 141/200  train=0.939712 (diff=0.030951 amp=0.939712)  test=1.235202 (diff=0.028119 amp=1.207083)  diff_lr=0.00e+00 amp_lr=2.85e-05
+Epoch 142/200  train=0.947338 (diff=0.032469 amp=0.947338)  test=1.057611 (diff=0.009935 amp=1.047676)  diff_lr=0.00e+00 amp_lr=2.80e-05
+Epoch 143/200  train=0.939697 (diff=0.031835 amp=0.939697)  test=1.115306 (diff=0.026556 amp=1.088749)  diff_lr=0.00e+00 amp_lr=2.74e-05
+Epoch 144/200  train=0.943201 (diff=0.031507 amp=0.943201)  test=1.114032 (diff=0.027707 amp=1.086325)  diff_lr=0.00e+00 amp_lr=2.69e-05
+Epoch 145/200  train=0.940391 (diff=0.031522 amp=0.940391)  test=1.242488 (diff=0.014158 amp=1.228330)  diff_lr=0.00e+00 amp_lr=2.63e-05
+Epoch 146/200  train=0.944281 (diff=0.032874 amp=0.944281)  test=1.275100 (diff=0.021588 amp=1.253512)  diff_lr=0.00e+00 amp_lr=2.58e-05
+Epoch 147/200  train=0.946109 (diff=0.032580 amp=0.946109)  test=1.182333 (diff=0.038061 amp=1.144272)  diff_lr=0.00e+00 amp_lr=2.52e-05
+Epoch 148/200  train=0.933443 (diff=0.029804 amp=0.933443)  test=1.227262 (diff=0.020031 amp=1.207231)  diff_lr=0.00e+00 amp_lr=2.47e-05
+Epoch 149/200  train=0.943880 (diff=0.030113 amp=0.943880)  test=1.101669 (diff=0.019279 amp=1.082390)  diff_lr=0.00e+00 amp_lr=2.42e-05
+Epoch 150/200  train=0.930536 (diff=0.032519 amp=0.930536)  test=1.096694 (diff=0.025860 amp=1.070834)  diff_lr=0.00e+00 amp_lr=2.37e-05
+Epoch 151/200  train=0.922611 (diff=0.031581 amp=0.922611)  test=1.156645 (diff=0.027371 amp=1.129273)  diff_lr=0.00e+00 amp_lr=2.32e-05
+Epoch 152/200  train=0.953535 (diff=0.033495 amp=0.953535)  test=1.201398 (diff=0.022897 amp=1.178501)  diff_lr=0.00e+00 amp_lr=2.27e-05
+Epoch 153/200  train=0.930246 (diff=0.031035 amp=0.930246)  test=1.094465 (diff=0.023763 amp=1.070702)  diff_lr=0.00e+00 amp_lr=2.22e-05
+Epoch 154/200  train=0.931540 (diff=0.032949 amp=0.931540)  test=1.043263 (diff=0.017938 amp=1.025325)  diff_lr=0.00e+00 amp_lr=2.17e-05
+Epoch 155/200  train=0.933459 (diff=0.032256 amp=0.933459)  test=1.075717 (diff=0.034468 amp=1.041249)  diff_lr=0.00e+00 amp_lr=2.12e-05
+Epoch 156/200  train=0.940640 (diff=0.035177 amp=0.940640)  test=1.176807 (diff=0.034299 amp=1.142508)  diff_lr=0.00e+00 amp_lr=2.08e-05
+Epoch 157/200  train=0.945298 (diff=0.031681 amp=0.945298)  test=1.242261 (diff=0.022677 amp=1.219584)  diff_lr=0.00e+00 amp_lr=2.03e-05
+Epoch 158/200  train=0.943474 (diff=0.034700 amp=0.943474)  test=1.148823 (diff=0.011736 amp=1.137087)  diff_lr=0.00e+00 amp_lr=1.99e-05
+Epoch 159/200  train=0.936511 (diff=0.028550 amp=0.936511)  test=1.178498 (diff=0.026874 amp=1.151625)  diff_lr=0.00e+00 amp_lr=1.94e-05
+Epoch 160/200  train=0.928647 (diff=0.031853 amp=0.928647)  test=1.033410 (diff=0.023267 amp=1.010143)  diff_lr=0.00e+00 amp_lr=1.90e-05
+Epoch 161/200  train=0.943210 (diff=0.031548 amp=0.943210)  test=1.049296 (diff=0.015257 amp=1.034039)  diff_lr=0.00e+00 amp_lr=1.86e-05
+Epoch 162/200  train=0.939210 (diff=0.032395 amp=0.939210)  test=1.140262 (diff=0.026569 amp=1.113693)  diff_lr=0.00e+00 amp_lr=1.82e-05
+Epoch 163/200  train=0.954191 (diff=0.034075 amp=0.954191)  test=1.078148 (diff=0.027252 amp=1.050897)  diff_lr=0.00e+00 amp_lr=1.78e-05
+Epoch 164/200  train=0.939128 (diff=0.033505 amp=0.939128)  test=1.143091 (diff=0.017087 amp=1.126004)  diff_lr=0.00e+00 amp_lr=1.74e-05
+Epoch 165/200  train=0.935064 (diff=0.032017 amp=0.935064)  test=1.067187 (diff=0.016577 amp=1.050610)  diff_lr=0.00e+00 amp_lr=1.70e-05
+Epoch 166/200  train=0.933644 (diff=0.031112 amp=0.933644)  test=1.119060 (diff=0.013235 amp=1.105825)  diff_lr=0.00e+00 amp_lr=1.66e-05
+Epoch 167/200  train=0.928708 (diff=0.032118 amp=0.928708)  test=1.118480 (diff=0.011117 amp=1.107363)  diff_lr=0.00e+00 amp_lr=1.63e-05
+Epoch 168/200  train=0.928021 (diff=0.033650 amp=0.928021)  test=1.172390 (diff=0.032960 amp=1.139430)  diff_lr=0.00e+00 amp_lr=1.59e-05
+Epoch 169/200  train=0.942980 (diff=0.030266 amp=0.942980)  test=1.184918 (diff=0.023924 amp=1.160995)  diff_lr=0.00e+00 amp_lr=1.56e-05
+Epoch 170/200  train=0.939351 (diff=0.033210 amp=0.939351)  test=1.089160 (diff=0.021526 amp=1.067634)  diff_lr=0.00e+00 amp_lr=1.52e-05
+Epoch 171/200  train=0.943864 (diff=0.032866 amp=0.943864)  test=1.133754 (diff=0.020276 amp=1.113479)  diff_lr=0.00e+00 amp_lr=1.49e-05
+Epoch 172/200  train=0.928434 (diff=0.033178 amp=0.928434)  test=1.226772 (diff=0.035433 amp=1.191339)  diff_lr=0.00e+00 amp_lr=1.46e-05
+Epoch 173/200  train=0.929057 (diff=0.031535 amp=0.929057)  test=1.146038 (diff=0.031712 amp=1.114326)  diff_lr=0.00e+00 amp_lr=1.43e-05
+Epoch 174/200  train=0.942804 (diff=0.032464 amp=0.942804)  test=1.303629 (diff=0.036308 amp=1.267321)  diff_lr=0.00e+00 amp_lr=1.40e-05
+Epoch 175/200  train=0.929318 (diff=0.033477 amp=0.929318)  test=1.166966 (diff=0.048492 amp=1.118474)  diff_lr=0.00e+00 amp_lr=1.37e-05
+Epoch 176/200  train=0.929320 (diff=0.032617 amp=0.929320)  test=1.147804 (diff=0.023296 amp=1.124507)  diff_lr=0.00e+00 amp_lr=1.34e-05
+Epoch 177/200  train=0.935810 (diff=0.033156 amp=0.935810)  test=1.129406 (diff=0.032164 amp=1.097242)  diff_lr=0.00e+00 amp_lr=1.32e-05
+Epoch 178/200  train=0.930984 (diff=0.031415 amp=0.930984)  test=1.151240 (diff=0.015195 amp=1.136045)  diff_lr=0.00e+00 amp_lr=1.29e-05
+Epoch 179/200  train=0.938984 (diff=0.033357 amp=0.938984)  test=1.235107 (diff=0.023620 amp=1.211487)  diff_lr=0.00e+00 amp_lr=1.27e-05
+Epoch 180/200  train=0.944671 (diff=0.031825 amp=0.944671)  test=1.268492 (diff=0.016124 amp=1.252368)  diff_lr=0.00e+00 amp_lr=1.24e-05
+Epoch 181/200  train=0.934123 (diff=0.032906 amp=0.934123)  test=1.133149 (diff=0.012742 amp=1.120406)  diff_lr=0.00e+00 amp_lr=1.22e-05
+Epoch 182/200  train=0.930105 (diff=0.031408 amp=0.930105)  test=1.164421 (diff=0.033710 amp=1.130712)  diff_lr=0.00e+00 amp_lr=1.20e-05
+Epoch 183/200  train=0.924604 (diff=0.031337 amp=0.924604)  test=1.108554 (diff=0.016672 amp=1.091882)  diff_lr=0.00e+00 amp_lr=1.18e-05
+Epoch 184/200  train=0.931676 (diff=0.033615 amp=0.931676)  test=1.121892 (diff=0.018277 amp=1.103615)  diff_lr=0.00e+00 amp_lr=1.16e-05
+Epoch 185/200  train=0.943953 (diff=0.030375 amp=0.943953)  test=1.176215 (diff=0.011895 amp=1.164320)  diff_lr=0.00e+00 amp_lr=1.14e-05
+Epoch 186/200  train=0.948127 (diff=0.032543 amp=0.948127)  test=1.181992 (diff=0.036973 amp=1.145020)  diff_lr=0.00e+00 amp_lr=1.12e-05
+Epoch 187/200  train=0.919395 (diff=0.030918 amp=0.919395)  test=1.228830 (diff=0.026414 amp=1.202416)  diff_lr=0.00e+00 amp_lr=1.11e-05
+Epoch 188/200  train=0.938804 (diff=0.032757 amp=0.938804)  test=1.143983 (diff=0.031731 amp=1.112252)  diff_lr=0.00e+00 amp_lr=1.09e-05
+Epoch 189/200  train=0.920515 (diff=0.032969 amp=0.920515)  test=1.203539 (diff=0.073537 amp=1.130002)  diff_lr=0.00e+00 amp_lr=1.08e-05
+Epoch 190/200  train=0.933553 (diff=0.032057 amp=0.933553)  test=1.085345 (diff=0.013264 amp=1.072081)  diff_lr=0.00e+00 amp_lr=1.07e-05
+Epoch 191/200  train=0.920215 (diff=0.029804 amp=0.920215)  test=1.167341 (diff=0.018335 amp=1.149005)  diff_lr=0.00e+00 amp_lr=1.06e-05
+Epoch 192/200  train=0.945709 (diff=0.030999 amp=0.945709)  test=1.099971 (diff=0.027840 amp=1.072131)  diff_lr=0.00e+00 amp_lr=1.04e-05
+Epoch 193/200  train=0.934252 (diff=0.030889 amp=0.934252)  test=1.151267 (diff=0.013346 amp=1.137922)  diff_lr=0.00e+00 amp_lr=1.04e-05
+Epoch 194/200  train=0.935079 (diff=0.031363 amp=0.935079)  test=1.156654 (diff=0.045364 amp=1.111290)  diff_lr=0.00e+00 amp_lr=1.03e-05
+Epoch 195/200  train=0.946582 (diff=0.030920 amp=0.946582)  test=1.124120 (diff=0.031582 amp=1.092538)  diff_lr=0.00e+00 amp_lr=1.02e-05
+Epoch 196/200  train=0.915346 (diff=0.032719 amp=0.915346)  test=1.123119 (diff=0.021964 amp=1.101154)  diff_lr=0.00e+00 amp_lr=1.01e-05
+Epoch 197/200  train=0.937240 (diff=0.032647 amp=0.937240)  test=1.117900 (diff=0.032638 amp=1.085261)  diff_lr=0.00e+00 amp_lr=1.01e-05
+Epoch 198/200  train=0.928952 (diff=0.033249 amp=0.928952)  test=1.161327 (diff=0.024756 amp=1.136571)  diff_lr=0.00e+00 amp_lr=1.00e-05
+Epoch 199/200  train=0.937340 (diff=0.031076 amp=0.937340)  test=1.158533 (diff=0.066312 amp=1.092222)  diff_lr=0.00e+00 amp_lr=1.00e-05
+Epoch 200/200  train=0.926837 (diff=0.030237 amp=0.926837)  test=1.122981 (diff=0.020350 amp=1.102631)  diff_lr=0.00e+00 amp_lr=1.00e-05
+
+Training complete.
+=== exp024: Training complete, starting evaluation ===
+C:\Users\17145\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py:1367: UserWarning: expandable_segments not supported on this platform (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\c10/cuda/CUDAAllocatorConfig.h:39.)
+  return t.to(
+C:\lxr\study\final\src\model\diffusion.py:384: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.attn = nn.TransformerEncoder(attn_layer, num_layers=n_attn_layers)
+C:\lxr\study\final\src\model\evaluate.py:197: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  autocast_ctx = torch.cuda.amp.autocast() if device.type == "cuda" else torch.inference_mode()
+Device: cuda
+Test tracks: 49
+
+--- Evaluating Diffusion ---
+WARNING: experiments/checkpoints/exp024/diffusion_best_ema.pt not found, using random weights
+Loaded AmpPredictor (hidden=256, gru_hidden=128, layers=2, dropout=0.4, f0_conditioned=False, use_attention=True, n_attn_heads=4, n_attn_layers=2) from experiments/checkpoints/exp024/amp_predictor_best.pt
+Traceback (most recent call last):
+  File "C:\lxr\study\final\src\model\evaluate.py", line 514, in <module>
+    main()
+  File "C:\lxr\study\final\src\model\evaluate.py", line 495, in main
+    diff_metrics = evaluate_diffusion(
+                   ^^^^^^^^^^^^^^^^^^^
+  File "C:\lxr\study\final\src\model\evaluate.py", line 204, in evaluate_diffusion
+    item = dataset._load(idx)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\lxr\study\final\src\model\dataset.py", line 189, in _load
+    data = np.load(track["path"])
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\17145\AppData\Local\Programs\Python\Python312\Lib\site-packages\numpy\lib\_npyio_impl.py", line 454, in load
+    fid = stack.enter_context(open(os.fspath(file), "rb"))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\lxr\\study\\final\\datagen\\solo\\Bach10\\04-ChristeDuBeistand_bn\\data.npz'

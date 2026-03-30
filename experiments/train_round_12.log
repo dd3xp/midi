@@ -1,0 +1,73 @@
+Device: cuda
+Loading models...
+
+Processing vn: Jupiter...
+  Frames: 6264, Duration: 62.6s
+  Predicting baseline...
+  Generating 5 diffusion samples (ddim_steps=50, eta=0.0)...
+  Plotting f0 contour...
+  Saved f0_contour_vn_Jupiter.png
+  Plotting vibrato zoom...
+  Saved vibrato_zoom_vn_Jupiter.png
+  Plotting amp contour...
+  Saved amp_contour_vn_Jupiter.png
+
+Processing tpt: Nocturne...
+  Frames: 9561, Duration: 95.6s
+  Predicting baseline...
+  Generating 5 diffusion samples (ddim_steps=50, eta=0.0)...
+  Plotting f0 contour...
+  Saved f0_contour_tpt_Nocturne.png
+  Plotting vibrato zoom...
+  Saved vibrato_zoom_tpt_Nocturne.png
+  Plotting amp contour...
+  Saved amp_contour_tpt_Nocturne.png
+
+Processing fl: Nocturne...
+  Frames: 9561, Duration: 95.6s
+  Predicting baseline...
+  Generating 5 diffusion samples (ddim_steps=50, eta=0.0)...
+  Plotting f0 contour...
+  Saved f0_contour_fl_Nocturne.png
+  Plotting vibrato zoom...
+  Saved vibrato_zoom_fl_Nocturne.png
+  Plotting amp contour...
+  Saved amp_contour_fl_Nocturne.png
+
+Plotting eta sweep summary...
+  Saved eta_sweep_summary.png
+Plotting instrument comparison...
+  Saved instrument_comparison.png
+
+=== Done! Generated 11 figures in experiments/figures ===
+  f0_contour_vn_Jupiter.png
+  vibrato_zoom_vn_Jupiter.png
+  amp_contour_vn_Jupiter.png
+  f0_contour_tpt_Nocturne.png
+  vibrato_zoom_tpt_Nocturne.png
+  amp_contour_tpt_Nocturne.png
+  f0_contour_fl_Nocturne.png
+  vibrato_zoom_fl_Nocturne.png
+  amp_contour_fl_Nocturne.png
+  eta_sweep_summary.png
+  instrument_comparison.png
+Generated 11 figures
+{
+  "experiment": "exp010",
+  "type": "visualization",
+  "figures_generated": [
+    "amp_contour_fl_Nocturne.png",
+    "amp_contour_tpt_Nocturne.png",
+    "amp_contour_vn_Jupiter.png",
+    "eta_sweep_summary.png",
+    "f0_contour_fl_Nocturne.png",
+    "f0_contour_tpt_Nocturne.png",
+    "f0_contour_vn_Jupiter.png",
+    "instrument_comparison.png",
+    "vibrato_zoom_fl_Nocturne.png",
+    "vibrato_zoom_tpt_Nocturne.png",
+    "vibrato_zoom_vn_Jupiter.png"
+  ],
+  "n_figures": 11
+}
+=== exp010: Visualization complete ===

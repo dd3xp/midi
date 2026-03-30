@@ -1,0 +1,38 @@
+Everything validates correctly. Here's a summary of what was prepared:
+
+---
+
+## Summary: exp044 Preparation
+
+### What changed (following supervisor's Direction 1: 音符内位置特征)
+
+**Code modifications** (3 files):
+
+1. **`src/model/diffusion.py`** — AmpPredictor class:
+   - Added `note_position_conditioned=False` parameter to `__init__`
+   - When True, concatenates note_position (B, T, 1) to input → `input_dim + 1`
+   - Added `note_position=None` parameter to `forward()`
+
+2. **`src/model/train.py`** — Stage 2 training:
+   - Reads `amp_note_position_conditioned` from config
+   - Passes to AmpPredictor constructor
+   - Extracts `note_position = ff[:, :, 3]` from frame_features (position_in_note, already computed)
+   - Passes `note_position=` to all `amp_predictor()` calls (train + test loops)
+
+3. **`src/model/evaluate.py`** — Evaluation:
+   - Reads `amp_note_position_conditioned` from config
+   - Passes to AmpPredictor constructor
+   - Extracts `note_position` from frame_features in `evaluate_diffusion()`
+   - Passes to all `amp_predictor()` calls
+
+### Config: `experiments/configs/exp044.yaml`
+- Based on exp039 (best deterministic, Amp Corr 0.807)
+- **[C1]** `amp_instrument_conditioned: false` (removed instrument embedding)
+- **[C2]** `amp_note_position_conditioned: true` (NEW: explicit ADSR phase info)
+- Architecture: 256 (encoder) + 1 (note_position) = 257 → proj → 256
+- Parameters: 1,713,409 (vs exp039's 1,721,665 — slightly fewer without instrument embedding)
+
+### Training script: `experiments/next_train_cmd.sh`
+- Stage 2 training (frozen diffusion, only AmpPredictor)
+- 300 epochs, same optimizer/loss/augmentation as exp039
+- Followed by evaluation with 5 samples, DDIM 50 steps, eta=0.3

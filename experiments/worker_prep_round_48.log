@@ -1,0 +1,24 @@
+Here's a summary of what was prepared for **exp037**:
+
+## Experiment 037: Scaled AmpPredictor (2x capacity + deeper attention)
+
+**Objective**: Improve Amp Corr from 0.800 (exp035) toward 0.85+ by scaling up the AmpPredictor model.
+
+**Key changes vs exp035**:
+| Parameter | exp035 | exp037 |
+|-----------|--------|--------|
+| amp_hidden | 256 | **384** |
+| amp_gru_hidden | 128 | **192** |
+| amp_n_attn_layers | 2 | **4** |
+| amp_n_attn_heads | 4 | **8** |
+| amp_dropout | 0.3 | **0.35** |
+| amp_lr | 5e-5 | **3e-5** |
+| epochs | 250 | **400** |
+
+**Code changes needed**: None! Both train.py and evaluate.py already read all AmpPredictor parameters from the config YAML (amp_gru_hidden, amp_n_attn_heads, amp_n_attn_layers, etc.). The math checks out: gru_hidden=192 bidirectional → 384 output dim, 384/8 heads = 48 per head ✓.
+
+**Files created**:
+- `experiments/configs/exp037.yaml` — full config
+- `experiments/next_train_cmd.sh` — training + evaluation script (copies baseline & norm_stats, trains stage 2 with frozen diffusion, evaluates with η=0.3)
+
+**Dependencies verified**: ✅ exp033/baseline_best.pt (10MB), ✅ exp034/diffusion_best_ema.pt (66MB)

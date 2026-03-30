@@ -1,0 +1,23 @@
+Everything looks correct. Here's the summary:
+
+## exp040 Results Summary
+
+**exp040: 2x Model + Augmentation** — 400 epochs completed ✅, training exit code 0
+
+### Key Metrics
+
+| Metric | exp039 (best) | exp040 | Delta |
+|--------|--------------|--------|-------|
+| f0 RPA mean | 93.73% | 93.78% | +0.05% (≈same) |
+| f0 RPA oracle | 95.82% | 95.89% | +0.07% |
+| **Amp Corr** | **0.807** | **0.801** | **-0.7% ❌** |
+| Amp RMSE(log) | 0.582 | 0.583 | +0.2% (≈same) |
+| VDE | 7.97 | 7.65 | -4.0% (improved) |
+| Best epoch | ep142 | ep121 | Earlier overfitting |
+| Overfit gap | 0.154 | 0.26 | +68% worse |
+
+### Verdict: ⚠️ **Not a new best**
+
+The hypothesis that "2x model capacity was masked by overfitting, and augmentation would release it" was **not confirmed**. Despite augmentation, the 2x model still overfits significantly more than the 1x model (gap 0.26 vs 0.154), and the extra capacity did not translate into better Amp Corr. 
+
+**exp039 remains the global best** with Amp Corr = 0.807. The 当前最佳 section and Amp optimization history table have been updated. No 下一步计划 written — waiting for supervisor.

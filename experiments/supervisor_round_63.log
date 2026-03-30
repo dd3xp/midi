@@ -1,0 +1,39 @@
+The plan is written successfully. Let me print a status summary:
+
+---
+
+## Supervisor Review Summary — Round 64
+
+### Experiment Reviewed: exp050 (Residual Amp Diffusion v2, Residual Normalization)
+
+**Key Metrics:**
+| Metric | exp050 | Comparison |
+|--------|--------|-----------|
+| Amp Corr (mean) | **0.737** | vs exp042 old residual: 0.744 (-0.9%) |
+| Amp Corr (oracle) | **0.752** | vs exp042: 0.753 (flat) |
+| Amp Corr (α=0.0) | **0.771** | vs exp045 AmpPredictor: 0.781 ✓ |
+| Amp Diversity | **0.008** | vs exp042: 0.004 (+100%) |
+| f0 RPA | 89.61% | Low due to max_eval_len truncation |
+
+**Verdict:** ❌ Residual normalization did NOT improve amp quality. Residual diffusion direction fully exhausted (exp042 + exp050). Overlaying diffusion residual consistently damages quality vs pure AmpPredictor.
+
+### Critical Issues Found
+None — code is correct, OOM fix works.
+
+### Next Experiment Planned: exp051
+**Encoder Adapter + 185-track AmpPredictor Training**
+
+**Key innovation:** After 32 experiments where all AmpPredictor variants (GRU, TCN, attention, two-step, diffusion) plateau at similar levels, the common bottleneck is identified as the **encoder's 256-dim condition output**. A lightweight **EncoderAdapter** (256→64→256, ~33K params, zero-initialized) is inserted between the frozen encoder and AmpPredictor to learn amp-specific feature transformations without modifying the encoder itself. Combined with the expanded 185-track dataset (first use of PHENICX + TRIOS).
+
+**Expected:** Amp Corr 0.79-0.82 (up from 0.781)
+
+### Progress Toward Goal
+| Target | Current Best | Gap |
+|--------|-------------|-----|
+| f0 RPA > 85% | **95.82%** | ✅ Done |
+| Amp Corr > 0.90 | **0.807** (w/inst) / **0.789** (no inst) | 0.093 / 0.111 |
+| Amp Diversity > 0 | **0.011** | ✅ Done |
+| f0 MAE < 20 | 23.44 | 3.44 gap |
+| VDE < 6.0 | 7.22 | 1.22 gap |
+
+**Main bottleneck:** Amp Corr — all 32 downstream model optimizations saturated. Testing encoder information bottleneck hypothesis with adapter approach.

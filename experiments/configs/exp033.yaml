@@ -1,0 +1,30 @@
+# exp033: Stage 1 Retrain with Estimated Velocity
+# Hypothesis: Replacing constant velocity=80 with RMS-estimated velocity (1-127)
+# gives the MIDI Encoder meaningful dynamics information. Feature[2] (velocity/127)
+# was always 0.63 before; now it varies per note, enabling the encoder to learn
+# loudness patterns that directly help amp prediction.
+#
+# Changes vs exp014 (original Stage 1):
+#   [C1] preprocess.py: estimate_velocity() computes velocity from RMS at note onsets
+#   [C2] preprocess_bach10.py: same velocity estimation
+#   [C3] update_velocity.py: standalone script to update existing .npz files
+#   [C4] No architecture changes — same 7-dim frame features, same encoder
+#
+# Data: All 10 instruments (URMP + Bach10), ~173 tracks
+# Architecture: BaselineModel (BiGRU encoder + f0 classification + amp regression)
+
+output_dir: "experiments/checkpoints/exp033"
+instruments: ["vn", "va", "vc", "fl", "ob", "cl", "sax", "tpt", "tbn", "bn"]
+crop_len: 512
+seed: 42
+save_every: 10
+
+stage1:
+  batch_size: 32
+  lr: 0.001
+  epochs: 100
+  lam: 1.0
+  patience: 15
+  lr_patience: 5
+  lr_factor: 0.5
+  dropout: 0.3

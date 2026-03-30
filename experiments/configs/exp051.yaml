@@ -1,0 +1,68 @@
+# exp051: Encoder Adapter + 185-track AmpPredictor Training
+# Goal: Break Amp Corr ceiling by adapting encoder features for amp prediction
+# Core hypothesis: encoder's 256-dim condition lacks amp info; adapter learns amp-specific transforms
+# Architecture change:
+#   [C1] diffusion.py: new EncoderAdapter class (bottleneck MLP with residual + zero-init)
+#   [C2] train.py: adapter between encoder and AmpPredictor in amp training path
+#   [C3] evaluate.py: load and apply adapter at eval
+# Encoder: frozen exp033 (173 tracks + velocity)
+# Diffusion: frozen exp034 (f0 only)
+# AmpPredictor: same arch as exp045 (attention, no inst, GRU 256/128/2)
+# Dataset: 185 tracks (URMP + Bach10 + PHENICX + TRIOS) — first use of expanded data
+# Comparison: exp045 (Corr=0.781, same setup without adapter)
+
+output_dir: "experiments/checkpoints/exp051"
+baseline_checkpoint: "experiments/checkpoints/exp033/baseline_best.pt"
+instruments: ["vn", "va", "vc", "fl", "ob", "cl", "sax", "tpt", "tbn", "bn"]
+crop_len: 512
+seed: 42
+save_every: 10
+
+# Explicit data paths to ensure 185-track loading
+phenicx_dir: "datagen/solo/PHENICX"
+trios_dir: "datagen/solo/TRIOS"
+
+stage2:
+  batch_size: 16
+  lr: 0.0002
+  lr_min: 0.00001
+  epochs: 300
+  ema_decay: 0.995
+  n_diffusion_steps: 1000
+  samples_per_epoch: 2055    # ~137 train tracks * 15 crops (was 1860 for 124 tracks)
+  n_channels: 1
+
+  # AmpPredictor: same as exp045
+  amp_hidden: 256
+  amp_gru_hidden: 128
+  amp_gru_layers: 2
+  amp_dropout: 0.3
+  amp_use_attention: true
+  amp_n_attn_heads: 4
+  amp_n_attn_layers: 2
+  amp_instrument_conditioned: false
+  amp_note_position_conditioned: false
+  amp_f0_conditioned: false
+
+  # Encoder Adapter: NEW (exp051)
+  amp_encoder_adapter: true
+  adapter_bottleneck: 64
+  adapter_layers: 1
+  adapter_dropout: 0.1
+
+  # Loss: same as exp045
+  amp_corr_weight: 0.3
+  amp_grad_weight: 0.2
+
+  # Diffusion: frozen
+  freeze_diffusion: true
+  diffusion_checkpoint: "experiments/checkpoints/exp034/diffusion_best_ema.pt"
+
+  # Optimizer
+  amp_lr: 0.00005
+  amp_weight_decay: 0.0001
+
+  # Augmentation: same as exp045
+  amp_augment: true
+  amp_augment_scale: 0.2
+  amp_augment_jitter: 0.05

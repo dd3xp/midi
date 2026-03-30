@@ -1,0 +1,29 @@
+Results logged. Here's the summary:
+
+## exp051 Results: Encoder Adapter + 185-track AmpPredictor
+
+### Key Findings
+
+- **Training**: 300 epochs completed successfully (~31 min). Evaluation initially OOM'd, re-ran with `max_eval_len=4096, n_samples=3, ddim_steps=25`.
+
+### Results: ❌ Adapter did NOT improve Amp Corr
+
+| Metric | exp045 (no adapter) | exp051 (with adapter) | Delta |
+|--------|--------------------|-----------------------|-------|
+| **Amp Corr (9 common tracks)** | **0.879** | **0.872** | **-0.007** |
+| Amp Corr (URMP only) | 0.804 (41 tracks) | 0.822 (19 tracks) | +0.018* |
+| Amp Corr (Bach10) | 0.663 | 0.687 | +0.024 |
+| Amp Corr (overall) | 0.781 (49 tracks) | 0.775 (30 tracks) | -0.006 |
+
+*Different test sets, not directly comparable
+
+### Conclusions
+
+1. **Fair comparison on 9 common tracks**: -0.007, essentially no change
+2. **Adapter learned non-trivial weights** (norm 2-5) but they didn't help amp prediction
+3. **Encoder information bottleneck hypothesis not confirmed**: the 256-dim condition already contains sufficient amp info; bottleneck is elsewhere
+4. **Bach10 small improvement** (+0.024) likely from more training data (185 tracks), not the adapter
+
+**当前最佳 unchanged**: Amp Corr 0.807 (exp039, with instrument) / 0.789 (exp048, without instrument). This is the 33rd amp optimization attempt without breaking 0.81 barrier.
+
+The supervisor's alternative plan (global statistical features from MIDI) is already outlined in the log as the next direction.

@@ -1,0 +1,29 @@
+Good — no `NEEDS_HUMAN.txt` needed. Let me check the escalation criteria:
+
+1. **Plateau**: No plateau — exp008 showed improvement over exp007 (RPA 92.80% → 94.26%). ✅ No trigger.
+2. **Repeated failure**: No failures. ✅ No trigger.
+3. **Strategic decision**: Next step (diversity metrics + eta=1.0) is a straightforward extension, no human choice needed. ✅ No trigger.
+4. **Anomaly**: The eta>0 quality improvement was unexpected but has a reasonable explanation (stochastic exploration in sampling). ✅ No trigger.
+
+---
+
+## Status Summary
+
+**Experiment Reviewed: exp008** — Stochastic DDIM diversity evaluation (η=0.3 and η=0.5, evaluation-only using exp007 checkpoint)
+
+**Key Metrics (best: η=0.3)**:
+| Metric | Baseline | Diffusion η=0.3 | Gap |
+|--------|----------|------------------|-----|
+| f0 RPA mean | 97.14% | **94.26%** | -2.88% |
+| Amp Corr mean | 0.645 | 0.570 | -0.075 |
+| VDE | 8.34 | **4.80** | -3.54 ✅ |
+| VRE | 0.880 | **0.757** | -0.123 ✅ |
+
+**Critical Finding**: Oracle-mean RPA gap is a poor diversity metric (threshold saturation). Need inter-sample f0 std in cents.
+
+**Planned Next (exp009)**: 
+1. Add `f0_diversity_cents` and `amp_diversity` metrics to evaluate.py
+2. Run eta=1.0 evaluation (~10 min, no training)
+3. Complete the quality-diversity tradeoff curve for the paper
+
+**No issues requiring human intervention** — all metrics improving, clear path forward.

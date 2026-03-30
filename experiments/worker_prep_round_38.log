@@ -1,0 +1,34 @@
+Everything is ready. Here's a summary of what was prepared:
+
+---
+
+## exp029 Preparation Summary
+
+### Experiment: Per-Instrument Amplitude Normalization + Instrument Embedding
+
+**Hypothesis**: Per-instrument z-score normalization removes inter-instrument scale differences from the amp loss, allowing the model to focus on learning temporal amp patterns (shape). This builds on exp028's success with instrument embedding (RMSE -9.5%) but addresses the unchanged Corr (+0.3%).
+
+### Code Changes
+
+1. **`src/model/train.py`**:
+   - Added `compute_amp_stats_per_inst(dataset, device)`: computes per-instrument log_amp mean/std from training data
+   - Modified `train_stage2`: when `amp_per_inst_norm=True`, normalizes `log_amp_gt` per instrument before computing loss (both train and test loops)
+   - Saves `amp_per_inst_stats.pt` to checkpoint dir
+
+2. **`src/model/evaluate.py`**:
+   - Added `amp_per_inst_stats` parameter to `evaluate_diffusion()`
+   - Denormalizes AmpPredictor output per instrument before comparison with ground truth
+   - Loads `amp_per_inst_stats.pt` in `main()` when config has `amp_per_inst_norm: true`
+
+3. **Backward compatible**: `amp_per_inst_norm=False` (default) → all behavior unchanged
+
+### Config: `experiments/configs/exp029.yaml`
+- Based on exp028 (GRU+Attention + instrument embedding)
+- New: `amp_per_inst_norm: true`
+- Diffusion FROZEN (from exp017), only training AmpPredictor
+- 200 epochs, amp_lr=0.0001
+
+### Training script: `experiments/next_train_cmd.sh`
+- Copies baseline (exp014) and diffusion (exp017) checkpoints
+- Runs training with `--stage 2`
+- Evaluates with η=0.3, 3 samples, 50 DDIM steps

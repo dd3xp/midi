@@ -1,0 +1,248 @@
+==========================================
+exp050 evaluation: alpha=1.0 eta=0.3 n=5 (main result)
+Started at: Mon Mar 30 11:53:02     2026
+==========================================
+C:\lxr\study\final\src\model\diffusion.py:398: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.attn = nn.TransformerEncoder(attn_layer, num_layers=n_attn_layers)
+C:\lxr\study\final\src\model\evaluate.py:204: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  autocast_ctx = torch.cuda.amp.autocast() if device.type == "cuda" else torch.inference_mode()
+Device: cuda
+Test tracks: 30
+
+--- Evaluating Diffusion ---
+Loaded baseline from experiments/checkpoints/exp050\baseline_best.pt
+Loaded Amp Diffusion from experiments/checkpoints/exp050\amp_diffusion_best_ema.pt
+Loaded AmpPredictor (hidden=256, gru_hidden=128, layers=2, dropout=0.3, f0_conditioned=False, use_attention=True, n_attn_heads=4, n_attn_layers=2, instrument_conditioned=False, note_position_conditioned=False, velocity_conditioned=False, condition_dropout=0.0) from experiments/checkpoints/exp050\amp_predictor_best.pt
+Amp norm stats (amp diffusion): mean=-4.6780, std=1.5514, residual_std=0.4699
+*** RESIDUAL AMP DIFFUSION MODE: amp = AmpPredictor_mean + diffusion_residual ***
+  Track 1: truncated 13092 -> 8192 frames (4900 dropped)
+  Track 2: truncated 13092 -> 8192 frames (4900 dropped)
+  Track 3: truncated 22520 -> 8192 frames (14328 dropped)
+  Track 4: truncated 22520 -> 8192 frames (14328 dropped)
+  Track 5: truncated 22520 -> 8192 frames (14328 dropped)
+  Track 6: truncated 22520 -> 8192 frames (14328 dropped)
+  Track 7: truncated 13092 -> 8192 frames (4900 dropped)
+  Track 8: truncated 22520 -> 8192 frames (14328 dropped)
+  Track 27: truncated 19106 -> 8192 frames (10914 dropped)
+{
+  "diffusion_rpa_mean": {
+    "mean": 0.8961054332258948,
+    "std": 0.061247727083186786,
+    "min": 0.7343814080656186,
+    "max": 0.9634194181104936
+  },
+  "diffusion_rpa_oracle": {
+    "mean": 0.9369405755744739,
+    "std": 0.03631170604483843,
+    "min": 0.7916251246261217,
+    "max": 0.9817415730337079
+  },
+  "diffusion_f0_mae_mean": {
+    "mean": 37.87619042078654,
+    "std": 47.59521439686722,
+    "min": 15.696506881713868,
+    "max": 283.949560546875
+  },
+  "diffusion_f0_mae_oracle": {
+    "mean": 30.858798662821453,
+    "std": 47.360630481037816,
+    "min": 13.209080696105957,
+    "max": 280.01904296875
+  },
+  "diffusion_amp_corr_mean": {
+    "mean": 0.7369904540054525,
+    "std": 0.10791778469691805,
+    "min": 0.5355281122350669,
+    "max": 0.9239697501560139
+  },
+  "diffusion_amp_corr_oracle": {
+    "mean": 0.7517421288573222,
+    "std": 0.10200499212148116,
+    "min": 0.5506279861175908,
+    "max": 0.9392460632614249
+  },
+  "diffusion_amp_rmse_log_mean": {
+    "mean": 0.9600891524553299,
+    "std": 0.5492076593848029,
+    "min": 0.4497117161750793,
+    "max": 3.3988051891326903
+  },
+  "diffusion_amp_rmse_log_oracle": {
+    "mean": 0.8266668101151784,
+    "std": 0.5373058705519026,
+    "min": 0.3993229568004608,
+    "max": 3.3158223628997803
+  },
+  "diffusion_vde_mean_avg": {
+    "mean": 10.978198911157516,
+    "std": 7.4569003095996615,
+    "min": 1.2139375125484393,
+    "max": 31.41362377642369
+  },
+  "diffusion_vde_mean_oracle": {
+    "mean": 9.622169433007429,
+    "std": 6.910558364382157,
+    "min": 1.2422815471048179,
+    "max": 28.01366545356283
+  },
+  "diffusion_vre_mean_avg": {
+    "mean": 0.7569961412662269,
+    "std": 0.2682369387545485,
+    "min": 0.0,
+    "max": 1.2115523776554586
+  },
+  "diffusion_vre_mean_oracle": {
+    "mean": 0.7906908470237077,
+    "std": 0.29454058116832105,
+    "min": 0.0,
+    "max": 1.3994945270600823
+  },
+  "diffusion_f0_diversity_cents": {
+    "mean": 20.468763573964438,
+    "std": 11.940160826722119,
+    "min": 7.68247652053833,
+    "max": 51.26799392700195
+  },
+  "diffusion_amp_diversity": {
+    "mean": 0.007996897764193515,
+    "std": 0.007829310109779776,
+    "min": 0.001985125942155719,
+    "max": 0.03258812800049782
+  },
+  "diffusion_n_vibrato_notes": {
+    "mean": 34.0,
+    "std": 17.410724664221572,
+    "min": 2.0,
+    "max": 71.0
+  }
+}
+
+Results saved to experiments/results/exp050.json
+
+==========================================
+exp050 evaluation: alpha=0.0 eta=0.0 n=1 (deterministic baseline check)
+Started at: Mon Mar 30 12:08:59     2026
+==========================================
+C:\lxr\study\final\src\model\diffusion.py:398: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.attn = nn.TransformerEncoder(attn_layer, num_layers=n_attn_layers)
+C:\lxr\study\final\src\model\evaluate.py:204: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  autocast_ctx = torch.cuda.amp.autocast() if device.type == "cuda" else torch.inference_mode()
+Device: cuda
+Test tracks: 30
+
+--- Evaluating Diffusion ---
+Loaded baseline from experiments/checkpoints/exp050\baseline_best.pt
+Loaded Amp Diffusion from experiments/checkpoints/exp050\amp_diffusion_best_ema.pt
+Loaded AmpPredictor (hidden=256, gru_hidden=128, layers=2, dropout=0.3, f0_conditioned=False, use_attention=True, n_attn_heads=4, n_attn_layers=2, instrument_conditioned=False, note_position_conditioned=False, velocity_conditioned=False, condition_dropout=0.0) from experiments/checkpoints/exp050\amp_predictor_best.pt
+Amp norm stats (amp diffusion): mean=-4.6780, std=1.5514, residual_std=0.4699
+*** RESIDUAL AMP DIFFUSION MODE: amp = AmpPredictor_mean + diffusion_residual ***
+  Track 1: truncated 13092 -> 8192 frames (4900 dropped)
+  Track 2: truncated 13092 -> 8192 frames (4900 dropped)
+  Track 3: truncated 22520 -> 8192 frames (14328 dropped)
+  Track 4: truncated 22520 -> 8192 frames (14328 dropped)
+  Track 5: truncated 22520 -> 8192 frames (14328 dropped)
+  Track 6: truncated 22520 -> 8192 frames (14328 dropped)
+  Track 7: truncated 13092 -> 8192 frames (4900 dropped)
+  Track 8: truncated 22520 -> 8192 frames (14328 dropped)
+  Track 27: truncated 19106 -> 8192 frames (10914 dropped)
+{
+  "diffusion_rpa_mean": {
+    "mean": 0.9071157929285861,
+    "std": 0.08683731102967687,
+    "min": 0.5075187969924813,
+    "max": 0.9878277153558053
+  },
+  "diffusion_rpa_oracle": {
+    "mean": 0.9071157929285861,
+    "std": 0.08683731102967687,
+    "min": 0.5075187969924813,
+    "max": 0.9878277153558053
+  },
+  "diffusion_f0_mae_mean": {
+    "mean": 36.795956738789876,
+    "std": 48.68397652187944,
+    "min": 13.16603946685791,
+    "max": 285.4326171875
+  },
+  "diffusion_f0_mae_oracle": {
+    "mean": 36.795956738789876,
+    "std": 48.68397652187944,
+    "min": 13.16603946685791,
+    "max": 285.4326171875
+  },
+  "diffusion_amp_corr_mean": {
+    "mean": 0.7705547408437528,
+    "std": 0.0964389808072089,
+    "min": 0.6235784709222221,
+    "max": 0.9274288636295707
+  },
+  "diffusion_amp_corr_oracle": {
+    "mean": 0.7705547408437528,
+    "std": 0.0964389808072089,
+    "min": 0.6235784709222221,
+    "max": 0.9274288636295707
+  },
+  "diffusion_amp_rmse_log_mean": {
+    "mean": 0.8653068989515305,
+    "std": 0.7023545329414623,
+    "min": 0.3919483721256256,
+    "max": 4.299630165100098
+  },
+  "diffusion_amp_rmse_log_oracle": {
+    "mean": 0.8653068989515305,
+    "std": 0.7023545329414623,
+    "min": 0.3919483721256256,
+    "max": 4.299630165100098
+  },
+  "diffusion_vde_mean_avg": {
+    "mean": 10.413357636586035,
+    "std": 7.663992539343457,
+    "min": 1.2640359527114742,
+    "max": 33.63647643026282
+  },
+  "diffusion_vde_mean_oracle": {
+    "mean": 10.413357636586035,
+    "std": 7.663992539343457,
+    "min": 1.2640359527114742,
+    "max": 33.63647643026282
+  },
+  "diffusion_vre_mean_avg": {
+    "mean": 0.6968310221757501,
+    "std": 0.29802015353568545,
+    "min": 0.0,
+    "max": 1.265102790285346
+  },
+  "diffusion_vre_mean_oracle": {
+    "mean": 0.6968310221757501,
+    "std": 0.29802015353568545,
+    "min": 0.0,
+    "max": 1.265102790285346
+  },
+  "diffusion_f0_diversity_cents": {
+    "mean": 0.0,
+    "std": 0.0,
+    "min": 0.0,
+    "max": 0.0
+  },
+  "diffusion_amp_diversity": {
+    "mean": 0.0,
+    "std": 0.0,
+    "min": 0.0,
+    "max": 0.0
+  },
+  "diffusion_n_vibrato_notes": {
+    "mean": 34.0,
+    "std": 17.410724664221572,
+    "min": 2.0,
+    "max": 71.0
+  }
+}
+
+Results saved to experiments/results/exp050_alpha00.json
+
+==========================================
+Both evaluations complete at: Mon Mar 30 12:12:15     2026
+Results:
+  experiments/results/exp050.json          (alpha=1.0, main)
+  experiments/results/exp050_alpha00.json  (alpha=0.0, sanity check)
+==========================================

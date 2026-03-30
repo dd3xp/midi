@@ -1,0 +1,25 @@
+Everything is logged correctly. Here's a summary of exp013:
+
+## exp013 Results Summary
+
+**Experiment**: Diffusion with channel-wise amp loss weighting (amp_weight=3.0)
+
+**Status**: ❌ **Negative result** — massive regression across all metrics
+
+### Key Results (η=0.3)
+| Metric | exp013 | exp007 (prev best) | Change |
+|--------|--------|---------------------|--------|
+| Mean RPA | **37.15%** | 94.20% | **-57%** |
+| Oracle RPA | 84.06% | 96.47% | -12% |
+| Amp Corr (mean) | **0.516** | 0.571 | **-0.055** (worse!) |
+| f0 Diversity | **47.0 cents** | 8.92 cents | Model incoherent |
+
+### Issues
+1. **Training incomplete**: Only ~70/200 epochs completed (no `stage2_history.json`)
+2. **amp_weight=3.0 catastrophic**: Destroyed f0 quality AND made amp worse
+3. Noise-prediction diffusion doesn't benefit from channel-wise loss reweighting
+
+### Decision per supervisor plan
+- **Amp Corr < 0.60 and f0 RPA < 90%** → **Retain exp007 as final diffusion model**
+- exp013 confirms: diffusion amp bottleneck is not in loss weighting
+- **"当前最佳" unchanged**: Baseline=exp012, Diffusion=exp007

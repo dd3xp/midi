@@ -1,0 +1,32 @@
+# exp015: Two-stage architecture — 1ch Diffusion (f0 only) + AmpPredictor
+# Purpose: Address Amp Corr bottleneck (0.571 in exp007) by separating f0 and amp
+#   - Diffusion UNet: 1 channel (f0 only), no longer competing with amp gradients
+#   - AmpPredictor: lightweight BiGRU network predicts amp from encoder condition
+# Architecture changes:
+#   [C1] diffusion.py: ConditionalDDPM accepts n_channels param (1 or 2)
+#   [C2] diffusion.py: UNet1D input_ch=257 (1+256), output_ch=1
+#   [C3] diffusion.py: training_loss simplified (no amp_weight param)
+#   [C4] diffusion.py: ddim_sample uses self.n_channels for initial noise
+#   [C5] diffusion.py: Added AmpPredictor class (proj->GRU->Softplus)
+#   [C6] train.py: Stage 2 trains diffusion + AmpPredictor jointly
+#   [C7] evaluate.py: Loads AmpPredictor, uses 1ch diffusion for f0
+# Encoder: frozen from exp014 (173 tracks, 10 instruments)
+# Dataset: same as exp014 (URMP 9 inst + Bach10 4 inst = 173 tracks)
+# Expected: f0 RPA ≥ 93%, Amp Corr ≥ 0.60, VDE ≈ 5-6
+
+output_dir: "experiments/checkpoints/exp015"
+instruments: ["vn", "va", "vc", "fl", "ob", "cl", "sax", "tpt", "tbn", "bn"]
+crop_len: 512
+seed: 42
+save_every: 10
+
+stage2:
+  batch_size: 16
+  lr: 0.0002
+  lr_min: 0.00001
+  epochs: 200
+  ema_decay: 0.995
+  n_diffusion_steps: 1000
+  samples_per_epoch: 1860    # 124 tracks × 15 crops → ~23,200 total steps
+  amp_predictor_lr: 0.001    # (reserved for future independent optimizer)
+  n_channels: 1              # 1ch diffusion (f0 only)

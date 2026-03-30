@@ -1,0 +1,19 @@
+Log is properly updated. Here's a summary of the results:
+
+## exp033 Results — 突破性进展! 🎉
+
+**实验**: Stage 1 Retrain with Estimated Velocity (用 RMS 从音频估算 velocity 替代常量 80)
+
+| 指标 | exp014 (旧 Baseline) | exp028 (旧最佳 Diffusion) | **exp033 (新 Baseline)** | 变化 |
+|------|---------------------|--------------------------|------------------------|------|
+| f0 RPA | 96.59% | 95.06% | **96.60%** | 不变 |
+| f0 MAE | 20.95 | 22.79 | **20.57** | -0.38 |
+| **Amp Corr** | 0.633 | 0.678 | **0.756** | **+19.4% vs exp014, +11.5% vs exp028** |
+| Amp RMSE(log) | 0.724 | 0.657 | **0.664** | -8.3% vs exp014 |
+| VDE | 8.70 | 6.71 | 8.79 | ≈同 |
+
+**关键发现**:
+- **velocity=80 常量是 Amp Corr 的根本瓶颈** — 提供真实 velocity 后，仅 Baseline 就达到 0.756，远超 13 次 diffusion AmpPredictor 优化的最佳 0.678
+- Amp Corr 距目标 0.80 仅差 **0.044**（从之前的 0.122 大幅缩小）
+- 训练: early stop @ ep63, best test_loss=3.2492 @ ep48, lr 1e-3→1.25e-4
+- 已更新当前最佳为 exp033

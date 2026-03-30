@@ -1,0 +1,21 @@
+The log has been updated correctly. Here's a summary of the **exp034 results**:
+
+## exp034: Velocity-Informed Encoder + Stage 2 (Diffusion + AmpPredictor) — ✅✅ 新全局最佳!
+
+### Key Metrics
+| Metric | exp028 (旧encoder) | exp033 (baseline) | **exp034** | Target |
+|--------|-------------------|-------------------|-----------|--------|
+| **Amp Corr** | 0.678 | 0.756 | **0.789 (+16.4% vs exp028, +4.4% vs exp033)** | > 0.80 |
+| **Amp RMSE** | 0.657 | 0.664 | **0.582 (-11.4%)** | — |
+| f0 RPA | 95.06% | 96.60% | 94.52% (mean) / 95.83% (oracle) | > 85% |
+| VDE | 6.71 | 8.79 | 7.33 | — |
+| f0 diversity | 9.35 | — | 9.52 cents | — |
+
+### Key Findings
+1. **Amp Corr 0.789** — 项目全局新高！距 0.80 目标仅差 **0.011**
+2. **Amp RMSE 0.582** — 项目全局新低！比 exp028 改善 11.4%
+3. Velocity + InstrumentEmbedding 组合效果叠加确认：Amp Corr 从 0.678 → 0.789 (+0.111)
+4. best_test_amp_loss 在 epoch 18 就达到 (0.342)，后续过拟合，说明 amp predictor 收敛很快
+5. f0 diffusion 从头训练 200ep 略逊于 exp017/exp028，VDE 也略高
+
+Supervisor 可据此规划下一步（微调冲刺 0.80 或接受 0.789 进入最终评估阶段）。

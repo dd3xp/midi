@@ -1,0 +1,36 @@
+Everything looks correct. Let me provide a summary:
+
+---
+
+## exp039 Preparation Summary
+
+### What was done:
+
+1. **Modified `src/model/train.py`**:
+   - **Line 560-563**: Added print statement to log augmentation parameters at training start
+   - **Lines 662-673**: Added amplitude augmentation code in the **training loop only** (after `log_amp_gt = torch.log(amp + eps)`, before pitch-anchor block):
+     - Random global scale: per-sample uniform offset ±0.2 in log space
+     - Random per-frame jitter: Gaussian noise σ=0.05
+   - **Validation loop (line 788) is UNTOUCHED** — no augmentation applied during validation ✅
+
+2. **Created `experiments/configs/exp039.yaml`**:
+   - Same architecture as exp035 (amp_hidden=256, gru_hidden=128, 2 attn layers)
+   - **New**: `amp_augment: true`, `amp_augment_scale: 0.2`, `amp_augment_jitter: 0.05`
+   - **Changed**: `epochs: 300` (was 250) to exploit slower convergence
+   - Frozen diffusion from exp034, baseline from exp033
+
+3. **Created `experiments/next_train_cmd.sh`**:
+   - Copies norm_stats from exp034
+   - Runs `train.py --config exp039.yaml --stage 2`
+   - Then runs `evaluate.py` with `--mode diffusion --n_samples 3 --ddim_steps 50 --eta 0.3`
+
+4. **Prepared checkpoint directory**: `experiments/checkpoints/exp039/` with `baseline_best.pt` copied from exp033
+
+### Key verification:
+- `amp_augment` appears only in training loop (lines 663-673), NOT in validation loop ✅
+- Augmentation is applied after `log_amp_gt = torch.log(amp + eps)` and before MSE loss ✅
+- Config print confirms `amp_augment=True` at training start ✅
+
+### Expected outcome:
+- Best epoch should delay to 80-120 (from ~55) if overfitting is the bottleneck
+- Amp Corr target: 0.82-0.84 (from 0.800)

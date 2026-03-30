@@ -1,0 +1,47 @@
+# exp032: Scheduled Sampling f0-Conditioned AmpPredictor
+# Based on exp028 (instrument embedding, best model) + exp022 (f0 conditioning)
+# Hypothesis: exp022 proved f0-amp signal exists (train loss 0.386 vs 0.508) but
+# failed at inference due to exposure bias (GT f0 at train, noisy diffusion f0 at test).
+# Scheduled sampling gradually transitions from GT f0 to cached diffusion f0 during
+# training, teaching the model to tolerate ~20 cents f0 error.
+output_dir: "experiments/checkpoints/exp032"
+baseline_checkpoint: "experiments/checkpoints/exp014/baseline_best.pt"
+instruments: ["vn", "va", "vc", "fl", "ob", "cl", "sax", "tpt", "tbn", "bn"]
+crop_len: 512
+seed: 42
+save_every: 10
+
+stage2:
+  batch_size: 16
+  lr: 0.0002
+  lr_min: 0.00001
+  epochs: 200
+  ema_decay: 0.995
+  n_diffusion_steps: 1000
+  samples_per_epoch: 1860
+  n_channels: 1
+
+  # GRU+Attention (same as exp023/exp028)
+  amp_hidden: 256
+  amp_gru_hidden: 128
+  amp_gru_layers: 2
+  amp_dropout: 0.3
+  amp_use_attention: true
+  amp_n_attn_heads: 4
+  amp_n_attn_layers: 2
+
+  # Instrument conditioning (same as exp028)
+  amp_instrument_conditioned: true
+
+  # f0 conditioning + scheduled sampling (NEW for exp032)
+  amp_f0_conditioned: true
+  amp_scheduled_sampling: true
+  amp_ss_warmup_epochs: 50
+  amp_ss_decay_epochs: 100
+  cached_f0_dir: "experiments/checkpoints/exp032/cached_f0"
+
+  # Optimizer (same as exp028)
+  freeze_diffusion: true
+  diffusion_checkpoint: "experiments/checkpoints/exp017/diffusion_best_ema.pt"
+  amp_lr: 0.0001
+  amp_weight_decay: 0.0001

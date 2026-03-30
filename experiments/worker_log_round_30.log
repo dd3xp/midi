@@ -1,0 +1,25 @@
+Everything looks good. Here's a summary of what happened and what I did:
+
+## Summary: exp022 — f0-conditioned AmpPredictor
+
+### Training: ✅ Completed (200 epochs)
+- **Best test_amp_loss = 0.386076** at epoch 164 (vs exp018's 0.404723 → **4.6% improvement**)
+- The f0 conditioning hypothesis appears validated: providing generated f0 to AmpPredictor helps amp prediction
+- Training converged well: amp_loss train=0.342, test=0.401 (gap=0.059)
+
+### Evaluation: ❌ CUDA OOM
+- Crashed during DDIM sampling on a long test track
+- UNet attention layer tried to allocate 1.13 GiB with only 901 MiB free (4.73 GiB already allocated)
+- Root cause: full-length test tracks exceed the 512-crop training window, and attention scales O(T²)
+
+### Fixes Applied
+1. **`evaluate.py`**: Added `torch.cuda.empty_cache()` between test tracks in the diffusion evaluation loop to free GPU memory
+2. **`next_train_cmd.sh`**: Re-evaluation script with:
+   - `PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True` (reduces fragmentation)
+   - `n_samples=3` (reduced from 5 to lower peak memory)
+
+### Log Updated
+- Added exp022 row to `experiments/log.md` with training metrics and OOM note
+- Status: ⚠️ 训练完成,评估OOM — pending re-evaluation
+
+The shell script should now run `next_train_cmd.sh` to complete the evaluation.

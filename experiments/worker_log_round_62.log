@@ -1,0 +1,20 @@
+The log has been updated correctly. Let me verify the "当前最佳" section — since exp050 has no evaluation results, no update is needed there.
+
+Here's a summary of what was logged for **exp050**:
+
+## exp050 Results Summary
+
+**Training**: ✅ Completed (300 epochs)
+- Best test loss: **0.094702** 
+- Residual normalization implemented: residual_std = 0.4699 → normalized to ~unit variance
+- Residual stats: mean=-0.0767, std=0.4699 (z-score space)
+- Train loss converged from 0.290 → 0.107
+
+**Evaluation**: ❌ OOM Failure
+- Baseline metrics partially obtained: rpa=94.46%, **amp_corr=0.737**, rmse=0.872
+- Diffusion evaluation crashed during DDIM sampling — UNet self-attention tried to allocate **7.56 GiB** on 8GB GPU
+- **Root cause**: All models (f0 UNet 16.4M + amp UNet 16.4M + AmpPredictor 1.7M + baseline 10M) loaded simultaneously, plus O(T²) self-attention on long tracks (~22K frames)
+
+**"当前最佳" NOT updated** — no diffusion/amp metrics available.
+
+**For supervisor**: The training checkpoint exists at `experiments/checkpoints/exp050/amp_diffusion_best_ema.pt`. The evaluation needs to be re-run with OOM mitigation (model offloading, reduced n_samples, chunked long tracks, or float16 inference).

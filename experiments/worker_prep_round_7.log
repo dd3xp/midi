@@ -1,0 +1,32 @@
+73 batches/epoch × 200 epochs = 14,600 steps. EMA residual ≈ 0.000000 — the EMA checkpoint will be 100% trained weights instead of 94% random. 
+
+## Summary
+
+**Experiment exp005** is prepared. Here's what was done:
+
+### Code Fixes (following supervisor's plan exactly)
+
+1. **`src/model/dataset.py`** — Added `samples_per_epoch` parameter to `ExpressionDataset`:
+   - New `__init__` parameter `samples_per_epoch=None`
+   - `__len__` returns `samples_per_epoch` when set, otherwise `len(tracks)`
+   - `__getitem__` uses `idx % len(self.tracks)` to map virtual indices to real tracks
+
+2. **`src/model/train.py`** — Three critical fixes:
+   - **[C1] EMA decay**: Default changed from `0.9999` to `0.995` (effective window 200 steps; fully converges in 14,600 steps vs being 94% random at 600 steps)
+   - **[C1] Dataset multiplier**: `samples_per_epoch` read from config and passed to `ExpressionDataset` → 1180 virtual samples → 73 batches/epoch → 14,600 total EMA updates
+   - **[C1] Raw checkpoint saving**: Both `diffusion_best_raw.pt` and `diffusion_best_ema.pt` saved on new best, plus periodic raw saves
+   - **[C2] Best checkpoint selection**: Changed from `best_train_loss` to `best_test_loss` for better generalization
+   - **Bug fix**: `compute_amp_stats` now iterates `len(dataset.tracks)` instead of `len(dataset)` to avoid index-out-of-bounds with multiplied dataset
+
+3. **`experiments/configs/exp005.yaml`** — Config with `ema_decay: 0.995`, `samples_per_epoch: 1180`
+
+4. **`experiments/next_train_cmd.sh`** — Training script that:
+   - Creates checkpoint dir
+   - Copies baseline from exp003
+   - Runs `train.py --stage 2` 
+   - Runs `evaluate.py` with `--mode both --n_samples 5 --ddim_steps 50`
+
+### Expected Outcome
+- **14,600 EMA updates** (vs exp004's 600) → EMA ≈ 100% trained weights
+- **f0 RPA**: 80-95% (vs exp004's 3.09% with garbage EMA)
+- **Amp Corr**: 0.5-0.7 (vs exp004's -0.011)

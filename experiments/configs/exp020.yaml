@@ -1,0 +1,43 @@
+# exp020: Paper figures + result tables generation (no training)
+# Uses exp019 mixed checkpoint (exp017 diffusion + exp018 amp)
+# Dataset: URMP 9 inst + Bach10 4 inst = 173 tracks (10 instruments)
+
+output_dir: "experiments/figures/final"
+checkpoint_dir: "experiments/checkpoints/exp019_mixed"
+instruments: ["vn", "va", "vc", "fl", "ob", "cl", "sax", "tpt", "tbn", "bn"]
+seed: 42
+
+# Model config (matches exp019)
+stage2:
+  n_diffusion_steps: 1000
+  n_channels: 1
+  amp_hidden: 256
+  amp_gru_hidden: 128
+  amp_gru_layers: 2
+  amp_dropout: 0.3
+
+# Visualization parameters
+vis:
+  n_samples: 5
+  ddim_steps: 50
+  eta: 0.3
+  dpi: 300
+  font_size: 11
+  # Color scheme: GT=black, Baseline=blue, Diffusion=red
+  representative_instruments: ["vn", "fl", "tpt"]
+  representative_tracks:
+    vn: "datagen/solo/URMP/processed_vn/01_Jupiter_vn_vc_track1_vn/data.npz"
+    fl: "datagen/solo/URMP/processed_fl/17_Nocturne_vn_fl_cl_track2_fl/data.npz"
+    tpt: "datagen/solo/URMP/processed_tpt/18_Nocturne_vn_fl_tpt_track3_tpt/data.npz"
+
+# Expected outputs:
+# Figures: experiments/figures/final/
+#   - f0_contour_{vn,fl,tpt}.png
+#   - vibrato_zoom_{vn,fl,tpt}.png
+#   - amp_contour_{vn,fl,tpt}.png
+#   - eta_sweep.png
+#   - instrument_comparison.png
+#   - vde_comparison.png
+#   - eta_metrics.png
+#   - training_curves.png
+# Tables: experiments/results/paper_tables.md

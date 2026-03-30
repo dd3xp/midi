@@ -1,0 +1,32 @@
+The plan is well-structured and complete. Here's my status summary:
+
+---
+
+## Supervisor Review Summary — exp017
+
+### Experiment Reviewed
+**exp017**: Larger AmpPredictor (2-layer BiGRU, hidden=256→128, 730K params, 3.2x increase from exp016)
+
+### Key Metrics
+| Metric | exp016 | **exp017** | Baseline | Status |
+|--------|--------|-----------|----------|--------|
+| f0 RPA mean | 94.23% | **95.45%** | 96.59% | ✅ Excellent |
+| Amp Corr | 0.625 | **0.645** | 0.633 | ✅ **Beats baseline!** |
+| Amp RMSE(log) | 0.818 | **0.807** | 0.724 | ⚠️ Still 11.5% above baseline |
+| VDE | 6.61 | **6.63** | 8.70 | ✅ 24% better than baseline |
+| f0 diversity | 10.70 | **10.15 cents** | N/A | ✅ Good |
+
+### 🎯 Milestone: Diffusion Amp Corr (0.645) surpasses Baseline (0.633) for the first time!
+
+### Code Review
+✅ **No bugs found.** All architecture changes correctly implemented in diffusion.py, train.py, evaluate.py. Backward compatibility maintained.
+
+### Diagnosis
+- **Overfitting is the main issue**: AmpPredictor best test_amp_loss at ep66/200, train-test gap = 0.125 (vs exp016's 0.056). The larger model overfits faster.
+- **Frozen encoder is the structural ceiling**: AmpPredictor can only use what the frozen encoder provides. Baseline jointly trains encoder+amp head.
+
+### Next Plan: exp018
+**AmpPredictor regularization** — separate optimizer with weight_decay=1e-4, lr=1e-4 (halved), targeting RMSE ≤ 0.78. This is the **final AmpPredictor tuning experiment**. After exp018, regardless of outcome, we move to paper preparation.
+
+### No Critical Issues
+No NEEDS_HUMAN.txt created. Progress is steady (Amp Corr: 0.624 → 0.625 → 0.645 over 3 experiments).

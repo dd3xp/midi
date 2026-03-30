@@ -1,0 +1,34 @@
+All files verified. Here's a summary of what was prepared:
+
+---
+
+## exp020 Preparation Summary
+
+**Purpose**: Generate publication-quality figures and result tables for the AIMC 2026 paper. **No training needed** — pure visualization from existing exp019 mixed checkpoint and evaluation results.
+
+### Files Created
+
+1. **`src/model/plot_final.py`** — Comprehensive visualization script that generates:
+   - **f0 contour** figures for 3 representative instruments (vn, fl, tpt)
+   - **Vibrato zoom** figures showing fine pitch detail
+   - **Amplitude contour** figures (GT vs Baseline vs Diffusion+AmpPredictor)
+   - **Eta sweep** figure: 4-panel showing η=0.0, 0.3, 0.5, 1.0 effect on generation diversity
+   - **Instrument comparison** bar chart: Baseline vs Diffusion RPA and Amp Corr across all 10 instruments
+   - **VDE comparison** bar chart: Vibrato Depth Error by instrument
+   - **Eta metrics** line chart: RPA/VDE/Diversity vs η
+   - **Training curves** from exp017/exp018 stage2_history.json
+   - **`paper_tables.md`**: 3 formatted result tables (Overall comparison, Multi-eta, Per-instrument)
+
+2. **`experiments/configs/exp020.yaml`** — Config recording all parameters
+
+3. **`experiments/next_train_cmd.sh`** — Bash script that:
+   - Creates output directories
+   - Runs `plot_final.py` with all correct arguments
+   - Verifies all 15 expected output files exist
+   - Exits with code 0 on success, 1 if files missing
+
+### Key Design Decisions
+- Uses exp019 mixed checkpoint (1ch diffusion + AmpPredictor), not the old 2ch model
+- Paper format: DPI=300, font≥10pt, 7-inch wide figures for double-column layout
+- Color scheme: GT=black, Baseline=blue (#4472C4), Diffusion=red (#E74C3C)
+- Seed=42 for reproducibility

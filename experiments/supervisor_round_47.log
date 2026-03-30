@@ -1,0 +1,39 @@
+Everything checks out. `gru_out_dim = 192 * 2 = 384`, `nhead=8`, `384 % 8 = 0` ✅, `dim_feedforward = 384 * 2 = 768`.
+
+No code bugs found. The plan is ready. Here's the summary:
+
+---
+
+## Supervisor Round 10 — Summary
+
+### Experiment Reviewed: exp036 (f0-Conditioned AmpPredictor + Scheduled Sampling)
+
+**Key Metrics:**
+| Metric | exp035 | exp036 | Status |
+|--------|--------|--------|--------|
+| **Amp Corr** | **0.800** | **0.797** | ❌ Slight regression |
+| Amp RMSE | 0.572 | 0.567 | ✅ Tiny improvement |
+| f0 RPA | 94.4% | 93.2% | ⚠️ Sampling noise (frozen diff) |
+
+**Diagnosis:**
+- f0-conditioning with scheduled sampling **did not help**. The generated f0's ~5% error rate introduces more noise than signal for amp prediction.
+- Best epoch was 52 (before scheduled sampling transition at epoch 50), confirming the approach is counterproductive.
+- **f0-amp coupling direction is now exhausted** (tried twice: exp022 + exp036).
+- Per-instrument: regression on strong instruments (tpt -0.009, fl -0.009), tiny gain on mid-tier (ob +0.014).
+
+**Code Review:** ✅ No bugs found. All config parameters properly piped through train.py and evaluate.py.
+
+### Planned Next: exp037 — Scaled AmpPredictor (2x capacity)
+
+**Changes:** amp_hidden 256→384, gru_hidden 128→192, attn_layers 2→4, attn_heads 4→8, lr 5e-5→3e-5, dropout 0.3→0.35, epochs 250→400, f0_conditioned=false.
+
+**Rationale:** Current 1.72M model overfits at epoch 52. Scaling to ~4.5M with deeper attention + slower LR should capture phrase-level dynamics that the shallow model misses. TPT reaching 0.90 proves the task is learnable to that level.
+
+**Expected:** Amp Corr 0.81-0.84, with best epoch delayed to 80-120.
+
+### Progress Toward Publication (AIMC 2026)
+| Target | Current | Status |
+|--------|---------|--------|
+| f0 RPA > 85% | 95.7% | ✅✅ Done |
+| Amp Corr > 0.90 | 0.800 | ❌ Gap: 0.10 |
+| **Biggest bottleneck** | **Amp Corr** — trying model scaling next |

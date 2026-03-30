@@ -1,0 +1,29 @@
+---
+
+## Supervisor Review Summary
+
+### Experiment Reviewed: **exp020** (Paper Figures + Tables Generation)
+
+**Status**: ✅ Complete — pure visualization, no training
+
+### Key Results (Final Model: exp019 Mixed Checkpoint)
+
+| Metric | Baseline | Diffusion (best) | Δ |
+|--------|----------|------------------|---|
+| f0 RPA | 96.59% | 95.59% (η=1.0) | -1.0% |
+| Amp Corr | 0.633 | **0.665** | **+5.1%** |
+| Amp RMSE(log) | 0.724 | **0.697** | **-3.7%** |
+| VDE | 8.70 | **6.54** | **-24.8%** |
+| f0 Diversity | — | 9-10 cents | ✅ |
+
+### Code Review
+- `plot_final.py`: ✅ No bugs found. Correct model loading, AmpPredictor exp() conversion, figure formatting (300 DPI, consistent colors)
+- `paper_tables.md`: ✅ All values cross-verified against JSON results
+
+### What Was Planned Next
+**No more experiments.** The experiment phase is complete (20 experiments, exp001-exp020). Created `experiments/NEEDS_HUMAN.txt` to pause the automation loop. The project now enters the **paper writing phase** for AIMC 2026.
+
+### Suggestions for Paper (non-blocking)
+1. Add Bach10 to per-instrument table (strongest cross-domain result: AmpCorr +20.3%)
+2. Address VRE regression (0.855 vs 0.770) in discussion — trade-off with VDE improvement
+3. Frame f0 diversity (~10 cents) as natural inter-performance variation range

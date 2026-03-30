@@ -1,0 +1,34 @@
+Good — no `NEEDS_HUMAN.txt` exists and none should be created. This is a planned strategic pivot to amp diffusion, not a failure requiring human intervention.
+
+---
+
+## Supervisor Review Summary
+
+### Experiment Reviewed: **exp040 (2x Model + Augmentation)**
+
+**Key Metrics:**
+| Metric | exp039 (best) | exp040 | Delta |
+|--------|--------------|--------|-------|
+| **Amp Corr** | **0.807** | 0.801 | **-0.7% ❌** |
+| f0 RPA | 93.73% | 93.78% | +0.05% (stable) |
+| Amp RMSE | 0.582 | 0.583 | flat |
+| VDE | 7.97 | 7.65 | -4% (improved) |
+| amp_diversity | ~3e-10 | ~3e-10 | **zero (critical!)** |
+| Overfitting gap | 0.154 | 0.260 | **+68% worse** |
+
+### Diagnosis:
+- **exp040 failed**: Doubling model capacity (384 hidden, 4 attn layers) on top of augmentation did NOT break the 0.807 ceiling. The larger model overfits faster (gap 0.26 vs 0.154), overwhelming the augmentation's regularization.
+- **22 AmpPredictor optimization attempts** have been exhausted. The deterministic predictor architecture has hit a fundamental ceiling at ~0.807 Amp Corr on 124 training tracks.
+- **amp_diversity = 0** across ALL experiments using AmpPredictor. This is a fatal flaw for the paper's diversity narrative.
+
+### Plan for exp041: **Amp Diffusion v2 with Velocity Encoder**
+- **What**: Retrain the separate 1-channel DDPM for amplitude using the velocity-aware encoder from exp033 (the single biggest amp improvement, +0.135)
+- **Why**: (1) Break the deterministic predictor ceiling, (2) Solve amp_diversity = 0 (exp021 proved amp diffusion produces diversity ~0.004), (3) exp021's failure (0.407) was due to weak conditioning — velocity encoder should fix this
+- **Expected**: Amp Corr 0.70-0.82, amp_diversity > 0.002
+- **Code changes needed**: Add augmentation to `train_stage3()` in train.py
+- **Priority**: **HIGH** — only known direction that solves both quality ceiling and diversity gap
+
+### Critical Issues Found: **None** (code is correct, this is a strategic direction change)
+
+### Biggest Bottleneck:
+Dual bottleneck: Amp Corr stuck at 0.807 (target: 0.90) AND amp_diversity = 0. Amp Diffusion v2 is the only approach that can address both simultaneously.

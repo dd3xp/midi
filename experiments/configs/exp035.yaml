@@ -1,0 +1,49 @@
+# exp035: Correlation Loss + Lower LR on Velocity Encoder
+# Hypothesis: Adding correlation loss (amp_corr_weight=0.3) directly optimizes
+# the evaluation metric, while lower amp_lr (5e-5) prevents early overfitting
+# that was observed in exp034 (best at epoch 18/200).
+#
+# Changes vs exp034:
+#   [C1] amp_corr_weight: 0.3 (NEW — directly optimize correlation)
+#   [C2] amp_grad_weight: 0.2 (NEW — temporal gradient loss)
+#   [C3] amp_lr: 5e-5 (was 1e-4 — slower, more stable convergence)
+#   [C4] epochs: 250 (was 200 — more time at lower LR)
+#   [C5] freeze_diffusion: true (reuse exp034's diffusion, only train amp)
+output_dir: "experiments/checkpoints/exp035"
+baseline_checkpoint: "experiments/checkpoints/exp033/baseline_best.pt"
+instruments: ["vn", "va", "vc", "fl", "ob", "cl", "sax", "tpt", "tbn", "bn"]
+crop_len: 512
+seed: 42
+save_every: 10
+
+stage2:
+  batch_size: 16
+  lr: 0.0002
+  lr_min: 0.00001
+  epochs: 250
+  ema_decay: 0.995
+  n_diffusion_steps: 1000
+  samples_per_epoch: 1860
+  n_channels: 1
+
+  # AmpPredictor: same architecture as exp034
+  amp_hidden: 256
+  amp_gru_hidden: 128
+  amp_gru_layers: 2
+  amp_dropout: 0.3
+  amp_use_attention: true
+  amp_n_attn_heads: 4
+  amp_n_attn_layers: 2
+  amp_instrument_conditioned: true
+
+  # Correlation-aligned loss (NEW)
+  amp_corr_weight: 0.3
+  amp_grad_weight: 0.2
+
+  # Diffusion: reuse exp034's trained diffusion (FREEZE it — only train amp)
+  freeze_diffusion: true
+  diffusion_checkpoint: "experiments/checkpoints/exp034/diffusion_best_ema.pt"
+
+  # Slower amp optimizer
+  amp_lr: 0.00005
+  amp_weight_decay: 0.0001

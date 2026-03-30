@@ -1,0 +1,21 @@
+Everything is properly logged. Here's a summary of the results:
+
+## exp037 Results: Scaled AmpPredictor (2x capacity)
+
+**Training**: 400 epochs completed, best test_amp_loss = **0.500** @ epoch 57
+
+**Key Metrics**:
+| Metric | exp035 (best) | exp037 | Change |
+|--------|--------------|--------|--------|
+| **Amp Corr** | **0.800** | 0.799 | -0.1% (持平) |
+| Amp RMSE(log) | **0.572** | 0.592 | +3.5% (退化) |
+| f0 RPA (mean) | 94.40% | 93.71% | -0.7% |
+| VDE (avg) | 7.77 | 7.80 | ≈同 |
+
+**Key Findings**:
+1. **Model capacity is NOT the bottleneck** — 2x parameters (hidden 384, GRU 192, 4 attn layers, 8 heads) yielded zero improvement in Amp Corr
+2. **Larger model overfits more severely** — train-test gap 0.305 vs exp035's 0.163
+3. Best epoch (57) was similar to exp035 (54), suggesting the larger model didn't utilize the extra 400 epochs
+4. **Amp Corr ~0.80 appears to be the ceiling** for the current data + representation approach
+
+**当前最佳 unchanged**: exp035 (Amp Corr = 0.800, Amp RMSE = 0.572)

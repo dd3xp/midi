@@ -1,0 +1,24 @@
+Here's a summary of what was done:
+
+## Summary
+
+**exp004 (Stage 2 Diffusion)** — ❌ **FAILED**
+
+### Error
+`RuntimeError` in U-Net UpBlock: channel dimension mismatch. `Conv1d` proj layer expected 768 input channels but received 1024.
+
+### Root Cause
+In `UpBlock.__init__`, `self.proj = nn.Conv1d(in_ch + out_ch, out_ch, 1)` incorrectly assumed the skip connection has `out_ch` channels. In reality, the skip comes from the corresponding `DownBlock`'s output, which has `in_ch` channels (the UpBlock's `in_ch` = the DownBlock's `out_ch`). So the concat produces `in_ch + in_ch = 2*in_ch` channels, not `in_ch + out_ch`.
+
+### Fix Applied
+Changed `diffusion.py` line 142:
+- **Before**: `self.proj = nn.Conv1d(in_ch + out_ch, out_ch, 1)`
+- **After**: `self.proj = nn.Conv1d(in_ch * 2, out_ch, 1)`
+
+Verified with full forward pass, training loss, and DDIM sampling — all pass.
+
+### Log Updated
+- Added exp004 failure row to results table
+- Added detailed failure analysis section
+- 当前最佳 remains **exp003** (unchanged)
+- No 下一步计划 written (supervisor will plan)

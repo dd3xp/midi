@@ -1,0 +1,52 @@
+# exp037: Scaled AmpPredictor — 2x capacity, deeper attention
+# Hypothesis: Current 1.72M AmpPredictor underfits complex dynamics.
+# Scaling model + deeper attention captures phrase-level patterns.
+#
+# Changes vs exp035:
+#   [C1] amp_hidden: 384 (was 256) — wider feature space
+#   [C2] amp_gru_hidden: 192 (was 128) — larger GRU capacity
+#   [C3] amp_n_attn_layers: 4 (was 2) — deeper attention for long-range
+#   [C4] amp_n_attn_heads: 8 (was 4) — multi-scale attention patterns
+#   [C5] amp_dropout: 0.35 (was 0.3) — slightly stronger regularization
+#   [C6] amp_lr: 0.00003 (was 0.00005) — slower lr for larger model
+#   [C7] epochs: 400 (was 250) — more training time
+#   [C8] amp_f0_conditioned: false (revert from exp036)
+output_dir: "experiments/checkpoints/exp037"
+baseline_checkpoint: "experiments/checkpoints/exp033/baseline_best.pt"
+instruments: ["vn", "va", "vc", "fl", "ob", "cl", "sax", "tpt", "tbn", "bn"]
+crop_len: 512
+seed: 42
+save_every: 10
+
+stage2:
+  batch_size: 16
+  lr: 0.0002
+  lr_min: 0.00001
+  epochs: 400
+  ema_decay: 0.995
+  n_diffusion_steps: 1000
+  samples_per_epoch: 1860
+  n_channels: 1
+
+  # AmpPredictor: SCALED UP
+  amp_hidden: 384
+  amp_gru_hidden: 192
+  amp_gru_layers: 2
+  amp_dropout: 0.35
+  amp_use_attention: true
+  amp_n_attn_heads: 8
+  amp_n_attn_layers: 4
+  amp_instrument_conditioned: true
+  amp_f0_conditioned: false
+
+  # Loss: keep corr+grad from exp035
+  amp_corr_weight: 0.3
+  amp_grad_weight: 0.2
+
+  # Diffusion: reuse exp034's trained diffusion (FREEZE)
+  freeze_diffusion: true
+  diffusion_checkpoint: "experiments/checkpoints/exp034/diffusion_best_ema.pt"
+
+  # Slower optimizer for larger model
+  amp_lr: 0.00003
+  amp_weight_decay: 0.0001

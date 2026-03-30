@@ -1,0 +1,33 @@
+All 4 locations are correctly modified. Let me verify the complete flow:
+
+1. ✅ **Function signature** (line 182): `residual_scale=1.0` parameter added
+2. ✅ **Residual computation** (line 268): `mu_norm[0] + residual_scale * residual`
+3. ✅ **CLI argument** (line 404): `--residual_scale` with default 1.0
+4. ✅ **Function call** (line 616): `residual_scale=args.residual_scale`
+
+---
+
+## Summary
+
+**Experiment exp043**: Residual Scaling (α) + eta Sweep — Quality-Diversity Pareto Frontier
+
+### What was done:
+1. **Code fix** (`src/model/evaluate.py`):
+   - Added `--residual_scale` CLI argument (default=1.0)
+   - Added `residual_scale` parameter to `evaluate_diffusion()` function
+   - Changed line 268: `amp_norm_final = mu_norm[0] + residual_scale * residual` (was `+ residual`)
+   - Passed `residual_scale=args.residual_scale` at call site
+
+2. **Config** (`experiments/configs/exp043.yaml`): Reuses exp042 architecture config, points to exp042 checkpoints and exp034 f0 diffusion.
+
+3. **Script** (`experiments/next_train_cmd.sh`): **10 evaluations** (no training needed):
+   - **Diagnostic**: eta=0.0, α=1.0 (deterministic DDIM)
+   - **eta=0.3 sweep**: α ∈ {0.0, 0.1, 0.3, 0.5, 0.7, 1.0} (6 evals)
+   - **eta=0.0 sweep**: α ∈ {0.3, 0.5, 0.7} (3 evals)
+   - Outputs to `experiments/results/exp043_eta{ETA}_alpha{ALPHA}.json`
+   - Prints a summary table at the end
+
+### Key sanity checks:
+- **α=0.0, η=0.3** should give Amp Corr ≈ 0.807 (pure AmpPredictor, diversity ≈ 0)
+- **α=1.0, η=0.3** should give Amp Corr ≈ 0.744 (matches exp042)
+- If α=0.0 doesn't match 0.807 → bug in residual_scale implementation

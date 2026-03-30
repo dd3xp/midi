@@ -1,0 +1,153 @@
+=== exp002 RETRY: Baseline with lam=10.0 (Stage 1) ===
+Start time: Tue Mar 24 14:30:04     2026
+Fix applied: train.py open() with encoding=utf-8, config ASCII-only comments
+Device: cuda
+Config: {
+  "data_dir": "C:\\lxr\\study\\final\\datagen",
+  "output_dir": "experiments/checkpoints/exp002",
+  "instruments": [
+    "vn",
+    "tpt",
+    "fl"
+  ],
+  "crop_len": 512,
+  "seed": 42,
+  "stage1": {
+    "batch_size": 32,
+    "lr": 0.001,
+    "epochs": 100,
+    "lam": 10.0,
+    "patience": 15,
+    "lr_patience": 5,
+    "lr_factor": 0.5,
+    "dropout": 0.3
+  },
+  "stage2": {
+    "batch_size": 16,
+    "lr": 0.0002,
+    "epochs": 200,
+    "ema_decay": 0.9999,
+    "n_diffusion_steps": 1000
+  },
+  "save_every": 10
+}
+============================================================
+Stage 1: Training Encoder + Baseline
+============================================================
+Train: 60 tracks, Test: 14 tracks
+Epoch 1/100  train=191.4964 (f0=4.3829 amp=18.7113)  test=305.5388  lr=1.00e-03
+Epoch 2/100  train=151.9638 (f0=4.3610 amp=14.7603)  test=200.9894  lr=1.00e-03
+Epoch 3/100  train=56.9205 (f0=4.2905 amp=5.2630)  test=52.0591  lr=1.00e-03
+Epoch 4/100  train=43.5699 (f0=4.0529 amp=3.9517)  test=29.7433  lr=1.00e-03
+Epoch 5/100  train=76.1943 (f0=3.7816 amp=7.2413)  test=27.2463  lr=1.00e-03
+Epoch 6/100  train=56.7316 (f0=3.5536 amp=5.3178)  test=37.4685  lr=1.00e-03
+Epoch 7/100  train=27.1314 (f0=3.4654 amp=2.3666)  test=83.8299  lr=1.00e-03
+Epoch 8/100  train=23.2992 (f0=3.5070 amp=1.9792)  test=93.1467  lr=1.00e-03
+Epoch 9/100  train=34.2148 (f0=3.4374 amp=3.0777)  test=70.4297  lr=1.00e-03
+Epoch 10/100  train=22.1703 (f0=3.2359 amp=1.8934)  test=40.3717  lr=1.00e-03
+Epoch 11/100  train=17.6195 (f0=3.0366 amp=1.4583)  test=21.5671  lr=1.00e-03
+Epoch 12/100  train=20.6807 (f0=2.9438 amp=1.7737)  test=17.5185  lr=1.00e-03
+Epoch 13/100  train=26.0380 (f0=2.8810 amp=2.3157)  test=16.2607  lr=1.00e-03
+Epoch 14/100  train=18.9420 (f0=2.8905 amp=1.6052)  test=16.7762  lr=1.00e-03
+Epoch 15/100  train=12.9934 (f0=2.8779 amp=1.0116)  test=24.1691  lr=1.00e-03
+Epoch 16/100  train=13.6404 (f0=2.9003 amp=1.0740)  test=28.4872  lr=1.00e-03
+Epoch 17/100  train=22.8170 (f0=2.9385 amp=1.9879)  test=25.0640  lr=1.00e-03
+Epoch 18/100  train=16.9663 (f0=2.9098 amp=1.4057)  test=18.7589  lr=1.00e-03
+Epoch 19/100  train=10.0427 (f0=2.8569 amp=0.7186)  test=14.0978  lr=1.00e-03
+Epoch 20/100  train=12.8629 (f0=2.8713 amp=0.9992)  test=13.4110  lr=1.00e-03
+Epoch 21/100  train=14.7144 (f0=2.8325 amp=1.1882)  test=13.1855  lr=1.00e-03
+Epoch 22/100  train=14.2829 (f0=2.8128 amp=1.1470)  test=13.3690  lr=1.00e-03
+Epoch 23/100  train=11.3685 (f0=2.7844 amp=0.8584)  test=15.5789  lr=1.00e-03
+Epoch 24/100  train=9.5322 (f0=2.8227 amp=0.6709)  test=16.3999  lr=1.00e-03
+Epoch 25/100  train=10.8586 (f0=2.8623 amp=0.7996)  test=15.1402  lr=1.00e-03
+Epoch 26/100  train=12.1485 (f0=2.8365 amp=0.9312)  test=12.4689  lr=1.00e-03
+Epoch 27/100  train=10.6188 (f0=2.9445 amp=0.7674)  test=11.0685  lr=1.00e-03
+Epoch 28/100  train=10.3681 (f0=2.8409 amp=0.7527)  test=11.4257  lr=1.00e-03
+Epoch 29/100  train=10.8023 (f0=2.7915 amp=0.8011)  test=11.3000  lr=1.00e-03
+Epoch 30/100  train=11.5284 (f0=2.9281 amp=0.8600)  test=10.9669  lr=1.00e-03
+Epoch 31/100  train=8.5312 (f0=2.8419 amp=0.5689)  test=12.2130  lr=1.00e-03
+Epoch 32/100  train=9.8718 (f0=2.8376 amp=0.7034)  test=13.4763  lr=1.00e-03
+Epoch 33/100  train=10.7109 (f0=2.8909 amp=0.7820)  test=13.1452  lr=1.00e-03
+Epoch 34/100  train=9.3023 (f0=2.8775 amp=0.6425)  test=11.9161  lr=1.00e-03
+Epoch 35/100  train=10.2183 (f0=2.8135 amp=0.7405)  test=11.1569  lr=1.00e-03
+Epoch 36/100  train=9.7987 (f0=2.7463 amp=0.7052)  test=11.3987  lr=5.00e-04
+Epoch 37/100  train=12.0069 (f0=2.8390 amp=0.9168)  test=11.3928  lr=5.00e-04
+Epoch 38/100  train=12.2635 (f0=2.8270 amp=0.9436)  test=11.3115  lr=5.00e-04
+Epoch 39/100  train=11.7871 (f0=2.8167 amp=0.8970)  test=11.4338  lr=5.00e-04
+Epoch 40/100  train=8.8994 (f0=2.7746 amp=0.6125)  test=12.1387  lr=5.00e-04
+Epoch 41/100  train=9.3040 (f0=2.8280 amp=0.6476)  test=12.3407  lr=5.00e-04
+Epoch 42/100  train=9.4791 (f0=2.7647 amp=0.6714)  test=12.1159  lr=2.50e-04
+Epoch 43/100  train=9.6478 (f0=2.7542 amp=0.6894)  test=11.7504  lr=2.50e-04
+Epoch 44/100  train=9.0749 (f0=2.8178 amp=0.6257)  test=11.2937  lr=2.50e-04
+Epoch 45/100  train=9.2143 (f0=2.8510 amp=0.6363)  test=10.8791  lr=2.50e-04
+Epoch 46/100  train=8.2936 (f0=2.7738 amp=0.5520)  test=10.6367  lr=2.50e-04
+Epoch 47/100  train=7.7991 (f0=2.8242 amp=0.4975)  test=10.7316  lr=2.50e-04
+Epoch 48/100  train=9.5175 (f0=2.7991 amp=0.6718)  test=11.0932  lr=2.50e-04
+Epoch 49/100  train=10.1614 (f0=2.7243 amp=0.7437)  test=11.3782  lr=2.50e-04
+Epoch 50/100  train=8.7707 (f0=2.7375 amp=0.6033)  test=11.4581  lr=2.50e-04
+Epoch 51/100  train=11.1251 (f0=2.8681 amp=0.8257)  test=11.3136  lr=2.50e-04
+Epoch 52/100  train=9.7781 (f0=2.7912 amp=0.6987)  test=11.0340  lr=1.25e-04
+Epoch 53/100  train=9.6253 (f0=2.7530 amp=0.6872)  test=10.8730  lr=1.25e-04
+Epoch 54/100  train=8.3030 (f0=2.7338 amp=0.5569)  test=10.7236  lr=1.25e-04
+Epoch 55/100  train=9.4991 (f0=2.7501 amp=0.6749)  test=10.6379  lr=1.25e-04
+Epoch 56/100  train=8.7352 (f0=2.7195 amp=0.6016)  test=10.6661  lr=1.25e-04
+Epoch 57/100  train=8.0615 (f0=2.7763 amp=0.5285)  test=10.8347  lr=1.25e-04
+Epoch 58/100  train=7.2364 (f0=2.6747 amp=0.4562)  test=11.1227  lr=6.25e-05
+Epoch 59/100  train=9.3520 (f0=2.7867 amp=0.6565)  test=11.2728  lr=6.25e-05
+Epoch 60/100  train=8.6380 (f0=2.7487 amp=0.5889)  test=11.3829  lr=6.25e-05
+Epoch 61/100  train=9.0983 (f0=2.8472 amp=0.6251)  test=11.4419  lr=6.25e-05
+Early stopping at epoch 61
+
+Training complete.
+Device: cuda
+Test tracks: 14
+
+--- Evaluating Baseline ---
+{
+  "baseline_rpa": {
+    "mean": 0.9673153393795448,
+    "std": 0.013531827793964593,
+    "min": 0.9409669211195929,
+    "max": 0.9858984402820312
+  },
+  "baseline_f0_mae": {
+    "mean": 17.17051567350115,
+    "std": 3.0112476322220125,
+    "min": 11.882062911987305,
+    "max": 20.890132904052734
+  },
+  "baseline_amp_corr": {
+    "mean": 0.6104712273754407,
+    "std": 0.19706606665461496,
+    "min": 0.2734995964267639,
+    "max": 0.8733891657304351
+  },
+  "baseline_amp_rmse_log": {
+    "mean": 0.7221079511301858,
+    "std": 0.1394508241966976,
+    "min": 0.5118129849433899,
+    "max": 1.0037107467651367
+  },
+  "baseline_vde_mean": {
+    "mean": 8.757821165531833,
+    "std": 2.590837422783528,
+    "min": 4.287317641035239,
+    "max": 14.226498508394938
+  },
+  "baseline_vre_mean": {
+    "mean": 0.7084250997250797,
+    "std": 0.2322987752963238,
+    "min": 0.3591299837842432,
+    "max": 1.0705448284947359
+  },
+  "baseline_n_vibrato_notes": {
+    "mean": 91.71428571428571,
+    "std": 61.65622268610337,
+    "min": 14.0,
+    "max": 220.0
+  }
+}
+
+Results saved to experiments/results/exp002.json
+=== exp002 complete ===
+End time: Tue Mar 24 14:30:25     2026

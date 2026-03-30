@@ -1,0 +1,25 @@
+All exp030 references are now updated with the correct numbers from this training run. Let me provide a summary:
+
+---
+
+## exp030 Results Logged ✅
+
+**Experiment**: Pitch-Anchor Amp Offset + Instrument Embedding  
+**Status**: ❌ 负面结果 (Negative result)
+
+### Key Results
+| Metric | exp028 (当前最佳) | exp030 (Pitch-Anchor) | Change |
+|--------|-------------------|-----------------------|--------|
+| f0 RPA mean | 95.06% | 95.27% | +0.2% (noise) |
+| **Amp Corr** | **0.678** | **0.558** | **-17.7% ❌** |
+| **Amp RMSE(log)** | **0.657** | **1.208** | **+83.9% ❌❌** |
+| VDE | 6.71 | 6.78 | +1.0% |
+
+### Training-Evaluation Paradox
+- Training loss was BETTER: test_amp_loss = 0.276 (offset space) vs exp028's 0.425 (absolute space)
+- But evaluation metrics were MUCH WORSE: converting offset → absolute amp introduced massive systematic error
+- Only 57/128 MIDI pitches had training data → 71 pitches had unreliable anchor values
+- f0 cent offset works because 12-TET frequencies are physically precise; amp has no such anchor
+
+### Conclusion
+Pitch-Anchor Amp Offset direction **completely failed**. exp028 remains the global best. "当前最佳" unchanged.

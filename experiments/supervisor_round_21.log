@@ -1,0 +1,36 @@
+Here's the status summary:
+
+---
+
+## Supervisor Review Complete — exp015 (startup failure)
+
+### What was reviewed
+**exp015**: Two-stage architecture — 1-channel Diffusion (f0 only) + separate AmpPredictor network
+
+### Status
+**❌ exp015 failed to start** — PyYAML parsed `2e-4` as string, causing `TypeError` in `torch.optim.Adam(lr="2e-4")`. No training occurred.
+
+### Fix status
+- ✅ `exp015.yaml`: `lr: 2e-4` → `lr: 0.0002` (already applied)
+- ✅ `train.py:304`: `float(cfg["lr"])` defense (already applied)
+- ✅ Baseline checkpoint + norm_stats already copied to exp015 directory
+
+### Code Review Results
+**All architecture changes passed review — NO CRITICAL bugs**:
+- `diffusion.py`: 1ch UNet, AmpPredictor class (~230K params), ddim_sample with self.n_channels ✓
+- `train.py`: f0-only x_0, joint optimizer, separate loss tracking, AmpPredictor checkpoint saving ✓
+- `evaluate.py`: Config-based n_channels detection, AmpPredictor loading, deterministic amp for all samples ✓
+- **1 minor warning**: `amp_pred_lr=0.001` printed but not used (optimizer uses unified lr=0.0002)
+
+### Next Plan
+**Re-run exp015** — no code changes needed, just execute training + evaluation:
+1. `python src/model/train.py --config experiments/configs/exp015.yaml --stage 2`
+2. `python src/model/evaluate.py --checkpoint_dir experiments/checkpoints/exp015 --mode both --n_samples 5 --ddim_steps 50 --eta 0.3 --config experiments/configs/exp015.yaml --output experiments/results/exp015.json`
+
+### Key Targets
+- f0 RPA ≥ 93% (was 94.2% in exp007 2ch mode)
+- **Amp Corr ≥ 0.60** (was 0.571 in exp007; this is the core improvement target)
+- VDE ≈ 5-6 (diffusion's vibrato modeling advantage)
+
+### Biggest Bottleneck
+**Amp Corr** remains the main gap vs baseline (0.571 vs 0.633). exp015's architectural separation is the pre-approved strategy to address this.

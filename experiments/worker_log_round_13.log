@@ -1,0 +1,21 @@
+Results have been logged successfully. Here's a summary:
+
+## exp011 结果 (Round 13) ✅ 完成
+
+**类型**: 可视化修复 (eval + plot, 无训练)
+
+**完成内容**:
+1. **重新评估 η=0.5** (n_samples=5, ddim_steps=50):
+   - f0 RPA: 94.22% (mean) / 96.48% (oracle)
+   - f0 MAE: 21.78 / 17.55 cents
+   - Amp Corr: 0.573 / 0.580
+   - **f0 diversity: 9.16 cents** (补全了缺失的数据)
+   - amp diversity: 0.0079
+
+2. **重生成 11 张论文 figure** (改进 vibrato zoom):
+   - 3 乐器 × (f0_contour + vibrato_zoom + amp_contour) = 9 张
+   - eta_sweep_summary + instrument_comparison = 2 张
+
+3. **验证 eta sweep 数据完整**: η0.0=9.01, η0.3=8.92, η0.5=9.16, η1.0=7.87 cents ✓
+
+**当前最佳**: 不变 (η0.5 与 η0.3 质量几乎一致，RPA 差仅 0.02%)

@@ -1,0 +1,14 @@
+The log has been updated correctly. Here's a summary of **exp022 results**:
+
+## exp022: f0-Conditioned AmpPredictor — ❌ Negative Result
+
+| Metric | exp022 (f0-conditioned) | exp018/019 (baseline AmpPredictor) | Change |
+|--------|------------------------|-------------------------------------|--------|
+| f0 RPA (mean) | 95.51% | 95.59% (exp019) | -0.08% |
+| **Amp Corr** | **0.578** | **0.665** | **-13.1% ↓** |
+| **Amp RMSE(log)** | **0.987** | **0.697** | **+41.6% ↓** |
+| VDE | 6.77 | 6.54 | +3.5% |
+
+**Root cause: Classic exposure bias.** The f0-conditioned AmpPredictor was trained with ground truth f0 but tested with diffusion-generated f0. Despite achieving a lower training loss (0.386 vs 0.508), the train-test mismatch caused severe degradation at inference time. The model learned to rely on fine-grained f0 details (vibrato, micro-pitch variations) that diffusion can't perfectly reproduce.
+
+**"当前最佳" remains exp019** (mixed checkpoint with unconditioned AmpPredictor). No update needed.

@@ -1,0 +1,34 @@
+Good, the plan was written. Here's my status summary:
+
+---
+
+## Supervisor Review Summary — exp022
+
+### What was reviewed
+**exp022**: f0-conditioned AmpPredictor — concatenating diffusion-generated f0 (1 dim) to encoder condition (256 dim) → 257-dim input to AmpPredictor. Training: frozen encoder (exp014) + frozen diffusion (exp017), only training AmpPredictor.
+
+### Key Metrics
+- **Training**: ✅ 200/200 epochs complete
+- **Best test_amp_loss**: **0.386@ep164** (vs exp018's 0.508 = **-24% improvement** 🎯)
+- **Evaluation**: ❌ CUDA OOM — no actual amp_corr / RPA results yet
+- **Code review**: ✅ No bugs found. One WARNING: teacher forcing mismatch (training uses GT f0, inference uses sampled f0)
+
+### What was planned next
+**exp022-eval**: Re-run evaluation with OOM fix (already prepared in `next_train_cmd.sh`):
+1. `PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True`
+2. `n_samples=3` (reduced from 5)
+3. Backup: increase memory_fraction to 0.95 or add mixed-precision inference
+
+**Expected**: Amp Corr 0.68-0.72 (significant improvement over current best 0.665, but teacher forcing gap may limit gains)
+
+### Critical Issues
+**None.** The only blocker is the OOM evaluation failure, which has a clear fix path.
+
+### Progress Toward Goal
+| Target | Current Best | Status |
+|--------|-------------|--------|
+| f0 RPA > 85% | 95.59% (exp019) | ✅ |
+| Amp Corr > 0.90 | 0.665 (exp019) | ⚠️ Gap remains, but exp022 training suggests improvement incoming |
+| Diffusion beats baseline | ✅ on Amp (+5.1%), VDE (-24.8%) | ✅ |
+
+**Biggest bottleneck**: Amp Corr (0.665). exp022's 24% loss improvement is the most promising signal yet — evaluation results will determine the next strategy.

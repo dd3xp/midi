@@ -1,0 +1,36 @@
+The plan has been written successfully. Here's my **status summary**:
+
+---
+
+## Supervisor Review — exp005 Summary
+
+### What was reviewed
+**exp005**: Stage 2 diffusion with fixed EMA (decay 0.9999→0.995), 14,600 training steps, best checkpoint at ep80 (test_loss=0.028)
+
+### Key metrics
+
+| Metric | Baseline (exp003) | Diffusion mean | Diffusion oracle |
+|--------|-------------------|---------------|-----------------|
+| f0 RPA | **97.14%** | 85.26% | 95.58% |
+| Amp Corr | **0.645** | 0.544 | 0.551 |
+| VDE | 8.34 | **6.03** | **5.11** |
+| VRE | 0.880 | **0.806** | **0.755** |
+
+### Key findings
+- ✅ **EMA fix was transformative**: RPA 3.09% → 85.26%, first successful diffusion inference
+- ✅ **Vibrato modeling outperforms baseline** (VDE/VRE both better) — key paper selling point
+- ✅ **Oracle RPA 95.58%** — model CAN match baseline quality at its best
+- ⚠️ **Mean RPA 85.26%** — just at threshold, dragged down by high per-track variance
+- ⚠️ **Amp is the bottleneck** — 0.544 vs baseline 0.645, and 2x worse RMSE
+- ⚠️ **Oracle amp metric is misleading** — selected by f0, not amp (code issue in evaluate.py)
+
+### What's planned next (exp006)
+1. **More training**: 500 epochs × multiplier 30 = ~55,300 steps (3.8x increase)
+2. **Cosine LR decay**: 2e-4 → 1e-5 (prevent post-ep80 test_loss rebound)
+3. **Fix oracle reporting**: per-metric oracles (f0 oracle + amp oracle separately)
+4. **Expected**: Mean RPA 88-92%, better convergence, accurate amp diagnostics
+
+### Critical issues
+- **No critical code bugs found** — all exp005 fixes verified correct
+- **[W1]** evaluate.py oracle selection mixes f0/amp metrics (needs fix in exp006)
+- **[W2]** test_loss rose from 0.028→0.081 after ep80, indicating need for lr scheduling

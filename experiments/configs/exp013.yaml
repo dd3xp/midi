@@ -1,0 +1,28 @@
+# exp013: Diffusion channel-wise amp loss weighting
+# Purpose: Give amp channel 3x loss weight to improve diffusion amp_corr
+# Change: training_loss() separates f0/amp MSE, applies amp_weight=3.0
+#   File: src/model/diffusion.py, training_loss() method
+#   Before: loss = F.mse_loss(noise_pred, noise)  [equal weight]
+#   After:  loss = f0_loss + amp_weight * amp_loss  [amp_weight=3.0]
+#   File: src/model/train.py, lines 331-332 and 369-370
+#   Before: loss = diffusion.training_loss(x_0, condition)
+#   After:  amp_weight = cfg.get("amp_weight", 1.0); loss = diffusion.training_loss(x_0, condition, amp_weight=amp_weight)
+# Comparison: exp007 (amp_weight=1.0 implicit)
+# Encoder: from exp003 (same as exp007)
+# Expected: Amp Corr 0.571 -> 0.62-0.65, f0 RPA may drop slightly to 92-93%
+
+output_dir: "experiments/checkpoints/exp013"
+instruments: ["vn", "tpt", "fl"]
+crop_len: 512
+seed: 42
+save_every: 10
+
+stage2:
+  batch_size: 16
+  lr: 0.0002
+  lr_min: 0.00001
+  epochs: 200
+  ema_decay: 0.995
+  n_diffusion_steps: 1000
+  samples_per_epoch: 1770
+  amp_weight: 3.0

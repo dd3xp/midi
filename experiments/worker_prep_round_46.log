@@ -1,0 +1,31 @@
+All config values are correctly parsed. Here's a summary of what I prepared:
+
+---
+
+## exp035 准备完成
+
+### 实验目标
+在 exp034 (Amp Corr 0.789) 基础上，通过 3 项改进突破 Amp Corr 0.80：
+
+| 改动 | 值 | 原因 |
+|------|-----|------|
+| `amp_corr_weight` | 0.3 (新增) | 直接优化相关系数 (1-r loss) |
+| `amp_grad_weight` | 0.2 (新增) | 时间梯度 loss，学习 dynamics 变化 |
+| `amp_lr` | 5e-5 (原 1e-4) | 避免早期过拟合 |
+| `epochs` | 250 (原 200) | 更多精细调整时间 |
+| `freeze_diffusion` | true (原 false) | 冻结 exp034 的 diffusion，仅训练 AmpPredictor |
+
+### 创建的文件
+- **配置**: `experiments/configs/exp035.yaml`
+- **训练脚本**: `experiments/next_train_cmd.sh`
+
+### 训练流程
+1. 复制 exp033 baseline checkpoint + exp034 norm_stats
+2. Stage 2 训练 (仅 AmpPredictor, ~250 epochs, diffusion 冻结)
+3. 评估 (diffusion mode, η=0.3, 3 samples, 50 DDIM steps)
+
+### 预计时间
+~1-1.5 小时 (仅训练 ~850K params AmpPredictor，diffusion 16M+ params 冻结)
+
+### 无代码 bug 需修复
+train.py 已内置 `freeze_diffusion`、`amp_corr_weight`、`amp_grad_weight` 支持，无需修改代码。

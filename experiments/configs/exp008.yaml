@@ -1,0 +1,13 @@
+# exp008: Stochastic DDIM diversity evaluation (no training)
+# Purpose: Demonstrate controllable diversity via eta parameter
+# Uses exp007 checkpoint — evaluation only
+# Run 1: eta=0.3 (mild stochasticity)
+# Run 2: eta=0.5 (moderate stochasticity)
+# Comparison: exp007 results serve as eta=0.0 baseline
+
+output_dir: "experiments/checkpoints/exp007"  # reuse exp007 checkpoint
+instruments: ["vn", "tpt", "fl"]
+evaluation_only: true
+n_samples: 5
+ddim_steps: 50
+eta_values: [0.3, 0.5]

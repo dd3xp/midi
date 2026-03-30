@@ -1,0 +1,18 @@
+# exp004: First Stage 2 diffusion training
+# Purpose: Establish diffusion baseline using exp003's frozen encoder
+# Changes: Stage 2 training with conditional DDPM (1D U-Net denoiser)
+# Prerequisite: copy exp003/baseline_best.pt -> exp004/baseline_best.pt
+# Expected: f0 RPA ~80-92%, Amp Corr ~0.5-0.7
+
+output_dir: "experiments/checkpoints/exp004"
+instruments: ["vn", "tpt", "fl"]
+crop_len: 512
+seed: 42
+save_every: 10
+
+stage2:
+  batch_size: 16
+  lr: 0.0002
+  epochs: 200
+  ema_decay: 0.9999
+  n_diffusion_steps: 1000

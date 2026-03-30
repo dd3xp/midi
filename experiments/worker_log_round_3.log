@@ -1,0 +1,19 @@
+Results have been logged. Here's a summary:
+
+## exp002 Results (lam=10.0, Stage 1 Baseline)
+
+**Status**: ✅ Completed successfully (exit code 0, early stop at epoch 61)
+
+**Key metrics** (vs exp001 baseline):
+| Metric | exp001 (lam=1.0) | exp002 (lam=10.0) | Change |
+|--------|---|---|---|
+| f0 RPA | 96.77% | 96.73% | -0.04% |
+| f0 MAE | 16.83 | 17.17 | +0.34 (worse) |
+| Amp Corr | 0.610 | 0.610 | **no change** |
+| Amp RMSE(log) | 0.726 | 0.722 | -0.004 |
+| VDE | 8.19 | 8.76 | +0.57 (worse) |
+| VRE | 0.79 | 0.71 | -0.08 (better) |
+
+**Key finding**: Increasing lam from 1.0 to 10.0 shifted gradient dominance to amp (76% of total loss) but had **zero effect** on amp_corr. The raw amp MSE barely changed (~0.60→~0.55). This strongly suggests the model architecture (Sigmoid activation, BiGRU capacity) is the bottleneck for amp prediction, not the loss weighting.
+
+**当前最佳 remains exp001** — exp002 offers no improvement and is marginally worse on f0 MAE and VDE.

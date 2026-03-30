@@ -1,0 +1,22 @@
+{
+  "experiment": "exp011",
+  "type": "visualization_fix",
+  "figures_generated": [
+    "amp_contour_fl_Nocturne.png",
+    "amp_contour_tpt_Nocturne.png",
+    "amp_contour_vn_Jupiter.png",
+    "eta_sweep_summary.png",
+    "f0_contour_fl_Nocturne.png",
+    "f0_contour_tpt_Nocturne.png",
+    "f0_contour_vn_Jupiter.png",
+    "instrument_comparison.png",
+    "vibrato_zoom_fl_Nocturne.png",
+    "vibrato_zoom_tpt_Nocturne.png",
+    "vibrato_zoom_vn_Jupiter.png"
+  ],
+  "n_figures": 11,
+  "eta05_rpa_mean": 0.9421871230852632,
+  "eta05_rpa_oracle": 0.964836760096883,
+  "eta05_f0_diversity_cents": 9.160691165924073,
+  "eta05_amp_diversity": 0.007865684789915879
+}

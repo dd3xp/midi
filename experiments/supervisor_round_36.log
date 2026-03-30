@@ -1,0 +1,38 @@
+The plan has been written successfully. Let me print the status summary:
+
+---
+
+## Supervisor Review Summary — exp027 Complete
+
+### Experiment Reviewed: exp027 (TCN AmpPredictor)
+
+**Key Metrics:**
+| Metric | exp023 (GRU+Attn best) | exp027 (TCN) | Change |
+|--------|----------------------|-------------|--------|
+| f0 RPA | 95.56% | 94.97% | -0.59% |
+| **Amp Corr** | **0.676** | **0.622** | **-8.0% ❌** |
+| Amp RMSE(log) | 0.726 | 0.697 | -4.0% ✅ |
+
+**Diagnosis:** TCN AmpPredictor failed due to training instability (best at epoch 14, then oscillating wildly). BatchNorm + high LR (0.0002) caused severe instability. Even stabilized, TCN is unlikely to beat GRU+Attention for amp prediction since amp requires long-range bidirectional context.
+
+### Critical Discovery: MIDI Velocity = 80 (constant across ALL data)
+- URMP + Bach10 MIDI files have **no velocity variation** — all notes have velocity=80
+- This means the model has **zero explicit dynamics information** from MIDI
+- Amp corr ≈ 0.676 may be near the **information-theoretic ceiling** given input data
+- Per-instrument amp means differ by **11× (bn vs tpt)** but model has no instrument ID input
+
+### Next Plan: exp028 — Instrument-Conditioned AmpPredictor
+- Add instrument embedding (10 → 32 dims) to GRU+Attention AmpPredictor
+- Gives model explicit instrument identity to adjust output range
+- Minimal cost (+320 params), targets a clear information gap
+- Expected amp corr: 0.69-0.73
+
+### Issues for Worker
+- **[W1]** Worker must log exp027 results in log.md (was missing)
+- Code changes for exp028 span 4 files: dataset.py, diffusion.py, train.py, evaluate.py
+
+### Progress Toward Goal
+- ✅ f0 RPA: 95.59% (target >85%) — **far exceeds**
+- ✅ Amp beats baseline: 0.676 vs 0.633 (+6.8%)
+- ⚠️ Amp Corr: 0.676 (target 0.90) — **data-limited**, trying instrument conditioning next
+- **Bottleneck**: Constant MIDI velocity + no instrument ID → limited amp prediction ceiling

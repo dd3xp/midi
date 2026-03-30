@@ -1,0 +1,21 @@
+The log entry has been properly added. Here's the summary:
+
+## exp020 Results Logged ✅
+
+**exp020: Paper Figures & Tables Generation** — completed successfully (exit code 0).
+
+**What was done:**
+- Pure visualization task, no training
+- Used exp019 mixed checkpoint (exp017 diffusion + exp018 AmpPredictor + exp014 encoder)
+- Generated **14 publication-quality figures** (DPI=300, seed=42):
+  - 3 instruments × 3 plots: f0 contour, vibrato zoom, amp contour (vn, fl, tpt)
+  - eta_sweep, instrument_comparison, vde_comparison, eta_metrics, training_curves
+- Generated **paper_tables.md** with 3 formatted tables:
+  - Table 1: Overall Comparison (Baseline vs Diffusion η=0.3 vs η=1.0)
+  - Table 2: Multi-eta Evaluation (η=0.0, 0.3, 0.5, 1.0)
+  - Table 3: Per-Instrument Performance (6 representative instruments)
+- All 15 output files verified non-empty
+
+**当前最佳 unchanged** — exp019 remains the best (this was visualization only).
+
+**Project status:** Experiment phase complete, ready for paper writing stage.

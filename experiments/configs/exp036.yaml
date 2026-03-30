@@ -1,0 +1,57 @@
+# exp036: f0-Conditioned AmpPredictor with Scheduled Sampling
+# Hypothesis: Adding generated f0 as amp input captures f0-amp coupling
+# (vibrato correlates with dynamics). Scheduled sampling avoids exposure bias.
+#
+# Changes vs exp035:
+#   [C1] amp_f0_conditioned: true (AmpPredictor takes f0 as extra input)
+#   [C2] amp_scheduled_sampling: true (anneal GT->generated f0 during training)
+#   [C3] amp_ss_start_epoch: 50 (start annealing at epoch 50)
+#   [C4] amp_ss_end_epoch: 150 (fully use generated f0 by epoch 150)
+#   [C5] epochs: 300 (more training for scheduled sampling to take effect)
+#   [C6] amp_corr_weight: 0.3, amp_grad_weight: 0.2 (keep from exp035)
+output_dir: "experiments/checkpoints/exp036"
+baseline_checkpoint: "experiments/checkpoints/exp033/baseline_best.pt"
+instruments: ["vn", "va", "vc", "fl", "ob", "cl", "sax", "tpt", "tbn", "bn"]
+crop_len: 512
+seed: 42
+save_every: 10
+
+stage2:
+  batch_size: 16
+  lr: 0.0002
+  lr_min: 0.00001
+  epochs: 300
+  ema_decay: 0.995
+  n_diffusion_steps: 1000
+  samples_per_epoch: 1860
+  n_channels: 1
+
+  # AmpPredictor: same arch + f0 conditioning
+  amp_hidden: 256
+  amp_gru_hidden: 128
+  amp_gru_layers: 2
+  amp_dropout: 0.3
+  amp_use_attention: true
+  amp_n_attn_heads: 4
+  amp_n_attn_layers: 2
+  amp_instrument_conditioned: true
+  amp_f0_conditioned: true
+
+  # Scheduled sampling for f0 input (online DDIM, no cache needed)
+  amp_scheduled_sampling: true
+  amp_ss_start_epoch: 50
+  amp_ss_end_epoch: 150
+  amp_ss_ddim_steps: 20
+  amp_ss_eta: 0.3
+
+  # Loss: keep corr+grad from exp035
+  amp_corr_weight: 0.3
+  amp_grad_weight: 0.2
+
+  # Diffusion: reuse exp034's trained diffusion (FREEZE)
+  freeze_diffusion: true
+  diffusion_checkpoint: "experiments/checkpoints/exp034/diffusion_best_ema.pt"
+
+  # Optimizer: keep exp035's slower LR
+  amp_lr: 0.00005
+  amp_weight_decay: 0.0001

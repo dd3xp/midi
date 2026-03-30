@@ -1,0 +1,31 @@
+---
+
+## Supervisor Review Summary — Round 2 (exp002 failure)
+
+### Experiment Reviewed
+**exp002**: Baseline Stage 1, `lam=10.0` (only change vs exp001). **FAILED** before training started.
+
+### Failure Analysis
+- **Root Cause**: `UnicodeDecodeError` — YAML config contained non-ASCII Unicode characters (`→`, `↑`, `λ`) in comments. Windows GBK locale couldn't decode them.
+- **Fix Applied by Worker**: ✅ Correct
+  1. `train.py:395` — `open(args.config, "r", encoding="utf-8")` — good fix
+  2. `exp002.yaml` — comments rewritten in ASCII — verified clean
+
+### Code Review of Fixes
+- **train.py encoding fix**: ✅ Correct. Only the config-reading `open()` needed the fix. The two other `open()` calls in train.py (lines 205, 375) are for writing JSON output, which works fine with default encoding.
+- **evaluate.py**: ✅ No config reading, only writes output JSON. No fix needed.
+- **exp002.yaml**: ✅ Clean ASCII, `lam: 10.0` correctly set, all other params match exp001.
+
+### No New Code Issues Found
+The previous warnings (W1: attention flags, W2: data leakage) remain open for Stage 2.
+
+### Next Plan Written
+**exp002 retry** — same experiment, bug fixed. Config and training script are ready. Worker just needs to execute.
+
+### Current Status
+| Metric | Best (exp001) | Target | Gap |
+|--------|--------------|--------|-----|
+| f0 RPA | 96.77% | > 85% | ✅ Exceeded |
+| Amp Corr | 0.610 | > 0.9 | ⚠️ **Biggest bottleneck** — 0.29 gap |
+
+**Biggest bottleneck**: Amplitude prediction. exp002 (lam=10.0) is designed to address this directly.

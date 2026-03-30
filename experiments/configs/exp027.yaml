@@ -1,0 +1,31 @@
+# exp027: TCN (Dilated CNN) AmpPredictor — replace GRU+Attention with WaveNet-style convolutions
+# Hypothesis: GRU is the saturated bottleneck; TCN offers different inductive bias + fewer params
+output_dir: "experiments/checkpoints/exp027"
+baseline_checkpoint: "experiments/checkpoints/exp014/baseline_best.pt"
+instruments: ["vn", "va", "vc", "fl", "ob", "cl", "sax", "tpt", "tbn", "bn"]
+crop_len: 512
+seed: 42
+save_every: 10
+
+stage2:
+  batch_size: 16
+  lr: 0.0002
+  lr_min: 0.00001
+  epochs: 200
+  ema_decay: 0.995
+  n_diffusion_steps: 1000
+  samples_per_epoch: 1860
+  n_channels: 1
+
+  # TCN AmpPredictor
+  amp_type: "tcn"
+  tcn_channels: 128
+  tcn_layers: 8
+  tcn_kernel_size: 3
+  amp_dropout: 0.2    # lower dropout since fewer params
+
+  # Optimizer
+  freeze_diffusion: true
+  diffusion_checkpoint: "experiments/checkpoints/exp017/diffusion_best_ema.pt"
+  amp_lr: 0.0002      # slightly higher LR for conv (vs 0.0001 for GRU)
+  amp_weight_decay: 0.0001

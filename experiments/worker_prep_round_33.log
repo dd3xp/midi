@@ -1,0 +1,28 @@
+All good. Let me provide a summary of what was prepared:
+
+---
+
+## Summary: exp024 Prepared
+
+### What was done:
+
+**1. Code modification — `src/model/train.py`**
+- Added **Correlation Loss** (`1 - Pearson_corr`) and **Gradient Loss** (MSE of temporal differences) to amp_loss computation
+- Both train and test loss sections updated identically
+- New loss: `amp_loss = MSE + α * CorrLoss + β * GradLoss`
+- Weights read from config (`amp_corr_weight`, `amp_grad_weight`) with default 0.0 for backward compatibility
+
+**2. Config — `experiments/configs/exp024.yaml`**
+- Same Self-Attention AmpPredictor architecture as exp023
+- `amp_corr_weight: 1.0` (α — directly optimize Pearson correlation)
+- `amp_grad_weight: 0.5` (β — match temporal dynamics slope)
+- Stronger regularization: `amp_dropout: 0.4` (↑ from 0.3), `amp_weight_decay: 0.001` (↑ 10x)
+- Frozen encoder (exp014) + frozen diffusion (exp017)
+
+**3. Training script — `experiments/next_train_cmd.sh`**
+- Stage 2 training + evaluation with DDIM (η=0.3, 50 steps, 3 samples)
+
+### Expected outcome:
+- **Amp Corr**: 0.70–0.75 (current best: 0.676) — CorrLoss directly optimizes this metric
+- **Overfitting**: Should be reduced (dropout ↑, weight_decay 10x ↑)
+- **f0 metrics**: Unchanged (diffusion frozen)

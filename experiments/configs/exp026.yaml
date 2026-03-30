@@ -1,0 +1,21 @@
+# exp026: Model Soup — average exp023 and exp024 amp_predictor weights
+# Purpose: Combine exp023's high Corr (0.676) with exp024's low RMSE (0.695) via weight averaging
+# Method: (exp023_weights + exp024_weights) / 2 — zero training cost
+# Architecture: identical to exp023/exp024 (attention AmpPredictor)
+# Reference: Wortsman et al. 2022 "Model Soups"
+output_dir: "experiments/checkpoints/exp026_soup"
+instruments: ["vn", "va", "vc", "fl", "ob", "cl", "sax", "tpt", "tbn", "bn"]
+crop_len: 512
+seed: 42
+
+stage2:
+  n_diffusion_steps: 1000
+  n_channels: 1
+  amp_hidden: 256
+  amp_gru_hidden: 128
+  amp_gru_layers: 2
+  amp_dropout: 0.3       # doesn't matter at inference (dropout is off)
+  amp_use_attention: true
+  amp_n_attn_heads: 4
+  amp_n_attn_layers: 2
+  amp_f0_conditioned: false

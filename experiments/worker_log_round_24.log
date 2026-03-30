@@ -1,0 +1,24 @@
+Done. Here's a summary of the exp016 results:
+
+## exp016 Results: Log-space AmpPredictor + dropout=0.2
+
+**Training**: 200 epochs completed successfully. Best test_loss=0.595 @ep197, best test_amp_loss=0.577 @ep90.
+
+### Key Metrics (vs exp015b)
+
+| Metric | exp015b | exp016 | Change |
+|--------|---------|--------|--------|
+| f0 RPA (mean) | 93.63% | **94.23%** | +0.6% ✅ |
+| f0 MAE (mean) | 24.64 | **23.96** | -0.68 ✅ |
+| Amp Corr | 0.624 | **0.625** | +0.001 (flat) |
+| Amp RMSE(log) | 0.825 | **0.818** | -0.8% (marginal) |
+| VDE | 6.56 | 6.61 | +0.05 (flat) |
+| f0 diversity | 11.62 | 10.70 cents | slightly lower |
+
+### Analysis
+- **f0 improved marginally** — likely because independent amp early stopping let the diffusion checkpoint optimize longer without being pulled by amp loss
+- **Amp did NOT meet target** (goal was 0.70-0.75 RMSE, got 0.818) — log-space output + dropout brought only marginal improvement
+- Amp train loss (0.536) vs test loss (0.577) still shows a generalization gap
+- **Conclusion**: The AmpPredictor's capacity (single-layer GRU, hidden=128) may be the bottleneck, not the output activation space
+
+Updated **当前最佳 Diffusion** to exp016 (slight f0 improvement over exp015b). Supervisor should decide next steps for the amp bottleneck.

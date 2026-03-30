@@ -1,0 +1,277 @@
+=== exp021: Amp Diffusion ===
+Copied encoder from exp014
+Starting amp diffusion training...
+Device: cuda
+Config: {
+  "data_dir": "C:\\lxr\\study\\final\\datagen\\solo\\URMP",
+  "bach10_dir": "C:\\lxr\\study\\final\\datagen\\solo\\Bach10",
+  "output_dir": "experiments/checkpoints/exp021",
+  "instruments": [
+    "vn",
+    "va",
+    "vc",
+    "fl",
+    "ob",
+    "cl",
+    "sax",
+    "tpt",
+    "tbn",
+    "bn"
+  ],
+  "crop_len": 512,
+  "seed": 42,
+  "stage1": {
+    "batch_size": 32,
+    "lr": 0.001,
+    "epochs": 100,
+    "lam": 1.0,
+    "patience": 15,
+    "lr_patience": 5,
+    "lr_factor": 0.5,
+    "dropout": 0.3
+  },
+  "stage2": {
+    "batch_size": 16,
+    "lr": 0.0002,
+    "epochs": 200,
+    "ema_decay": 0.995,
+    "n_diffusion_steps": 1000,
+    "samples_per_epoch": null,
+    "n_channels": 1
+  },
+  "stage3": {
+    "batch_size": 16,
+    "lr": 0.0002,
+    "epochs": 200,
+    "ema_decay": 0.995,
+    "n_diffusion_steps": 1000,
+    "samples_per_epoch": 1860,
+    "lr_min": 1e-05
+  },
+  "save_every": 10,
+  "baseline_checkpoint": "experiments/checkpoints/exp014/baseline_best.pt"
+}
+Loaded baseline from experiments/checkpoints/exp014/baseline_best.pt
+
+============================================================
+Stage 3: Training 1ch Amp Diffusion
+============================================================
+Train: 124 tracks, samples_per_epoch=1860
+Amp log stats: mean=-4.5382, std=1.2719
+Amp diffusion: 16,428,545 params
+CosineAnnealingLR: 0.0002 -> 1e-05 over 200 epochs
+Epoch 1/200  train=0.291311  test=0.162264  lr=2.00e-04
+  -> New best test_loss=0.162264
+Epoch 2/200  train=0.122091  test=0.132044  lr=2.00e-04
+  -> New best test_loss=0.132044
+Epoch 3/200  train=0.115103  test=0.162922  lr=2.00e-04
+Epoch 4/200  train=0.112502  test=0.136826  lr=2.00e-04
+Epoch 5/200  train=0.111137  test=0.167025  lr=2.00e-04
+Epoch 6/200  train=0.107146  test=0.169644  lr=2.00e-04
+Epoch 7/200  train=0.106494  test=0.113227  lr=2.00e-04
+  -> New best test_loss=0.113227
+Epoch 8/200  train=0.107112  test=0.119879  lr=1.99e-04
+Epoch 9/200  train=0.105599  test=0.089183  lr=1.99e-04
+  -> New best test_loss=0.089183
+Epoch 10/200  train=0.104893  test=0.133821  lr=1.99e-04
+Epoch 11/200  train=0.103628  test=0.148218  lr=1.99e-04
+Epoch 12/200  train=0.100528  test=0.142363  lr=1.99e-04
+Epoch 13/200  train=0.102093  test=0.103898  lr=1.98e-04
+Epoch 14/200  train=0.104424  test=0.137178  lr=1.98e-04
+Epoch 15/200  train=0.098083  test=0.208214  lr=1.98e-04
+Epoch 16/200  train=0.095498  test=0.169184  lr=1.97e-04
+Epoch 17/200  train=0.102767  test=0.130722  lr=1.97e-04
+Epoch 18/200  train=0.100240  test=0.087019  lr=1.97e-04
+  -> New best test_loss=0.087019
+Epoch 19/200  train=0.102899  test=0.118921  lr=1.96e-04
+Epoch 20/200  train=0.092476  test=0.129380  lr=1.96e-04
+Epoch 21/200  train=0.099145  test=0.140589  lr=1.95e-04
+Epoch 22/200  train=0.097218  test=0.146152  lr=1.95e-04
+Epoch 23/200  train=0.099979  test=0.086860  lr=1.94e-04
+  -> New best test_loss=0.086860
+Epoch 24/200  train=0.104136  test=0.126197  lr=1.94e-04
+Epoch 25/200  train=0.102626  test=0.109348  lr=1.93e-04
+Epoch 26/200  train=0.097582  test=0.137245  lr=1.93e-04
+Epoch 27/200  train=0.102798  test=0.202125  lr=1.92e-04
+Epoch 28/200  train=0.098196  test=0.182470  lr=1.92e-04
+Epoch 29/200  train=0.095915  test=0.140967  lr=1.91e-04
+Epoch 30/200  train=0.095544  test=0.126998  lr=1.90e-04
+Epoch 31/200  train=0.096435  test=0.092788  lr=1.90e-04
+Epoch 32/200  train=0.098452  test=0.129619  lr=1.89e-04
+Epoch 33/200  train=0.096694  test=0.101111  lr=1.88e-04
+Epoch 34/200  train=0.098167  test=0.169015  lr=1.88e-04
+Epoch 35/200  train=0.097296  test=0.110073  lr=1.87e-04
+Epoch 36/200  train=0.099359  test=0.126817  lr=1.86e-04
+Epoch 37/200  train=0.093195  test=0.178061  lr=1.85e-04
+Epoch 38/200  train=0.095593  test=0.120211  lr=1.84e-04
+Epoch 39/200  train=0.097858  test=0.164888  lr=1.84e-04
+Epoch 40/200  train=0.095485  test=0.130834  lr=1.83e-04
+Epoch 41/200  train=0.096330  test=0.140327  lr=1.82e-04
+Epoch 42/200  train=0.102440  test=0.140394  lr=1.81e-04
+Epoch 43/200  train=0.098518  test=0.155199  lr=1.80e-04
+Epoch 44/200  train=0.092640  test=0.132734  lr=1.79e-04
+Epoch 45/200  train=0.098252  test=0.085659  lr=1.78e-04
+  -> New best test_loss=0.085659
+Epoch 46/200  train=0.096032  test=0.092522  lr=1.77e-04
+Epoch 47/200  train=0.093178  test=0.154792  lr=1.76e-04
+Epoch 48/200  train=0.097719  test=0.137269  lr=1.75e-04
+Epoch 49/200  train=0.095508  test=0.116537  lr=1.74e-04
+Epoch 50/200  train=0.095032  test=0.135954  lr=1.73e-04
+Epoch 51/200  train=0.096686  test=0.130676  lr=1.72e-04
+Epoch 52/200  train=0.096646  test=0.106723  lr=1.71e-04
+Epoch 53/200  train=0.093280  test=0.119015  lr=1.70e-04
+Epoch 54/200  train=0.091475  test=0.109603  lr=1.69e-04
+Epoch 55/200  train=0.096971  test=0.097261  lr=1.68e-04
+Epoch 56/200  train=0.098621  test=0.151121  lr=1.67e-04
+Epoch 57/200  train=0.097699  test=0.115694  lr=1.66e-04
+Epoch 58/200  train=0.098370  test=0.100024  lr=1.64e-04
+Epoch 59/200  train=0.096223  test=0.150921  lr=1.63e-04
+Epoch 60/200  train=0.092925  test=0.128811  lr=1.62e-04
+Epoch 61/200  train=0.090851  test=0.141874  lr=1.61e-04
+Epoch 62/200  train=0.094478  test=0.081715  lr=1.60e-04
+  -> New best test_loss=0.081715
+Epoch 63/200  train=0.094720  test=0.113044  lr=1.58e-04
+Epoch 64/200  train=0.093146  test=0.152516  lr=1.57e-04
+Epoch 65/200  train=0.097521  test=0.099205  lr=1.56e-04
+Epoch 66/200  train=0.094840  test=0.129415  lr=1.55e-04
+Epoch 67/200  train=0.099065  test=0.133177  lr=1.53e-04
+Epoch 68/200  train=0.091399  test=0.120129  lr=1.52e-04
+Epoch 69/200  train=0.093052  test=0.173868  lr=1.51e-04
+Epoch 70/200  train=0.098542  test=0.086048  lr=1.49e-04
+Epoch 71/200  train=0.095024  test=0.130746  lr=1.48e-04
+Epoch 72/200  train=0.092810  test=0.124377  lr=1.47e-04
+Epoch 73/200  train=0.089203  test=0.159530  lr=1.45e-04
+Epoch 74/200  train=0.093103  test=0.096193  lr=1.44e-04
+Epoch 75/200  train=0.095606  test=0.147928  lr=1.43e-04
+Epoch 76/200  train=0.088440  test=0.085765  lr=1.41e-04
+Epoch 77/200  train=0.093218  test=0.144088  lr=1.40e-04
+Epoch 78/200  train=0.093664  test=0.118804  lr=1.39e-04
+Epoch 79/200  train=0.092580  test=0.086277  lr=1.37e-04
+Epoch 80/200  train=0.090986  test=0.095006  lr=1.36e-04
+Epoch 81/200  train=0.092496  test=0.116503  lr=1.34e-04
+Epoch 82/200  train=0.095439  test=0.120006  lr=1.33e-04
+Epoch 83/200  train=0.091256  test=0.120087  lr=1.32e-04
+Epoch 84/200  train=0.086777  test=0.106493  lr=1.30e-04
+Epoch 85/200  train=0.091130  test=0.130695  lr=1.29e-04
+Epoch 86/200  train=0.090024  test=0.155313  lr=1.27e-04
+Epoch 87/200  train=0.091536  test=0.140078  lr=1.26e-04
+Epoch 88/200  train=0.091365  test=0.104302  lr=1.24e-04
+Epoch 89/200  train=0.087574  test=0.101957  lr=1.23e-04
+Epoch 90/200  train=0.087417  test=0.129819  lr=1.21e-04
+Epoch 91/200  train=0.090264  test=0.133187  lr=1.20e-04
+Epoch 92/200  train=0.087207  test=0.138458  lr=1.18e-04
+Epoch 93/200  train=0.097191  test=0.151215  lr=1.17e-04
+Epoch 94/200  train=0.092976  test=0.261583  lr=1.15e-04
+Epoch 95/200  train=0.090534  test=0.160651  lr=1.14e-04
+Epoch 96/200  train=0.091630  test=0.159081  lr=1.12e-04
+Epoch 97/200  train=0.095680  test=0.097751  lr=1.11e-04
+Epoch 98/200  train=0.091264  test=0.134419  lr=1.09e-04
+Epoch 99/200  train=0.089397  test=0.125203  lr=1.08e-04
+Epoch 100/200  train=0.092408  test=0.111815  lr=1.06e-04
+Epoch 101/200  train=0.090807  test=0.198589  lr=1.05e-04
+Epoch 102/200  train=0.089188  test=0.087259  lr=1.04e-04
+Epoch 103/200  train=0.087031  test=0.168923  lr=1.02e-04
+Epoch 104/200  train=0.091546  test=0.152207  lr=1.01e-04
+Epoch 105/200  train=0.088930  test=0.123444  lr=9.90e-05
+Epoch 106/200  train=0.090057  test=0.118937  lr=9.75e-05
+Epoch 107/200  train=0.085132  test=0.126698  lr=9.61e-05
+Epoch 108/200  train=0.090362  test=0.114322  lr=9.46e-05
+Epoch 109/200  train=0.089114  test=0.148116  lr=9.31e-05
+Epoch 110/200  train=0.082066  test=0.113472  lr=9.16e-05
+Epoch 111/200  train=0.089811  test=0.138192  lr=9.01e-05
+Epoch 112/200  train=0.087926  test=0.178675  lr=8.87e-05
+Epoch 113/200  train=0.090012  test=0.206713  lr=8.72e-05
+Epoch 114/200  train=0.090339  test=0.122738  lr=8.57e-05
+Epoch 115/200  train=0.092364  test=0.126758  lr=8.43e-05
+Epoch 116/200  train=0.092543  test=0.100636  lr=8.28e-05
+Epoch 117/200  train=0.088925  test=0.138893  lr=8.14e-05
+Epoch 118/200  train=0.092039  test=0.125175  lr=7.99e-05
+Epoch 119/200  train=0.090189  test=0.129723  lr=7.85e-05
+Epoch 120/200  train=0.085815  test=0.194751  lr=7.71e-05
+Epoch 121/200  train=0.092875  test=0.113504  lr=7.56e-05
+Epoch 122/200  train=0.089044  test=0.116696  lr=7.42e-05
+Epoch 123/200  train=0.088316  test=0.104807  lr=7.28e-05
+Epoch 124/200  train=0.086027  test=0.099326  lr=7.14e-05
+Epoch 125/200  train=0.087875  test=0.100199  lr=7.00e-05
+Epoch 126/200  train=0.087039  test=0.077642  lr=6.86e-05
+  -> New best test_loss=0.077642
+Epoch 127/200  train=0.089128  test=0.168104  lr=6.73e-05
+Epoch 128/200  train=0.089015  test=0.144763  lr=6.59e-05
+Epoch 129/200  train=0.083287  test=0.090761  lr=6.46e-05
+Epoch 130/200  train=0.083515  test=0.118838  lr=6.32e-05
+Epoch 131/200  train=0.093893  test=0.075928  lr=6.19e-05
+  -> New best test_loss=0.075928
+Epoch 132/200  train=0.083737  test=0.276246  lr=6.05e-05
+Epoch 133/200  train=0.082465  test=0.190657  lr=5.92e-05
+Epoch 134/200  train=0.085156  test=0.107789  lr=5.79e-05
+Epoch 135/200  train=0.086308  test=0.132467  lr=5.66e-05
+Epoch 136/200  train=0.085268  test=0.138643  lr=5.54e-05
+Epoch 137/200  train=0.088023  test=0.141058  lr=5.41e-05
+Epoch 138/200  train=0.090776  test=0.125423  lr=5.28e-05
+Epoch 139/200  train=0.085061  test=0.213712  lr=5.16e-05
+Epoch 140/200  train=0.086596  test=0.146608  lr=5.04e-05
+Epoch 141/200  train=0.087321  test=0.119117  lr=4.92e-05
+Epoch 142/200  train=0.084969  test=0.190058  lr=4.80e-05
+Epoch 143/200  train=0.083345  test=0.110719  lr=4.68e-05
+Epoch 144/200  train=0.077926  test=0.116195  lr=4.56e-05
+Epoch 145/200  train=0.082931  test=0.115350  lr=4.44e-05
+Epoch 146/200  train=0.084081  test=0.151559  lr=4.33e-05
+Epoch 147/200  train=0.087394  test=0.110754  lr=4.22e-05
+Epoch 148/200  train=0.086975  test=0.088564  lr=4.11e-05
+Epoch 149/200  train=0.087464  test=0.135686  lr=4.00e-05
+Epoch 150/200  train=0.085458  test=0.088146  lr=3.89e-05
+Epoch 151/200  train=0.087499  test=0.112099  lr=3.78e-05
+Epoch 152/200  train=0.089143  test=0.140843  lr=3.68e-05
+Epoch 153/200  train=0.084487  test=0.093873  lr=3.57e-05
+Epoch 154/200  train=0.082812  test=0.122728  lr=3.47e-05
+Epoch 155/200  train=0.084793  test=0.128822  lr=3.37e-05
+Epoch 156/200  train=0.083591  test=0.126475  lr=3.28e-05
+Epoch 157/200  train=0.086042  test=0.112726  lr=3.18e-05
+Epoch 158/200  train=0.081882  test=0.153854  lr=3.09e-05
+Epoch 159/200  train=0.082920  test=0.123999  lr=2.99e-05
+Epoch 160/200  train=0.085900  test=0.093710  lr=2.90e-05
+Epoch 161/200  train=0.085133  test=0.108538  lr=2.81e-05
+Epoch 162/200  train=0.083002  test=0.147603  lr=2.73e-05
+Epoch 163/200  train=0.083273  test=0.122685  lr=2.64e-05
+Epoch 164/200  train=0.085981  test=0.115690  lr=2.56e-05
+Epoch 165/200  train=0.079236  test=0.092552  lr=2.48e-05
+Epoch 166/200  train=0.085027  test=0.127554  lr=2.40e-05
+Epoch 167/200  train=0.085051  test=0.175607  lr=2.32e-05
+Epoch 168/200  train=0.081621  test=0.105221  lr=2.25e-05
+Epoch 169/200  train=0.084392  test=0.121621  lr=2.18e-05
+Epoch 170/200  train=0.085138  test=0.092817  lr=2.10e-05
+Epoch 171/200  train=0.085037  test=0.142829  lr=2.04e-05
+Epoch 172/200  train=0.082568  test=0.093687  lr=1.97e-05
+Epoch 173/200  train=0.081710  test=0.159393  lr=1.90e-05
+Epoch 174/200  train=0.080694  test=0.103061  lr=1.84e-05
+Epoch 175/200  train=0.081573  test=0.121142  lr=1.78e-05
+Epoch 176/200  train=0.086864  test=0.143383  lr=1.72e-05
+Epoch 177/200  train=0.081992  test=0.180939  lr=1.67e-05
+Epoch 178/200  train=0.083596  test=0.108571  lr=1.61e-05
+Epoch 179/200  train=0.083979  test=0.173888  lr=1.56e-05
+Epoch 180/200  train=0.083403  test=0.098899  lr=1.51e-05
+Epoch 181/200  train=0.083254  test=0.134044  lr=1.46e-05
+Epoch 182/200  train=0.079016  test=0.181758  lr=1.42e-05
+Epoch 183/200  train=0.081215  test=0.164104  lr=1.38e-05
+Epoch 184/200  train=0.083888  test=0.129723  lr=1.34e-05
+Epoch 185/200  train=0.082134  test=0.140957  lr=1.30e-05
+Epoch 186/200  train=0.080684  test=0.132410  lr=1.26e-05
+Epoch 187/200  train=0.083218  test=0.145088  lr=1.23e-05
+Epoch 188/200  train=0.079824  test=0.177678  lr=1.20e-05
+Epoch 189/200  train=0.088805  test=0.085192  lr=1.17e-05
+Epoch 190/200  train=0.078482  test=0.135584  lr=1.14e-05
+Epoch 191/200  train=0.083927  test=0.100220  lr=1.12e-05
+Epoch 192/200  train=0.085589  test=0.126523  lr=1.09e-05
+Epoch 193/200  train=0.086321  test=0.083303  lr=1.07e-05
+Epoch 194/200  train=0.081884  test=0.122819  lr=1.06e-05
+Epoch 195/200  train=0.086313  test=0.110865  lr=1.04e-05
+Epoch 196/200  train=0.084565  test=0.124918  lr=1.03e-05
+Epoch 197/200  train=0.085946  test=0.130128  lr=1.02e-05
+Epoch 198/200  train=0.087799  test=0.154750  lr=1.01e-05
+Epoch 199/200  train=0.083643  test=0.135936  lr=1.00e-05
+Epoch 200/200  train=0.078802  test=0.108935  lr=1.00e-05
+
+Training complete.
+Copied f0 diffusion from exp017
+Starting evaluation...
+Terminated

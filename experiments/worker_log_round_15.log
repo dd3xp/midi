@@ -1,0 +1,28 @@
+Now I have the complete picture. **Round 15 was not a real training run** — all experiments (exp001–exp011) were already completed. The `next_train_cmd.sh` was a placeholder script that just printed a completion message and exited with code 0.
+
+Here's the status:
+
+### No New Results to Log
+
+- **Train round 15** ran a no-op script that confirmed all experiments are complete
+- The training log simply says: *"ALL EXPERIMENTS COMPLETE (exp001-exp011) — No training needed."*
+- There are **no new evaluation results** to record
+
+### Current Final State (unchanged)
+
+| Model | f0 RPA | f0 MAE | Amp Corr | VDE | VRE |
+|-------|--------|--------|----------|-----|-----|
+| **Baseline** (exp003) | **97.14%** | **16.39** | **0.645** | 8.34 | 0.88 |
+| **Diffusion mean** (η=0.3) | 94.20% | 21.11 | 0.571 | **4.84** | **0.76** |
+| **Diffusion oracle** (η=0.0) | 96.63% | 17.16 | 0.575 | **4.80** | **0.75** |
+
+### 🏁 实验阶段全部完成
+
+The supervisor has declared all experiments done. The log's `下一步计划` says: **"实验阶段全部完成。需要人工审查后进入论文写作。"**
+
+What's needed is **human review** of:
+- `experiments/figures/` — 11 publication-ready figures
+- `experiments/log.md` — full results and analysis
+- Then a decision to proceed to paper writing
+
+No row was appended to the log since no new experiment was executed.

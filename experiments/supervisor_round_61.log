@@ -1,0 +1,3 @@
+
+
+The background task failure is harmless — the plan was already successfully written via the subsequent Python command. I verified the log ends with the correct exp050 plan (confirmed by `tail -10`). No action needed for this notification.

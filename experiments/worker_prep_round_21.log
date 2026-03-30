@@ -1,0 +1,36 @@
+Everything checks out. Let me provide a summary:
+
+---
+
+## Summary: exp015 Prepared
+
+### What was done
+
+**Architecture changes (as per supervisor plan):**
+
+1. **`src/model/diffusion.py`** — 4 modifications:
+   - `ConditionalDDPM.__init__`: Added `n_channels` parameter (default=2 for backward compat). UNet now constructed with `input_ch=n_channels+256`, `output_ch=n_channels`
+   - `training_loss`: Simplified — removed `amp_weight` parameter and channel-wise weighting. Now just `F.mse_loss(noise_pred, noise)`
+   - `ddim_sample`: Uses `self.n_channels` for initial noise shape instead of hardcoded `2`
+   - **New class `AmpPredictor`**: Linear→ReLU→BiGRU→Softplus, ~107K params. Input (B,T,256) → output (B,T)
+
+2. **`src/model/train.py`** — Stage 2 rewrite:
+   - Reads `n_channels` from config (default 2)
+   - When `n_channels=1`: builds f0-only `x_0 = f0_norm.unsqueeze(1)`, trains AmpPredictor with log-MSE loss jointly
+   - Combined optimizer for both diffusion + amp_predictor
+   - Saves `amp_predictor_best.pt` alongside diffusion checkpoints
+   - History tracks `train_diff_loss`, `train_amp_loss`, `test_diff_loss`, `test_amp_loss` separately
+
+3. **`src/model/evaluate.py`** — Diffusion eval update:
+   - Detects `n_channels` from config YAML
+   - Loads `AmpPredictor` when `n_channels=1`
+   - Amp prediction is deterministic (computed once per track, shared across f0 samples)
+
+### Config: `experiments/configs/exp015.yaml`
+- Stage 2 only, 1-channel diffusion, 200 epochs, batch_size=16, `samples_per_epoch=1860` → **23,200 total steps**
+- Encoder frozen from exp014 baseline
+
+### Training script: `experiments/next_train_cmd.sh`
+- Copies exp014 baseline → exp015 checkpoint dir
+- Runs `train.py --stage 2` with exp015 config
+- Evaluates with 5 samples, DDIM 50 steps, eta=0.3

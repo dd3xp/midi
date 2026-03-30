@@ -1,0 +1,29 @@
+Here's a summary of what I prepared for **exp019**:
+
+## exp019: Final Mixed Checkpoint Evaluation
+
+### What it does
+This is a **pure evaluation experiment** (no training). It combines the best components from previous experiments using a mixed checkpoint strategy:
+
+| Component | Source | Reason |
+|-----------|--------|--------|
+| MIDIEncoder | exp014 `baseline_best.pt` | Frozen encoder (shared by all stage 2 experiments) |
+| Diffusion (EMA) | exp017 `diffusion_best_ema.pt` | Best f0: RPA = 95.45% |
+| AmpPredictor | exp018 `amp_predictor_best.pt` | Best amp: Corr = 0.665, RMSE(log) = 0.697 |
+| Norm stats | exp017 `norm_stats.pt` | Same dataset normalization |
+
+### Script contents (`experiments/next_train_cmd.sh`)
+1. **Prepares mixed checkpoint directory** — copies 4 files from exp014/exp017/exp018 into `experiments/checkpoints/exp019_mixed/`
+2. **Runs 4 eta evaluations** (each with `--mode both --n_samples 5 --ddim_steps 50`):
+   - η=0.0 (deterministic DDIM) → `exp019_eta00.json`
+   - η=0.3 → `exp019_eta03.json`
+   - η=0.5 → `exp019_eta05.json`
+   - η=1.0 (full stochastic) → `exp019_eta10.json`
+
+### Config
+`experiments/configs/exp019.yaml` — minimal config with 1-channel diffusion settings and AmpPredictor architecture params matching exp018.
+
+### Expected outcomes
+- f0 RPA: ~95.0-95.5% (recovering exp017's diffusion strength)
+- Amp Corr: ~0.665 (preserving exp018's AmpPredictor)
+- VDE: ~4.8-5.0 (better than exp018's 6.47)

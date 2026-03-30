@@ -1,0 +1,121 @@
+============================================
+exp043: Residual Scaling + eta Sweep
+  Pure evaluation (no training)
+  Sweep alpha in {0.0, 0.1, 0.3, 0.5, 0.7, 1.0}
+  Sweep eta in {0.0, 0.3}
+============================================
+
+[1/10] eta=0.0, alpha=1.0 (deterministic DDIM diagnostic)
+C:\lxr\study\final\src\model\diffusion.py:390: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.attn = nn.TransformerEncoder(attn_layer, num_layers=n_attn_layers)
+C:\lxr\study\final\src\model\evaluate.py:202: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  autocast_ctx = torch.cuda.amp.autocast() if device.type == "cuda" else torch.inference_mode()
+Device: cuda
+Test tracks: 49
+
+--- Evaluating Diffusion ---
+Loaded frozen diffusion from config fallback: experiments/checkpoints/exp034/diffusion_best_ema.pt
+Loaded Amp Diffusion from experiments/checkpoints/exp042\amp_diffusion_best_ema.pt
+Loaded AmpPredictor (hidden=256, gru_hidden=128, layers=2, dropout=0.3, f0_conditioned=False, use_attention=True, n_attn_heads=4, n_attn_layers=2, instrument_conditioned=True) from experiments/checkpoints/exp042\amp_predictor_best.pt
+Amp norm stats (amp diffusion): mean=-4.5382, std=1.2719
+*** RESIDUAL AMP DIFFUSION MODE: amp = AmpPredictor_mean + diffusion_residual ***
+{
+  "diffusion_rpa_mean": {
+    "mean": 0.9292332673365873,
+    "std": 0.05502512609068955,
+    "min": 0.7706136900078678,
+    "max": 0.9929783037475346
+  },
+  "diffusion_rpa_oracle": {
+    "mean": 0.9597869270372897,
+    "std": 0.030119258506774143,
+    "min": 0.8734848484848485,
+    "max": 0.9968441814595661
+  },
+  "diffusion_f0_mae_mean": {
+    "mean": 26.130870017226865,
+    "std": 18.264131255472762,
+    "min": 10.015308570861816,
+    "max": 128.49503631591796
+  },
+  "diffusion_f0_mae_oracle": {
+    "mean": 20.076774519317006,
+    "std": 16.747115244253116,
+    "min": 7.96656608581543,
+    "max": 122.41813659667969
+  },
+  "diffusion_amp_corr_mean": {
+    "mean": 0.7386036320754101,
+    "std": 0.11527206787713055,
+    "min": 0.4156832757546189,
+    "max": 0.9344002734150502
+  },
+  "diffusion_amp_corr_oracle": {
+    "mean": 0.7496051232016352,
+    "std": 0.11003191425207907,
+    "min": 0.4741878085017366,
+    "max": 0.9311486338898481
+  },
+  "diffusion_amp_rmse_log_mean": {
+    "mean": 0.7045567147585811,
+    "std": 0.1567832453663475,
+    "min": 0.5279182970523835,
+    "max": 1.2951311826705934
+  },
+  "diffusion_amp_rmse_log_oracle": {
+    "mean": 0.6567638029857558,
+    "std": 0.1387484619435251,
+    "min": 0.4728189706802368,
+    "max": 1.1011024713516235
+  },
+  "diffusion_vde_mean_avg": {
+    "mean": 8.208632396715156,
+    "std": 7.356211435538331,
+    "min": 1.2632015507839474,
+    "max": 35.22840231065411
+  },
+  "diffusion_vde_mean_oracle": {
+    "mean": 7.426126039391961,
+    "std": 6.632789933966288,
+    "min": 0.9709190943932163,
+    "max": 33.9108741051917
+  },
+  "diffusion_vre_mean_avg": {
+    "mean": 0.8517334704217403,
+    "std": 0.1983742893536865,
+    "min": 0.40858131463332253,
+    "max": 1.2159123684150859
+  },
+  "diffusion_vre_mean_oracle": {
+    "mean": 0.8519631247291634,
+    "std": 0.21549593490024377,
+    "min": 0.3454346987122736,
+    "max": 1.2975604889764825
+  },
+  "diffusion_f0_diversity_cents": {
+    "mean": 13.158046114201449,
+    "std": 10.25476049327797,
+    "min": 3.059950590133667,
+    "max": 57.858863830566406
+  },
+  "diffusion_amp_diversity": {
+    "mean": 0.004394580177696688,
+    "std": 0.0034141885820694693,
+    "min": 0.0013218489475548267,
+    "max": 0.014451910741627216
+  },
+  "diffusion_n_vibrato_notes": {
+    "mean": 74.18367346938776,
+    "std": 43.8306916368287,
+    "min": 17.0,
+    "max": 144.0
+  }
+}
+
+Results saved to experiments/results/exp043_eta00_alpha10.json
+
+[2/10] eta=0.3, alpha=0.0 (pure AmpPredictor — sanity check: expect ~0.807)
+C:\lxr\study\final\src\model\diffusion.py:390: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.attn = nn.TransformerEncoder(attn_layer, num_layers=n_attn_layers)
+C:\lxr\study\final\src\model\evaluate.py:202: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  autocast_ctx = torch.cuda.amp.autocast() if device.type == "cuda" else torch.inference_mode()

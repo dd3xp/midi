@@ -1,0 +1,17 @@
+The log has been updated correctly. The 当前最佳 section does NOT need updating since exp027's Amp Corr (0.622) is worse than all existing bests.
+
+**Summary of exp027 results:**
+
+| Metric | exp027 (TCN) | exp019 (GRU best) | exp023 (Attn best) |
+|--------|-------------|-------------------|-------------------|
+| Amp Corr | **0.622** | 0.665 | 0.676 |
+| Amp RMSE(log) | **0.697** | 0.697 | 0.726 |
+| f0 RPA | 94.97% | 95.37% | 95.56% |
+
+**exp027 is a negative result.** The TCN (Temporal Convolutional Network) AmpPredictor with 128 channels, 8 dilated layers, and kernel_size=3 performed significantly worse than both GRU variants on Amp Correlation (-6.5% vs exp019, -8.0% vs exp023), while matching RMSE. Key insights:
+
+1. **TCN lacks long-range modeling** — dilated convolutions (receptive field = 256 frames) can't capture phrase-level amplitude dynamics that GRU/Attention handle well
+2. **Extremely early saturation** — best test loss at epoch 14 out of 200, then oscillating overfitting
+3. **RMSE parity but Corr failure** — TCN captures local frame-level patterns (good RMSE) but misses global temporal correlation structure
+
+This is the 10th amp optimization approach that failed to break through 0.676. The 当前最佳 remains unchanged (exp019/exp023).

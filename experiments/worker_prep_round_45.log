@@ -1,0 +1,26 @@
+Everything is verified and ready. Here's a summary:
+
+## Summary: exp034 Prepared
+
+**Experiment**: exp034 — Full Stage 2 (Diffusion + AmpPredictor) on Velocity-Informed Encoder
+
+**What it does**:
+1. **Loads exp033's baseline checkpoint** (velocity-estimated encoder, Amp Corr 0.756 baseline)
+2. **Trains f0 diffusion from scratch** — the encoder's condition vectors have changed (velocity/127 now varies 0.01-1.0 vs constant 0.63), so old diffusion can't be reused
+3. **Trains GRU+Attention + Instrument Embedding AmpPredictor** — the best architecture from exp028, now on top of the velocity-informed encoder
+4. **Evaluates** with DDIM 50 steps, η=0.3
+
+**Key config choices** (following supervisor's plan exactly):
+- `freeze_diffusion: false` — train new diffusion from scratch
+- No `diffusion_checkpoint` — no pretrained weights
+- `baseline_checkpoint: exp033` — velocity encoder (NOT exp014)
+- AmpPredictor: hidden=256, GRU hidden=128, 2 layers, attention (4 heads, 2 layers), instrument conditioned
+- 200 epochs, batch_size=16, cosine LR schedule
+
+**No code bugs to fix** — supervisor found no critical issues in Round 7.
+
+**Expected outcome**: Amp Corr 0.79-0.85 (target >0.80). This is the project's most critical experiment — combining the velocity breakthrough (+11.5% Amp Corr) with the best Stage 2 architecture.
+
+**Files created**:
+- `experiments/configs/exp034.yaml`
+- `experiments/next_train_cmd.sh` (ready for external execution)

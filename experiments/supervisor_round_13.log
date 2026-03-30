@@ -1,0 +1,31 @@
+Here's my **supervisor review summary** for the terminal:
+
+---
+
+## Supervisor Review: exp011 ✅ Complete
+
+**What was reviewed**: exp011 — visualization fix (re-evaluate η=0.5 diversity + improve vibrato zoom + regenerate all figures)
+
+### Key Metrics (exp011 η=0.5 evaluation)
+| Metric | Value | Status |
+|--------|-------|--------|
+| f0 RPA mean | 94.22% | ✅ Consistent with other η |
+| f0 RPA oracle | 96.48% | ✅ |
+| f0 diversity | 9.16 cents | ✅ Fills gap, no more zeros |
+| Amp Corr mean | 0.573 | ✅ |
+| VDE | 4.68 | ✅ |
+
+### Figure Quality (11 figures reviewed)
+- **eta_sweep_summary**: ✅ **FIXED** — all 4 eta points valid, baseline reference line added
+- **vibrato_zoom_vn_Jupiter**: ✅ **EXCELLENT** — clear intra-note vibrato, diffusion tracks GT oscillation, baseline flat
+- **instrument_comparison**: ✅ Clear VDE advantage (diffusion 3.4-6.2 vs baseline 6.1-10.9)
+- **All 11 figures**: Publication-ready ✅
+
+### What I planned next
+**🏁 EXPERIMENT PHASE COMPLETE** — Created `experiments/NEEDS_HUMAN.txt` to pause the loop.
+
+11 experiments covered the full pipeline: baseline training → diffusion training → eta/diversity analysis → paper visualization. All research questions answered. The human researcher should review figures and begin paper writing for AIMC 2026.
+
+### No Critical Issues
+- Code changes verified correct (vibrato algorithm, data sources, baseline reference)
+- One minor suggestion: `d.get("f0_diversity", 0)` fallback could mask future data gaps

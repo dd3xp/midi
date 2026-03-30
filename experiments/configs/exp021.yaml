@@ -1,0 +1,33 @@
+# exp021: Amp Diffusion — separate 1ch DDPM for amp generation
+# Purpose: Replace deterministic AmpPredictor with a diffusion model for amp
+# Hypothesis: Diffusion can capture complex amp distributions better than BiGRU
+# Architecture:
+#   - Encoder: frozen from exp014 (baseline_best.pt)
+#   - f0 diffusion: frozen from exp017 (diffusion_best_ema.pt) — used at eval only
+#   - amp diffusion: NEW 1ch DDPM (same U-Net architecture as f0 diffusion)
+#   - Amp target: log(amp) -> z-score normalized
+# Training: stage 3 — only trains amp diffusion
+# Comparison: exp019 (AmpPredictor, Amp Corr 0.665)
+# Dataset: URMP 9 inst + Bach10 4 inst = 173 tracks (same as exp017-exp019)
+
+output_dir: "experiments/checkpoints/exp021"
+baseline_checkpoint: "experiments/checkpoints/exp014/baseline_best.pt"
+instruments: ["vn", "va", "vc", "fl", "ob", "cl", "sax", "tpt", "tbn", "bn"]
+crop_len: 512
+seed: 42
+save_every: 10
+
+# Stage 3: Amp diffusion training
+stage3:
+  batch_size: 16
+  lr: 0.0002
+  lr_min: 0.00001
+  epochs: 200
+  ema_decay: 0.995
+  n_diffusion_steps: 1000
+  samples_per_epoch: 1860    # 124 train tracks x 15 crops
+
+# For evaluation — f0 diffusion config (must match exp017)
+stage2:
+  n_diffusion_steps: 1000
+  n_channels: 1

@@ -1,0 +1,41 @@
+Good. Now let me print the final status summary.
+
+---
+
+## 📊 Supervisor Review Summary — exp028
+
+### Experiment Reviewed
+**exp028**: Instrument-Conditioned AmpPredictor (GRU+Attention + nn.Embedding(10, 32))
+
+### Code Review
+✅ **No issues found.** All 4 modified files (diffusion.py, dataset.py, train.py, evaluate.py) reviewed. Tensor shapes, backward compatibility, and instrument_id pipeline all correct. Test set verified to be identical across experiments (41 URMP + 8 Bach10 = 49 tracks).
+
+### Key Metrics (exp023 → exp028)
+
+| Metric | exp023 | exp028 | Change |
+|--------|--------|--------|--------|
+| **Amp Corr** | 0.676 | **0.678** | +0.3% (noise) |
+| **Amp RMSE(log)** | 0.726 | **0.657** | **-9.5% ✅** |
+| f0 RPA | 95.56% | 95.06% | -0.5% (noise) |
+| VDE | 6.64 | 6.71 | +1.1% (noise) |
+
+### Diagnosis
+- **Instrument embedding solves the amp SCALE problem** (RMSE -9.5%) — the model now correctly predicts that bassoons are louder than trumpets.
+- **Amp SHAPE (temporal dynamics) unchanged** — Correlation stuck at ~0.678. The bottleneck is MIDI velocity=80 (constant), meaning no dynamic intent information in the input.
+- **Training**: Best at epoch 84, mild overfitting after (train: 0.40 → test: 0.43 at best, gap: 0.03). Well early-stopped.
+
+### Plan Written: exp029
+**Per-Instrument Amplitude Normalization** — normalize amp targets per-instrument to remove scale from the loss landscape. Final amp optimization attempt before comprehensive evaluation.
+
+### Critical Issues
+**None.** Code and results are clean.
+
+### Progress Toward Publication
+
+| Target | Current Best | Status |
+|--------|-------------|--------|
+| f0 RPA > 85% | **95.06%** | ✅ Far exceeded |
+| Amp beat baseline | **0.678 vs 0.633** (+7.1%) | ✅ |
+| Amp RMSE beat baseline | **0.657 vs 0.724** (-9.3%) | ✅ |
+| VDE beat baseline | **6.71 vs 8.70** (-22.9%) | ✅ |
+| **Bottleneck** | Amp Corr ~0.678 (velocity=80 ceiling) | 1 more attempt, then final eval |

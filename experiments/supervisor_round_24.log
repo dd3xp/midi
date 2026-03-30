@@ -1,0 +1,41 @@
+Good, the log is properly updated. Let me verify no NEEDS_HUMAN.txt is needed:
+
+- **Plateau check**: Only 2 experiments with <1% amp_corr improvement (exp015b→exp016). Need 3+ to trigger. ✅ Not yet.
+- **Repeated failure**: No crashes. ✅
+- **Strategic decision**: Architecture changes are pre-approved. ✅
+- **Anomaly**: Results are consistent with expectations (small model → limited capacity). ✅
+
+No NEEDS_HUMAN.txt required.
+
+---
+
+## Supervisor Review Summary
+
+### Experiment Reviewed: **exp016** (Log-space AmpPredictor + dropout=0.2)
+
+### Key Metrics
+| Metric | exp015b | exp016 | Change |
+|--------|---------|--------|--------|
+| f0 RPA mean | 93.63% | **94.23%** | +0.60% ✅ |
+| Amp Corr | 0.624 | **0.625** | +0.16% ❌ marginal |
+| Amp RMSE(log) | 0.825 | **0.818** | -0.85% ❌ missed target (≤0.75) |
+| VDE | 6.56 | 6.61 | ≈flat |
+
+### Diagnosis
+**Root cause identified**: AmpPredictor has a **~10x capacity gap** vs baseline's amp path:
+- AmpPredictor: 1-layer BiGRU hidden=64, ~230K params
+- Baseline: 2-layer BiGRU hidden=256, ~2M+ params (shared GRU)
+- Training curves confirm capacity saturation: amp_loss converges by ep50, 150 more epochs yield only 0.032 reduction
+- Log-space output change (exp016) was correct but didn't address the real bottleneck
+
+### Code Review
+✅ All 5 code changes (C1-C5) correctly implemented. No CRITICAL bugs found.
+
+### Next Plan: **exp017** — Larger AmpPredictor
+- 2-layer BiGRU, hidden=128, dropout=0.3 → ~730K params (3.2x increase)
+- Keep log-space output, keep independent amp early stopping
+- Target: Amp RMSE(log) ≤ 0.75, Amp Corr ≥ 0.63
+- If still flat → plateau (3rd consecutive <1% improvement) → NEEDS_HUMAN.txt
+
+### Critical Issues Found
+None (code is correct, architecture change is the priority).

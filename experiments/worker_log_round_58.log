@@ -1,0 +1,26 @@
+All entries are properly logged. Let me provide a summary:
+
+---
+
+## exp046 结果已记录 ❌
+
+**实验**: Velocity Conditioning + Condition Dropout (amp_velocity_conditioned=true, amp_condition_dropout=0.2, weight_decay=0.001)
+
+### 核心指标
+| 指标 | exp045 (上轮) | **exp046** | exp039 (全局最佳) |
+|------|-------------|-----------|-----------------|
+| **Amp Corr** | 0.781 | **0.778 (-0.4%)** | 0.807 |
+| Amp RMSE(log) | 0.649 | 0.636 (-2.0%) | 0.582 |
+| Best epoch | ep34 | ep35 | ep142 |
+| f0 RPA | 93.63% | 93.82% | 93.73% |
+| VDE | 7.64 | 7.67 | 7.97 |
+
+### 关键发现
+1. **Velocity conditioning 无效** — encoder feature (256维) 已隐式包含 velocity 信息 (exp033 encoder 用了 velocity 输入), 额外显式传入是冗余信号
+2. **Condition dropout 未延缓过拟合** — best epoch 从 34→35 (几乎不变), 说明过拟合源头不在 encoder feature 依赖, 而是 AmpPredictor 自身对有限数据的拟合极限
+3. **Weight decay 10x 增加也无效** — 0.0001→0.001 未产生明显正则化
+
+### 状态
+- **exp039 仍为 Amp Corr 全局最佳 (0.807)**
+- 这是第 29 次 amp 优化尝试, 0.807 天花板未被突破
+- 等待 supervisor 规划下一步方向

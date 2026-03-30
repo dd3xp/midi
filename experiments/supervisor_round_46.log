@@ -1,0 +1,37 @@
+Good. The log has been updated successfully. Let me print the status summary:
+
+---
+
+## Supervisor Round 9 — Status Summary
+
+### Experiment Reviewed: exp035 (Correlation Loss + Lower LR)
+
+### 🔴 CRITICAL BUG FOUND
+**exp035 evaluation used RANDOM diffusion weights** because `diffusion_best_ema.pt` wasn't saved when `freeze_diffusion=True`. The f0 metrics are all garbage (RPA 6.55% instead of ~94.5%). **evaluate.py needs a code fix** to check config's `diffusion_checkpoint` as fallback.
+
+### Key Metrics (Amp only — valid despite f0 bug)
+| Metric | exp034 | **exp035** | Change |
+|--------|--------|-----------|--------|
+| **Amp Corr** | 0.789 | **0.800** | **+0.011 ✅ First time ≥0.80!** |
+| Amp RMSE | 0.582 | **0.572** | -1.7% ✅ |
+| f0 RPA | 94.52% | **6.55% ❌ BUG** | Needs re-evaluation |
+
+### Per-Instrument Highlights
+- **Biggest gains**: bn +0.041 (0.662→0.703), vn +0.023 (0.699→0.722)
+- **tpt first >0.90**: 0.895→0.902
+- **Improvement is broad**: 8/10 instruments improved, 2 held steady, 0 degraded
+- **Training improved**: Best epoch 54 (vs 18 in exp034) — lower LR worked
+
+### What Was Planned Next (exp036)
+1. **Fix evaluate.py** — add diffusion_checkpoint fallback for frozen diffusion case
+2. **Re-evaluate exp035** — get valid f0 metrics (should match exp034: ~94.5% RPA)
+3. **exp036: f0-Conditioned AmpPredictor + Scheduled Sampling** — let amp predictor see generated f0 to capture vibrato-dynamics coupling. Scheduled sampling (GT→generated f0 anneal over epochs 50-150) avoids the exposure bias that killed exp022.
+
+### Progress Toward Goals
+- ✅ f0 RPA: 95.83% (target: >85%) — far exceeded
+- ⚠️ **Amp Corr: 0.800** (target: >0.90) — hit 0.80 milestone, need +0.10 more
+- ✅ Amp RMSE: 0.572 (target: beat 0.724 baseline) — far exceeded
+- ✅ VDE: 7.33 (target: beat 8.70 baseline) — far exceeded
+
+### Biggest Bottleneck
+**Amp Corr at 0.800 — crossed 0.80 but need 0.90. f0 conditioning is the next high-impact direction** since it provides direct information about vibrato/pitch variation that correlates with dynamics.

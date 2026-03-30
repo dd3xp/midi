@@ -1,0 +1,39 @@
+Good, the plan is written correctly. Let me print a status summary:
+
+---
+
+## Supervisor Review Summary — exp022
+
+### Experiment Reviewed
+**exp022**: f0-conditioned AmpPredictor — AmpPredictor receives diffusion-sampled f0 as additional input
+
+### Key Metrics (vs exp019 best)
+| Metric | exp019 (best) | exp022 | Change |
+|--------|--------------|--------|--------|
+| f0 RPA mean | 95.59% | 95.51% | -0.08% (≈same) |
+| **Amp Corr mean** | **0.665** | **0.578** | **-13.1% 🔴** |
+| **Amp RMSE(log)** | **0.697** | **0.987** | **+41.6% 🔴** |
+| VDE | 6.54 | 6.77 | +3.5% |
+
+### Diagnosis
+**情景 C confirmed: Exposure bias.** Training used GT f0 (perfect vibrato), but inference used diffusion-sampled f0 (noisy). Training loss was actually lower (0.386 vs 0.508), yet inference performance crashed — textbook exposure bias. Direction closed.
+
+### Amp Improvement Attempts (4 tried, all failed or marginal)
+1. ❌ Channel-wise loss (exp013): Amp Corr 0.516
+2. ❌ Amp Diffusion (exp021): Amp Corr 0.407
+3. ❌ f0-conditioned AmpPredictor (exp022): Amp Corr 0.578
+4. ✅ Larger AmpPredictor + regularization (exp017→018): **Amp Corr 0.665** (still best)
+
+### Code Review
+No bugs found. The exp022 implementation (diffusion.py, train.py, evaluate.py) is correct. Failure is methodological, not a code issue.
+
+### Next Planned: exp023
+**Self-Attention AmpPredictor** — Add 2-layer TransformerEncoder (4 heads, Pre-LN) after BiGRU to capture long-range amplitude patterns (phrase-level dynamics, crescendo/decrescendo). No f0 conditioning. Freeze encoder + diffusion, train only AmpPredictor.
+
+**Expected**: Amp Corr 0.68-0.72 (target >0.90 remains distant but incremental progress)
+
+### Critical Issues
+None. No NEEDS_HUMAN.txt needed — amp improvement experimentation continues autonomously per instructions.
+
+### Current Bottleneck
+**Amp Corr (0.665)** remains the primary bottleneck. Target is >0.90. Self-attention is the next untried high-priority approach from the approved list.

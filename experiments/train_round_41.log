@@ -1,0 +1,107 @@
+=== Step 1: Evaluate exp029 (per-instrument normalization) ===
+C:\lxr\study\final\src\model\diffusion.py:390: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.attn = nn.TransformerEncoder(attn_layer, num_layers=n_attn_layers)
+C:\lxr\study\final\src\model\evaluate.py:200: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  autocast_ctx = torch.cuda.amp.autocast() if device.type == "cuda" else torch.inference_mode()
+Device: cuda
+Test tracks: 49
+
+--- Evaluating Diffusion ---
+Loaded AmpPredictor (hidden=256, gru_hidden=128, layers=2, dropout=0.3, f0_conditioned=False, use_attention=True, n_attn_heads=4, n_attn_layers=2, instrument_conditioned=True) from experiments/checkpoints/exp029\amp_predictor_best.pt
+Loaded per-instrument amp stats from experiments/checkpoints/exp029\amp_per_inst_stats.pt (10 instruments)
+{
+  "diffusion_rpa_mean": {
+    "mean": 0.9522244534524678,
+    "std": 0.02938409742548572,
+    "min": 0.8698232323232323,
+    "max": 0.9878040762656147
+  },
+  "diffusion_rpa_oracle": {
+    "mean": 0.9607103897690531,
+    "std": 0.02597880623821774,
+    "min": 0.8742424242424243,
+    "max": 0.9907297830374754
+  },
+  "diffusion_f0_mae_mean": {
+    "mean": 22.578957123010337,
+    "std": 16.426936216056138,
+    "min": 10.555914878845215,
+    "max": 125.77600606282552
+  },
+  "diffusion_f0_mae_oracle": {
+    "mean": 20.154653510268854,
+    "std": 15.989925534931182,
+    "min": 10.161141395568848,
+    "max": 122.48985290527344
+  },
+  "diffusion_amp_corr_mean": {
+    "mean": 0.6697683873290293,
+    "std": 0.11360961797463288,
+    "min": 0.44294990199737744,
+    "max": 0.9027027024399276
+  },
+  "diffusion_amp_corr_oracle": {
+    "mean": 0.6697683873290295,
+    "std": 0.11360961797463288,
+    "min": 0.4429499019973774,
+    "max": 0.9027027024399275
+  },
+  "diffusion_amp_rmse_log_mean": {
+    "mean": 0.690532420362745,
+    "std": 0.1235811682246424,
+    "min": 0.48525968194007874,
+    "max": 1.1200546026229858
+  },
+  "diffusion_amp_rmse_log_oracle": {
+    "mean": 0.690532420362745,
+    "std": 0.1235811682246424,
+    "min": 0.48525968194007874,
+    "max": 1.1200546026229858
+  },
+  "diffusion_vde_mean_avg": {
+    "mean": 6.8093126043542265,
+    "std": 5.7350283552591,
+    "min": 1.8500053376768617,
+    "max": 31.264347329313164
+  },
+  "diffusion_vde_mean_oracle": {
+    "mean": 6.788318618922744,
+    "std": 5.813090283867374,
+    "min": 1.7428446658407248,
+    "max": 32.208376030302134
+  },
+  "diffusion_vre_mean_avg": {
+    "mean": 0.8570724914902818,
+    "std": 0.20088366356391427,
+    "min": 0.3687958124587831,
+    "max": 1.2581220902868961
+  },
+  "diffusion_vre_mean_oracle": {
+    "mean": 0.8339242872796453,
+    "std": 0.24111008810107878,
+    "min": 0.2712031074849919,
+    "max": 1.3196077611283525
+  },
+  "diffusion_f0_diversity_cents": {
+    "mean": 8.85252723888475,
+    "std": 2.4037136893833213,
+    "min": 5.596792221069336,
+    "max": 16.35226058959961
+  },
+  "diffusion_amp_diversity": {
+    "mean": 3.4154078913123727e-10,
+    "std": 4.1239233991395335e-10,
+    "min": 6.539665337035316e-11,
+    "max": 1.690903195239457e-09
+  },
+  "diffusion_n_vibrato_notes": {
+    "mean": 74.18367346938776,
+    "std": 43.8306916368287,
+    "min": 17.0,
+    "max": 144.0
+  }
+}
+
+Results saved to experiments/results/exp029.json
+=== Step 2: Prepare exp031 checkpoint directory ===
+cp: cannot stat 'experiments/checkpoints/exp014/norm_stats.pt': No such file or directory

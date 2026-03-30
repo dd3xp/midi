@@ -1,0 +1,38 @@
+The plan is written correctly. Here's my status summary:
+
+---
+
+## 🔍 Supervisor Review Summary
+
+### Experiment Reviewed: exp030 (Pitch-Anchor Amp Offset)
+- **Status**: ❌ Failed decisively
+- **Amp Corr**: 0.558 (was 0.678, **-17.7%**)
+- **Amp RMSE**: 1.208 (was 0.657, **+83.9%**)
+- **f0 RPA**: 95.27% (unchanged)
+- **Root cause**: Conceptual — amp has no physical anchor like f0 (MIDI pitch). Same pitch can have wildly different amplitudes depending on context/dynamics/instrument. Code was verified correct; failure is methodological.
+
+### Code Review
+- No new code was written since last round
+- Existing per-inst norm code (train.py, evaluate.py) verified correct for exp029 evaluation
+- Multi-scale loss code has **NOT been implemented yet** in train.py
+
+### Issues Found
+- **[IMPORTANT]** exp029 (per-inst normalization) was trained but **never evaluated** — this is a free data point
+- **[IMPORTANT]** exp031 (multi-scale loss) was planned but **never implemented or executed**
+
+### Plan Written (2 experiments)
+1. **Evaluate exp029** (immediate — already trained, just run evaluate.py)
+2. **Implement + train + evaluate exp031** (multi-scale temporal amp loss) — add `avg_pool1d`-based multi-scale MSE at scales [8, 32] with weight 0.5
+
+### Progress Toward Goals
+| Metric | Current Best | Target | Status |
+|--------|-------------|--------|--------|
+| f0 RPA | 95.59% | >85% | ✅ Far exceeded |
+| Amp Corr | **0.678** | >0.80 | ⚠️ Gap: 0.122 |
+| Amp RMSE | **0.657** | <0.724 | ✅ Far exceeded |
+
+### Biggest Bottleneck
+**Amp Corr stuck at 0.678** — MIDI velocity=80 constant provides no dynamics info. Next approaches: multi-scale loss → scheduled-sampling f0-conditioned amp → note-level aux loss.
+
+### No Critical Issues — No NEEDS_HUMAN.txt required
+Amp plateau is expected and the plan includes 4+ remaining approaches to try.

@@ -1,0 +1,33 @@
+Log updated successfully. Here's my status summary:
+
+---
+
+## Supervisor Review Summary — exp042 Residual Amp Diffusion
+
+### Experiment Reviewed
+**exp042**: Residual Amp Diffusion — train diffusion on `(gt_amp - AmpPredictor_mean)` instead of full amp. 300 epochs, evaluated at η=0.3.
+
+### Key Metrics
+| Metric | exp039 (best deterministic) | exp042 (residual diffusion) | Delta |
+|--------|---------------------------|----------------------------|-------|
+| **Amp Corr** | **0.807** | **0.744** | **-0.063 ❌** |
+| Amp RMSE(log) | 0.582 | 0.699 | +0.117 |
+| f0 RPA | 93.73% | 94.31% | +0.58% |
+| amp_diversity | ~0 | 0.004 | +0.004 ✅ |
+
+### Critical Finding
+**Quality floor mechanism FAILED.** Expected Amp Corr ≥ 0.80 (AmpPredictor should guarantee a floor), but got 0.744. Root cause: the diffusion model outputs non-trivial residuals that correlate with training data but are essentially noise on test data, corrupting the AmpPredictor's good predictions.
+
+### Code Review
+✅ **No bugs found.** Normalization stats match exactly between exp039 and exp042. The residual computation and inference pipeline are mathematically correct. The issue is purely that the learned residual model doesn't generalize.
+
+### What's Planned Next
+**exp043: Residual Scaling α sweep** (evaluation-only, no training needed)
+- Add `--residual_scale α` parameter to evaluate.py: `final = AmpPredictor + α * residual`
+- Sweep α ∈ {0.0, 0.1, 0.3, 0.5, 0.7, 1.0} at η=0.3
+- Quick diagnostic: η=0.0 (deterministic) to check if stochasticity is the problem
+- Goal: **Quality-diversity Pareto frontier** for the AIMC 2026 paper
+- Expected: α=0.1~0.3 may achieve Amp Corr ≥ 0.79 with diversity > 0
+
+### No Critical Issues
+No NEEDS_HUMAN.txt needed — this is amp improvement work and the next experiment is well-defined and fast (evaluation-only).

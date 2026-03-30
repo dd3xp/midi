@@ -1,0 +1,37 @@
+Everything is ready. Here's a summary:
+
+---
+
+## exp012 准备完成 — Summary
+
+### 实验：Baseline amp head Sigmoid → Softplus
+
+**目的**：解决 amp 预测瓶颈。Sigmoid 输出 [0,1] 但真实 amp 在 [0, ~0.06]，浪费 94%+ 输出范围。Softplus(x) = log(1+exp(x)) > 0，无上界限制。
+
+### 当前状态：
+| 项目 | 状态 |
+|------|------|
+| **代码修改** | ✅ `baseline.py` 第31行: `nn.Sigmoid()` → `nn.Softplus()` (已完成) |
+| **备份** | ✅ `baseline.py.bak` 保留原始 Sigmoid 版本 |
+| **配置** | ✅ `experiments/configs/exp012.yaml` (与 exp003 相同超参数) |
+| **训练** | ✅ **已完成** — 74 epochs, early stopped (best at epoch 59, test_loss=3.5458) |
+| **评估** | ❌ 尚未运行 — 脚本将执行评估 |
+
+### next_train_cmd.sh 将执行：
+1. 验证 Softplus 代码变更已就位
+2. 跳过训练（checkpoint 已存在）
+3. 运行 `evaluate.py --mode baseline` 生成 `exp012.json`
+
+### 对比基准：exp003 (Sigmoid)
+- RPA: 97.14%
+- Amp Corr: 0.645
+- Amp RMSE(log): 0.738
+ginal backup |
+
+### Expected outcome
+- **Amp Corr**: Should improve from 0.645 (exp003 baseline)
+- **f0 RPA**: Should remain ~97% (f0 head unchanged)
+- **Training time**: ~1-2 hours (Stage 1 only)
+
+### Comparison target
+- exp003: f0 RPA=97.14%, Amp Corr=0.645, VDE=8.34

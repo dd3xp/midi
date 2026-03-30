@@ -1,0 +1,33 @@
+Everything is in place. Let me provide a summary:
+
+---
+
+## Summary of What Was Prepared
+
+### Context
+**exp050** (Residual Amp Diffusion v2 with normalized residuals) training completed 300 epochs, but evaluation failed with OOM due to O(T²) attention memory on long tracks. The supervisor's plan called for two fixes to evaluate.py plus re-running evaluation.
+
+### Code Fixes Applied to `src/model/evaluate.py`
+
+1. **Fix-1: `--max_eval_len` argument + truncation logic** (lines 218-227, 451)
+   - Added `--max_eval_len` CLI argument (default=0 = no limit)
+   - After loading each track, truncates `ff`, `f0_gt`, `amp_gt`, and `notes` if length exceeds the limit
+   - Logs which tracks were truncated and by how many frames
+
+2. **Fix-2: GPU model offloading** (lines 279-289)
+   - After f0 DDIM sampling, moves `diffusion` (f0 U-Net) to CPU and clears GPU cache
+   - Before next sample's f0 DDIM, moves `diffusion` back to GPU
+   - This frees ~130MB GPU RAM for amp diffusion DDIM sampling
+
+3. **Updated call site** (line 720) to pass `max_eval_len` through to `evaluate_diffusion()`
+
+### Evaluation Script: `experiments/next_train_cmd.sh`
+- **No training** — exp050 is already trained (300 epochs)
+- **Run 1**: `alpha=1.0, eta=0.3, n_samples=5, max_eval_len=8192` → main result → `exp050.json`
+- **Run 2**: `alpha=0.0, eta=0.0, n_samples=1, max_eval_len=8192` → sanity check (should match AmpPredictor ~0.781) → `exp050_alpha00.json`
+
+### Expected Outcomes
+| Setting | Expected Amp Corr | Purpose |
+|---------|-------------------|---------|
+| alpha=1.0 | 0.75–0.78 | Residual diffusion with normalized residuals |
+| alpha=0.0 | ~0.781 | Verify AmpPredictor loads correctly (matches exp045) |

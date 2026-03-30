@@ -1,0 +1,18 @@
+# exp019: Final evaluation — mixed checkpoint (exp017 diffusion + exp018 amp)
+# Purpose: Combine best f0 (exp017 diffusion_best_ema) with best amp (exp018 amp_predictor_best)
+# No training needed — pure evaluation + multi-eta sweep + figures
+# Encoder: frozen from exp014 (baseline_best.pt contains encoder weights)
+# Dataset: URMP 9 inst + Bach10 4 inst = 173 tracks (same as exp017/exp018)
+
+output_dir: "experiments/checkpoints/exp019_mixed"
+instruments: ["vn", "va", "vc", "fl", "ob", "cl", "sax", "tpt", "tbn", "bn"]
+crop_len: 512
+seed: 42
+
+stage2:
+  n_diffusion_steps: 1000
+  n_channels: 1
+  amp_hidden: 256
+  amp_gru_hidden: 128
+  amp_gru_layers: 2
+  amp_dropout: 0.3

@@ -1,0 +1,37 @@
+The plan is complete and correctly written. Here's the status summary:
+
+---
+
+## 📋 Supervisor Review Summary — exp010
+
+### Experiment Reviewed
+**exp010**: Paper visualization — generated 11 figures for AIMC 2026 using exp003 (baseline) + exp007 (diffusion) checkpoints.
+
+### Key Findings
+
+**Code:** `visualize.py` implementation is correct — model loading, inference, f0→MIDI conversion, seed fixing all verified.
+
+**Figures Generated:** 11 PNG files in `experiments/figures/`
+
+### Issues Found
+
+| Severity | Issue | Impact |
+|----------|-------|--------|
+| **🔴 CRITICAL [C1]** | `eta_sweep_summary.png` diversity panel shows **0** at η=0.5 (missing data from pre-diversity exp008) | **Cannot use in paper** — false V-shape dip |
+| **🟡 WARNING [W1]** | Vibrato zoom figures show **note transitions** not **within-note vibrato** | Undermines paper's core "VDE -42%" narrative |
+| **🟡 WARNING [W2]** | Amp contour figures vertically compressed (12×3) | Hard to read, especially violin |
+| **🔵 SUGGESTION [S1]** | No baseline reference line in eta sweep RPA panel | Reduces clarity |
+
+### Next Plan: exp011
+- **Re-evaluate η=0.5** with diversity-enabled evaluate.py (~10 min)
+- **Fix vibrato zoom selection algorithm** — only consider within-note f0 variation, exclude transitions
+- **Update eta_sweep data source** + add baseline reference line
+- **Regenerate all figures** with fixed code
+- Estimated time: ~15 min total
+
+### Progress Toward Publication
+- ✅ Baseline f0: **97.14%** (target >85%)
+- ✅ Diffusion f0: **94.2% mean / 96.6% oracle** (matches baseline)
+- ✅ Vibrato: **VDE 4.80 vs 8.34** (core advantage, -42%)
+- ⚠️ Amp Corr: 0.57-0.61 < 0.645 baseline (known limitation)
+- ⚠️ **Bottleneck: Paper figure quality** — one more fix round, then ready for writing
