@@ -1,0 +1,149 @@
+[
+  {
+    "track": "MusicNet/2186",
+    "group": "BWV1006",
+    "instrument": "vn",
+    "hop_time": 0.009999999776482582,
+    "frames": 21439
+  },
+  {
+    "track": "MusicNet/2191",
+    "group": "BWV1006",
+    "instrument": "vn",
+    "hop_time": 0.009999999776482582,
+    "frames": 10285
+  },
+  {
+    "track": "MusicNet/2217",
+    "group": "BWV1009",
+    "instrument": "vc",
+    "hop_time": 0.009999999776482582,
+    "frames": 18628
+  },
+  {
+    "track": "MusicNet/2218",
+    "group": "BWV1009",
+    "instrument": "vc",
+    "hop_time": 0.009999999776482582,
+    "frames": 19997
+  },
+  {
+    "track": "MusicNet/2219",
+    "group": "BWV1009",
+    "instrument": "vc",
+    "hop_time": 0.009999999776482582,
+    "frames": 26099
+  },
+  {
+    "track": "MusicNet/2220",
+    "group": "BWV1009",
+    "instrument": "vc",
+    "hop_time": 0.009999999776482582,
+    "frames": 30201
+  },
+  {
+    "track": "MusicNet/2221",
+    "group": "BWV1009",
+    "instrument": "vc",
+    "hop_time": 0.009999999776482582,
+    "frames": 24117
+  },
+  {
+    "track": "MusicNet/2222",
+    "group": "BWV1009",
+    "instrument": "vc",
+    "hop_time": 0.009999999776482582,
+    "frames": 20204
+  },
+  {
+    "track": "MusicNet/2241",
+    "group": "BWV1001",
+    "instrument": "vn",
+    "hop_time": 0.009999999776482582,
+    "frames": 24221
+  },
+  {
+    "track": "MusicNet/2242",
+    "group": "BWV1001",
+    "instrument": "vn",
+    "hop_time": 0.009999999776482582,
+    "frames": 31274
+  },
+  {
+    "track": "MusicNet/2243",
+    "group": "BWV1001",
+    "instrument": "vn",
+    "hop_time": 0.009999999776482582,
+    "frames": 19396
+  },
+  {
+    "track": "MusicNet/2244",
+    "group": "BWV1001",
+    "instrument": "vn",
+    "hop_time": 0.009999999776482582,
+    "frames": 21437
+  },
+  {
+    "track": "MusicNet/2288",
+    "group": "BWV1002",
+    "instrument": "vn",
+    "hop_time": 0.009999999776482582,
+    "frames": 19174
+  },
+  {
+    "track": "MusicNet/2289",
+    "group": "BWV1002",
+    "instrument": "vn",
+    "hop_time": 0.009999999776482582,
+    "frames": 20337
+  },
+  {
+    "track": "MusicNet/2293",
+    "group": "BWV1010",
+    "instrument": "vc",
+    "hop_time": 0.009999999776482582,
+    "frames": 31016
+  },
+  {
+    "track": "MusicNet/2294",
+    "group": "BWV1010",
+    "instrument": "vc",
+    "hop_time": 0.009999999776482582,
+    "frames": 22845
+  },
+  {
+    "track": "MusicNet/2295",
+    "group": "BWV1010",
+    "instrument": "vc",
+    "hop_time": 0.009999999776482582,
+    "frames": 25945
+  },
+  {
+    "track": "MusicNet/2296",
+    "group": "BWV1010",
+    "instrument": "vc",
+    "hop_time": 0.009999999776482582,
+    "frames": 29192
+  },
+  {
+    "track": "MusicNet/2297",
+    "group": "BWV1010",
+    "instrument": "vc",
+    "hop_time": 0.009999999776482582,
+    "frames": 33427
+  },
+  {
+    "track": "MusicNet/2298",
+    "group": "BWV1010",
+    "instrument": "vc",
+    "hop_time": 0.009999999776482582,
+    "frames": 15353
+  },
+  {
+    "track": "MusicNet/2659",
+    "group": "BWV1002",
+    "instrument": "vn",
+    "hop_time": 0.009999999776482582,
+    "frames": 10833
+  }
+]

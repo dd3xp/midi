@@ -1,0 +1,5 @@
+# Annotation-program audit before inference
+
+The adapter initially asserted one MIDI program per solo recording and stopped before feature construction or predictions. The official metadata labels 2186 and 2241/2242/2243 Solo Violin, but their aligned CSVs contain programs 41/42 (2186) or 41/42/43 (2241/2242/2243). Counts are retained in the adapter audit. The other selected violin files use 41 and all cello files use 43.
+
+The frozen plan selects whole solo recordings by metadata, retains all labels and overlaps, and uses recording instrument vn/vc. The adapter now verifies the observed string-program set and records every original program, without filtering or splitting notes. All pitch/onset/offset rows remain intact. The neural feature family is strings in either case; the instrument reference/template uses the official recording-level identity. We do not infer that every CSV program corresponds to a separately recorded physical instrument, and do not call these sequences monophonic. This corrects an overly restrictive format assertion, not the selected cohort or evaluation rule. No new model results have been viewed.

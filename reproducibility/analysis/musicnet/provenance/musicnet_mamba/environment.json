@@ -1,0 +1,12 @@
+{
+  "python": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+  "torch": "2.10.0+cu128",
+  "gpu": "NVIDIA GeForce RTX 5070 Laptop GPU",
+  "allocator_fraction": 0.8,
+  "checkpoint_sha256": "04e754a32d4be35358f4f4d39c9f06133edf9f7826a4308ef0f7ac71b90467b4",
+  "runner_sha256": "739fa2c41ddf6f8196a0e5400d0d83e15153abc5bba5beadc4e4ebd37dcd4e41",
+  "plan_sha256": "a7b2b6defc3e77fe303a2581ec4e4d7f246c0bbd3ab9407455a9a43b54a88550",
+  "precision": "float32",
+  "seed": 42,
+  "inference": "batch one, full sequence, no truncation or gain fitting"
+}

@@ -1,0 +1,3214 @@
+{
+  "utc": "2026-09-16T09:05:07.956956+00:00",
+  "plan_sha256": "c48eda7c2ad72c977de10d4aedb061569e2e678ae3ba5af6f4bb1979e1d2809c",
+  "arrays_sha256": "d58482206bc7f740098f8e53cb802f17eae8d9ebcb6712b8273ac69edfbefe0a",
+  "tracks": 186,
+  "notes": 30352,
+  "nonoverlap_notes": 29769,
+  "all_relative": {
+    "median": 3.0996516052820154e-09,
+    "q95": 1.2022617281320604e-08,
+    "max": 0.16453690825429612
+  },
+  "nonoverlap_relative": {
+    "median": 3.0213171569917966e-09,
+    "q95": 1.0598556789476804e-08,
+    "max": 3.5595650496274557e-08
+  },
+  "all_log": {
+    "median": 3.0996383237891223e-09,
+    "q95": 1.2022533057987058e-08,
+    "max": 0.17976735170723224
+  },
+  "nonoverlap_log": {
+    "median": 3.021301431260781e-09,
+    "q95": 1.0598498079161777e-08,
+    "max": 3.559510730610782e-08
+  },
+  "independent_means_max_error": 1.4155343563970746e-15,
+  "per_track": [
+    {
+      "track": "datagen/solo/URMP/processed_vn/01_Jupiter_vn_vc_track1_vn/data.npz",
+      "eligible": 92,
+      "nonoverlap_notes": 92,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.074963663819927e-09,
+        "q95": 6.90892235911152e-09,
+        "max": 1.0202623668142032e-08
+      },
+      "Note_ols": 0.13760389585688282,
+      "Note_shape": 0.13760390229968394,
+      "Full_ols": 0.4877033440189697,
+      "Full_shape": 0.5543864874020283,
+      "Error_ols": 0.6005150594944096,
+      "Error_shape": 0.6005150592441246
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/02_Sonata_vn_vn_track1_vn/data.npz",
+      "eligible": 82,
+      "nonoverlap_notes": 82,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.221909661812102e-09,
+        "q95": 6.568235001975111e-09,
+        "max": 1.4243470276091332e-08
+      },
+      "Note_ols": -0.43478117688564505,
+      "Note_shape": -0.43478117593030136,
+      "Full_ols": 0.27111451813079057,
+      "Full_shape": 0.34614772970986807,
+      "Error_ols": 0.7801338625395707,
+      "Error_shape": 0.7801338623255211
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/02_Sonata_vn_vn_track2_vn/data.npz",
+      "eligible": 50,
+      "nonoverlap_notes": 50,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.4495542214490098e-09,
+        "q95": 8.480558869551417e-09,
+        "max": 1.6136091628020223e-08
+      },
+      "Note_ols": 0.09282063621105051,
+      "Note_shape": 0.09282064942498316,
+      "Full_ols": 0.3551365262036044,
+      "Full_shape": 0.41453954097596213,
+      "Error_ols": 0.62362889619894,
+      "Error_shape": 0.6236288949030556
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/08_Spring_fl_vn_track2_vn/data.npz",
+      "eligible": 94,
+      "nonoverlap_notes": 94,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 3.593451319630088e-09,
+        "q95": 1.0414855548082748e-08,
+        "max": 1.5081666962219983e-08
+      },
+      "Note_ols": -0.09153549136923841,
+      "Note_shape": -0.09153548655656651,
+      "Full_ols": 0.38046555453195996,
+      "Full_shape": 0.48150534243022136,
+      "Error_ols": 0.5058752913462219,
+      "Error_shape": 0.505875290716543
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/09_Jesus_tpt_vn_track2_vn/data.npz",
+      "eligible": 482,
+      "nonoverlap_notes": 476,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 3.175503917935832e-09,
+        "q95": 9.919797516440205e-09,
+        "max": 0.002036595870825231
+      },
+      "Note_ols": 0.09878130364627603,
+      "Note_shape": 0.09873491154698713,
+      "Full_ols": 0.3576968513495681,
+      "Full_shape": 0.4480611322247389,
+      "Error_ols": 0.9603540418725812,
+      "Error_shape": 0.9603570478057161
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/12_Spring_vn_vn_vc_track1_vn/data.npz",
+      "eligible": 429,
+      "nonoverlap_notes": 425,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 3.442378185934273e-09,
+        "q95": 1.1312311749316322e-08,
+        "max": 0.0013222815595125496
+      },
+      "Note_ols": -0.0574209180303958,
+      "Note_shape": -0.057371044132301034,
+      "Full_ols": 0.13788281136144062,
+      "Full_shape": 0.22981125999102917,
+      "Error_ols": 0.661896967204081,
+      "Error_shape": 0.6618892629919518
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/12_Spring_vn_vn_vc_track2_vn/data.npz",
+      "eligible": 339,
+      "nonoverlap_notes": 337,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 3.5003168805375672e-09,
+        "q95": 1.2154762743400636e-08,
+        "max": 0.0020510178743646827
+      },
+      "Note_ols": -0.10254713817754653,
+      "Note_shape": -0.1025897912861538,
+      "Full_ols": 0.4079677959549272,
+      "Full_shape": 0.49125971512218025,
+      "Error_ols": 0.5872095919462822,
+      "Error_shape": 0.5872163760704877
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/13_Hark_vn_vn_va_track1_vn/data.npz",
+      "eligible": 76,
+      "nonoverlap_notes": 74,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 2.544022581019034e-09,
+        "q95": 8.153350995081109e-09,
+        "max": 0.0022011890774644165
+      },
+      "Note_ols": -0.026828792444751202,
+      "Note_shape": -0.027081915315444148,
+      "Full_ols": 0.3915662328801552,
+      "Full_shape": 0.465038601342408,
+      "Error_ols": 0.561527810875075,
+      "Error_shape": 0.561565298318946
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/13_Hark_vn_vn_va_track2_vn/data.npz",
+      "eligible": 73,
+      "nonoverlap_notes": 73,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.4739197200984e-09,
+        "q95": 8.010571315772922e-09,
+        "max": 1.05491338852719e-08
+      },
+      "Note_ols": 0.19021261637608378,
+      "Note_shape": 0.1902126249144901,
+      "Full_ols": 0.4115782052315857,
+      "Full_shape": 0.4858253512826554,
+      "Error_ols": 0.6126809240657901,
+      "Error_shape": 0.6126809228601526
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/17_Nocturne_vn_fl_cl_track1_vn/data.npz",
+      "eligible": 138,
+      "nonoverlap_notes": 138,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.3991177394686044e-09,
+        "q95": 7.341645339459904e-09,
+        "max": 1.1037515411639927e-08
+      },
+      "Note_ols": -0.3700419922550963,
+      "Note_shape": -0.3700419966693928,
+      "Full_ols": 0.19376040396217958,
+      "Full_shape": 0.26125823164585454,
+      "Error_ols": 0.5578212435802996,
+      "Error_shape": 0.5578212441626531
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/18_Nocturne_vn_fl_tpt_track1_vn/data.npz",
+      "eligible": 136,
+      "nonoverlap_notes": 136,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.2885776121154928e-09,
+        "q95": 8.87411197014586e-09,
+        "max": 1.3003501511400245e-08
+      },
+      "Note_ols": -0.3714216753053974,
+      "Note_shape": -0.371421676074187,
+      "Full_ols": 0.1911070257284884,
+      "Full_shape": 0.2553381327731678,
+      "Error_ols": 0.5512172674310697,
+      "Error_shape": 0.5512172675659011
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/19_Pavane_cl_vn_vc_track2_vn/data.npz",
+      "eligible": 211,
+      "nonoverlap_notes": 211,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 3.5212330918837886e-09,
+        "q95": 1.1329949528073766e-08,
+        "max": 2.0238138048280703e-08
+      },
+      "Note_ols": 0.14678956526232706,
+      "Note_shape": 0.1467895643315923,
+      "Full_ols": 0.49397110122311294,
+      "Full_shape": 0.5348298756660386,
+      "Error_ols": 0.7239019365489693,
+      "Error_shape": 0.7239019367911673
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/20_Pavane_tpt_vn_vc_track2_vn/data.npz",
+      "eligible": 211,
+      "nonoverlap_notes": 211,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 3.5212330918837886e-09,
+        "q95": 1.1329949528073766e-08,
+        "max": 2.0238138048280703e-08
+      },
+      "Note_ols": 0.14678956987657268,
+      "Note_shape": 0.14678956894583792,
+      "Full_ols": 0.49397110151344625,
+      "Full_shape": 0.5348298752349615,
+      "Error_ols": 0.7239019190189961,
+      "Error_shape": 0.7239019192611943
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/24_Pirates_vn_vn_va_vc_track1_vn/data.npz",
+      "eligible": 133,
+      "nonoverlap_notes": 133,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 4.015626151768261e-09,
+        "q95": 1.1800665256340279e-08,
+        "max": 1.7592638789558894e-08
+      },
+      "Note_ols": -0.057645120636849324,
+      "Note_shape": -0.05764512193794696,
+      "Full_ols": 0.39024141401547613,
+      "Full_shape": 0.4208129697052649,
+      "Error_ols": 0.6029191286502225,
+      "Error_shape": 0.6029191285837219
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/24_Pirates_vn_vn_va_vc_track2_vn/data.npz",
+      "eligible": 87,
+      "nonoverlap_notes": 87,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.1510140037902326e-09,
+        "q95": 1.0490972728769822e-08,
+        "max": 1.3702042901175241e-08
+      },
+      "Note_ols": -0.18813516442059608,
+      "Note_shape": -0.1881351680574296,
+      "Full_ols": 0.2753513120084386,
+      "Full_shape": 0.2850056802083683,
+      "Error_ols": 0.7862110405516236,
+      "Error_shape": 0.7862110409681488
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/25_Pirates_vn_vn_va_sax_track1_vn/data.npz",
+      "eligible": 133,
+      "nonoverlap_notes": 133,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 4.015626151768261e-09,
+        "q95": 1.1800665256340279e-08,
+        "max": 1.7592638789558894e-08
+      },
+      "Note_ols": -0.057645120636849324,
+      "Note_shape": -0.05764512193794696,
+      "Full_ols": 0.39024141401547613,
+      "Full_shape": 0.4208129697052649,
+      "Error_ols": 0.6029191286502225,
+      "Error_shape": 0.6029191285837219
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/25_Pirates_vn_vn_va_sax_track2_vn/data.npz",
+      "eligible": 87,
+      "nonoverlap_notes": 87,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.1510140037902326e-09,
+        "q95": 1.0490972728769822e-08,
+        "max": 1.3702042901175241e-08
+      },
+      "Note_ols": -0.1881351633334508,
+      "Note_shape": -0.1881351669702843,
+      "Full_ols": 0.27535131266232726,
+      "Full_shape": 0.28500568119954467,
+      "Error_ols": 0.7862110477105858,
+      "Error_shape": 0.7862110481271107
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/26_King_vn_vn_va_vc_track1_vn/data.npz",
+      "eligible": 228,
+      "nonoverlap_notes": 228,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 3.4922975839062355e-09,
+        "q95": 1.173847141890638e-08,
+        "max": 2.494082290948267e-08
+      },
+      "Note_ols": 0.06932486640906997,
+      "Note_shape": 0.06932486754735662,
+      "Full_ols": 0.4261650087189606,
+      "Full_shape": 0.4315330720134903,
+      "Error_ols": 0.6687645004071174,
+      "Error_shape": 0.6687645009409656
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/26_King_vn_vn_va_vc_track2_vn/data.npz",
+      "eligible": 211,
+      "nonoverlap_notes": 211,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 3.245523187234543e-09,
+        "q95": 1.0085986211981985e-08,
+        "max": 1.7383981119798903e-08
+      },
+      "Note_ols": 0.33540878234881916,
+      "Note_shape": 0.3354087813924932,
+      "Full_ols": 0.5725542586891564,
+      "Full_shape": 0.6268502293107148,
+      "Error_ols": 0.44517830379520185,
+      "Error_shape": 0.4451783037915536
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/27_King_vn_vn_va_sax_track1_vn/data.npz",
+      "eligible": 228,
+      "nonoverlap_notes": 228,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 3.4922975839062355e-09,
+        "q95": 1.173847141890638e-08,
+        "max": 2.494082290948267e-08
+      },
+      "Note_ols": 0.06932486640906997,
+      "Note_shape": 0.06932486754735662,
+      "Full_ols": 0.4261650087189606,
+      "Full_shape": 0.4315330720134903,
+      "Error_ols": 0.6687645004071174,
+      "Error_shape": 0.6687645009409656
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/27_King_vn_vn_va_sax_track2_vn/data.npz",
+      "eligible": 211,
+      "nonoverlap_notes": 211,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 3.245523187234543e-09,
+        "q95": 1.0085986211981985e-08,
+        "max": 1.7383981119798903e-08
+      },
+      "Note_ols": 0.33540878234881916,
+      "Note_shape": 0.3354087813924932,
+      "Full_ols": 0.5725542586891564,
+      "Full_shape": 0.6268502293107148,
+      "Error_ols": 0.44517830379520185,
+      "Error_shape": 0.4451783037915536
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/32_Fugue_vn_vn_va_vc_track1_vn/data.npz",
+      "eligible": 244,
+      "nonoverlap_notes": 244,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.6128249364008757e-09,
+        "q95": 7.917723489893618e-09,
+        "max": 1.586952256287457e-08
+      },
+      "Note_ols": 0.1385573538405377,
+      "Note_shape": 0.13855735593262475,
+      "Full_ols": 0.4635669537151182,
+      "Full_shape": 0.48029403305240637,
+      "Error_ols": 0.5565193263485155,
+      "Error_shape": 0.5565193262092138
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/32_Fugue_vn_vn_va_vc_track2_vn/data.npz",
+      "eligible": 253,
+      "nonoverlap_notes": 251,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 2.417879508604042e-09,
+        "q95": 8.203932484585605e-09,
+        "max": 0.0006363384685726841
+      },
+      "Note_ols": 0.07468098705626482,
+      "Note_shape": 0.07469617664235405,
+      "Full_ols": 0.47744827603346485,
+      "Full_shape": 0.5237615387536109,
+      "Error_ols": 0.5800897304362883,
+      "Error_shape": 0.5800880278024214
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/35_Rondeau_vn_vn_va_db_track1_vn/data.npz",
+      "eligible": 478,
+      "nonoverlap_notes": 474,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 3.767193890047446e-09,
+        "q95": 1.3041998528573811e-08,
+        "max": 0.0021597204057302267
+      },
+      "Note_ols": -0.1563192532191579,
+      "Note_shape": -0.15627590268623506,
+      "Full_ols": 0.1962708058972321,
+      "Full_shape": 0.30139885746996525,
+      "Error_ols": 0.47730815750775857,
+      "Error_shape": 0.4773109688713071
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/35_Rondeau_vn_vn_va_db_track2_vn/data.npz",
+      "eligible": 218,
+      "nonoverlap_notes": 216,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 2.828902032778644e-09,
+        "q95": 7.699544543737289e-09,
+        "max": 0.0012261482400175317
+      },
+      "Note_ols": -0.2499294965327933,
+      "Note_shape": -0.24989010458912078,
+      "Full_ols": 0.23907485952608604,
+      "Full_shape": 0.3444698262639242,
+      "Error_ols": 0.502316683512118,
+      "Error_shape": 0.5023179986005751
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/36_Rondeau_vn_vn_va_vc_track1_vn/data.npz",
+      "eligible": 478,
+      "nonoverlap_notes": 474,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 3.767193890047446e-09,
+        "q95": 1.3041998528573811e-08,
+        "max": 0.0021597204057302267
+      },
+      "Note_ols": -0.1563192532191579,
+      "Note_shape": -0.15627590268623506,
+      "Full_ols": 0.1962708058972321,
+      "Full_shape": 0.30139885746996525,
+      "Error_ols": 0.47730815750775857,
+      "Error_shape": 0.4773109688713071
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/36_Rondeau_vn_vn_va_vc_track2_vn/data.npz",
+      "eligible": 218,
+      "nonoverlap_notes": 216,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 2.828902032778644e-09,
+        "q95": 7.699544543737289e-09,
+        "max": 0.0012261482400175317
+      },
+      "Note_ols": -0.2499294965327933,
+      "Note_shape": -0.24989010458912078,
+      "Full_ols": 0.23907485952608604,
+      "Full_shape": 0.3444698262639242,
+      "Error_ols": 0.502316683512118,
+      "Error_shape": 0.5023179986005751
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/37_Rondeau_fl_vn_va_cl_track2_vn/data.npz",
+      "eligible": 218,
+      "nonoverlap_notes": 216,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 2.828902032778644e-09,
+        "q95": 7.699544543737289e-09,
+        "max": 0.0012261482400175317
+      },
+      "Note_ols": -0.2499294965327933,
+      "Note_shape": -0.24989010458912078,
+      "Full_ols": 0.23907485952608604,
+      "Full_shape": 0.3444698262639242,
+      "Error_ols": 0.502316683512118,
+      "Error_shape": 0.5023179986005751
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/38_Jerusalem_vn_vn_va_vc_db_track1_vn/data.npz",
+      "eligible": 171,
+      "nonoverlap_notes": 171,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.260062403610931e-09,
+        "q95": 7.626013297589292e-09,
+        "max": 1.1874471941273068e-08
+      },
+      "Note_ols": 0.03350336715424687,
+      "Note_shape": 0.03350336485718069,
+      "Full_ols": 0.2739411510069869,
+      "Full_shape": 0.29757912296573263,
+      "Error_ols": 0.680399624316007,
+      "Error_shape": 0.6803996243595172
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/38_Jerusalem_vn_vn_va_vc_db_track2_vn/data.npz",
+      "eligible": 179,
+      "nonoverlap_notes": 177,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 2.0499106612109685e-09,
+        "q95": 7.287150969620389e-09,
+        "max": 0.00033410553872608405
+      },
+      "Note_ols": 0.16860679544009288,
+      "Note_shape": 0.16861754275708962,
+      "Full_ols": 0.3561353974599343,
+      "Full_shape": 0.3332140097591086,
+      "Error_ols": 0.5042130421786137,
+      "Error_shape": 0.5042118920886974
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/39_Jerusalem_vn_vn_va_sax_db_track1_vn/data.npz",
+      "eligible": 171,
+      "nonoverlap_notes": 171,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.260062403610931e-09,
+        "q95": 7.626013297589292e-09,
+        "max": 1.1874471941273068e-08
+      },
+      "Note_ols": 0.03350336715424687,
+      "Note_shape": 0.03350336485718069,
+      "Full_ols": 0.2739411510069869,
+      "Full_shape": 0.29757912296573263,
+      "Error_ols": 0.680399624316007,
+      "Error_shape": 0.6803996243595172
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/39_Jerusalem_vn_vn_va_sax_db_track2_vn/data.npz",
+      "eligible": 179,
+      "nonoverlap_notes": 177,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 2.0499106612109685e-09,
+        "q95": 7.287150969620389e-09,
+        "max": 0.00033410553872608405
+      },
+      "Note_ols": 0.16860679544009288,
+      "Note_shape": 0.16861754275708962,
+      "Full_ols": 0.3561353974599343,
+      "Full_shape": 0.3332140097591086,
+      "Error_ols": 0.5042130421786137,
+      "Error_shape": 0.5042118920886974
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/44_K515_vn_vn_va_va_vc_track1_vn/data.npz",
+      "eligible": 612,
+      "nonoverlap_notes": 608,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 3.253559743053731e-09,
+        "q95": 1.2655257933246047e-08,
+        "max": 0.10425609032754504
+      },
+      "Note_ols": -0.11572764836544966,
+      "Note_shape": -0.1142784546078266,
+      "Full_ols": 0.469960312068135,
+      "Full_shape": 0.5021749053611281,
+      "Error_ols": 0.5836082025412928,
+      "Error_shape": 0.5836667089167409
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/44_K515_vn_vn_va_va_vc_track2_vn/data.npz",
+      "eligible": 448,
+      "nonoverlap_notes": 440,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 3.866256853399725e-09,
+        "q95": 1.3388076030606545e-08,
+        "max": 0.007651531901444075
+      },
+      "Note_ols": -0.05182575534581057,
+      "Note_shape": -0.051850672463616874,
+      "Full_ols": 0.4094934392976496,
+      "Full_shape": 0.43263604169353237,
+      "Error_ols": 0.537164352013062,
+      "Error_shape": 0.5371973075342594
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/13_Hark_vn_vn_va_track3_va/data.npz",
+      "eligible": 70,
+      "nonoverlap_notes": 70,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.5021230827948263e-09,
+        "q95": 7.674007197511145e-09,
+        "max": 1.3642751169714774e-08
+      },
+      "Note_ols": 0.0005181116440670869,
+      "Note_shape": 0.000518107061011633,
+      "Full_ols": 0.3979328304582332,
+      "Full_shape": 0.44295792858094335,
+      "Error_ols": 0.7801678760311979,
+      "Error_shape": 0.7801678761376926
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/24_Pirates_vn_vn_va_vc_track3_va/data.npz",
+      "eligible": 135,
+      "nonoverlap_notes": 135,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 3.567578770568035e-09,
+        "q95": 1.0850731168714695e-08,
+        "max": 2.1518544344988856e-08
+      },
+      "Note_ols": 0.2274029759913143,
+      "Note_shape": 0.22740296864081436,
+      "Full_ols": 0.4631947145308109,
+      "Full_shape": 0.5479006090308113,
+      "Error_ols": 0.5056646764660753,
+      "Error_shape": 0.5056646774972555
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/25_Pirates_vn_vn_va_sax_track3_va/data.npz",
+      "eligible": 135,
+      "nonoverlap_notes": 135,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 3.567578770568035e-09,
+        "q95": 1.0850731168714695e-08,
+        "max": 2.1518544344988856e-08
+      },
+      "Note_ols": 0.2274029759913143,
+      "Note_shape": 0.22740296864081436,
+      "Full_ols": 0.4631947145308109,
+      "Full_shape": 0.5479006090308113,
+      "Error_ols": 0.5056646764660753,
+      "Error_shape": 0.5056646774972555
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/26_King_vn_vn_va_vc_track3_va/data.npz",
+      "eligible": 217,
+      "nonoverlap_notes": 217,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 3.4928860772286416e-09,
+        "q95": 1.2743324047822161e-08,
+        "max": 2.376646863034249e-08
+      },
+      "Note_ols": 0.254770417148489,
+      "Note_shape": 0.2547704224075407,
+      "Full_ols": 0.5336359591383367,
+      "Full_shape": 0.5868866833984726,
+      "Error_ols": 0.4518642807920131,
+      "Error_shape": 0.45186428014737673
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/27_King_vn_vn_va_sax_track3_va/data.npz",
+      "eligible": 217,
+      "nonoverlap_notes": 217,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 3.4928860772286416e-09,
+        "q95": 1.2743324047822161e-08,
+        "max": 2.376646863034249e-08
+      },
+      "Note_ols": 0.254770417148489,
+      "Note_shape": 0.2547704224075407,
+      "Full_ols": 0.5336359591383367,
+      "Full_shape": 0.5868866833984726,
+      "Error_ols": 0.4518642807920131,
+      "Error_shape": 0.45186428014737673
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/32_Fugue_vn_vn_va_vc_track3_va/data.npz",
+      "eligible": 214,
+      "nonoverlap_notes": 212,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 2.5202221909112307e-09,
+        "q95": 8.666582350490428e-09,
+        "max": 0.0021636038845240933
+      },
+      "Note_ols": 0.09049131920512155,
+      "Note_shape": 0.0904866145985439,
+      "Full_ols": 0.4851063906340998,
+      "Full_shape": 0.4949924395198241,
+      "Error_ols": 0.4833260466010026,
+      "Error_shape": 0.48333089658736245
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/35_Rondeau_vn_vn_va_db_track3_va/data.npz",
+      "eligible": 216,
+      "nonoverlap_notes": 214,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 2.643025726315055e-09,
+        "q95": 9.874672030324162e-09,
+        "max": 0.005226113658518772
+      },
+      "Note_ols": -0.04565447047805897,
+      "Note_shape": -0.045706811577481035,
+      "Full_ols": 0.38594521810285287,
+      "Full_shape": 0.47029064236114804,
+      "Error_ols": 0.5031130939359746,
+      "Error_shape": 0.5031392999988268
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/36_Rondeau_vn_vn_va_vc_track3_va/data.npz",
+      "eligible": 216,
+      "nonoverlap_notes": 214,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 2.643025726315055e-09,
+        "q95": 9.874672030324162e-09,
+        "max": 0.005226113658518772
+      },
+      "Note_ols": -0.045654487255020616,
+      "Note_shape": -0.045706828381231364,
+      "Full_ols": 0.3859452139821898,
+      "Full_shape": 0.470290640071313,
+      "Error_ols": 0.660852061423481,
+      "Error_shape": 0.6608645016604991
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/37_Rondeau_fl_vn_va_cl_track3_va/data.npz",
+      "eligible": 216,
+      "nonoverlap_notes": 214,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 2.643025726315055e-09,
+        "q95": 9.874672030324162e-09,
+        "max": 0.005226113658518772
+      },
+      "Note_ols": -0.045654470344911185,
+      "Note_shape": -0.045706811441612163,
+      "Full_ols": 0.38594521833585027,
+      "Full_shape": 0.47029064293367906,
+      "Error_ols": 0.5031131061855547,
+      "Error_shape": 0.5031393122478748
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/38_Jerusalem_vn_vn_va_vc_db_track3_va/data.npz",
+      "eligible": 167,
+      "nonoverlap_notes": 167,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.1088241864966767e-09,
+        "q95": 6.841417941638223e-09,
+        "max": 1.1242809428701707e-08
+      },
+      "Note_ols": 0.006981168192500126,
+      "Note_shape": 0.006981167654117495,
+      "Full_ols": 0.36906050321122735,
+      "Full_shape": 0.34973473330939936,
+      "Error_ols": 0.43092867965906256,
+      "Error_shape": 0.4309286797718786
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/39_Jerusalem_vn_vn_va_sax_db_track3_va/data.npz",
+      "eligible": 167,
+      "nonoverlap_notes": 167,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.1088241864966767e-09,
+        "q95": 6.841417941638223e-09,
+        "max": 1.1242809428701707e-08
+      },
+      "Note_ols": 0.006981168192500126,
+      "Note_shape": 0.006981167654117495,
+      "Full_ols": 0.36906050321122735,
+      "Full_shape": 0.34973473330939936,
+      "Error_ols": 0.43092867965906256,
+      "Error_shape": 0.4309286797718786
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/44_K515_vn_vn_va_va_vc_track3_va/data.npz",
+      "eligible": 463,
+      "nonoverlap_notes": 457,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 3.4685703963535185e-09,
+        "q95": 1.2174648068844279e-08,
+        "max": 0.012834349315256456
+      },
+      "Note_ols": 0.011832953274329119,
+      "Note_shape": 0.011693753106529196,
+      "Full_ols": 0.4105164840584412,
+      "Full_shape": 0.4315780475418137,
+      "Error_ols": 0.6742772294801032,
+      "Error_shape": 0.6743331120826163
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/44_K515_vn_vn_va_va_vc_track4_va/data.npz",
+      "eligible": 515,
+      "nonoverlap_notes": 505,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 3.4885647315822265e-09,
+        "q95": 1.3100556804510676e-08,
+        "max": 0.017749192811003733
+      },
+      "Note_ols": 0.0621255250836856,
+      "Note_shape": 0.06220100724339241,
+      "Full_ols": 0.456584521426924,
+      "Full_shape": 0.47691112312407563,
+      "Error_ols": 0.39180308450348017,
+      "Error_shape": 0.3918249027275316
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/01_Jupiter_vn_vc_track2_vc/data.npz",
+      "eligible": 54,
+      "nonoverlap_notes": 54,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 1.7897194268387023e-09,
+        "q95": 5.492297189170524e-09,
+        "max": 9.006287826437573e-09
+      },
+      "Note_ols": 0.4556019547218249,
+      "Note_shape": 0.4556019532220086,
+      "Full_ols": 0.505701931778796,
+      "Full_shape": 0.4629405962070907,
+      "Error_ols": 0.6887871516358897,
+      "Error_shape": 0.6887871520328974
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/11_Maria_ob_vc_track2_vc/data.npz",
+      "eligible": 361,
+      "nonoverlap_notes": 357,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 3.48147168680131e-09,
+        "q95": 1.2176320829042904e-08,
+        "max": 0.0029044450169515555
+      },
+      "Note_ols": -0.010828560026805054,
+      "Note_shape": -0.010773740998080265,
+      "Full_ols": 0.400527425220802,
+      "Full_shape": 0.4375881061683039,
+      "Error_ols": 0.6086118477326689,
+      "Error_shape": 0.608614319021204
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/12_Spring_vn_vn_vc_track3_vc/data.npz",
+      "eligible": 272,
+      "nonoverlap_notes": 272,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.9006537917806143e-09,
+        "q95": 1.058499676437829e-08,
+        "max": 1.7290125913583834e-08
+      },
+      "Note_ols": 0.47944574869978,
+      "Note_shape": 0.47944574829273046,
+      "Full_ols": 0.4259644944422283,
+      "Full_shape": 0.4907265255906256,
+      "Error_ols": 0.6807955288695311,
+      "Error_shape": 0.6807955287012275
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/19_Pavane_cl_vn_vc_track3_vc/data.npz",
+      "eligible": 242,
+      "nonoverlap_notes": 240,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 2.989195874547328e-09,
+        "q95": 8.90445578232632e-09,
+        "max": 0.0021809739860363217
+      },
+      "Note_ols": 0.1231694824106614,
+      "Note_shape": 0.12319889083569587,
+      "Full_ols": 0.4417859650826925,
+      "Full_shape": 0.46310430553863646,
+      "Error_ols": 0.9021509288111985,
+      "Error_shape": 0.9021468969521004
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/20_Pavane_tpt_vn_vc_track3_vc/data.npz",
+      "eligible": 242,
+      "nonoverlap_notes": 240,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 2.989195874547328e-09,
+        "q95": 8.90445578232632e-09,
+        "max": 0.0021809739860363217
+      },
+      "Note_ols": 0.12316947984559919,
+      "Note_shape": 0.12319888827020511,
+      "Full_ols": 0.44178596461334607,
+      "Full_shape": 0.46310430502321814,
+      "Error_ols": 0.9021509779204593,
+      "Error_shape": 0.9021469460616387
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/24_Pirates_vn_vn_va_vc_track4_vc/data.npz",
+      "eligible": 178,
+      "nonoverlap_notes": 178,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 4.8613668922561295e-09,
+        "q95": 1.433798538720782e-08,
+        "max": 2.2526931425873887e-08
+      },
+      "Note_ols": 0.004882842314014539,
+      "Note_shape": 0.004882842287591583,
+      "Full_ols": 0.4198791744281888,
+      "Full_shape": 0.47433284916639945,
+      "Error_ols": 0.5266825310151378,
+      "Error_shape": 0.5266825311206692
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/26_King_vn_vn_va_vc_track4_vc/data.npz",
+      "eligible": 144,
+      "nonoverlap_notes": 144,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.9050615551471247e-09,
+        "q95": 8.151459887705652e-09,
+        "max": 1.2669257573537445e-08
+      },
+      "Note_ols": 0.3933896286854313,
+      "Note_shape": 0.3933896276730228,
+      "Full_ols": 0.5279060145541857,
+      "Full_shape": 0.5762043671467312,
+      "Error_ols": 0.5230188850203822,
+      "Error_shape": 0.5230188852172873
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/32_Fugue_vn_vn_va_vc_track4_vc/data.npz",
+      "eligible": 185,
+      "nonoverlap_notes": 185,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.3154300671758563e-09,
+        "q95": 8.301352098487514e-09,
+        "max": 1.2824495160418124e-08
+      },
+      "Note_ols": 0.06883359751765038,
+      "Note_shape": 0.06883359727091433,
+      "Full_ols": 0.5194780343684439,
+      "Full_shape": 0.51760804407324,
+      "Error_ols": 0.6575063200750112,
+      "Error_shape": 0.6575063202724435
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/36_Rondeau_vn_vn_va_vc_track4_vc/data.npz",
+      "eligible": 163,
+      "nonoverlap_notes": 163,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.0803399709542347e-09,
+        "q95": 6.043511762928615e-09,
+        "max": 1.1665461056359084e-08
+      },
+      "Note_ols": -0.06278089734527899,
+      "Note_shape": -0.06278089265647009,
+      "Full_ols": 0.22988344087563176,
+      "Full_shape": 0.22665384332604613,
+      "Error_ols": 0.5711371690448824,
+      "Error_shape": 0.5711371689772693
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/38_Jerusalem_vn_vn_va_vc_db_track4_vc/data.npz",
+      "eligible": 140,
+      "nonoverlap_notes": 140,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.0040850517048953e-09,
+        "q95": 6.153033595642128e-09,
+        "max": 1.3455227494686605e-08
+      },
+      "Note_ols": 0.3365296907433885,
+      "Note_shape": 0.33652968159587476,
+      "Full_ols": 0.3684865300472256,
+      "Full_shape": 0.3147889656575059,
+      "Error_ols": 0.6407651350220963,
+      "Error_shape": 0.6407651354326077
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/44_K515_vn_vn_va_va_vc_track5_vc/data.npz",
+      "eligible": 360,
+      "nonoverlap_notes": 354,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 3.0340894462558055e-09,
+        "q95": 1.2112164195167833e-08,
+        "max": 0.011379453095626336
+      },
+      "Note_ols": 0.22700007863499094,
+      "Note_shape": 0.22673212816697388,
+      "Full_ols": 0.5444208518499273,
+      "Full_shape": 0.5690082901444503,
+      "Error_ols": 0.7798629519115535,
+      "Error_shape": 0.7798428439863805
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/03_Dance_fl_cl_track1_fl/data.npz",
+      "eligible": 254,
+      "nonoverlap_notes": 252,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 4.663927621829936e-09,
+        "q95": 1.4121367713802059e-08,
+        "max": 0.00452788082478172
+      },
+      "Note_ols": 0.0659489412385048,
+      "Note_shape": 0.06590006906557036,
+      "Full_ols": 0.5636137945625651,
+      "Full_shape": 0.661182143230697,
+      "Error_ols": 0.5787892038318873,
+      "Error_shape": 0.5788050325572406
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/04_Allegro_fl_fl_track1_fl/data.npz",
+      "eligible": 777,
+      "nonoverlap_notes": 765,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 5.128905853859115e-09,
+        "q95": 1.8005435761866214e-08,
+        "max": 0.03152475035342964
+      },
+      "Note_ols": 0.1727488357778433,
+      "Note_shape": 0.17206559532901752,
+      "Full_ols": 0.5591727849225749,
+      "Full_shape": 0.6598936619527315,
+      "Error_ols": 0.4432384839567091,
+      "Error_shape": 0.44332847834595507
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/04_Allegro_fl_fl_track2_fl/data.npz",
+      "eligible": 414,
+      "nonoverlap_notes": 410,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 4.815887778364411e-09,
+        "q95": 1.428266720129052e-08,
+        "max": 0.003740176139069593
+      },
+      "Note_ols": 0.29364021344061514,
+      "Note_shape": 0.29353836821766127,
+      "Full_ols": 0.6525017660453124,
+      "Full_shape": 0.746812348840239,
+      "Error_ols": 0.44932721882947235,
+      "Error_shape": 0.44934061791978513
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/08_Spring_fl_vn_track1_fl/data.npz",
+      "eligible": 108,
+      "nonoverlap_notes": 108,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 3.6639237267481948e-09,
+        "q95": 1.3724055905302794e-08,
+        "max": 1.7361446619310077e-08
+      },
+      "Note_ols": 0.5839066168301886,
+      "Note_shape": 0.5839066201663723,
+      "Full_ols": 0.7189550253686461,
+      "Full_shape": 0.7595513337856983,
+      "Error_ols": 0.5878287654691846,
+      "Error_shape": 0.5878287655894879
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/14_Waltz_fl_fl_cl_track1_fl/data.npz",
+      "eligible": 294,
+      "nonoverlap_notes": 290,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 3.770766832913253e-09,
+        "q95": 1.4821031433100725e-08,
+        "max": 0.004906488062410009
+      },
+      "Note_ols": 0.094905596303693,
+      "Note_shape": 0.09468753498197813,
+      "Full_ols": 0.4357373150857923,
+      "Full_shape": 0.452970127031894,
+      "Error_ols": 0.4714186940368151,
+      "Error_shape": 0.47144549329321644
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/14_Waltz_fl_fl_cl_track2_fl/data.npz",
+      "eligible": 215,
+      "nonoverlap_notes": 215,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 3.517787350090472e-09,
+        "q95": 1.0317863641034575e-08,
+        "max": 1.5383134240621532e-08
+      },
+      "Note_ols": 0.2597837764471191,
+      "Note_shape": 0.2597837743395801,
+      "Full_ols": 0.6745122991158347,
+      "Full_shape": 0.7039285224969496,
+      "Error_ols": 0.456615582454046,
+      "Error_shape": 0.4566155830731065
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/17_Nocturne_vn_fl_cl_track2_fl/data.npz",
+      "eligible": 108,
+      "nonoverlap_notes": 108,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.656984088819397e-09,
+        "q95": 9.080883613914875e-09,
+        "max": 1.479076423845758e-08
+      },
+      "Note_ols": 0.39033470460688824,
+      "Note_shape": 0.39033470111328167,
+      "Full_ols": 0.6484903699632506,
+      "Full_shape": 0.6134420532901047,
+      "Error_ols": 0.40916698548975194,
+      "Error_shape": 0.40916698591758044
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/18_Nocturne_vn_fl_tpt_track2_fl/data.npz",
+      "eligible": 108,
+      "nonoverlap_notes": 108,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.656984088819397e-09,
+        "q95": 9.080883613914875e-09,
+        "max": 1.479076423845758e-08
+      },
+      "Note_ols": 0.39033470460688824,
+      "Note_shape": 0.39033470111328167,
+      "Full_ols": 0.6484903699632506,
+      "Full_shape": 0.6134420532901047,
+      "Error_ols": 0.40916698548975194,
+      "Error_shape": 0.40916698591758044
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/28_Fugue_fl_ob_cl_bn_track1_fl/data.npz",
+      "eligible": 245,
+      "nonoverlap_notes": 245,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.787736429320296e-09,
+        "q95": 9.855149364852822e-09,
+        "max": 1.4652152111865585e-08
+      },
+      "Note_ols": 0.0944251611298677,
+      "Note_shape": 0.09442515883112443,
+      "Full_ols": 0.6636697038747286,
+      "Full_shape": 0.7174542354759195,
+      "Error_ols": 0.4366271184797463,
+      "Error_shape": 0.4366271189709721
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/29_Fugue_fl_fl_ob_cl_track1_fl/data.npz",
+      "eligible": 234,
+      "nonoverlap_notes": 234,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 3.4324413313614244e-09,
+        "q95": 1.063191201220813e-08,
+        "max": 2.573584819531997e-08
+      },
+      "Note_ols": 0.10416214322209616,
+      "Note_shape": 0.10416214346954616,
+      "Full_ols": 0.5540087991089577,
+      "Full_shape": 0.580739453362563,
+      "Error_ols": 0.587869082711801,
+      "Error_shape": 0.5878690827348003
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/29_Fugue_fl_fl_ob_cl_track2_fl/data.npz",
+      "eligible": 254,
+      "nonoverlap_notes": 254,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.332775619241731e-09,
+        "q95": 8.203635697569368e-09,
+        "max": 1.226082464379909e-08
+      },
+      "Note_ols": -0.06399504154724302,
+      "Note_shape": -0.06399504177488766,
+      "Full_ols": 0.5433434592610112,
+      "Full_shape": 0.5658152869256655,
+      "Error_ols": 0.733475824149285,
+      "Error_shape": 0.733475823872666
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/30_Fugue_fl_fl_ob_sax_track1_fl/data.npz",
+      "eligible": 234,
+      "nonoverlap_notes": 234,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 3.4324413313614244e-09,
+        "q95": 1.063191201220813e-08,
+        "max": 2.573584819531997e-08
+      },
+      "Note_ols": 0.10416214322209616,
+      "Note_shape": 0.10416214346954616,
+      "Full_ols": 0.5540087991089577,
+      "Full_shape": 0.580739453362563,
+      "Error_ols": 0.587869082711801,
+      "Error_shape": 0.5878690827348003
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/30_Fugue_fl_fl_ob_sax_track2_fl/data.npz",
+      "eligible": 254,
+      "nonoverlap_notes": 254,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.332775619241731e-09,
+        "q95": 8.203635697569368e-09,
+        "max": 1.226082464379909e-08
+      },
+      "Note_ols": -0.06399504154724302,
+      "Note_shape": -0.06399504177488766,
+      "Full_ols": 0.5433434592610112,
+      "Full_shape": 0.5658152869256655,
+      "Error_ols": 0.733475824149285,
+      "Error_shape": 0.733475823872666
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/37_Rondeau_fl_vn_va_cl_track1_fl/data.npz",
+      "eligible": 484,
+      "nonoverlap_notes": 484,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 4.218331438917385e-09,
+        "q95": 1.3234433563044952e-08,
+        "max": 2.4756417838208754e-08
+      },
+      "Note_ols": 0.3203743355942952,
+      "Note_shape": 0.3203743367471703,
+      "Full_ols": 0.5010896534574587,
+      "Full_shape": 0.6050594314700303,
+      "Error_ols": 0.4532751401962667,
+      "Error_shape": 0.4532751397750781
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/40_Miserere_fl_fl_ob_cl_bn_track1_fl/data.npz",
+      "eligible": 31,
+      "nonoverlap_notes": 31,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.12151385378812e-09,
+        "q95": 6.6900262265710786e-09,
+        "max": 9.572016182666579e-09
+      },
+      "Note_ols": -0.252433585959552,
+      "Note_shape": -0.2524335792478625,
+      "Full_ols": 0.5807271252139428,
+      "Full_shape": 0.5773148303548357,
+      "Error_ols": 0.4127011088623247,
+      "Error_shape": 0.41270110804902493
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/40_Miserere_fl_fl_ob_cl_bn_track2_fl/data.npz",
+      "eligible": 33,
+      "nonoverlap_notes": 33,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 1.9197086642723535e-09,
+        "q95": 7.913096642127723e-09,
+        "max": 1.0009665103831915e-08
+      },
+      "Note_ols": 0.42942332559480617,
+      "Note_shape": 0.4294233248279499,
+      "Full_ols": 0.7092055147446236,
+      "Full_shape": 0.6936419718581577,
+      "Error_ols": 0.5001986877204471,
+      "Error_shape": 0.5001986879451044
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/41_Miserere_fl_fl_ob_sax_bn_track1_fl/data.npz",
+      "eligible": 31,
+      "nonoverlap_notes": 31,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.12151385378812e-09,
+        "q95": 6.6900262265710786e-09,
+        "max": 9.572016182666579e-09
+      },
+      "Note_ols": -0.252433585959552,
+      "Note_shape": -0.2524335792478625,
+      "Full_ols": 0.5807271252139428,
+      "Full_shape": 0.5773148303548357,
+      "Error_ols": 0.4127011088623247,
+      "Error_shape": 0.41270110804902493
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/41_Miserere_fl_fl_ob_sax_bn_track2_fl/data.npz",
+      "eligible": 33,
+      "nonoverlap_notes": 33,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 1.9197086642723535e-09,
+        "q95": 7.913096642127723e-09,
+        "max": 1.0009665103831915e-08
+      },
+      "Note_ols": 0.42942332559480617,
+      "Note_shape": 0.4294233248279499,
+      "Full_ols": 0.7092055147446236,
+      "Full_shape": 0.6936419718581577,
+      "Error_ols": 0.5001986877204471,
+      "Error_shape": 0.5001986879451044
+    },
+    {
+      "track": "datagen/solo/URMP/processed_ob/11_Maria_ob_vc_track1_ob/data.npz",
+      "eligible": 110,
+      "nonoverlap_notes": 110,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.2189181939315063e-09,
+        "q95": 1.0199081463999904e-08,
+        "max": 3.040189422979639e-08
+      },
+      "Note_ols": 0.3004941772293533,
+      "Note_shape": 0.30049417625151126,
+      "Full_ols": 0.6292582020816015,
+      "Full_shape": 0.7018557205954644,
+      "Error_ols": 0.4614299951355287,
+      "Error_shape": 0.4614299951315769
+    },
+    {
+      "track": "datagen/solo/URMP/processed_ob/28_Fugue_fl_ob_cl_bn_track2_ob/data.npz",
+      "eligible": 253,
+      "nonoverlap_notes": 253,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.3379704024419464e-09,
+        "q95": 8.679919921723925e-09,
+        "max": 1.469655164258055e-08
+      },
+      "Note_ols": -0.16620318803100584,
+      "Note_shape": -0.16620318933367004,
+      "Full_ols": 0.5260246673760204,
+      "Full_shape": 0.5939607645410317,
+      "Error_ols": 0.8687836189894022,
+      "Error_shape": 0.8687836190330827
+    },
+    {
+      "track": "datagen/solo/URMP/processed_ob/29_Fugue_fl_fl_ob_cl_track3_ob/data.npz",
+      "eligible": 213,
+      "nonoverlap_notes": 213,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.339205241238313e-09,
+        "q95": 8.634991736485114e-09,
+        "max": 1.2982060054259214e-08
+      },
+      "Note_ols": 0.0394076170468178,
+      "Note_shape": 0.039407618206465836,
+      "Full_ols": 0.6434267217935582,
+      "Full_shape": 0.6816565525626058,
+      "Error_ols": 0.9144246068979744,
+      "Error_shape": 0.9144246068487717
+    },
+    {
+      "track": "datagen/solo/URMP/processed_ob/30_Fugue_fl_fl_ob_sax_track3_ob/data.npz",
+      "eligible": 213,
+      "nonoverlap_notes": 213,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.339205241238313e-09,
+        "q95": 8.634991736485114e-09,
+        "max": 1.2982060054259214e-08
+      },
+      "Note_ols": 0.03940762008191074,
+      "Note_shape": 0.03940762124155863,
+      "Full_ols": 0.6434267227259607,
+      "Full_shape": 0.6816565534339434,
+      "Error_ols": 0.9144246445790764,
+      "Error_shape": 0.9144246445298736
+    },
+    {
+      "track": "datagen/solo/URMP/processed_ob/40_Miserere_fl_fl_ob_cl_bn_track3_ob/data.npz",
+      "eligible": 34,
+      "nonoverlap_notes": 34,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 1.504882941964332e-09,
+        "q95": 5.697744301943407e-09,
+        "max": 6.928463002376012e-09
+      },
+      "Note_ols": 0.2819020501180522,
+      "Note_shape": 0.2819020547553334,
+      "Full_ols": 0.5613975757717815,
+      "Full_shape": 0.659572831308597,
+      "Error_ols": 0.8495874344657481,
+      "Error_shape": 0.84958743376343
+    },
+    {
+      "track": "datagen/solo/URMP/processed_ob/41_Miserere_fl_fl_ob_sax_bn_track3_ob/data.npz",
+      "eligible": 34,
+      "nonoverlap_notes": 34,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 1.504882941964332e-09,
+        "q95": 5.697744301943407e-09,
+        "max": 6.928463002376012e-09
+      },
+      "Note_ols": 0.2819020501180522,
+      "Note_shape": 0.2819020547553334,
+      "Full_ols": 0.5613975757717815,
+      "Full_shape": 0.659572831308597,
+      "Error_ols": 0.8495874344657481,
+      "Error_shape": 0.84958743376343
+    },
+    {
+      "track": "datagen/solo/URMP/processed_cl/03_Dance_fl_cl_track2_cl/data.npz",
+      "eligible": 194,
+      "nonoverlap_notes": 194,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 3.1520962847596757e-09,
+        "q95": 1.3463329685979395e-08,
+        "max": 1.8623230428921634e-08
+      },
+      "Note_ols": 0.2789586203208684,
+      "Note_shape": 0.2789586211956875,
+      "Full_ols": 0.6583818126985501,
+      "Full_shape": 0.746234679891767,
+      "Error_ols": 0.44978266861434374,
+      "Error_shape": 0.44978266858845556
+    },
+    {
+      "track": "datagen/solo/URMP/processed_cl/14_Waltz_fl_fl_cl_track3_cl/data.npz",
+      "eligible": 274,
+      "nonoverlap_notes": 272,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 3.748404781099811e-09,
+        "q95": 1.0530687406744774e-08,
+        "max": 0.0010762344714514073
+      },
+      "Note_ols": 0.23305473581670758,
+      "Note_shape": 0.2331504490090937,
+      "Full_ols": 0.5728134697430053,
+      "Full_shape": 0.706524103160185,
+      "Error_ols": 0.4107526054173643,
+      "Error_shape": 0.4107397236208591
+    },
+    {
+      "track": "datagen/solo/URMP/processed_cl/17_Nocturne_vn_fl_cl_track3_cl/data.npz",
+      "eligible": 94,
+      "nonoverlap_notes": 94,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.2041157241361723e-09,
+        "q95": 5.849316034551125e-09,
+        "max": 8.544904406901147e-09
+      },
+      "Note_ols": 0.38350159374341636,
+      "Note_shape": 0.3835015904149494,
+      "Full_ols": 0.7082357929604696,
+      "Full_shape": 0.8144860166488824,
+      "Error_ols": 0.2555183828069906,
+      "Error_shape": 0.25551838292810225
+    },
+    {
+      "track": "datagen/solo/URMP/processed_cl/19_Pavane_cl_vn_vc_track1_cl/data.npz",
+      "eligible": 211,
+      "nonoverlap_notes": 207,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 3.4609515761035138e-09,
+        "q95": 1.347171063708936e-08,
+        "max": 0.04611572204080697
+      },
+      "Note_ols": 0.04415945307315738,
+      "Note_shape": 0.04420219594639263,
+      "Full_ols": 0.48041011801324923,
+      "Full_shape": 0.44406121737609866,
+      "Error_ols": 0.8872481461655328,
+      "Error_shape": 0.8872333494434729
+    },
+    {
+      "track": "datagen/solo/URMP/processed_cl/21_Rejouissance_cl_tbn_tba_track1_cl/data.npz",
+      "eligible": 228,
+      "nonoverlap_notes": 226,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 3.4943432477715353e-09,
+        "q95": 1.391836623114625e-08,
+        "max": 0.003084235734656501
+      },
+      "Note_ols": 0.1338547304856409,
+      "Note_shape": 0.13386609923974557,
+      "Full_ols": 0.5333064275571694,
+      "Full_shape": 0.7084764295402144,
+      "Error_ols": 0.6216672185696474,
+      "Error_shape": 0.621666297942485
+    },
+    {
+      "track": "datagen/solo/URMP/processed_cl/23_Rejouissance_cl_sax_tba_track1_cl/data.npz",
+      "eligible": 228,
+      "nonoverlap_notes": 226,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 3.4943432477715353e-09,
+        "q95": 1.391836623114625e-08,
+        "max": 0.003084235734656501
+      },
+      "Note_ols": 0.1338547304856409,
+      "Note_shape": 0.13386609923974557,
+      "Full_ols": 0.5333064275571694,
+      "Full_shape": 0.7084764295402144,
+      "Error_ols": 0.6216672185696474,
+      "Error_shape": 0.621666297942485
+    },
+    {
+      "track": "datagen/solo/URMP/processed_cl/28_Fugue_fl_ob_cl_bn_track3_cl/data.npz",
+      "eligible": 215,
+      "nonoverlap_notes": 215,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.9413901527726643e-09,
+        "q95": 8.081915076098805e-09,
+        "max": 1.5249625321597423e-08
+      },
+      "Note_ols": -0.10898171708989292,
+      "Note_shape": -0.10898171627857825,
+      "Full_ols": 0.7286378326095732,
+      "Full_shape": 0.7609710353598292,
+      "Error_ols": 0.6905444367833548,
+      "Error_shape": 0.6905444368041027
+    },
+    {
+      "track": "datagen/solo/URMP/processed_cl/29_Fugue_fl_fl_ob_cl_track4_cl/data.npz",
+      "eligible": 187,
+      "nonoverlap_notes": 185,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 2.8620211777030753e-09,
+        "q95": 9.66231057266364e-09,
+        "max": 0.003137375546832005
+      },
+      "Note_ols": 0.11733245713273403,
+      "Note_shape": 0.11723791396299861,
+      "Full_ols": 0.7018199104631113,
+      "Full_shape": 0.7152201303684829,
+      "Error_ols": 0.8119967000823333,
+      "Error_shape": 0.8120162076501495
+    },
+    {
+      "track": "datagen/solo/URMP/processed_cl/37_Rondeau_fl_vn_va_cl_track4_cl/data.npz",
+      "eligible": 162,
+      "nonoverlap_notes": 162,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.128539875564739e-09,
+        "q95": 6.116751241752553e-09,
+        "max": 7.647588862011442e-09
+      },
+      "Note_ols": 0.29211378643385744,
+      "Note_shape": 0.29211378909602337,
+      "Full_ols": 0.6204963907038124,
+      "Full_shape": 0.7182095117236341,
+      "Error_ols": 0.41695229872824285,
+      "Error_shape": 0.4169522989607417
+    },
+    {
+      "track": "datagen/solo/URMP/processed_cl/40_Miserere_fl_fl_ob_cl_bn_track4_cl/data.npz",
+      "eligible": 34,
+      "nonoverlap_notes": 34,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 1.8093420531102968e-09,
+        "q95": 5.374817908291909e-09,
+        "max": 1.521305611250554e-08
+      },
+      "Note_ols": 0.4498430097493473,
+      "Note_shape": 0.44984301082642986,
+      "Full_ols": 0.6203389751477603,
+      "Full_shape": 0.6469781321787876,
+      "Error_ols": 0.563897496786296,
+      "Error_shape": 0.5638974956941845
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/06_Entertainer_sax_sax_track1_sax/data.npz",
+      "eligible": 258,
+      "nonoverlap_notes": 258,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 4.086275326522302e-09,
+        "q95": 1.1370907916992227e-08,
+        "max": 1.9237185538973525e-08
+      },
+      "Note_ols": 0.05504198324559684,
+      "Note_shape": 0.05504198373608989,
+      "Full_ols": 0.5598748860501619,
+      "Full_shape": 0.5603555957536908,
+      "Error_ols": 0.6336228362444494,
+      "Error_shape": 0.6336228363908547
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/06_Entertainer_sax_sax_track2_sax/data.npz",
+      "eligible": 219,
+      "nonoverlap_notes": 219,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 3.653820056202183e-09,
+        "q95": 1.06557796720968e-08,
+        "max": 1.709898889018345e-08
+      },
+      "Note_ols": 0.13679253642337125,
+      "Note_shape": 0.1367925339280242,
+      "Full_ols": 0.6100128513187,
+      "Full_shape": 0.6357149733628463,
+      "Error_ols": 0.5397930186514566,
+      "Error_shape": 0.5397930190002386
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/10_March_tpt_sax_track2_sax/data.npz",
+      "eligible": 245,
+      "nonoverlap_notes": 245,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 3.2565990437519547e-09,
+        "q95": 1.069305861934871e-08,
+        "max": 2.242120752065211e-08
+      },
+      "Note_ols": 0.19156544567254388,
+      "Note_shape": 0.1915654499345129,
+      "Full_ols": 0.2966493674071515,
+      "Full_shape": 0.44252613372275634,
+      "Error_ols": 1.1421831149550739,
+      "Error_shape": 1.1421831149243582
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/16_Surprise_tpt_tpt_sax_track3_sax/data.npz",
+      "eligible": 65,
+      "nonoverlap_notes": 65,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 3.1425885253069232e-09,
+        "q95": 7.403796273604028e-09,
+        "max": 1.1282088710721513e-08
+      },
+      "Note_ols": 0.12024434008247978,
+      "Note_shape": 0.12024433953200411,
+      "Full_ols": 0.5835688557555244,
+      "Full_shape": 0.6923636454593732,
+      "Error_ols": 0.6830693501597576,
+      "Error_shape": 0.6830693505182402
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/22_Rejouissance_sax_tbn_tba_track1_sax/data.npz",
+      "eligible": 227,
+      "nonoverlap_notes": 227,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 3.934030466748641e-09,
+        "q95": 1.1715001435744393e-08,
+        "max": 1.7586912987729318e-08
+      },
+      "Note_ols": 0.06345718862245427,
+      "Note_shape": 0.06345718998115184,
+      "Full_ols": 0.5288631193751512,
+      "Full_shape": 0.7239662368563742,
+      "Error_ols": 0.6149980507582694,
+      "Error_shape": 0.6149980506960924
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/23_Rejouissance_cl_sax_tba_track2_sax/data.npz",
+      "eligible": 216,
+      "nonoverlap_notes": 212,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 3.40474986311286e-09,
+        "q95": 1.2246394135515624e-08,
+        "max": 0.016921862840504898
+      },
+      "Note_ols": -0.014788757698949592,
+      "Note_shape": -0.01485814730712231,
+      "Full_ols": 0.4835940836824564,
+      "Full_shape": 0.6536999240510927,
+      "Error_ols": 0.593763209246275,
+      "Error_shape": 0.593796521381913
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/25_Pirates_vn_vn_va_sax_track4_sax/data.npz",
+      "eligible": 175,
+      "nonoverlap_notes": 173,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 4.0604745820775186e-09,
+        "q95": 1.3145335562309253e-08,
+        "max": 0.004870891655087243
+      },
+      "Note_ols": 0.18995137666452408,
+      "Note_shape": 0.189847626442887,
+      "Full_ols": 0.3375132468688702,
+      "Full_shape": 0.4823155134089125,
+      "Error_ols": 0.6196457308216877,
+      "Error_shape": 0.6196556087449834
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/27_King_vn_vn_va_sax_track4_sax/data.npz",
+      "eligible": 143,
+      "nonoverlap_notes": 143,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 3.729078411125861e-09,
+        "q95": 8.6447640989181e-09,
+        "max": 1.5386375643301135e-08
+      },
+      "Note_ols": 0.3606212817860923,
+      "Note_shape": 0.36062128169331514,
+      "Full_ols": 0.5557894809209545,
+      "Full_shape": 0.68942961391286,
+      "Error_ols": 0.4546603271873688,
+      "Error_shape": 0.45466032731719674
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/30_Fugue_fl_fl_ob_sax_track4_sax/data.npz",
+      "eligible": 187,
+      "nonoverlap_notes": 185,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 2.6176719894582634e-09,
+        "q95": 9.45329791256153e-09,
+        "max": 0.004615356496269136
+      },
+      "Note_ols": -0.07004852033950196,
+      "Note_shape": -0.06999211736760944,
+      "Full_ols": 0.6822725022654887,
+      "Full_shape": 0.6789485894713263,
+      "Error_ols": 0.6856686765796514,
+      "Error_shape": 0.6856724327061428
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/39_Jerusalem_vn_vn_va_sax_db_track4_sax/data.npz",
+      "eligible": 141,
+      "nonoverlap_notes": 141,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.327745258677838e-09,
+        "q95": 6.906799827023823e-09,
+        "max": 1.1917727867093197e-08
+      },
+      "Note_ols": 0.27425835891820494,
+      "Note_shape": 0.2742583620970647,
+      "Full_ols": 0.4413457293805294,
+      "Full_shape": 0.40013510815129566,
+      "Error_ols": 0.8329568353282781,
+      "Error_shape": 0.8329568352285018
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/41_Miserere_fl_fl_ob_sax_bn_track4_sax/data.npz",
+      "eligible": 35,
+      "nonoverlap_notes": 35,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.5393891292530686e-09,
+        "q95": 6.659332280451849e-09,
+        "max": 9.368657580993518e-09
+      },
+      "Note_ols": -0.5306190515760959,
+      "Note_shape": -0.5306190564316907,
+      "Full_ols": 0.5912793858246425,
+      "Full_shape": 0.5816383529322532,
+      "Error_ols": 0.5649185734686546,
+      "Error_shape": 0.5649185740266711
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/05_Entertainer_tpt_tpt_track1_tpt/data.npz",
+      "eligible": 258,
+      "nonoverlap_notes": 258,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 3.729879801994951e-09,
+        "q95": 1.1145135799180532e-08,
+        "max": 1.7386699888936616e-08
+      },
+      "Note_ols": 0.4268264593009685,
+      "Note_shape": 0.4268264587305317,
+      "Full_ols": 0.6537838075843344,
+      "Full_shape": 0.7651259392596418,
+      "Error_ols": 0.4289275321136557,
+      "Error_shape": 0.4289275319251178
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/05_Entertainer_tpt_tpt_track2_tpt/data.npz",
+      "eligible": 214,
+      "nonoverlap_notes": 214,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 3.0306378861410226e-09,
+        "q95": 9.985809321584884e-09,
+        "max": 2.57727481504233e-08
+      },
+      "Note_ols": 0.613525708114804,
+      "Note_shape": 0.6135257089847471,
+      "Full_ols": 0.7382535895257808,
+      "Full_shape": 0.8873426951817414,
+      "Error_ols": 0.36172145700178077,
+      "Error_shape": 0.3617214565671708
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/07_GString_tpt_tbn_track1_tpt/data.npz",
+      "eligible": 284,
+      "nonoverlap_notes": 282,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 2.429526297350867e-09,
+        "q95": 9.240974249558892e-09,
+        "max": 0.0033733245347140543
+      },
+      "Note_ols": 0.38441459953911167,
+      "Note_shape": 0.38436017700156644,
+      "Full_ols": 0.62442250947485,
+      "Full_shape": 0.6156337983963033,
+      "Error_ols": 0.36006534739003965,
+      "Error_shape": 0.3600641802189889
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/09_Jesus_tpt_vn_track1_tpt/data.npz",
+      "eligible": 218,
+      "nonoverlap_notes": 214,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 2.405761949823685e-09,
+        "q95": 9.078263348381124e-09,
+        "max": 0.02469813904145487
+      },
+      "Note_ols": 0.3088777225132058,
+      "Note_shape": 0.30733055303381074,
+      "Full_ols": 0.523692730699907,
+      "Full_shape": 0.6092513853286559,
+      "Error_ols": 1.1334193229542486,
+      "Error_shape": 1.133430871045646
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/10_March_tpt_sax_track1_tpt/data.npz",
+      "eligible": 296,
+      "nonoverlap_notes": 296,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 3.666251195362814e-09,
+        "q95": 1.047230570579008e-08,
+        "max": 2.7135151070069255e-08
+      },
+      "Note_ols": 0.4230177246871759,
+      "Note_shape": 0.4230177215940593,
+      "Full_ols": 0.5484913326644416,
+      "Full_shape": 0.7339946119794701,
+      "Error_ols": 0.8330142135768606,
+      "Error_shape": 0.8330142138448081
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/15_Surprise_tpt_tpt_tbn_track1_tpt/data.npz",
+      "eligible": 122,
+      "nonoverlap_notes": 122,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.8815856135236276e-09,
+        "q95": 1.0134580972907396e-08,
+        "max": 1.870387546579411e-08
+      },
+      "Note_ols": 0.6677600862024909,
+      "Note_shape": 0.6677600847309315,
+      "Full_ols": 0.6707013525941291,
+      "Full_shape": 0.7672684440697808,
+      "Error_ols": 0.5684412890617118,
+      "Error_shape": 0.5684412894934966
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/15_Surprise_tpt_tpt_tbn_track2_tpt/data.npz",
+      "eligible": 103,
+      "nonoverlap_notes": 103,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 3.995660336885758e-09,
+        "q95": 1.1506652003390651e-08,
+        "max": 1.8639879056879422e-08
+      },
+      "Note_ols": 0.6241289321933544,
+      "Note_shape": 0.6241289340770606,
+      "Full_ols": 0.7643999441485697,
+      "Full_shape": 0.859348972212735,
+      "Error_ols": 0.375243548872294,
+      "Error_shape": 0.3752435485007654
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/15_Surprise_tpt_tpt_tbn_track3_tpt/data.npz",
+      "eligible": 65,
+      "nonoverlap_notes": 65,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 3.8811127603597925e-09,
+        "q95": 1.1528720475707342e-08,
+        "max": 1.5328708376612902e-08
+      },
+      "Note_ols": 0.23639770284079548,
+      "Note_shape": 0.2363977086535383,
+      "Full_ols": 0.720518551592199,
+      "Full_shape": 0.8225989201167533,
+      "Error_ols": 0.4717543498726555,
+      "Error_shape": 0.47175434951770184
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/16_Surprise_tpt_tpt_sax_track1_tpt/data.npz",
+      "eligible": 122,
+      "nonoverlap_notes": 122,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.8815856135236276e-09,
+        "q95": 1.0134580972907396e-08,
+        "max": 1.870387546579411e-08
+      },
+      "Note_ols": 0.6677600862024909,
+      "Note_shape": 0.6677600847309315,
+      "Full_ols": 0.6707013525941291,
+      "Full_shape": 0.7672684440697808,
+      "Error_ols": 0.5684412890617118,
+      "Error_shape": 0.5684412894934966
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/16_Surprise_tpt_tpt_sax_track2_tpt/data.npz",
+      "eligible": 103,
+      "nonoverlap_notes": 103,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 3.995660336885758e-09,
+        "q95": 1.1506652003390651e-08,
+        "max": 1.8639879056879422e-08
+      },
+      "Note_ols": 0.6241289321933544,
+      "Note_shape": 0.6241289340770606,
+      "Full_ols": 0.7643999441485697,
+      "Full_shape": 0.859348972212735,
+      "Error_ols": 0.375243548872294,
+      "Error_shape": 0.3752435485007654
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/18_Nocturne_vn_fl_tpt_track3_tpt/data.npz",
+      "eligible": 94,
+      "nonoverlap_notes": 94,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 1.9689703656140136e-09,
+        "q95": 6.724745650779148e-09,
+        "max": 1.444778631836185e-08
+      },
+      "Note_ols": 0.49292261257404313,
+      "Note_shape": 0.49292261426434353,
+      "Full_ols": 0.7184683662732819,
+      "Full_shape": 0.7853508411638879,
+      "Error_ols": 0.3260000266055385,
+      "Error_shape": 0.3260000263120723
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/20_Pavane_tpt_vn_vc_track1_tpt/data.npz",
+      "eligible": 214,
+      "nonoverlap_notes": 214,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.8097004364984066e-09,
+        "q95": 1.059328717966177e-08,
+        "max": 2.0620193197306357e-08
+      },
+      "Note_ols": 0.01922621903657857,
+      "Note_shape": 0.01922622100928184,
+      "Full_ols": 0.42818597700409816,
+      "Full_shape": 0.3951208520527339,
+      "Error_ols": 0.7454808693304606,
+      "Error_shape": 0.7454808690102306
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/31_Slavonic_tpt_tpt_hn_tbn_track1_tpt/data.npz",
+      "eligible": 272,
+      "nonoverlap_notes": 272,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 4.583523562087718e-09,
+        "q95": 1.3778679033057218e-08,
+        "max": 1.990443857468098e-08
+      },
+      "Note_ols": 0.3774894276527783,
+      "Note_shape": 0.3774894261708648,
+      "Full_ols": 0.6121507405285818,
+      "Full_shape": 0.741395576210065,
+      "Error_ols": 0.46641615860735125,
+      "Error_shape": 0.46641615894631383
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/31_Slavonic_tpt_tpt_hn_tbn_track2_tpt/data.npz",
+      "eligible": 247,
+      "nonoverlap_notes": 247,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 3.751745866022361e-09,
+        "q95": 1.132251422466166e-08,
+        "max": 2.267178799278543e-08
+      },
+      "Note_ols": 0.3045812905949029,
+      "Note_shape": 0.30458128840157606,
+      "Full_ols": 0.5539849144519992,
+      "Full_shape": 0.7541995344591854,
+      "Error_ols": 0.5325968206925702,
+      "Error_shape": 0.5325968205729696
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/33_Elise_tpt_tpt_hn_tbn_track1_tpt/data.npz",
+      "eligible": 69,
+      "nonoverlap_notes": 69,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.8491161162019347e-09,
+        "q95": 8.752858720259295e-09,
+        "max": 1.2067881661998462e-08
+      },
+      "Note_ols": 0.4205528430190175,
+      "Note_shape": 0.42055284435449336,
+      "Full_ols": 0.6920321814710187,
+      "Full_shape": 0.7208782032553902,
+      "Error_ols": 0.6707937043453347,
+      "Error_shape": 0.6707937044881547
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/33_Elise_tpt_tpt_hn_tbn_track2_tpt/data.npz",
+      "eligible": 80,
+      "nonoverlap_notes": 78,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 4.4117412793992855e-09,
+        "q95": 1.081571192316526e-08,
+        "max": 0.01181996272867971
+      },
+      "Note_ols": 0.32167411380717437,
+      "Note_shape": 0.3209228034661337,
+      "Full_ols": 0.7838334748183284,
+      "Full_shape": 0.8067847492561987,
+      "Error_ols": 0.7003195724600358,
+      "Error_shape": 0.700482170031974
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/34_Fugue_tpt_tpt_hn_tbn_track1_tpt/data.npz",
+      "eligible": 246,
+      "nonoverlap_notes": 246,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.998532452589604e-09,
+        "q95": 1.0222726516805763e-08,
+        "max": 1.3606819730021663e-08
+      },
+      "Note_ols": 0.11486878363277304,
+      "Note_shape": 0.11486878631443596,
+      "Full_ols": 0.6457986183250771,
+      "Full_shape": 0.7250102888590606,
+      "Error_ols": 0.45158145453060106,
+      "Error_shape": 0.45158145415349904
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/34_Fugue_tpt_tpt_hn_tbn_track2_tpt/data.npz",
+      "eligible": 254,
+      "nonoverlap_notes": 254,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.73595407295763e-09,
+        "q95": 8.235681276254491e-09,
+        "max": 1.4693584910894496e-08
+      },
+      "Note_ols": 0.13176769538565952,
+      "Note_shape": 0.13176769219986165,
+      "Full_ols": 0.688857225488585,
+      "Full_shape": 0.7597503320602048,
+      "Error_ols": 0.3684041312167126,
+      "Error_shape": 0.3684041317413814
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/42_Arioso_tpt_tpt_hn_tbn_tba_track1_tpt/data.npz",
+      "eligible": 353,
+      "nonoverlap_notes": 353,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.878232991259005e-09,
+        "q95": 9.677882533787796e-09,
+        "max": 2.3940105745446458e-08
+      },
+      "Note_ols": 0.13299608093414422,
+      "Note_shape": 0.13299608290431278,
+      "Full_ols": 0.5953634598751928,
+      "Full_shape": 0.6026732046196303,
+      "Error_ols": 0.46613700247860756,
+      "Error_shape": 0.46613700233744126
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/42_Arioso_tpt_tpt_hn_tbn_tba_track2_tpt/data.npz",
+      "eligible": 207,
+      "nonoverlap_notes": 207,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 1.985595359184041e-09,
+        "q95": 5.832586507408634e-09,
+        "max": 1.1768168726971823e-08
+      },
+      "Note_ols": 0.4768610542512098,
+      "Note_shape": 0.4768610563160494,
+      "Full_ols": 0.8034210266399272,
+      "Full_shape": 0.8252400988583384,
+      "Error_ols": 0.4188155083416196,
+      "Error_shape": 0.4188155080690753
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/43_Chorale_tpt_tpt_hn_tbn_tba_track1_tpt/data.npz",
+      "eligible": 116,
+      "nonoverlap_notes": 114,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 3.2765896352804377e-09,
+        "q95": 1.5429689627336328e-08,
+        "max": 0.01313503127537065
+      },
+      "Note_ols": 0.4759622334388985,
+      "Note_shape": 0.47538875821680576,
+      "Full_ols": 0.7015790813755496,
+      "Full_shape": 0.8076292107568922,
+      "Error_ols": 0.5802713544291072,
+      "Error_shape": 0.5804176021073278
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/43_Chorale_tpt_tpt_hn_tbn_tba_track2_tpt/data.npz",
+      "eligible": 119,
+      "nonoverlap_notes": 117,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 3.8644851194275475e-09,
+        "q95": 1.2610745606965583e-08,
+        "max": 0.028639416338120057
+      },
+      "Note_ols": 0.19083872577281522,
+      "Note_shape": 0.186511513702215,
+      "Full_ols": 0.6705387044987259,
+      "Full_shape": 0.8073297913968421,
+      "Error_ols": 0.4911482881058609,
+      "Error_shape": 0.4915777487060243
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tbn/07_GString_tpt_tbn_track2_tbn/data.npz",
+      "eligible": 284,
+      "nonoverlap_notes": 284,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 1.794685191181776e-09,
+        "q95": 5.817322663709135e-09,
+        "max": 1.270436602637567e-08
+      },
+      "Note_ols": 0.30252217710578755,
+      "Note_shape": 0.3025221792137652,
+      "Full_ols": 0.6604067734711498,
+      "Full_shape": 0.7079068328293852,
+      "Error_ols": 0.32612025246653936,
+      "Error_shape": 0.3261202523562967
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tbn/21_Rejouissance_cl_tbn_tba_track2_tbn/data.npz",
+      "eligible": 216,
+      "nonoverlap_notes": 214,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 3.2957696482132307e-09,
+        "q95": 1.1449167035515685e-08,
+        "max": 0.0009962093249809025
+      },
+      "Note_ols": 0.30643317017918803,
+      "Note_shape": 0.30646360904690373,
+      "Full_ols": 0.6486932709953107,
+      "Full_shape": 0.7663909451232848,
+      "Error_ols": 0.3058238722021335,
+      "Error_shape": 0.3058200229278965
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tbn/22_Rejouissance_sax_tbn_tba_track2_tbn/data.npz",
+      "eligible": 216,
+      "nonoverlap_notes": 214,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 3.2957696482132307e-09,
+        "q95": 1.1449167035515685e-08,
+        "max": 0.0009962093249809025
+      },
+      "Note_ols": 0.30643317017918803,
+      "Note_shape": 0.30646360904690373,
+      "Full_ols": 0.6486932709953107,
+      "Full_shape": 0.7663909451232848,
+      "Error_ols": 0.3058238722021335,
+      "Error_shape": 0.3058200229278965
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tbn/31_Slavonic_tpt_tpt_hn_tbn_track4_tbn/data.npz",
+      "eligible": 219,
+      "nonoverlap_notes": 219,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 4.158289018332672e-09,
+        "q95": 1.3340838500215014e-08,
+        "max": 2.155378326287825e-08
+      },
+      "Note_ols": 0.07505187632877426,
+      "Note_shape": 0.07505187821903073,
+      "Full_ols": 0.711179752855345,
+      "Full_shape": 0.8136082742204461,
+      "Error_ols": 0.4494612141464238,
+      "Error_shape": 0.4494612139909031
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tbn/33_Elise_tpt_tpt_hn_tbn_track4_tbn/data.npz",
+      "eligible": 67,
+      "nonoverlap_notes": 67,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.808763995155819e-09,
+        "q95": 9.991495751270367e-09,
+        "max": 1.4584793375974167e-08
+      },
+      "Note_ols": 0.23658620568219116,
+      "Note_shape": 0.23658620764672325,
+      "Full_ols": 0.7959750265540869,
+      "Full_shape": 0.8524587708782347,
+      "Error_ols": 0.767120546727086,
+      "Error_shape": 0.767120546551923
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tbn/34_Fugue_tpt_tpt_hn_tbn_track4_tbn/data.npz",
+      "eligible": 189,
+      "nonoverlap_notes": 189,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.2931492100649784e-09,
+        "q95": 8.849004209126876e-09,
+        "max": 1.7614639734662122e-08
+      },
+      "Note_ols": 0.15254773989605375,
+      "Note_shape": 0.15254774318250225,
+      "Full_ols": 0.7565406876112903,
+      "Full_shape": 0.7929314327444416,
+      "Error_ols": 0.3448331753525013,
+      "Error_shape": 0.34483317482273285
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tbn/42_Arioso_tpt_tpt_hn_tbn_tba_track4_tbn/data.npz",
+      "eligible": 200,
+      "nonoverlap_notes": 200,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.2482104379941812e-09,
+        "q95": 6.100908195377418e-09,
+        "max": 8.392798483627e-09
+      },
+      "Note_ols": -0.03605969589304922,
+      "Note_shape": -0.0360596925996466,
+      "Full_ols": 0.663281236765301,
+      "Full_shape": 0.6984379184650141,
+      "Error_ols": 0.46686667043756913,
+      "Error_shape": 0.4668666702500559
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tbn/43_Chorale_tpt_tpt_hn_tbn_tba_track4_tbn/data.npz",
+      "eligible": 72,
+      "nonoverlap_notes": 72,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.62025412642047e-09,
+        "q95": 8.235597552891632e-09,
+        "max": 1.227194191307008e-08
+      },
+      "Note_ols": 0.05366478509076436,
+      "Note_shape": 0.05366478508760315,
+      "Full_ols": 0.6574141624680182,
+      "Full_shape": 0.7149890813770619,
+      "Error_ols": 0.35602350279040357,
+      "Error_shape": 0.3560235029749568
+    },
+    {
+      "track": "datagen/solo/URMP/processed_bn/28_Fugue_fl_ob_cl_bn_track4_bn/data.npz",
+      "eligible": 187,
+      "nonoverlap_notes": 187,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.039201237336159e-09,
+        "q95": 7.560817110775623e-09,
+        "max": 1.6535929336914284e-08
+      },
+      "Note_ols": -0.011371800727150338,
+      "Note_shape": -0.01137180280754498,
+      "Full_ols": 0.8166811804119526,
+      "Full_shape": 0.8456428906165055,
+      "Error_ols": 0.7393845217445137,
+      "Error_shape": 0.7393845217359604
+    },
+    {
+      "track": "datagen/solo/URMP/processed_bn/40_Miserere_fl_fl_ob_cl_bn_track5_bn/data.npz",
+      "eligible": 29,
+      "nonoverlap_notes": 29,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 1.6877964055824072e-09,
+        "q95": 4.889942341984442e-09,
+        "max": 7.544738162993068e-09
+      },
+      "Note_ols": 0.17639400831013982,
+      "Note_shape": 0.17639401130384996,
+      "Full_ols": 0.6646628521013237,
+      "Full_shape": 0.6893324351802839,
+      "Error_ols": 0.4032312279018855,
+      "Error_shape": 0.4032312274792662
+    },
+    {
+      "track": "datagen/solo/URMP/processed_bn/41_Miserere_fl_fl_ob_sax_bn_track5_bn/data.npz",
+      "eligible": 29,
+      "nonoverlap_notes": 29,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 1.6877964055824072e-09,
+        "q95": 4.889942341984442e-09,
+        "max": 7.544738162993068e-09
+      },
+      "Note_ols": 0.17639400831013982,
+      "Note_shape": 0.17639401130384996,
+      "Full_ols": 0.6646628521013237,
+      "Full_shape": 0.6893324351802839,
+      "Error_ols": 0.4032312279018855,
+      "Error_shape": 0.4032312274792662
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/01-AchGottundHerr/data.npz",
+      "eligible": 34,
+      "nonoverlap_notes": 34,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 3.3852211245578086e-09,
+        "q95": 9.117104811865643e-09,
+        "max": 9.716354547595994e-09
+      },
+      "Note_ols": 0.02478899995579292,
+      "Note_shape": 0.024789005694894572,
+      "Full_ols": 0.14753932320468494,
+      "Full_shape": 0.4185358532755194,
+      "Error_ols": 1.7431638549619115,
+      "Error_shape": 1.7431638535632517
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/02-AchLiebenChristen/data.npz",
+      "eligible": 71,
+      "nonoverlap_notes": 71,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.7093431104491984e-09,
+        "q95": 8.252542168316254e-09,
+        "max": 1.0916287720623329e-08
+      },
+      "Note_ols": -0.12236477724215512,
+      "Note_shape": -0.1223647729369196,
+      "Full_ols": 0.09113278740709889,
+      "Full_shape": 0.34629993998974046,
+      "Error_ols": 1.7659465938195564,
+      "Error_shape": 1.7659465941792878
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/03-ChristederdubistTagundLicht/data.npz",
+      "eligible": 37,
+      "nonoverlap_notes": 37,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 3.0953119248491416e-09,
+        "q95": 9.90494846235482e-09,
+        "max": 1.1675884076592092e-08
+      },
+      "Note_ols": 0.7354210840085091,
+      "Note_shape": 0.73542108363188,
+      "Full_ols": 0.5666392764676152,
+      "Full_shape": 0.5877913851522819,
+      "Error_ols": 1.6202445195050548,
+      "Error_shape": 1.620244518734956
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/04-ChristeDuBeistand/data.npz",
+      "eligible": 46,
+      "nonoverlap_notes": 46,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.4359140632109237e-09,
+        "q95": 5.79255673186685e-09,
+        "max": 8.993927669288891e-09
+      },
+      "Note_ols": 0.21607738730740808,
+      "Note_shape": 0.21607738948727914,
+      "Full_ols": 0.1985600400456075,
+      "Full_shape": 0.35426808345863503,
+      "Error_ols": 1.7028484233628423,
+      "Error_shape": 1.7028484234253807
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/05-DieNacht/data.npz",
+      "eligible": 40,
+      "nonoverlap_notes": 40,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 1.9789646452316357e-09,
+        "q95": 6.377370309512184e-09,
+        "max": 8.119708038284606e-09
+      },
+      "Note_ols": 0.1679910351323135,
+      "Note_shape": 0.16799103464438805,
+      "Full_ols": 0.2788832574345306,
+      "Full_shape": 0.4073042089227685,
+      "Error_ols": 1.728834269699895,
+      "Error_shape": 1.728834269132342
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/06-DieSonne/data.npz",
+      "eligible": 46,
+      "nonoverlap_notes": 46,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.401784694460859e-09,
+        "q95": 6.838755393900039e-09,
+        "max": 1.1855653599724867e-08
+      },
+      "Note_ols": 0.1390702867437817,
+      "Note_shape": 0.13907029167718354,
+      "Full_ols": 0.16548299032657507,
+      "Full_shape": 0.4349753008237968,
+      "Error_ols": 1.7054738573465684,
+      "Error_shape": 1.705473858571524
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/07-HerrGott/data.npz",
+      "eligible": 32,
+      "nonoverlap_notes": 32,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 1.1523976091134621e-09,
+        "q95": 4.1044701605468465e-09,
+        "max": 4.171163864700361e-09
+      },
+      "Note_ols": 0.3239115581393555,
+      "Note_shape": 0.3239115529362727,
+      "Full_ols": 0.3392355886862212,
+      "Full_shape": 0.4387350387487613,
+      "Error_ols": 1.440143407222366,
+      "Error_shape": 1.4401434073829318
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/08-FuerDeinenThron/data.npz",
+      "eligible": 32,
+      "nonoverlap_notes": 32,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.430703058929701e-09,
+        "q95": 6.539554640732209e-09,
+        "max": 7.83164392753449e-09
+      },
+      "Note_ols": 0.3761654753612969,
+      "Note_shape": 0.3761654865053593,
+      "Full_ols": 0.3803356417794892,
+      "Full_shape": 0.40913487733315074,
+      "Error_ols": 1.6032616920566543,
+      "Error_shape": 1.6032616909947566
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/09-Jesus/data.npz",
+      "eligible": 36,
+      "nonoverlap_notes": 36,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 1.963189840375391e-09,
+        "q95": 6.6404741337373115e-09,
+        "max": 7.71533461887679e-09
+      },
+      "Note_ols": 0.2936393381524557,
+      "Note_shape": 0.29363933767652045,
+      "Full_ols": 0.19212146553471657,
+      "Full_shape": 0.37798249291046176,
+      "Error_ols": 1.6671227740603969,
+      "Error_shape": 1.6671227742205832
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/10-NunBitten/data.npz",
+      "eligible": 51,
+      "nonoverlap_notes": 51,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.826765509129416e-09,
+        "q95": 6.967282584986637e-09,
+        "max": 1.347392833628055e-08
+      },
+      "Note_ols": 0.18305128369537083,
+      "Note_shape": 0.18305128571363585,
+      "Full_ols": 0.23618049623845805,
+      "Full_shape": 0.4032058647771064,
+      "Error_ols": 1.801336139539896,
+      "Error_shape": 1.8013361402598866
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/01-AchGottundHerr/data.npz",
+      "eligible": 32,
+      "nonoverlap_notes": 32,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 1.8895784444584705e-09,
+        "q95": 6.696161742215803e-09,
+        "max": 9.580550366449672e-09
+      },
+      "Note_ols": 0.3412783751864456,
+      "Note_shape": 0.34127838018560996,
+      "Full_ols": 0.3140622766068849,
+      "Full_shape": 0.4754288909849312,
+      "Error_ols": 1.2015548508802738,
+      "Error_shape": 1.201554850808923
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/02-AchLiebenChristen/data.npz",
+      "eligible": 65,
+      "nonoverlap_notes": 65,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.1235732570389966e-09,
+        "q95": 9.152005031494155e-09,
+        "max": 1.048874930896804e-08
+      },
+      "Note_ols": 0.6013774552838967,
+      "Note_shape": 0.6013774574207129,
+      "Full_ols": 0.4499135055929967,
+      "Full_shape": 0.6078132879062188,
+      "Error_ols": 1.128811235618836,
+      "Error_shape": 1.128811235528843
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/03-ChristederdubistTagundLicht/data.npz",
+      "eligible": 42,
+      "nonoverlap_notes": 42,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.9494006493395343e-09,
+        "q95": 7.129291454467709e-09,
+        "max": 9.591009663840762e-09
+      },
+      "Note_ols": -0.5371424037032232,
+      "Note_shape": -0.5371424032396234,
+      "Full_ols": -0.18953220646992888,
+      "Full_shape": 0.05394280699566096,
+      "Error_ols": 1.0834001865592964,
+      "Error_shape": 1.0834001874403538
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/04-ChristeDuBeistand/data.npz",
+      "eligible": 52,
+      "nonoverlap_notes": 52,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.3066341771735833e-09,
+        "q95": 4.723539361400729e-09,
+        "max": 9.539993196651488e-09
+      },
+      "Note_ols": 0.6237369945186592,
+      "Note_shape": 0.6237369960056239,
+      "Full_ols": 0.5393720436162818,
+      "Full_shape": 0.4849119542175385,
+      "Error_ols": 1.2328345661257825,
+      "Error_shape": 1.23283456567777
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/05-DieNacht/data.npz",
+      "eligible": 50,
+      "nonoverlap_notes": 50,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.0252116402760555e-09,
+        "q95": 7.095015370562382e-09,
+        "max": 9.457391040769427e-09
+      },
+      "Note_ols": 0.003464611442154736,
+      "Note_shape": 0.0034646100151036296,
+      "Full_ols": 0.11644171039570092,
+      "Full_shape": 0.35677441452001357,
+      "Error_ols": 1.20717004641729,
+      "Error_shape": 1.2071700459953525
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/06-DieSonne/data.npz",
+      "eligible": 53,
+      "nonoverlap_notes": 53,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.04047151037908e-09,
+        "q95": 8.173105051144695e-09,
+        "max": 1.137040171032116e-08
+      },
+      "Note_ols": 0.5099612634868879,
+      "Note_shape": 0.5099612662615802,
+      "Full_ols": 0.4772055327595752,
+      "Full_shape": 0.6115078117228014,
+      "Error_ols": 1.2483810184001012,
+      "Error_shape": 1.2483810190848794
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/07-HerrGott/data.npz",
+      "eligible": 40,
+      "nonoverlap_notes": 40,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.7376436412815445e-09,
+        "q95": 4.713309240950316e-09,
+        "max": 7.09863795346291e-09
+      },
+      "Note_ols": -0.009989111194773824,
+      "Note_shape": -0.009989109664383058,
+      "Full_ols": 0.14911708650817895,
+      "Full_shape": 0.37015355605500805,
+      "Error_ols": 0.8976949037208103,
+      "Error_shape": 0.8976949035918323
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/08-FuerDeinenThron/data.npz",
+      "eligible": 38,
+      "nonoverlap_notes": 38,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.0549814345774515e-09,
+        "q95": 6.449537186617202e-09,
+        "max": 7.359298492490791e-09
+      },
+      "Note_ols": -0.1375968796488031,
+      "Note_shape": -0.13759687804440238,
+      "Full_ols": 0.13197895473754334,
+      "Full_shape": 0.47171501174382746,
+      "Error_ols": 0.990043307502585,
+      "Error_shape": 0.9900433074189059
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/09-Jesus/data.npz",
+      "eligible": 42,
+      "nonoverlap_notes": 42,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 1.86585264175213e-09,
+        "q95": 8.08807181150777e-09,
+        "max": 9.594588309403884e-09
+      },
+      "Note_ols": 0.13031905835927673,
+      "Note_shape": 0.13031905590824167,
+      "Full_ols": 0.1844140618423541,
+      "Full_shape": 0.342892559850599,
+      "Error_ols": 0.8953529593740054,
+      "Error_shape": 0.8953529587764378
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/10-NunBitten/data.npz",
+      "eligible": 61,
+      "nonoverlap_notes": 61,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.28988725692244e-09,
+        "q95": 6.802789090984173e-09,
+        "max": 1.107871694277045e-08
+      },
+      "Note_ols": 0.15079860140936674,
+      "Note_shape": 0.1507985981078391,
+      "Full_ols": 0.334314307585202,
+      "Full_shape": 0.4729533239918466,
+      "Error_ols": 1.2658349651791243,
+      "Error_shape": 1.2658349653261685
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/01-AchGottundHerr/data.npz",
+      "eligible": 37,
+      "nonoverlap_notes": 37,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 1.8360829728539393e-09,
+        "q95": 5.143698076557226e-09,
+        "max": 6.827609468768545e-09
+      },
+      "Note_ols": 0.39635134553404056,
+      "Note_shape": 0.39635134656496496,
+      "Full_ols": 0.37603826721512956,
+      "Full_shape": 0.4986275824705716,
+      "Error_ols": 1.0650988023877233,
+      "Error_shape": 1.065098802310129
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/02-AchLiebenChristen/data.npz",
+      "eligible": 72,
+      "nonoverlap_notes": 72,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.557990077878354e-09,
+        "q95": 7.0576895307701565e-09,
+        "max": 9.72606501733178e-09
+      },
+      "Note_ols": 0.42802174314246366,
+      "Note_shape": 0.42802174163493434,
+      "Full_ols": 0.3382333234967223,
+      "Full_shape": 0.44796523509300196,
+      "Error_ols": 1.0014176342611252,
+      "Error_shape": 1.0014176340591145
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/03-ChristederdubistTagundLicht/data.npz",
+      "eligible": 49,
+      "nonoverlap_notes": 49,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.9730280328627994e-09,
+        "q95": 8.11950180341169e-09,
+        "max": 1.0561956946421642e-08
+      },
+      "Note_ols": 0.5730079688958769,
+      "Note_shape": 0.5730079651966863,
+      "Full_ols": 0.3610368017070811,
+      "Full_shape": 0.5454756536438246,
+      "Error_ols": 0.993287931391056,
+      "Error_shape": 0.9932879315823924
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/04-ChristeDuBeistand/data.npz",
+      "eligible": 61,
+      "nonoverlap_notes": 61,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.1107802622805055e-09,
+        "q95": 7.130123150346233e-09,
+        "max": 1.1259455306556943e-08
+      },
+      "Note_ols": 0.7590362119798154,
+      "Note_shape": 0.7590362155192644,
+      "Full_ols": 0.6044662306742865,
+      "Full_shape": 0.6345050029713826,
+      "Error_ols": 1.1680616707941467,
+      "Error_shape": 1.1680616705002087
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/05-DieNacht/data.npz",
+      "eligible": 51,
+      "nonoverlap_notes": 51,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.1886997289753027e-09,
+        "q95": 6.468175034434899e-09,
+        "max": 1.036409604617932e-08
+      },
+      "Note_ols": 0.6885376948147306,
+      "Note_shape": 0.6885376934976015,
+      "Full_ols": 0.4943327901427372,
+      "Full_shape": 0.582096198776125,
+      "Error_ols": 1.152568493238457,
+      "Error_shape": 1.1525684932403422
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/06-DieSonne/data.npz",
+      "eligible": 57,
+      "nonoverlap_notes": 57,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 1.4497297826330087e-09,
+        "q95": 7.292906179523865e-09,
+        "max": 1.3526862282699542e-08
+      },
+      "Note_ols": 0.7110530843096233,
+      "Note_shape": 0.7110530868829106,
+      "Full_ols": 0.5637532078118205,
+      "Full_shape": 0.5953975758109606,
+      "Error_ols": 1.13025588057021,
+      "Error_shape": 1.1302558796521884
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/07-HerrGott/data.npz",
+      "eligible": 36,
+      "nonoverlap_notes": 36,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.390120821466972e-09,
+        "q95": 6.2727953193265144e-09,
+        "max": 8.013754344007652e-09
+      },
+      "Note_ols": 0.6330216843920635,
+      "Note_shape": 0.633021685867442,
+      "Full_ols": 0.453399692885616,
+      "Full_shape": 0.5453891466743843,
+      "Error_ols": 0.6650902342593756,
+      "Error_shape": 0.6650902345189919
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/08-FuerDeinenThron/data.npz",
+      "eligible": 37,
+      "nonoverlap_notes": 37,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 1.9079169832125304e-09,
+        "q95": 5.487596896932007e-09,
+        "max": 1.0091769366564256e-08
+      },
+      "Note_ols": 0.5795228410003295,
+      "Note_shape": 0.5795228407973673,
+      "Full_ols": 0.5607491112479417,
+      "Full_shape": 0.5690517405056793,
+      "Error_ols": 0.7812451425076786,
+      "Error_shape": 0.7812451428887404
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/09-Jesus/data.npz",
+      "eligible": 41,
+      "nonoverlap_notes": 41,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.3305226854566457e-09,
+        "q95": 7.633106805275264e-09,
+        "max": 1.005540604792963e-08
+      },
+      "Note_ols": 0.4424004389568034,
+      "Note_shape": 0.44240043631259796,
+      "Full_ols": 0.3347335371354398,
+      "Full_shape": 0.43651449111524304,
+      "Error_ols": 0.9142508071345077,
+      "Error_shape": 0.9142508075641546
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/10-NunBitten/data.npz",
+      "eligible": 59,
+      "nonoverlap_notes": 59,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.3238838187229954e-09,
+        "q95": 6.929069348272541e-09,
+        "max": 1.780986321924725e-08
+      },
+      "Note_ols": 0.3513241416586142,
+      "Note_shape": 0.3513241438468655,
+      "Full_ols": 0.2654815720612123,
+      "Full_shape": 0.35065052825008514,
+      "Error_ols": 1.0496818669091283,
+      "Error_shape": 1.0496818668158097
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/01-AchGottundHerr/data.npz",
+      "eligible": 36,
+      "nonoverlap_notes": 36,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 1.7650164153997413e-09,
+        "q95": 6.6739563032968665e-09,
+        "max": 1.1348104377171655e-08
+      },
+      "Note_ols": 0.1900764731929183,
+      "Note_shape": 0.1900764724026509,
+      "Full_ols": 0.18552931184719207,
+      "Full_shape": 0.3246222379464057,
+      "Error_ols": 0.8747495846315487,
+      "Error_shape": 0.8747495852716135
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/02-AchLiebenChristen/data.npz",
+      "eligible": 74,
+      "nonoverlap_notes": 74,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.301170197668205e-09,
+        "q95": 6.923880531997952e-09,
+        "max": 1.0021792273786944e-08
+      },
+      "Note_ols": 0.22317724502899933,
+      "Note_shape": 0.22317724428841773,
+      "Full_ols": 0.27357415088020987,
+      "Full_shape": 0.42449761109714995,
+      "Error_ols": 0.8183852385228587,
+      "Error_shape": 0.8183852381587122
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/03-ChristederdubistTagundLicht/data.npz",
+      "eligible": 53,
+      "nonoverlap_notes": 53,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.7849989706643803e-09,
+        "q95": 8.317396943655188e-09,
+        "max": 1.2553851444587179e-08
+      },
+      "Note_ols": 0.352665797102469,
+      "Note_shape": 0.3526657978845864,
+      "Full_ols": 0.25842141263084495,
+      "Full_shape": 0.4189356347460191,
+      "Error_ols": 0.7702385137036304,
+      "Error_shape": 0.7702385126075261
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/04-ChristeDuBeistand/data.npz",
+      "eligible": 65,
+      "nonoverlap_notes": 65,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 1.865400536289126e-09,
+        "q95": 1.0211090319793446e-08,
+        "max": 1.320110736615801e-08
+      },
+      "Note_ols": 0.08686862553690473,
+      "Note_shape": 0.08686862422060868,
+      "Full_ols": 0.18141063183953632,
+      "Full_shape": 0.3298198999633342,
+      "Error_ols": 0.8808782264256109,
+      "Error_shape": 0.8808782270734239
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/05-DieNacht/data.npz",
+      "eligible": 49,
+      "nonoverlap_notes": 49,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.761810490084447e-09,
+        "q95": 8.578197347607833e-09,
+        "max": 1.164729307634082e-08
+      },
+      "Note_ols": -0.10649289923110479,
+      "Note_shape": -0.10649289463356622,
+      "Full_ols": 0.05134496339929565,
+      "Full_shape": 0.23042629535400405,
+      "Error_ols": 0.8587012859364588,
+      "Error_shape": 0.8587012863158613
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/06-DieSonne/data.npz",
+      "eligible": 50,
+      "nonoverlap_notes": 50,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 1.9410888108708134e-09,
+        "q95": 6.836925749138591e-09,
+        "max": 7.454594660291735e-09
+      },
+      "Note_ols": 0.029713608744705793,
+      "Note_shape": 0.029713607165324982,
+      "Full_ols": 0.12068601259133345,
+      "Full_shape": 0.30522823673645244,
+      "Error_ols": 0.9485892792851794,
+      "Error_shape": 0.9485892794961163
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/07-HerrGott/data.npz",
+      "eligible": 81,
+      "nonoverlap_notes": 81,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.891424048769663e-09,
+        "q95": 8.372420711305894e-09,
+        "max": 1.130514394231627e-08
+      },
+      "Note_ols": 0.12180528010391921,
+      "Note_shape": 0.12180528279677053,
+      "Full_ols": 0.14996386889174135,
+      "Full_shape": 0.32013442357405875,
+      "Error_ols": 0.6493554749044239,
+      "Error_shape": 0.6493554745294017
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/08-FuerDeinenThron/data.npz",
+      "eligible": 42,
+      "nonoverlap_notes": 42,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.2735396972448002e-09,
+        "q95": 4.53208048885813e-09,
+        "max": 1.0052408592110523e-08
+      },
+      "Note_ols": 0.14090013072618854,
+      "Note_shape": 0.14090013252299916,
+      "Full_ols": 0.2454198900085999,
+      "Full_shape": 0.3565589428200986,
+      "Error_ols": 0.6614184148674368,
+      "Error_shape": 0.6614184151703812
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/09-Jesus/data.npz",
+      "eligible": 45,
+      "nonoverlap_notes": 45,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.0779701166425307e-09,
+        "q95": 6.209206609758349e-09,
+        "max": 9.784426781186628e-09
+      },
+      "Note_ols": -0.10106432132893738,
+      "Note_shape": -0.10106432215132223,
+      "Full_ols": 0.030178820856755918,
+      "Full_shape": 0.212642811625151,
+      "Error_ols": 0.6674741064538946,
+      "Error_shape": 0.667474106261997
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/10-NunBitten/data.npz",
+      "eligible": 62,
+      "nonoverlap_notes": 62,
+      "no_overlapping_frames": true,
+      "relative_mean_change": {
+        "median": 2.889496395423612e-09,
+        "q95": 6.919266312734259e-09,
+        "max": 8.442275686736535e-09
+      },
+      "Note_ols": -0.09630976625990216,
+      "Note_shape": -0.09630976624953422,
+      "Full_ols": 0.0991435509935817,
+      "Full_shape": 0.30405400029690804,
+      "Error_ols": 0.6289227363194058,
+      "Error_shape": 0.6289227362979113
+    },
+    {
+      "track": "datagen/solo/PHENICX/processed_vc/beethoven_cello/data.npz",
+      "eligible": 319,
+      "nonoverlap_notes": 235,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 4.8565375811466934e-09,
+        "q95": 0.007504637627233074,
+        "max": 0.04709925710082384
+      },
+      "Note_ols": -0.02180676148884999,
+      "Note_shape": -0.021631548322741168,
+      "Full_ols": 0.39319620422982055,
+      "Full_shape": 0.4448092271702166,
+      "Error_ols": 1.0330335591937012,
+      "Error_shape": 1.0337033621569776
+    },
+    {
+      "track": "datagen/solo/PHENICX/processed_bn/mozart_bassoon/data.npz",
+      "eligible": 265,
+      "nonoverlap_notes": 200,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 4.347955056498804e-09,
+        "q95": 0.0030909817325259995,
+        "max": 0.006188987803408428
+      },
+      "Note_ols": 0.12640763689844098,
+      "Note_shape": 0.12620025245452965,
+      "Full_ols": 0.8034329638952918,
+      "Full_shape": 0.8122458372773353,
+      "Error_ols": 1.4236744437716835,
+      "Error_shape": 1.423741293475232
+    },
+    {
+      "track": "datagen/solo/TRIOS/processed_vn/brahms_violin/data.npz",
+      "eligible": 49,
+      "nonoverlap_notes": 17,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 0.0014128173450589582,
+        "q95": 0.014663357251273906,
+        "max": 0.031035268835898494
+      },
+      "Note_ols": 0.19881182096739008,
+      "Note_shape": 0.19616348094120334,
+      "Full_ols": 0.5340123283632567,
+      "Full_shape": 0.5966078971099166,
+      "Error_ols": 0.6367990169984259,
+      "Error_shape": 0.6389557307737077
+    },
+    {
+      "track": "datagen/solo/TRIOS/processed_vn/schubert_violin/data.npz",
+      "eligible": 57,
+      "nonoverlap_notes": 13,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 0.00010320044747341808,
+        "q95": 0.012023440465132727,
+        "max": 0.015947835481832484
+      },
+      "Note_ols": 0.4128713286580749,
+      "Note_shape": 0.4195656390534865,
+      "Full_ols": 0.6079700669233186,
+      "Full_shape": 0.6179609610135736,
+      "Error_ols": 0.7505453687307384,
+      "Error_shape": 0.7498079291497425
+    },
+    {
+      "track": "datagen/solo/TRIOS/processed_va/mozart_viola/data.npz",
+      "eligible": 32,
+      "nonoverlap_notes": 24,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 2.5299312982610684e-09,
+        "q95": 0.010995050709651025,
+        "max": 0.03585849221168066
+      },
+      "Note_ols": 0.07922027263536591,
+      "Note_shape": 0.08212723689681938,
+      "Full_ols": 0.694996276068641,
+      "Full_shape": 0.6640998620958635,
+      "Error_ols": 0.955575284371925,
+      "Error_shape": 0.9559478238319157
+    },
+    {
+      "track": "datagen/solo/TRIOS/processed_vc/schubert_cello/data.npz",
+      "eligible": 53,
+      "nonoverlap_notes": 11,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 0.0033571375967288136,
+        "q95": 0.021121473656853157,
+        "max": 0.09023422080460279
+      },
+      "Note_ols": 0.27147947103754355,
+      "Note_shape": 0.2629828721539855,
+      "Full_ols": 0.5403481163817799,
+      "Full_shape": 0.5562209295933332,
+      "Error_ols": 0.6044629999978094,
+      "Error_shape": 0.6069167095499138
+    },
+    {
+      "track": "datagen/solo/TRIOS/processed_cl/mozart_clarinet/data.npz",
+      "eligible": 69,
+      "nonoverlap_notes": 28,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 0.00066520822651535,
+        "q95": 0.011602269824295006,
+        "max": 0.018739750494270326
+      },
+      "Note_ols": 0.47282734010280986,
+      "Note_shape": 0.47353252548586916,
+      "Full_ols": 0.6584750878045003,
+      "Full_shape": 0.6693343041276404,
+      "Error_ols": 1.3162244709677458,
+      "Error_shape": 1.3164326155361834
+    },
+    {
+      "track": "datagen/solo/TRIOS/processed_sax/take_five_saxophone/data.npz",
+      "eligible": 105,
+      "nonoverlap_notes": 3,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 0.005554014804261495,
+        "q95": 0.029774200420233883,
+        "max": 0.16453690825429612
+      },
+      "Note_ols": 0.16037567910049746,
+      "Note_shape": 0.15384738664874842,
+      "Full_ols": 0.7558009821770433,
+      "Full_shape": 0.756738281056542,
+      "Error_ols": 1.2980562292689604,
+      "Error_shape": 1.3064219613074366
+    },
+    {
+      "track": "datagen/solo/TRIOS/processed_tpt/lussier_trumpet/data.npz",
+      "eligible": 24,
+      "nonoverlap_notes": 15,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 5.842799623107436e-09,
+        "q95": 0.005684159128382148,
+        "max": 0.01058349948164028
+      },
+      "Note_ols": 0.6997381120068449,
+      "Note_shape": 0.7009771868575532,
+      "Full_ols": 0.7145589385110753,
+      "Full_shape": 0.7029032322883247,
+      "Error_ols": 1.6039166403540173,
+      "Error_shape": 1.6041490285620197
+    },
+    {
+      "track": "datagen/solo/TRIOS/processed_bn/lussier_bassoon/data.npz",
+      "eligible": 65,
+      "nonoverlap_notes": 51,
+      "no_overlapping_frames": false,
+      "relative_mean_change": {
+        "median": 4.522334071402373e-09,
+        "q95": 0.01506150780704849,
+        "max": 0.03479027624057878
+      },
+      "Note_ols": 0.5287370977487006,
+      "Note_shape": 0.5249984369214534,
+      "Full_ols": 0.6443855410543573,
+      "Full_shape": 0.6948846248813308,
+      "Error_ols": 0.813981581287562,
+      "Error_shape": 0.815809548026699
+    }
+  ],
+  "absolute_track_Note_change": {
+    "median": 3.0434133685419695e-09,
+    "q95": 0.0011171337232913775,
+    "max": 0.008496598883558026
+  },
+  "absolute_track_Error_change": {
+    "median": 4.252238838819977e-10,
+    "q95": 0.00019675781931277614,
+    "max": 0.008365732038476237
+  },
+  "fully_nonoverlapping_tracks": {
+    "n": 133,
+    "means": {
+      "Full_ols": 0.4673360239883109,
+      "Full_shape": 0.5460333446638915,
+      "Note_ols": 0.19654086583756172,
+      "Note_shape": 0.1965408664236184,
+      "Error_ols": 0.7418468575120349,
+      "Error_shape": 0.741846857483846
+    }
+  }
+}

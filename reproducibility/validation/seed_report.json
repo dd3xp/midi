@@ -1,0 +1,24 @@
+{
+  "mamba": {
+    "tracks_per_seed": 186,
+    "groups": 44,
+    "seeds": [
+      42,
+      123,
+      456
+    ],
+    "float_entries": 4089,
+    "max_abs_difference": 0.0
+  },
+  "s4d": {
+    "tracks_per_seed": 186,
+    "groups": 44,
+    "seeds": [
+      42,
+      123,
+      456
+    ],
+    "float_entries": 4089,
+    "max_abs_difference": 0.0
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "utc": "2026-09-16T08:09:18.093738+00:00",
+  "pid": 372,
+  "state": "complete",
+  "model": "s4d",
+  "completed": 30,
+  "total": 30,
+  "seconds": 82.3053179999988,
+  "frames_per_second": 2333.303818128815,
+  "prediction_sha256": "7a94174fba56d99458276d4ca643b7620a918fce5a1b27c6dc815fe1bcd4189a",
+  "peak_gpu_bytes": 1104608256
+}

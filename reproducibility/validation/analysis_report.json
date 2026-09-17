@@ -1,0 +1,111 @@
+{
+  "status": "passed",
+  "python": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+  "checks": [
+    {
+      "script": "check_manifest.py",
+      "exit_code": 0,
+      "seconds": 0.563,
+      "log": "check_manifest.py.log"
+    },
+    {
+      "script": "verify.py",
+      "exit_code": 0,
+      "seconds": 24.219,
+      "log": "verify.py.log"
+    },
+    {
+      "script": "verify_level_audit.py",
+      "exit_code": 0,
+      "seconds": 2.938,
+      "log": "verify_level_audit.py.log"
+    },
+    {
+      "script": "verify_public_rms.py",
+      "exit_code": 0,
+      "seconds": 2.906,
+      "log": "verify_public_rms.py.log"
+    },
+    {
+      "script": "refinement/verify_refinement.py",
+      "exit_code": 0,
+      "seconds": 1.641,
+      "log": "refinement_verify_refinement.py.log"
+    },
+    {
+      "script": "refinement/verify_all_predictors.py",
+      "exit_code": 0,
+      "seconds": 0.703,
+      "log": "refinement_verify_all_predictors.py.log"
+    },
+    {
+      "script": "refinement/verify_scale.py",
+      "exit_code": 0,
+      "seconds": 19.593,
+      "log": "refinement_verify_scale.py.log"
+    },
+    {
+      "script": "musicnet/reproduce_musicnet.py",
+      "exit_code": 0,
+      "seconds": 11.594,
+      "log": "musicnet_reproduce_musicnet.py.log"
+    },
+    {
+      "script": "template_preservation/audit_template_preservation.py",
+      "exit_code": 0,
+      "seconds": 1.078,
+      "log": "template_preservation_audit_template_preservation.py.log"
+    },
+    {
+      "script": "transfer_shape/audit_transfer_shape.py",
+      "exit_code": 0,
+      "seconds": 3.0,
+      "log": "transfer_shape_audit_transfer_shape.py.log"
+    },
+    {
+      "script": "duration_weights/audit_duration_weights.py",
+      "exit_code": 0,
+      "seconds": 0.891,
+      "log": "duration_weights_audit_duration_weights.py.log"
+    },
+    {
+      "script": "final_clarifications/audit_final_clarifications.py",
+      "exit_code": 0,
+      "seconds": 0.25,
+      "log": "final_clarifications_audit_final_clarifications.py.log"
+    },
+    {
+      "script": "round7/audit_round7.py",
+      "exit_code": 0,
+      "seconds": 2.453,
+      "log": "round7_audit_round7.py.log"
+    },
+    {
+      "script": "round7/verify_round7.py",
+      "exit_code": 0,
+      "seconds": 1.125,
+      "log": "round7_verify_round7.py.log"
+    },
+    {
+      "script": "acceptance/corpus_analysis.py",
+      "exit_code": 0,
+      "seconds": 2.297,
+      "log": "acceptance_corpus_analysis.py.log"
+    },
+    {
+      "script": "acceptance/public_directions.py",
+      "exit_code": 0,
+      "seconds": 1.609,
+      "log": "acceptance_public_directions.py.log"
+    }
+  ],
+  "seconds": 76.875,
+  "core_results": {
+    "status": "passed",
+    "metric_checks": 44640,
+    "paired_bootstrap_checks": 576,
+    "max_error": 6.328271240363392e-15,
+    "four_fold_group_roles_disjoint": true,
+    "numpy_version": "2.4.3"
+  }
+}

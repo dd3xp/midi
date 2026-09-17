@@ -1,0 +1,2 @@
+# Preserve exact bytes for the SHA256 manifests on Windows and Unix.
+* -text

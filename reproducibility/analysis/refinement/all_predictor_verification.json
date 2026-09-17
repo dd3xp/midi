@@ -1,0 +1,8 @@
+{
+  "utc": "2026-09-16T15:28:35.873452+00:00",
+  "status": "passed",
+  "numeric_checks": 120,
+  "maximum_error": 4.163336342344337e-16,
+  "method": "Recompute correlations and note log errors from supplied arrays using prefix sums; resample group-level counts independently.",
+  "results_sha256": "f0e6e6c68b6ee3586234be360e66f7fa12dc48af41ebe9fad78cf9a4399af6a4"
+}

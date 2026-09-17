@@ -1,0 +1,6049 @@
+{
+  "utc": "2026-09-16T09:32:11.572742+00:00",
+  "plan_sha256": "1c1aa47edbba3cb3fc328d0ae09af9d1b408cb798d001c2487dae55343cea686",
+  "arrays_sha256": "d58482206bc7f740098f8e53cb802f17eae8d9ebcb6712b8273ac69edfbefe0a",
+  "tracks": 133,
+  "per_track": [
+    {
+      "track": "datagen/solo/URMP/processed_vn/01_Jupiter_vn_vc_track1_vn/data.npz",
+      "group": "Jupiter",
+      "model": "mamba",
+      "notes": 92,
+      "Full": 0.5851408346153267,
+      "Note": 0.258483955143627,
+      "duration_Note": 0.33464356285377955
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/01_Jupiter_vn_vc_track1_vn/data.npz",
+      "group": "Jupiter",
+      "model": "s4d",
+      "notes": 92,
+      "Full": 0.5839370402394157,
+      "Note": 0.1718976823560524,
+      "duration_Note": 0.27832273993554846
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/01_Jupiter_vn_vc_track1_vn/data.npz",
+      "group": "Jupiter",
+      "model": "bigru",
+      "notes": 92,
+      "Full": 0.5372487434825733,
+      "Note": 0.01612150029112896,
+      "duration_Note": 0.17641212232552644
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/01_Jupiter_vn_vc_track1_vn/data.npz",
+      "group": "Jupiter",
+      "model": "instrument_ols",
+      "notes": 92,
+      "Full": 0.5234856305064548,
+      "Note": 0.041071149751218554,
+      "duration_Note": 0.22763345201972987
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/01_Jupiter_vn_vc_track1_vn/data.npz",
+      "group": "Jupiter",
+      "model": "note_shape",
+      "notes": 92,
+      "Full": 0.5543864874020279,
+      "Note": 0.13760390229968394,
+      "duration_Note": 0.083447082233573
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/02_Sonata_vn_vn_track1_vn/data.npz",
+      "group": "Sonata",
+      "model": "mamba",
+      "notes": 82,
+      "Full": 0.5255971207453857,
+      "Note": 0.2933210498217637,
+      "duration_Note": 0.2659501708124238
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/02_Sonata_vn_vn_track1_vn/data.npz",
+      "group": "Sonata",
+      "model": "s4d",
+      "notes": 82,
+      "Full": 0.6065268453620528,
+      "Note": 0.5718429396814341,
+      "duration_Note": 0.5574259279407965
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/02_Sonata_vn_vn_track1_vn/data.npz",
+      "group": "Sonata",
+      "model": "bigru",
+      "notes": 82,
+      "Full": 0.5184403713752554,
+      "Note": 0.2175012530291667,
+      "duration_Note": 0.2434239314703697
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/02_Sonata_vn_vn_track1_vn/data.npz",
+      "group": "Sonata",
+      "model": "instrument_ols",
+      "notes": 82,
+      "Full": 0.5790383452911833,
+      "Note": 0.5556521790196998,
+      "duration_Note": 0.6317261980409973
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/02_Sonata_vn_vn_track1_vn/data.npz",
+      "group": "Sonata",
+      "model": "note_shape",
+      "notes": 82,
+      "Full": 0.3461477297098677,
+      "Note": -0.43478117593030147,
+      "duration_Note": -0.35675838675410665
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/02_Sonata_vn_vn_track2_vn/data.npz",
+      "group": "Sonata",
+      "model": "mamba",
+      "notes": 50,
+      "Full": 0.38470123598464145,
+      "Note": -0.005922789433139886,
+      "duration_Note": -0.023358909290911403
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/02_Sonata_vn_vn_track2_vn/data.npz",
+      "group": "Sonata",
+      "model": "s4d",
+      "notes": 50,
+      "Full": 0.3576465891752652,
+      "Note": 0.025677324594559257,
+      "duration_Note": 0.0005164702553032879
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/02_Sonata_vn_vn_track2_vn/data.npz",
+      "group": "Sonata",
+      "model": "bigru",
+      "notes": 50,
+      "Full": 0.3725187048300897,
+      "Note": -0.04344601105387893,
+      "duration_Note": -0.16335088221402466
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/02_Sonata_vn_vn_track2_vn/data.npz",
+      "group": "Sonata",
+      "model": "instrument_ols",
+      "notes": 50,
+      "Full": 0.289154288155289,
+      "Note": -0.017788912004797198,
+      "duration_Note": -0.07843384324599133
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/02_Sonata_vn_vn_track2_vn/data.npz",
+      "group": "Sonata",
+      "model": "note_shape",
+      "notes": 50,
+      "Full": 0.41453954097596213,
+      "Note": 0.09282064942498315,
+      "duration_Note": 0.09955549813601673
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/08_Spring_fl_vn_track2_vn/data.npz",
+      "group": "Spring",
+      "model": "mamba",
+      "notes": 94,
+      "Full": 0.5943698045152799,
+      "Note": 0.1911070416535025,
+      "duration_Note": 0.2536356972059419
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/08_Spring_fl_vn_track2_vn/data.npz",
+      "group": "Spring",
+      "model": "s4d",
+      "notes": 94,
+      "Full": 0.6193273431551825,
+      "Note": 0.1911665869638053,
+      "duration_Note": 0.31181281375939435
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/08_Spring_fl_vn_track2_vn/data.npz",
+      "group": "Spring",
+      "model": "bigru",
+      "notes": 94,
+      "Full": 0.5749711172329083,
+      "Note": 0.05387476383959489,
+      "duration_Note": 0.15261120431365088
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/08_Spring_fl_vn_track2_vn/data.npz",
+      "group": "Spring",
+      "model": "instrument_ols",
+      "notes": 94,
+      "Full": 0.4846713724556496,
+      "Note": 0.1832637132680133,
+      "duration_Note": 0.2655041910767514
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/08_Spring_fl_vn_track2_vn/data.npz",
+      "group": "Spring",
+      "model": "note_shape",
+      "notes": 94,
+      "Full": 0.48150534243022153,
+      "Note": -0.09153548655656653,
+      "duration_Note": -0.1325615819431404
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/13_Hark_vn_vn_va_track2_vn/data.npz",
+      "group": "Hark",
+      "model": "mamba",
+      "notes": 73,
+      "Full": 0.5364418674863137,
+      "Note": 0.30444457570599254,
+      "duration_Note": 0.37272168362278896
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/13_Hark_vn_vn_va_track2_vn/data.npz",
+      "group": "Hark",
+      "model": "s4d",
+      "notes": 73,
+      "Full": 0.5525910417475457,
+      "Note": 0.32764989827353275,
+      "duration_Note": 0.4057383036722942
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/13_Hark_vn_vn_va_track2_vn/data.npz",
+      "group": "Hark",
+      "model": "bigru",
+      "notes": 73,
+      "Full": 0.5097880911701933,
+      "Note": 0.16815796020433818,
+      "duration_Note": 0.27292506448522075
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/13_Hark_vn_vn_va_track2_vn/data.npz",
+      "group": "Hark",
+      "model": "instrument_ols",
+      "notes": 73,
+      "Full": 0.4452261807639899,
+      "Note": 0.09141847596627063,
+      "duration_Note": 0.2118271008019566
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/13_Hark_vn_vn_va_track2_vn/data.npz",
+      "group": "Hark",
+      "model": "note_shape",
+      "notes": 73,
+      "Full": 0.48582535128265536,
+      "Note": 0.19021262491449015,
+      "duration_Note": 0.1349901254487407
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/17_Nocturne_vn_fl_cl_track1_vn/data.npz",
+      "group": "Nocturne",
+      "model": "mamba",
+      "notes": 138,
+      "Full": 0.45040507085938636,
+      "Note": 0.13510735276813918,
+      "duration_Note": 0.24045602362809285
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/17_Nocturne_vn_fl_cl_track1_vn/data.npz",
+      "group": "Nocturne",
+      "model": "s4d",
+      "notes": 138,
+      "Full": 0.48766583490280624,
+      "Note": 0.2746488094561104,
+      "duration_Note": 0.34072250803080495
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/17_Nocturne_vn_fl_cl_track1_vn/data.npz",
+      "group": "Nocturne",
+      "model": "bigru",
+      "notes": 138,
+      "Full": 0.47864234232242386,
+      "Note": 0.255156976699908,
+      "duration_Note": 0.2960555785221003
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/17_Nocturne_vn_fl_cl_track1_vn/data.npz",
+      "group": "Nocturne",
+      "model": "instrument_ols",
+      "notes": 138,
+      "Full": 0.46487546175128025,
+      "Note": 0.30794436299529754,
+      "duration_Note": 0.3951717425484766
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/17_Nocturne_vn_fl_cl_track1_vn/data.npz",
+      "group": "Nocturne",
+      "model": "note_shape",
+      "notes": 138,
+      "Full": 0.2612582316458544,
+      "Note": -0.37004199666939286,
+      "duration_Note": -0.33830334388692
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/18_Nocturne_vn_fl_tpt_track1_vn/data.npz",
+      "group": "Nocturne",
+      "model": "mamba",
+      "notes": 136,
+      "Full": 0.4537980624882851,
+      "Note": 0.17899943240311553,
+      "duration_Note": 0.26516290528562303
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/18_Nocturne_vn_fl_tpt_track1_vn/data.npz",
+      "group": "Nocturne",
+      "model": "s4d",
+      "notes": 136,
+      "Full": 0.4770175747676915,
+      "Note": 0.30034172353907795,
+      "duration_Note": 0.33896805150344544
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/18_Nocturne_vn_fl_tpt_track1_vn/data.npz",
+      "group": "Nocturne",
+      "model": "bigru",
+      "notes": 136,
+      "Full": 0.4678085306116061,
+      "Note": 0.26556738680965747,
+      "duration_Note": 0.2844629910141655
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/18_Nocturne_vn_fl_tpt_track1_vn/data.npz",
+      "group": "Nocturne",
+      "model": "instrument_ols",
+      "notes": 136,
+      "Full": 0.45227507734139805,
+      "Note": 0.30171249992551663,
+      "duration_Note": 0.37627647312311946
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/18_Nocturne_vn_fl_tpt_track1_vn/data.npz",
+      "group": "Nocturne",
+      "model": "note_shape",
+      "notes": 136,
+      "Full": 0.2553381327731678,
+      "Note": -0.37142167607418697,
+      "duration_Note": -0.3442474249392607
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/19_Pavane_cl_vn_vc_track2_vn/data.npz",
+      "group": "Pavane",
+      "model": "mamba",
+      "notes": 211,
+      "Full": 0.5762359017700386,
+      "Note": 0.15793388880910444,
+      "duration_Note": 0.19504869519528914
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/19_Pavane_cl_vn_vc_track2_vn/data.npz",
+      "group": "Pavane",
+      "model": "s4d",
+      "notes": 211,
+      "Full": 0.5737657015437737,
+      "Note": 0.17362564573765937,
+      "duration_Note": 0.2617272087554924
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/19_Pavane_cl_vn_vc_track2_vn/data.npz",
+      "group": "Pavane",
+      "model": "bigru",
+      "notes": 211,
+      "Full": 0.5602548598501527,
+      "Note": 0.1728731197602739,
+      "duration_Note": 0.2038097098234917
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/19_Pavane_cl_vn_vc_track2_vn/data.npz",
+      "group": "Pavane",
+      "model": "instrument_ols",
+      "notes": 211,
+      "Full": 0.4265843688338912,
+      "Note": 0.19164929000534234,
+      "duration_Note": 0.11801209183944959
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/19_Pavane_cl_vn_vc_track2_vn/data.npz",
+      "group": "Pavane",
+      "model": "note_shape",
+      "notes": 211,
+      "Full": 0.5348298756660382,
+      "Note": 0.1467895643315923,
+      "duration_Note": 0.08830286861689503
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/20_Pavane_tpt_vn_vc_track2_vn/data.npz",
+      "group": "Pavane",
+      "model": "mamba",
+      "notes": 211,
+      "Full": 0.5762359015241819,
+      "Note": 0.15793389479254225,
+      "duration_Note": 0.19504869813497214
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/20_Pavane_tpt_vn_vc_track2_vn/data.npz",
+      "group": "Pavane",
+      "model": "s4d",
+      "notes": 211,
+      "Full": 0.573765701344414,
+      "Note": 0.17362565159608315,
+      "duration_Note": 0.2617272110350585
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/20_Pavane_tpt_vn_vc_track2_vn/data.npz",
+      "group": "Pavane",
+      "model": "bigru",
+      "notes": 211,
+      "Full": 0.5602548592012584,
+      "Note": 0.17287312471141694,
+      "duration_Note": 0.20380971129670647
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/20_Pavane_tpt_vn_vc_track2_vn/data.npz",
+      "group": "Pavane",
+      "model": "instrument_ols",
+      "notes": 211,
+      "Full": 0.4265843681676954,
+      "Note": 0.19164929238624578,
+      "duration_Note": 0.11801209148368108
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/20_Pavane_tpt_vn_vc_track2_vn/data.npz",
+      "group": "Pavane",
+      "model": "note_shape",
+      "notes": 211,
+      "Full": 0.5348298752349614,
+      "Note": 0.14678956894583792,
+      "duration_Note": 0.08830287060982014
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/24_Pirates_vn_vn_va_vc_track1_vn/data.npz",
+      "group": "Pirates",
+      "model": "mamba",
+      "notes": 133,
+      "Full": 0.48676723573859915,
+      "Note": 0.23595926540510848,
+      "duration_Note": 0.14716168978700167
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/24_Pirates_vn_vn_va_vc_track1_vn/data.npz",
+      "group": "Pirates",
+      "model": "s4d",
+      "notes": 133,
+      "Full": 0.47291016078489223,
+      "Note": 0.27189054771526344,
+      "duration_Note": 0.15664584153067893
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/24_Pirates_vn_vn_va_vc_track1_vn/data.npz",
+      "group": "Pirates",
+      "model": "bigru",
+      "notes": 133,
+      "Full": 0.507187114327414,
+      "Note": 0.32677106381045123,
+      "duration_Note": 0.33531483198623047
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/24_Pirates_vn_vn_va_vc_track1_vn/data.npz",
+      "group": "Pirates",
+      "model": "instrument_ols",
+      "notes": 133,
+      "Full": 0.42318517013050017,
+      "Note": 0.2450792000161683,
+      "duration_Note": 0.17151040459687958
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/24_Pirates_vn_vn_va_vc_track1_vn/data.npz",
+      "group": "Pirates",
+      "model": "note_shape",
+      "notes": 133,
+      "Full": 0.42081296970526494,
+      "Note": -0.057645121937946985,
+      "duration_Note": -0.2479640086861753
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/24_Pirates_vn_vn_va_vc_track2_vn/data.npz",
+      "group": "Pirates",
+      "model": "mamba",
+      "notes": 87,
+      "Full": 0.3993919952813177,
+      "Note": 0.3675960317034818,
+      "duration_Note": 0.23368839541799635
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/24_Pirates_vn_vn_va_vc_track2_vn/data.npz",
+      "group": "Pirates",
+      "model": "s4d",
+      "notes": 87,
+      "Full": 0.29620552817948553,
+      "Note": 0.10207279597255205,
+      "duration_Note": 0.0007767201283903413
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/24_Pirates_vn_vn_va_vc_track2_vn/data.npz",
+      "group": "Pirates",
+      "model": "bigru",
+      "notes": 87,
+      "Full": 0.43217580663415905,
+      "Note": 0.3801564436878313,
+      "duration_Note": 0.2761573426615326
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/24_Pirates_vn_vn_va_vc_track2_vn/data.npz",
+      "group": "Pirates",
+      "model": "instrument_ols",
+      "notes": 87,
+      "Full": 0.5033449395647068,
+      "Note": 0.623077047240372,
+      "duration_Note": 0.5635777941914851
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/24_Pirates_vn_vn_va_vc_track2_vn/data.npz",
+      "group": "Pirates",
+      "model": "note_shape",
+      "notes": 87,
+      "Full": 0.2850056802083684,
+      "Note": -0.18813516805742966,
+      "duration_Note": -0.2252855727160149
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/25_Pirates_vn_vn_va_sax_track1_vn/data.npz",
+      "group": "Pirates",
+      "model": "mamba",
+      "notes": 133,
+      "Full": 0.48676723573859915,
+      "Note": 0.23595926540510848,
+      "duration_Note": 0.14716168978700167
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/25_Pirates_vn_vn_va_sax_track1_vn/data.npz",
+      "group": "Pirates",
+      "model": "s4d",
+      "notes": 133,
+      "Full": 0.47291016078489223,
+      "Note": 0.27189054771526344,
+      "duration_Note": 0.15664584153067893
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/25_Pirates_vn_vn_va_sax_track1_vn/data.npz",
+      "group": "Pirates",
+      "model": "bigru",
+      "notes": 133,
+      "Full": 0.507187114327414,
+      "Note": 0.32677106381045123,
+      "duration_Note": 0.33531483198623047
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/25_Pirates_vn_vn_va_sax_track1_vn/data.npz",
+      "group": "Pirates",
+      "model": "instrument_ols",
+      "notes": 133,
+      "Full": 0.42318517013050017,
+      "Note": 0.2450792000161683,
+      "duration_Note": 0.17151040459687958
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/25_Pirates_vn_vn_va_sax_track1_vn/data.npz",
+      "group": "Pirates",
+      "model": "note_shape",
+      "notes": 133,
+      "Full": 0.42081296970526494,
+      "Note": -0.057645121937946985,
+      "duration_Note": -0.2479640086861753
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/25_Pirates_vn_vn_va_sax_track2_vn/data.npz",
+      "group": "Pirates",
+      "model": "mamba",
+      "notes": 87,
+      "Full": 0.3993919963053945,
+      "Note": 0.36759603095209925,
+      "duration_Note": 0.23368839691653495
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/25_Pirates_vn_vn_va_sax_track2_vn/data.npz",
+      "group": "Pirates",
+      "model": "s4d",
+      "notes": 87,
+      "Full": 0.29620552927108407,
+      "Note": 0.10207279628800979,
+      "duration_Note": 0.0007767226360591335
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/25_Pirates_vn_vn_va_sax_track2_vn/data.npz",
+      "group": "Pirates",
+      "model": "bigru",
+      "notes": 87,
+      "Full": 0.43217580726521976,
+      "Note": 0.3801564417954084,
+      "duration_Note": 0.27615734332023045
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/25_Pirates_vn_vn_va_sax_track2_vn/data.npz",
+      "group": "Pirates",
+      "model": "instrument_ols",
+      "notes": 87,
+      "Full": 0.5033449407525225,
+      "Note": 0.6230770469401531,
+      "duration_Note": 0.5635777943090314
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/25_Pirates_vn_vn_va_sax_track2_vn/data.npz",
+      "group": "Pirates",
+      "model": "note_shape",
+      "notes": 87,
+      "Full": 0.2850056811995448,
+      "Note": -0.18813516697028426,
+      "duration_Note": -0.22528557108123914
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/26_King_vn_vn_va_vc_track1_vn/data.npz",
+      "group": "King",
+      "model": "mamba",
+      "notes": 228,
+      "Full": 0.5567121215927151,
+      "Note": 0.22268779438336445,
+      "duration_Note": 0.3266841196056225
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/26_King_vn_vn_va_vc_track1_vn/data.npz",
+      "group": "King",
+      "model": "s4d",
+      "notes": 228,
+      "Full": 0.48642418033456897,
+      "Note": -0.03838841013524967,
+      "duration_Note": 0.21380450377145152
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/26_King_vn_vn_va_vc_track1_vn/data.npz",
+      "group": "King",
+      "model": "bigru",
+      "notes": 228,
+      "Full": 0.5099227575047589,
+      "Note": 0.175326735656155,
+      "duration_Note": 0.24227755226759734
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/26_King_vn_vn_va_vc_track1_vn/data.npz",
+      "group": "King",
+      "model": "instrument_ols",
+      "notes": 228,
+      "Full": 0.4397368592797276,
+      "Note": 0.12821151085251792,
+      "duration_Note": 0.2938419251410897
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/26_King_vn_vn_va_vc_track1_vn/data.npz",
+      "group": "King",
+      "model": "note_shape",
+      "notes": 228,
+      "Full": 0.43153307201348984,
+      "Note": 0.0693248675473567,
+      "duration_Note": 0.025169269278996022
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/26_King_vn_vn_va_vc_track2_vn/data.npz",
+      "group": "King",
+      "model": "mamba",
+      "notes": 211,
+      "Full": 0.6413055093384189,
+      "Note": 0.08953442366343169,
+      "duration_Note": 0.02982534693772259
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/26_King_vn_vn_va_vc_track2_vn/data.npz",
+      "group": "King",
+      "model": "s4d",
+      "notes": 211,
+      "Full": 0.5409082917963421,
+      "Note": -0.29262731361068606,
+      "duration_Note": -0.37972156795253537
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/26_King_vn_vn_va_vc_track2_vn/data.npz",
+      "group": "King",
+      "model": "bigru",
+      "notes": 211,
+      "Full": 0.6294501467747036,
+      "Note": 0.2226168281546864,
+      "duration_Note": 0.16448169226754167
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/26_King_vn_vn_va_vc_track2_vn/data.npz",
+      "group": "King",
+      "model": "instrument_ols",
+      "notes": 211,
+      "Full": 0.36494747219620455,
+      "Note": -0.3365356244962391,
+      "duration_Note": -0.48917667967654255
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/26_King_vn_vn_va_vc_track2_vn/data.npz",
+      "group": "King",
+      "model": "note_shape",
+      "notes": 211,
+      "Full": 0.6268502293107148,
+      "Note": 0.3354087813924931,
+      "duration_Note": 0.35291742974927914
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/27_King_vn_vn_va_sax_track1_vn/data.npz",
+      "group": "King",
+      "model": "mamba",
+      "notes": 228,
+      "Full": 0.5567121215927151,
+      "Note": 0.22268779438336445,
+      "duration_Note": 0.3266841196056225
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/27_King_vn_vn_va_sax_track1_vn/data.npz",
+      "group": "King",
+      "model": "s4d",
+      "notes": 228,
+      "Full": 0.48642418033456897,
+      "Note": -0.03838841013524967,
+      "duration_Note": 0.21380450377145152
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/27_King_vn_vn_va_sax_track1_vn/data.npz",
+      "group": "King",
+      "model": "bigru",
+      "notes": 228,
+      "Full": 0.5099227575047589,
+      "Note": 0.175326735656155,
+      "duration_Note": 0.24227755226759734
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/27_King_vn_vn_va_sax_track1_vn/data.npz",
+      "group": "King",
+      "model": "instrument_ols",
+      "notes": 228,
+      "Full": 0.4397368592797276,
+      "Note": 0.12821151085251792,
+      "duration_Note": 0.2938419251410897
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/27_King_vn_vn_va_sax_track1_vn/data.npz",
+      "group": "King",
+      "model": "note_shape",
+      "notes": 228,
+      "Full": 0.43153307201348984,
+      "Note": 0.0693248675473567,
+      "duration_Note": 0.025169269278996022
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/27_King_vn_vn_va_sax_track2_vn/data.npz",
+      "group": "King",
+      "model": "mamba",
+      "notes": 211,
+      "Full": 0.6413055093384189,
+      "Note": 0.08953442366343169,
+      "duration_Note": 0.02982534693772259
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/27_King_vn_vn_va_sax_track2_vn/data.npz",
+      "group": "King",
+      "model": "s4d",
+      "notes": 211,
+      "Full": 0.5409082917963421,
+      "Note": -0.29262731361068606,
+      "duration_Note": -0.37972156795253537
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/27_King_vn_vn_va_sax_track2_vn/data.npz",
+      "group": "King",
+      "model": "bigru",
+      "notes": 211,
+      "Full": 0.6294501467747036,
+      "Note": 0.2226168281546864,
+      "duration_Note": 0.16448169226754167
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/27_King_vn_vn_va_sax_track2_vn/data.npz",
+      "group": "King",
+      "model": "instrument_ols",
+      "notes": 211,
+      "Full": 0.36494747219620455,
+      "Note": -0.3365356244962391,
+      "duration_Note": -0.48917667967654255
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/27_King_vn_vn_va_sax_track2_vn/data.npz",
+      "group": "King",
+      "model": "note_shape",
+      "notes": 211,
+      "Full": 0.6268502293107148,
+      "Note": 0.3354087813924931,
+      "duration_Note": 0.35291742974927914
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/32_Fugue_vn_vn_va_vc_track1_vn/data.npz",
+      "group": "Fugue",
+      "model": "mamba",
+      "notes": 244,
+      "Full": 0.4926083334082195,
+      "Note": 0.18308329213690278,
+      "duration_Note": 0.3160353193208267
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/32_Fugue_vn_vn_va_vc_track1_vn/data.npz",
+      "group": "Fugue",
+      "model": "s4d",
+      "notes": 244,
+      "Full": 0.4884956244020159,
+      "Note": 0.09433846657100457,
+      "duration_Note": 0.26888650747540876
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/32_Fugue_vn_vn_va_vc_track1_vn/data.npz",
+      "group": "Fugue",
+      "model": "bigru",
+      "notes": 244,
+      "Full": 0.49025478340505974,
+      "Note": 0.24501532193957754,
+      "duration_Note": 0.3547224691485522
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/32_Fugue_vn_vn_va_vc_track1_vn/data.npz",
+      "group": "Fugue",
+      "model": "instrument_ols",
+      "notes": 244,
+      "Full": 0.5168982738406082,
+      "Note": 0.38358273963640294,
+      "duration_Note": 0.427578827943987
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/32_Fugue_vn_vn_va_vc_track1_vn/data.npz",
+      "group": "Fugue",
+      "model": "note_shape",
+      "notes": 244,
+      "Full": 0.480294033052406,
+      "Note": 0.13855735593262472,
+      "duration_Note": 0.2469908852246554
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/38_Jerusalem_vn_vn_va_vc_db_track1_vn/data.npz",
+      "group": "Jerusalem",
+      "model": "mamba",
+      "notes": 171,
+      "Full": 0.2966785422515442,
+      "Note": 0.043774623036122895,
+      "duration_Note": 0.13540540496023087
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/38_Jerusalem_vn_vn_va_vc_db_track1_vn/data.npz",
+      "group": "Jerusalem",
+      "model": "s4d",
+      "notes": 171,
+      "Full": 0.3039047562342354,
+      "Note": 0.05229959224734427,
+      "duration_Note": 0.12083704008563692
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/38_Jerusalem_vn_vn_va_vc_db_track1_vn/data.npz",
+      "group": "Jerusalem",
+      "model": "bigru",
+      "notes": 171,
+      "Full": 0.24781062279515928,
+      "Note": -0.06904850021951388,
+      "duration_Note": 0.0362270713310242
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/38_Jerusalem_vn_vn_va_vc_db_track1_vn/data.npz",
+      "group": "Jerusalem",
+      "model": "instrument_ols",
+      "notes": 171,
+      "Full": 0.1790118898192789,
+      "Note": 0.00828239101476594,
+      "duration_Note": 0.040537187753624686
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/38_Jerusalem_vn_vn_va_vc_db_track1_vn/data.npz",
+      "group": "Jerusalem",
+      "model": "note_shape",
+      "notes": 171,
+      "Full": 0.29757912296573247,
+      "Note": 0.03350336485718068,
+      "duration_Note": 0.11735129269898621
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/39_Jerusalem_vn_vn_va_sax_db_track1_vn/data.npz",
+      "group": "Jerusalem",
+      "model": "mamba",
+      "notes": 171,
+      "Full": 0.2966785422515442,
+      "Note": 0.043774623036122895,
+      "duration_Note": 0.13540540496023087
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/39_Jerusalem_vn_vn_va_sax_db_track1_vn/data.npz",
+      "group": "Jerusalem",
+      "model": "s4d",
+      "notes": 171,
+      "Full": 0.30390473081501934,
+      "Note": 0.052299586389092295,
+      "duration_Note": 0.1208369576732684
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/39_Jerusalem_vn_vn_va_sax_db_track1_vn/data.npz",
+      "group": "Jerusalem",
+      "model": "bigru",
+      "notes": 171,
+      "Full": 0.24781062279515928,
+      "Note": -0.06904850021951388,
+      "duration_Note": 0.0362270713310242
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/39_Jerusalem_vn_vn_va_sax_db_track1_vn/data.npz",
+      "group": "Jerusalem",
+      "model": "instrument_ols",
+      "notes": 171,
+      "Full": 0.1790118898192789,
+      "Note": 0.00828239101476594,
+      "duration_Note": 0.040537187753624686
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vn/39_Jerusalem_vn_vn_va_sax_db_track1_vn/data.npz",
+      "group": "Jerusalem",
+      "model": "note_shape",
+      "notes": 171,
+      "Full": 0.29757912296573247,
+      "Note": 0.03350336485718068,
+      "duration_Note": 0.11735129269898621
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/13_Hark_vn_vn_va_track3_va/data.npz",
+      "group": "Hark",
+      "model": "mamba",
+      "notes": 70,
+      "Full": 0.5079689885008014,
+      "Note": 0.31805811867536715,
+      "duration_Note": 0.4060264559994982
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/13_Hark_vn_vn_va_track3_va/data.npz",
+      "group": "Hark",
+      "model": "s4d",
+      "notes": 70,
+      "Full": 0.5514943590957354,
+      "Note": 0.4360893762919305,
+      "duration_Note": 0.5115075190022438
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/13_Hark_vn_vn_va_track3_va/data.npz",
+      "group": "Hark",
+      "model": "bigru",
+      "notes": 70,
+      "Full": 0.5149387933539357,
+      "Note": 0.31324163402972804,
+      "duration_Note": 0.3185125131555784
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/13_Hark_vn_vn_va_track3_va/data.npz",
+      "group": "Hark",
+      "model": "instrument_ols",
+      "notes": 70,
+      "Full": 0.4592351259346014,
+      "Note": 0.3375144438403117,
+      "duration_Note": 0.33258513873622186
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/13_Hark_vn_vn_va_track3_va/data.npz",
+      "group": "Hark",
+      "model": "note_shape",
+      "notes": 70,
+      "Full": 0.44295792858094374,
+      "Note": 0.0005181070610116068,
+      "duration_Note": 0.09786264539677264
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/24_Pirates_vn_vn_va_vc_track3_va/data.npz",
+      "group": "Pirates",
+      "model": "mamba",
+      "notes": 135,
+      "Full": 0.48709110733178035,
+      "Note": -0.12201133677097677,
+      "duration_Note": -0.09903774661161499
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/24_Pirates_vn_vn_va_vc_track3_va/data.npz",
+      "group": "Pirates",
+      "model": "s4d",
+      "notes": 135,
+      "Full": 0.43872964186647406,
+      "Note": -0.16837442725705662,
+      "duration_Note": -0.2373452570428534
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/24_Pirates_vn_vn_va_vc_track3_va/data.npz",
+      "group": "Pirates",
+      "model": "bigru",
+      "notes": 135,
+      "Full": 0.5097029819959494,
+      "Note": -0.027999776918669575,
+      "duration_Note": -0.12954624573762516
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/24_Pirates_vn_vn_va_vc_track3_va/data.npz",
+      "group": "Pirates",
+      "model": "instrument_ols",
+      "notes": 135,
+      "Full": 0.4222802711902604,
+      "Note": -0.2873558559502812,
+      "duration_Note": -0.1483361005888095
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/24_Pirates_vn_vn_va_vc_track3_va/data.npz",
+      "group": "Pirates",
+      "model": "note_shape",
+      "notes": 135,
+      "Full": 0.5479006090308114,
+      "Note": 0.22740296864081447,
+      "duration_Note": 0.09951341469932887
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/25_Pirates_vn_vn_va_sax_track3_va/data.npz",
+      "group": "Pirates",
+      "model": "mamba",
+      "notes": 135,
+      "Full": 0.48709110733178035,
+      "Note": -0.12201133677097677,
+      "duration_Note": -0.09903774661161499
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/25_Pirates_vn_vn_va_sax_track3_va/data.npz",
+      "group": "Pirates",
+      "model": "s4d",
+      "notes": 135,
+      "Full": 0.43872964186647406,
+      "Note": -0.16837442725705662,
+      "duration_Note": -0.2373452570428534
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/25_Pirates_vn_vn_va_sax_track3_va/data.npz",
+      "group": "Pirates",
+      "model": "bigru",
+      "notes": 135,
+      "Full": 0.5097029819959494,
+      "Note": -0.027999776918669575,
+      "duration_Note": -0.12954624573762516
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/25_Pirates_vn_vn_va_sax_track3_va/data.npz",
+      "group": "Pirates",
+      "model": "instrument_ols",
+      "notes": 135,
+      "Full": 0.4222802711902604,
+      "Note": -0.2873558559502812,
+      "duration_Note": -0.1483361005888095
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/25_Pirates_vn_vn_va_sax_track3_va/data.npz",
+      "group": "Pirates",
+      "model": "note_shape",
+      "notes": 135,
+      "Full": 0.5479006090308114,
+      "Note": 0.22740296864081447,
+      "duration_Note": 0.09951341469932887
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/26_King_vn_vn_va_vc_track3_va/data.npz",
+      "group": "King",
+      "model": "mamba",
+      "notes": 217,
+      "Full": 0.5954032444437147,
+      "Note": 0.15591452335521913,
+      "duration_Note": 0.0945967398962263
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/26_King_vn_vn_va_vc_track3_va/data.npz",
+      "group": "King",
+      "model": "s4d",
+      "notes": 217,
+      "Full": 0.5162530499464089,
+      "Note": -0.102713396979663,
+      "duration_Note": -0.1497266432360957
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/26_King_vn_vn_va_vc_track3_va/data.npz",
+      "group": "King",
+      "model": "bigru",
+      "notes": 217,
+      "Full": 0.5561055827700574,
+      "Note": 0.0839377319552633,
+      "duration_Note": 0.023205960254038576
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/26_King_vn_vn_va_vc_track3_va/data.npz",
+      "group": "King",
+      "model": "instrument_ols",
+      "notes": 217,
+      "Full": 0.505592621754724,
+      "Note": 0.06125955365528903,
+      "duration_Note": 6.397299279000036e-05
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/26_King_vn_vn_va_vc_track3_va/data.npz",
+      "group": "King",
+      "model": "note_shape",
+      "notes": 217,
+      "Full": 0.5868866833984723,
+      "Note": 0.2547704224075406,
+      "duration_Note": 0.21872091823276052
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/27_King_vn_vn_va_sax_track3_va/data.npz",
+      "group": "King",
+      "model": "mamba",
+      "notes": 217,
+      "Full": 0.5954032444437147,
+      "Note": 0.15591452335521913,
+      "duration_Note": 0.0945967398962263
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/27_King_vn_vn_va_sax_track3_va/data.npz",
+      "group": "King",
+      "model": "s4d",
+      "notes": 217,
+      "Full": 0.5162530499464089,
+      "Note": -0.102713396979663,
+      "duration_Note": -0.1497266432360957
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/27_King_vn_vn_va_sax_track3_va/data.npz",
+      "group": "King",
+      "model": "bigru",
+      "notes": 217,
+      "Full": 0.5561055827700574,
+      "Note": 0.0839377319552633,
+      "duration_Note": 0.023205960254038576
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/27_King_vn_vn_va_sax_track3_va/data.npz",
+      "group": "King",
+      "model": "instrument_ols",
+      "notes": 217,
+      "Full": 0.505592621754724,
+      "Note": 0.06125955365528903,
+      "duration_Note": 6.397299279000036e-05
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/27_King_vn_vn_va_sax_track3_va/data.npz",
+      "group": "King",
+      "model": "note_shape",
+      "notes": 217,
+      "Full": 0.5868866833984723,
+      "Note": 0.2547704224075406,
+      "duration_Note": 0.21872091823276052
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/38_Jerusalem_vn_vn_va_vc_db_track3_va/data.npz",
+      "group": "Jerusalem",
+      "model": "mamba",
+      "notes": 167,
+      "Full": 0.4125045414368868,
+      "Note": 0.0875416657317707,
+      "duration_Note": 0.0528337002356827
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/38_Jerusalem_vn_vn_va_vc_db_track3_va/data.npz",
+      "group": "Jerusalem",
+      "model": "s4d",
+      "notes": 167,
+      "Full": 0.41434137767160373,
+      "Note": -0.04862247609138086,
+      "duration_Note": -0.04328770072660574
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/38_Jerusalem_vn_vn_va_vc_db_track3_va/data.npz",
+      "group": "Jerusalem",
+      "model": "bigru",
+      "notes": 167,
+      "Full": 0.3861277410152124,
+      "Note": 0.0373721725591776,
+      "duration_Note": 0.07112051272715685
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/38_Jerusalem_vn_vn_va_vc_db_track3_va/data.npz",
+      "group": "Jerusalem",
+      "model": "instrument_ols",
+      "notes": 167,
+      "Full": 0.2751722105770136,
+      "Note": 0.09588496559902639,
+      "duration_Note": 0.10693550905801821
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/38_Jerusalem_vn_vn_va_vc_db_track3_va/data.npz",
+      "group": "Jerusalem",
+      "model": "note_shape",
+      "notes": 167,
+      "Full": 0.34973473330939925,
+      "Note": 0.006981167654117459,
+      "duration_Note": -0.04995601171562963
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/39_Jerusalem_vn_vn_va_sax_db_track3_va/data.npz",
+      "group": "Jerusalem",
+      "model": "mamba",
+      "notes": 167,
+      "Full": 0.4125045414368868,
+      "Note": 0.0875416657317707,
+      "duration_Note": 0.0528337002356827
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/39_Jerusalem_vn_vn_va_sax_db_track3_va/data.npz",
+      "group": "Jerusalem",
+      "model": "s4d",
+      "notes": 167,
+      "Full": 0.41434137767160373,
+      "Note": -0.04862247609138086,
+      "duration_Note": -0.04328770072660574
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/39_Jerusalem_vn_vn_va_sax_db_track3_va/data.npz",
+      "group": "Jerusalem",
+      "model": "bigru",
+      "notes": 167,
+      "Full": 0.3861277410152124,
+      "Note": 0.0373721725591776,
+      "duration_Note": 0.07112051272715685
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/39_Jerusalem_vn_vn_va_sax_db_track3_va/data.npz",
+      "group": "Jerusalem",
+      "model": "instrument_ols",
+      "notes": 167,
+      "Full": 0.2751722105770136,
+      "Note": 0.09588496559902639,
+      "duration_Note": 0.10693550905801821
+    },
+    {
+      "track": "datagen/solo/URMP/processed_va/39_Jerusalem_vn_vn_va_sax_db_track3_va/data.npz",
+      "group": "Jerusalem",
+      "model": "note_shape",
+      "notes": 167,
+      "Full": 0.34973473330939925,
+      "Note": 0.006981167654117459,
+      "duration_Note": -0.04995601171562963
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/01_Jupiter_vn_vc_track2_vc/data.npz",
+      "group": "Jupiter",
+      "model": "mamba",
+      "notes": 54,
+      "Full": 0.4561064711617684,
+      "Note": 0.1883819475728812,
+      "duration_Note": 0.1497265636442245
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/01_Jupiter_vn_vc_track2_vc/data.npz",
+      "group": "Jupiter",
+      "model": "s4d",
+      "notes": 54,
+      "Full": 0.4763421757805813,
+      "Note": 0.17714993408023097,
+      "duration_Note": 0.16572296386637067
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/01_Jupiter_vn_vc_track2_vc/data.npz",
+      "group": "Jupiter",
+      "model": "bigru",
+      "notes": 54,
+      "Full": 0.42469998765900685,
+      "Note": -0.11688768567470433,
+      "duration_Note": -0.1457856849613575
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/01_Jupiter_vn_vc_track2_vc/data.npz",
+      "group": "Jupiter",
+      "model": "instrument_ols",
+      "notes": 54,
+      "Full": 0.33944755493295103,
+      "Note": 0.14496353968746756,
+      "duration_Note": 0.25727927238311465
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/01_Jupiter_vn_vc_track2_vc/data.npz",
+      "group": "Jupiter",
+      "model": "note_shape",
+      "notes": 54,
+      "Full": 0.4629405962070909,
+      "Note": 0.4556019532220084,
+      "duration_Note": 0.4803457920570092
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/12_Spring_vn_vn_vc_track3_vc/data.npz",
+      "group": "Spring",
+      "model": "mamba",
+      "notes": 272,
+      "Full": 0.538412535621827,
+      "Note": 0.5040179194573562,
+      "duration_Note": 0.5741791473084017
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/12_Spring_vn_vn_vc_track3_vc/data.npz",
+      "group": "Spring",
+      "model": "s4d",
+      "notes": 272,
+      "Full": 0.5697395544380259,
+      "Note": 0.3522598101385566,
+      "duration_Note": 0.5517297529390164
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/12_Spring_vn_vn_vc_track3_vc/data.npz",
+      "group": "Spring",
+      "model": "bigru",
+      "notes": 272,
+      "Full": 0.5548229551690637,
+      "Note": 0.5040967041692866,
+      "duration_Note": 0.5963674517841493
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/12_Spring_vn_vn_vc_track3_vc/data.npz",
+      "group": "Spring",
+      "model": "instrument_ols",
+      "notes": 272,
+      "Full": 0.0922343756508109,
+      "Note": -0.3123470854635745,
+      "duration_Note": -0.09578046772152718
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/12_Spring_vn_vn_vc_track3_vc/data.npz",
+      "group": "Spring",
+      "model": "note_shape",
+      "notes": 272,
+      "Full": 0.49072652559062524,
+      "Note": 0.47944574829273046,
+      "duration_Note": 0.47901409882030754
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/24_Pirates_vn_vn_va_vc_track4_vc/data.npz",
+      "group": "Pirates",
+      "model": "mamba",
+      "notes": 178,
+      "Full": 0.5967819216271326,
+      "Note": 0.23955116884447683,
+      "duration_Note": 0.38688878241712416
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/24_Pirates_vn_vn_va_vc_track4_vc/data.npz",
+      "group": "Pirates",
+      "model": "s4d",
+      "notes": 178,
+      "Full": 0.4729325539491187,
+      "Note": 0.12526027013967814,
+      "duration_Note": 0.29320419809874004
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/24_Pirates_vn_vn_va_vc_track4_vc/data.npz",
+      "group": "Pirates",
+      "model": "bigru",
+      "notes": 178,
+      "Full": 0.548033432684228,
+      "Note": 0.16174764312890078,
+      "duration_Note": 0.292296908140063
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/24_Pirates_vn_vn_va_vc_track4_vc/data.npz",
+      "group": "Pirates",
+      "model": "instrument_ols",
+      "notes": 178,
+      "Full": 0.19123108488276325,
+      "Note": -0.15331323054916932,
+      "duration_Note": -0.12876359719319655
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/24_Pirates_vn_vn_va_vc_track4_vc/data.npz",
+      "group": "Pirates",
+      "model": "note_shape",
+      "notes": 178,
+      "Full": 0.4743328491663997,
+      "Note": 0.0048828422875915435,
+      "duration_Note": 0.0667332361122741
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/26_King_vn_vn_va_vc_track4_vc/data.npz",
+      "group": "King",
+      "model": "mamba",
+      "notes": 144,
+      "Full": 0.6227717469089431,
+      "Note": 0.4689211118700845,
+      "duration_Note": 0.42806841955532376
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/26_King_vn_vn_va_vc_track4_vc/data.npz",
+      "group": "King",
+      "model": "s4d",
+      "notes": 144,
+      "Full": 0.555636281417832,
+      "Note": 0.40119384668487457,
+      "duration_Note": 0.38496732622253577
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/26_King_vn_vn_va_vc_track4_vc/data.npz",
+      "group": "King",
+      "model": "bigru",
+      "notes": 144,
+      "Full": 0.6841200245398249,
+      "Note": 0.6357018292141791,
+      "duration_Note": 0.6014522050332034
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/26_King_vn_vn_va_vc_track4_vc/data.npz",
+      "group": "King",
+      "model": "instrument_ols",
+      "notes": 144,
+      "Full": 0.44942811168330754,
+      "Note": 0.3167407994575856,
+      "duration_Note": 0.2771422622765451
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/26_King_vn_vn_va_vc_track4_vc/data.npz",
+      "group": "King",
+      "model": "note_shape",
+      "notes": 144,
+      "Full": 0.5762043671467312,
+      "Note": 0.3933896276730227,
+      "duration_Note": 0.42961554391933515
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/32_Fugue_vn_vn_va_vc_track4_vc/data.npz",
+      "group": "Fugue",
+      "model": "mamba",
+      "notes": 185,
+      "Full": 0.5819363167395927,
+      "Note": 0.2988596414292832,
+      "duration_Note": 0.4177966112165799
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/32_Fugue_vn_vn_va_vc_track4_vc/data.npz",
+      "group": "Fugue",
+      "model": "s4d",
+      "notes": 185,
+      "Full": 0.5809053911122352,
+      "Note": 0.28482062032568606,
+      "duration_Note": 0.420567759476496
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/32_Fugue_vn_vn_va_vc_track4_vc/data.npz",
+      "group": "Fugue",
+      "model": "bigru",
+      "notes": 185,
+      "Full": 0.569445081580905,
+      "Note": 0.2577990154908889,
+      "duration_Note": 0.40517450792740095
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/32_Fugue_vn_vn_va_vc_track4_vc/data.npz",
+      "group": "Fugue",
+      "model": "instrument_ols",
+      "notes": 185,
+      "Full": 0.5131334039450971,
+      "Note": 0.228019416813553,
+      "duration_Note": 0.33516720516717424
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/32_Fugue_vn_vn_va_vc_track4_vc/data.npz",
+      "group": "Fugue",
+      "model": "note_shape",
+      "notes": 185,
+      "Full": 0.5176080440732399,
+      "Note": 0.06883359727091433,
+      "duration_Note": 0.17099037030057754
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/36_Rondeau_vn_vn_va_vc_track4_vc/data.npz",
+      "group": "Rondeau",
+      "model": "mamba",
+      "notes": 163,
+      "Full": 0.28393218185216673,
+      "Note": 0.07336623484774991,
+      "duration_Note": 0.11756574515560538
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/36_Rondeau_vn_vn_va_vc_track4_vc/data.npz",
+      "group": "Rondeau",
+      "model": "s4d",
+      "notes": 163,
+      "Full": 0.2819953414089422,
+      "Note": 0.06053664342389595,
+      "duration_Note": 0.09988207181571987
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/36_Rondeau_vn_vn_va_vc_track4_vc/data.npz",
+      "group": "Rondeau",
+      "model": "bigru",
+      "notes": 163,
+      "Full": 0.36693330846664457,
+      "Note": 0.20594527848419245,
+      "duration_Note": 0.23361538490389935
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/36_Rondeau_vn_vn_va_vc_track4_vc/data.npz",
+      "group": "Rondeau",
+      "model": "instrument_ols",
+      "notes": 163,
+      "Full": 0.1556530521633855,
+      "Note": -0.08003888923103915,
+      "duration_Note": -0.04045186545043985
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/36_Rondeau_vn_vn_va_vc_track4_vc/data.npz",
+      "group": "Rondeau",
+      "model": "note_shape",
+      "notes": 163,
+      "Full": 0.2266538433260461,
+      "Note": -0.06278089265647008,
+      "duration_Note": -0.10137961362268876
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/38_Jerusalem_vn_vn_va_vc_db_track4_vc/data.npz",
+      "group": "Jerusalem",
+      "model": "mamba",
+      "notes": 140,
+      "Full": 0.314400958773489,
+      "Note": 0.26672028960429184,
+      "duration_Note": 0.3059877408754088
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/38_Jerusalem_vn_vn_va_vc_db_track4_vc/data.npz",
+      "group": "Jerusalem",
+      "model": "s4d",
+      "notes": 140,
+      "Full": 0.3700908463617792,
+      "Note": 0.34072397949075367,
+      "duration_Note": 0.3951332970366434
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/38_Jerusalem_vn_vn_va_vc_db_track4_vc/data.npz",
+      "group": "Jerusalem",
+      "model": "bigru",
+      "notes": 140,
+      "Full": 0.2612598022074286,
+      "Note": 0.11764506021418429,
+      "duration_Note": 0.1572230933799307
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/38_Jerusalem_vn_vn_va_vc_db_track4_vc/data.npz",
+      "group": "Jerusalem",
+      "model": "instrument_ols",
+      "notes": 140,
+      "Full": 0.3300303158686465,
+      "Note": 0.26657494101848145,
+      "duration_Note": 0.33870336258110667
+    },
+    {
+      "track": "datagen/solo/URMP/processed_vc/38_Jerusalem_vn_vn_va_vc_db_track4_vc/data.npz",
+      "group": "Jerusalem",
+      "model": "note_shape",
+      "notes": 140,
+      "Full": 0.3147889656575058,
+      "Note": 0.3365296815958749,
+      "duration_Note": 0.3739899511205105
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/08_Spring_fl_vn_track1_fl/data.npz",
+      "group": "Spring",
+      "model": "mamba",
+      "notes": 108,
+      "Full": 0.7880829128843481,
+      "Note": 0.524418596421689,
+      "duration_Note": 0.6165147643817007
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/08_Spring_fl_vn_track1_fl/data.npz",
+      "group": "Spring",
+      "model": "s4d",
+      "notes": 108,
+      "Full": 0.7900217592888499,
+      "Note": 0.5518658750802891,
+      "duration_Note": 0.6348540505669222
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/08_Spring_fl_vn_track1_fl/data.npz",
+      "group": "Spring",
+      "model": "bigru",
+      "notes": 108,
+      "Full": 0.7724977988431472,
+      "Note": 0.4478742338753567,
+      "duration_Note": 0.5570201534753468
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/08_Spring_fl_vn_track1_fl/data.npz",
+      "group": "Spring",
+      "model": "instrument_ols",
+      "notes": 108,
+      "Full": 0.745617166314221,
+      "Note": 0.5454895048512358,
+      "duration_Note": 0.6099849168354906
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/08_Spring_fl_vn_track1_fl/data.npz",
+      "group": "Spring",
+      "model": "note_shape",
+      "notes": 108,
+      "Full": 0.7595513337856984,
+      "Note": 0.5839066201663723,
+      "duration_Note": 0.6555680805159649
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/14_Waltz_fl_fl_cl_track2_fl/data.npz",
+      "group": "Waltz",
+      "model": "mamba",
+      "notes": 215,
+      "Full": 0.7190736873390882,
+      "Note": 0.3375070779432172,
+      "duration_Note": 0.33508365839485316
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/14_Waltz_fl_fl_cl_track2_fl/data.npz",
+      "group": "Waltz",
+      "model": "s4d",
+      "notes": 215,
+      "Full": 0.7375869083294628,
+      "Note": 0.4140012953367712,
+      "duration_Note": 0.4456502294508074
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/14_Waltz_fl_fl_cl_track2_fl/data.npz",
+      "group": "Waltz",
+      "model": "bigru",
+      "notes": 215,
+      "Full": 0.7120691022235605,
+      "Note": 0.28186690845794854,
+      "duration_Note": 0.2468382525590853
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/14_Waltz_fl_fl_cl_track2_fl/data.npz",
+      "group": "Waltz",
+      "model": "instrument_ols",
+      "notes": 215,
+      "Full": 0.7214780883090945,
+      "Note": 0.4406396206750322,
+      "duration_Note": 0.4666216155242698
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/14_Waltz_fl_fl_cl_track2_fl/data.npz",
+      "group": "Waltz",
+      "model": "note_shape",
+      "notes": 215,
+      "Full": 0.7039285224969488,
+      "Note": 0.2597837743395802,
+      "duration_Note": 0.3007083720136273
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/17_Nocturne_vn_fl_cl_track2_fl/data.npz",
+      "group": "Nocturne",
+      "model": "mamba",
+      "notes": 108,
+      "Full": 0.66382316500081,
+      "Note": 0.4135533364147993,
+      "duration_Note": 0.5093958509825283
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/17_Nocturne_vn_fl_cl_track2_fl/data.npz",
+      "group": "Nocturne",
+      "model": "s4d",
+      "notes": 108,
+      "Full": 0.6782957760993638,
+      "Note": 0.41422686462344305,
+      "duration_Note": 0.5448492654831638
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/17_Nocturne_vn_fl_cl_track2_fl/data.npz",
+      "group": "Nocturne",
+      "model": "bigru",
+      "notes": 108,
+      "Full": 0.6141956963756657,
+      "Note": 0.22722757183571363,
+      "duration_Note": 0.3517823786216561
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/17_Nocturne_vn_fl_cl_track2_fl/data.npz",
+      "group": "Nocturne",
+      "model": "instrument_ols",
+      "notes": 108,
+      "Full": 0.5690341837193963,
+      "Note": 0.25474353744648587,
+      "duration_Note": 0.3428345644731972
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/17_Nocturne_vn_fl_cl_track2_fl/data.npz",
+      "group": "Nocturne",
+      "model": "note_shape",
+      "notes": 108,
+      "Full": 0.6134420532901046,
+      "Note": 0.3903347011132818,
+      "duration_Note": 0.521420827304155
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/18_Nocturne_vn_fl_tpt_track2_fl/data.npz",
+      "group": "Nocturne",
+      "model": "mamba",
+      "notes": 108,
+      "Full": 0.66382316500081,
+      "Note": 0.4135533364147993,
+      "duration_Note": 0.5093958509825283
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/18_Nocturne_vn_fl_tpt_track2_fl/data.npz",
+      "group": "Nocturne",
+      "model": "s4d",
+      "notes": 108,
+      "Full": 0.6782957760993638,
+      "Note": 0.41422686462344305,
+      "duration_Note": 0.5448492654831638
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/18_Nocturne_vn_fl_tpt_track2_fl/data.npz",
+      "group": "Nocturne",
+      "model": "bigru",
+      "notes": 108,
+      "Full": 0.6141956963756657,
+      "Note": 0.22722757183571363,
+      "duration_Note": 0.3517823786216561
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/18_Nocturne_vn_fl_tpt_track2_fl/data.npz",
+      "group": "Nocturne",
+      "model": "instrument_ols",
+      "notes": 108,
+      "Full": 0.5690341837193963,
+      "Note": 0.25474353744648587,
+      "duration_Note": 0.3428345644731972
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/18_Nocturne_vn_fl_tpt_track2_fl/data.npz",
+      "group": "Nocturne",
+      "model": "note_shape",
+      "notes": 108,
+      "Full": 0.6134420532901046,
+      "Note": 0.3903347011132818,
+      "duration_Note": 0.521420827304155
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/28_Fugue_fl_ob_cl_bn_track1_fl/data.npz",
+      "group": "Fugue",
+      "model": "mamba",
+      "notes": 245,
+      "Full": 0.7662349892634045,
+      "Note": 0.22243531791796267,
+      "duration_Note": 0.15855948698646946
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/28_Fugue_fl_ob_cl_bn_track1_fl/data.npz",
+      "group": "Fugue",
+      "model": "s4d",
+      "notes": 245,
+      "Full": 0.7524993371198525,
+      "Note": 0.12789395551016983,
+      "duration_Note": 0.09672673129247877
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/28_Fugue_fl_ob_cl_bn_track1_fl/data.npz",
+      "group": "Fugue",
+      "model": "bigru",
+      "notes": 245,
+      "Full": 0.7511544799848785,
+      "Note": 0.04205135959261834,
+      "duration_Note": -0.007326585113592391
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/28_Fugue_fl_ob_cl_bn_track1_fl/data.npz",
+      "group": "Fugue",
+      "model": "instrument_ols",
+      "notes": 245,
+      "Full": 0.6852594247224412,
+      "Note": 0.19993644987519263,
+      "duration_Note": 0.05811254820538465
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/28_Fugue_fl_ob_cl_bn_track1_fl/data.npz",
+      "group": "Fugue",
+      "model": "note_shape",
+      "notes": 245,
+      "Full": 0.7174542354759198,
+      "Note": 0.09442515883112443,
+      "duration_Note": 0.11838531636234291
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/29_Fugue_fl_fl_ob_cl_track1_fl/data.npz",
+      "group": "Fugue",
+      "model": "mamba",
+      "notes": 234,
+      "Full": 0.6197688292552154,
+      "Note": 0.15578422531324523,
+      "duration_Note": 0.23285593984042505
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/29_Fugue_fl_fl_ob_cl_track1_fl/data.npz",
+      "group": "Fugue",
+      "model": "s4d",
+      "notes": 234,
+      "Full": 0.614226482287292,
+      "Note": 0.13654770446975142,
+      "duration_Note": 0.21867949966381417
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/29_Fugue_fl_fl_ob_cl_track1_fl/data.npz",
+      "group": "Fugue",
+      "model": "bigru",
+      "notes": 234,
+      "Full": 0.6115695825835747,
+      "Note": 0.1059319861930821,
+      "duration_Note": 0.1795782176529333
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/29_Fugue_fl_fl_ob_cl_track1_fl/data.npz",
+      "group": "Fugue",
+      "model": "instrument_ols",
+      "notes": 234,
+      "Full": 0.5749132970147697,
+      "Note": 0.3490045504600457,
+      "duration_Note": 0.15715891805344098
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/29_Fugue_fl_fl_ob_cl_track1_fl/data.npz",
+      "group": "Fugue",
+      "model": "note_shape",
+      "notes": 234,
+      "Full": 0.5807394533625638,
+      "Note": 0.10416214346954614,
+      "duration_Note": 0.1302077909733016
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/29_Fugue_fl_fl_ob_cl_track2_fl/data.npz",
+      "group": "Fugue",
+      "model": "mamba",
+      "notes": 254,
+      "Full": 0.6477708878780432,
+      "Note": 0.20702778289189708,
+      "duration_Note": 0.25268470226559314
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/29_Fugue_fl_fl_ob_cl_track2_fl/data.npz",
+      "group": "Fugue",
+      "model": "s4d",
+      "notes": 254,
+      "Full": 0.6352874899591824,
+      "Note": 0.09572518492421597,
+      "duration_Note": 0.10943730253029818
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/29_Fugue_fl_fl_ob_cl_track2_fl/data.npz",
+      "group": "Fugue",
+      "model": "bigru",
+      "notes": 254,
+      "Full": 0.6108857470986856,
+      "Note": 0.1478592097970039,
+      "duration_Note": 0.0958135179104001
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/29_Fugue_fl_fl_ob_cl_track2_fl/data.npz",
+      "group": "Fugue",
+      "model": "instrument_ols",
+      "notes": 254,
+      "Full": 0.6906774053577591,
+      "Note": 0.5085535519075717,
+      "duration_Note": 0.4926080016518378
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/29_Fugue_fl_fl_ob_cl_track2_fl/data.npz",
+      "group": "Fugue",
+      "model": "note_shape",
+      "notes": 254,
+      "Full": 0.5658152869256656,
+      "Note": -0.0639950417748877,
+      "duration_Note": -0.10740771818216097
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/30_Fugue_fl_fl_ob_sax_track1_fl/data.npz",
+      "group": "Fugue",
+      "model": "mamba",
+      "notes": 234,
+      "Full": 0.6197688292552154,
+      "Note": 0.15578422531324523,
+      "duration_Note": 0.23285593984042505
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/30_Fugue_fl_fl_ob_sax_track1_fl/data.npz",
+      "group": "Fugue",
+      "model": "s4d",
+      "notes": 234,
+      "Full": 0.614226482287292,
+      "Note": 0.13654770446975142,
+      "duration_Note": 0.21867949966381417
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/30_Fugue_fl_fl_ob_sax_track1_fl/data.npz",
+      "group": "Fugue",
+      "model": "bigru",
+      "notes": 234,
+      "Full": 0.6115695825835747,
+      "Note": 0.1059319861930821,
+      "duration_Note": 0.1795782176529333
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/30_Fugue_fl_fl_ob_sax_track1_fl/data.npz",
+      "group": "Fugue",
+      "model": "instrument_ols",
+      "notes": 234,
+      "Full": 0.5749132970147697,
+      "Note": 0.3490045504600457,
+      "duration_Note": 0.15715891805344098
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/30_Fugue_fl_fl_ob_sax_track1_fl/data.npz",
+      "group": "Fugue",
+      "model": "note_shape",
+      "notes": 234,
+      "Full": 0.5807394533625638,
+      "Note": 0.10416214346954614,
+      "duration_Note": 0.1302077909733016
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/30_Fugue_fl_fl_ob_sax_track2_fl/data.npz",
+      "group": "Fugue",
+      "model": "mamba",
+      "notes": 254,
+      "Full": 0.6477708878780432,
+      "Note": 0.20702778289189708,
+      "duration_Note": 0.25268470226559314
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/30_Fugue_fl_fl_ob_sax_track2_fl/data.npz",
+      "group": "Fugue",
+      "model": "s4d",
+      "notes": 254,
+      "Full": 0.6352874899591824,
+      "Note": 0.09572518492421597,
+      "duration_Note": 0.10943730253029818
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/30_Fugue_fl_fl_ob_sax_track2_fl/data.npz",
+      "group": "Fugue",
+      "model": "bigru",
+      "notes": 254,
+      "Full": 0.6108857470986856,
+      "Note": 0.1478592097970039,
+      "duration_Note": 0.0958135179104001
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/30_Fugue_fl_fl_ob_sax_track2_fl/data.npz",
+      "group": "Fugue",
+      "model": "instrument_ols",
+      "notes": 254,
+      "Full": 0.6906774053577591,
+      "Note": 0.5085535519075717,
+      "duration_Note": 0.4926080016518378
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/30_Fugue_fl_fl_ob_sax_track2_fl/data.npz",
+      "group": "Fugue",
+      "model": "note_shape",
+      "notes": 254,
+      "Full": 0.5658152869256656,
+      "Note": -0.0639950417748877,
+      "duration_Note": -0.10740771818216097
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/37_Rondeau_fl_vn_va_cl_track1_fl/data.npz",
+      "group": "Rondeau",
+      "model": "mamba",
+      "notes": 484,
+      "Full": 0.6115066435363122,
+      "Note": 0.3062751623116747,
+      "duration_Note": 0.2621163012349255
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/37_Rondeau_fl_vn_va_cl_track1_fl/data.npz",
+      "group": "Rondeau",
+      "model": "s4d",
+      "notes": 484,
+      "Full": 0.6315393293945711,
+      "Note": 0.37843580156688683,
+      "duration_Note": 0.350775986564642
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/37_Rondeau_fl_vn_va_cl_track1_fl/data.npz",
+      "group": "Rondeau",
+      "model": "bigru",
+      "notes": 484,
+      "Full": 0.6380646161099218,
+      "Note": 0.39806667852079375,
+      "duration_Note": 0.32912153566296487
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/37_Rondeau_fl_vn_va_cl_track1_fl/data.npz",
+      "group": "Rondeau",
+      "model": "instrument_ols",
+      "notes": 484,
+      "Full": 0.5626702998027938,
+      "Note": 0.2909504855392247,
+      "duration_Note": 0.2737899661003008
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/37_Rondeau_fl_vn_va_cl_track1_fl/data.npz",
+      "group": "Rondeau",
+      "model": "note_shape",
+      "notes": 484,
+      "Full": 0.6050594314700303,
+      "Note": 0.3203743367471702,
+      "duration_Note": 0.3214131534560968
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/40_Miserere_fl_fl_ob_cl_bn_track1_fl/data.npz",
+      "group": "Miserere",
+      "model": "mamba",
+      "notes": 31,
+      "Full": 0.6132560062028665,
+      "Note": 0.11688457328104451,
+      "duration_Note": 0.15330384925992682
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/40_Miserere_fl_fl_ob_cl_bn_track1_fl/data.npz",
+      "group": "Miserere",
+      "model": "s4d",
+      "notes": 31,
+      "Full": 0.6376097368708463,
+      "Note": -0.03554063558078402,
+      "duration_Note": 0.10046933345270247
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/40_Miserere_fl_fl_ob_cl_bn_track1_fl/data.npz",
+      "group": "Miserere",
+      "model": "bigru",
+      "notes": 31,
+      "Full": 0.5223246783255201,
+      "Note": -0.2125637551128637,
+      "duration_Note": -0.2428077273912143
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/40_Miserere_fl_fl_ob_cl_bn_track1_fl/data.npz",
+      "group": "Miserere",
+      "model": "instrument_ols",
+      "notes": 31,
+      "Full": 0.5384160735383119,
+      "Note": -0.16931929935617993,
+      "duration_Note": -0.23961785225709334
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/40_Miserere_fl_fl_ob_cl_bn_track1_fl/data.npz",
+      "group": "Miserere",
+      "model": "note_shape",
+      "notes": 31,
+      "Full": 0.5773148303548351,
+      "Note": -0.25243357924786264,
+      "duration_Note": -0.1339397660306141
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/40_Miserere_fl_fl_ob_cl_bn_track2_fl/data.npz",
+      "group": "Miserere",
+      "model": "mamba",
+      "notes": 33,
+      "Full": 0.7197990732439944,
+      "Note": 0.3015575328780089,
+      "duration_Note": 0.5487384898603201
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/40_Miserere_fl_fl_ob_cl_bn_track2_fl/data.npz",
+      "group": "Miserere",
+      "model": "s4d",
+      "notes": 33,
+      "Full": 0.7823400747543796,
+      "Note": 0.6151818992312835,
+      "duration_Note": 0.7556033105737241
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/40_Miserere_fl_fl_ob_cl_bn_track2_fl/data.npz",
+      "group": "Miserere",
+      "model": "bigru",
+      "notes": 33,
+      "Full": 0.8174530823716134,
+      "Note": 0.7200834522781218,
+      "duration_Note": 0.7697238410975922
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/40_Miserere_fl_fl_ob_cl_bn_track2_fl/data.npz",
+      "group": "Miserere",
+      "model": "instrument_ols",
+      "notes": 33,
+      "Full": 0.741402615195807,
+      "Note": 0.6054742949563053,
+      "duration_Note": 0.5343383662183565
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/40_Miserere_fl_fl_ob_cl_bn_track2_fl/data.npz",
+      "group": "Miserere",
+      "model": "note_shape",
+      "notes": 33,
+      "Full": 0.6936419718581576,
+      "Note": 0.42942332482795,
+      "duration_Note": 0.4304338345888604
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/41_Miserere_fl_fl_ob_sax_bn_track1_fl/data.npz",
+      "group": "Miserere",
+      "model": "mamba",
+      "notes": 31,
+      "Full": 0.6132560062028665,
+      "Note": 0.11688457328104451,
+      "duration_Note": 0.15330384925992682
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/41_Miserere_fl_fl_ob_sax_bn_track1_fl/data.npz",
+      "group": "Miserere",
+      "model": "s4d",
+      "notes": 31,
+      "Full": 0.6376097368708463,
+      "Note": -0.03554063558078402,
+      "duration_Note": 0.10046933345270247
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/41_Miserere_fl_fl_ob_sax_bn_track1_fl/data.npz",
+      "group": "Miserere",
+      "model": "bigru",
+      "notes": 31,
+      "Full": 0.5223246783255201,
+      "Note": -0.2125637551128637,
+      "duration_Note": -0.2428077273912143
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/41_Miserere_fl_fl_ob_sax_bn_track1_fl/data.npz",
+      "group": "Miserere",
+      "model": "instrument_ols",
+      "notes": 31,
+      "Full": 0.5384160735383119,
+      "Note": -0.16931929935617993,
+      "duration_Note": -0.23961785225709334
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/41_Miserere_fl_fl_ob_sax_bn_track1_fl/data.npz",
+      "group": "Miserere",
+      "model": "note_shape",
+      "notes": 31,
+      "Full": 0.5773148303548351,
+      "Note": -0.25243357924786264,
+      "duration_Note": -0.1339397660306141
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/41_Miserere_fl_fl_ob_sax_bn_track2_fl/data.npz",
+      "group": "Miserere",
+      "model": "mamba",
+      "notes": 33,
+      "Full": 0.7197990732439944,
+      "Note": 0.3015575328780089,
+      "duration_Note": 0.5487384898603201
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/41_Miserere_fl_fl_ob_sax_bn_track2_fl/data.npz",
+      "group": "Miserere",
+      "model": "s4d",
+      "notes": 33,
+      "Full": 0.7823400747543796,
+      "Note": 0.6151818992312835,
+      "duration_Note": 0.7556033105737241
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/41_Miserere_fl_fl_ob_sax_bn_track2_fl/data.npz",
+      "group": "Miserere",
+      "model": "bigru",
+      "notes": 33,
+      "Full": 0.8174530823716134,
+      "Note": 0.7200834522781218,
+      "duration_Note": 0.7697238410975922
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/41_Miserere_fl_fl_ob_sax_bn_track2_fl/data.npz",
+      "group": "Miserere",
+      "model": "instrument_ols",
+      "notes": 33,
+      "Full": 0.741402615195807,
+      "Note": 0.6054742949563053,
+      "duration_Note": 0.5343383662183565
+    },
+    {
+      "track": "datagen/solo/URMP/processed_fl/41_Miserere_fl_fl_ob_sax_bn_track2_fl/data.npz",
+      "group": "Miserere",
+      "model": "note_shape",
+      "notes": 33,
+      "Full": 0.6936419718581576,
+      "Note": 0.42942332482795,
+      "duration_Note": 0.4304338345888604
+    },
+    {
+      "track": "datagen/solo/URMP/processed_ob/11_Maria_ob_vc_track1_ob/data.npz",
+      "group": "Maria",
+      "model": "mamba",
+      "notes": 110,
+      "Full": 0.6088793863459047,
+      "Note": 0.40418501459576717,
+      "duration_Note": 0.6674766149640432
+    },
+    {
+      "track": "datagen/solo/URMP/processed_ob/11_Maria_ob_vc_track1_ob/data.npz",
+      "group": "Maria",
+      "model": "s4d",
+      "notes": 110,
+      "Full": 0.6718853109054781,
+      "Note": 0.4463952881961966,
+      "duration_Note": 0.6938630466405121
+    },
+    {
+      "track": "datagen/solo/URMP/processed_ob/11_Maria_ob_vc_track1_ob/data.npz",
+      "group": "Maria",
+      "model": "bigru",
+      "notes": 110,
+      "Full": 0.6039798555635358,
+      "Note": 0.3114025366802899,
+      "duration_Note": 0.5882221238769293
+    },
+    {
+      "track": "datagen/solo/URMP/processed_ob/11_Maria_ob_vc_track1_ob/data.npz",
+      "group": "Maria",
+      "model": "instrument_ols",
+      "notes": 110,
+      "Full": 0.5649713889484033,
+      "Note": 0.35578349053405567,
+      "duration_Note": 0.590513058611557
+    },
+    {
+      "track": "datagen/solo/URMP/processed_ob/11_Maria_ob_vc_track1_ob/data.npz",
+      "group": "Maria",
+      "model": "note_shape",
+      "notes": 110,
+      "Full": 0.7018557205954646,
+      "Note": 0.30049417625151115,
+      "duration_Note": 0.7251429035348056
+    },
+    {
+      "track": "datagen/solo/URMP/processed_ob/28_Fugue_fl_ob_cl_bn_track2_ob/data.npz",
+      "group": "Fugue",
+      "model": "mamba",
+      "notes": 253,
+      "Full": 0.6408851304095801,
+      "Note": 0.22255681461885907,
+      "duration_Note": 0.2150306970394942
+    },
+    {
+      "track": "datagen/solo/URMP/processed_ob/28_Fugue_fl_ob_cl_bn_track2_ob/data.npz",
+      "group": "Fugue",
+      "model": "s4d",
+      "notes": 253,
+      "Full": 0.614848085048774,
+      "Note": 0.017067229296725446,
+      "duration_Note": 0.003983823933202074
+    },
+    {
+      "track": "datagen/solo/URMP/processed_ob/28_Fugue_fl_ob_cl_bn_track2_ob/data.npz",
+      "group": "Fugue",
+      "model": "bigru",
+      "notes": 253,
+      "Full": 0.6095167900617031,
+      "Note": 0.09277812542864144,
+      "duration_Note": 0.0978532030822923
+    },
+    {
+      "track": "datagen/solo/URMP/processed_ob/28_Fugue_fl_ob_cl_bn_track2_ob/data.npz",
+      "group": "Fugue",
+      "model": "instrument_ols",
+      "notes": 253,
+      "Full": 0.5822024322682638,
+      "Note": 0.36348979581658725,
+      "duration_Note": 0.34162674584406205
+    },
+    {
+      "track": "datagen/solo/URMP/processed_ob/28_Fugue_fl_ob_cl_bn_track2_ob/data.npz",
+      "group": "Fugue",
+      "model": "note_shape",
+      "notes": 253,
+      "Full": 0.5939607645410324,
+      "Note": -0.16620318933366993,
+      "duration_Note": -0.0924966690902713
+    },
+    {
+      "track": "datagen/solo/URMP/processed_ob/29_Fugue_fl_fl_ob_cl_track3_ob/data.npz",
+      "group": "Fugue",
+      "model": "mamba",
+      "notes": 213,
+      "Full": 0.7087481786986434,
+      "Note": 0.11001525449445401,
+      "duration_Note": 0.27010814031677666
+    },
+    {
+      "track": "datagen/solo/URMP/processed_ob/29_Fugue_fl_fl_ob_cl_track3_ob/data.npz",
+      "group": "Fugue",
+      "model": "s4d",
+      "notes": 213,
+      "Full": 0.7024864505717225,
+      "Note": 0.09290225494506994,
+      "duration_Note": 0.21861267039364107
+    },
+    {
+      "track": "datagen/solo/URMP/processed_ob/29_Fugue_fl_fl_ob_cl_track3_ob/data.npz",
+      "group": "Fugue",
+      "model": "bigru",
+      "notes": 213,
+      "Full": 0.6915832428055981,
+      "Note": 0.05654318830700214,
+      "duration_Note": 0.14389435104188283
+    },
+    {
+      "track": "datagen/solo/URMP/processed_ob/29_Fugue_fl_fl_ob_cl_track3_ob/data.npz",
+      "group": "Fugue",
+      "model": "instrument_ols",
+      "notes": 213,
+      "Full": 0.5905801342542338,
+      "Note": 0.15490798794042368,
+      "duration_Note": 0.22512559470297702
+    },
+    {
+      "track": "datagen/solo/URMP/processed_ob/29_Fugue_fl_fl_ob_cl_track3_ob/data.npz",
+      "group": "Fugue",
+      "model": "note_shape",
+      "notes": 213,
+      "Full": 0.6816565525626052,
+      "Note": 0.039407618206465815,
+      "duration_Note": 0.09111483623227411
+    },
+    {
+      "track": "datagen/solo/URMP/processed_ob/30_Fugue_fl_fl_ob_sax_track3_ob/data.npz",
+      "group": "Fugue",
+      "model": "mamba",
+      "notes": 213,
+      "Full": 0.7087481797240988,
+      "Note": 0.11001525694337663,
+      "duration_Note": 0.2701081419611572
+    },
+    {
+      "track": "datagen/solo/URMP/processed_ob/30_Fugue_fl_fl_ob_sax_track3_ob/data.npz",
+      "group": "Fugue",
+      "model": "s4d",
+      "notes": 213,
+      "Full": 0.7024864516977106,
+      "Note": 0.09290225828911813,
+      "duration_Note": 0.21861267355513536
+    },
+    {
+      "track": "datagen/solo/URMP/processed_ob/30_Fugue_fl_fl_ob_sax_track3_ob/data.npz",
+      "group": "Fugue",
+      "model": "bigru",
+      "notes": 213,
+      "Full": 0.6915832438549193,
+      "Note": 0.05654319227122397,
+      "duration_Note": 0.14389435368472514
+    },
+    {
+      "track": "datagen/solo/URMP/processed_ob/30_Fugue_fl_fl_ob_sax_track3_ob/data.npz",
+      "group": "Fugue",
+      "model": "instrument_ols",
+      "notes": 213,
+      "Full": 0.5905801346517109,
+      "Note": 0.15490798905303532,
+      "duration_Note": 0.22512559291910278
+    },
+    {
+      "track": "datagen/solo/URMP/processed_ob/30_Fugue_fl_fl_ob_sax_track3_ob/data.npz",
+      "group": "Fugue",
+      "model": "note_shape",
+      "notes": 213,
+      "Full": 0.6816565534339428,
+      "Note": 0.03940762124155863,
+      "duration_Note": 0.09111483686870779
+    },
+    {
+      "track": "datagen/solo/URMP/processed_ob/40_Miserere_fl_fl_ob_cl_bn_track3_ob/data.npz",
+      "group": "Miserere",
+      "model": "mamba",
+      "notes": 34,
+      "Full": 0.4994249971680837,
+      "Note": 0.1521966444874562,
+      "duration_Note": 0.29062267689902216
+    },
+    {
+      "track": "datagen/solo/URMP/processed_ob/40_Miserere_fl_fl_ob_cl_bn_track3_ob/data.npz",
+      "group": "Miserere",
+      "model": "s4d",
+      "notes": 34,
+      "Full": 0.5914828296983127,
+      "Note": 0.3369585462216647,
+      "duration_Note": 0.4353537111825279
+    },
+    {
+      "track": "datagen/solo/URMP/processed_ob/40_Miserere_fl_fl_ob_cl_bn_track3_ob/data.npz",
+      "group": "Miserere",
+      "model": "bigru",
+      "notes": 34,
+      "Full": 0.7404767669614315,
+      "Note": 0.619827370390087,
+      "duration_Note": 0.6735673501601674
+    },
+    {
+      "track": "datagen/solo/URMP/processed_ob/40_Miserere_fl_fl_ob_cl_bn_track3_ob/data.npz",
+      "group": "Miserere",
+      "model": "instrument_ols",
+      "notes": 34,
+      "Full": 0.6060234754034088,
+      "Note": 0.3633250600158002,
+      "duration_Note": 0.46224525508600917
+    },
+    {
+      "track": "datagen/solo/URMP/processed_ob/40_Miserere_fl_fl_ob_cl_bn_track3_ob/data.npz",
+      "group": "Miserere",
+      "model": "note_shape",
+      "notes": 34,
+      "Full": 0.6595728313085971,
+      "Note": 0.2819020547553336,
+      "duration_Note": 0.4111345414810399
+    },
+    {
+      "track": "datagen/solo/URMP/processed_ob/41_Miserere_fl_fl_ob_sax_bn_track3_ob/data.npz",
+      "group": "Miserere",
+      "model": "mamba",
+      "notes": 34,
+      "Full": 0.4994249971680837,
+      "Note": 0.1521966444874562,
+      "duration_Note": 0.29062267689902216
+    },
+    {
+      "track": "datagen/solo/URMP/processed_ob/41_Miserere_fl_fl_ob_sax_bn_track3_ob/data.npz",
+      "group": "Miserere",
+      "model": "s4d",
+      "notes": 34,
+      "Full": 0.5914828296983127,
+      "Note": 0.3369585462216647,
+      "duration_Note": 0.4353537111825279
+    },
+    {
+      "track": "datagen/solo/URMP/processed_ob/41_Miserere_fl_fl_ob_sax_bn_track3_ob/data.npz",
+      "group": "Miserere",
+      "model": "bigru",
+      "notes": 34,
+      "Full": 0.7404767669614315,
+      "Note": 0.619827370390087,
+      "duration_Note": 0.6735673501601674
+    },
+    {
+      "track": "datagen/solo/URMP/processed_ob/41_Miserere_fl_fl_ob_sax_bn_track3_ob/data.npz",
+      "group": "Miserere",
+      "model": "instrument_ols",
+      "notes": 34,
+      "Full": 0.6060234754034088,
+      "Note": 0.3633250600158002,
+      "duration_Note": 0.46224525508600917
+    },
+    {
+      "track": "datagen/solo/URMP/processed_ob/41_Miserere_fl_fl_ob_sax_bn_track3_ob/data.npz",
+      "group": "Miserere",
+      "model": "note_shape",
+      "notes": 34,
+      "Full": 0.6595728313085971,
+      "Note": 0.2819020547553336,
+      "duration_Note": 0.4111345414810399
+    },
+    {
+      "track": "datagen/solo/URMP/processed_cl/03_Dance_fl_cl_track2_cl/data.npz",
+      "group": "Dance",
+      "model": "mamba",
+      "notes": 194,
+      "Full": 0.8345173558183394,
+      "Note": 0.5147469061891697,
+      "duration_Note": 0.5091810570353038
+    },
+    {
+      "track": "datagen/solo/URMP/processed_cl/03_Dance_fl_cl_track2_cl/data.npz",
+      "group": "Dance",
+      "model": "s4d",
+      "notes": 194,
+      "Full": 0.8110543927869921,
+      "Note": 0.5625652157331065,
+      "duration_Note": 0.5331685330210222
+    },
+    {
+      "track": "datagen/solo/URMP/processed_cl/03_Dance_fl_cl_track2_cl/data.npz",
+      "group": "Dance",
+      "model": "bigru",
+      "notes": 194,
+      "Full": 0.8296687333905944,
+      "Note": 0.4786253764170072,
+      "duration_Note": 0.49563868643514086
+    },
+    {
+      "track": "datagen/solo/URMP/processed_cl/03_Dance_fl_cl_track2_cl/data.npz",
+      "group": "Dance",
+      "model": "instrument_ols",
+      "notes": 194,
+      "Full": 0.6020053316718268,
+      "Note": 0.2511178849476023,
+      "duration_Note": 0.2880369950959694
+    },
+    {
+      "track": "datagen/solo/URMP/processed_cl/03_Dance_fl_cl_track2_cl/data.npz",
+      "group": "Dance",
+      "model": "note_shape",
+      "notes": 194,
+      "Full": 0.746234679891767,
+      "Note": 0.2789586211956875,
+      "duration_Note": 0.33805745114960395
+    },
+    {
+      "track": "datagen/solo/URMP/processed_cl/17_Nocturne_vn_fl_cl_track3_cl/data.npz",
+      "group": "Nocturne",
+      "model": "mamba",
+      "notes": 94,
+      "Full": 0.8001542710481059,
+      "Note": 0.3819905585724317,
+      "duration_Note": 0.4171748270993529
+    },
+    {
+      "track": "datagen/solo/URMP/processed_cl/17_Nocturne_vn_fl_cl_track3_cl/data.npz",
+      "group": "Nocturne",
+      "model": "s4d",
+      "notes": 94,
+      "Full": 0.7967269723711344,
+      "Note": 0.3062900978740566,
+      "duration_Note": 0.33812704151067435
+    },
+    {
+      "track": "datagen/solo/URMP/processed_cl/17_Nocturne_vn_fl_cl_track3_cl/data.npz",
+      "group": "Nocturne",
+      "model": "bigru",
+      "notes": 94,
+      "Full": 0.7879562174779203,
+      "Note": 0.3611646254757657,
+      "duration_Note": 0.34998410190435647
+    },
+    {
+      "track": "datagen/solo/URMP/processed_cl/17_Nocturne_vn_fl_cl_track3_cl/data.npz",
+      "group": "Nocturne",
+      "model": "instrument_ols",
+      "notes": 94,
+      "Full": 0.749831696723522,
+      "Note": 0.294706382685285,
+      "duration_Note": 0.40593963556906065
+    },
+    {
+      "track": "datagen/solo/URMP/processed_cl/17_Nocturne_vn_fl_cl_track3_cl/data.npz",
+      "group": "Nocturne",
+      "model": "note_shape",
+      "notes": 94,
+      "Full": 0.8144860166488823,
+      "Note": 0.3835015904149496,
+      "duration_Note": 0.44219283166552625
+    },
+    {
+      "track": "datagen/solo/URMP/processed_cl/28_Fugue_fl_ob_cl_bn_track3_cl/data.npz",
+      "group": "Fugue",
+      "model": "mamba",
+      "notes": 215,
+      "Full": 0.820255427573241,
+      "Note": 0.15046064628930644,
+      "duration_Note": 0.1880551760867519
+    },
+    {
+      "track": "datagen/solo/URMP/processed_cl/28_Fugue_fl_ob_cl_bn_track3_cl/data.npz",
+      "group": "Fugue",
+      "model": "s4d",
+      "notes": 215,
+      "Full": 0.8100294822480749,
+      "Note": 0.020184507977534884,
+      "duration_Note": 0.07161728607164529
+    },
+    {
+      "track": "datagen/solo/URMP/processed_cl/28_Fugue_fl_ob_cl_bn_track3_cl/data.npz",
+      "group": "Fugue",
+      "model": "bigru",
+      "notes": 215,
+      "Full": 0.7856097672619817,
+      "Note": 0.00937601437296797,
+      "duration_Note": -0.005098514080871342
+    },
+    {
+      "track": "datagen/solo/URMP/processed_cl/28_Fugue_fl_ob_cl_bn_track3_cl/data.npz",
+      "group": "Fugue",
+      "model": "instrument_ols",
+      "notes": 215,
+      "Full": 0.6865043825569679,
+      "Note": 0.09666840444819572,
+      "duration_Note": 0.08476124341601327
+    },
+    {
+      "track": "datagen/solo/URMP/processed_cl/28_Fugue_fl_ob_cl_bn_track3_cl/data.npz",
+      "group": "Fugue",
+      "model": "note_shape",
+      "notes": 215,
+      "Full": 0.7609710353598287,
+      "Note": -0.1089817162785782,
+      "duration_Note": -0.10531122707468234
+    },
+    {
+      "track": "datagen/solo/URMP/processed_cl/37_Rondeau_fl_vn_va_cl_track4_cl/data.npz",
+      "group": "Rondeau",
+      "model": "mamba",
+      "notes": 162,
+      "Full": 0.7449098338503682,
+      "Note": 0.3813728411216445,
+      "duration_Note": 0.451847869942963
+    },
+    {
+      "track": "datagen/solo/URMP/processed_cl/37_Rondeau_fl_vn_va_cl_track4_cl/data.npz",
+      "group": "Rondeau",
+      "model": "s4d",
+      "notes": 162,
+      "Full": 0.7483031922793918,
+      "Note": 0.47067715415769945,
+      "duration_Note": 0.5372676814032151
+    },
+    {
+      "track": "datagen/solo/URMP/processed_cl/37_Rondeau_fl_vn_va_cl_track4_cl/data.npz",
+      "group": "Rondeau",
+      "model": "bigru",
+      "notes": 162,
+      "Full": 0.7493787554639569,
+      "Note": 0.5256906542907128,
+      "duration_Note": 0.5264662888970947
+    },
+    {
+      "track": "datagen/solo/URMP/processed_cl/37_Rondeau_fl_vn_va_cl_track4_cl/data.npz",
+      "group": "Rondeau",
+      "model": "instrument_ols",
+      "notes": 162,
+      "Full": 0.5921028108564452,
+      "Note": 0.09138630354737393,
+      "duration_Note": 0.08038485812084682
+    },
+    {
+      "track": "datagen/solo/URMP/processed_cl/37_Rondeau_fl_vn_va_cl_track4_cl/data.npz",
+      "group": "Rondeau",
+      "model": "note_shape",
+      "notes": 162,
+      "Full": 0.718209511723634,
+      "Note": 0.29211378909602354,
+      "duration_Note": 0.3573485124144575
+    },
+    {
+      "track": "datagen/solo/URMP/processed_cl/40_Miserere_fl_fl_ob_cl_bn_track4_cl/data.npz",
+      "group": "Miserere",
+      "model": "mamba",
+      "notes": 34,
+      "Full": 0.4685256422093464,
+      "Note": 0.15464436388188627,
+      "duration_Note": 0.1168205230753286
+    },
+    {
+      "track": "datagen/solo/URMP/processed_cl/40_Miserere_fl_fl_ob_cl_bn_track4_cl/data.npz",
+      "group": "Miserere",
+      "model": "s4d",
+      "notes": 34,
+      "Full": 0.5644369266076562,
+      "Note": 0.1805682259739794,
+      "duration_Note": 0.20155192421483636
+    },
+    {
+      "track": "datagen/solo/URMP/processed_cl/40_Miserere_fl_fl_ob_cl_bn_track4_cl/data.npz",
+      "group": "Miserere",
+      "model": "bigru",
+      "notes": 34,
+      "Full": 0.6304814671047847,
+      "Note": 0.48680933163998696,
+      "duration_Note": 0.2852385248726638
+    },
+    {
+      "track": "datagen/solo/URMP/processed_cl/40_Miserere_fl_fl_ob_cl_bn_track4_cl/data.npz",
+      "group": "Miserere",
+      "model": "instrument_ols",
+      "notes": 34,
+      "Full": 0.5588785260728032,
+      "Note": 0.44200212242547693,
+      "duration_Note": 0.26052815352699527
+    },
+    {
+      "track": "datagen/solo/URMP/processed_cl/40_Miserere_fl_fl_ob_cl_bn_track4_cl/data.npz",
+      "group": "Miserere",
+      "model": "note_shape",
+      "notes": 34,
+      "Full": 0.6469781321787873,
+      "Note": 0.44984301082642975,
+      "duration_Note": 0.3839903080835091
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/06_Entertainer_sax_sax_track1_sax/data.npz",
+      "group": "Entertainer",
+      "model": "mamba",
+      "notes": 258,
+      "Full": 0.6223443623913686,
+      "Note": 0.16430105549736998,
+      "duration_Note": 0.26217887024515085
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/06_Entertainer_sax_sax_track1_sax/data.npz",
+      "group": "Entertainer",
+      "model": "s4d",
+      "notes": 258,
+      "Full": 0.6140962281543906,
+      "Note": 0.11682975610283092,
+      "duration_Note": 0.18377346469883457
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/06_Entertainer_sax_sax_track1_sax/data.npz",
+      "group": "Entertainer",
+      "model": "bigru",
+      "notes": 258,
+      "Full": 0.5759189078785812,
+      "Note": 0.06609004912515715,
+      "duration_Note": 0.11779324083929088
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/06_Entertainer_sax_sax_track1_sax/data.npz",
+      "group": "Entertainer",
+      "model": "instrument_ols",
+      "notes": 258,
+      "Full": 0.5637277797975004,
+      "Note": 0.09388853006243227,
+      "duration_Note": 0.18907696306172017
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/06_Entertainer_sax_sax_track1_sax/data.npz",
+      "group": "Entertainer",
+      "model": "note_shape",
+      "notes": 258,
+      "Full": 0.5603555957536911,
+      "Note": 0.055041983736089886,
+      "duration_Note": 0.1444010661734941
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/06_Entertainer_sax_sax_track2_sax/data.npz",
+      "group": "Entertainer",
+      "model": "mamba",
+      "notes": 219,
+      "Full": 0.6299980721659808,
+      "Note": 0.07409224763713475,
+      "duration_Note": 0.03630840111502831
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/06_Entertainer_sax_sax_track2_sax/data.npz",
+      "group": "Entertainer",
+      "model": "s4d",
+      "notes": 219,
+      "Full": 0.6144910500560653,
+      "Note": 0.06503925838111935,
+      "duration_Note": 0.023192007241926875
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/06_Entertainer_sax_sax_track2_sax/data.npz",
+      "group": "Entertainer",
+      "model": "bigru",
+      "notes": 219,
+      "Full": 0.6402792571619141,
+      "Note": 0.011881880120556727,
+      "duration_Note": 0.021695537908178995
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/06_Entertainer_sax_sax_track2_sax/data.npz",
+      "group": "Entertainer",
+      "model": "instrument_ols",
+      "notes": 219,
+      "Full": 0.6090974778625641,
+      "Note": 0.2685605333133422,
+      "duration_Note": 0.22087363045198427
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/06_Entertainer_sax_sax_track2_sax/data.npz",
+      "group": "Entertainer",
+      "model": "note_shape",
+      "notes": 219,
+      "Full": 0.6357149733628467,
+      "Note": 0.13679253392802415,
+      "duration_Note": 0.09690956558619213
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/10_March_tpt_sax_track2_sax/data.npz",
+      "group": "March",
+      "model": "mamba",
+      "notes": 245,
+      "Full": 0.42033625718078493,
+      "Note": 0.031164460051196403,
+      "duration_Note": -0.030486406290538986
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/10_March_tpt_sax_track2_sax/data.npz",
+      "group": "March",
+      "model": "s4d",
+      "notes": 245,
+      "Full": 0.44097826118164146,
+      "Note": 0.10320690627250075,
+      "duration_Note": 0.018689698195620885
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/10_March_tpt_sax_track2_sax/data.npz",
+      "group": "March",
+      "model": "bigru",
+      "notes": 245,
+      "Full": 0.39217524125039227,
+      "Note": -0.030510097740353202,
+      "duration_Note": -0.08316584902329141
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/10_March_tpt_sax_track2_sax/data.npz",
+      "group": "March",
+      "model": "instrument_ols",
+      "notes": 245,
+      "Full": 0.3629242781215121,
+      "Note": 0.24456215622617347,
+      "duration_Note": 0.10499525570304957
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/10_March_tpt_sax_track2_sax/data.npz",
+      "group": "March",
+      "model": "note_shape",
+      "notes": 245,
+      "Full": 0.44252613372275634,
+      "Note": 0.19156544993451302,
+      "duration_Note": 0.05106072695208631
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/16_Surprise_tpt_tpt_sax_track3_sax/data.npz",
+      "group": "Surprise",
+      "model": "mamba",
+      "notes": 65,
+      "Full": 0.7202889222185807,
+      "Note": 0.304463010668053,
+      "duration_Note": 0.36882680634793114
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/16_Surprise_tpt_tpt_sax_track3_sax/data.npz",
+      "group": "Surprise",
+      "model": "s4d",
+      "notes": 65,
+      "Full": 0.7148015101598532,
+      "Note": 0.25793771937348214,
+      "duration_Note": 0.3004254068656156
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/16_Surprise_tpt_tpt_sax_track3_sax/data.npz",
+      "group": "Surprise",
+      "model": "bigru",
+      "notes": 65,
+      "Full": 0.7289691873557154,
+      "Note": 0.3653619173049404,
+      "duration_Note": 0.41640749474441235
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/16_Surprise_tpt_tpt_sax_track3_sax/data.npz",
+      "group": "Surprise",
+      "model": "instrument_ols",
+      "notes": 65,
+      "Full": 0.6057473403607843,
+      "Note": 0.03228099579872207,
+      "duration_Note": 0.13768975072559658
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/16_Surprise_tpt_tpt_sax_track3_sax/data.npz",
+      "group": "Surprise",
+      "model": "note_shape",
+      "notes": 65,
+      "Full": 0.6923636454593732,
+      "Note": 0.1202443395320041,
+      "duration_Note": 0.1996110497841701
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/22_Rejouissance_sax_tbn_tba_track1_sax/data.npz",
+      "group": "Rejouissance",
+      "model": "mamba",
+      "notes": 227,
+      "Full": 0.7498760403148744,
+      "Note": 0.15400471439450497,
+      "duration_Note": 0.2189406597507936
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/22_Rejouissance_sax_tbn_tba_track1_sax/data.npz",
+      "group": "Rejouissance",
+      "model": "s4d",
+      "notes": 227,
+      "Full": 0.6740650222427595,
+      "Note": -0.032982239978403355,
+      "duration_Note": -0.03306795948620195
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/22_Rejouissance_sax_tbn_tba_track1_sax/data.npz",
+      "group": "Rejouissance",
+      "model": "bigru",
+      "notes": 227,
+      "Full": 0.7757152918373678,
+      "Note": 0.0061393129102404985,
+      "duration_Note": 0.1373980613828166
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/22_Rejouissance_sax_tbn_tba_track1_sax/data.npz",
+      "group": "Rejouissance",
+      "model": "instrument_ols",
+      "notes": 227,
+      "Full": 0.624981633504122,
+      "Note": 0.11601289380273347,
+      "duration_Note": 0.18988953868067712
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/22_Rejouissance_sax_tbn_tba_track1_sax/data.npz",
+      "group": "Rejouissance",
+      "model": "note_shape",
+      "notes": 227,
+      "Full": 0.7239662368563741,
+      "Note": 0.06345718998115184,
+      "duration_Note": 0.1268616972518259
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/27_King_vn_vn_va_sax_track4_sax/data.npz",
+      "group": "King",
+      "model": "mamba",
+      "notes": 143,
+      "Full": 0.734709971977882,
+      "Note": 0.46397556714493154,
+      "duration_Note": 0.48822181873790094
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/27_King_vn_vn_va_sax_track4_sax/data.npz",
+      "group": "King",
+      "model": "s4d",
+      "notes": 143,
+      "Full": 0.7191280388574772,
+      "Note": 0.33745249575568315,
+      "duration_Note": 0.38786303064958233
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/27_King_vn_vn_va_sax_track4_sax/data.npz",
+      "group": "King",
+      "model": "bigru",
+      "notes": 143,
+      "Full": 0.7608814219368223,
+      "Note": 0.39285433315330665,
+      "duration_Note": 0.43734555590578883
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/27_King_vn_vn_va_sax_track4_sax/data.npz",
+      "group": "King",
+      "model": "instrument_ols",
+      "notes": 143,
+      "Full": 0.580289722020935,
+      "Note": 0.2957455609808502,
+      "duration_Note": 0.3279549503611394
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/27_King_vn_vn_va_sax_track4_sax/data.npz",
+      "group": "King",
+      "model": "note_shape",
+      "notes": 143,
+      "Full": 0.6894296139128602,
+      "Note": 0.36062128169331514,
+      "duration_Note": 0.4146621711956117
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/39_Jerusalem_vn_vn_va_sax_db_track4_sax/data.npz",
+      "group": "Jerusalem",
+      "model": "mamba",
+      "notes": 141,
+      "Full": 0.4596647875582179,
+      "Note": 0.25217992145213186,
+      "duration_Note": 0.33033264201485957
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/39_Jerusalem_vn_vn_va_sax_db_track4_sax/data.npz",
+      "group": "Jerusalem",
+      "model": "s4d",
+      "notes": 141,
+      "Full": 0.47541486267906435,
+      "Note": 0.3315267036211475,
+      "duration_Note": 0.3902035624057779
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/39_Jerusalem_vn_vn_va_sax_db_track4_sax/data.npz",
+      "group": "Jerusalem",
+      "model": "bigru",
+      "notes": 141,
+      "Full": 0.3968365058865896,
+      "Note": 0.017662142688516645,
+      "duration_Note": 0.11463240271519674
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/39_Jerusalem_vn_vn_va_sax_db_track4_sax/data.npz",
+      "group": "Jerusalem",
+      "model": "instrument_ols",
+      "notes": 141,
+      "Full": 0.3041938667133875,
+      "Note": 0.29629069438163225,
+      "duration_Note": 0.22374037628200943
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/39_Jerusalem_vn_vn_va_sax_db_track4_sax/data.npz",
+      "group": "Jerusalem",
+      "model": "note_shape",
+      "notes": 141,
+      "Full": 0.4001351081512958,
+      "Note": 0.2742583620970648,
+      "duration_Note": 0.3129291970743135
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/41_Miserere_fl_fl_ob_sax_bn_track4_sax/data.npz",
+      "group": "Miserere",
+      "model": "mamba",
+      "notes": 35,
+      "Full": 0.6866936279070343,
+      "Note": 0.07212170070210222,
+      "duration_Note": 0.07805850890514142
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/41_Miserere_fl_fl_ob_sax_bn_track4_sax/data.npz",
+      "group": "Miserere",
+      "model": "s4d",
+      "notes": 35,
+      "Full": 0.6856299364138942,
+      "Note": -0.24133690001760472,
+      "duration_Note": -0.19997003091598142
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/41_Miserere_fl_fl_ob_sax_bn_track4_sax/data.npz",
+      "group": "Miserere",
+      "model": "bigru",
+      "notes": 35,
+      "Full": 0.6151579671084816,
+      "Note": -0.26707445531884055,
+      "duration_Note": -0.2889777088363478
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/41_Miserere_fl_fl_ob_sax_bn_track4_sax/data.npz",
+      "group": "Miserere",
+      "model": "instrument_ols",
+      "notes": 35,
+      "Full": 0.5237438396448523,
+      "Note": -0.38240834939326496,
+      "duration_Note": -0.44513403156410614
+    },
+    {
+      "track": "datagen/solo/URMP/processed_sax/41_Miserere_fl_fl_ob_sax_bn_track4_sax/data.npz",
+      "group": "Miserere",
+      "model": "note_shape",
+      "notes": 35,
+      "Full": 0.5816383529322535,
+      "Note": -0.5306190564316907,
+      "duration_Note": -0.5971204946951271
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/05_Entertainer_tpt_tpt_track1_tpt/data.npz",
+      "group": "Entertainer",
+      "model": "mamba",
+      "notes": 258,
+      "Full": 0.7878559624439841,
+      "Note": 0.5219606074662326,
+      "duration_Note": 0.5695397453986268
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/05_Entertainer_tpt_tpt_track1_tpt/data.npz",
+      "group": "Entertainer",
+      "model": "s4d",
+      "notes": 258,
+      "Full": 0.8151513401810464,
+      "Note": 0.636614882281742,
+      "duration_Note": 0.6706089757461391
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/05_Entertainer_tpt_tpt_track1_tpt/data.npz",
+      "group": "Entertainer",
+      "model": "bigru",
+      "notes": 258,
+      "Full": 0.8132871492502635,
+      "Note": 0.5766722808551604,
+      "duration_Note": 0.6269149613130284
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/05_Entertainer_tpt_tpt_track1_tpt/data.npz",
+      "group": "Entertainer",
+      "model": "instrument_ols",
+      "notes": 258,
+      "Full": 0.7651990375592744,
+      "Note": 0.5762094568331202,
+      "duration_Note": 0.6471912602643204
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/05_Entertainer_tpt_tpt_track1_tpt/data.npz",
+      "group": "Entertainer",
+      "model": "note_shape",
+      "notes": 258,
+      "Full": 0.7651259392596418,
+      "Note": 0.42682645873053204,
+      "duration_Note": 0.47219756618357345
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/05_Entertainer_tpt_tpt_track2_tpt/data.npz",
+      "group": "Entertainer",
+      "model": "mamba",
+      "notes": 214,
+      "Full": 0.8277415012908609,
+      "Note": 0.12922817451040966,
+      "duration_Note": 0.14411300906598165
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/05_Entertainer_tpt_tpt_track2_tpt/data.npz",
+      "group": "Entertainer",
+      "model": "s4d",
+      "notes": 214,
+      "Full": 0.8743658749564585,
+      "Note": 0.5513025221387877,
+      "duration_Note": 0.5588473454397106
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/05_Entertainer_tpt_tpt_track2_tpt/data.npz",
+      "group": "Entertainer",
+      "model": "bigru",
+      "notes": 214,
+      "Full": 0.8569767842923305,
+      "Note": 0.4266328739288368,
+      "duration_Note": 0.4358406902644005
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/05_Entertainer_tpt_tpt_track2_tpt/data.npz",
+      "group": "Entertainer",
+      "model": "instrument_ols",
+      "notes": 214,
+      "Full": 0.8459638367902141,
+      "Note": 0.6873652536816915,
+      "duration_Note": 0.6729182152812748
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/05_Entertainer_tpt_tpt_track2_tpt/data.npz",
+      "group": "Entertainer",
+      "model": "note_shape",
+      "notes": 214,
+      "Full": 0.8873426951817419,
+      "Note": 0.6135257089847471,
+      "duration_Note": 0.6282513016943843
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/10_March_tpt_sax_track1_tpt/data.npz",
+      "group": "March",
+      "model": "mamba",
+      "notes": 296,
+      "Full": 0.717792547955968,
+      "Note": 0.3938389786830242,
+      "duration_Note": 0.16742661761069308
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/10_March_tpt_sax_track1_tpt/data.npz",
+      "group": "March",
+      "model": "s4d",
+      "notes": 296,
+      "Full": 0.744944213385886,
+      "Note": 0.48968099373360685,
+      "duration_Note": 0.32636806288670356
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/10_March_tpt_sax_track1_tpt/data.npz",
+      "group": "March",
+      "model": "bigru",
+      "notes": 296,
+      "Full": 0.7282619539921583,
+      "Note": 0.4000107586926689,
+      "duration_Note": 0.25963017742797073
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/10_March_tpt_sax_track1_tpt/data.npz",
+      "group": "March",
+      "model": "instrument_ols",
+      "notes": 296,
+      "Full": 0.6680809377832652,
+      "Note": 0.41392202556479035,
+      "duration_Note": 0.39710482473827025
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/10_March_tpt_sax_track1_tpt/data.npz",
+      "group": "March",
+      "model": "note_shape",
+      "notes": 296,
+      "Full": 0.7339946119794704,
+      "Note": 0.42301772159405937,
+      "duration_Note": 0.3386840466567874
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/15_Surprise_tpt_tpt_tbn_track1_tpt/data.npz",
+      "group": "Surprise",
+      "model": "mamba",
+      "notes": 122,
+      "Full": 0.7599709409174583,
+      "Note": 0.4343436284191846,
+      "duration_Note": 0.3963478505829784
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/15_Surprise_tpt_tpt_tbn_track1_tpt/data.npz",
+      "group": "Surprise",
+      "model": "s4d",
+      "notes": 122,
+      "Full": 0.7860840086140064,
+      "Note": 0.5310607894239504,
+      "duration_Note": 0.49334399780547167
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/15_Surprise_tpt_tpt_tbn_track1_tpt/data.npz",
+      "group": "Surprise",
+      "model": "bigru",
+      "notes": 122,
+      "Full": 0.8011588807615073,
+      "Note": 0.6480880717467022,
+      "duration_Note": 0.615324111726078
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/15_Surprise_tpt_tpt_tbn_track1_tpt/data.npz",
+      "group": "Surprise",
+      "model": "instrument_ols",
+      "notes": 122,
+      "Full": 0.8049692110518566,
+      "Note": 0.8283263439412321,
+      "duration_Note": 0.7841221481044152
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/15_Surprise_tpt_tpt_tbn_track1_tpt/data.npz",
+      "group": "Surprise",
+      "model": "note_shape",
+      "notes": 122,
+      "Full": 0.7672684440697803,
+      "Note": 0.6677600847309315,
+      "duration_Note": 0.6500961615992384
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/15_Surprise_tpt_tpt_tbn_track2_tpt/data.npz",
+      "group": "Surprise",
+      "model": "mamba",
+      "notes": 103,
+      "Full": 0.8607677745521864,
+      "Note": 0.6310812055755285,
+      "duration_Note": 0.5813866057765334
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/15_Surprise_tpt_tpt_tbn_track2_tpt/data.npz",
+      "group": "Surprise",
+      "model": "s4d",
+      "notes": 103,
+      "Full": 0.8833401136966464,
+      "Note": 0.7278239257361248,
+      "duration_Note": 0.7261358915803835
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/15_Surprise_tpt_tpt_tbn_track2_tpt/data.npz",
+      "group": "Surprise",
+      "model": "bigru",
+      "notes": 103,
+      "Full": 0.881000421362741,
+      "Note": 0.6875180367594939,
+      "duration_Note": 0.6518632859042719
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/15_Surprise_tpt_tpt_tbn_track2_tpt/data.npz",
+      "group": "Surprise",
+      "model": "instrument_ols",
+      "notes": 103,
+      "Full": 0.8283646592411577,
+      "Note": 0.6403245034061747,
+      "duration_Note": 0.6783701232533337
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/15_Surprise_tpt_tpt_tbn_track2_tpt/data.npz",
+      "group": "Surprise",
+      "model": "note_shape",
+      "notes": 103,
+      "Full": 0.8593489722127348,
+      "Note": 0.624128934077061,
+      "duration_Note": 0.6260557774258101
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/15_Surprise_tpt_tpt_tbn_track3_tpt/data.npz",
+      "group": "Surprise",
+      "model": "mamba",
+      "notes": 65,
+      "Full": 0.8715783183232911,
+      "Note": 0.2920156231354602,
+      "duration_Note": 0.12463815937125208
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/15_Surprise_tpt_tpt_tbn_track3_tpt/data.npz",
+      "group": "Surprise",
+      "model": "s4d",
+      "notes": 65,
+      "Full": 0.8720052323542598,
+      "Note": 0.2510856450543127,
+      "duration_Note": 0.10238791285593381
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/15_Surprise_tpt_tpt_tbn_track3_tpt/data.npz",
+      "group": "Surprise",
+      "model": "bigru",
+      "notes": 65,
+      "Full": 0.8450749020289948,
+      "Note": 0.2115087505613679,
+      "duration_Note": 0.06873176756641203
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/15_Surprise_tpt_tpt_tbn_track3_tpt/data.npz",
+      "group": "Surprise",
+      "model": "instrument_ols",
+      "notes": 65,
+      "Full": 0.7736299979244446,
+      "Note": 0.25989589879064245,
+      "duration_Note": 0.12195294203645543
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/15_Surprise_tpt_tpt_tbn_track3_tpt/data.npz",
+      "group": "Surprise",
+      "model": "note_shape",
+      "notes": 65,
+      "Full": 0.8225989201167532,
+      "Note": 0.23639770865353824,
+      "duration_Note": 0.12326469248467863
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/16_Surprise_tpt_tpt_sax_track1_tpt/data.npz",
+      "group": "Surprise",
+      "model": "mamba",
+      "notes": 122,
+      "Full": 0.7599709409174583,
+      "Note": 0.4343436284191846,
+      "duration_Note": 0.3963478505829784
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/16_Surprise_tpt_tpt_sax_track1_tpt/data.npz",
+      "group": "Surprise",
+      "model": "s4d",
+      "notes": 122,
+      "Full": 0.7860840086140064,
+      "Note": 0.5310607894239504,
+      "duration_Note": 0.49334399780547167
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/16_Surprise_tpt_tpt_sax_track1_tpt/data.npz",
+      "group": "Surprise",
+      "model": "bigru",
+      "notes": 122,
+      "Full": 0.8011588807615073,
+      "Note": 0.6480880717467022,
+      "duration_Note": 0.615324111726078
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/16_Surprise_tpt_tpt_sax_track1_tpt/data.npz",
+      "group": "Surprise",
+      "model": "instrument_ols",
+      "notes": 122,
+      "Full": 0.8049692110518566,
+      "Note": 0.8283263439412321,
+      "duration_Note": 0.7841221481044152
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/16_Surprise_tpt_tpt_sax_track1_tpt/data.npz",
+      "group": "Surprise",
+      "model": "note_shape",
+      "notes": 122,
+      "Full": 0.7672684440697803,
+      "Note": 0.6677600847309315,
+      "duration_Note": 0.6500961615992384
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/16_Surprise_tpt_tpt_sax_track2_tpt/data.npz",
+      "group": "Surprise",
+      "model": "mamba",
+      "notes": 103,
+      "Full": 0.8607677745521864,
+      "Note": 0.6310812055755285,
+      "duration_Note": 0.5813866057765334
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/16_Surprise_tpt_tpt_sax_track2_tpt/data.npz",
+      "group": "Surprise",
+      "model": "s4d",
+      "notes": 103,
+      "Full": 0.8833401136966464,
+      "Note": 0.7278239257361248,
+      "duration_Note": 0.7261358915803835
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/16_Surprise_tpt_tpt_sax_track2_tpt/data.npz",
+      "group": "Surprise",
+      "model": "bigru",
+      "notes": 103,
+      "Full": 0.881000421362741,
+      "Note": 0.6875180367594939,
+      "duration_Note": 0.6518632859042719
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/16_Surprise_tpt_tpt_sax_track2_tpt/data.npz",
+      "group": "Surprise",
+      "model": "instrument_ols",
+      "notes": 103,
+      "Full": 0.8283646592411577,
+      "Note": 0.6403245034061747,
+      "duration_Note": 0.6783701232533337
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/16_Surprise_tpt_tpt_sax_track2_tpt/data.npz",
+      "group": "Surprise",
+      "model": "note_shape",
+      "notes": 103,
+      "Full": 0.8593489722127348,
+      "Note": 0.624128934077061,
+      "duration_Note": 0.6260557774258101
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/18_Nocturne_vn_fl_tpt_track3_tpt/data.npz",
+      "group": "Nocturne",
+      "model": "mamba",
+      "notes": 94,
+      "Full": 0.7547621955125291,
+      "Note": 0.5038849175729339,
+      "duration_Note": 0.3480550670333029
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/18_Nocturne_vn_fl_tpt_track3_tpt/data.npz",
+      "group": "Nocturne",
+      "model": "s4d",
+      "notes": 94,
+      "Full": 0.7747305663056945,
+      "Note": 0.5324674467973834,
+      "duration_Note": 0.3848942924114046
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/18_Nocturne_vn_fl_tpt_track3_tpt/data.npz",
+      "group": "Nocturne",
+      "model": "bigru",
+      "notes": 94,
+      "Full": 0.7777785659826254,
+      "Note": 0.5563964173707712,
+      "duration_Note": 0.3853673512242395
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/18_Nocturne_vn_fl_tpt_track3_tpt/data.npz",
+      "group": "Nocturne",
+      "model": "instrument_ols",
+      "notes": 94,
+      "Full": 0.7407757705791492,
+      "Note": 0.5175519647896258,
+      "duration_Note": 0.3868615908424217
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/18_Nocturne_vn_fl_tpt_track3_tpt/data.npz",
+      "group": "Nocturne",
+      "model": "note_shape",
+      "notes": 94,
+      "Full": 0.7853508411638885,
+      "Note": 0.49292261426434336,
+      "duration_Note": 0.3746778896186167
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/20_Pavane_tpt_vn_vc_track1_tpt/data.npz",
+      "group": "Pavane",
+      "model": "mamba",
+      "notes": 214,
+      "Full": 0.5135604128780501,
+      "Note": 0.2626777960091755,
+      "duration_Note": 0.37909178632223817
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/20_Pavane_tpt_vn_vc_track1_tpt/data.npz",
+      "group": "Pavane",
+      "model": "s4d",
+      "notes": 214,
+      "Full": 0.5010801543083712,
+      "Note": 0.2634191741100802,
+      "duration_Note": 0.29203277014093487
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/20_Pavane_tpt_vn_vc_track1_tpt/data.npz",
+      "group": "Pavane",
+      "model": "bigru",
+      "notes": 214,
+      "Full": 0.4837515634620051,
+      "Note": 0.2421172612631189,
+      "duration_Note": 0.3351517141285395
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/20_Pavane_tpt_vn_vc_track1_tpt/data.npz",
+      "group": "Pavane",
+      "model": "instrument_ols",
+      "notes": 214,
+      "Full": 0.6034137514241417,
+      "Note": 0.6632686273522407,
+      "duration_Note": 0.6003713564815728
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/20_Pavane_tpt_vn_vc_track1_tpt/data.npz",
+      "group": "Pavane",
+      "model": "note_shape",
+      "notes": 214,
+      "Full": 0.3951208520527338,
+      "Note": 0.019226221009281824,
+      "duration_Note": 0.05803285602885153
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/31_Slavonic_tpt_tpt_hn_tbn_track1_tpt/data.npz",
+      "group": "Slavonic",
+      "model": "mamba",
+      "notes": 272,
+      "Full": 0.7624044641290537,
+      "Note": 0.47308364347353465,
+      "duration_Note": 0.4615443758125126
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/31_Slavonic_tpt_tpt_hn_tbn_track1_tpt/data.npz",
+      "group": "Slavonic",
+      "model": "s4d",
+      "notes": 272,
+      "Full": 0.7199659417799558,
+      "Note": 0.38723387917309743,
+      "duration_Note": 0.21453717230215363
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/31_Slavonic_tpt_tpt_hn_tbn_track1_tpt/data.npz",
+      "group": "Slavonic",
+      "model": "bigru",
+      "notes": 272,
+      "Full": 0.7991707109452612,
+      "Note": 0.4654629414255971,
+      "duration_Note": 0.5038750517666817
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/31_Slavonic_tpt_tpt_hn_tbn_track1_tpt/data.npz",
+      "group": "Slavonic",
+      "model": "instrument_ols",
+      "notes": 272,
+      "Full": 0.7597165851661153,
+      "Note": 0.5596851193659277,
+      "duration_Note": 0.5868971951489292
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/31_Slavonic_tpt_tpt_hn_tbn_track1_tpt/data.npz",
+      "group": "Slavonic",
+      "model": "note_shape",
+      "notes": 272,
+      "Full": 0.7413955762100655,
+      "Note": 0.3774894261708648,
+      "duration_Note": 0.29898480443198194
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/31_Slavonic_tpt_tpt_hn_tbn_track2_tpt/data.npz",
+      "group": "Slavonic",
+      "model": "mamba",
+      "notes": 247,
+      "Full": 0.785161890883426,
+      "Note": 0.5445564470920382,
+      "duration_Note": 0.5306784097631027
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/31_Slavonic_tpt_tpt_hn_tbn_track2_tpt/data.npz",
+      "group": "Slavonic",
+      "model": "s4d",
+      "notes": 247,
+      "Full": 0.7686368447113306,
+      "Note": 0.6196402613513623,
+      "duration_Note": 0.546445362435196
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/31_Slavonic_tpt_tpt_hn_tbn_track2_tpt/data.npz",
+      "group": "Slavonic",
+      "model": "bigru",
+      "notes": 247,
+      "Full": 0.8082761584018668,
+      "Note": 0.3856959299438001,
+      "duration_Note": 0.3873030690533997
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/31_Slavonic_tpt_tpt_hn_tbn_track2_tpt/data.npz",
+      "group": "Slavonic",
+      "model": "instrument_ols",
+      "notes": 247,
+      "Full": 0.795291544866386,
+      "Note": 0.671828392831252,
+      "duration_Note": 0.7093056738943263
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/31_Slavonic_tpt_tpt_hn_tbn_track2_tpt/data.npz",
+      "group": "Slavonic",
+      "model": "note_shape",
+      "notes": 247,
+      "Full": 0.7541995344591854,
+      "Note": 0.3045812884015761,
+      "duration_Note": 0.1563520636456199
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/33_Elise_tpt_tpt_hn_tbn_track1_tpt/data.npz",
+      "group": "Elise",
+      "model": "mamba",
+      "notes": 69,
+      "Full": 0.6811788813472142,
+      "Note": 0.4647813566679171,
+      "duration_Note": 0.37120715449547886
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/33_Elise_tpt_tpt_hn_tbn_track1_tpt/data.npz",
+      "group": "Elise",
+      "model": "s4d",
+      "notes": 69,
+      "Full": 0.7187443895943135,
+      "Note": 0.5208323240478675,
+      "duration_Note": 0.543055241748537
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/33_Elise_tpt_tpt_hn_tbn_track1_tpt/data.npz",
+      "group": "Elise",
+      "model": "bigru",
+      "notes": 69,
+      "Full": 0.6511039209742503,
+      "Note": 0.1841368632814371,
+      "duration_Note": 0.12450106428556681
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/33_Elise_tpt_tpt_hn_tbn_track1_tpt/data.npz",
+      "group": "Elise",
+      "model": "instrument_ols",
+      "notes": 69,
+      "Full": 0.7633751524793835,
+      "Note": 0.6478841358336762,
+      "duration_Note": 0.689714088535139
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/33_Elise_tpt_tpt_hn_tbn_track1_tpt/data.npz",
+      "group": "Elise",
+      "model": "note_shape",
+      "notes": 69,
+      "Full": 0.7208782032553902,
+      "Note": 0.42055284435449347,
+      "duration_Note": 0.5470545507478537
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/34_Fugue_tpt_tpt_hn_tbn_track1_tpt/data.npz",
+      "group": "Fugue",
+      "model": "mamba",
+      "notes": 246,
+      "Full": 0.7387454047699763,
+      "Note": 0.3000922074784197,
+      "duration_Note": 0.11908590411619452
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/34_Fugue_tpt_tpt_hn_tbn_track1_tpt/data.npz",
+      "group": "Fugue",
+      "model": "s4d",
+      "notes": 246,
+      "Full": 0.7232832633610595,
+      "Note": 0.21603165431344748,
+      "duration_Note": 0.039866280429644935
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/34_Fugue_tpt_tpt_hn_tbn_track1_tpt/data.npz",
+      "group": "Fugue",
+      "model": "bigru",
+      "notes": 246,
+      "Full": 0.7219379214639866,
+      "Note": 0.17577562169435632,
+      "duration_Note": 0.055187873697157205
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/34_Fugue_tpt_tpt_hn_tbn_track1_tpt/data.npz",
+      "group": "Fugue",
+      "model": "instrument_ols",
+      "notes": 246,
+      "Full": 0.7736390141502167,
+      "Note": 0.5901363267818194,
+      "duration_Note": 0.52088860922039
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/34_Fugue_tpt_tpt_hn_tbn_track1_tpt/data.npz",
+      "group": "Fugue",
+      "model": "note_shape",
+      "notes": 246,
+      "Full": 0.7250102888590604,
+      "Note": 0.11486878631443599,
+      "duration_Note": 0.06534684753557535
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/34_Fugue_tpt_tpt_hn_tbn_track2_tpt/data.npz",
+      "group": "Fugue",
+      "model": "mamba",
+      "notes": 254,
+      "Full": 0.8127235232908043,
+      "Note": 0.42598854949435583,
+      "duration_Note": 0.2931538009547522
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/34_Fugue_tpt_tpt_hn_tbn_track2_tpt/data.npz",
+      "group": "Fugue",
+      "model": "s4d",
+      "notes": 254,
+      "Full": 0.7871734979961633,
+      "Note": 0.19275491830609687,
+      "duration_Note": 0.031114066269388996
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/34_Fugue_tpt_tpt_hn_tbn_track2_tpt/data.npz",
+      "group": "Fugue",
+      "model": "bigru",
+      "notes": 254,
+      "Full": 0.7800384319030398,
+      "Note": 0.14549980272299945,
+      "duration_Note": -0.00612300380908135
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/34_Fugue_tpt_tpt_hn_tbn_track2_tpt/data.npz",
+      "group": "Fugue",
+      "model": "instrument_ols",
+      "notes": 254,
+      "Full": 0.8390766637207275,
+      "Note": 0.6847366570282108,
+      "duration_Note": 0.6799675082759157
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/34_Fugue_tpt_tpt_hn_tbn_track2_tpt/data.npz",
+      "group": "Fugue",
+      "model": "note_shape",
+      "notes": 254,
+      "Full": 0.7597503320602046,
+      "Note": 0.1317676921998616,
+      "duration_Note": -0.019655767793123374
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/42_Arioso_tpt_tpt_hn_tbn_tba_track1_tpt/data.npz",
+      "group": "Arioso",
+      "model": "mamba",
+      "notes": 353,
+      "Full": 0.6465114504864442,
+      "Note": 0.290778983532785,
+      "duration_Note": 0.3228467826136346
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/42_Arioso_tpt_tpt_hn_tbn_tba_track1_tpt/data.npz",
+      "group": "Arioso",
+      "model": "s4d",
+      "notes": 353,
+      "Full": 0.679518256055461,
+      "Note": 0.29608567162542565,
+      "duration_Note": 0.35966540600622854
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/42_Arioso_tpt_tpt_hn_tbn_tba_track1_tpt/data.npz",
+      "group": "Arioso",
+      "model": "bigru",
+      "notes": 353,
+      "Full": 0.6524164686357502,
+      "Note": 0.2912939832776603,
+      "duration_Note": 0.31705190964950286
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/42_Arioso_tpt_tpt_hn_tbn_tba_track1_tpt/data.npz",
+      "group": "Arioso",
+      "model": "instrument_ols",
+      "notes": 353,
+      "Full": 0.6946697889073415,
+      "Note": 0.4627760432401728,
+      "duration_Note": 0.5079767920069449
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/42_Arioso_tpt_tpt_hn_tbn_tba_track1_tpt/data.npz",
+      "group": "Arioso",
+      "model": "note_shape",
+      "notes": 353,
+      "Full": 0.6026732046196296,
+      "Note": 0.13299608290431278,
+      "duration_Note": 0.04051377439005782
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/42_Arioso_tpt_tpt_hn_tbn_tba_track2_tpt/data.npz",
+      "group": "Arioso",
+      "model": "mamba",
+      "notes": 207,
+      "Full": 0.818129088343516,
+      "Note": 0.47277940593707335,
+      "duration_Note": 0.423041146421251
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/42_Arioso_tpt_tpt_hn_tbn_tba_track2_tpt/data.npz",
+      "group": "Arioso",
+      "model": "s4d",
+      "notes": 207,
+      "Full": 0.8452216150967018,
+      "Note": 0.4748504915055006,
+      "duration_Note": 0.44088639231061566
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/42_Arioso_tpt_tpt_hn_tbn_tba_track2_tpt/data.npz",
+      "group": "Arioso",
+      "model": "bigru",
+      "notes": 207,
+      "Full": 0.8333420476963083,
+      "Note": 0.40718715236833675,
+      "duration_Note": 0.40018107778060263
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/42_Arioso_tpt_tpt_hn_tbn_tba_track2_tpt/data.npz",
+      "group": "Arioso",
+      "model": "instrument_ols",
+      "notes": 207,
+      "Full": 0.8506187861857679,
+      "Note": 0.6123489536622555,
+      "duration_Note": 0.6186908318754812
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tpt/42_Arioso_tpt_tpt_hn_tbn_tba_track2_tpt/data.npz",
+      "group": "Arioso",
+      "model": "note_shape",
+      "notes": 207,
+      "Full": 0.8252400988583378,
+      "Note": 0.4768610563160496,
+      "duration_Note": 0.46680145579140975
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tbn/07_GString_tpt_tbn_track2_tbn/data.npz",
+      "group": "GString",
+      "model": "mamba",
+      "notes": 284,
+      "Full": 0.6633555817898857,
+      "Note": 0.2586031251477758,
+      "duration_Note": 0.2642047525825109
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tbn/07_GString_tpt_tbn_track2_tbn/data.npz",
+      "group": "GString",
+      "model": "s4d",
+      "notes": 284,
+      "Full": 0.7116344727869389,
+      "Note": 0.38186126019115335,
+      "duration_Note": 0.3909360390112785
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tbn/07_GString_tpt_tbn_track2_tbn/data.npz",
+      "group": "GString",
+      "model": "bigru",
+      "notes": 284,
+      "Full": 0.7010446792445348,
+      "Note": 0.43252680579778097,
+      "duration_Note": 0.42365957513601943
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tbn/07_GString_tpt_tbn_track2_tbn/data.npz",
+      "group": "GString",
+      "model": "instrument_ols",
+      "notes": 284,
+      "Full": 0.654721905643153,
+      "Note": 0.42838743554802033,
+      "duration_Note": 0.429934346513463
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tbn/07_GString_tpt_tbn_track2_tbn/data.npz",
+      "group": "GString",
+      "model": "note_shape",
+      "notes": 284,
+      "Full": 0.7079068328293853,
+      "Note": 0.30252217921376506,
+      "duration_Note": 0.3160803122158674
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tbn/31_Slavonic_tpt_tpt_hn_tbn_track4_tbn/data.npz",
+      "group": "Slavonic",
+      "model": "mamba",
+      "notes": 219,
+      "Full": 0.8827586648907859,
+      "Note": 0.21177612598750528,
+      "duration_Note": 0.22346228921411343
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tbn/31_Slavonic_tpt_tpt_hn_tbn_track4_tbn/data.npz",
+      "group": "Slavonic",
+      "model": "s4d",
+      "notes": 219,
+      "Full": 0.8639337556984901,
+      "Note": 0.16496561628270343,
+      "duration_Note": 0.1015439736049092
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tbn/31_Slavonic_tpt_tpt_hn_tbn_track4_tbn/data.npz",
+      "group": "Slavonic",
+      "model": "bigru",
+      "notes": 219,
+      "Full": 0.8998747347980356,
+      "Note": 0.18230513857617683,
+      "duration_Note": 0.18044288188486757
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tbn/31_Slavonic_tpt_tpt_hn_tbn_track4_tbn/data.npz",
+      "group": "Slavonic",
+      "model": "instrument_ols",
+      "notes": 219,
+      "Full": 0.6267404001939895,
+      "Note": -0.21802682680930507,
+      "duration_Note": -0.24071728257482758
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tbn/31_Slavonic_tpt_tpt_hn_tbn_track4_tbn/data.npz",
+      "group": "Slavonic",
+      "model": "note_shape",
+      "notes": 219,
+      "Full": 0.8136082742204463,
+      "Note": 0.07505187821903074,
+      "duration_Note": 0.023249611324167807
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tbn/33_Elise_tpt_tpt_hn_tbn_track4_tbn/data.npz",
+      "group": "Elise",
+      "model": "mamba",
+      "notes": 67,
+      "Full": 0.8592917805323014,
+      "Note": 0.09892615705231284,
+      "duration_Note": 0.007174233420711188
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tbn/33_Elise_tpt_tpt_hn_tbn_track4_tbn/data.npz",
+      "group": "Elise",
+      "model": "s4d",
+      "notes": 67,
+      "Full": 0.8822542507219184,
+      "Note": 0.37500316136527684,
+      "duration_Note": 0.5386579015481373
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tbn/33_Elise_tpt_tpt_hn_tbn_track4_tbn/data.npz",
+      "group": "Elise",
+      "model": "bigru",
+      "notes": 67,
+      "Full": 0.844295890085231,
+      "Note": 0.18139366061917517,
+      "duration_Note": -0.17755208292153257
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tbn/33_Elise_tpt_tpt_hn_tbn_track4_tbn/data.npz",
+      "group": "Elise",
+      "model": "instrument_ols",
+      "notes": 67,
+      "Full": 0.8158571002571037,
+      "Note": 0.2956822666399075,
+      "duration_Note": 0.2785586329793534
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tbn/33_Elise_tpt_tpt_hn_tbn_track4_tbn/data.npz",
+      "group": "Elise",
+      "model": "note_shape",
+      "notes": 67,
+      "Full": 0.8524587708782347,
+      "Note": 0.2365862076467232,
+      "duration_Note": 0.31103971494607313
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tbn/34_Fugue_tpt_tpt_hn_tbn_track4_tbn/data.npz",
+      "group": "Fugue",
+      "model": "mamba",
+      "notes": 189,
+      "Full": 0.8142311310510985,
+      "Note": 0.2079597058129756,
+      "duration_Note": 0.19592964007563599
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tbn/34_Fugue_tpt_tpt_hn_tbn_track4_tbn/data.npz",
+      "group": "Fugue",
+      "model": "s4d",
+      "notes": 189,
+      "Full": 0.828784131051444,
+      "Note": 0.3400294757720149,
+      "duration_Note": 0.359388479107157
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tbn/34_Fugue_tpt_tpt_hn_tbn_track4_tbn/data.npz",
+      "group": "Fugue",
+      "model": "bigru",
+      "notes": 189,
+      "Full": 0.817433020762881,
+      "Note": 0.3170994084785969,
+      "duration_Note": 0.26176727527985366
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tbn/34_Fugue_tpt_tpt_hn_tbn_track4_tbn/data.npz",
+      "group": "Fugue",
+      "model": "instrument_ols",
+      "notes": 189,
+      "Full": 0.7579832433403061,
+      "Note": 0.03939365700421244,
+      "duration_Note": 0.22468060125347838
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tbn/34_Fugue_tpt_tpt_hn_tbn_track4_tbn/data.npz",
+      "group": "Fugue",
+      "model": "note_shape",
+      "notes": 189,
+      "Full": 0.7929314327444413,
+      "Note": 0.15254774318250225,
+      "duration_Note": 0.12137587336554335
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tbn/42_Arioso_tpt_tpt_hn_tbn_tba_track4_tbn/data.npz",
+      "group": "Arioso",
+      "model": "mamba",
+      "notes": 200,
+      "Full": 0.7805775743304895,
+      "Note": 0.42677823167557827,
+      "duration_Note": 0.47206102346749607
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tbn/42_Arioso_tpt_tpt_hn_tbn_tba_track4_tbn/data.npz",
+      "group": "Arioso",
+      "model": "s4d",
+      "notes": 200,
+      "Full": 0.7391337522202378,
+      "Note": 0.27699746343598936,
+      "duration_Note": 0.3218285273391936
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tbn/42_Arioso_tpt_tpt_hn_tbn_tba_track4_tbn/data.npz",
+      "group": "Arioso",
+      "model": "bigru",
+      "notes": 200,
+      "Full": 0.7497622129726501,
+      "Note": 0.381289283946397,
+      "duration_Note": 0.4132660212607682
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tbn/42_Arioso_tpt_tpt_hn_tbn_tba_track4_tbn/data.npz",
+      "group": "Arioso",
+      "model": "instrument_ols",
+      "notes": 200,
+      "Full": 0.7837126022668554,
+      "Note": 0.48910095188572855,
+      "duration_Note": 0.5215043220190386
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tbn/42_Arioso_tpt_tpt_hn_tbn_tba_track4_tbn/data.npz",
+      "group": "Arioso",
+      "model": "note_shape",
+      "notes": 200,
+      "Full": 0.6984379184650142,
+      "Note": -0.036059692599646614,
+      "duration_Note": 0.06550803881705959
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tbn/43_Chorale_tpt_tpt_hn_tbn_tba_track4_tbn/data.npz",
+      "group": "Chorale",
+      "model": "mamba",
+      "notes": 72,
+      "Full": 0.7285475704855986,
+      "Note": 0.10057414761736186,
+      "duration_Note": 0.3004223736591998
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tbn/43_Chorale_tpt_tpt_hn_tbn_tba_track4_tbn/data.npz",
+      "group": "Chorale",
+      "model": "s4d",
+      "notes": 72,
+      "Full": 0.6760384873582789,
+      "Note": -0.19349123345845676,
+      "duration_Note": -0.07685536742864914
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tbn/43_Chorale_tpt_tpt_hn_tbn_tba_track4_tbn/data.npz",
+      "group": "Chorale",
+      "model": "bigru",
+      "notes": 72,
+      "Full": 0.5941430251651012,
+      "Note": -0.28353985242790547,
+      "duration_Note": -0.23066438095345637
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tbn/43_Chorale_tpt_tpt_hn_tbn_tba_track4_tbn/data.npz",
+      "group": "Chorale",
+      "model": "instrument_ols",
+      "notes": 72,
+      "Full": 0.7595963111294171,
+      "Note": 0.23427490578608995,
+      "duration_Note": 0.4557163557442041
+    },
+    {
+      "track": "datagen/solo/URMP/processed_tbn/43_Chorale_tpt_tpt_hn_tbn_tba_track4_tbn/data.npz",
+      "group": "Chorale",
+      "model": "note_shape",
+      "notes": 72,
+      "Full": 0.7149890813770616,
+      "Note": 0.05366478508760315,
+      "duration_Note": -0.0632958777262006
+    },
+    {
+      "track": "datagen/solo/URMP/processed_bn/28_Fugue_fl_ob_cl_bn_track4_bn/data.npz",
+      "group": "Fugue",
+      "model": "mamba",
+      "notes": 187,
+      "Full": 0.891358408343371,
+      "Note": 0.25460950983351227,
+      "duration_Note": 0.5541921644061
+    },
+    {
+      "track": "datagen/solo/URMP/processed_bn/28_Fugue_fl_ob_cl_bn_track4_bn/data.npz",
+      "group": "Fugue",
+      "model": "s4d",
+      "notes": 187,
+      "Full": 0.8942967246182755,
+      "Note": 0.14310055879464972,
+      "duration_Note": 0.48631755728491627
+    },
+    {
+      "track": "datagen/solo/URMP/processed_bn/28_Fugue_fl_ob_cl_bn_track4_bn/data.npz",
+      "group": "Fugue",
+      "model": "bigru",
+      "notes": 187,
+      "Full": 0.8728630481728405,
+      "Note": 0.22124596460247692,
+      "duration_Note": 0.5439673694575057
+    },
+    {
+      "track": "datagen/solo/URMP/processed_bn/28_Fugue_fl_ob_cl_bn_track4_bn/data.npz",
+      "group": "Fugue",
+      "model": "instrument_ols",
+      "notes": 187,
+      "Full": 0.5733741006486089,
+      "Note": 0.10153447627491714,
+      "duration_Note": 0.05313119235676074
+    },
+    {
+      "track": "datagen/solo/URMP/processed_bn/28_Fugue_fl_ob_cl_bn_track4_bn/data.npz",
+      "group": "Fugue",
+      "model": "note_shape",
+      "notes": 187,
+      "Full": 0.8456428906165057,
+      "Note": -0.011371802807544977,
+      "duration_Note": 0.278484768460806
+    },
+    {
+      "track": "datagen/solo/URMP/processed_bn/40_Miserere_fl_fl_ob_cl_bn_track5_bn/data.npz",
+      "group": "Miserere",
+      "model": "mamba",
+      "notes": 29,
+      "Full": 0.6997410619971526,
+      "Note": 0.28725264165171643,
+      "duration_Note": 0.35863844887179935
+    },
+    {
+      "track": "datagen/solo/URMP/processed_bn/40_Miserere_fl_fl_ob_cl_bn_track5_bn/data.npz",
+      "group": "Miserere",
+      "model": "s4d",
+      "notes": 29,
+      "Full": 0.7143624184708837,
+      "Note": 0.20607966889874543,
+      "duration_Note": 0.30672530591905073
+    },
+    {
+      "track": "datagen/solo/URMP/processed_bn/40_Miserere_fl_fl_ob_cl_bn_track5_bn/data.npz",
+      "group": "Miserere",
+      "model": "bigru",
+      "notes": 29,
+      "Full": 0.6529258478334198,
+      "Note": 0.09987867815708186,
+      "duration_Note": 0.23948252064226563
+    },
+    {
+      "track": "datagen/solo/URMP/processed_bn/40_Miserere_fl_fl_ob_cl_bn_track5_bn/data.npz",
+      "group": "Miserere",
+      "model": "instrument_ols",
+      "notes": 29,
+      "Full": 0.4569997920031674,
+      "Note": 0.07702191663913173,
+      "duration_Note": 0.1501954795495444
+    },
+    {
+      "track": "datagen/solo/URMP/processed_bn/40_Miserere_fl_fl_ob_cl_bn_track5_bn/data.npz",
+      "group": "Miserere",
+      "model": "note_shape",
+      "notes": 29,
+      "Full": 0.6893324351802842,
+      "Note": 0.1763940113038499,
+      "duration_Note": 0.2461321209335529
+    },
+    {
+      "track": "datagen/solo/URMP/processed_bn/41_Miserere_fl_fl_ob_sax_bn_track5_bn/data.npz",
+      "group": "Miserere",
+      "model": "mamba",
+      "notes": 29,
+      "Full": 0.6997410619971526,
+      "Note": 0.28725264165171643,
+      "duration_Note": 0.35863844887179935
+    },
+    {
+      "track": "datagen/solo/URMP/processed_bn/41_Miserere_fl_fl_ob_sax_bn_track5_bn/data.npz",
+      "group": "Miserere",
+      "model": "s4d",
+      "notes": 29,
+      "Full": 0.7143624184708837,
+      "Note": 0.20607966889874543,
+      "duration_Note": 0.30672530591905073
+    },
+    {
+      "track": "datagen/solo/URMP/processed_bn/41_Miserere_fl_fl_ob_sax_bn_track5_bn/data.npz",
+      "group": "Miserere",
+      "model": "bigru",
+      "notes": 29,
+      "Full": 0.6529258478334198,
+      "Note": 0.09987867815708186,
+      "duration_Note": 0.23948252064226563
+    },
+    {
+      "track": "datagen/solo/URMP/processed_bn/41_Miserere_fl_fl_ob_sax_bn_track5_bn/data.npz",
+      "group": "Miserere",
+      "model": "instrument_ols",
+      "notes": 29,
+      "Full": 0.4569997920031674,
+      "Note": 0.07702191663913173,
+      "duration_Note": 0.1501954795495444
+    },
+    {
+      "track": "datagen/solo/URMP/processed_bn/41_Miserere_fl_fl_ob_sax_bn_track5_bn/data.npz",
+      "group": "Miserere",
+      "model": "note_shape",
+      "notes": 29,
+      "Full": 0.6893324351802842,
+      "Note": 0.1763940113038499,
+      "duration_Note": 0.2461321209335529
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/01-AchGottundHerr/data.npz",
+      "group": "bach10_b10_AchGottundHerr",
+      "model": "mamba",
+      "notes": 34,
+      "Full": 0.6688345867185328,
+      "Note": 0.6031659549043924,
+      "duration_Note": 0.7295892704473699
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/01-AchGottundHerr/data.npz",
+      "group": "bach10_b10_AchGottundHerr",
+      "model": "s4d",
+      "notes": 34,
+      "Full": 0.64159997893359,
+      "Note": 0.5605146200671917,
+      "duration_Note": 0.7211103813796254
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/01-AchGottundHerr/data.npz",
+      "group": "bach10_b10_AchGottundHerr",
+      "model": "bigru",
+      "notes": 34,
+      "Full": 0.6326789103493152,
+      "Note": 0.48137226927912763,
+      "duration_Note": 0.6337001370661134
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/01-AchGottundHerr/data.npz",
+      "group": "bach10_b10_AchGottundHerr",
+      "model": "instrument_ols",
+      "notes": 34,
+      "Full": 0.40124381947047105,
+      "Note": 0.5008301310960191,
+      "duration_Note": 0.5568878589508842
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/01-AchGottundHerr/data.npz",
+      "group": "bach10_b10_AchGottundHerr",
+      "model": "note_shape",
+      "notes": 34,
+      "Full": 0.4185358532755196,
+      "Note": 0.024789005694894586,
+      "duration_Note": 0.14568408277239464
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/02-AchLiebenChristen/data.npz",
+      "group": "bach10_b10_AchLiebenChristen",
+      "model": "mamba",
+      "notes": 71,
+      "Full": 0.5962540973782574,
+      "Note": 0.3296221786567691,
+      "duration_Note": 0.45969231577287495
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/02-AchLiebenChristen/data.npz",
+      "group": "bach10_b10_AchLiebenChristen",
+      "model": "s4d",
+      "notes": 71,
+      "Full": 0.4982654515280208,
+      "Note": 0.20608043059059367,
+      "duration_Note": 0.3563073400475035
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/02-AchLiebenChristen/data.npz",
+      "group": "bach10_b10_AchLiebenChristen",
+      "model": "bigru",
+      "notes": 71,
+      "Full": 0.5389907824966419,
+      "Note": 0.3400800524395118,
+      "duration_Note": 0.4282756389017491
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/02-AchLiebenChristen/data.npz",
+      "group": "bach10_b10_AchLiebenChristen",
+      "model": "instrument_ols",
+      "notes": 71,
+      "Full": 0.48410941874105196,
+      "Note": 0.6492890222600083,
+      "duration_Note": 0.6647987001075508
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/02-AchLiebenChristen/data.npz",
+      "group": "bach10_b10_AchLiebenChristen",
+      "model": "note_shape",
+      "notes": 71,
+      "Full": 0.3462999399897404,
+      "Note": -0.12236477293691955,
+      "duration_Note": 0.08900884604879224
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/03-ChristederdubistTagundLicht/data.npz",
+      "group": "bach10_b10_ChristederdubistTagundLicht",
+      "model": "mamba",
+      "notes": 37,
+      "Full": 0.5802143991396879,
+      "Note": 0.4206320392504575,
+      "duration_Note": 0.5990935116715524
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/03-ChristederdubistTagundLicht/data.npz",
+      "group": "bach10_b10_ChristederdubistTagundLicht",
+      "model": "s4d",
+      "notes": 37,
+      "Full": 0.5076670803899991,
+      "Note": 0.2223395581704133,
+      "duration_Note": 0.47332231648396916
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/03-ChristederdubistTagundLicht/data.npz",
+      "group": "bach10_b10_ChristederdubistTagundLicht",
+      "model": "bigru",
+      "notes": 37,
+      "Full": 0.5643501374444873,
+      "Note": 0.38161002668769795,
+      "duration_Note": 0.568011957829819
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/03-ChristederdubistTagundLicht/data.npz",
+      "group": "bach10_b10_ChristederdubistTagundLicht",
+      "model": "instrument_ols",
+      "notes": 37,
+      "Full": 0.2093634549814932,
+      "Note": -0.11420246580216371,
+      "duration_Note": 0.14426357477521992
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/03-ChristederdubistTagundLicht/data.npz",
+      "group": "bach10_b10_ChristederdubistTagundLicht",
+      "model": "note_shape",
+      "notes": 37,
+      "Full": 0.5877913851522818,
+      "Note": 0.7354210836318801,
+      "duration_Note": 0.7429756648362533
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/04-ChristeDuBeistand/data.npz",
+      "group": "bach10_b10_ChristeDuBeistand",
+      "model": "mamba",
+      "notes": 46,
+      "Full": 0.48604132419535045,
+      "Note": 0.29557783255684283,
+      "duration_Note": 0.4641046566758166
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/04-ChristeDuBeistand/data.npz",
+      "group": "bach10_b10_ChristeDuBeistand",
+      "model": "s4d",
+      "notes": 46,
+      "Full": 0.5373881047218866,
+      "Note": 0.3509962867659739,
+      "duration_Note": 0.5172737759263041
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/04-ChristeDuBeistand/data.npz",
+      "group": "bach10_b10_ChristeDuBeistand",
+      "model": "bigru",
+      "notes": 46,
+      "Full": 0.29062626408244296,
+      "Note": -0.18400303872757556,
+      "duration_Note": 0.01787255989121809
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/04-ChristeDuBeistand/data.npz",
+      "group": "bach10_b10_ChristeDuBeistand",
+      "model": "instrument_ols",
+      "notes": 46,
+      "Full": 0.4547256505970541,
+      "Note": 0.44343910725287317,
+      "duration_Note": 0.5722634792110516
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/04-ChristeDuBeistand/data.npz",
+      "group": "bach10_b10_ChristeDuBeistand",
+      "model": "note_shape",
+      "notes": 46,
+      "Full": 0.3542680834586351,
+      "Note": 0.21607738948727906,
+      "duration_Note": 0.28907085214640504
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/05-DieNacht/data.npz",
+      "group": "bach10_b10_DieNacht",
+      "model": "mamba",
+      "notes": 40,
+      "Full": 0.565657225728878,
+      "Note": 0.36534332474529335,
+      "duration_Note": 0.5774447282935727
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/05-DieNacht/data.npz",
+      "group": "bach10_b10_DieNacht",
+      "model": "s4d",
+      "notes": 40,
+      "Full": 0.6360564473550492,
+      "Note": 0.6011297194827239,
+      "duration_Note": 0.7337986955330964
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/05-DieNacht/data.npz",
+      "group": "bach10_b10_DieNacht",
+      "model": "bigru",
+      "notes": 40,
+      "Full": 0.5589457758187429,
+      "Note": 0.44276734707000387,
+      "duration_Note": 0.527111201396582
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/05-DieNacht/data.npz",
+      "group": "bach10_b10_DieNacht",
+      "model": "instrument_ols",
+      "notes": 40,
+      "Full": 0.4793559476225545,
+      "Note": 0.5640025053880124,
+      "duration_Note": 0.6053352565875485
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/05-DieNacht/data.npz",
+      "group": "bach10_b10_DieNacht",
+      "model": "note_shape",
+      "notes": 40,
+      "Full": 0.4073042089227684,
+      "Note": 0.16799103464438808,
+      "duration_Note": 0.3960889443881166
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/06-DieSonne/data.npz",
+      "group": "bach10_b10_DieSonne",
+      "model": "mamba",
+      "notes": 46,
+      "Full": 0.5513780100240729,
+      "Note": 0.23757396180964332,
+      "duration_Note": 0.38409893568352
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/06-DieSonne/data.npz",
+      "group": "bach10_b10_DieSonne",
+      "model": "s4d",
+      "notes": 46,
+      "Full": 0.5624353195409556,
+      "Note": 0.21383111022772158,
+      "duration_Note": 0.32983410308898625
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/06-DieSonne/data.npz",
+      "group": "bach10_b10_DieSonne",
+      "model": "bigru",
+      "notes": 46,
+      "Full": 0.39882175715015705,
+      "Note": -0.007379987447949075,
+      "duration_Note": 0.08068470905049961
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/06-DieSonne/data.npz",
+      "group": "bach10_b10_DieSonne",
+      "model": "instrument_ols",
+      "notes": 46,
+      "Full": 0.27290331462806394,
+      "Note": 0.0918906295512771,
+      "duration_Note": 0.15281966635287864
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/06-DieSonne/data.npz",
+      "group": "bach10_b10_DieSonne",
+      "model": "note_shape",
+      "notes": 46,
+      "Full": 0.43497530082379693,
+      "Note": 0.13907029167718357,
+      "duration_Note": 0.2237226863669438
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/07-HerrGott/data.npz",
+      "group": "bach10_b10_HerrGott",
+      "model": "mamba",
+      "notes": 32,
+      "Full": 0.5572830180510356,
+      "Note": 0.4485758934518671,
+      "duration_Note": 0.5969915626463644
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/07-HerrGott/data.npz",
+      "group": "bach10_b10_HerrGott",
+      "model": "s4d",
+      "notes": 32,
+      "Full": 0.4739077336878179,
+      "Note": 0.42595599264469847,
+      "duration_Note": 0.6000255932863283
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/07-HerrGott/data.npz",
+      "group": "bach10_b10_HerrGott",
+      "model": "bigru",
+      "notes": 32,
+      "Full": 0.525882347015306,
+      "Note": 0.4046504920235417,
+      "duration_Note": 0.5986233689131978
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/07-HerrGott/data.npz",
+      "group": "bach10_b10_HerrGott",
+      "model": "instrument_ols",
+      "notes": 32,
+      "Full": 0.30454058128086076,
+      "Note": 0.3510129874797733,
+      "duration_Note": 0.4927798546537238
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/07-HerrGott/data.npz",
+      "group": "bach10_b10_HerrGott",
+      "model": "note_shape",
+      "notes": 32,
+      "Full": 0.43873503874876124,
+      "Note": 0.3239115529362727,
+      "duration_Note": 0.5179903992068866
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/08-FuerDeinenThron/data.npz",
+      "group": "bach10_b10_FuerDeinenThron",
+      "model": "mamba",
+      "notes": 32,
+      "Full": 0.5887054220465127,
+      "Note": 0.5464469783198181,
+      "duration_Note": 0.6796528997479787
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/08-FuerDeinenThron/data.npz",
+      "group": "bach10_b10_FuerDeinenThron",
+      "model": "s4d",
+      "notes": 32,
+      "Full": 0.5256271139753894,
+      "Note": 0.5377896386941767,
+      "duration_Note": 0.6765342424150189
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/08-FuerDeinenThron/data.npz",
+      "group": "bach10_b10_FuerDeinenThron",
+      "model": "bigru",
+      "notes": 32,
+      "Full": 0.5761118405461999,
+      "Note": 0.539255566646831,
+      "duration_Note": 0.6937145432192611
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/08-FuerDeinenThron/data.npz",
+      "group": "bach10_b10_FuerDeinenThron",
+      "model": "instrument_ols",
+      "notes": 32,
+      "Full": 0.4213180939951777,
+      "Note": 0.5765818193665079,
+      "duration_Note": 0.689917383585139
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/08-FuerDeinenThron/data.npz",
+      "group": "bach10_b10_FuerDeinenThron",
+      "model": "note_shape",
+      "notes": 32,
+      "Full": 0.4091348773331509,
+      "Note": 0.3761654865053592,
+      "duration_Note": 0.5530032111387707
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/09-Jesus/data.npz",
+      "group": "bach10_b10_Jesus",
+      "model": "mamba",
+      "notes": 36,
+      "Full": 0.6627382394055886,
+      "Note": 0.5209072521571327,
+      "duration_Note": 0.6138505860317145
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/09-Jesus/data.npz",
+      "group": "bach10_b10_Jesus",
+      "model": "s4d",
+      "notes": 36,
+      "Full": 0.6339842417944388,
+      "Note": 0.5014428639193228,
+      "duration_Note": 0.5973563049123293
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/09-Jesus/data.npz",
+      "group": "bach10_b10_Jesus",
+      "model": "bigru",
+      "notes": 36,
+      "Full": 0.5618003478637436,
+      "Note": 0.3542551860225931,
+      "duration_Note": 0.4787956243029751
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/09-Jesus/data.npz",
+      "group": "bach10_b10_Jesus",
+      "model": "instrument_ols",
+      "notes": 36,
+      "Full": 0.38272278645974533,
+      "Note": 0.3143607116441879,
+      "duration_Note": 0.5555995894712087
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/09-Jesus/data.npz",
+      "group": "bach10_b10_Jesus",
+      "model": "note_shape",
+      "notes": 36,
+      "Full": 0.37798249291046176,
+      "Note": 0.29363933767652045,
+      "duration_Note": 0.2910614799302845
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/10-NunBitten/data.npz",
+      "group": "bach10_b10_NunBitten",
+      "model": "mamba",
+      "notes": 51,
+      "Full": 0.66006725108322,
+      "Note": 0.49648788631312313,
+      "duration_Note": 0.6615268698396976
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/10-NunBitten/data.npz",
+      "group": "bach10_b10_NunBitten",
+      "model": "s4d",
+      "notes": 51,
+      "Full": 0.6478271660848952,
+      "Note": 0.507751646211311,
+      "duration_Note": 0.6615533392794242
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/10-NunBitten/data.npz",
+      "group": "bach10_b10_NunBitten",
+      "model": "bigru",
+      "notes": 51,
+      "Full": 0.5449596888768639,
+      "Note": 0.4121670714629208,
+      "duration_Note": 0.5379981640158417
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/10-NunBitten/data.npz",
+      "group": "bach10_b10_NunBitten",
+      "model": "instrument_ols",
+      "notes": 51,
+      "Full": 0.2577815353703525,
+      "Note": 0.10768933680016249,
+      "duration_Note": 0.29048257970760194
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_vn/10-NunBitten/data.npz",
+      "group": "bach10_b10_NunBitten",
+      "model": "note_shape",
+      "notes": 51,
+      "Full": 0.4032058647771064,
+      "Note": 0.18305128571363583,
+      "duration_Note": 0.36754260755215545
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/01-AchGottundHerr/data.npz",
+      "group": "bach10_b10_AchGottundHerr",
+      "model": "mamba",
+      "notes": 32,
+      "Full": 0.6913307897292588,
+      "Note": 0.5004428327639127,
+      "duration_Note": 0.5787482209670669
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/01-AchGottundHerr/data.npz",
+      "group": "bach10_b10_AchGottundHerr",
+      "model": "s4d",
+      "notes": 32,
+      "Full": 0.5220470893522713,
+      "Note": 0.31084754385971847,
+      "duration_Note": 0.431628375173461
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/01-AchGottundHerr/data.npz",
+      "group": "bach10_b10_AchGottundHerr",
+      "model": "bigru",
+      "notes": 32,
+      "Full": 0.6288722809985727,
+      "Note": 0.4241077308860911,
+      "duration_Note": 0.5060558028306454
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/01-AchGottundHerr/data.npz",
+      "group": "bach10_b10_AchGottundHerr",
+      "model": "instrument_ols",
+      "notes": 32,
+      "Full": 0.5644448042200401,
+      "Note": 0.37314839143751144,
+      "duration_Note": 0.47348065928400795
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/01-AchGottundHerr/data.npz",
+      "group": "bach10_b10_AchGottundHerr",
+      "model": "note_shape",
+      "notes": 32,
+      "Full": 0.4754288909849311,
+      "Note": 0.34127838018560996,
+      "duration_Note": 0.4009244261126117
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/02-AchLiebenChristen/data.npz",
+      "group": "bach10_b10_AchLiebenChristen",
+      "model": "mamba",
+      "notes": 65,
+      "Full": 0.704383434230622,
+      "Note": 0.6489417805804863,
+      "duration_Note": 0.7546565334375409
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/02-AchLiebenChristen/data.npz",
+      "group": "bach10_b10_AchLiebenChristen",
+      "model": "s4d",
+      "notes": 65,
+      "Full": 0.7112287839005481,
+      "Note": 0.6484639141803383,
+      "duration_Note": 0.752252022096284
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/02-AchLiebenChristen/data.npz",
+      "group": "bach10_b10_AchLiebenChristen",
+      "model": "bigru",
+      "notes": 65,
+      "Full": 0.6514626057679549,
+      "Note": 0.46066205832509743,
+      "duration_Note": 0.5372315649215441
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/02-AchLiebenChristen/data.npz",
+      "group": "bach10_b10_AchLiebenChristen",
+      "model": "instrument_ols",
+      "notes": 65,
+      "Full": 0.5703141227215767,
+      "Note": 0.6073902508512627,
+      "duration_Note": 0.7231300889250765
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/02-AchLiebenChristen/data.npz",
+      "group": "bach10_b10_AchLiebenChristen",
+      "model": "note_shape",
+      "notes": 65,
+      "Full": 0.6078132879062185,
+      "Note": 0.601377457420713,
+      "duration_Note": 0.7342574711408769
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/03-ChristederdubistTagundLicht/data.npz",
+      "group": "bach10_b10_ChristederdubistTagundLicht",
+      "model": "mamba",
+      "notes": 42,
+      "Full": 0.3894661673477316,
+      "Note": -0.15300826504891663,
+      "duration_Note": 0.03212408279400096
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/03-ChristederdubistTagundLicht/data.npz",
+      "group": "bach10_b10_ChristederdubistTagundLicht",
+      "model": "s4d",
+      "notes": 42,
+      "Full": 0.43424941063941513,
+      "Note": -0.11496999444985521,
+      "duration_Note": 0.06113226384595553
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/03-ChristederdubistTagundLicht/data.npz",
+      "group": "bach10_b10_ChristederdubistTagundLicht",
+      "model": "bigru",
+      "notes": 42,
+      "Full": 0.2686958654445498,
+      "Note": -0.4402964371304838,
+      "duration_Note": -0.2992807443174701
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/03-ChristederdubistTagundLicht/data.npz",
+      "group": "bach10_b10_ChristederdubistTagundLicht",
+      "model": "instrument_ols",
+      "notes": 42,
+      "Full": 0.14200171245347804,
+      "Note": -0.34641514879082913,
+      "duration_Note": -0.18472688372040627
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/03-ChristederdubistTagundLicht/data.npz",
+      "group": "bach10_b10_ChristederdubistTagundLicht",
+      "model": "note_shape",
+      "notes": 42,
+      "Full": 0.05394280699566097,
+      "Note": -0.5371424032396234,
+      "duration_Note": -0.4373609094208727
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/04-ChristeDuBeistand/data.npz",
+      "group": "bach10_b10_ChristeDuBeistand",
+      "model": "mamba",
+      "notes": 52,
+      "Full": 0.6190842095360108,
+      "Note": 0.6360737715079937,
+      "duration_Note": 0.7092601871445114
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/04-ChristeDuBeistand/data.npz",
+      "group": "bach10_b10_ChristeDuBeistand",
+      "model": "s4d",
+      "notes": 52,
+      "Full": 0.6394535189913876,
+      "Note": 0.6411931918714534,
+      "duration_Note": 0.7491969494217985
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/04-ChristeDuBeistand/data.npz",
+      "group": "bach10_b10_ChristeDuBeistand",
+      "model": "bigru",
+      "notes": 52,
+      "Full": 0.5613722321782657,
+      "Note": 0.43082385567175996,
+      "duration_Note": 0.5061308861468993
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/04-ChristeDuBeistand/data.npz",
+      "group": "bach10_b10_ChristeDuBeistand",
+      "model": "instrument_ols",
+      "notes": 52,
+      "Full": 0.5754642184129037,
+      "Note": 0.5627067995439852,
+      "duration_Note": 0.6321245329166296
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/04-ChristeDuBeistand/data.npz",
+      "group": "bach10_b10_ChristeDuBeistand",
+      "model": "note_shape",
+      "notes": 52,
+      "Full": 0.4849119542175386,
+      "Note": 0.6237369960056235,
+      "duration_Note": 0.6845613513981831
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/05-DieNacht/data.npz",
+      "group": "bach10_b10_DieNacht",
+      "model": "mamba",
+      "notes": 50,
+      "Full": 0.6163659068428499,
+      "Note": 0.012832013101617785,
+      "duration_Note": 0.22068754075560715
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/05-DieNacht/data.npz",
+      "group": "bach10_b10_DieNacht",
+      "model": "s4d",
+      "notes": 50,
+      "Full": 0.5859437781228644,
+      "Note": 0.20912292589666184,
+      "duration_Note": 0.3803394429077237
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/05-DieNacht/data.npz",
+      "group": "bach10_b10_DieNacht",
+      "model": "bigru",
+      "notes": 50,
+      "Full": 0.46051466491421544,
+      "Note": -0.15778543267006048,
+      "duration_Note": -0.046817825626902496
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/05-DieNacht/data.npz",
+      "group": "bach10_b10_DieNacht",
+      "model": "instrument_ols",
+      "notes": 50,
+      "Full": 0.40198156631884124,
+      "Note": 0.04939590954391731,
+      "duration_Note": 0.2594715008272796
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/05-DieNacht/data.npz",
+      "group": "bach10_b10_DieNacht",
+      "model": "note_shape",
+      "notes": 50,
+      "Full": 0.35677441452001357,
+      "Note": 0.0034646100151036192,
+      "duration_Note": 0.15831767253156942
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/06-DieSonne/data.npz",
+      "group": "bach10_b10_DieSonne",
+      "model": "mamba",
+      "notes": 53,
+      "Full": 0.6911149971734533,
+      "Note": 0.5348190221259697,
+      "duration_Note": 0.7543225995965961
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/06-DieSonne/data.npz",
+      "group": "bach10_b10_DieSonne",
+      "model": "s4d",
+      "notes": 53,
+      "Full": 0.6661690496055385,
+      "Note": 0.4829393505174518,
+      "duration_Note": 0.6719362271185604
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/06-DieSonne/data.npz",
+      "group": "bach10_b10_DieSonne",
+      "model": "bigru",
+      "notes": 53,
+      "Full": 0.38922008858004137,
+      "Note": -0.015080048251081255,
+      "duration_Note": 0.15457669130107554
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/06-DieSonne/data.npz",
+      "group": "bach10_b10_DieSonne",
+      "model": "instrument_ols",
+      "notes": 53,
+      "Full": 0.5968884986885992,
+      "Note": 0.4986312715413676,
+      "duration_Note": 0.6568814950243647
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/06-DieSonne/data.npz",
+      "group": "bach10_b10_DieSonne",
+      "model": "note_shape",
+      "notes": 53,
+      "Full": 0.6115078117228013,
+      "Note": 0.5099612662615801,
+      "duration_Note": 0.664386609548497
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/07-HerrGott/data.npz",
+      "group": "bach10_b10_HerrGott",
+      "model": "mamba",
+      "notes": 40,
+      "Full": 0.633801787846593,
+      "Note": 0.2400540027092391,
+      "duration_Note": 0.31263837340340783
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/07-HerrGott/data.npz",
+      "group": "bach10_b10_HerrGott",
+      "model": "s4d",
+      "notes": 40,
+      "Full": 0.4528741076222516,
+      "Note": 0.09826509256231583,
+      "duration_Note": 0.24347026893660273
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/07-HerrGott/data.npz",
+      "group": "bach10_b10_HerrGott",
+      "model": "bigru",
+      "notes": 40,
+      "Full": 0.5123609536320723,
+      "Note": -0.0704535632826045,
+      "duration_Note": 0.22824661532126658
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/07-HerrGott/data.npz",
+      "group": "bach10_b10_HerrGott",
+      "model": "instrument_ols",
+      "notes": 40,
+      "Full": 0.3741687219012384,
+      "Note": 0.0809510253881856,
+      "duration_Note": 0.24627738010628483
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/07-HerrGott/data.npz",
+      "group": "bach10_b10_HerrGott",
+      "model": "note_shape",
+      "notes": 40,
+      "Full": 0.37015355605500816,
+      "Note": -0.009989109664383128,
+      "duration_Note": 0.11322058879715356
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/08-FuerDeinenThron/data.npz",
+      "group": "bach10_b10_FuerDeinenThron",
+      "model": "mamba",
+      "notes": 38,
+      "Full": 0.7845044143871461,
+      "Note": 0.3396433649481996,
+      "duration_Note": 0.5249175195572702
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/08-FuerDeinenThron/data.npz",
+      "group": "bach10_b10_FuerDeinenThron",
+      "model": "s4d",
+      "notes": 38,
+      "Full": 0.6220183370328408,
+      "Note": 0.3076736198551311,
+      "duration_Note": 0.5038117836560848
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/08-FuerDeinenThron/data.npz",
+      "group": "bach10_b10_FuerDeinenThron",
+      "model": "bigru",
+      "notes": 38,
+      "Full": 0.6917381401722691,
+      "Note": 0.16832242144467616,
+      "duration_Note": 0.434365364546223
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/08-FuerDeinenThron/data.npz",
+      "group": "bach10_b10_FuerDeinenThron",
+      "model": "instrument_ols",
+      "notes": 38,
+      "Full": 0.4982682761079481,
+      "Note": 0.09571533486683194,
+      "duration_Note": 0.29065869700568475
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/08-FuerDeinenThron/data.npz",
+      "group": "bach10_b10_FuerDeinenThron",
+      "model": "note_shape",
+      "notes": 38,
+      "Full": 0.4717150117438275,
+      "Note": -0.13759687804440238,
+      "duration_Note": 0.10794092277880611
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/09-Jesus/data.npz",
+      "group": "bach10_b10_Jesus",
+      "model": "mamba",
+      "notes": 42,
+      "Full": 0.4985848869978717,
+      "Note": 0.25564773979240507,
+      "duration_Note": 0.339164537869693
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/09-Jesus/data.npz",
+      "group": "bach10_b10_Jesus",
+      "model": "s4d",
+      "notes": 42,
+      "Full": 0.46467041299447354,
+      "Note": 0.12052600130783606,
+      "duration_Note": 0.24140890038305945
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/09-Jesus/data.npz",
+      "group": "bach10_b10_Jesus",
+      "model": "bigru",
+      "notes": 42,
+      "Full": 0.4493026656078035,
+      "Note": 0.06658004248696787,
+      "duration_Note": 0.08685915496886468
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/09-Jesus/data.npz",
+      "group": "bach10_b10_Jesus",
+      "model": "instrument_ols",
+      "notes": 42,
+      "Full": 0.38408446125903406,
+      "Note": 0.18995215243109442,
+      "duration_Note": 0.38034000753091907
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/09-Jesus/data.npz",
+      "group": "bach10_b10_Jesus",
+      "model": "note_shape",
+      "notes": 42,
+      "Full": 0.342892559850599,
+      "Note": 0.1303190559082417,
+      "duration_Note": 0.23368621194018044
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/10-NunBitten/data.npz",
+      "group": "bach10_b10_NunBitten",
+      "model": "mamba",
+      "notes": 61,
+      "Full": 0.6937276538497628,
+      "Note": 0.3803123572666641,
+      "duration_Note": 0.6876599576149885
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/10-NunBitten/data.npz",
+      "group": "bach10_b10_NunBitten",
+      "model": "s4d",
+      "notes": 61,
+      "Full": 0.6835960722877006,
+      "Note": 0.33608456557280464,
+      "duration_Note": 0.6628434124747167
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/10-NunBitten/data.npz",
+      "group": "bach10_b10_NunBitten",
+      "model": "bigru",
+      "notes": 61,
+      "Full": 0.5294894349947115,
+      "Note": 0.17631130647817728,
+      "duration_Note": 0.33951062791975045
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/10-NunBitten/data.npz",
+      "group": "bach10_b10_NunBitten",
+      "model": "instrument_ols",
+      "notes": 61,
+      "Full": 0.5474566487035983,
+      "Note": 0.2340519172571806,
+      "duration_Note": 0.5649632823787402
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_cl/10-NunBitten/data.npz",
+      "group": "bach10_b10_NunBitten",
+      "model": "note_shape",
+      "notes": 61,
+      "Full": 0.47295332399184664,
+      "Note": 0.15079859810783922,
+      "duration_Note": 0.4370429138212657
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/01-AchGottundHerr/data.npz",
+      "group": "bach10_b10_AchGottundHerr",
+      "model": "mamba",
+      "notes": 37,
+      "Full": 0.6764505541134072,
+      "Note": 0.580075936897151,
+      "duration_Note": 0.6808154414450319
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/01-AchGottundHerr/data.npz",
+      "group": "bach10_b10_AchGottundHerr",
+      "model": "s4d",
+      "notes": 37,
+      "Full": 0.6386857452922327,
+      "Note": 0.618728105982488,
+      "duration_Note": 0.7212841662966727
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/01-AchGottundHerr/data.npz",
+      "group": "bach10_b10_AchGottundHerr",
+      "model": "bigru",
+      "notes": 37,
+      "Full": 0.5907617317622047,
+      "Note": 0.3887395590310562,
+      "duration_Note": 0.48848192134230967
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/01-AchGottundHerr/data.npz",
+      "group": "bach10_b10_AchGottundHerr",
+      "model": "instrument_ols",
+      "notes": 37,
+      "Full": 0.5479879303345004,
+      "Note": 0.485047902673217,
+      "duration_Note": 0.6257758234579053
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/01-AchGottundHerr/data.npz",
+      "group": "bach10_b10_AchGottundHerr",
+      "model": "note_shape",
+      "notes": 37,
+      "Full": 0.4986275824705713,
+      "Note": 0.39635134656496507,
+      "duration_Note": 0.522436543954842
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/02-AchLiebenChristen/data.npz",
+      "group": "bach10_b10_AchLiebenChristen",
+      "model": "mamba",
+      "notes": 72,
+      "Full": 0.6052882318307446,
+      "Note": 0.46041933402250007,
+      "duration_Note": 0.5839273452318497
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/02-AchLiebenChristen/data.npz",
+      "group": "bach10_b10_AchLiebenChristen",
+      "model": "s4d",
+      "notes": 72,
+      "Full": 0.6328055923975869,
+      "Note": 0.542812626030465,
+      "duration_Note": 0.6377866632864292
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/02-AchLiebenChristen/data.npz",
+      "group": "bach10_b10_AchLiebenChristen",
+      "model": "bigru",
+      "notes": 72,
+      "Full": 0.5759877246658558,
+      "Note": 0.3711456908641584,
+      "duration_Note": 0.47011448780381354
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/02-AchLiebenChristen/data.npz",
+      "group": "bach10_b10_AchLiebenChristen",
+      "model": "instrument_ols",
+      "notes": 72,
+      "Full": 0.5045344293933701,
+      "Note": 0.5458626275709996,
+      "duration_Note": 0.5712886430195189
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/02-AchLiebenChristen/data.npz",
+      "group": "bach10_b10_AchLiebenChristen",
+      "model": "note_shape",
+      "notes": 72,
+      "Full": 0.44796523509300207,
+      "Note": 0.42802174163493417,
+      "duration_Note": 0.4636790627884364
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/03-ChristederdubistTagundLicht/data.npz",
+      "group": "bach10_b10_ChristederdubistTagundLicht",
+      "model": "mamba",
+      "notes": 49,
+      "Full": 0.763588796071502,
+      "Note": 0.6484224385585738,
+      "duration_Note": 0.770983965633139
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/03-ChristederdubistTagundLicht/data.npz",
+      "group": "bach10_b10_ChristederdubistTagundLicht",
+      "model": "s4d",
+      "notes": 49,
+      "Full": 0.753487935094229,
+      "Note": 0.6693630632071388,
+      "duration_Note": 0.847407536994808
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/03-ChristederdubistTagundLicht/data.npz",
+      "group": "bach10_b10_ChristederdubistTagundLicht",
+      "model": "bigru",
+      "notes": 49,
+      "Full": 0.7130346584504895,
+      "Note": 0.5044315349570445,
+      "duration_Note": 0.6687256680578829
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/03-ChristederdubistTagundLicht/data.npz",
+      "group": "bach10_b10_ChristederdubistTagundLicht",
+      "model": "instrument_ols",
+      "notes": 49,
+      "Full": 0.5609619929416948,
+      "Note": 0.6634481504554233,
+      "duration_Note": 0.7206893705377836
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/03-ChristederdubistTagundLicht/data.npz",
+      "group": "bach10_b10_ChristederdubistTagundLicht",
+      "model": "note_shape",
+      "notes": 49,
+      "Full": 0.5454756536438244,
+      "Note": 0.573007965196686,
+      "duration_Note": 0.5449141910046758
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/04-ChristeDuBeistand/data.npz",
+      "group": "bach10_b10_ChristeDuBeistand",
+      "model": "mamba",
+      "notes": 61,
+      "Full": 0.6243825640123862,
+      "Note": 0.5206635293359547,
+      "duration_Note": 0.6828516995797231
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/04-ChristeDuBeistand/data.npz",
+      "group": "bach10_b10_ChristeDuBeistand",
+      "model": "s4d",
+      "notes": 61,
+      "Full": 0.689382313614491,
+      "Note": 0.5741110244305145,
+      "duration_Note": 0.7206098220123389
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/04-ChristeDuBeistand/data.npz",
+      "group": "bach10_b10_ChristeDuBeistand",
+      "model": "bigru",
+      "notes": 61,
+      "Full": 0.5479778879525427,
+      "Note": 0.36275474707084093,
+      "duration_Note": 0.4128485020113155
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/04-ChristeDuBeistand/data.npz",
+      "group": "bach10_b10_ChristeDuBeistand",
+      "model": "instrument_ols",
+      "notes": 61,
+      "Full": 0.49676920704349803,
+      "Note": 0.6211335363000386,
+      "duration_Note": 0.531562978233581
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/04-ChristeDuBeistand/data.npz",
+      "group": "bach10_b10_ChristeDuBeistand",
+      "model": "note_shape",
+      "notes": 61,
+      "Full": 0.6345050029713823,
+      "Note": 0.7590362155192645,
+      "duration_Note": 0.79269335152352
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/05-DieNacht/data.npz",
+      "group": "bach10_b10_DieNacht",
+      "model": "mamba",
+      "notes": 51,
+      "Full": 0.7042933239807682,
+      "Note": 0.5747190995737109,
+      "duration_Note": 0.7356220247377732
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/05-DieNacht/data.npz",
+      "group": "bach10_b10_DieNacht",
+      "model": "s4d",
+      "notes": 51,
+      "Full": 0.6893903077696751,
+      "Note": 0.6277166700007627,
+      "duration_Note": 0.7841268567426529
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/05-DieNacht/data.npz",
+      "group": "bach10_b10_DieNacht",
+      "model": "bigru",
+      "notes": 51,
+      "Full": 0.6112576421176914,
+      "Note": 0.4003264585208109,
+      "duration_Note": 0.49294476193980463
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/05-DieNacht/data.npz",
+      "group": "bach10_b10_DieNacht",
+      "model": "instrument_ols",
+      "notes": 51,
+      "Full": 0.5692366313567526,
+      "Note": 0.6639985153324376,
+      "duration_Note": 0.7171372756156215
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/05-DieNacht/data.npz",
+      "group": "bach10_b10_DieNacht",
+      "model": "note_shape",
+      "notes": 51,
+      "Full": 0.582096198776125,
+      "Note": 0.6885376934976016,
+      "duration_Note": 0.7667058545305723
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/06-DieSonne/data.npz",
+      "group": "bach10_b10_DieSonne",
+      "model": "mamba",
+      "notes": 57,
+      "Full": 0.5564897951495069,
+      "Note": 0.4573355488761254,
+      "duration_Note": 0.5873078684937818
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/06-DieSonne/data.npz",
+      "group": "bach10_b10_DieSonne",
+      "model": "s4d",
+      "notes": 57,
+      "Full": 0.5714280513494294,
+      "Note": 0.45553361951093796,
+      "duration_Note": 0.6104285906808565
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/06-DieSonne/data.npz",
+      "group": "bach10_b10_DieSonne",
+      "model": "bigru",
+      "notes": 57,
+      "Full": 0.4148281388573417,
+      "Note": 0.0640779303637393,
+      "duration_Note": 0.20996111534831755
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/06-DieSonne/data.npz",
+      "group": "bach10_b10_DieSonne",
+      "model": "instrument_ols",
+      "notes": 57,
+      "Full": 0.6310936869909628,
+      "Note": 0.6558967582090156,
+      "duration_Note": 0.6477990546862304
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/06-DieSonne/data.npz",
+      "group": "bach10_b10_DieSonne",
+      "model": "note_shape",
+      "notes": 57,
+      "Full": 0.5953975758109602,
+      "Note": 0.7110530868829105,
+      "duration_Note": 0.7168226182751567
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/07-HerrGott/data.npz",
+      "group": "bach10_b10_HerrGott",
+      "model": "mamba",
+      "notes": 36,
+      "Full": 0.6951705891522281,
+      "Note": 0.37849301452997425,
+      "duration_Note": 0.5138790441428519
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/07-HerrGott/data.npz",
+      "group": "bach10_b10_HerrGott",
+      "model": "s4d",
+      "notes": 36,
+      "Full": 0.5935198057182104,
+      "Note": 0.37990215952775896,
+      "duration_Note": 0.5130607153831298
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/07-HerrGott/data.npz",
+      "group": "bach10_b10_HerrGott",
+      "model": "bigru",
+      "notes": 36,
+      "Full": 0.5722757203398785,
+      "Note": 0.2502252805430113,
+      "duration_Note": 0.37553496776950285
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/07-HerrGott/data.npz",
+      "group": "bach10_b10_HerrGott",
+      "model": "instrument_ols",
+      "notes": 36,
+      "Full": 0.503753462270901,
+      "Note": 0.5679757111116708,
+      "duration_Note": 0.5003233538751595
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/07-HerrGott/data.npz",
+      "group": "bach10_b10_HerrGott",
+      "model": "note_shape",
+      "notes": 36,
+      "Full": 0.5453891466743844,
+      "Note": 0.6330216858674421,
+      "duration_Note": 0.6300645738426744
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/08-FuerDeinenThron/data.npz",
+      "group": "bach10_b10_FuerDeinenThron",
+      "model": "mamba",
+      "notes": 37,
+      "Full": 0.731482802813736,
+      "Note": 0.5901825398113388,
+      "duration_Note": 0.7759336769204932
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/08-FuerDeinenThron/data.npz",
+      "group": "bach10_b10_FuerDeinenThron",
+      "model": "s4d",
+      "notes": 37,
+      "Full": 0.7153848010768241,
+      "Note": 0.5049686718357366,
+      "duration_Note": 0.7252153909978194
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/08-FuerDeinenThron/data.npz",
+      "group": "bach10_b10_FuerDeinenThron",
+      "model": "bigru",
+      "notes": 37,
+      "Full": 0.5963984777493297,
+      "Note": 0.26090200880893155,
+      "duration_Note": 0.5254845421135881
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/08-FuerDeinenThron/data.npz",
+      "group": "bach10_b10_FuerDeinenThron",
+      "model": "instrument_ols",
+      "notes": 37,
+      "Full": 0.5472889991784703,
+      "Note": 0.4723543975372749,
+      "duration_Note": 0.5153882041633
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/08-FuerDeinenThron/data.npz",
+      "group": "bach10_b10_FuerDeinenThron",
+      "model": "note_shape",
+      "notes": 37,
+      "Full": 0.5690517405056794,
+      "Note": 0.5795228407973673,
+      "duration_Note": 0.6908775011095228
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/09-Jesus/data.npz",
+      "group": "bach10_b10_Jesus",
+      "model": "mamba",
+      "notes": 41,
+      "Full": 0.6588877229675831,
+      "Note": 0.5994962913115127,
+      "duration_Note": 0.7558222416628565
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/09-Jesus/data.npz",
+      "group": "bach10_b10_Jesus",
+      "model": "s4d",
+      "notes": 41,
+      "Full": 0.6687961446934173,
+      "Note": 0.5863051802563484,
+      "duration_Note": 0.7549975884221364
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/09-Jesus/data.npz",
+      "group": "bach10_b10_Jesus",
+      "model": "bigru",
+      "notes": 41,
+      "Full": 0.6066886492016902,
+      "Note": 0.22513046023274932,
+      "duration_Note": 0.3754059881889479
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/09-Jesus/data.npz",
+      "group": "bach10_b10_Jesus",
+      "model": "instrument_ols",
+      "notes": 41,
+      "Full": 0.4472739310026663,
+      "Note": 0.3531569354351719,
+      "duration_Note": 0.5338277202461581
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/09-Jesus/data.npz",
+      "group": "bach10_b10_Jesus",
+      "model": "note_shape",
+      "notes": 41,
+      "Full": 0.4365144911152432,
+      "Note": 0.44240043631259796,
+      "duration_Note": 0.601725706895473
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/10-NunBitten/data.npz",
+      "group": "bach10_b10_NunBitten",
+      "model": "mamba",
+      "notes": 59,
+      "Full": 0.5180080824954076,
+      "Note": 0.33655869985373976,
+      "duration_Note": 0.4940411988035947
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/10-NunBitten/data.npz",
+      "group": "bach10_b10_NunBitten",
+      "model": "s4d",
+      "notes": 59,
+      "Full": 0.4724297461779615,
+      "Note": 0.2950503925833525,
+      "duration_Note": 0.4218718012471062
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/10-NunBitten/data.npz",
+      "group": "bach10_b10_NunBitten",
+      "model": "bigru",
+      "notes": 59,
+      "Full": 0.55392903814441,
+      "Note": 0.1716425056524479,
+      "duration_Note": 0.3473283094175155
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/10-NunBitten/data.npz",
+      "group": "bach10_b10_NunBitten",
+      "model": "instrument_ols",
+      "notes": 59,
+      "Full": 0.3981313530958085,
+      "Note": 0.2663799706510326,
+      "duration_Note": 0.25149349376827096
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_sax/10-NunBitten/data.npz",
+      "group": "bach10_b10_NunBitten",
+      "model": "note_shape",
+      "notes": 59,
+      "Full": 0.3506505282500852,
+      "Note": 0.3513241438468656,
+      "duration_Note": 0.3727101905283266
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/01-AchGottundHerr/data.npz",
+      "group": "bach10_b10_AchGottundHerr",
+      "model": "mamba",
+      "notes": 36,
+      "Full": 0.4139149628456177,
+      "Note": 0.12701037869356524,
+      "duration_Note": 0.25240814061737976
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/01-AchGottundHerr/data.npz",
+      "group": "bach10_b10_AchGottundHerr",
+      "model": "s4d",
+      "notes": 36,
+      "Full": 0.39218952224168246,
+      "Note": 0.02613435444055695,
+      "duration_Note": 0.1696515446219659
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/01-AchGottundHerr/data.npz",
+      "group": "bach10_b10_AchGottundHerr",
+      "model": "bigru",
+      "notes": 36,
+      "Full": 0.4392450898310559,
+      "Note": 0.17368688809413274,
+      "duration_Note": 0.26132468977491136
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/01-AchGottundHerr/data.npz",
+      "group": "bach10_b10_AchGottundHerr",
+      "model": "instrument_ols",
+      "notes": 36,
+      "Full": 0.3223108942880898,
+      "Note": 0.04502203456360518,
+      "duration_Note": 0.2566834476941151
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/01-AchGottundHerr/data.npz",
+      "group": "bach10_b10_AchGottundHerr",
+      "model": "note_shape",
+      "notes": 36,
+      "Full": 0.32462223794640566,
+      "Note": 0.19007647240265094,
+      "duration_Note": 0.16459203512078274
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/02-AchLiebenChristen/data.npz",
+      "group": "bach10_b10_AchLiebenChristen",
+      "model": "mamba",
+      "notes": 74,
+      "Full": 0.4992319473400997,
+      "Note": 0.1423933489504875,
+      "duration_Note": 0.3338820639800457
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/02-AchLiebenChristen/data.npz",
+      "group": "bach10_b10_AchLiebenChristen",
+      "model": "s4d",
+      "notes": 74,
+      "Full": 0.496508729434825,
+      "Note": 0.1645853599882043,
+      "duration_Note": 0.34453282296775267
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/02-AchLiebenChristen/data.npz",
+      "group": "bach10_b10_AchLiebenChristen",
+      "model": "bigru",
+      "notes": 74,
+      "Full": 0.476241587547426,
+      "Note": 0.0013782420926926999,
+      "duration_Note": 0.1531135730482778
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/02-AchLiebenChristen/data.npz",
+      "group": "bach10_b10_AchLiebenChristen",
+      "model": "instrument_ols",
+      "notes": 74,
+      "Full": 0.19387660362238018,
+      "Note": -0.021763087622702647,
+      "duration_Note": 0.09230055882760108
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/02-AchLiebenChristen/data.npz",
+      "group": "bach10_b10_AchLiebenChristen",
+      "model": "note_shape",
+      "notes": 74,
+      "Full": 0.4244976110971499,
+      "Note": 0.22317724428841781,
+      "duration_Note": 0.3700788589704421
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/03-ChristederdubistTagundLicht/data.npz",
+      "group": "bach10_b10_ChristederdubistTagundLicht",
+      "model": "mamba",
+      "notes": 53,
+      "Full": 0.6525699224211413,
+      "Note": 0.3491872469396028,
+      "duration_Note": 0.6027170069900251
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/03-ChristederdubistTagundLicht/data.npz",
+      "group": "bach10_b10_ChristederdubistTagundLicht",
+      "model": "s4d",
+      "notes": 53,
+      "Full": 0.639812404585735,
+      "Note": 0.23505160271379558,
+      "duration_Note": 0.5545410642663848
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/03-ChristederdubistTagundLicht/data.npz",
+      "group": "bach10_b10_ChristederdubistTagundLicht",
+      "model": "bigru",
+      "notes": 53,
+      "Full": 0.6570590245713562,
+      "Note": 0.6068333578897893,
+      "duration_Note": 0.6448591552687164
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/03-ChristederdubistTagundLicht/data.npz",
+      "group": "bach10_b10_ChristederdubistTagundLicht",
+      "model": "instrument_ols",
+      "notes": 53,
+      "Full": 0.4760610186945613,
+      "Note": 0.2031946588309357,
+      "duration_Note": 0.46140431402560556
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/03-ChristederdubistTagundLicht/data.npz",
+      "group": "bach10_b10_ChristederdubistTagundLicht",
+      "model": "note_shape",
+      "notes": 53,
+      "Full": 0.41893563474601914,
+      "Note": 0.3526657978845863,
+      "duration_Note": 0.46639875753350923
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/04-ChristeDuBeistand/data.npz",
+      "group": "bach10_b10_ChristeDuBeistand",
+      "model": "mamba",
+      "notes": 65,
+      "Full": 0.5549770838526386,
+      "Note": 0.2593348173339682,
+      "duration_Note": 0.2860167853975545
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/04-ChristeDuBeistand/data.npz",
+      "group": "bach10_b10_ChristeDuBeistand",
+      "model": "s4d",
+      "notes": 65,
+      "Full": 0.48676869858776683,
+      "Note": 0.2532417571984544,
+      "duration_Note": 0.33809916302720877
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/04-ChristeDuBeistand/data.npz",
+      "group": "bach10_b10_ChristeDuBeistand",
+      "model": "bigru",
+      "notes": 65,
+      "Full": 0.4902727923109668,
+      "Note": 0.18577845018549685,
+      "duration_Note": 0.15341287077486476
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/04-ChristeDuBeistand/data.npz",
+      "group": "bach10_b10_ChristeDuBeistand",
+      "model": "instrument_ols",
+      "notes": 65,
+      "Full": 0.2669631335512069,
+      "Note": 0.030225235814519375,
+      "duration_Note": 0.1778597677903955
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/04-ChristeDuBeistand/data.npz",
+      "group": "bach10_b10_ChristeDuBeistand",
+      "model": "note_shape",
+      "notes": 65,
+      "Full": 0.32981989996333433,
+      "Note": 0.08686862422060866,
+      "duration_Note": 0.24530785332749588
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/05-DieNacht/data.npz",
+      "group": "bach10_b10_DieNacht",
+      "model": "mamba",
+      "notes": 49,
+      "Full": 0.6093124767566539,
+      "Note": 0.4188901650375553,
+      "duration_Note": 0.40168819925277727
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/05-DieNacht/data.npz",
+      "group": "bach10_b10_DieNacht",
+      "model": "s4d",
+      "notes": 49,
+      "Full": 0.49184147904658787,
+      "Note": 0.28721355276564103,
+      "duration_Note": 0.32105068678667303
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/05-DieNacht/data.npz",
+      "group": "bach10_b10_DieNacht",
+      "model": "bigru",
+      "notes": 49,
+      "Full": 0.4910365527678965,
+      "Note": 0.03532234516788374,
+      "duration_Note": 0.08647158378888883
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/05-DieNacht/data.npz",
+      "group": "bach10_b10_DieNacht",
+      "model": "instrument_ols",
+      "notes": 49,
+      "Full": 0.2564223634341778,
+      "Note": -0.07034242447298843,
+      "duration_Note": 0.040567755842340035
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/05-DieNacht/data.npz",
+      "group": "bach10_b10_DieNacht",
+      "model": "note_shape",
+      "notes": 49,
+      "Full": 0.2304262953540039,
+      "Note": -0.10649289463356618,
+      "duration_Note": 0.005261826162100998
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/06-DieSonne/data.npz",
+      "group": "bach10_b10_DieSonne",
+      "model": "mamba",
+      "notes": 50,
+      "Full": 0.538490589213314,
+      "Note": 0.18982178850247736,
+      "duration_Note": 0.3230632528265372
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/06-DieSonne/data.npz",
+      "group": "bach10_b10_DieSonne",
+      "model": "s4d",
+      "notes": 50,
+      "Full": 0.46073874316189345,
+      "Note": 0.1428562883688763,
+      "duration_Note": 0.24919101011537026
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/06-DieSonne/data.npz",
+      "group": "bach10_b10_DieSonne",
+      "model": "bigru",
+      "notes": 50,
+      "Full": 0.296643868584665,
+      "Note": -0.17492379535492994,
+      "duration_Note": -0.17132463480723137
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/06-DieSonne/data.npz",
+      "group": "bach10_b10_DieSonne",
+      "model": "instrument_ols",
+      "notes": 50,
+      "Full": 0.31480743005081646,
+      "Note": 0.08077355544704143,
+      "duration_Note": 0.17391123875093112
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/06-DieSonne/data.npz",
+      "group": "bach10_b10_DieSonne",
+      "model": "note_shape",
+      "notes": 50,
+      "Full": 0.30522823673645233,
+      "Note": 0.029713607165324965,
+      "duration_Note": 0.06573859693638233
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/07-HerrGott/data.npz",
+      "group": "bach10_b10_HerrGott",
+      "model": "mamba",
+      "notes": 81,
+      "Full": 0.5713336434944275,
+      "Note": 0.2210275417222643,
+      "duration_Note": 0.3854831042270898
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/07-HerrGott/data.npz",
+      "group": "bach10_b10_HerrGott",
+      "model": "s4d",
+      "notes": 81,
+      "Full": 0.49487521412431984,
+      "Note": 0.24946702117955924,
+      "duration_Note": 0.40036958842457254
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/07-HerrGott/data.npz",
+      "group": "bach10_b10_HerrGott",
+      "model": "bigru",
+      "notes": 81,
+      "Full": 0.5490758578963436,
+      "Note": 0.2518775717439773,
+      "duration_Note": 0.4155353081877096
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/07-HerrGott/data.npz",
+      "group": "bach10_b10_HerrGott",
+      "model": "instrument_ols",
+      "notes": 81,
+      "Full": 0.3214236071468973,
+      "Note": 0.06489855309053927,
+      "duration_Note": 0.2797983244381518
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/07-HerrGott/data.npz",
+      "group": "bach10_b10_HerrGott",
+      "model": "note_shape",
+      "notes": 81,
+      "Full": 0.32013442357405875,
+      "Note": 0.12180528279677046,
+      "duration_Note": 0.16457327969348245
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/08-FuerDeinenThron/data.npz",
+      "group": "bach10_b10_FuerDeinenThron",
+      "model": "mamba",
+      "notes": 42,
+      "Full": 0.601470648723713,
+      "Note": 0.28549726471351666,
+      "duration_Note": 0.40989838586637434
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/08-FuerDeinenThron/data.npz",
+      "group": "bach10_b10_FuerDeinenThron",
+      "model": "s4d",
+      "notes": 42,
+      "Full": 0.46401936040302627,
+      "Note": 0.2586061988883953,
+      "duration_Note": 0.3859921918163876
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/08-FuerDeinenThron/data.npz",
+      "group": "bach10_b10_FuerDeinenThron",
+      "model": "bigru",
+      "notes": 42,
+      "Full": 0.5145337946125054,
+      "Note": 0.1345119058457717,
+      "duration_Note": 0.27321668044932457
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/08-FuerDeinenThron/data.npz",
+      "group": "bach10_b10_FuerDeinenThron",
+      "model": "instrument_ols",
+      "notes": 42,
+      "Full": 0.22115450451431,
+      "Note": 0.23262217287552256,
+      "duration_Note": 0.30106261594773803
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/08-FuerDeinenThron/data.npz",
+      "group": "bach10_b10_FuerDeinenThron",
+      "model": "note_shape",
+      "notes": 42,
+      "Full": 0.3565589428200985,
+      "Note": 0.14090013252299907,
+      "duration_Note": 0.3017722657420539
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/09-Jesus/data.npz",
+      "group": "bach10_b10_Jesus",
+      "model": "mamba",
+      "notes": 45,
+      "Full": 0.46585847690166066,
+      "Note": 0.08927354612084605,
+      "duration_Note": 0.15476588658324
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/09-Jesus/data.npz",
+      "group": "bach10_b10_Jesus",
+      "model": "s4d",
+      "notes": 45,
+      "Full": 0.4712660472585285,
+      "Note": 0.1643774660197767,
+      "duration_Note": 0.1845445822744505
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/09-Jesus/data.npz",
+      "group": "bach10_b10_Jesus",
+      "model": "bigru",
+      "notes": 45,
+      "Full": 0.6070414328077325,
+      "Note": 0.3265277860935065,
+      "duration_Note": 0.27685194815784
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/09-Jesus/data.npz",
+      "group": "bach10_b10_Jesus",
+      "model": "instrument_ols",
+      "notes": 45,
+      "Full": 0.09359858514883079,
+      "Note": -0.11745830295632839,
+      "duration_Note": -0.114445898030359
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/09-Jesus/data.npz",
+      "group": "bach10_b10_Jesus",
+      "model": "note_shape",
+      "notes": 45,
+      "Full": 0.212642811625151,
+      "Note": -0.1010643221513223,
+      "duration_Note": -0.03529395176039549
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/10-NunBitten/data.npz",
+      "group": "bach10_b10_NunBitten",
+      "model": "mamba",
+      "notes": 62,
+      "Full": 0.5565394099289397,
+      "Note": 0.11015256238622609,
+      "duration_Note": 0.35092565827099875
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/10-NunBitten/data.npz",
+      "group": "bach10_b10_NunBitten",
+      "model": "s4d",
+      "notes": 62,
+      "Full": 0.5970146683142554,
+      "Note": 0.23859539486210063,
+      "duration_Note": 0.4719212659092874
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/10-NunBitten/data.npz",
+      "group": "bach10_b10_NunBitten",
+      "model": "bigru",
+      "notes": 62,
+      "Full": 0.6051613622072748,
+      "Note": 0.16318830140245558,
+      "duration_Note": 0.2825268753420493
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/10-NunBitten/data.npz",
+      "group": "bach10_b10_NunBitten",
+      "model": "instrument_ols",
+      "notes": 62,
+      "Full": 0.1252422124131301,
+      "Note": -0.15929284561450965,
+      "duration_Note": 0.010628907684108553
+    },
+    {
+      "track": "datagen/solo/Bach10/processed_bn/10-NunBitten/data.npz",
+      "group": "bach10_b10_NunBitten",
+      "model": "note_shape",
+      "notes": 62,
+      "Full": 0.30405400029690793,
+      "Note": -0.09630976624953423,
+      "duration_Note": 0.1251168087885139
+    }
+  ],
+  "pairs": {
+    "mamba minus instrument_ols": {
+      "tracks": 133,
+      "full_up": 106,
+      "uniform_down": 35,
+      "duration_down": 27,
+      "both_down": 21,
+      "mean_note_difference": 0.022535169334220378,
+      "mean_duration_note_difference": 0.040599493069816125
+    },
+    "mamba minus note_shape": {
+      "tracks": 133,
+      "full_up": 108,
+      "uniform_down": 16,
+      "duration_down": 15,
+      "both_down": 10,
+      "mean_note_difference": 0.09477185873657493,
+      "mean_duration_note_difference": 0.11722967617525135
+    },
+    "s4d minus instrument_ols": {
+      "tracks": 133,
+      "full_up": 112,
+      "uniform_down": 35,
+      "duration_down": 36,
+      "both_down": 25,
+      "mean_note_difference": 0.0022941625005715467,
+      "mean_duration_note_difference": 0.027122480900187106
+    },
+    "s4d minus note_shape": {
+      "tracks": 133,
+      "full_up": 108,
+      "uniform_down": 23,
+      "duration_down": 12,
+      "both_down": 9,
+      "mean_note_difference": 0.07453085190292609,
+      "mean_duration_note_difference": 0.10375266400562232
+    },
+    "bigru minus instrument_ols": {
+      "tracks": 133,
+      "full_up": 107,
+      "uniform_down": 55,
+      "duration_down": 55,
+      "both_down": 45,
+      "mean_note_difference": -0.03665436772049562,
+      "mean_duration_note_difference": -0.03517270000511116
+    },
+    "bigru minus note_shape": {
+      "tracks": 133,
+      "full_up": 99,
+      "uniform_down": 29,
+      "duration_down": 27,
+      "both_down": 23,
+      "mean_note_difference": 0.03558232168185892,
+      "mean_duration_note_difference": 0.04145748310032406
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "execution": {
+    "file": "paper1_execution_companion_20260916.zip",
+    "bytes": 315401199,
+    "sha256": "e8e9f5d6cd3e36bcc3a82f33d7cbc7160a91b1c889882475b267d6d57cf69f45",
+    "url": "https://github.com/dd3xp/midi/releases/download/repro-v0.44.1/paper1_execution_companion_20260916.zip"
+  },
+  "mamba-seeds": {
+    "file": "paper1_mamba_seeds_20260916.zip",
+    "bytes": 242183253,
+    "sha256": "c2c5d02c5f6107f7139751c1dbcf1a8a6ddff30b90f87b1b2abeb0c8ed590b37",
+    "url": "https://github.com/dd3xp/midi/releases/download/repro-v0.44.1/paper1_mamba_seeds_20260916.zip"
+  },
+  "s4d-seeds": {
+    "file": "paper1_s4d_seeds_20260916.zip",
+    "bytes": 269761706,
+    "sha256": "7f39fa07be9fa8e60845200bebe39f78e0c7d8f1104691e505d34974eaf77d03",
+    "url": "https://github.com/dd3xp/midi/releases/download/repro-v0.44.1/paper1_s4d_seeds_20260916.zip"
+  }
+}

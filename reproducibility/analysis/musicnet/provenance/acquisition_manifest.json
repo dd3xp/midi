@@ -1,0 +1,494 @@
+{
+  "url": "https://zenodo.org/records/5120004/files/musicnet.tar.gz?download=1",
+  "release_md5": "844764911fa0d5b97c97da944a057590",
+  "archive_bytes": 11097394998,
+  "selection": [
+    {
+      "id": "2186",
+      "composer": "Bach",
+      "composition": "Violin Partita No 3 in E major",
+      "movement": "1. Preludio",
+      "ensemble": "Solo Violin",
+      "source": "Oliver Colbentston",
+      "transcriber": "suzumidi",
+      "catalog_name": "BWV1006",
+      "seconds": "214"
+    },
+    {
+      "id": "2191",
+      "composer": "Bach",
+      "composition": "Violin Partita No 3 in E major",
+      "movement": "6. Bourree",
+      "ensemble": "Solo Violin",
+      "source": "Oliver Colbentston",
+      "transcriber": "suzumidi",
+      "catalog_name": "BWV1006",
+      "seconds": "102"
+    },
+    {
+      "id": "2217",
+      "composer": "Bach",
+      "composition": "Cello Suite 3",
+      "movement": "1. Prelude",
+      "ensemble": "Solo Cello",
+      "source": "European Archive",
+      "transcriber": "David J. Grossman",
+      "catalog_name": "BWV1009",
+      "seconds": "186"
+    },
+    {
+      "id": "2218",
+      "composer": "Bach",
+      "composition": "Cello Suite 3",
+      "movement": "2. Allemande",
+      "ensemble": "Solo Cello",
+      "source": "European Archive",
+      "transcriber": "David J. Grossman",
+      "catalog_name": "BWV1009",
+      "seconds": "199"
+    },
+    {
+      "id": "2219",
+      "composer": "Bach",
+      "composition": "Cello Suite 3",
+      "movement": "3. Courante",
+      "ensemble": "Solo Cello",
+      "source": "European Archive",
+      "transcriber": "David J. Grossman",
+      "catalog_name": "BWV1009",
+      "seconds": "260"
+    },
+    {
+      "id": "2220",
+      "composer": "Bach",
+      "composition": "Cello Suite 3",
+      "movement": "4. Sarabande",
+      "ensemble": "Solo Cello",
+      "source": "European Archive",
+      "transcriber": "David J. Grossman",
+      "catalog_name": "BWV1009",
+      "seconds": "302"
+    },
+    {
+      "id": "2221",
+      "composer": "Bach",
+      "composition": "Cello Suite 3",
+      "movement": "5. Bouree",
+      "ensemble": "Solo Cello",
+      "source": "European Archive",
+      "transcriber": "David J. Grossman",
+      "catalog_name": "BWV1009",
+      "seconds": "241"
+    },
+    {
+      "id": "2222",
+      "composer": "Bach",
+      "composition": "Cello Suite 3",
+      "movement": "6. Gigue",
+      "ensemble": "Solo Cello",
+      "source": "European Archive",
+      "transcriber": "David J. Grossman",
+      "catalog_name": "BWV1009",
+      "seconds": "202"
+    },
+    {
+      "id": "2241",
+      "composer": "Bach",
+      "composition": "Violin Sonata No 1 in G minor",
+      "movement": "1. Adagio",
+      "ensemble": "Solo Violin",
+      "source": "European Archive",
+      "transcriber": "suzumidi",
+      "catalog_name": "BWV1001",
+      "seconds": "242"
+    },
+    {
+      "id": "2242",
+      "composer": "Bach",
+      "composition": "Violin Sonata No 1 in G minor",
+      "movement": "2. Fuga",
+      "ensemble": "Solo Violin",
+      "source": "European Archive",
+      "transcriber": "suzumidi",
+      "catalog_name": "BWV1001",
+      "seconds": "312"
+    },
+    {
+      "id": "2243",
+      "composer": "Bach",
+      "composition": "Violin Sonata No 1 in G minor",
+      "movement": "3. Siciliana",
+      "ensemble": "Solo Violin",
+      "source": "European Archive",
+      "transcriber": "suzumidi",
+      "catalog_name": "BWV1001",
+      "seconds": "193"
+    },
+    {
+      "id": "2244",
+      "composer": "Bach",
+      "composition": "Violin Sonata No 1 in G minor",
+      "movement": "4. Presto",
+      "ensemble": "Solo Violin",
+      "source": "European Archive",
+      "transcriber": "suzumidi",
+      "catalog_name": "BWV1001",
+      "seconds": "214"
+    },
+    {
+      "id": "2288",
+      "composer": "Bach",
+      "composition": "Violin Partita No 1 in B minor",
+      "movement": "2. Corrente",
+      "ensemble": "Solo Violin",
+      "source": "John Garner",
+      "transcriber": "suzumidi",
+      "catalog_name": "BWV1002",
+      "seconds": "191"
+    },
+    {
+      "id": "2289",
+      "composer": "Bach",
+      "composition": "Violin Partita No 1 in B minor",
+      "movement": "3. Sarabande",
+      "ensemble": "Solo Violin",
+      "source": "John Garner",
+      "transcriber": "suzumidi",
+      "catalog_name": "BWV1002",
+      "seconds": "203"
+    },
+    {
+      "id": "2293",
+      "composer": "Bach",
+      "composition": "Cello Suite 4",
+      "movement": "1. Prelude",
+      "ensemble": "Solo Cello",
+      "source": "European Archive",
+      "transcriber": "David J. Grossman",
+      "catalog_name": "BWV1010",
+      "seconds": "310"
+    },
+    {
+      "id": "2294",
+      "composer": "Bach",
+      "composition": "Cello Suite 4",
+      "movement": "2. Allemande",
+      "ensemble": "Solo Cello",
+      "source": "European Archive",
+      "transcriber": "David J. Grossman",
+      "catalog_name": "BWV1010",
+      "seconds": "228"
+    },
+    {
+      "id": "2295",
+      "composer": "Bach",
+      "composition": "Cello Suite 4",
+      "movement": "3. Courante",
+      "ensemble": "Solo Cello",
+      "source": "European Archive",
+      "transcriber": "David J. Grossman",
+      "catalog_name": "BWV1010",
+      "seconds": "259"
+    },
+    {
+      "id": "2296",
+      "composer": "Bach",
+      "composition": "Cello Suite 4",
+      "movement": "4. Sarabande",
+      "ensemble": "Solo Cello",
+      "source": "European Archive",
+      "transcriber": "David J. Grossman",
+      "catalog_name": "BWV1010",
+      "seconds": "291"
+    },
+    {
+      "id": "2297",
+      "composer": "Bach",
+      "composition": "Cello Suite 4",
+      "movement": "5. Bouree",
+      "ensemble": "Solo Cello",
+      "source": "European Archive",
+      "transcriber": "David J. Grossman",
+      "catalog_name": "BWV1010",
+      "seconds": "334"
+    },
+    {
+      "id": "2298",
+      "composer": "Bach",
+      "composition": "Cello Suite 4",
+      "movement": "6. Gigue",
+      "ensemble": "Solo Cello",
+      "source": "European Archive",
+      "transcriber": "David J. Grossman",
+      "catalog_name": "BWV1010",
+      "seconds": "153"
+    },
+    {
+      "id": "2659",
+      "composer": "Bach",
+      "composition": "Violin Partita No 1 in B minor",
+      "movement": "6. Double",
+      "ensemble": "Solo Violin",
+      "source": "John Garner",
+      "transcriber": "suzumidi",
+      "catalog_name": "BWV1002",
+      "seconds": "108"
+    }
+  ],
+  "files": [
+    {
+      "member": "musicnet/train_labels/2217.csv",
+      "path": "2217.csv",
+      "bytes": 43107,
+      "sha256": "6d61ec5654114fd24d3bcaffc449530319dd89933c100dc2e3ecbef7da2b68c5"
+    },
+    {
+      "member": "musicnet/train_labels/2295.csv",
+      "path": "2295.csv",
+      "bytes": 41123,
+      "sha256": "c3df183b222024e634e8bbc924ba918c29e22800a93b3159dfbbf5fcf2d65334"
+    },
+    {
+      "member": "musicnet/train_labels/2218.csv",
+      "path": "2218.csv",
+      "bytes": 44184,
+      "sha256": "13e10d49dd883fca6f8575d628d117dca586901e9742633e74ef0bb31c564f8a"
+    },
+    {
+      "member": "musicnet/train_labels/2219.csv",
+      "path": "2219.csv",
+      "bytes": 38688,
+      "sha256": "2cbdcb74d35cbc81258eeac58d6d70717eb91ae5273ab7543791268bb7045b85"
+    },
+    {
+      "member": "musicnet/train_labels/2294.csv",
+      "path": "2294.csv",
+      "bytes": 44923,
+      "sha256": "5f28b3ffda6514c374ee731dcbf1502c617ce1c0444cd3980831fac34d16e6f6"
+    },
+    {
+      "member": "musicnet/train_labels/2244.csv",
+      "path": "2244.csv",
+      "bytes": 85484,
+      "sha256": "f8dd61cce45c8281c569385ce38a1213476da5ef61dfda836e6414cccd4ffeb0"
+    },
+    {
+      "member": "musicnet/train_labels/2243.csv",
+      "path": "2243.csv",
+      "bytes": 26069,
+      "sha256": "adbe5a3f12c0d4130d36a1dc01bf7712848d821d8e3112999e5a6690081f7bec"
+    },
+    {
+      "member": "musicnet/train_labels/2297.csv",
+      "path": "2297.csv",
+      "bytes": 56548,
+      "sha256": "70a56a3665ec74cb09000b892025841817ed8f263e7f6af7dd2ec729d6d910fa"
+    },
+    {
+      "member": "musicnet/train_labels/2186.csv",
+      "path": "2186.csv",
+      "bytes": 86044,
+      "sha256": "05e3cb33c54d316f077c39b3815a6a7a535c581629c51a918c9fc174624db057"
+    },
+    {
+      "member": "musicnet/train_labels/2296.csv",
+      "path": "2296.csv",
+      "bytes": 17323,
+      "sha256": "b97dd05f5fc8ff67aee69c8e0cb026d9a8443a3653eff4a8862715ebaad6d9e1"
+    },
+    {
+      "member": "musicnet/train_labels/2293.csv",
+      "path": "2293.csv",
+      "bytes": 33481,
+      "sha256": "3b737cd50fc2f4773cece5c1e8e86c22db29d809086df247460d1d2b28c047c7"
+    },
+    {
+      "member": "musicnet/train_labels/2659.csv",
+      "path": "2659.csv",
+      "bytes": 28170,
+      "sha256": "4d615168ebf6c611f2e1497bd6a914828eed71f418006f205f8065c9db080d19"
+    },
+    {
+      "member": "musicnet/train_labels/2221.csv",
+      "path": "2221.csv",
+      "bytes": 34715,
+      "sha256": "ad61c1ed043cfd86e0b9b7d7dcb45fe4079964b575c7913946f55a5862c6a5dd"
+    },
+    {
+      "member": "musicnet/train_labels/2242.csv",
+      "path": "2242.csv",
+      "bytes": 84563,
+      "sha256": "713740a98d62910b09f408bbc3b588d74208eb646d4091201ac53bf5fff3ad74"
+    },
+    {
+      "member": "musicnet/train_labels/2288.csv",
+      "path": "2288.csv",
+      "bytes": 40133,
+      "sha256": "b5efe898eeb784dfc326c172dbddd33f5b0b7949094d73874fa3c571b0c1ff02"
+    },
+    {
+      "member": "musicnet/train_labels/2220.csv",
+      "path": "2220.csv",
+      "bytes": 17962,
+      "sha256": "b83938bf2a1593b69c8b8a75edb28b2f281980019517027967e370a4076f0f85"
+    },
+    {
+      "member": "musicnet/train_labels/2222.csv",
+      "path": "2222.csv",
+      "bytes": 42605,
+      "sha256": "791edb2f601179cbd2b27e689a0bdd307c6f8622f9e4b28a9256ebfc7be42b67"
+    },
+    {
+      "member": "musicnet/train_labels/2289.csv",
+      "path": "2289.csv",
+      "bytes": 47037,
+      "sha256": "20bc0a2645245ef34e0e80802125d55a0fff2bacb45c6b8576a60e384125dc8a"
+    },
+    {
+      "member": "musicnet/train_labels/2241.csv",
+      "path": "2241.csv",
+      "bytes": 32797,
+      "sha256": "ed1496fae47e9ae0ef3f5826da0725d3931b37af72ba015deb662ef40885cad7"
+    },
+    {
+      "member": "musicnet/test_labels/2298.csv",
+      "path": "2298.csv",
+      "bytes": 37419,
+      "sha256": "2c555fd3f04e0950d26c1a2bde753d821775acf57a452e40bbc6a4f4d2e757d9"
+    },
+    {
+      "member": "musicnet/test_labels/2191.csv",
+      "path": "2191.csv",
+      "bytes": 27175,
+      "sha256": "31748c938bfac985d58ebd989c060611fb423defaa798e3ea7530af4c977016c"
+    },
+    {
+      "member": "musicnet/test_data/2191.wav",
+      "path": "2191.wav",
+      "bytes": 18141754,
+      "sha256": "34a3c1df0e377007a21b639a59090fbdf8b694b003afc2a6cbc704868a3f19ca"
+    },
+    {
+      "member": "musicnet/test_data/2298.wav",
+      "path": "2298.wav",
+      "bytes": 27081274,
+      "sha256": "f681f82fd4a5e4365d450a3def9affc2d46c2ebbe10b58e6f72f85426ad8b3aa"
+    },
+    {
+      "member": "musicnet/train_data/2218.wav",
+      "path": "2218.wav",
+      "bytes": 35274298,
+      "sha256": "1a244f9f65d1aee79d17fc917609c962ce682d5e64c0959060bc805cb27a5835"
+    },
+    {
+      "member": "musicnet/train_data/2186.wav",
+      "path": "2186.wav",
+      "bytes": 37817914,
+      "sha256": "0ba554083b62d4f475fe99a59a588ece8f34f2410f831247e79953af1267d03a"
+    },
+    {
+      "member": "musicnet/train_data/2244.wav",
+      "path": "2244.wav",
+      "bytes": 37813306,
+      "sha256": "2f09670ad12f9d95db7ae9d7a9ae9195758ea3d614623043ca2962448f7cac8c"
+    },
+    {
+      "member": "musicnet/train_data/2241.wav",
+      "path": "2241.wav",
+      "bytes": 42725434,
+      "sha256": "d9bf2fa92acfa365bfa560cbe59249f845ea6eccc7d89beee607ca4dbab09726"
+    },
+    {
+      "member": "musicnet/train_data/2295.wav",
+      "path": "2295.wav",
+      "bytes": 45766714,
+      "sha256": "d769a6a2fa533f0e09fa70d6dfe130596d715bca9f83530612b0c01389369137"
+    },
+    {
+      "member": "musicnet/train_data/2222.wav",
+      "path": "2222.wav",
+      "bytes": 35638330,
+      "sha256": "27638047e3104481f76ec62c1d569980fb5509d0886e836697d4a539424e253f"
+    },
+    {
+      "member": "musicnet/train_data/2220.wav",
+      "path": "2220.wav",
+      "bytes": 53273146,
+      "sha256": "6c6190e3df60d70b95db2f6c15b56312c6527f154261c40a25e7a74f133f3979"
+    },
+    {
+      "member": "musicnet/train_data/2294.wav",
+      "path": "2294.wav",
+      "bytes": 40297018,
+      "sha256": "daf9d2abfb7e0b3719c530c0e0b8b76f9d82ec88c8c4d2234015702b850994ef"
+    },
+    {
+      "member": "musicnet/train_data/2293.wav",
+      "path": "2293.wav",
+      "bytes": 54710842,
+      "sha256": "0b644bee2aa9a1a7a74c42f217134f34d61390bc0a0165d390b2531e9cfb7c6d"
+    },
+    {
+      "member": "musicnet/train_data/2219.wav",
+      "path": "2219.wav",
+      "bytes": 46038586,
+      "sha256": "a4525d8a827e8699183e0727519c7d8a34b03bbfebdaf4f708d3073034712e8e"
+    },
+    {
+      "member": "musicnet/train_data/2217.wav",
+      "path": "2217.wav",
+      "bytes": 32859706,
+      "sha256": "ec2742f05aff15808c0e12b15daa1e0fb0e03b0716b5c461c4c956b73877f108"
+    },
+    {
+      "member": "musicnet/train_data/2297.wav",
+      "path": "2297.wav",
+      "bytes": 58964026,
+      "sha256": "b531b3fb503dee5fbf736cabe78f16b8420fe7508c78a8427bbcc7932a15afcf"
+    },
+    {
+      "member": "musicnet/train_data/2289.wav",
+      "path": "2289.wav",
+      "bytes": 35873338,
+      "sha256": "43f02ba157f6b563931ef4eff1a88dd8e8d1e6999c2e1c94bed8cb831e94dfd1"
+    },
+    {
+      "member": "musicnet/train_data/2296.wav",
+      "path": "2296.wav",
+      "bytes": 51494458,
+      "sha256": "b95c5629745f06d6353743f7f81aba9f25f70f6ae2c7bcf736ab74867b2342bb"
+    },
+    {
+      "member": "musicnet/train_data/2221.wav",
+      "path": "2221.wav",
+      "bytes": 42541114,
+      "sha256": "bab6ec138bf5bfb2ec7861d13cda63a0438888d3d6062f2f067cca17aafd4e64"
+    },
+    {
+      "member": "musicnet/train_data/2659.wav",
+      "path": "2659.wav",
+      "bytes": 19109434,
+      "sha256": "c09966583e9c066e92bdfd3b68234d14f4f71038661371a836c0924e84343a53"
+    },
+    {
+      "member": "musicnet/train_data/2288.wav",
+      "path": "2288.wav",
+      "bytes": 33822778,
+      "sha256": "c0f51360eb4660aad0a533d29cd265d7a00515ec21cb76ee28bcd58c38282954"
+    },
+    {
+      "member": "musicnet/train_data/2243.wav",
+      "path": "2243.wav",
+      "bytes": 34214458,
+      "sha256": "80c15229f50e7afe3e72e0214ff03f22322d2820422e36dc56e6bd692f64585a"
+    },
+    {
+      "member": "musicnet/train_data/2242.wav",
+      "path": "2242.wav",
+      "bytes": 55167034,
+      "sha256": "f4e29d5050bc8dc4b723b2bacfb26c85e811d16a625d7a1beeddddd740fe6c3a"
+    }
+  ],
+  "user_prior_use_statement": "2026-09-16: never used MusicNet",
+  "source": "https://zenodo.org/records/5120004"
+}

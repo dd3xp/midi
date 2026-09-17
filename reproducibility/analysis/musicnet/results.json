@@ -1,0 +1,5503 @@
+{
+  "utc": "2026-09-16T08:30:02.334090+00:00",
+  "role": "musicnet",
+  "input_hashes": {
+    "mamba": "baa6f2dc2d6ce279ab3fe29dd93bafe25b61e3462530942ac5d556872e7df66a",
+    "s4d": "17ba86455cedd3b18e53b5c95a5e9aa7bb9266a42d3e2339c4a485a2f20dc2de"
+  },
+  "per_track": [
+    {
+      "track": "MusicNet/2186",
+      "group": "BWV1006",
+      "model": "global_ols",
+      "clipped": 0,
+      "Full": 0.20971327931028858,
+      "Active": 0.1857401450699218,
+      "Note": 0.4013971682409034,
+      "Within": -0.12473487700291157,
+      "Error": 1.0912112274546437,
+      "b2": 0.9094427102858454,
+      "c2": 0.28129923263722484,
+      "eligible_notes": 1633,
+      "defined_shape_notes": 1633,
+      "fixed_output_scales": {
+        "log_corr": 0.49707326160836385,
+        "log_smooth_0.05s": 0.7965958147307693,
+        "log_smooth_0.1s": 0.8227726930575523,
+        "log_smooth_0.2s": 0.8394995704635463,
+        "log_smooth_0.5s": 0.8541933155385559,
+        "log_smooth_1s": 0.8687202412286515,
+        "linear_smooth_0.05s": 0.4423628995943952,
+        "linear_smooth_0.1s": 0.4825793830255444,
+        "linear_smooth_0.2s": 0.5075017862632778,
+        "linear_smooth_0.5s": 0.5324298645209881,
+        "linear_smooth_1s": 0.5508973100773413
+      }
+    },
+    {
+      "track": "MusicNet/2186",
+      "group": "BWV1006",
+      "model": "instrument_ols",
+      "clipped": 0,
+      "Full": -0.0546471241122285,
+      "Active": -0.19049119702267453,
+      "Note": -0.4110583097664357,
+      "Within": -0.08029833648306077,
+      "Error": 1.2695465892905802,
+      "b2": 1.2228219133577953,
+      "c2": 0.38892662902155045,
+      "eligible_notes": 1633,
+      "defined_shape_notes": 1633,
+      "fixed_output_scales": {
+        "log_corr": 0.4018773672249654,
+        "log_smooth_0.05s": 0.6771722362917441,
+        "log_smooth_0.1s": 0.6987275823005141,
+        "log_smooth_0.2s": 0.7166193265658313,
+        "log_smooth_0.5s": 0.7425072031158725,
+        "log_smooth_1s": 0.7635973411630972,
+        "linear_smooth_0.05s": -0.061015400959370546,
+        "linear_smooth_0.1s": -0.07053706129439592,
+        "linear_smooth_0.2s": -0.07388142507970921,
+        "linear_smooth_0.5s": -0.07482737858713032,
+        "linear_smooth_1s": -0.09383582509766378
+      }
+    },
+    {
+      "track": "MusicNet/2186",
+      "group": "BWV1006",
+      "model": "note_ols",
+      "clipped": 0,
+      "Full": -0.014059345184712297,
+      "Active": -0.0608037175251805,
+      "Note": -0.0609544684248599,
+      "Within": -0.06498745388427603,
+      "Error": 1.3150980261657288,
+      "b2": 1.1947893148876647,
+      "c2": 0.5346935035373316,
+      "eligible_notes": 1633,
+      "defined_shape_notes": 239,
+      "fixed_output_scales": {
+        "log_corr": 0.48006485116767944,
+        "log_smooth_0.05s": 0.7371851741887148,
+        "log_smooth_0.1s": 0.7654824790587554,
+        "log_smooth_0.2s": 0.7838561169685805,
+        "log_smooth_0.5s": 0.7969798452787069,
+        "log_smooth_1s": 0.8068540860596591,
+        "linear_smooth_0.05s": -0.008049274819491348,
+        "linear_smooth_0.1s": -0.004924762666799692,
+        "linear_smooth_0.2s": -0.009040841604303802,
+        "linear_smooth_0.5s": -0.03216745630902716,
+        "linear_smooth_1s": -0.07505722448656599
+      }
+    },
+    {
+      "track": "MusicNet/2186",
+      "group": "BWV1006",
+      "model": "note_shape",
+      "clipped": 0,
+      "Full": -0.023648708056490057,
+      "Active": -0.07070755652659665,
+      "Note": -0.06114983440654051,
+      "Within": -0.17900680784325587,
+      "Error": 1.3133916157355179,
+      "b2": 1.1904074448355106,
+      "c2": 0.5345900914488435,
+      "eligible_notes": 1633,
+      "defined_shape_notes": 1633,
+      "fixed_output_scales": {
+        "log_corr": 0.47647565033638273,
+        "log_smooth_0.05s": 0.7353363505524725,
+        "log_smooth_0.1s": 0.763989135150676,
+        "log_smooth_0.2s": 0.782572058329009,
+        "log_smooth_0.5s": 0.7958407853083593,
+        "log_smooth_1s": 0.805672929850603,
+        "linear_smooth_0.05s": -0.008036732820626669,
+        "linear_smooth_0.1s": -0.006149471719698934,
+        "linear_smooth_0.2s": -0.010649857049092049,
+        "linear_smooth_0.5s": -0.03278275132465894,
+        "linear_smooth_1s": -0.07509765584056843
+      }
+    },
+    {
+      "track": "MusicNet/2186",
+      "group": "BWV1006",
+      "model": "gate",
+      "clipped": 0,
+      "Full": 0.12648884452597672,
+      "Active": null,
+      "Note": null,
+      "Within": null,
+      "Error": 3.099046721126955,
+      "b2": 9.286960661314627,
+      "c2": 0.31712991841310667,
+      "eligible_notes": 1633,
+      "defined_shape_notes": 0,
+      "fixed_output_scales": {
+        "log_corr": 0.48898702703043306,
+        "log_smooth_0.05s": 0.7761266198297672,
+        "log_smooth_0.1s": 0.8025964635512383,
+        "log_smooth_0.2s": 0.8207108540271452,
+        "log_smooth_0.5s": 0.8372190489394638,
+        "log_smooth_1s": 0.8531248288204623,
+        "linear_smooth_0.05s": 0.26084709276471296,
+        "linear_smooth_0.1s": 0.28476145652614937,
+        "linear_smooth_0.2s": 0.3014574906727327,
+        "linear_smooth_0.5s": 0.3152196666965065,
+        "linear_smooth_1s": 0.31568572638363396
+      }
+    },
+    {
+      "track": "MusicNet/2186",
+      "group": "BWV1006",
+      "model": "mamba",
+      "clipped": 0,
+      "Full": 0.006268068123108888,
+      "Active": -0.09106133576990487,
+      "Note": -0.13905083954914352,
+      "Within": -0.19280140159172082,
+      "Error": 1.1629408710320317,
+      "b2": 0.9858073073487038,
+      "c2": 0.3666241621680367,
+      "eligible_notes": 1633,
+      "defined_shape_notes": 1633,
+      "fixed_output_scales": {
+        "log_corr": 0.5879359852751216,
+        "log_smooth_0.05s": 0.7515624574762477,
+        "log_smooth_0.1s": 0.7670630745617381,
+        "log_smooth_0.2s": 0.7803656539734835,
+        "log_smooth_0.5s": 0.7940993364225152,
+        "log_smooth_1s": 0.8024840084537838,
+        "linear_smooth_0.05s": 0.09804080725318609,
+        "linear_smooth_0.1s": 0.10150159989130479,
+        "linear_smooth_0.2s": 0.10264883710104658,
+        "linear_smooth_0.5s": 0.07382716441643129,
+        "linear_smooth_1s": 0.02382327291461447
+      }
+    },
+    {
+      "track": "MusicNet/2186",
+      "group": "BWV1006",
+      "model": "s4d",
+      "clipped": 0,
+      "Full": 0.0010598304870776411,
+      "Active": -0.10996610037678226,
+      "Note": -0.16435774635190403,
+      "Within": -0.16727145797166193,
+      "Error": 1.1864308113854594,
+      "b2": 1.0441661212788482,
+      "c2": 0.36345194892591076,
+      "eligible_notes": 1633,
+      "defined_shape_notes": 1633,
+      "fixed_output_scales": {
+        "log_corr": 0.5495108052412763,
+        "log_smooth_0.05s": 0.7299934045922811,
+        "log_smooth_0.1s": 0.7470363556924705,
+        "log_smooth_0.2s": 0.7611611441675193,
+        "log_smooth_0.5s": 0.7787811891169402,
+        "log_smooth_1s": 0.7925167439529622,
+        "linear_smooth_0.05s": 0.07342198371295175,
+        "linear_smooth_0.1s": 0.07377387086472295,
+        "linear_smooth_0.2s": 0.07720724102530323,
+        "linear_smooth_0.5s": 0.07838158541131472,
+        "linear_smooth_1s": 0.060557125043920836
+      }
+    },
+    {
+      "track": "MusicNet/2191",
+      "group": "BWV1006",
+      "model": "global_ols",
+      "clipped": 0,
+      "Full": 0.3940505378072341,
+      "Active": 0.22636578427937484,
+      "Note": 0.36944351828208316,
+      "Within": 0.022708708669223837,
+      "Error": 0.7913654243584356,
+      "b2": 0.18896263447267295,
+      "c2": 0.4372966003973338,
+      "eligible_notes": 551,
+      "defined_shape_notes": 551,
+      "fixed_output_scales": {
+        "log_corr": 0.8031230146409618,
+        "log_smooth_0.05s": 0.9027568587848191,
+        "log_smooth_0.1s": 0.9139973761055636,
+        "log_smooth_0.2s": 0.9242531788410393,
+        "log_smooth_0.5s": 0.9408773565208502,
+        "log_smooth_1s": 0.9602740381985332,
+        "linear_smooth_0.05s": 0.5241467794266865,
+        "linear_smooth_0.1s": 0.5597790565352763,
+        "linear_smooth_0.2s": 0.602375070623743,
+        "linear_smooth_0.5s": 0.6601852007898957,
+        "linear_smooth_1s": 0.7057333661749926
+      }
+    },
+    {
+      "track": "MusicNet/2191",
+      "group": "BWV1006",
+      "model": "instrument_ols",
+      "clipped": 0,
+      "Full": 0.2139610220778998,
+      "Active": -0.08252367917969768,
+      "Note": -0.22009245603142447,
+      "Within": 0.057685549363457586,
+      "Error": 0.9680700033081494,
+      "b2": 0.4370384619461608,
+      "c2": 0.5001210693588796,
+      "eligible_notes": 551,
+      "defined_shape_notes": 551,
+      "fixed_output_scales": {
+        "log_corr": 0.7595727945287102,
+        "log_smooth_0.05s": 0.8747630545926088,
+        "log_smooth_0.1s": 0.8870156917506732,
+        "log_smooth_0.2s": 0.8992722476377741,
+        "log_smooth_0.5s": 0.9200664977299989,
+        "log_smooth_1s": 0.9416045331683751,
+        "linear_smooth_0.05s": 0.2913702481522686,
+        "linear_smooth_0.1s": 0.3192438306452885,
+        "linear_smooth_0.2s": 0.37709297391964963,
+        "linear_smooth_0.5s": 0.47291771988202236,
+        "linear_smooth_1s": 0.5392577328284508
+      }
+    },
+    {
+      "track": "MusicNet/2191",
+      "group": "BWV1006",
+      "model": "note_ols",
+      "clipped": 0,
+      "Full": 0.3558408561980972,
+      "Active": 0.12516273537085676,
+      "Note": 0.10214228060855023,
+      "Within": -0.06600379675257703,
+      "Error": 0.9661183244634481,
+      "b2": 0.4737061232507858,
+      "c2": 0.4596784936132744,
+      "eligible_notes": 551,
+      "defined_shape_notes": 2,
+      "fixed_output_scales": {
+        "log_corr": 0.8109093234469912,
+        "log_smooth_0.05s": 0.9005476907928469,
+        "log_smooth_0.1s": 0.9123598044879363,
+        "log_smooth_0.2s": 0.9244943840935647,
+        "log_smooth_0.5s": 0.9431253374636868,
+        "log_smooth_1s": 0.961619867155705,
+        "linear_smooth_0.05s": 0.4495186842819716,
+        "linear_smooth_0.1s": 0.4927261280084486,
+        "linear_smooth_0.2s": 0.5436700207937811,
+        "linear_smooth_0.5s": 0.6099566730232677,
+        "linear_smooth_1s": 0.6605996494880828
+      }
+    },
+    {
+      "track": "MusicNet/2191",
+      "group": "BWV1006",
+      "model": "note_shape",
+      "clipped": 0,
+      "Full": 0.3345364075957593,
+      "Active": 0.11217579034692131,
+      "Note": 0.10354068324452453,
+      "Within": 0.018662009531303158,
+      "Error": 0.9660296527592274,
+      "b2": 0.47361895881364424,
+      "c2": 0.4595943311964689,
+      "eligible_notes": 551,
+      "defined_shape_notes": 551,
+      "fixed_output_scales": {
+        "log_corr": 0.810203001943907,
+        "log_smooth_0.05s": 0.9002879501170789,
+        "log_smooth_0.1s": 0.9123623970169815,
+        "log_smooth_0.2s": 0.9245622649419879,
+        "log_smooth_0.5s": 0.9431884771358081,
+        "log_smooth_1s": 0.961675446723279,
+        "linear_smooth_0.05s": 0.4570122763132556,
+        "linear_smooth_0.1s": 0.4960249667352346,
+        "linear_smooth_0.2s": 0.5455203854515369,
+        "linear_smooth_0.5s": 0.6106095075754424,
+        "linear_smooth_1s": 0.661025690440683
+      }
+    },
+    {
+      "track": "MusicNet/2191",
+      "group": "BWV1006",
+      "model": "gate",
+      "clipped": 0,
+      "Full": 0.3372337060814869,
+      "Active": null,
+      "Note": null,
+      "Within": null,
+      "Error": 3.608808772885163,
+      "b2": 12.557870233941456,
+      "c2": 0.4656305253114636,
+      "eligible_notes": 551,
+      "defined_shape_notes": 0,
+      "fixed_output_scales": {
+        "log_corr": 0.8103481533769683,
+        "log_smooth_0.05s": 0.9007134941154814,
+        "log_smooth_0.1s": 0.912504532096588,
+        "log_smooth_0.2s": 0.9246688643181928,
+        "log_smooth_0.5s": 0.9433700290282853,
+        "log_smooth_1s": 0.9615887655822998,
+        "linear_smooth_0.05s": 0.4310008211797561,
+        "linear_smooth_0.1s": 0.46809686095233,
+        "linear_smooth_0.2s": 0.517902483280723,
+        "linear_smooth_0.5s": 0.5866213480814954,
+        "linear_smooth_1s": 0.6348847341953557
+      }
+    },
+    {
+      "track": "MusicNet/2191",
+      "group": "BWV1006",
+      "model": "mamba",
+      "clipped": 0,
+      "Full": 0.2837631027744031,
+      "Active": 0.08376306641801999,
+      "Note": 0.11673277067877749,
+      "Within": -0.003650408013599055,
+      "Error": 0.9887320624624012,
+      "b2": 0.5251997925617118,
+      "c2": 0.45239129877944173,
+      "eligible_notes": 551,
+      "defined_shape_notes": 551,
+      "fixed_output_scales": {
+        "log_corr": 0.8114428974244201,
+        "log_smooth_0.05s": 0.8973359717848606,
+        "log_smooth_0.1s": 0.9107503811528873,
+        "log_smooth_0.2s": 0.9228613200290231,
+        "log_smooth_0.5s": 0.943875287441823,
+        "log_smooth_1s": 0.9649631412473748,
+        "linear_smooth_0.05s": 0.39916964685462525,
+        "linear_smooth_0.1s": 0.43417585527711056,
+        "linear_smooth_0.2s": 0.49487103140820193,
+        "linear_smooth_0.5s": 0.5835878115643067,
+        "linear_smooth_1s": 0.6637934748776748
+      }
+    },
+    {
+      "track": "MusicNet/2191",
+      "group": "BWV1006",
+      "model": "s4d",
+      "clipped": 0,
+      "Full": 0.28559960632489373,
+      "Active": 0.06740812380616998,
+      "Note": 0.06888010412299896,
+      "Within": 0.02653555756176647,
+      "Error": 0.888922268128581,
+      "b2": 0.3323700731028957,
+      "c2": 0.45781272567196507,
+      "eligible_notes": 551,
+      "defined_shape_notes": 551,
+      "fixed_output_scales": {
+        "log_corr": 0.8307344582904742,
+        "log_smooth_0.05s": 0.9308974864489262,
+        "log_smooth_0.1s": 0.9426651705329113,
+        "log_smooth_0.2s": 0.9510632691818929,
+        "log_smooth_0.5s": 0.9639082047818436,
+        "log_smooth_1s": 0.9766891808136209,
+        "linear_smooth_0.05s": 0.42597312108817925,
+        "linear_smooth_0.1s": 0.4545900274716706,
+        "linear_smooth_0.2s": 0.49643422990500985,
+        "linear_smooth_0.5s": 0.5591531856252715,
+        "linear_smooth_1s": 0.6162788516047375
+      }
+    },
+    {
+      "track": "MusicNet/2217",
+      "group": "BWV1009",
+      "model": "global_ols",
+      "clipped": 0,
+      "Full": 0.09018681145549948,
+      "Active": 0.05486321641285046,
+      "Note": 0.006374217755776511,
+      "Within": 0.06220704213494812,
+      "Error": 1.2686234966480872,
+      "b2": 1.2754562494387383,
+      "c2": 0.3339493268088806,
+      "eligible_notes": 1005,
+      "defined_shape_notes": 1005,
+      "fixed_output_scales": {
+        "log_corr": 0.3604054930814758,
+        "log_smooth_0.05s": 0.3874326160041471,
+        "log_smooth_0.1s": 0.38921572215894934,
+        "log_smooth_0.2s": 0.3801642846770794,
+        "log_smooth_0.5s": 0.3444168085782693,
+        "log_smooth_1s": 0.2959869438199729,
+        "linear_smooth_0.05s": 0.10633701592407402,
+        "linear_smooth_0.1s": 0.10680325721481779,
+        "linear_smooth_0.2s": 0.09490574672083907,
+        "linear_smooth_0.5s": 0.06786089163481952,
+        "linear_smooth_1s": 0.03971757884713439
+      }
+    },
+    {
+      "track": "MusicNet/2217",
+      "group": "BWV1009",
+      "model": "instrument_ols",
+      "clipped": 0,
+      "Full": -0.08384412650782652,
+      "Active": -0.12148916040976071,
+      "Note": -0.1295752514924941,
+      "Within": -0.03889781921543883,
+      "Error": 0.7503593064051468,
+      "b2": 0.10163018106025777,
+      "c2": 0.4614089076485551,
+      "eligible_notes": 1005,
+      "defined_shape_notes": 1005,
+      "fixed_output_scales": {
+        "log_corr": 0.27177311955221994,
+        "log_smooth_0.05s": 0.29147737277361113,
+        "log_smooth_0.1s": 0.2909060110741656,
+        "log_smooth_0.2s": 0.2816527275059441,
+        "log_smooth_0.5s": 0.2336501267591451,
+        "log_smooth_1s": 0.1496222325094913,
+        "linear_smooth_0.05s": -0.09770652219561309,
+        "linear_smooth_0.1s": -0.11335249185100456,
+        "linear_smooth_0.2s": -0.14175469011819344,
+        "linear_smooth_0.5s": -0.20466375243705082,
+        "linear_smooth_1s": -0.27982264972367604
+      }
+    },
+    {
+      "track": "MusicNet/2217",
+      "group": "BWV1009",
+      "model": "note_ols",
+      "clipped": 0,
+      "Full": 0.1281123618185869,
+      "Active": 0.11862887215801263,
+      "Note": 0.06028540233724602,
+      "Within": 0.17729730551481065,
+      "Error": 1.0625999692472081,
+      "b2": 0.8046286293897279,
+      "c2": 0.32449006525443963,
+      "eligible_notes": 1005,
+      "defined_shape_notes": 7,
+      "fixed_output_scales": {
+        "log_corr": 0.34599755542992294,
+        "log_smooth_0.05s": 0.3590214311400122,
+        "log_smooth_0.1s": 0.35876514879055893,
+        "log_smooth_0.2s": 0.34817566377964115,
+        "log_smooth_0.5s": 0.3038559689123544,
+        "log_smooth_1s": 0.23447159934826273,
+        "linear_smooth_0.05s": 0.143399995096386,
+        "linear_smooth_0.1s": 0.14838638633030485,
+        "linear_smooth_0.2s": 0.145802874186422,
+        "linear_smooth_0.5s": 0.12128970968451368,
+        "linear_smooth_1s": 0.0796043509057397
+      }
+    },
+    {
+      "track": "MusicNet/2217",
+      "group": "BWV1009",
+      "model": "note_shape",
+      "clipped": 0,
+      "Full": 0.07673642035008352,
+      "Active": 0.03511218242294809,
+      "Note": 0.06036896386195312,
+      "Within": -0.04669967194828938,
+      "Error": 1.0626003927682715,
+      "b2": 0.8046141182092676,
+      "c2": 0.3245054765020171,
+      "eligible_notes": 1005,
+      "defined_shape_notes": 1005,
+      "fixed_output_scales": {
+        "log_corr": 0.34392873254139633,
+        "log_smooth_0.05s": 0.35823116900968943,
+        "log_smooth_0.1s": 0.3579514489053608,
+        "log_smooth_0.2s": 0.3472922295522667,
+        "log_smooth_0.5s": 0.3031051878286123,
+        "log_smooth_1s": 0.2341928332912061,
+        "linear_smooth_0.05s": 0.12098820195704406,
+        "linear_smooth_0.1s": 0.13039661147196366,
+        "linear_smooth_0.2s": 0.13078022267307995,
+        "linear_smooth_0.5s": 0.11081038493706928,
+        "linear_smooth_1s": 0.07314579719595621
+      }
+    },
+    {
+      "track": "MusicNet/2217",
+      "group": "BWV1009",
+      "model": "gate",
+      "clipped": 0,
+      "Full": 0.07758346272689985,
+      "Active": null,
+      "Note": null,
+      "Within": null,
+      "Error": 2.9827410892570736,
+      "b2": 8.574849348860491,
+      "c2": 0.3218950566819838,
+      "eligible_notes": 1005,
+      "defined_shape_notes": 0,
+      "fixed_output_scales": {
+        "log_corr": 0.33850076595381273,
+        "log_smooth_0.05s": 0.3510032552113017,
+        "log_smooth_0.1s": 0.3503218299836933,
+        "log_smooth_0.2s": 0.33900136533758757,
+        "log_smooth_0.5s": 0.29213100530109215,
+        "log_smooth_1s": 0.21785244654576816,
+        "linear_smooth_0.05s": 0.08284091714466742,
+        "linear_smooth_0.1s": 0.07915389326211936,
+        "linear_smooth_0.2s": 0.061246163866815403,
+        "linear_smooth_0.5s": 0.0002579801832567365,
+        "linear_smooth_1s": -0.09669919181774181
+      }
+    },
+    {
+      "track": "MusicNet/2217",
+      "group": "BWV1009",
+      "model": "mamba",
+      "clipped": 0,
+      "Full": 0.2206227270338502,
+      "Active": 0.21111484878499862,
+      "Note": 0.30889515426383524,
+      "Within": -0.0021902933102064238,
+      "Error": 0.738569855313179,
+      "b2": 0.24625039963406214,
+      "c2": 0.29923503154326786,
+      "eligible_notes": 1005,
+      "defined_shape_notes": 1005,
+      "fixed_output_scales": {
+        "log_corr": 0.405436343942301,
+        "log_smooth_0.05s": 0.4360929300993343,
+        "log_smooth_0.1s": 0.4381207532368209,
+        "log_smooth_0.2s": 0.4330761395496035,
+        "log_smooth_0.5s": 0.4125313816872359,
+        "log_smooth_1s": 0.3716324307557531,
+        "linear_smooth_0.05s": 0.32502094707743817,
+        "linear_smooth_0.1s": 0.3521173022936967,
+        "linear_smooth_0.2s": 0.3669848067237271,
+        "linear_smooth_0.5s": 0.36007463095229925,
+        "linear_smooth_1s": 0.30326171934761925
+      }
+    },
+    {
+      "track": "MusicNet/2217",
+      "group": "BWV1009",
+      "model": "s4d",
+      "clipped": 0,
+      "Full": 0.17219428314211827,
+      "Active": 0.15514263026424058,
+      "Note": 0.229169985463413,
+      "Within": 0.04201750653994044,
+      "Error": 1.0854748138450618,
+      "b2": 0.8705045939231489,
+      "c2": 0.3077509775688228,
+      "eligible_notes": 1005,
+      "defined_shape_notes": 1005,
+      "fixed_output_scales": {
+        "log_corr": 0.4184714232064788,
+        "log_smooth_0.05s": 0.49254151687332387,
+        "log_smooth_0.1s": 0.5051659757208099,
+        "log_smooth_0.2s": 0.5092472439903577,
+        "log_smooth_0.5s": 0.4998794923261619,
+        "log_smooth_1s": 0.4696403587351553,
+        "linear_smooth_0.05s": 0.24903359716866388,
+        "linear_smooth_0.1s": 0.2715976992417786,
+        "linear_smooth_0.2s": 0.28385651523530797,
+        "linear_smooth_0.5s": 0.2742080754307993,
+        "linear_smooth_1s": 0.20913575557698164
+      }
+    },
+    {
+      "track": "MusicNet/2218",
+      "group": "BWV1009",
+      "model": "global_ols",
+      "clipped": 0,
+      "Full": 0.19861579925812,
+      "Active": 0.06963305483781593,
+      "Note": 0.024784334497037912,
+      "Within": 0.11434097205636365,
+      "Error": 1.3658736021163052,
+      "b2": 1.613115107205426,
+      "c2": 0.25249558975274483,
+      "eligible_notes": 972,
+      "defined_shape_notes": 972,
+      "fixed_output_scales": {
+        "log_corr": 0.5339672776438296,
+        "log_smooth_0.05s": 0.595921598454823,
+        "log_smooth_0.1s": 0.6269100919161716,
+        "log_smooth_0.2s": 0.670307825242496,
+        "log_smooth_0.5s": 0.7241801902160935,
+        "log_smooth_1s": 0.7625414629902828,
+        "linear_smooth_0.05s": 0.22683120542220417,
+        "linear_smooth_0.1s": 0.24388042127913012,
+        "linear_smooth_0.2s": 0.2944835115125625,
+        "linear_smooth_0.5s": 0.3650677461667205,
+        "linear_smooth_1s": 0.41721099704850473
+      }
+    },
+    {
+      "track": "MusicNet/2218",
+      "group": "BWV1009",
+      "model": "instrument_ols",
+      "clipped": 0,
+      "Full": 0.12121137130786439,
+      "Active": 0.06048798309880274,
+      "Note": 0.07746037798244648,
+      "Within": -0.004592733430998767,
+      "Error": 0.6039377688556068,
+      "b2": 0.0029417147272492276,
+      "c2": 0.36179911392303915,
+      "eligible_notes": 972,
+      "defined_shape_notes": 972,
+      "fixed_output_scales": {
+        "log_corr": 0.4959988894894834,
+        "log_smooth_0.05s": 0.5606571630192974,
+        "log_smooth_0.1s": 0.5959206538070431,
+        "log_smooth_0.2s": 0.6386877902045411,
+        "log_smooth_0.5s": 0.7062243092704351,
+        "log_smooth_1s": 0.7415403563182413,
+        "linear_smooth_0.05s": 0.15853792163134087,
+        "linear_smooth_0.1s": 0.18096956837815117,
+        "linear_smooth_0.2s": 0.21164587353015898,
+        "linear_smooth_0.5s": 0.274920462898112,
+        "linear_smooth_1s": 0.29441313963184085
+      }
+    },
+    {
+      "track": "MusicNet/2218",
+      "group": "BWV1009",
+      "model": "note_ols",
+      "clipped": 0,
+      "Full": 0.20131307359448328,
+      "Active": 0.00799099633637056,
+      "Note": 0.009846584972119378,
+      "Within": null,
+      "Error": 1.1489587440368105,
+      "b2": 1.0692841577714531,
+      "c2": 0.25082203772719214,
+      "eligible_notes": 972,
+      "defined_shape_notes": 0,
+      "fixed_output_scales": {
+        "log_corr": 0.5482856804752009,
+        "log_smooth_0.05s": 0.6068969298401793,
+        "log_smooth_0.1s": 0.6414335867059061,
+        "log_smooth_0.2s": 0.6806516932248652,
+        "log_smooth_0.5s": 0.7331604693052233,
+        "log_smooth_1s": 0.7702712971344605,
+        "linear_smooth_0.05s": 0.2346678410504597,
+        "linear_smooth_0.1s": 0.25982066497619627,
+        "linear_smooth_0.2s": 0.3070412503825485,
+        "linear_smooth_0.5s": 0.3760053868417729,
+        "linear_smooth_1s": 0.41386419759507176
+      }
+    },
+    {
+      "track": "MusicNet/2218",
+      "group": "BWV1009",
+      "model": "note_shape",
+      "clipped": 0,
+      "Full": 0.23163164944347406,
+      "Active": 0.11226170952851079,
+      "Note": 0.009846584942038923,
+      "Within": 0.13658566942258699,
+      "Error": 1.1489587445281988,
+      "b2": 1.0692841587905213,
+      "c2": 0.2508220378372938,
+      "eligible_notes": 972,
+      "defined_shape_notes": 972,
+      "fixed_output_scales": {
+        "log_corr": 0.5557316437085105,
+        "log_smooth_0.05s": 0.6097548449017496,
+        "log_smooth_0.1s": 0.6416849281127206,
+        "log_smooth_0.2s": 0.6806646596525756,
+        "log_smooth_0.5s": 0.7331957611138591,
+        "log_smooth_1s": 0.770357398818608,
+        "linear_smooth_0.05s": 0.2509233956948323,
+        "linear_smooth_0.1s": 0.25710822392550625,
+        "linear_smooth_0.2s": 0.30660134775204206,
+        "linear_smooth_0.5s": 0.3773597781016266,
+        "linear_smooth_1s": 0.4148125326246825
+      }
+    },
+    {
+      "track": "MusicNet/2218",
+      "group": "BWV1009",
+      "model": "gate",
+      "clipped": 0,
+      "Full": 0.22760693053893813,
+      "Active": null,
+      "Note": null,
+      "Within": null,
+      "Error": 2.814762764824348,
+      "b2": 7.677847407361565,
+      "c2": 0.24504201488004076,
+      "eligible_notes": 972,
+      "defined_shape_notes": 0,
+      "fixed_output_scales": {
+        "log_corr": 0.54807148394588,
+        "log_smooth_0.05s": 0.6069874971434384,
+        "log_smooth_0.1s": 0.641618747736045,
+        "log_smooth_0.2s": 0.6800938012467057,
+        "log_smooth_0.5s": 0.7322918299818751,
+        "log_smooth_1s": 0.7703446255596768,
+        "linear_smooth_0.05s": 0.2650478689144468,
+        "linear_smooth_0.1s": 0.2928479980099106,
+        "linear_smooth_0.2s": 0.3289450112394686,
+        "linear_smooth_0.5s": 0.38825025038772154,
+        "linear_smooth_1s": 0.43690632266922785
+      }
+    },
+    {
+      "track": "MusicNet/2218",
+      "group": "BWV1009",
+      "model": "mamba",
+      "clipped": 0,
+      "Full": 0.32248443229370727,
+      "Active": 0.25873623417748015,
+      "Note": 0.20902400635238125,
+      "Within": 0.16631445327607877,
+      "Error": 0.8921821110829598,
+      "b2": 0.5494178842037277,
+      "c2": 0.2465710351327189,
+      "eligible_notes": 972,
+      "defined_shape_notes": 972,
+      "fixed_output_scales": {
+        "log_corr": 0.5824676787490771,
+        "log_smooth_0.05s": 0.6385187782365904,
+        "log_smooth_0.1s": 0.6654231097093597,
+        "log_smooth_0.2s": 0.7047319927589838,
+        "log_smooth_0.5s": 0.7541672191813324,
+        "log_smooth_1s": 0.7885494360597561,
+        "linear_smooth_0.05s": 0.35372339958252247,
+        "linear_smooth_0.1s": 0.3645505645047781,
+        "linear_smooth_0.2s": 0.4065438228486825,
+        "linear_smooth_0.5s": 0.4593345082406332,
+        "linear_smooth_1s": 0.49984166918075573
+      }
+    },
+    {
+      "track": "MusicNet/2218",
+      "group": "BWV1009",
+      "model": "s4d",
+      "clipped": 0,
+      "Full": 0.2648603973247598,
+      "Active": 0.1870528362990397,
+      "Note": 0.12435984052641748,
+      "Within": 0.13826872116013667,
+      "Error": 1.117119185989889,
+      "b2": 0.9970795270403721,
+      "c2": 0.2508757486663403,
+      "eligible_notes": 972,
+      "defined_shape_notes": 972,
+      "fixed_output_scales": {
+        "log_corr": 0.5332851925378105,
+        "log_smooth_0.05s": 0.6084966730277664,
+        "log_smooth_0.1s": 0.637919169463366,
+        "log_smooth_0.2s": 0.6789270047941545,
+        "log_smooth_0.5s": 0.7295683058257925,
+        "log_smooth_1s": 0.7623756369532457,
+        "linear_smooth_0.05s": 0.2990104323734576,
+        "linear_smooth_0.1s": 0.3028538668616746,
+        "linear_smooth_0.2s": 0.3352088920425027,
+        "linear_smooth_0.5s": 0.3798824143544409,
+        "linear_smooth_1s": 0.40304490832941436
+      }
+    },
+    {
+      "track": "MusicNet/2219",
+      "group": "BWV1009",
+      "model": "global_ols",
+      "clipped": 0,
+      "Full": 0.012321367070974754,
+      "Active": -0.09826810762510253,
+      "Note": -0.19899605050848773,
+      "Within": 0.033456168719791554,
+      "Error": 1.3696615427163679,
+      "b2": 1.5448447246061068,
+      "c2": 0.33112801699007394,
+      "eligible_notes": 990,
+      "defined_shape_notes": 990,
+      "fixed_output_scales": {
+        "log_corr": 0.45373129217368724,
+        "log_smooth_0.05s": 0.505751278930504,
+        "log_smooth_0.1s": 0.5379501943231673,
+        "log_smooth_0.2s": 0.5809849190717525,
+        "log_smooth_0.5s": 0.6621379165951902,
+        "log_smooth_1s": 0.7069793531293648,
+        "linear_smooth_0.05s": 0.013009175257607386,
+        "linear_smooth_0.1s": 0.031036908663861353,
+        "linear_smooth_0.2s": 0.06252333015356934,
+        "linear_smooth_0.5s": 0.1276226789995812,
+        "linear_smooth_1s": 0.19090901970597204
+      }
+    },
+    {
+      "track": "MusicNet/2219",
+      "group": "BWV1009",
+      "model": "instrument_ols",
+      "clipped": 0,
+      "Full": 0.08751587925416396,
+      "Active": 0.026293983721236508,
+      "Note": 0.030450800153390176,
+      "Within": -0.038081028608722374,
+      "Error": 0.803336926580217,
+      "b2": 0.33233641299730443,
+      "c2": 0.31301380461004463,
+      "eligible_notes": 990,
+      "defined_shape_notes": 990,
+      "fixed_output_scales": {
+        "log_corr": 0.5038339635125028,
+        "log_smooth_0.05s": 0.5594541335238804,
+        "log_smooth_0.1s": 0.5864932256035886,
+        "log_smooth_0.2s": 0.6217390192453353,
+        "log_smooth_0.5s": 0.6841575761420905,
+        "log_smooth_1s": 0.6995935221554437,
+        "linear_smooth_0.05s": 0.1272788021325163,
+        "linear_smooth_0.1s": 0.1404796531314179,
+        "linear_smooth_0.2s": 0.15293639526580244,
+        "linear_smooth_0.5s": 0.18443183282948497,
+        "linear_smooth_1s": 0.181322994388368
+      }
+    },
+    {
+      "track": "MusicNet/2219",
+      "group": "BWV1009",
+      "model": "note_ols",
+      "clipped": 0,
+      "Full": 0.07672260126498326,
+      "Active": -0.14305335227008362,
+      "Note": -0.18711521737869974,
+      "Within": null,
+      "Error": 1.108633808952847,
+      "b2": 0.9206986103714202,
+      "c2": 0.3083703119818771,
+      "eligible_notes": 990,
+      "defined_shape_notes": 0,
+      "fixed_output_scales": {
+        "log_corr": 0.5521168947222871,
+        "log_smooth_0.05s": 0.5820009837073177,
+        "log_smooth_0.1s": 0.606791430927165,
+        "log_smooth_0.2s": 0.6448913190769074,
+        "log_smooth_0.5s": 0.7189664622816525,
+        "log_smooth_1s": 0.7488239498022545,
+        "linear_smooth_0.05s": 0.0887450714373783,
+        "linear_smooth_0.1s": 0.10555519174461178,
+        "linear_smooth_0.2s": 0.14200572188812763,
+        "linear_smooth_0.5s": 0.2208104484991695,
+        "linear_smooth_1s": 0.2737239305458264
+      }
+    },
+    {
+      "track": "MusicNet/2219",
+      "group": "BWV1009",
+      "model": "note_shape",
+      "clipped": 0,
+      "Full": 0.05874927203758506,
+      "Active": -0.05319463115369065,
+      "Note": -0.18711522198381322,
+      "Within": -0.008299924704230625,
+      "Error": 1.108633808936144,
+      "b2": 0.9206986099094158,
+      "c2": 0.30837031240684765,
+      "eligible_notes": 990,
+      "defined_shape_notes": 990,
+      "fixed_output_scales": {
+        "log_corr": 0.5510879404637828,
+        "log_smooth_0.05s": 0.5822140220307447,
+        "log_smooth_0.1s": 0.6072001051757951,
+        "log_smooth_0.2s": 0.6450664940810918,
+        "log_smooth_0.5s": 0.7189291971255364,
+        "log_smooth_1s": 0.74888396521747,
+        "linear_smooth_0.05s": 0.0866032509107477,
+        "linear_smooth_0.1s": 0.10969100497970849,
+        "linear_smooth_0.2s": 0.14434641747019417,
+        "linear_smooth_0.5s": 0.22087348765712853,
+        "linear_smooth_1s": 0.27318513446355164
+      }
+    },
+    {
+      "track": "MusicNet/2219",
+      "group": "BWV1009",
+      "model": "gate",
+      "clipped": 0,
+      "Full": 0.17071848467978507,
+      "Active": null,
+      "Note": null,
+      "Within": null,
+      "Error": 2.886805534241438,
+      "b2": 8.041424987794052,
+      "c2": 0.2922212047329438,
+      "eligible_notes": 990,
+      "defined_shape_notes": 0,
+      "fixed_output_scales": {
+        "log_corr": 0.5560671244827418,
+        "log_smooth_0.05s": 0.5860563827275102,
+        "log_smooth_0.1s": 0.6106739627033474,
+        "log_smooth_0.2s": 0.6482612421710562,
+        "log_smooth_0.5s": 0.7210459351740879,
+        "log_smooth_1s": 0.7490201621396769,
+        "linear_smooth_0.05s": 0.18996682281719598,
+        "linear_smooth_0.1s": 0.20813177370233232,
+        "linear_smooth_0.2s": 0.23734491785037512,
+        "linear_smooth_0.5s": 0.2904317506115695,
+        "linear_smooth_1s": 0.33451955740749967
+      }
+    },
+    {
+      "track": "MusicNet/2219",
+      "group": "BWV1009",
+      "model": "mamba",
+      "clipped": 0,
+      "Full": 0.1621653017300671,
+      "Active": 0.11008513192765348,
+      "Note": 0.13369781507206766,
+      "Within": 0.055321827415549,
+      "Error": 0.8041433327814052,
+      "b2": 0.3588168479770496,
+      "c2": 0.28782965167973606,
+      "eligible_notes": 990,
+      "defined_shape_notes": 990,
+      "fixed_output_scales": {
+        "log_corr": 0.5472697112776808,
+        "log_smooth_0.05s": 0.6021547196499458,
+        "log_smooth_0.1s": 0.6294682794488714,
+        "log_smooth_0.2s": 0.6615583332018086,
+        "log_smooth_0.5s": 0.730457104396057,
+        "log_smooth_1s": 0.771137420783894,
+        "linear_smooth_0.05s": 0.22106915601108795,
+        "linear_smooth_0.1s": 0.24737796901718911,
+        "linear_smooth_0.2s": 0.2537458277139232,
+        "linear_smooth_0.5s": 0.29468172400309517,
+        "linear_smooth_1s": 0.34397438118063506
+      }
+    },
+    {
+      "track": "MusicNet/2219",
+      "group": "BWV1009",
+      "model": "s4d",
+      "clipped": 0,
+      "Full": 0.1857577306716525,
+      "Active": 0.13553002356707824,
+      "Note": 0.24694155308585633,
+      "Within": 0.06216265662437544,
+      "Error": 1.0323853243566026,
+      "b2": 0.7932244458733346,
+      "c2": 0.27259501207355286,
+      "eligible_notes": 990,
+      "defined_shape_notes": 990,
+      "fixed_output_scales": {
+        "log_corr": 0.4913299699958757,
+        "log_smooth_0.05s": 0.5936823291180624,
+        "log_smooth_0.1s": 0.6351681150248055,
+        "log_smooth_0.2s": 0.6681886074071063,
+        "log_smooth_0.5s": 0.7347205000129593,
+        "log_smooth_1s": 0.7667186162356341,
+        "linear_smooth_0.05s": 0.2658163821552414,
+        "linear_smooth_0.1s": 0.31208541194860734,
+        "linear_smooth_0.2s": 0.32685038456802323,
+        "linear_smooth_0.5s": 0.34885952688344574,
+        "linear_smooth_1s": 0.3605429724827929
+      }
+    },
+    {
+      "track": "MusicNet/2220",
+      "group": "BWV1009",
+      "model": "global_ols",
+      "clipped": 0,
+      "Full": 0.06266849790501748,
+      "Active": -0.024667779367506866,
+      "Note": -0.07946728793836355,
+      "Within": -0.03771370247986336,
+      "Error": 1.3026999762848985,
+      "b2": 1.3031477825212738,
+      "c2": 0.3938794456914014,
+      "eligible_notes": 434,
+      "defined_shape_notes": 434,
+      "fixed_output_scales": {
+        "log_corr": 0.4102045931335684,
+        "log_smooth_0.05s": 0.4284489906341474,
+        "log_smooth_0.1s": 0.4376825700474722,
+        "log_smooth_0.2s": 0.44889154863427155,
+        "log_smooth_0.5s": 0.4602857857848433,
+        "log_smooth_1s": 0.4713656016291725,
+        "linear_smooth_0.05s": 0.07433785299511417,
+        "linear_smooth_0.1s": 0.0863869213231199,
+        "linear_smooth_0.2s": 0.10291072809739342,
+        "linear_smooth_0.5s": 0.12321303072433878,
+        "linear_smooth_1s": 0.14346469265383463
+      }
+    },
+    {
+      "track": "MusicNet/2220",
+      "group": "BWV1009",
+      "model": "instrument_ols",
+      "clipped": 0,
+      "Full": 0.07043055670639006,
+      "Active": 0.04947253526263546,
+      "Note": 0.07174157819484756,
+      "Within": 0.020459897071237534,
+      "Error": 1.0754059954577886,
+      "b2": 0.5766488056289285,
+      "c2": 0.5798492494376288,
+      "eligible_notes": 434,
+      "defined_shape_notes": 434,
+      "fixed_output_scales": {
+        "log_corr": 0.2761324340393002,
+        "log_smooth_0.05s": 0.28745324500911723,
+        "log_smooth_0.1s": 0.2951544832503066,
+        "log_smooth_0.2s": 0.3072079856606071,
+        "log_smooth_0.5s": 0.31725004527733325,
+        "log_smooth_1s": 0.29509528900937554,
+        "linear_smooth_0.05s": 0.07763656010471183,
+        "linear_smooth_0.1s": 0.08359627555812552,
+        "linear_smooth_0.2s": 0.09462939052135684,
+        "linear_smooth_0.5s": 0.10056910524500201,
+        "linear_smooth_1s": 0.06510938896793829
+      }
+    },
+    {
+      "track": "MusicNet/2220",
+      "group": "BWV1009",
+      "model": "note_ols",
+      "clipped": 0,
+      "Full": 0.09607268588017231,
+      "Active": -0.010241240961561681,
+      "Note": -0.037436943851425514,
+      "Within": 0.2408782369031975,
+      "Error": 1.0365437831276885,
+      "b2": 0.6984963787022395,
+      "c2": 0.3759266356384209,
+      "eligible_notes": 434,
+      "defined_shape_notes": 46,
+      "fixed_output_scales": {
+        "log_corr": 0.5263529520947929,
+        "log_smooth_0.05s": 0.536492772198169,
+        "log_smooth_0.1s": 0.5403796488589562,
+        "log_smooth_0.2s": 0.5450789336462555,
+        "log_smooth_0.5s": 0.5445502028629872,
+        "log_smooth_1s": 0.5420030035983433,
+        "linear_smooth_0.05s": 0.10160414701736242,
+        "linear_smooth_0.1s": 0.1069703178276132,
+        "linear_smooth_0.2s": 0.11895939539412881,
+        "linear_smooth_0.5s": 0.14269244618761023,
+        "linear_smooth_1s": 0.15542979946790728
+      }
+    },
+    {
+      "track": "MusicNet/2220",
+      "group": "BWV1009",
+      "model": "note_shape",
+      "clipped": 0,
+      "Full": 0.07249563355414423,
+      "Active": -0.012457715884141714,
+      "Note": -0.004961392056406139,
+      "Within": -0.10647109812436245,
+      "Error": 1.0368537861620117,
+      "b2": 0.7052169686029898,
+      "c2": 0.36984880527550873,
+      "eligible_notes": 434,
+      "defined_shape_notes": 434,
+      "fixed_output_scales": {
+        "log_corr": 0.5248605331158491,
+        "log_smooth_0.05s": 0.5357303209387351,
+        "log_smooth_0.1s": 0.5408999650084226,
+        "log_smooth_0.2s": 0.5463322953415463,
+        "log_smooth_0.5s": 0.5445743860901461,
+        "log_smooth_1s": 0.5417224988928149,
+        "linear_smooth_0.05s": 0.0840831661655402,
+        "linear_smooth_0.1s": 0.10001016566273786,
+        "linear_smooth_0.2s": 0.11738613903098356,
+        "linear_smooth_0.5s": 0.13931800696901617,
+        "linear_smooth_1s": 0.15635358189269197
+      }
+    },
+    {
+      "track": "MusicNet/2220",
+      "group": "BWV1009",
+      "model": "gate",
+      "clipped": 0,
+      "Full": 0.17288244924219084,
+      "Active": null,
+      "Note": null,
+      "Within": null,
+      "Error": 3.046926650140804,
+      "b2": 8.931342921170126,
+      "c2": 0.35241909016813094,
+      "eligible_notes": 434,
+      "defined_shape_notes": 0,
+      "fixed_output_scales": {
+        "log_corr": 0.5287319135144409,
+        "log_smooth_0.05s": 0.5389796204432726,
+        "log_smooth_0.1s": 0.5428419464236799,
+        "log_smooth_0.2s": 0.547345216429638,
+        "log_smooth_0.5s": 0.5465616148960913,
+        "log_smooth_1s": 0.5458370324166557,
+        "linear_smooth_0.05s": 0.1820623848945315,
+        "linear_smooth_0.1s": 0.18927030430407643,
+        "linear_smooth_0.2s": 0.20268692676948935,
+        "linear_smooth_0.5s": 0.2338347879203097,
+        "linear_smooth_1s": 0.2691583370229403
+      }
+    },
+    {
+      "track": "MusicNet/2220",
+      "group": "BWV1009",
+      "model": "mamba",
+      "clipped": 0,
+      "Full": 0.08565457089886983,
+      "Active": 0.04502416453981663,
+      "Note": 0.021447327506557586,
+      "Within": 0.0025437153820340504,
+      "Error": 0.6701335046016018,
+      "b2": 0.021008521753929896,
+      "c2": 0.4280703922356952,
+      "eligible_notes": 434,
+      "defined_shape_notes": 434,
+      "fixed_output_scales": {
+        "log_corr": 0.40626310531289556,
+        "log_smooth_0.05s": 0.4227406891413547,
+        "log_smooth_0.1s": 0.4384876065070195,
+        "log_smooth_0.2s": 0.45283350502822095,
+        "log_smooth_0.5s": 0.45630044371608486,
+        "log_smooth_1s": 0.4581259378702028,
+        "linear_smooth_0.05s": 0.09912617501634699,
+        "linear_smooth_0.1s": 0.11286672173931926,
+        "linear_smooth_0.2s": 0.11674381186323395,
+        "linear_smooth_0.5s": 0.10980770470247982,
+        "linear_smooth_1s": 0.10046684942971523
+      }
+    },
+    {
+      "track": "MusicNet/2220",
+      "group": "BWV1009",
+      "model": "s4d",
+      "clipped": 0,
+      "Full": 0.19038456453762043,
+      "Active": 0.14927649602060764,
+      "Note": 0.17619846954402882,
+      "Within": 0.053362195026621345,
+      "Error": 0.9479323815289418,
+      "b2": 0.5406160080905255,
+      "c2": 0.3579597918606057,
+      "eligible_notes": 434,
+      "defined_shape_notes": 434,
+      "fixed_output_scales": {
+        "log_corr": 0.42294144720259125,
+        "log_smooth_0.05s": 0.45101369293720556,
+        "log_smooth_0.1s": 0.4755755772905693,
+        "log_smooth_0.2s": 0.49913900590872906,
+        "log_smooth_0.5s": 0.5001918422175203,
+        "log_smooth_1s": 0.4826693804215312,
+        "linear_smooth_0.05s": 0.21435517357755468,
+        "linear_smooth_0.1s": 0.23764854844170258,
+        "linear_smooth_0.2s": 0.2575062000898133,
+        "linear_smooth_0.5s": 0.26322064383709876,
+        "linear_smooth_1s": 0.24486851056813927
+      }
+    },
+    {
+      "track": "MusicNet/2221",
+      "group": "BWV1009",
+      "model": "global_ols",
+      "clipped": 0,
+      "Full": 0.07756601666625455,
+      "Active": 0.006314046964943422,
+      "Note": -0.11256792994119033,
+      "Within": 0.13065129562513417,
+      "Error": 0.9817260776588767,
+      "b2": 0.6369795287931682,
+      "c2": 0.3268065627623146,
+      "eligible_notes": 889,
+      "defined_shape_notes": 889,
+      "fixed_output_scales": {
+        "log_corr": 0.3340367785711295,
+        "log_smooth_0.05s": 0.36267083540015393,
+        "log_smooth_0.1s": 0.380749710986052,
+        "log_smooth_0.2s": 0.41253634981645176,
+        "log_smooth_0.5s": 0.4673812446977774,
+        "log_smooth_1s": 0.5147996596697316,
+        "linear_smooth_0.05s": 0.0726334222285191,
+        "linear_smooth_0.1s": 0.08017620829122533,
+        "linear_smooth_0.2s": 0.10826613382558296,
+        "linear_smooth_0.5s": 0.16444469776960174,
+        "linear_smooth_1s": 0.22014200938805215
+      }
+    },
+    {
+      "track": "MusicNet/2221",
+      "group": "BWV1009",
+      "model": "instrument_ols",
+      "clipped": 0,
+      "Full": 0.1313664666767919,
+      "Active": 0.09967991496403053,
+      "Note": 0.20904517295687583,
+      "Within": -0.15560832183352663,
+      "Error": 0.5771504336405975,
+      "b2": 0.014803651737862467,
+      "c2": 0.31829897131366724,
+      "eligible_notes": 889,
+      "defined_shape_notes": 889,
+      "fixed_output_scales": {
+        "log_corr": 0.3783990892923384,
+        "log_smooth_0.05s": 0.44478335797024476,
+        "log_smooth_0.1s": 0.4760661580807132,
+        "log_smooth_0.2s": 0.5121285179777147,
+        "log_smooth_0.5s": 0.5763133472262009,
+        "log_smooth_1s": 0.6269527824759427,
+        "linear_smooth_0.05s": 0.2059487429201025,
+        "linear_smooth_0.1s": 0.23791465673038878,
+        "linear_smooth_0.2s": 0.267015709875251,
+        "linear_smooth_0.5s": 0.31748146050824616,
+        "linear_smooth_1s": 0.35783099669664414
+      }
+    },
+    {
+      "track": "MusicNet/2221",
+      "group": "BWV1009",
+      "model": "note_ols",
+      "clipped": 0,
+      "Full": 0.1677759433745638,
+      "Active": 0.0938480319898386,
+      "Note": 0.15599319430507463,
+      "Within": 0.4822952931458871,
+      "Error": 0.7618392783390499,
+      "b2": 0.2799669545771946,
+      "c2": 0.3004321314429696,
+      "eligible_notes": 889,
+      "defined_shape_notes": 6,
+      "fixed_output_scales": {
+        "log_corr": 0.378616631537035,
+        "log_smooth_0.05s": 0.4001200343957021,
+        "log_smooth_0.1s": 0.4177492000774832,
+        "log_smooth_0.2s": 0.44381451022919133,
+        "log_smooth_0.5s": 0.4905980260103829,
+        "log_smooth_1s": 0.5370845065722162,
+        "linear_smooth_0.05s": 0.18543667282214335,
+        "linear_smooth_0.1s": 0.19444624798419077,
+        "linear_smooth_0.2s": 0.20461026317319622,
+        "linear_smooth_0.5s": 0.22163462808140974,
+        "linear_smooth_1s": 0.23731788645325053
+      }
+    },
+    {
+      "track": "MusicNet/2221",
+      "group": "BWV1009",
+      "model": "note_shape",
+      "clipped": 0,
+      "Full": 0.15774610000810604,
+      "Active": 0.10088610593652962,
+      "Note": 0.15592766408340733,
+      "Within": 0.12365774755021859,
+      "Error": 0.7618831514249401,
+      "b2": 0.28000760428839677,
+      "c2": 0.30045833213680134,
+      "eligible_notes": 889,
+      "defined_shape_notes": 889,
+      "fixed_output_scales": {
+        "log_corr": 0.38366756586863365,
+        "log_smooth_0.05s": 0.40289903266572724,
+        "log_smooth_0.1s": 0.4185269859174516,
+        "log_smooth_0.2s": 0.44336795450358996,
+        "log_smooth_0.5s": 0.48952403064984357,
+        "log_smooth_1s": 0.5363537567171349,
+        "linear_smooth_0.05s": 0.18226892563459884,
+        "linear_smooth_0.1s": 0.19288470256369003,
+        "linear_smooth_0.2s": 0.20180756055128513,
+        "linear_smooth_0.5s": 0.21778852512963284,
+        "linear_smooth_1s": 0.2350028180994572
+      }
+    },
+    {
+      "track": "MusicNet/2221",
+      "group": "BWV1009",
+      "model": "gate",
+      "clipped": 0,
+      "Full": 0.14192584064446093,
+      "Active": null,
+      "Note": null,
+      "Within": null,
+      "Error": 3.3041044271798117,
+      "b2": 10.612942049817025,
+      "c2": 0.3041640158922056,
+      "eligible_notes": 889,
+      "defined_shape_notes": 0,
+      "fixed_output_scales": {
+        "log_corr": 0.37435597479244714,
+        "log_smooth_0.05s": 0.3957665156374391,
+        "log_smooth_0.1s": 0.41370900424598583,
+        "log_smooth_0.2s": 0.44065749471666615,
+        "log_smooth_0.5s": 0.4897384578505151,
+        "log_smooth_1s": 0.5389092370279105,
+        "linear_smooth_0.05s": 0.1565274730769637,
+        "linear_smooth_0.1s": 0.1677458430290248,
+        "linear_smooth_0.2s": 0.18539457576707688,
+        "linear_smooth_0.5s": 0.22397778996197,
+        "linear_smooth_1s": 0.2756845760321119
+      }
+    },
+    {
+      "track": "MusicNet/2221",
+      "group": "BWV1009",
+      "model": "mamba",
+      "clipped": 0,
+      "Full": 0.1861371619280471,
+      "Active": 0.151015896545534,
+      "Note": 0.12979834233262083,
+      "Within": 0.16262518239145152,
+      "Error": 0.5599139295600617,
+      "b2": 0.01745965863243997,
+      "c2": 0.29604394988294985,
+      "eligible_notes": 889,
+      "defined_shape_notes": 889,
+      "fixed_output_scales": {
+        "log_corr": 0.42525425911778025,
+        "log_smooth_0.05s": 0.45798265632251683,
+        "log_smooth_0.1s": 0.47134042908140356,
+        "log_smooth_0.2s": 0.4904310673384988,
+        "log_smooth_0.5s": 0.5309100152547946,
+        "log_smooth_1s": 0.5774735511561068,
+        "linear_smooth_0.05s": 0.20509265350694386,
+        "linear_smooth_0.1s": 0.20899643546727334,
+        "linear_smooth_0.2s": 0.2097253363697219,
+        "linear_smooth_0.5s": 0.2234718638388099,
+        "linear_smooth_1s": 0.262230568101728
+      }
+    },
+    {
+      "track": "MusicNet/2221",
+      "group": "BWV1009",
+      "model": "s4d",
+      "clipped": 0,
+      "Full": 0.19119467381818855,
+      "Active": 0.1556636616440818,
+      "Note": 0.15152352762672805,
+      "Within": 0.1716475509920123,
+      "Error": 0.7522033287847394,
+      "b2": 0.27266812502404086,
+      "c2": 0.29314172281080186,
+      "eligible_notes": 889,
+      "defined_shape_notes": 889,
+      "fixed_output_scales": {
+        "log_corr": 0.397955959206942,
+        "log_smooth_0.05s": 0.4646141238776642,
+        "log_smooth_0.1s": 0.4890034054173465,
+        "log_smooth_0.2s": 0.5143794014457787,
+        "log_smooth_0.5s": 0.5635008929314361,
+        "log_smooth_1s": 0.6146549793085091,
+        "linear_smooth_0.05s": 0.22776053300134158,
+        "linear_smooth_0.1s": 0.24809080453644464,
+        "linear_smooth_0.2s": 0.26192124771230757,
+        "linear_smooth_0.5s": 0.29120087480652834,
+        "linear_smooth_1s": 0.34210804436533454
+      }
+    },
+    {
+      "track": "MusicNet/2222",
+      "group": "BWV1009",
+      "model": "global_ols",
+      "clipped": 0,
+      "Full": 0.253695345862419,
+      "Active": 0.13679415911636914,
+      "Note": 0.25022173152747806,
+      "Within": 0.035788584699781224,
+      "Error": 1.1861442196167054,
+      "b2": 1.130164336905176,
+      "c2": 0.2767737728249472,
+      "eligible_notes": 1048,
+      "defined_shape_notes": 1048,
+      "fixed_output_scales": {
+        "log_corr": 0.6645585747574806,
+        "log_smooth_0.05s": 0.7176315766652442,
+        "log_smooth_0.1s": 0.7363388654427349,
+        "log_smooth_0.2s": 0.7623827178635557,
+        "log_smooth_0.5s": 0.7993501926346628,
+        "log_smooth_1s": 0.8201082588197874,
+        "linear_smooth_0.05s": 0.3262022018316883,
+        "linear_smooth_0.1s": 0.35545493383687354,
+        "linear_smooth_0.2s": 0.4114385181868814,
+        "linear_smooth_0.5s": 0.48875812823681897,
+        "linear_smooth_1s": 0.5066683727105138
+      }
+    },
+    {
+      "track": "MusicNet/2222",
+      "group": "BWV1009",
+      "model": "instrument_ols",
+      "clipped": 0,
+      "Full": 0.04150212574147325,
+      "Active": -0.017936544961057156,
+      "Note": 0.032857744841266044,
+      "Within": 0.023532618300683487,
+      "Error": 0.8815057213798672,
+      "b2": 0.15782607762520903,
+      "c2": 0.619226259200231,
+      "eligible_notes": 1048,
+      "defined_shape_notes": 1048,
+      "fixed_output_scales": {
+        "log_corr": 0.5062957296547657,
+        "log_smooth_0.05s": 0.5293202807453514,
+        "log_smooth_0.1s": 0.5407104496975158,
+        "log_smooth_0.2s": 0.5567228488642566,
+        "log_smooth_0.5s": 0.5955836041853576,
+        "log_smooth_1s": 0.6348832422133359,
+        "linear_smooth_0.05s": 0.044571708439894754,
+        "linear_smooth_0.1s": 0.048685870269888604,
+        "linear_smooth_0.2s": 0.06233353509293247,
+        "linear_smooth_0.5s": 0.11988060245408885,
+        "linear_smooth_1s": 0.20069678443281322
+      }
+    },
+    {
+      "track": "MusicNet/2222",
+      "group": "BWV1009",
+      "model": "note_ols",
+      "clipped": 0,
+      "Full": 0.26269369303951984,
+      "Active": 0.15157184528172554,
+      "Note": 0.25387125943816435,
+      "Within": -0.07085757860787147,
+      "Error": 0.965582815263995,
+      "b2": 0.6535605104897865,
+      "c2": 0.27878966264335603,
+      "eligible_notes": 1048,
+      "defined_shape_notes": 30,
+      "fixed_output_scales": {
+        "log_corr": 0.6980033365581232,
+        "log_smooth_0.05s": 0.7210094416315691,
+        "log_smooth_0.1s": 0.7361435034221767,
+        "log_smooth_0.2s": 0.7577511723575234,
+        "log_smooth_0.5s": 0.7865762553482107,
+        "log_smooth_1s": 0.7974925222469406,
+        "linear_smooth_0.05s": 0.3149374154718458,
+        "linear_smooth_0.1s": 0.35883040092734286,
+        "linear_smooth_0.2s": 0.42362647220783634,
+        "linear_smooth_0.5s": 0.5061952627332782,
+        "linear_smooth_1s": 0.5357102245668525
+      }
+    },
+    {
+      "track": "MusicNet/2222",
+      "group": "BWV1009",
+      "model": "note_shape",
+      "clipped": 0,
+      "Full": 0.2556699238977224,
+      "Active": 0.15683761038497243,
+      "Note": 0.2526956549002467,
+      "Within": -0.010864874614358741,
+      "Error": 0.9656853352639905,
+      "b2": 0.6536080734962585,
+      "c2": 0.27894009324766716,
+      "eligible_notes": 1048,
+      "defined_shape_notes": 1048,
+      "fixed_output_scales": {
+        "log_corr": 0.6981723346884853,
+        "log_smooth_0.05s": 0.7224849109555896,
+        "log_smooth_0.1s": 0.7366659957360944,
+        "log_smooth_0.2s": 0.7579163471788546,
+        "log_smooth_0.5s": 0.7868746162076378,
+        "log_smooth_1s": 0.7978204657781699,
+        "linear_smooth_0.05s": 0.32681272359143637,
+        "linear_smooth_0.1s": 0.3630399739233384,
+        "linear_smooth_0.2s": 0.4255234199953681,
+        "linear_smooth_0.5s": 0.5072538124729707,
+        "linear_smooth_1s": 0.5363590859875403
+      }
+    },
+    {
+      "track": "MusicNet/2222",
+      "group": "BWV1009",
+      "model": "gate",
+      "clipped": 0,
+      "Full": 0.24158255741538912,
+      "Active": null,
+      "Note": null,
+      "Within": null,
+      "Error": 3.0175903218767672,
+      "b2": 8.811113289620625,
+      "c2": 0.2947380610637085,
+      "eligible_notes": 1048,
+      "defined_shape_notes": 0,
+      "fixed_output_scales": {
+        "log_corr": 0.6933376024631482,
+        "log_smooth_0.05s": 0.7160035068164078,
+        "log_smooth_0.1s": 0.7310391935819646,
+        "log_smooth_0.2s": 0.7524918386634888,
+        "log_smooth_0.5s": 0.7805868315332466,
+        "log_smooth_1s": 0.7893088937700866,
+        "linear_smooth_0.05s": 0.2681791885885956,
+        "linear_smooth_0.1s": 0.2882892548021676,
+        "linear_smooth_0.2s": 0.31415731420451465,
+        "linear_smooth_0.5s": 0.3459061191839796,
+        "linear_smooth_1s": 0.35804316307860234
+      }
+    },
+    {
+      "track": "MusicNet/2222",
+      "group": "BWV1009",
+      "model": "mamba",
+      "clipped": 0,
+      "Full": 0.30043253556045535,
+      "Active": 0.22428986239726217,
+      "Note": 0.35271061625638445,
+      "Within": 0.024468223504395724,
+      "Error": 0.8622870430106698,
+      "b2": 0.48302206513192725,
+      "c2": 0.2605168794121574,
+      "eligible_notes": 1048,
+      "defined_shape_notes": 1048,
+      "fixed_output_scales": {
+        "log_corr": 0.687520909942749,
+        "log_smooth_0.05s": 0.7321786041057337,
+        "log_smooth_0.1s": 0.746848725277423,
+        "log_smooth_0.2s": 0.7654078930106014,
+        "log_smooth_0.5s": 0.7969946467305772,
+        "log_smooth_1s": 0.8204523919162701,
+        "linear_smooth_0.05s": 0.38831717306066366,
+        "linear_smooth_0.1s": 0.42570394048462684,
+        "linear_smooth_0.2s": 0.468018792958284,
+        "linear_smooth_0.5s": 0.5199178137931983,
+        "linear_smooth_1s": 0.5552348443476856
+      }
+    },
+    {
+      "track": "MusicNet/2222",
+      "group": "BWV1009",
+      "model": "s4d",
+      "clipped": 0,
+      "Full": 0.2809157910300655,
+      "Active": 0.19052570125472088,
+      "Note": 0.27342016067493863,
+      "Within": 0.044176719893638125,
+      "Error": 0.944074181872493,
+      "b2": 0.6129961535142129,
+      "c2": 0.2782799073640041,
+      "eligible_notes": 1048,
+      "defined_shape_notes": 1048,
+      "fixed_output_scales": {
+        "log_corr": 0.661407312780411,
+        "log_smooth_0.05s": 0.7282124111854075,
+        "log_smooth_0.1s": 0.7481621529684568,
+        "log_smooth_0.2s": 0.7692805745298698,
+        "log_smooth_0.5s": 0.8056860526745456,
+        "log_smooth_1s": 0.8252956550039373,
+        "linear_smooth_0.05s": 0.37512167006701364,
+        "linear_smooth_0.1s": 0.40675880038293066,
+        "linear_smooth_0.2s": 0.4389255203061059,
+        "linear_smooth_0.5s": 0.48480829723527763,
+        "linear_smooth_1s": 0.5083980902315424
+      }
+    },
+    {
+      "track": "MusicNet/2241",
+      "group": "BWV1001",
+      "model": "global_ols",
+      "clipped": 0,
+      "Full": 0.10832109357094898,
+      "Active": 0.015499991821993452,
+      "Note": 0.012513114388676866,
+      "Within": -0.009161161094050626,
+      "Error": 0.4914779937790107,
+      "b2": 0.008005883831168134,
+      "c2": 0.23354473453787317,
+      "eligible_notes": 605,
+      "defined_shape_notes": 605,
+      "fixed_output_scales": {
+        "log_corr": 0.4091455134220848,
+        "log_smooth_0.05s": 0.543907844682001,
+        "log_smooth_0.1s": 0.5867402780746553,
+        "log_smooth_0.2s": 0.6246407683746011,
+        "log_smooth_0.5s": 0.6804916976509839,
+        "log_smooth_1s": 0.739317898526095,
+        "linear_smooth_0.05s": 0.14621024391952572,
+        "linear_smooth_0.1s": 0.17038625549037767,
+        "linear_smooth_0.2s": 0.1948414236414795,
+        "linear_smooth_0.5s": 0.22532394408059184,
+        "linear_smooth_1s": 0.2650223415615674
+      }
+    },
+    {
+      "track": "MusicNet/2241",
+      "group": "BWV1001",
+      "model": "instrument_ols",
+      "clipped": 0,
+      "Full": 0.0919090575829581,
+      "Active": 0.01265391901527156,
+      "Note": -0.13069839241094355,
+      "Within": 0.06913000285651158,
+      "Error": 0.5493496689588128,
+      "b2": 0.028387600999244374,
+      "c2": 0.2733974577859128,
+      "eligible_notes": 605,
+      "defined_shape_notes": 605,
+      "fixed_output_scales": {
+        "log_corr": 0.3805533608797664,
+        "log_smooth_0.05s": 0.5094240531335061,
+        "log_smooth_0.1s": 0.5507323307398767,
+        "log_smooth_0.2s": 0.5826688676754033,
+        "log_smooth_0.5s": 0.6335815990831011,
+        "log_smooth_1s": 0.6974144081367262,
+        "linear_smooth_0.05s": 0.1242711635831276,
+        "linear_smooth_0.1s": 0.14105723518926172,
+        "linear_smooth_0.2s": 0.15273136659235823,
+        "linear_smooth_0.5s": 0.17214640646681872,
+        "linear_smooth_1s": 0.21786628480197562
+      }
+    },
+    {
+      "track": "MusicNet/2241",
+      "group": "BWV1001",
+      "model": "note_ols",
+      "clipped": 0,
+      "Full": 0.18045421436155312,
+      "Active": 0.1306058793274608,
+      "Note": 0.24317258764213284,
+      "Within": 0.146547653709271,
+      "Error": 0.455138689634516,
+      "b2": 0.011062923147609304,
+      "c2": 0.19608830365461496,
+      "eligible_notes": 605,
+      "defined_shape_notes": 66,
+      "fixed_output_scales": {
+        "log_corr": 0.4324681742699757,
+        "log_smooth_0.05s": 0.5779523851454943,
+        "log_smooth_0.1s": 0.6197143936265965,
+        "log_smooth_0.2s": 0.6581893579771971,
+        "log_smooth_0.5s": 0.7200318801603451,
+        "log_smooth_1s": 0.7883509042992642,
+        "linear_smooth_0.05s": 0.2326178951406327,
+        "linear_smooth_0.1s": 0.26017676635580333,
+        "linear_smooth_0.2s": 0.2913932278301744,
+        "linear_smooth_0.5s": 0.3362579940323409,
+        "linear_smooth_1s": 0.3908814857717858
+      }
+    },
+    {
+      "track": "MusicNet/2241",
+      "group": "BWV1001",
+      "model": "note_shape",
+      "clipped": 0,
+      "Full": 0.1766550205571242,
+      "Active": 0.1251990014874704,
+      "Note": 0.24884689800338225,
+      "Within": -0.010009229275541725,
+      "Error": 0.4538896002795163,
+      "b2": 0.010885750313241526,
+      "c2": 0.19513001892865753,
+      "eligible_notes": 605,
+      "defined_shape_notes": 605,
+      "fixed_output_scales": {
+        "log_corr": 0.4337768917244295,
+        "log_smooth_0.05s": 0.5735030127790819,
+        "log_smooth_0.1s": 0.6169271677860798,
+        "log_smooth_0.2s": 0.6561885524376131,
+        "log_smooth_0.5s": 0.7181054133946276,
+        "log_smooth_1s": 0.7869818782295758,
+        "linear_smooth_0.05s": 0.21904233787695898,
+        "linear_smooth_0.1s": 0.24895776917805967,
+        "linear_smooth_0.2s": 0.27466384826828016,
+        "linear_smooth_0.5s": 0.3163785868501307,
+        "linear_smooth_1s": 0.37996638673876354
+      }
+    },
+    {
+      "track": "MusicNet/2241",
+      "group": "BWV1001",
+      "model": "gate",
+      "clipped": 0,
+      "Full": 0.1323718618911699,
+      "Active": null,
+      "Note": null,
+      "Within": null,
+      "Error": 4.051543806679053,
+      "b2": 16.213649486169942,
+      "c2": 0.20135773126944065,
+      "eligible_notes": 605,
+      "defined_shape_notes": 0,
+      "fixed_output_scales": {
+        "log_corr": 0.4281558714439583,
+        "log_smooth_0.05s": 0.5753988076572549,
+        "log_smooth_0.1s": 0.6175393497210252,
+        "log_smooth_0.2s": 0.6559755380410116,
+        "log_smooth_0.5s": 0.717755788256214,
+        "log_smooth_1s": 0.7858242813010325,
+        "linear_smooth_0.05s": 0.20001934199677318,
+        "linear_smooth_0.1s": 0.23014984188101534,
+        "linear_smooth_0.2s": 0.257570706503387,
+        "linear_smooth_0.5s": 0.30268417772043954,
+        "linear_smooth_1s": 0.37260057608151176
+      }
+    },
+    {
+      "track": "MusicNet/2241",
+      "group": "BWV1001",
+      "model": "mamba",
+      "clipped": 0,
+      "Full": 0.21942059403133024,
+      "Active": 0.17914140221777833,
+      "Note": 0.21211566608074928,
+      "Within": 0.03695192369755276,
+      "Error": 0.4832168126876025,
+      "b2": 0.00989820632538176,
+      "c2": 0.22360028173858376,
+      "eligible_notes": 605,
+      "defined_shape_notes": 605,
+      "fixed_output_scales": {
+        "log_corr": 0.5178078868989134,
+        "log_smooth_0.05s": 0.5671281257188944,
+        "log_smooth_0.1s": 0.5961369945427478,
+        "log_smooth_0.2s": 0.6249194493352644,
+        "log_smooth_0.5s": 0.6753140639567624,
+        "log_smooth_1s": 0.7374927641106078,
+        "linear_smooth_0.05s": 0.260344301373098,
+        "linear_smooth_0.1s": 0.2913953494526408,
+        "linear_smooth_0.2s": 0.31541750518432926,
+        "linear_smooth_0.5s": 0.3451001062376961,
+        "linear_smooth_1s": 0.3818942134038558
+      }
+    },
+    {
+      "track": "MusicNet/2241",
+      "group": "BWV1001",
+      "model": "s4d",
+      "clipped": 0,
+      "Full": 0.23828217162618434,
+      "Active": 0.19782429759373865,
+      "Note": 0.2891603415567379,
+      "Within": 0.050009263326910934,
+      "Error": 0.4412389336967322,
+      "b2": 0.0051570594819604085,
+      "c2": 0.18953473712786886,
+      "eligible_notes": 605,
+      "defined_shape_notes": 605,
+      "fixed_output_scales": {
+        "log_corr": 0.5556995916354505,
+        "log_smooth_0.05s": 0.6296352298394422,
+        "log_smooth_0.1s": 0.6762439794989249,
+        "log_smooth_0.2s": 0.7189528337360467,
+        "log_smooth_0.5s": 0.7763969882281511,
+        "log_smooth_1s": 0.8293693167938336,
+        "linear_smooth_0.05s": 0.2935741660238752,
+        "linear_smooth_0.1s": 0.3375806503814716,
+        "linear_smooth_0.2s": 0.3718213159551143,
+        "linear_smooth_0.5s": 0.39574048166118314,
+        "linear_smooth_1s": 0.40682584981790165
+      }
+    },
+    {
+      "track": "MusicNet/2242",
+      "group": "BWV1001",
+      "model": "global_ols",
+      "clipped": 0,
+      "Full": 0.23831984653898694,
+      "Active": 0.25489422627599595,
+      "Note": 0.369911546645638,
+      "Within": 0.11753302026421737,
+      "Error": 0.688591216211407,
+      "b2": 0.29733329538661996,
+      "c2": 0.1768245676568846,
+      "eligible_notes": 1631,
+      "defined_shape_notes": 1631,
+      "fixed_output_scales": {
+        "log_corr": 0.36705074654601005,
+        "log_smooth_0.05s": 0.6715723224450754,
+        "log_smooth_0.1s": 0.726512344221123,
+        "log_smooth_0.2s": 0.7678219207878654,
+        "log_smooth_0.5s": 0.8192800384348669,
+        "log_smooth_1s": 0.853453263164502,
+        "linear_smooth_0.05s": 0.39570709832953305,
+        "linear_smooth_0.1s": 0.4511989703302308,
+        "linear_smooth_0.2s": 0.5031782626955948,
+        "linear_smooth_0.5s": 0.5581955153819684,
+        "linear_smooth_1s": 0.5797690424370877
+      }
+    },
+    {
+      "track": "MusicNet/2242",
+      "group": "BWV1001",
+      "model": "instrument_ols",
+      "clipped": 0,
+      "Full": 0.12838396385231515,
+      "Active": 0.09704680102664269,
+      "Note": 0.050106532868514714,
+      "Within": 0.18442514151281336,
+      "Error": 0.8440124335933391,
+      "b2": 0.49335409214365933,
+      "c2": 0.2190028959164912,
+      "eligible_notes": 1631,
+      "defined_shape_notes": 1631,
+      "fixed_output_scales": {
+        "log_corr": 0.3250521257640119,
+        "log_smooth_0.05s": 0.5769201260887424,
+        "log_smooth_0.1s": 0.626523942774485,
+        "log_smooth_0.2s": 0.664491951145779,
+        "log_smooth_0.5s": 0.7219646619643413,
+        "log_smooth_1s": 0.766969407071655,
+        "linear_smooth_0.05s": 0.17187279465591593,
+        "linear_smooth_0.1s": 0.17901892133117908,
+        "linear_smooth_0.2s": 0.20472137035123467,
+        "linear_smooth_0.5s": 0.2514553995939887,
+        "linear_smooth_1s": 0.29458762405268074
+      }
+    },
+    {
+      "track": "MusicNet/2242",
+      "group": "BWV1001",
+      "model": "note_ols",
+      "clipped": 0,
+      "Full": 0.11608432007653359,
+      "Active": 0.07829620211097527,
+      "Note": 0.1233250148074973,
+      "Within": 0.06499068019570627,
+      "Error": 0.936496184223842,
+      "b2": 0.6736154838326578,
+      "c2": 0.2034096192331584,
+      "eligible_notes": 1631,
+      "defined_shape_notes": 60,
+      "fixed_output_scales": {
+        "log_corr": 0.33867334434739976,
+        "log_smooth_0.05s": 0.6804219135830055,
+        "log_smooth_0.1s": 0.7326355215407825,
+        "log_smooth_0.2s": 0.775745343493043,
+        "log_smooth_0.5s": 0.8351909240571418,
+        "log_smooth_1s": 0.8736715242850283,
+        "linear_smooth_0.05s": 0.19180294384870966,
+        "linear_smooth_0.1s": 0.21927768664424738,
+        "linear_smooth_0.2s": 0.24487959633555378,
+        "linear_smooth_0.5s": 0.27441807739698737,
+        "linear_smooth_1s": 0.2917518763650379
+      }
+    },
+    {
+      "track": "MusicNet/2242",
+      "group": "BWV1001",
+      "model": "note_shape",
+      "clipped": 0,
+      "Full": 0.15678827272809387,
+      "Active": 0.1339880838397954,
+      "Note": 0.12720082617928236,
+      "Within": 0.17635683800238794,
+      "Error": 0.9361213239014047,
+      "b2": 0.6732604806559268,
+      "c2": 0.20306265240699206,
+      "eligible_notes": 1631,
+      "defined_shape_notes": 1631,
+      "fixed_output_scales": {
+        "log_corr": 0.3440529495666661,
+        "log_smooth_0.05s": 0.6744789363351522,
+        "log_smooth_0.1s": 0.7303456355885094,
+        "log_smooth_0.2s": 0.7744054356349402,
+        "log_smooth_0.5s": 0.8344414714749141,
+        "log_smooth_1s": 0.8734405444027749,
+        "linear_smooth_0.05s": 0.216321873364242,
+        "linear_smooth_0.1s": 0.22402870431497734,
+        "linear_smooth_0.2s": 0.24082540658144028,
+        "linear_smooth_0.5s": 0.27080908325549957,
+        "linear_smooth_1s": 0.29001474705609026
+      }
+    },
+    {
+      "track": "MusicNet/2242",
+      "group": "BWV1001",
+      "model": "gate",
+      "clipped": 0,
+      "Full": 0.0877083717151388,
+      "Active": null,
+      "Note": null,
+      "Within": null,
+      "Error": 3.4482081499110877,
+      "b2": 11.686736692380416,
+      "c2": 0.20340275273283004,
+      "eligible_notes": 1631,
+      "defined_shape_notes": 0,
+      "fixed_output_scales": {
+        "log_corr": 0.33518307104751605,
+        "log_smooth_0.05s": 0.6818933014050214,
+        "log_smooth_0.1s": 0.7351185224404111,
+        "log_smooth_0.2s": 0.7789884147709027,
+        "log_smooth_0.5s": 0.8396757444767454,
+        "log_smooth_1s": 0.8796077989490587,
+        "linear_smooth_0.05s": 0.21012711067970666,
+        "linear_smooth_0.1s": 0.23570888991977199,
+        "linear_smooth_0.2s": 0.2592838195514266,
+        "linear_smooth_0.5s": 0.29091528829203506,
+        "linear_smooth_1s": 0.3177029391477692
+      }
+    },
+    {
+      "track": "MusicNet/2242",
+      "group": "BWV1001",
+      "model": "mamba",
+      "clipped": 0,
+      "Full": 0.20421180294215113,
+      "Active": 0.18133316110922623,
+      "Note": 0.21705943920227186,
+      "Within": 0.19084026258202097,
+      "Error": 0.7166150696100856,
+      "b2": 0.2956736257254821,
+      "c2": 0.2178635322667857,
+      "eligible_notes": 1631,
+      "defined_shape_notes": 1631,
+      "fixed_output_scales": {
+        "log_corr": 0.5008628711168112,
+        "log_smooth_0.05s": 0.6177795719420973,
+        "log_smooth_0.1s": 0.6617124840036334,
+        "log_smooth_0.2s": 0.6983863485185606,
+        "log_smooth_0.5s": 0.747071299871674,
+        "log_smooth_1s": 0.7930730277036581,
+        "linear_smooth_0.05s": 0.25301229093220146,
+        "linear_smooth_0.1s": 0.2617202286157354,
+        "linear_smooth_0.2s": 0.2899719221024849,
+        "linear_smooth_0.5s": 0.34743500643573727,
+        "linear_smooth_1s": 0.38229534602050774
+      }
+    },
+    {
+      "track": "MusicNet/2242",
+      "group": "BWV1001",
+      "model": "s4d",
+      "clipped": 0,
+      "Full": 0.2292493564633064,
+      "Active": 0.20833304229857555,
+      "Note": 0.3520460886039442,
+      "Within": 0.18344983482372412,
+      "Error": 0.6629318296927179,
+      "b2": 0.26099178553823166,
+      "c2": 0.17848682528150303,
+      "eligible_notes": 1631,
+      "defined_shape_notes": 1631,
+      "fixed_output_scales": {
+        "log_corr": 0.502735142971611,
+        "log_smooth_0.05s": 0.6843123907605889,
+        "log_smooth_0.1s": 0.7494228045493736,
+        "log_smooth_0.2s": 0.7885969303327192,
+        "log_smooth_0.5s": 0.8353960687857127,
+        "log_smooth_1s": 0.876017877902022,
+        "linear_smooth_0.05s": 0.3336852696394412,
+        "linear_smooth_0.1s": 0.3813643454546303,
+        "linear_smooth_0.2s": 0.43068468959316714,
+        "linear_smooth_0.5s": 0.49738120641229144,
+        "linear_smooth_1s": 0.5348864820604643
+      }
+    },
+    {
+      "track": "MusicNet/2243",
+      "group": "BWV1001",
+      "model": "global_ols",
+      "clipped": 0,
+      "Full": 0.18861180138184372,
+      "Active": 0.03349213952094182,
+      "Note": 0.0954605208682297,
+      "Within": -0.02462076176249071,
+      "Error": 0.5940005877931874,
+      "b2": 0.1642135744049157,
+      "c2": 0.18862312389373645,
+      "eligible_notes": 508,
+      "defined_shape_notes": 508,
+      "fixed_output_scales": {
+        "log_corr": 0.5031291835401965,
+        "log_smooth_0.05s": 0.699196277809548,
+        "log_smooth_0.1s": 0.7475660142941997,
+        "log_smooth_0.2s": 0.786553929750979,
+        "log_smooth_0.5s": 0.8374357591695152,
+        "log_smooth_1s": 0.8869621405630321,
+        "linear_smooth_0.05s": 0.28371255187654704,
+        "linear_smooth_0.1s": 0.3452570475162687,
+        "linear_smooth_0.2s": 0.4205962258609221,
+        "linear_smooth_0.5s": 0.5552190243169132,
+        "linear_smooth_1s": 0.6446615416886131
+      }
+    },
+    {
+      "track": "MusicNet/2243",
+      "group": "BWV1001",
+      "model": "instrument_ols",
+      "clipped": 0,
+      "Full": 0.1566453511463835,
+      "Active": 0.012334162317906723,
+      "Note": -0.10570065046713617,
+      "Within": 0.06797553873152228,
+      "Error": 0.7134253164624712,
+      "b2": 0.2986935531754161,
+      "c2": 0.21028212899416102,
+      "eligible_notes": 508,
+      "defined_shape_notes": 508,
+      "fixed_output_scales": {
+        "log_corr": 0.4857904524415932,
+        "log_smooth_0.05s": 0.673520105883814,
+        "log_smooth_0.1s": 0.7227880975679077,
+        "log_smooth_0.2s": 0.7595257641751952,
+        "log_smooth_0.5s": 0.8088319163678055,
+        "log_smooth_1s": 0.8588523822389592,
+        "linear_smooth_0.05s": 0.2238337796376024,
+        "linear_smooth_0.1s": 0.25855848812472293,
+        "linear_smooth_0.2s": 0.30365055960337417,
+        "linear_smooth_0.5s": 0.41621326260353886,
+        "linear_smooth_1s": 0.5180803482682071
+      }
+    },
+    {
+      "track": "MusicNet/2243",
+      "group": "BWV1001",
+      "model": "note_ols",
+      "clipped": 0,
+      "Full": 0.1576088241620352,
+      "Active": 0.011066566131107475,
+      "Note": 0.023665348534695888,
+      "Within": 0.22500732374664903,
+      "Error": 0.6887584407338576,
+      "b2": 0.2582115191249962,
+      "c2": 0.21617667055713863,
+      "eligible_notes": 508,
+      "defined_shape_notes": 63,
+      "fixed_output_scales": {
+        "log_corr": 0.5222136551800884,
+        "log_smooth_0.05s": 0.7218327409470338,
+        "log_smooth_0.1s": 0.7611350487361496,
+        "log_smooth_0.2s": 0.7948410222664614,
+        "log_smooth_0.5s": 0.8432066350612053,
+        "log_smooth_1s": 0.8943537854370713,
+        "linear_smooth_0.05s": 0.21852975411358594,
+        "linear_smooth_0.1s": 0.26058986747505464,
+        "linear_smooth_0.2s": 0.32370902990805867,
+        "linear_smooth_0.5s": 0.4350397130811128,
+        "linear_smooth_1s": 0.5355322152683198
+      }
+    },
+    {
+      "track": "MusicNet/2243",
+      "group": "BWV1001",
+      "model": "note_shape",
+      "clipped": 0,
+      "Full": 0.17478000535348703,
+      "Active": 0.05485933446430171,
+      "Note": 0.016885519563627837,
+      "Within": 0.012529569130010796,
+      "Error": 0.6882733198371908,
+      "b2": 0.25702432553661475,
+      "c2": 0.21669583726309308,
+      "eligible_notes": 508,
+      "defined_shape_notes": 508,
+      "fixed_output_scales": {
+        "log_corr": 0.523984260225333,
+        "log_smooth_0.05s": 0.7147508746088266,
+        "log_smooth_0.1s": 0.7582421001601478,
+        "log_smooth_0.2s": 0.7940890924966029,
+        "log_smooth_0.5s": 0.8429720152336082,
+        "log_smooth_1s": 0.8942393797789097,
+        "linear_smooth_0.05s": 0.22789829975325404,
+        "linear_smooth_0.1s": 0.2716561908798169,
+        "linear_smooth_0.2s": 0.3240044449000236,
+        "linear_smooth_0.5s": 0.43047821164499245,
+        "linear_smooth_1s": 0.532496179130932
+      }
+    },
+    {
+      "track": "MusicNet/2243",
+      "group": "BWV1001",
+      "model": "gate",
+      "clipped": 0,
+      "Full": 0.20654411062718867,
+      "Active": null,
+      "Note": null,
+      "Within": null,
+      "Error": 3.6649376916406187,
+      "b2": 13.247637760696204,
+      "c2": 0.18413052291186197,
+      "eligible_notes": 508,
+      "defined_shape_notes": 0,
+      "fixed_output_scales": {
+        "log_corr": 0.5213973384033302,
+        "log_smooth_0.05s": 0.7241017031539841,
+        "log_smooth_0.1s": 0.7639987827562452,
+        "log_smooth_0.2s": 0.7976277624248505,
+        "log_smooth_0.5s": 0.8451971413210223,
+        "log_smooth_1s": 0.8959109485144853,
+        "linear_smooth_0.05s": 0.3280620097116826,
+        "linear_smooth_0.1s": 0.3824989781088501,
+        "linear_smooth_0.2s": 0.44067413719216186,
+        "linear_smooth_0.5s": 0.5395837006220574,
+        "linear_smooth_1s": 0.6249312120317159
+      }
+    },
+    {
+      "track": "MusicNet/2243",
+      "group": "BWV1001",
+      "model": "mamba",
+      "clipped": 0,
+      "Full": 0.24316338872227197,
+      "Active": 0.1638334859035633,
+      "Note": 0.08935668323528999,
+      "Within": 0.1101253237598819,
+      "Error": 0.5118501054316444,
+      "b2": 0.03536953739244821,
+      "c2": 0.22662099303793726,
+      "eligible_notes": 508,
+      "defined_shape_notes": 508,
+      "fixed_output_scales": {
+        "log_corr": 0.594945670945486,
+        "log_smooth_0.05s": 0.655341994092988,
+        "log_smooth_0.1s": 0.6977257183984618,
+        "log_smooth_0.2s": 0.7395534952869836,
+        "log_smooth_0.5s": 0.7977328107401664,
+        "log_smooth_1s": 0.8575879549313182,
+        "linear_smooth_0.05s": 0.28623169358831896,
+        "linear_smooth_0.1s": 0.3183093563224582,
+        "linear_smooth_0.2s": 0.35634724330253675,
+        "linear_smooth_0.5s": 0.4524835304557968,
+        "linear_smooth_1s": 0.5493034428377718
+      }
+    },
+    {
+      "track": "MusicNet/2243",
+      "group": "BWV1001",
+      "model": "s4d",
+      "clipped": 0,
+      "Full": 0.28284412415237387,
+      "Active": 0.19169517383644058,
+      "Note": 0.19567025134969995,
+      "Within": 0.06874378497447334,
+      "Error": 0.5154751051516185,
+      "b2": 0.09461268256622068,
+      "c2": 0.17110190146485152,
+      "eligible_notes": 508,
+      "defined_shape_notes": 508,
+      "fixed_output_scales": {
+        "log_corr": 0.6222071351605092,
+        "log_smooth_0.05s": 0.7083734386512912,
+        "log_smooth_0.1s": 0.7643141298655621,
+        "log_smooth_0.2s": 0.8085584480232715,
+        "log_smooth_0.5s": 0.8545900193163231,
+        "log_smooth_1s": 0.9004865784594892,
+        "linear_smooth_0.05s": 0.35769392665199273,
+        "linear_smooth_0.1s": 0.4232473216745731,
+        "linear_smooth_0.2s": 0.48999704803668315,
+        "linear_smooth_0.5s": 0.5819879230190785,
+        "linear_smooth_1s": 0.6486539276589548
+      }
+    },
+    {
+      "track": "MusicNet/2244",
+      "group": "BWV1001",
+      "model": "global_ols",
+      "clipped": 0,
+      "Full": 0.06376078355452733,
+      "Active": 0.04504158556117924,
+      "Note": 0.24655438499770188,
+      "Within": -0.16807412429168211,
+      "Error": 0.4851366816042535,
+      "b2": 0.0603418526163823,
+      "c2": 0.17501574722160448,
+      "eligible_notes": 1623,
+      "defined_shape_notes": 1623,
+      "fixed_output_scales": {
+        "log_corr": 0.3227123449541903,
+        "log_smooth_0.05s": 0.6916803563806847,
+        "log_smooth_0.1s": 0.7433828965255032,
+        "log_smooth_0.2s": 0.7924291345806377,
+        "log_smooth_0.5s": 0.8567137830737781,
+        "log_smooth_1s": 0.9180572419796418,
+        "linear_smooth_0.05s": 0.34875569161009623,
+        "linear_smooth_0.1s": 0.3977756143926636,
+        "linear_smooth_0.2s": 0.4578463324855224,
+        "linear_smooth_0.5s": 0.5189193895777683,
+        "linear_smooth_1s": 0.5181046890799098
+      }
+    },
+    {
+      "track": "MusicNet/2244",
+      "group": "BWV1001",
+      "model": "instrument_ols",
+      "clipped": 0,
+      "Full": -0.027487923690741052,
+      "Active": -0.08051784933115456,
+      "Note": -0.12071294383799852,
+      "Within": -0.11729727013142444,
+      "Error": 0.5861063736700416,
+      "b2": 0.1357117401353841,
+      "c2": 0.20780894112126239,
+      "eligible_notes": 1623,
+      "defined_shape_notes": 1623,
+      "fixed_output_scales": {
+        "log_corr": 0.283488866071882,
+        "log_smooth_0.05s": 0.637137966780927,
+        "log_smooth_0.1s": 0.6791348275563007,
+        "log_smooth_0.2s": 0.7182350378949511,
+        "log_smooth_0.5s": 0.7829048216114471,
+        "log_smooth_1s": 0.858322160608179,
+        "linear_smooth_0.05s": 0.10500299965465729,
+        "linear_smooth_0.1s": 0.11294309562278484,
+        "linear_smooth_0.2s": 0.12890660093842848,
+        "linear_smooth_0.5s": 0.16571865482443882,
+        "linear_smooth_1s": 0.21724262604534633
+      }
+    },
+    {
+      "track": "MusicNet/2244",
+      "group": "BWV1001",
+      "model": "note_ols",
+      "clipped": 0,
+      "Full": 0.06696254340327021,
+      "Active": 0.0714969435069451,
+      "Note": 0.09498584702634111,
+      "Within": null,
+      "Error": 0.6731038734057708,
+      "b2": 0.2716222998448722,
+      "c2": 0.18144652454897972,
+      "eligible_notes": 1623,
+      "defined_shape_notes": 0,
+      "fixed_output_scales": {
+        "log_corr": 0.3328435992677608,
+        "log_smooth_0.05s": 0.6793969129900962,
+        "log_smooth_0.1s": 0.7362756417631587,
+        "log_smooth_0.2s": 0.7897110823216102,
+        "log_smooth_0.5s": 0.8542217466012721,
+        "log_smooth_1s": 0.9144685537685922,
+        "linear_smooth_0.05s": 0.2198142768888117,
+        "linear_smooth_0.1s": 0.26866178273273195,
+        "linear_smooth_0.2s": 0.32862334831295364,
+        "linear_smooth_0.5s": 0.37940468217060863,
+        "linear_smooth_1s": 0.39255836712797326
+      }
+    },
+    {
+      "track": "MusicNet/2244",
+      "group": "BWV1001",
+      "model": "note_shape",
+      "clipped": 0,
+      "Full": -0.01592618285141376,
+      "Active": -0.07703869271073797,
+      "Note": 0.09498585041019794,
+      "Within": -0.22883486480225076,
+      "Error": 0.6731038731335627,
+      "b2": 0.27162229956346484,
+      "c2": 0.18144652446393833,
+      "eligible_notes": 1623,
+      "defined_shape_notes": 1623,
+      "fixed_output_scales": {
+        "log_corr": 0.3272227004540892,
+        "log_smooth_0.05s": 0.6784428804585759,
+        "log_smooth_0.1s": 0.7356212336125164,
+        "log_smooth_0.2s": 0.7889519325723725,
+        "log_smooth_0.5s": 0.8541194488414928,
+        "log_smooth_1s": 0.9147466638211263,
+        "linear_smooth_0.05s": 0.22188073726944474,
+        "linear_smooth_0.1s": 0.26189005032339374,
+        "linear_smooth_0.2s": 0.31105779101287073,
+        "linear_smooth_0.5s": 0.3659541170679986,
+        "linear_smooth_1s": 0.38697420788154197
+      }
+    },
+    {
+      "track": "MusicNet/2244",
+      "group": "BWV1001",
+      "model": "gate",
+      "clipped": 0,
+      "Full": 0.047058981905189735,
+      "Active": null,
+      "Note": null,
+      "Within": null,
+      "Error": 3.807502971866129,
+      "b2": 14.3162857799823,
+      "c2": 0.18079310078710265,
+      "eligible_notes": 1623,
+      "defined_shape_notes": 0,
+      "fixed_output_scales": {
+        "log_corr": 0.33182612840779396,
+        "log_smooth_0.05s": 0.6842512801491504,
+        "log_smooth_0.1s": 0.7388972902398541,
+        "log_smooth_0.2s": 0.7902188138313039,
+        "log_smooth_0.5s": 0.854422310478852,
+        "log_smooth_1s": 0.9142941982340823,
+        "linear_smooth_0.05s": 0.2265202783818299,
+        "linear_smooth_0.1s": 0.26469149523080965,
+        "linear_smooth_0.2s": 0.31272812228397057,
+        "linear_smooth_0.5s": 0.36018811529779093,
+        "linear_smooth_1s": 0.36342107672870894
+      }
+    },
+    {
+      "track": "MusicNet/2244",
+      "group": "BWV1001",
+      "model": "mamba",
+      "clipped": 0,
+      "Full": -0.013816798743173486,
+      "Active": -0.0633818353039555,
+      "Note": 0.08506498024607063,
+      "Within": -0.2504534447309546,
+      "Error": 0.5741337310511544,
+      "b2": 0.14266496141256058,
+      "c2": 0.18696457971815875,
+      "eligible_notes": 1623,
+      "defined_shape_notes": 1623,
+      "fixed_output_scales": {
+        "log_corr": 0.43668963006039924,
+        "log_smooth_0.05s": 0.696687088855319,
+        "log_smooth_0.1s": 0.719080711911929,
+        "log_smooth_0.2s": 0.7405065336422971,
+        "log_smooth_0.5s": 0.789071137359742,
+        "log_smooth_1s": 0.8600104805874981,
+        "linear_smooth_0.05s": 0.22557786229419083,
+        "linear_smooth_0.1s": 0.23806244326248108,
+        "linear_smooth_0.2s": 0.2454164204833176,
+        "linear_smooth_0.5s": 0.2716770547186062,
+        "linear_smooth_1s": 0.29411939896992223
+      }
+    },
+    {
+      "track": "MusicNet/2244",
+      "group": "BWV1001",
+      "model": "s4d",
+      "clipped": 0,
+      "Full": -0.00646855362820266,
+      "Active": -0.061187548005786144,
+      "Note": 0.07470989887685171,
+      "Within": -0.22706078745322306,
+      "Error": 0.529947996951885,
+      "b2": 0.10317067611741983,
+      "c2": 0.17767420335589526,
+      "eligible_notes": 1623,
+      "defined_shape_notes": 1623,
+      "fixed_output_scales": {
+        "log_corr": 0.43995025788326075,
+        "log_smooth_0.05s": 0.7310137350777605,
+        "log_smooth_0.1s": 0.7588136836504287,
+        "log_smooth_0.2s": 0.785708493285331,
+        "log_smooth_0.5s": 0.8409339687183017,
+        "log_smooth_1s": 0.907017225861596,
+        "linear_smooth_0.05s": 0.2755149653018532,
+        "linear_smooth_0.1s": 0.3026297527153965,
+        "linear_smooth_0.2s": 0.33117502286470946,
+        "linear_smooth_0.5s": 0.38086264575870743,
+        "linear_smooth_1s": 0.3986666515126848
+      }
+    },
+    {
+      "track": "MusicNet/2288",
+      "group": "BWV1002",
+      "model": "global_ols",
+      "clipped": 0,
+      "Full": 0.21865515564162338,
+      "Active": 0.20878640599635395,
+      "Note": 0.25309235423499,
+      "Within": 0.16816502031770508,
+      "Error": 1.3895757787961807,
+      "b2": 1.7406141382918505,
+      "c2": 0.19030670672516162,
+      "eligible_notes": 760,
+      "defined_shape_notes": 760,
+      "fixed_output_scales": {
+        "log_corr": 0.4566999056137407,
+        "log_smooth_0.05s": 0.7588766892871652,
+        "log_smooth_0.1s": 0.8271129613471819,
+        "log_smooth_0.2s": 0.8720120183991316,
+        "log_smooth_0.5s": 0.9134420903522951,
+        "log_smooth_1s": 0.939790464539261,
+        "linear_smooth_0.05s": 0.35338516861832325,
+        "linear_smooth_0.1s": 0.42110081788009596,
+        "linear_smooth_0.2s": 0.4841157477308412,
+        "linear_smooth_0.5s": 0.5424195985691525,
+        "linear_smooth_1s": 0.5924434214531832
+      }
+    },
+    {
+      "track": "MusicNet/2288",
+      "group": "BWV1002",
+      "model": "instrument_ols",
+      "clipped": 0,
+      "Full": 0.11171187003181648,
+      "Active": 0.030938493037086234,
+      "Note": -0.21402874316520032,
+      "Within": 0.23501398650487587,
+      "Error": 1.6113278362405516,
+      "b2": 2.366381613187987,
+      "c2": 0.2299957826556709,
+      "eligible_notes": 760,
+      "defined_shape_notes": 760,
+      "fixed_output_scales": {
+        "log_corr": 0.4290742091028321,
+        "log_smooth_0.05s": 0.6986814271952233,
+        "log_smooth_0.1s": 0.7612490069193927,
+        "log_smooth_0.2s": 0.801139132359687,
+        "log_smooth_0.5s": 0.8460350778150637,
+        "log_smooth_1s": 0.8739117554747795,
+        "linear_smooth_0.05s": 0.11549232962235881,
+        "linear_smooth_0.1s": 0.11398374870688682,
+        "linear_smooth_0.2s": 0.13751646707624363,
+        "linear_smooth_0.5s": 0.1881757631512649,
+        "linear_smooth_1s": 0.2379692082047464
+      }
+    },
+    {
+      "track": "MusicNet/2288",
+      "group": "BWV1002",
+      "model": "note_ols",
+      "clipped": 0,
+      "Full": 0.15117866234294292,
+      "Active": 0.10399010539631204,
+      "Note": 0.10918305715672419,
+      "Within": null,
+      "Error": 1.6270498865656273,
+      "b2": 2.449241223590218,
+      "c2": 0.19805010978300325,
+      "eligible_notes": 760,
+      "defined_shape_notes": 0,
+      "fixed_output_scales": {
+        "log_corr": 0.4460253830292087,
+        "log_smooth_0.05s": 0.7522222454304938,
+        "log_smooth_0.1s": 0.8100762600025097,
+        "log_smooth_0.2s": 0.8549317446609147,
+        "log_smooth_0.5s": 0.9012542181106096,
+        "log_smooth_1s": 0.9311059989467015,
+        "linear_smooth_0.05s": 0.27370720092185613,
+        "linear_smooth_0.1s": 0.31486214792856604,
+        "linear_smooth_0.2s": 0.35790078808909664,
+        "linear_smooth_0.5s": 0.40619281905982463,
+        "linear_smooth_1s": 0.4612810957537096
+      }
+    },
+    {
+      "track": "MusicNet/2288",
+      "group": "BWV1002",
+      "model": "note_shape",
+      "clipped": 0,
+      "Full": 0.1741369796270065,
+      "Active": 0.12257290724297597,
+      "Note": 0.10918305650187203,
+      "Within": 0.17484452701788553,
+      "Error": 1.6270498866834329,
+      "b2": 2.4492412238670025,
+      "c2": 0.19805010988956936,
+      "eligible_notes": 760,
+      "defined_shape_notes": 760,
+      "fixed_output_scales": {
+        "log_corr": 0.4499901595108673,
+        "log_smooth_0.05s": 0.7477823914286192,
+        "log_smooth_0.1s": 0.808707614114863,
+        "log_smooth_0.2s": 0.8540471296732187,
+        "log_smooth_0.5s": 0.90096811422387,
+        "log_smooth_1s": 0.9310678420371824,
+        "linear_smooth_0.05s": 0.25598956825369074,
+        "linear_smooth_0.1s": 0.30549536364126556,
+        "linear_smooth_0.2s": 0.35298933437596913,
+        "linear_smooth_0.5s": 0.4053185391006079,
+        "linear_smooth_1s": 0.4612405595873385
+      }
+    },
+    {
+      "track": "MusicNet/2288",
+      "group": "BWV1002",
+      "model": "gate",
+      "clipped": 0,
+      "Full": 0.12919330322736275,
+      "Active": null,
+      "Note": null,
+      "Within": null,
+      "Error": 2.7507881548967212,
+      "b2": 7.365263748935508,
+      "c2": 0.20157172418460004,
+      "eligible_notes": 760,
+      "defined_shape_notes": 0,
+      "fixed_output_scales": {
+        "log_corr": 0.4438653940105815,
+        "log_smooth_0.05s": 0.7506630917019833,
+        "log_smooth_0.1s": 0.8087728087404096,
+        "log_smooth_0.2s": 0.8536413770386952,
+        "log_smooth_0.5s": 0.9004383419674811,
+        "log_smooth_1s": 0.9307780321702883,
+        "linear_smooth_0.05s": 0.25360320314032475,
+        "linear_smooth_0.1s": 0.29589833338212934,
+        "linear_smooth_0.2s": 0.34195509693239967,
+        "linear_smooth_0.5s": 0.40486633841996406,
+        "linear_smooth_1s": 0.46543456996506244
+      }
+    },
+    {
+      "track": "MusicNet/2288",
+      "group": "BWV1002",
+      "model": "mamba",
+      "clipped": 0,
+      "Full": 0.12791082322913103,
+      "Active": 0.06594072439194965,
+      "Note": -0.05007281717349596,
+      "Within": 0.19806373834829408,
+      "Error": 1.5025836954252767,
+      "b2": 2.0094607232497634,
+      "c2": 0.2482970385081174,
+      "eligible_notes": 760,
+      "defined_shape_notes": 760,
+      "fixed_output_scales": {
+        "log_corr": 0.6017358396879396,
+        "log_smooth_0.05s": 0.7284289432411639,
+        "log_smooth_0.1s": 0.7825652249463279,
+        "log_smooth_0.2s": 0.8268029660720784,
+        "log_smooth_0.5s": 0.8800981454380512,
+        "log_smooth_1s": 0.9114548023022729,
+        "linear_smooth_0.05s": 0.12987956527724598,
+        "linear_smooth_0.1s": 0.14162292778779137,
+        "linear_smooth_0.2s": 0.1856572999941605,
+        "linear_smooth_0.5s": 0.265931435294709,
+        "linear_smooth_1s": 0.32896349719830104
+      }
+    },
+    {
+      "track": "MusicNet/2288",
+      "group": "BWV1002",
+      "model": "s4d",
+      "clipped": 0,
+      "Full": 0.13774599048604427,
+      "Active": 0.06603309011285867,
+      "Note": -0.17510411919759494,
+      "Within": 0.19876931992007105,
+      "Error": 1.4008462837147095,
+      "b2": 1.7415235196335388,
+      "c2": 0.22084679096377335,
+      "eligible_notes": 760,
+      "defined_shape_notes": 760,
+      "fixed_output_scales": {
+        "log_corr": 0.573559136544796,
+        "log_smooth_0.05s": 0.7432909928820189,
+        "log_smooth_0.1s": 0.8059226299427661,
+        "log_smooth_0.2s": 0.8431668436942916,
+        "log_smooth_0.5s": 0.8899754790472598,
+        "log_smooth_1s": 0.9211362432507767,
+        "linear_smooth_0.05s": 0.1507331353226708,
+        "linear_smooth_0.1s": 0.17405333025367023,
+        "linear_smooth_0.2s": 0.22307022835603155,
+        "linear_smooth_0.5s": 0.3142347038758744,
+        "linear_smooth_1s": 0.3868144967126356
+      }
+    },
+    {
+      "track": "MusicNet/2289",
+      "group": "BWV1002",
+      "model": "global_ols",
+      "clipped": 0,
+      "Full": 0.24853271899450913,
+      "Active": 0.2470090761851237,
+      "Note": 0.268323554006965,
+      "Within": 0.2577067532208514,
+      "Error": 1.2651593135058814,
+      "b2": 1.3818671275190184,
+      "c2": 0.21876096103165465,
+      "eligible_notes": 951,
+      "defined_shape_notes": 951,
+      "fixed_output_scales": {
+        "log_corr": 0.43981921414001646,
+        "log_smooth_0.05s": 0.6999722704285717,
+        "log_smooth_0.1s": 0.7562692087956477,
+        "log_smooth_0.2s": 0.8097171355420526,
+        "log_smooth_0.5s": 0.873716271711458,
+        "log_smooth_1s": 0.9076708028210823,
+        "linear_smooth_0.05s": 0.3273222852487032,
+        "linear_smooth_0.1s": 0.35852178193944434,
+        "linear_smooth_0.2s": 0.397552646038778,
+        "linear_smooth_0.5s": 0.4653509138001288,
+        "linear_smooth_1s": 0.5404470720516098
+      }
+    },
+    {
+      "track": "MusicNet/2289",
+      "group": "BWV1002",
+      "model": "instrument_ols",
+      "clipped": 0,
+      "Full": 0.10626916542232667,
+      "Active": 0.046687674043123295,
+      "Note": -0.22199209363281214,
+      "Within": 0.29587501549312506,
+      "Error": 1.4544263427153934,
+      "b2": 1.8439677326995592,
+      "c2": 0.27138825368491637,
+      "eligible_notes": 951,
+      "defined_shape_notes": 951,
+      "fixed_output_scales": {
+        "log_corr": 0.3846231933737777,
+        "log_smooth_0.05s": 0.5772475464909844,
+        "log_smooth_0.1s": 0.6224449639508668,
+        "log_smooth_0.2s": 0.6662676452114702,
+        "log_smooth_0.5s": 0.7193372128261692,
+        "log_smooth_1s": 0.748487453746754,
+        "linear_smooth_0.05s": 0.014942160183463754,
+        "linear_smooth_0.1s": -0.013439127996243048,
+        "linear_smooth_0.2s": -0.016351584207584667,
+        "linear_smooth_0.5s": -0.02623081044596476,
+        "linear_smooth_1s": -0.01786352901522043
+      }
+    },
+    {
+      "track": "MusicNet/2289",
+      "group": "BWV1002",
+      "model": "note_ols",
+      "clipped": 0,
+      "Full": 0.16042444999257816,
+      "Active": 0.14750355141850024,
+      "Note": 0.20049642290094277,
+      "Within": null,
+      "Error": 1.4824800789023238,
+      "b2": 1.9726943060143343,
+      "c2": 0.22505287832790571,
+      "eligible_notes": 951,
+      "defined_shape_notes": 0,
+      "fixed_output_scales": {
+        "log_corr": 0.4108166721831412,
+        "log_smooth_0.05s": 0.6848706225702434,
+        "log_smooth_0.1s": 0.7397158988547332,
+        "log_smooth_0.2s": 0.7963220561871973,
+        "log_smooth_0.5s": 0.8617836749632659,
+        "log_smooth_1s": 0.8924194309467331,
+        "linear_smooth_0.05s": 0.25153942378146915,
+        "linear_smooth_0.1s": 0.2784627959551331,
+        "linear_smooth_0.2s": 0.29962889323481673,
+        "linear_smooth_0.5s": 0.3128520556583888,
+        "linear_smooth_1s": 0.34854177618253496
+      }
+    },
+    {
+      "track": "MusicNet/2289",
+      "group": "BWV1002",
+      "model": "note_shape",
+      "clipped": 0,
+      "Full": 0.22826219396541897,
+      "Active": 0.2086809538077332,
+      "Note": 0.20049642247941546,
+      "Within": 0.28499546367677037,
+      "Error": 1.4824800789001285,
+      "b2": 1.9726943058165827,
+      "c2": 0.22505287851914763,
+      "eligible_notes": 951,
+      "defined_shape_notes": 951,
+      "fixed_output_scales": {
+        "log_corr": 0.42214280020568007,
+        "log_smooth_0.05s": 0.6846557092435862,
+        "log_smooth_0.1s": 0.7394389272109497,
+        "log_smooth_0.2s": 0.7960830012112806,
+        "log_smooth_0.5s": 0.8618113305304644,
+        "log_smooth_1s": 0.8924355064453064,
+        "linear_smooth_0.05s": 0.259801426460351,
+        "linear_smooth_0.1s": 0.27916793154841163,
+        "linear_smooth_0.2s": 0.2983008481172943,
+        "linear_smooth_0.5s": 0.3129259097076975,
+        "linear_smooth_1s": 0.3487840843274646
+      }
+    },
+    {
+      "track": "MusicNet/2289",
+      "group": "BWV1002",
+      "model": "gate",
+      "clipped": 0,
+      "Full": 0.11596253490629406,
+      "Active": null,
+      "Note": null,
+      "Within": null,
+      "Error": 2.8959170711610054,
+      "b2": 8.15175883731883,
+      "c2": 0.23457684572290352,
+      "eligible_notes": 951,
+      "defined_shape_notes": 0,
+      "fixed_output_scales": {
+        "log_corr": 0.4077927324287172,
+        "log_smooth_0.05s": 0.6830843402103459,
+        "log_smooth_0.1s": 0.7378001658970191,
+        "log_smooth_0.2s": 0.794044908648289,
+        "log_smooth_0.5s": 0.8606727073465937,
+        "log_smooth_1s": 0.8923859709320398,
+        "linear_smooth_0.05s": 0.19388141572024425,
+        "linear_smooth_0.1s": 0.21684347276580823,
+        "linear_smooth_0.2s": 0.24589266510136962,
+        "linear_smooth_0.5s": 0.29805176755449003,
+        "linear_smooth_1s": 0.35369495684735697
+      }
+    },
+    {
+      "track": "MusicNet/2289",
+      "group": "BWV1002",
+      "model": "mamba",
+      "clipped": 0,
+      "Full": 0.15334686277584003,
+      "Active": 0.11364831367824671,
+      "Note": -0.04025445474932115,
+      "Within": 0.28820994808274397,
+      "Error": 1.407525674933049,
+      "b2": 1.7085552290220885,
+      "c2": 0.2725732965736469,
+      "eligible_notes": 951,
+      "defined_shape_notes": 951,
+      "fixed_output_scales": {
+        "log_corr": 0.5009700006377197,
+        "log_smooth_0.05s": 0.633175241667529,
+        "log_smooth_0.1s": 0.6894351969665206,
+        "log_smooth_0.2s": 0.7404471486940873,
+        "log_smooth_0.5s": 0.8102322006309283,
+        "log_smooth_1s": 0.8438105749277264,
+        "linear_smooth_0.05s": 0.09955626196645699,
+        "linear_smooth_0.1s": 0.08654382118113414,
+        "linear_smooth_0.2s": 0.09981705926944145,
+        "linear_smooth_0.5s": 0.13101740125653394,
+        "linear_smooth_1s": 0.13234638032932458
+      }
+    },
+    {
+      "track": "MusicNet/2289",
+      "group": "BWV1002",
+      "model": "s4d",
+      "clipped": 0,
+      "Full": 0.15759377778178948,
+      "Active": 0.1131571438251422,
+      "Note": -0.17376346458791964,
+      "Within": 0.2962395320644312,
+      "Error": 1.296365343312987,
+      "b2": 1.417215455368694,
+      "c2": 0.26334764797430477,
+      "eligible_notes": 951,
+      "defined_shape_notes": 951,
+      "fixed_output_scales": {
+        "log_corr": 0.4924429541134843,
+        "log_smooth_0.05s": 0.6446709104624581,
+        "log_smooth_0.1s": 0.7048756391749594,
+        "log_smooth_0.2s": 0.7561988462492184,
+        "log_smooth_0.5s": 0.825919192886392,
+        "log_smooth_1s": 0.8617342927399692,
+        "linear_smooth_0.05s": 0.08765233934532846,
+        "linear_smooth_0.1s": 0.06961682501270207,
+        "linear_smooth_0.2s": 0.1023674354280584,
+        "linear_smooth_0.5s": 0.18062727036585793,
+        "linear_smooth_1s": 0.23842822036383066
+      }
+    },
+    {
+      "track": "MusicNet/2293",
+      "group": "BWV1010",
+      "model": "global_ols",
+      "clipped": 0,
+      "Full": -0.01894079668974923,
+      "Active": -0.1489531198249248,
+      "Note": -0.250558736001045,
+      "Within": 0.07408733924420625,
+      "Error": 1.7141261719537157,
+      "b2": 2.5659883662496195,
+      "c2": 0.37224016712708113,
+      "eligible_notes": 826,
+      "defined_shape_notes": 826,
+      "fixed_output_scales": {
+        "log_corr": 0.4553693419085259,
+        "log_smooth_0.05s": 0.4860405344341366,
+        "log_smooth_0.1s": 0.5056091300987647,
+        "log_smooth_0.2s": 0.5329840327449306,
+        "log_smooth_0.5s": 0.5626969503533221,
+        "log_smooth_1s": 0.5538064371151276,
+        "linear_smooth_0.05s": -0.03478614660861861,
+        "linear_smooth_0.1s": -0.031215249407710175,
+        "linear_smooth_0.2s": -0.0005607800875797052,
+        "linear_smooth_0.5s": 0.081740639337906,
+        "linear_smooth_1s": 0.14150597253276004
+      }
+    },
+    {
+      "track": "MusicNet/2293",
+      "group": "BWV1010",
+      "model": "instrument_ols",
+      "clipped": 0,
+      "Full": 0.028563376987721257,
+      "Active": -0.006080093386858263,
+      "Note": 0.020125899979812272,
+      "Within": -0.10094000544413918,
+      "Error": 1.3895697943800052,
+      "b2": 1.356788367838859,
+      "c2": 0.5741158456144313,
+      "eligible_notes": 826,
+      "defined_shape_notes": 826,
+      "fixed_output_scales": {
+        "log_corr": 0.4028759697688319,
+        "log_smooth_0.05s": 0.43515775206876506,
+        "log_smooth_0.1s": 0.456379113428326,
+        "log_smooth_0.2s": 0.46791065232833534,
+        "log_smooth_0.5s": 0.46722689835764125,
+        "log_smooth_1s": 0.44462232353032655,
+        "linear_smooth_0.05s": 0.04069498404591304,
+        "linear_smooth_0.1s": 0.05335984004858266,
+        "linear_smooth_0.2s": 0.054485102766180925,
+        "linear_smooth_0.5s": 0.02937700982996404,
+        "linear_smooth_1s": 0.0015489476048571552
+      }
+    },
+    {
+      "track": "MusicNet/2293",
+      "group": "BWV1010",
+      "model": "note_ols",
+      "clipped": 0,
+      "Full": 0.12471315286085086,
+      "Active": -0.03788076084256858,
+      "Note": -0.06152984356744606,
+      "Within": 0.40530502344444796,
+      "Error": 1.432064595638757,
+      "b2": 1.7259041944931517,
+      "c2": 0.32490481158884477,
+      "eligible_notes": 826,
+      "defined_shape_notes": 10,
+      "fixed_output_scales": {
+        "log_corr": 0.5773499624163924,
+        "log_smooth_0.05s": 0.5989162954868519,
+        "log_smooth_0.1s": 0.613530699199504,
+        "log_smooth_0.2s": 0.6297773162449455,
+        "log_smooth_0.5s": 0.6439887815756864,
+        "log_smooth_1s": 0.6345064065853552,
+        "linear_smooth_0.05s": 0.14045714230133038,
+        "linear_smooth_0.1s": 0.15894154164088153,
+        "linear_smooth_0.2s": 0.193854125190321,
+        "linear_smooth_0.5s": 0.2597804246068222,
+        "linear_smooth_1s": 0.289879012794822
+      }
+    },
+    {
+      "track": "MusicNet/2293",
+      "group": "BWV1010",
+      "model": "note_shape",
+      "clipped": 0,
+      "Full": 0.09778311533142177,
+      "Active": -0.017065752521225205,
+      "Note": -0.05742670838042511,
+      "Within": -0.010207174874320747,
+      "Error": 1.4322467112955195,
+      "b2": 1.726875131635685,
+      "c2": 0.32445551038114595,
+      "eligible_notes": 826,
+      "defined_shape_notes": 826,
+      "fixed_output_scales": {
+        "log_corr": 0.5762749668378363,
+        "log_smooth_0.05s": 0.5980958842901015,
+        "log_smooth_0.1s": 0.6131805777327881,
+        "log_smooth_0.2s": 0.6294674474955897,
+        "log_smooth_0.5s": 0.6436934186170709,
+        "log_smooth_1s": 0.6344250166537528,
+        "linear_smooth_0.05s": 0.11936770920983861,
+        "linear_smooth_0.1s": 0.15059016755912077,
+        "linear_smooth_0.2s": 0.1910845104787624,
+        "linear_smooth_0.5s": 0.2617913672754823,
+        "linear_smooth_1s": 0.2925119247772905
+      }
+    },
+    {
+      "track": "MusicNet/2293",
+      "group": "BWV1010",
+      "model": "gate",
+      "clipped": 0,
+      "Full": 0.18571649051250588,
+      "Active": null,
+      "Note": null,
+      "Within": null,
+      "Error": 2.5602747032565474,
+      "b2": 6.2473847376303215,
+      "c2": 0.307621818505079,
+      "eligible_notes": 826,
+      "defined_shape_notes": 0,
+      "fixed_output_scales": {
+        "log_corr": 0.5808250427155773,
+        "log_smooth_0.05s": 0.6025124810500856,
+        "log_smooth_0.1s": 0.617149305057311,
+        "log_smooth_0.2s": 0.6333282036522119,
+        "log_smooth_0.5s": 0.6476744677590023,
+        "log_smooth_1s": 0.6395408067389161,
+        "linear_smooth_0.05s": 0.20639539595003564,
+        "linear_smooth_0.1s": 0.22832368299655284,
+        "linear_smooth_0.2s": 0.264968337208489,
+        "linear_smooth_0.5s": 0.3267226143095724,
+        "linear_smooth_1s": 0.3670936514489063
+      }
+    },
+    {
+      "track": "MusicNet/2293",
+      "group": "BWV1010",
+      "model": "mamba",
+      "clipped": 0,
+      "Full": 0.18227828383468864,
+      "Active": 0.12878604725497178,
+      "Note": 0.18151096674821815,
+      "Within": 0.10539384882588791,
+      "Error": 0.960154471951889,
+      "b2": 0.6194229219186392,
+      "c2": 0.3024736880905714,
+      "eligible_notes": 826,
+      "defined_shape_notes": 826,
+      "fixed_output_scales": {
+        "log_corr": 0.5360403935874595,
+        "log_smooth_0.05s": 0.5627259669070491,
+        "log_smooth_0.1s": 0.5793331410929304,
+        "log_smooth_0.2s": 0.5916302520424187,
+        "log_smooth_0.5s": 0.5971700092741405,
+        "log_smooth_1s": 0.583619636675468,
+        "linear_smooth_0.05s": 0.20717909970949266,
+        "linear_smooth_0.1s": 0.22997543087082467,
+        "linear_smooth_0.2s": 0.2572537371764625,
+        "linear_smooth_0.5s": 0.3015128608566252,
+        "linear_smooth_1s": 0.33016669991719044
+      }
+    },
+    {
+      "track": "MusicNet/2293",
+      "group": "BWV1010",
+      "model": "s4d",
+      "clipped": 0,
+      "Full": 0.22409752929235968,
+      "Active": 0.16987197662634865,
+      "Note": 0.2400825729120624,
+      "Within": 0.16021747584865426,
+      "Error": 1.3251678647675105,
+      "b2": 1.4735351677068358,
+      "c2": 0.28253470210564685,
+      "eligible_notes": 826,
+      "defined_shape_notes": 826,
+      "fixed_output_scales": {
+        "log_corr": 0.4954872893111457,
+        "log_smooth_0.05s": 0.5443134492632671,
+        "log_smooth_0.1s": 0.571363097466074,
+        "log_smooth_0.2s": 0.5869457640309725,
+        "log_smooth_0.5s": 0.5923625094409055,
+        "log_smooth_1s": 0.5789575006916379,
+        "linear_smooth_0.05s": 0.2523910409014959,
+        "linear_smooth_0.1s": 0.27277906280933834,
+        "linear_smooth_0.2s": 0.29969518746776713,
+        "linear_smooth_0.5s": 0.31637357299864954,
+        "linear_smooth_1s": 0.306403186923332
+      }
+    },
+    {
+      "track": "MusicNet/2294",
+      "group": "BWV1010",
+      "model": "global_ols",
+      "clipped": 0,
+      "Full": 0.11632094100106978,
+      "Active": 0.016466226207168335,
+      "Note": -0.04597431933304514,
+      "Within": 0.06922803207122157,
+      "Error": 1.2251781996557705,
+      "b2": 1.228132566973826,
+      "c2": 0.27292905393792877,
+      "eligible_notes": 1062,
+      "defined_shape_notes": 1062,
+      "fixed_output_scales": {
+        "log_corr": 0.3830171345537004,
+        "log_smooth_0.05s": 0.4439673742736589,
+        "log_smooth_0.1s": 0.482553332388826,
+        "log_smooth_0.2s": 0.5381410441381538,
+        "log_smooth_0.5s": 0.6121106361400902,
+        "log_smooth_1s": 0.6588925689747956,
+        "linear_smooth_0.05s": 0.14858606640672567,
+        "linear_smooth_0.1s": 0.17063346411561658,
+        "linear_smooth_0.2s": 0.2177793890864556,
+        "linear_smooth_0.5s": 0.28127587124432596,
+        "linear_smooth_1s": 0.33798157522717487
+      }
+    },
+    {
+      "track": "MusicNet/2294",
+      "group": "BWV1010",
+      "model": "instrument_ols",
+      "clipped": 0,
+      "Full": 0.11866220340763538,
+      "Active": 0.06957872406186645,
+      "Note": 0.12385953445684487,
+      "Within": -0.04275948333563952,
+      "Error": 0.5691476047229079,
+      "b2": 1.295390968507015e-05,
+      "c2": 0.32391604205213836,
+      "eligible_notes": 1062,
+      "defined_shape_notes": 1062,
+      "fixed_output_scales": {
+        "log_corr": 0.40444606196334415,
+        "log_smooth_0.05s": 0.4758171557685833,
+        "log_smooth_0.1s": 0.5254906643495174,
+        "log_smooth_0.2s": 0.5760831798389577,
+        "log_smooth_0.5s": 0.6479263198214718,
+        "log_smooth_1s": 0.6836101184886936,
+        "linear_smooth_0.05s": 0.16101480334781515,
+        "linear_smooth_0.1s": 0.18916287107170432,
+        "linear_smooth_0.2s": 0.21535500994623644,
+        "linear_smooth_0.5s": 0.2659097321216899,
+        "linear_smooth_1s": 0.3043530373257838
+      }
+    },
+    {
+      "track": "MusicNet/2294",
+      "group": "BWV1010",
+      "model": "note_ols",
+      "clipped": 0,
+      "Full": 0.13218488848374285,
+      "Active": -0.014517436509556253,
+      "Note": -0.013191644380222916,
+      "Within": 0.13792807993216283,
+      "Error": 1.01834736273042,
+      "b2": 0.7725416487753379,
+      "c2": 0.264489702404664,
+      "eligible_notes": 1062,
+      "defined_shape_notes": 4,
+      "fixed_output_scales": {
+        "log_corr": 0.4106471610542908,
+        "log_smooth_0.05s": 0.46530715025280395,
+        "log_smooth_0.1s": 0.5074095347719668,
+        "log_smooth_0.2s": 0.5573885815833496,
+        "log_smooth_0.5s": 0.6233622618387822,
+        "log_smooth_1s": 0.658207863468302,
+        "linear_smooth_0.05s": 0.1558793819872021,
+        "linear_smooth_0.1s": 0.17697426141721617,
+        "linear_smooth_0.2s": 0.20691259260382067,
+        "linear_smooth_0.5s": 0.2523909874518466,
+        "linear_smooth_1s": 0.2892449871195488
+      }
+    },
+    {
+      "track": "MusicNet/2294",
+      "group": "BWV1010",
+      "model": "note_shape",
+      "clipped": 0,
+      "Full": 0.14481304444688703,
+      "Active": 0.05129782049817221,
+      "Note": -0.012056158799622352,
+      "Within": 0.05679198944967855,
+      "Error": 1.0183277143661242,
+      "b2": 0.7725058720618377,
+      "c2": 0.2644854617842966,
+      "eligible_notes": 1062,
+      "defined_shape_notes": 1062,
+      "fixed_output_scales": {
+        "log_corr": 0.417667520231688,
+        "log_smooth_0.05s": 0.4704020044895064,
+        "log_smooth_0.1s": 0.5087741024479326,
+        "log_smooth_0.2s": 0.5577487842407797,
+        "log_smooth_0.5s": 0.6233779150469065,
+        "log_smooth_1s": 0.658081585730828,
+        "linear_smooth_0.05s": 0.1856789455127841,
+        "linear_smooth_0.1s": 0.187472419969384,
+        "linear_smooth_0.2s": 0.2126906419432192,
+        "linear_smooth_0.5s": 0.25574661786874914,
+        "linear_smooth_1s": 0.28965498433448905
+      }
+    },
+    {
+      "track": "MusicNet/2294",
+      "group": "BWV1010",
+      "model": "gate",
+      "clipped": 0,
+      "Full": 0.16833419078512746,
+      "Active": null,
+      "Note": null,
+      "Within": null,
+      "Error": 2.97909993543359,
+      "b2": 8.620619682806327,
+      "c2": 0.2544167424940927,
+      "eligible_notes": 1062,
+      "defined_shape_notes": 0,
+      "fixed_output_scales": {
+        "log_corr": 0.41393049295019463,
+        "log_smooth_0.05s": 0.4689993830138598,
+        "log_smooth_0.1s": 0.5115514788214236,
+        "log_smooth_0.2s": 0.5618796163468587,
+        "log_smooth_0.5s": 0.6281588500312412,
+        "log_smooth_1s": 0.662108191404464,
+        "linear_smooth_0.05s": 0.19651577620214536,
+        "linear_smooth_0.1s": 0.2225041983652369,
+        "linear_smooth_0.2s": 0.25611295941371626,
+        "linear_smooth_0.5s": 0.30439351224045463,
+        "linear_smooth_1s": 0.3276233407182396
+      }
+    },
+    {
+      "track": "MusicNet/2294",
+      "group": "BWV1010",
+      "model": "mamba",
+      "clipped": 0,
+      "Full": 0.1520875207282509,
+      "Active": 0.09297430615812252,
+      "Note": 0.033389337422711184,
+      "Within": 0.061650915390660886,
+      "Error": 0.7965900572829224,
+      "b2": 0.3600988034576217,
+      "c2": 0.27445691590438814,
+      "eligible_notes": 1062,
+      "defined_shape_notes": 1062,
+      "fixed_output_scales": {
+        "log_corr": 0.407216526828671,
+        "log_smooth_0.05s": 0.4674496393808766,
+        "log_smooth_0.1s": 0.49553868553022823,
+        "log_smooth_0.2s": 0.5385416514518737,
+        "log_smooth_0.5s": 0.6056802533273631,
+        "log_smooth_1s": 0.6478947139124752,
+        "linear_smooth_0.05s": 0.19687737457231205,
+        "linear_smooth_0.1s": 0.19134085011493138,
+        "linear_smooth_0.2s": 0.20974210343089267,
+        "linear_smooth_0.5s": 0.27791523315342126,
+        "linear_smooth_1s": 0.3364539151996219
+      }
+    },
+    {
+      "track": "MusicNet/2294",
+      "group": "BWV1010",
+      "model": "s4d",
+      "clipped": 0,
+      "Full": 0.1816136166024846,
+      "Active": 0.1207180352172638,
+      "Note": 0.0916479886865451,
+      "Within": 0.0739230108281541,
+      "Error": 1.0129904303648203,
+      "b2": 0.7719715519127697,
+      "c2": 0.25417806009793403,
+      "eligible_notes": 1062,
+      "defined_shape_notes": 1062,
+      "fixed_output_scales": {
+        "log_corr": 0.4072504551504191,
+        "log_smooth_0.05s": 0.4856521925052471,
+        "log_smooth_0.1s": 0.5137786430851272,
+        "log_smooth_0.2s": 0.553427071997308,
+        "log_smooth_0.5s": 0.6119155904982871,
+        "log_smooth_1s": 0.6410041726311569,
+        "linear_smooth_0.05s": 0.2530312953445307,
+        "linear_smooth_0.1s": 0.25747113403283456,
+        "linear_smooth_0.2s": 0.2691033598339568,
+        "linear_smooth_0.5s": 0.29963615855625886,
+        "linear_smooth_1s": 0.3008349311133894
+      }
+    },
+    {
+      "track": "MusicNet/2295",
+      "group": "BWV1010",
+      "model": "global_ols",
+      "clipped": 0,
+      "Full": 0.08446767298591618,
+      "Active": -0.0362998549196593,
+      "Note": -0.14375054511031626,
+      "Within": 0.08260329697008928,
+      "Error": 1.3053962371213765,
+      "b2": 1.3749538198215432,
+      "c2": 0.329105516069106,
+      "eligible_notes": 930,
+      "defined_shape_notes": 930,
+      "fixed_output_scales": {
+        "log_corr": 0.4043369303920479,
+        "log_smooth_0.05s": 0.44220716125589815,
+        "log_smooth_0.1s": 0.46211690697691943,
+        "log_smooth_0.2s": 0.49267062462792227,
+        "log_smooth_0.5s": 0.5437531197163789,
+        "log_smooth_1s": 0.581122490428015,
+        "linear_smooth_0.05s": 0.09586099654999561,
+        "linear_smooth_0.1s": 0.09958963315918545,
+        "linear_smooth_0.2s": 0.12605401486537662,
+        "linear_smooth_0.5s": 0.17991654828059261,
+        "linear_smooth_1s": 0.22979094544520098
+      }
+    },
+    {
+      "track": "MusicNet/2295",
+      "group": "BWV1010",
+      "model": "instrument_ols",
+      "clipped": 0,
+      "Full": -0.010123046510658887,
+      "Active": -0.052471958389943237,
+      "Note": -0.10506736672370894,
+      "Within": -0.054552967709682626,
+      "Error": 0.8607734019722788,
+      "b2": 0.13434449532331855,
+      "c2": 0.6065863542196116,
+      "eligible_notes": 930,
+      "defined_shape_notes": 930,
+      "fixed_output_scales": {
+        "log_corr": 0.32793826262350684,
+        "log_smooth_0.05s": 0.35972747943988337,
+        "log_smooth_0.1s": 0.3795567625020344,
+        "log_smooth_0.2s": 0.3995264597119375,
+        "log_smooth_0.5s": 0.43653679775284343,
+        "log_smooth_1s": 0.4491864406605035,
+        "linear_smooth_0.05s": -0.007534126572630951,
+        "linear_smooth_0.1s": -0.005739730681080172,
+        "linear_smooth_0.2s": -0.0010287634943553186,
+        "linear_smooth_0.5s": 0.02885873167303401,
+        "linear_smooth_1s": 0.04236372904998175
+      }
+    },
+    {
+      "track": "MusicNet/2295",
+      "group": "BWV1010",
+      "model": "note_ols",
+      "clipped": 0,
+      "Full": 0.13449230821573324,
+      "Active": 0.0187904493215795,
+      "Note": 0.028633757594385984,
+      "Within": 0.05408066637828348,
+      "Error": 1.067049746513332,
+      "b2": 0.8309140477614299,
+      "c2": 0.3076811137727362,
+      "eligible_notes": 930,
+      "defined_shape_notes": 22,
+      "fixed_output_scales": {
+        "log_corr": 0.44609896977221053,
+        "log_smooth_0.05s": 0.4787072093018858,
+        "log_smooth_0.1s": 0.5021825922378722,
+        "log_smooth_0.2s": 0.5309353309893222,
+        "log_smooth_0.5s": 0.5753489356985518,
+        "log_smooth_1s": 0.6049850438752126,
+        "linear_smooth_0.05s": 0.15705267031240383,
+        "linear_smooth_0.1s": 0.1823654051664799,
+        "linear_smooth_0.2s": 0.22138665903834429,
+        "linear_smooth_0.5s": 0.2883897521429093,
+        "linear_smooth_1s": 0.3617323198508395
+      }
+    },
+    {
+      "track": "MusicNet/2295",
+      "group": "BWV1010",
+      "model": "note_shape",
+      "clipped": 0,
+      "Full": 0.14754164496969935,
+      "Active": 0.05992906409492908,
+      "Note": 0.030750462020403536,
+      "Within": 0.06248722556574525,
+      "Error": 1.067089589927348,
+      "b2": 0.8312597477861426,
+      "c2": 0.30742044514517297,
+      "eligible_notes": 930,
+      "defined_shape_notes": 930,
+      "fixed_output_scales": {
+        "log_corr": 0.45022734892056415,
+        "log_smooth_0.05s": 0.48141579635384746,
+        "log_smooth_0.1s": 0.5028127208207939,
+        "log_smooth_0.2s": 0.530931477939805,
+        "log_smooth_0.5s": 0.5753318805334482,
+        "log_smooth_1s": 0.6047454430996207,
+        "linear_smooth_0.05s": 0.17350879321173338,
+        "linear_smooth_0.1s": 0.1878117462377183,
+        "linear_smooth_0.2s": 0.22203025978478685,
+        "linear_smooth_0.5s": 0.2843504269147931,
+        "linear_smooth_1s": 0.3568774862482228
+      }
+    },
+    {
+      "track": "MusicNet/2295",
+      "group": "BWV1010",
+      "model": "gate",
+      "clipped": 0,
+      "Full": 0.1695101978734344,
+      "Active": null,
+      "Note": null,
+      "Within": null,
+      "Error": 2.9314223511884903,
+      "b2": 8.295296311376408,
+      "c2": 0.2979406896710506,
+      "eligible_notes": 930,
+      "defined_shape_notes": 0,
+      "fixed_output_scales": {
+        "log_corr": 0.4468570260027707,
+        "log_smooth_0.05s": 0.47939418964280545,
+        "log_smooth_0.1s": 0.502641648656062,
+        "log_smooth_0.2s": 0.5309070030322167,
+        "log_smooth_0.5s": 0.5736475028808136,
+        "log_smooth_1s": 0.6002300401783847,
+        "linear_smooth_0.05s": 0.19106353804225848,
+        "linear_smooth_0.1s": 0.20916236093746113,
+        "linear_smooth_0.2s": 0.23323084510060316,
+        "linear_smooth_0.5s": 0.2803809244926008,
+        "linear_smooth_1s": 0.3226884452607612
+      }
+    },
+    {
+      "track": "MusicNet/2295",
+      "group": "BWV1010",
+      "model": "mamba",
+      "clipped": 0,
+      "Full": 0.19612357185742013,
+      "Active": 0.13908752508751032,
+      "Note": 0.16197899239843938,
+      "Within": 0.08301568105487797,
+      "Error": 0.7692276393035578,
+      "b2": 0.29452806252128705,
+      "c2": 0.2971830985472373,
+      "eligible_notes": 930,
+      "defined_shape_notes": 930,
+      "fixed_output_scales": {
+        "log_corr": 0.4616838257853867,
+        "log_smooth_0.05s": 0.49566635442676615,
+        "log_smooth_0.1s": 0.5125567816323469,
+        "log_smooth_0.2s": 0.5366455333580071,
+        "log_smooth_0.5s": 0.5915726723086951,
+        "log_smooth_1s": 0.6368737821255877,
+        "linear_smooth_0.05s": 0.23466862017319326,
+        "linear_smooth_0.1s": 0.25303731890287745,
+        "linear_smooth_0.2s": 0.2892309134671802,
+        "linear_smooth_0.5s": 0.3665315255320776,
+        "linear_smooth_1s": 0.43030345078510357
+      }
+    },
+    {
+      "track": "MusicNet/2295",
+      "group": "BWV1010",
+      "model": "s4d",
+      "clipped": 0,
+      "Full": 0.16922130811223274,
+      "Active": 0.10587067868732587,
+      "Note": 0.13353283994889678,
+      "Within": 0.1018128483515592,
+      "Error": 1.0948177980564762,
+      "b2": 0.9056980688416971,
+      "c2": 0.2929279420995339,
+      "eligible_notes": 930,
+      "defined_shape_notes": 930,
+      "fixed_output_scales": {
+        "log_corr": 0.4363658957394656,
+        "log_smooth_0.05s": 0.50237514220128,
+        "log_smooth_0.1s": 0.5283727936165472,
+        "log_smooth_0.2s": 0.5576685479379083,
+        "log_smooth_0.5s": 0.6097619174352772,
+        "log_smooth_1s": 0.6320016756539739,
+        "linear_smooth_0.05s": 0.20156781640127264,
+        "linear_smooth_0.1s": 0.2031461719655842,
+        "linear_smooth_0.2s": 0.21755930548173166,
+        "linear_smooth_0.5s": 0.26501445249543404,
+        "linear_smooth_1s": 0.30119968861863783
+      }
+    },
+    {
+      "track": "MusicNet/2296",
+      "group": "BWV1010",
+      "model": "global_ols",
+      "clipped": 0,
+      "Full": 0.07719296806212035,
+      "Active": 0.046950180163411584,
+      "Note": -0.08034051663672051,
+      "Within": -0.0628440037362252,
+      "Error": 1.4886952150463821,
+      "b2": 1.895769698928009,
+      "c2": 0.3204437443739853,
+      "eligible_notes": 402,
+      "defined_shape_notes": 402,
+      "fixed_output_scales": {
+        "log_corr": 0.4772721636691409,
+        "log_smooth_0.05s": 0.5166498243065061,
+        "log_smooth_0.1s": 0.5415660101443047,
+        "log_smooth_0.2s": 0.5771572870233853,
+        "log_smooth_0.5s": 0.6323771563203939,
+        "log_smooth_1s": 0.6594279916601001,
+        "linear_smooth_0.05s": 0.09256383820214269,
+        "linear_smooth_0.1s": 0.10448120438841818,
+        "linear_smooth_0.2s": 0.1250666156378435,
+        "linear_smooth_0.5s": 0.18322057748621143,
+        "linear_smooth_1s": 0.24885653500640786
+      }
+    },
+    {
+      "track": "MusicNet/2296",
+      "group": "BWV1010",
+      "model": "instrument_ols",
+      "clipped": 0,
+      "Full": 0.1531651631395007,
+      "Active": 0.1428812597067598,
+      "Note": 0.1184714184277096,
+      "Within": -0.011101306879448262,
+      "Error": 1.1883215322445657,
+      "b2": 1.0741041333474035,
+      "c2": 0.338003930648669,
+      "eligible_notes": 402,
+      "defined_shape_notes": 402,
+      "fixed_output_scales": {
+        "log_corr": 0.37459253030234707,
+        "log_smooth_0.05s": 0.40429311579013133,
+        "log_smooth_0.1s": 0.42839125439518067,
+        "log_smooth_0.2s": 0.46824840846970733,
+        "log_smooth_0.5s": 0.5398330739949639,
+        "log_smooth_1s": 0.5890636253177234,
+        "linear_smooth_0.05s": 0.17323236421659208,
+        "linear_smooth_0.1s": 0.18858224878579208,
+        "linear_smooth_0.2s": 0.21206940852432915,
+        "linear_smooth_0.5s": 0.25192928678337223,
+        "linear_smooth_1s": 0.27826116970134374
+      }
+    },
+    {
+      "track": "MusicNet/2296",
+      "group": "BWV1010",
+      "model": "note_ols",
+      "clipped": 0,
+      "Full": -0.013651884692377924,
+      "Active": -0.047909826372848914,
+      "Note": -0.10777026720806857,
+      "Within": -0.12411247305261147,
+      "Error": 1.159635653225596,
+      "b2": 1.018224981706064,
+      "c2": 0.3265298665258906,
+      "eligible_notes": 402,
+      "defined_shape_notes": 68,
+      "fixed_output_scales": {
+        "log_corr": 0.5308330594616081,
+        "log_smooth_0.05s": 0.5545119454629496,
+        "log_smooth_0.1s": 0.5740247344760964,
+        "log_smooth_0.2s": 0.6053526267203208,
+        "log_smooth_0.5s": 0.6521300007597087,
+        "log_smooth_1s": 0.6757935795870913,
+        "linear_smooth_0.05s": -0.01582237368526207,
+        "linear_smooth_0.1s": -0.018412955862114323,
+        "linear_smooth_0.2s": -0.02250524154021559,
+        "linear_smooth_0.5s": -0.03471904563826284,
+        "linear_smooth_1s": -0.050636879128160464
+      }
+    },
+    {
+      "track": "MusicNet/2296",
+      "group": "BWV1010",
+      "model": "note_shape",
+      "clipped": 0,
+      "Full": -0.02621163688197481,
+      "Active": -0.05469932606571755,
+      "Note": -0.10584728011072575,
+      "Within": -0.11065061987187026,
+      "Error": 1.1636318287782836,
+      "b2": 1.0284819248455046,
+      "c2": 0.32555710810038846,
+      "eligible_notes": 402,
+      "defined_shape_notes": 402,
+      "fixed_output_scales": {
+        "log_corr": 0.5247430410264204,
+        "log_smooth_0.05s": 0.549161454194795,
+        "log_smooth_0.1s": 0.5700884451779135,
+        "log_smooth_0.2s": 0.6024865733407011,
+        "log_smooth_0.5s": 0.6490029062049167,
+        "log_smooth_1s": 0.6706716325528627,
+        "linear_smooth_0.05s": -0.026039413982260014,
+        "linear_smooth_0.1s": -0.024829355223356813,
+        "linear_smooth_0.2s": -0.02547757901310895,
+        "linear_smooth_0.5s": -0.03203982237209475,
+        "linear_smooth_1s": -0.05522202429268272
+      }
+    },
+    {
+      "track": "MusicNet/2296",
+      "group": "BWV1010",
+      "model": "gate",
+      "clipped": 0,
+      "Full": 0.09315410984615363,
+      "Active": null,
+      "Note": null,
+      "Within": null,
+      "Error": 2.8070334963678163,
+      "b2": 7.583415719560663,
+      "c2": 0.29602133017026294,
+      "eligible_notes": 402,
+      "defined_shape_notes": 0,
+      "fixed_output_scales": {
+        "log_corr": 0.5296236156250631,
+        "log_smooth_0.05s": 0.5539459085794564,
+        "log_smooth_0.1s": 0.5741438158623797,
+        "log_smooth_0.2s": 0.6067969213281126,
+        "log_smooth_0.5s": 0.6582270959215525,
+        "log_smooth_1s": 0.6898166918559083,
+        "linear_smooth_0.05s": 0.10118987444180438,
+        "linear_smooth_0.1s": 0.10850669726167039,
+        "linear_smooth_0.2s": 0.12241275683102389,
+        "linear_smooth_0.5s": 0.16317724049661197,
+        "linear_smooth_1s": 0.21873946519204268
+      }
+    },
+    {
+      "track": "MusicNet/2296",
+      "group": "BWV1010",
+      "model": "mamba",
+      "clipped": 0,
+      "Full": 0.1335520821372186,
+      "Active": 0.11951716653900314,
+      "Note": -0.09907300783902112,
+      "Within": 0.05446889256600203,
+      "Error": 0.6196232712801831,
+      "b2": 0.04084739450927226,
+      "c2": 0.343085603802683,
+      "eligible_notes": 402,
+      "defined_shape_notes": 402,
+      "fixed_output_scales": {
+        "log_corr": 0.538967697070806,
+        "log_smooth_0.05s": 0.5674449335517947,
+        "log_smooth_0.1s": 0.5919983389910222,
+        "log_smooth_0.2s": 0.6195627145609549,
+        "log_smooth_0.5s": 0.6553078895471993,
+        "log_smooth_1s": 0.6704431883798938,
+        "linear_smooth_0.05s": 0.1516323252386795,
+        "linear_smooth_0.1s": 0.16425143498677833,
+        "linear_smooth_0.2s": 0.16864454397453665,
+        "linear_smooth_0.5s": 0.20067549789774322,
+        "linear_smooth_1s": 0.254961934623172
+      }
+    },
+    {
+      "track": "MusicNet/2296",
+      "group": "BWV1010",
+      "model": "s4d",
+      "clipped": 0,
+      "Full": 0.346761073939336,
+      "Active": 0.3365384003422931,
+      "Note": 0.27853671352872833,
+      "Within": 0.09733982498088356,
+      "Error": 1.1034683550426443,
+      "b2": 0.9513692678006163,
+      "c2": 0.26627314277990316,
+      "eligible_notes": 402,
+      "defined_shape_notes": 402,
+      "fixed_output_scales": {
+        "log_corr": 0.5642090643019952,
+        "log_smooth_0.05s": 0.6070482159247927,
+        "log_smooth_0.1s": 0.642828810064731,
+        "log_smooth_0.2s": 0.6896802268471175,
+        "log_smooth_0.5s": 0.7645851828737935,
+        "log_smooth_1s": 0.8001260715494333,
+        "linear_smooth_0.05s": 0.38836289787445677,
+        "linear_smooth_0.1s": 0.4232888579410585,
+        "linear_smooth_0.2s": 0.47098630895792104,
+        "linear_smooth_0.5s": 0.5741151068437562,
+        "linear_smooth_1s": 0.6410369354642845
+      }
+    },
+    {
+      "track": "MusicNet/2297",
+      "group": "BWV1010",
+      "model": "global_ols",
+      "clipped": 0,
+      "Full": 0.007874546245115152,
+      "Active": -0.060117276879231275,
+      "Note": -0.1666120119498835,
+      "Within": 0.0372699287708039,
+      "Error": 1.2435427883207217,
+      "b2": 1.1037005087301324,
+      "c2": 0.44269815765434284,
+      "eligible_notes": 1350,
+      "defined_shape_notes": 1350,
+      "fixed_output_scales": {
+        "log_corr": 0.18729503490533683,
+        "log_smooth_0.05s": 0.21839254135374,
+        "log_smooth_0.1s": 0.24288089053462358,
+        "log_smooth_0.2s": 0.28192989318397793,
+        "log_smooth_0.5s": 0.33483053248707484,
+        "log_smooth_1s": 0.35951549617996775,
+        "linear_smooth_0.05s": -0.002617493903438026,
+        "linear_smooth_0.1s": -0.015961506859350615,
+        "linear_smooth_0.2s": -0.031796944134400526,
+        "linear_smooth_0.5s": -0.0523865216335714,
+        "linear_smooth_1s": -0.08336887969552716
+      }
+    },
+    {
+      "track": "MusicNet/2297",
+      "group": "BWV1010",
+      "model": "instrument_ols",
+      "clipped": 0,
+      "Full": -0.014555950930190454,
+      "Active": -0.0336765093010335,
+      "Note": -0.03988005877505572,
+      "Within": -0.058060199314569884,
+      "Error": 0.8372305201889045,
+      "b2": 0.0038469495431016037,
+      "c2": 0.6971079943926821,
+      "eligible_notes": 1350,
+      "defined_shape_notes": 1350,
+      "fixed_output_scales": {
+        "log_corr": 0.1270289605847068,
+        "log_smooth_0.05s": 0.14764937631023145,
+        "log_smooth_0.1s": 0.16635501967573194,
+        "log_smooth_0.2s": 0.1923820092502584,
+        "log_smooth_0.5s": 0.2320323729581443,
+        "log_smooth_1s": 0.25081601781578816,
+        "linear_smooth_0.05s": -0.011659470129156404,
+        "linear_smooth_0.1s": -0.010426674277842567,
+        "linear_smooth_0.2s": -0.015773985150976725,
+        "linear_smooth_0.5s": -0.025920068648378772,
+        "linear_smooth_1s": -0.07213075591551542
+      }
+    },
+    {
+      "track": "MusicNet/2297",
+      "group": "BWV1010",
+      "model": "note_ols",
+      "clipped": 0,
+      "Full": 0.15833846682534436,
+      "Active": 0.11092034784673957,
+      "Note": 0.16864371170300363,
+      "Within": -0.19571915788601263,
+      "Error": 1.0330737398194052,
+      "b2": 0.6642464313144163,
+      "c2": 0.4029949205900355,
+      "eligible_notes": 1350,
+      "defined_shape_notes": 16,
+      "fixed_output_scales": {
+        "log_corr": 0.2580174283787101,
+        "log_smooth_0.05s": 0.28747397710795386,
+        "log_smooth_0.1s": 0.3170188904379864,
+        "log_smooth_0.2s": 0.36086334209556187,
+        "log_smooth_0.5s": 0.42630875007324714,
+        "log_smooth_1s": 0.47175454765781694,
+        "linear_smooth_0.05s": 0.1743645537017802,
+        "linear_smooth_0.1s": 0.185966983909122,
+        "linear_smooth_0.2s": 0.19954520353246546,
+        "linear_smooth_0.5s": 0.22566148314514908,
+        "linear_smooth_1s": 0.251506353670542
+      }
+    },
+    {
+      "track": "MusicNet/2297",
+      "group": "BWV1010",
+      "model": "note_shape",
+      "clipped": 0,
+      "Full": 0.1458439802210664,
+      "Active": 0.10360219931826432,
+      "Note": 0.1665951538159965,
+      "Within": 0.03245540728145249,
+      "Error": 1.0332572834126998,
+      "b2": 0.6644340872011469,
+      "c2": 0.4031865265242456,
+      "eligible_notes": 1350,
+      "defined_shape_notes": 1350,
+      "fixed_output_scales": {
+        "log_corr": 0.2598186952690408,
+        "log_smooth_0.05s": 0.2895061923966259,
+        "log_smooth_0.1s": 0.31780103072591925,
+        "log_smooth_0.2s": 0.36065178225409705,
+        "log_smooth_0.5s": 0.4260664215096497,
+        "log_smooth_1s": 0.47191385828858956,
+        "linear_smooth_0.05s": 0.17395992573430194,
+        "linear_smooth_0.1s": 0.1823203755824204,
+        "linear_smooth_0.2s": 0.19425958157583445,
+        "linear_smooth_0.5s": 0.22467161122159307,
+        "linear_smooth_1s": 0.2538013735198942
+      }
+    },
+    {
+      "track": "MusicNet/2297",
+      "group": "BWV1010",
+      "model": "gate",
+      "clipped": 0,
+      "Full": 0.1141692744116115,
+      "Active": null,
+      "Note": null,
+      "Within": null,
+      "Error": 3.037349369747929,
+      "b2": 8.820009333773424,
+      "c2": 0.4054818601347171,
+      "eligible_notes": 1350,
+      "defined_shape_notes": 0,
+      "fixed_output_scales": {
+        "log_corr": 0.25513684431824585,
+        "log_smooth_0.05s": 0.2845074178175875,
+        "log_smooth_0.1s": 0.31393835009303045,
+        "log_smooth_0.2s": 0.3573405221177588,
+        "log_smooth_0.5s": 0.42212913148176573,
+        "log_smooth_1s": 0.46801626865717527,
+        "linear_smooth_0.05s": 0.1251480835127433,
+        "linear_smooth_0.1s": 0.1363242515287883,
+        "linear_smooth_0.2s": 0.15427891186381126,
+        "linear_smooth_0.5s": 0.18727882229961262,
+        "linear_smooth_1s": 0.21595193592241477
+      }
+    },
+    {
+      "track": "MusicNet/2297",
+      "group": "BWV1010",
+      "model": "mamba",
+      "clipped": 0,
+      "Full": 0.25854628640356225,
+      "Active": 0.23740967326311355,
+      "Note": 0.29900121648686,
+      "Within": 0.06677538522159619,
+      "Error": 0.8171997215490404,
+      "b2": 0.27878915707964746,
+      "c2": 0.38902622782018187,
+      "eligible_notes": 1350,
+      "defined_shape_notes": 1350,
+      "fixed_output_scales": {
+        "log_corr": 0.29375467756778134,
+        "log_smooth_0.05s": 0.3351535218151295,
+        "log_smooth_0.1s": 0.3640472673410982,
+        "log_smooth_0.2s": 0.4073172304717279,
+        "log_smooth_0.5s": 0.47895491164088433,
+        "log_smooth_1s": 0.5275046665642382,
+        "linear_smooth_0.05s": 0.2974555413443068,
+        "linear_smooth_0.1s": 0.3103333778206052,
+        "linear_smooth_0.2s": 0.3251726978945426,
+        "linear_smooth_0.5s": 0.3833265502188619,
+        "linear_smooth_1s": 0.43721268660363105
+      }
+    },
+    {
+      "track": "MusicNet/2297",
+      "group": "BWV1010",
+      "model": "s4d",
+      "clipped": 0,
+      "Full": 0.2164341979429072,
+      "Active": 0.19007385991465864,
+      "Note": 0.25792092318255677,
+      "Within": 0.08123801370469462,
+      "Error": 1.0632129495589344,
+      "b2": 0.7490167404701342,
+      "c2": 0.381405035639675,
+      "eligible_notes": 1350,
+      "defined_shape_notes": 1350,
+      "fixed_output_scales": {
+        "log_corr": 0.2817444136559951,
+        "log_smooth_0.05s": 0.3380141756878628,
+        "log_smooth_0.1s": 0.36916269442982647,
+        "log_smooth_0.2s": 0.4090833723474432,
+        "log_smooth_0.5s": 0.4819065506200798,
+        "log_smooth_1s": 0.5316209502985172,
+        "linear_smooth_0.05s": 0.26078346558703486,
+        "linear_smooth_0.1s": 0.2679283623383938,
+        "linear_smooth_0.2s": 0.2746522021990981,
+        "linear_smooth_0.5s": 0.3473678675715005,
+        "linear_smooth_1s": 0.4029943708652268
+      }
+    },
+    {
+      "track": "MusicNet/2298",
+      "group": "BWV1010",
+      "model": "global_ols",
+      "clipped": 0,
+      "Full": 0.08458759948599472,
+      "Active": -0.0333065521155779,
+      "Note": -0.10116592828862932,
+      "Within": 0.04315792806345528,
+      "Error": 1.0130912598210495,
+      "b2": 0.7175814320335989,
+      "c2": 0.3087724686922025,
+      "eligible_notes": 966,
+      "defined_shape_notes": 966,
+      "fixed_output_scales": {
+        "log_corr": 0.5143768751688241,
+        "log_smooth_0.05s": 0.5875426094686873,
+        "log_smooth_0.1s": 0.6140453324236246,
+        "log_smooth_0.2s": 0.6454907981545729,
+        "log_smooth_0.5s": 0.6888551793628681,
+        "log_smooth_1s": 0.7192692191248068,
+        "linear_smooth_0.05s": 0.10920879643896927,
+        "linear_smooth_0.1s": 0.12873589013204922,
+        "linear_smooth_0.2s": 0.16325724360764152,
+        "linear_smooth_0.5s": 0.2398385525488233,
+        "linear_smooth_1s": 0.2990109638826996
+      }
+    },
+    {
+      "track": "MusicNet/2298",
+      "group": "BWV1010",
+      "model": "instrument_ols",
+      "clipped": 0,
+      "Full": 0.015024214179504206,
+      "Active": -0.071075852447198,
+      "Note": -0.0955048944447433,
+      "Within": -0.03821688831649855,
+      "Error": 0.9581773452760632,
+      "b2": 0.5655532326776447,
+      "c2": 0.3525505923226395,
+      "eligible_notes": 966,
+      "defined_shape_notes": 966,
+      "fixed_output_scales": {
+        "log_corr": 0.49606502861660495,
+        "log_smooth_0.05s": 0.5504663456151425,
+        "log_smooth_0.1s": 0.5711714118727526,
+        "log_smooth_0.2s": 0.5964725149872495,
+        "log_smooth_0.5s": 0.643943559677086,
+        "log_smooth_1s": 0.6861638230727487,
+        "linear_smooth_0.05s": 0.031903066513338754,
+        "linear_smooth_0.1s": 0.034560932028055366,
+        "linear_smooth_0.2s": 0.030740208951726036,
+        "linear_smooth_0.5s": 0.020556660547858138,
+        "linear_smooth_1s": 0.01749472209056984
+      }
+    },
+    {
+      "track": "MusicNet/2298",
+      "group": "BWV1010",
+      "model": "note_ols",
+      "clipped": 0,
+      "Full": 0.15647041686564325,
+      "Active": -0.01689540540406593,
+      "Note": -0.025064333435010185,
+      "Within": null,
+      "Error": 0.8055500489458474,
+      "b2": 0.35508387504383015,
+      "c2": 0.29382700631282693,
+      "eligible_notes": 966,
+      "defined_shape_notes": 0,
+      "fixed_output_scales": {
+        "log_corr": 0.5789664286975926,
+        "log_smooth_0.05s": 0.6257764115879275,
+        "log_smooth_0.1s": 0.6499025817974399,
+        "log_smooth_0.2s": 0.676874549989725,
+        "log_smooth_0.5s": 0.6986896077242613,
+        "log_smooth_1s": 0.7044735962649282,
+        "linear_smooth_0.05s": 0.18292129061409923,
+        "linear_smooth_0.1s": 0.20247735268220424,
+        "linear_smooth_0.2s": 0.2373840737726163,
+        "linear_smooth_0.5s": 0.3054180437681852,
+        "linear_smooth_1s": 0.3586850050318921
+      }
+    },
+    {
+      "track": "MusicNet/2298",
+      "group": "BWV1010",
+      "model": "note_shape",
+      "clipped": 0,
+      "Full": 0.11243195046299569,
+      "Active": -0.006368148188725232,
+      "Note": -0.02506433081928017,
+      "Within": -0.04310478010055904,
+      "Error": 0.8055500489024805,
+      "b2": 0.3550838749868449,
+      "c2": 0.29382700629994346,
+      "eligible_notes": 966,
+      "defined_shape_notes": 966,
+      "fixed_output_scales": {
+        "log_corr": 0.5766167154915416,
+        "log_smooth_0.05s": 0.626767697992157,
+        "log_smooth_0.1s": 0.6506373020959819,
+        "log_smooth_0.2s": 0.6773420247270896,
+        "log_smooth_0.5s": 0.699115220209203,
+        "log_smooth_1s": 0.7046137249766129,
+        "linear_smooth_0.05s": 0.19160731273853981,
+        "linear_smooth_0.1s": 0.21096574380417335,
+        "linear_smooth_0.2s": 0.24231977922735165,
+        "linear_smooth_0.5s": 0.30592095473800335,
+        "linear_smooth_1s": 0.3587997181888304
+      }
+    },
+    {
+      "track": "MusicNet/2298",
+      "group": "BWV1010",
+      "model": "gate",
+      "clipped": 0,
+      "Full": 0.1830156244299218,
+      "Active": null,
+      "Note": null,
+      "Within": null,
+      "Error": 3.247689380200199,
+      "b2": 10.261142330739528,
+      "c2": 0.28634397952562907,
+      "eligible_notes": 966,
+      "defined_shape_notes": 0,
+      "fixed_output_scales": {
+        "log_corr": 0.5798493424427291,
+        "log_smooth_0.05s": 0.6267272209751477,
+        "log_smooth_0.1s": 0.6507491622206255,
+        "log_smooth_0.2s": 0.6772715564093292,
+        "log_smooth_0.5s": 0.696936502627987,
+        "log_smooth_1s": 0.6997007255153121,
+        "linear_smooth_0.05s": 0.2128251654564561,
+        "linear_smooth_0.1s": 0.23203999105779513,
+        "linear_smooth_0.2s": 0.2604659303492853,
+        "linear_smooth_0.5s": 0.3059173338748339,
+        "linear_smooth_1s": 0.342244946289329
+      }
+    },
+    {
+      "track": "MusicNet/2298",
+      "group": "BWV1010",
+      "model": "mamba",
+      "clipped": 0,
+      "Full": 0.10871513623160384,
+      "Active": 0.035174448593183874,
+      "Note": 0.047081590807494515,
+      "Within": -0.005672030044305674,
+      "Error": 0.8408704341181071,
+      "b2": 0.41582292080851757,
+      "c2": 0.29124016616545645,
+      "eligible_notes": 966,
+      "defined_shape_notes": 966,
+      "fixed_output_scales": {
+        "log_corr": 0.5381817044375239,
+        "log_smooth_0.05s": 0.6210048417439009,
+        "log_smooth_0.1s": 0.642734825633705,
+        "log_smooth_0.2s": 0.6674400171839356,
+        "log_smooth_0.5s": 0.6980332053902248,
+        "log_smooth_1s": 0.7111366683094936,
+        "linear_smooth_0.05s": 0.18984341680907935,
+        "linear_smooth_0.1s": 0.2037776572605876,
+        "linear_smooth_0.2s": 0.23213796559640465,
+        "linear_smooth_0.5s": 0.3258697877880044,
+        "linear_smooth_1s": 0.4127127966859347
+      }
+    },
+    {
+      "track": "MusicNet/2298",
+      "group": "BWV1010",
+      "model": "s4d",
+      "clipped": 0,
+      "Full": 0.13741226296234102,
+      "Active": 0.05835939286632972,
+      "Note": 0.07216431953987007,
+      "Within": 0.03848074480848077,
+      "Error": 0.8279443027700011,
+      "b2": 0.40010711649079816,
+      "c2": 0.28538465199850527,
+      "eligible_notes": 966,
+      "defined_shape_notes": 966,
+      "fixed_output_scales": {
+        "log_corr": 0.5259168686592282,
+        "log_smooth_0.05s": 0.6337289684452246,
+        "log_smooth_0.1s": 0.6571654935797713,
+        "log_smooth_0.2s": 0.6849768920342606,
+        "log_smooth_0.5s": 0.7275145244069465,
+        "log_smooth_1s": 0.7454059837776708,
+        "linear_smooth_0.05s": 0.22491475065179978,
+        "linear_smooth_0.1s": 0.24116101250012953,
+        "linear_smooth_0.2s": 0.26284965305582547,
+        "linear_smooth_0.5s": 0.3131488815306693,
+        "linear_smooth_1s": 0.36353100787882153
+      }
+    },
+    {
+      "track": "MusicNet/2659",
+      "group": "BWV1002",
+      "model": "global_ols",
+      "clipped": 0,
+      "Full": 0.31622960313683934,
+      "Active": 0.1863120312083844,
+      "Note": 0.22550971114679794,
+      "Within": 0.21587581203643064,
+      "Error": 1.4463590184984123,
+      "b2": 1.845647400218185,
+      "c2": 0.2463070101735053,
+      "eligible_notes": 563,
+      "defined_shape_notes": 563,
+      "fixed_output_scales": {
+        "log_corr": 0.6846691323291935,
+        "log_smooth_0.05s": 0.8768605151501506,
+        "log_smooth_0.1s": 0.9002543958896855,
+        "log_smooth_0.2s": 0.9176491538945962,
+        "log_smooth_0.5s": 0.9364741319437309,
+        "log_smooth_1s": 0.9503779257148743,
+        "linear_smooth_0.05s": 0.44191086873656116,
+        "linear_smooth_0.1s": 0.4806163554548399,
+        "linear_smooth_0.2s": 0.5100847522166079,
+        "linear_smooth_0.5s": 0.5315905951914434,
+        "linear_smooth_1s": 0.5220262617069072
+      }
+    },
+    {
+      "track": "MusicNet/2659",
+      "group": "BWV1002",
+      "model": "instrument_ols",
+      "clipped": 0,
+      "Full": 0.21609101216925217,
+      "Active": 0.04253449318995018,
+      "Note": -0.12237320720869933,
+      "Within": 0.26493058650387996,
+      "Error": 1.6448013687471696,
+      "b2": 2.42970165369338,
+      "c2": 0.275669888939183,
+      "eligible_notes": 563,
+      "defined_shape_notes": 563,
+      "fixed_output_scales": {
+        "log_corr": 0.6440125952995958,
+        "log_smooth_0.05s": 0.8469709357831275,
+        "log_smooth_0.1s": 0.8729602215624336,
+        "log_smooth_0.2s": 0.8926325223083548,
+        "log_smooth_0.5s": 0.9218389217358248,
+        "log_smooth_1s": 0.944301524987052,
+        "linear_smooth_0.05s": 0.2635999240704419,
+        "linear_smooth_0.1s": 0.29180674186247696,
+        "linear_smooth_0.2s": 0.3321546658028769,
+        "linear_smooth_0.5s": 0.4337759723617407,
+        "linear_smooth_1s": 0.5034949425449319
+      }
+    },
+    {
+      "track": "MusicNet/2659",
+      "group": "BWV1002",
+      "model": "note_ols",
+      "clipped": 0,
+      "Full": 0.2911956873191915,
+      "Active": 0.13227966212006478,
+      "Note": 0.16784860462414355,
+      "Within": null,
+      "Error": 1.7066564037954253,
+      "b2": 2.653816306210184,
+      "c2": 0.25885977440574964,
+      "eligible_notes": 563,
+      "defined_shape_notes": 0,
+      "fixed_output_scales": {
+        "log_corr": 0.6975134739842564,
+        "log_smooth_0.05s": 0.8856327372970363,
+        "log_smooth_0.1s": 0.9051749059604542,
+        "log_smooth_0.2s": 0.9236588916675144,
+        "log_smooth_0.5s": 0.9467506446702529,
+        "log_smooth_1s": 0.963940558228778,
+        "linear_smooth_0.05s": 0.43075500950394463,
+        "linear_smooth_0.1s": 0.46827272763814115,
+        "linear_smooth_0.2s": 0.5020085600471337,
+        "linear_smooth_0.5s": 0.5477635318560644,
+        "linear_smooth_1s": 0.568830385633404
+      }
+    },
+    {
+      "track": "MusicNet/2659",
+      "group": "BWV1002",
+      "model": "note_shape",
+      "clipped": 0,
+      "Full": 0.2892573943963984,
+      "Active": 0.14546616683350908,
+      "Note": 0.16784860420926964,
+      "Within": 0.2208843931608551,
+      "Error": 1.706656403486332,
+      "b2": 2.6538163048678625,
+      "c2": 0.2588597746930391,
+      "eligible_notes": 563,
+      "defined_shape_notes": 563,
+      "fixed_output_scales": {
+        "log_corr": 0.6979053055790045,
+        "log_smooth_0.05s": 0.8841605914464478,
+        "log_smooth_0.1s": 0.9048172968718262,
+        "log_smooth_0.2s": 0.9234867265087244,
+        "log_smooth_0.5s": 0.946836819779526,
+        "log_smooth_1s": 0.9640919352725603,
+        "linear_smooth_0.05s": 0.41385263764047714,
+        "linear_smooth_0.1s": 0.46766159966464377,
+        "linear_smooth_0.2s": 0.5020275873293564,
+        "linear_smooth_0.5s": 0.5458475700249469,
+        "linear_smooth_1s": 0.5679428977607937
+      }
+    },
+    {
+      "track": "MusicNet/2659",
+      "group": "BWV1002",
+      "model": "gate",
+      "clipped": 0,
+      "Full": 0.2640437277930944,
+      "Active": null,
+      "Note": null,
+      "Within": null,
+      "Error": 2.672006119033126,
+      "b2": 6.883965688685732,
+      "c2": 0.2556510114647343,
+      "eligible_notes": 563,
+      "defined_shape_notes": 0,
+      "fixed_output_scales": {
+        "log_corr": 0.6974048172620253,
+        "log_smooth_0.05s": 0.886956982250786,
+        "log_smooth_0.1s": 0.9057243436963521,
+        "log_smooth_0.2s": 0.9237950352973144,
+        "log_smooth_0.5s": 0.9466815039746093,
+        "log_smooth_1s": 0.9639350693915959,
+        "linear_smooth_0.05s": 0.39201303560460704,
+        "linear_smooth_0.1s": 0.42437352882201695,
+        "linear_smooth_0.2s": 0.46182701183413866,
+        "linear_smooth_0.5s": 0.5148070739141763,
+        "linear_smooth_1s": 0.539299226875867
+      }
+    },
+    {
+      "track": "MusicNet/2659",
+      "group": "BWV1002",
+      "model": "mamba",
+      "clipped": 0,
+      "Full": 0.17114323221716604,
+      "Active": 0.023581449094158994,
+      "Note": -0.13573388026373892,
+      "Within": 0.22999810765630554,
+      "Error": 1.7253995096441177,
+      "b2": 2.6556869591674888,
+      "c2": 0.3213165087126733,
+      "eligible_notes": 563,
+      "defined_shape_notes": 563,
+      "fixed_output_scales": {
+        "log_corr": 0.786105765552748,
+        "log_smooth_0.05s": 0.8669326467758259,
+        "log_smooth_0.1s": 0.8909720410807941,
+        "log_smooth_0.2s": 0.9095255404374616,
+        "log_smooth_0.5s": 0.9341925818191692,
+        "log_smooth_1s": 0.9554639591441557,
+        "linear_smooth_0.05s": 0.193137829994182,
+        "linear_smooth_0.1s": 0.22583815490662523,
+        "linear_smooth_0.2s": 0.2685992722923808,
+        "linear_smooth_0.5s": 0.3811577584699164,
+        "linear_smooth_1s": 0.4621635137858905
+      }
+    },
+    {
+      "track": "MusicNet/2659",
+      "group": "BWV1002",
+      "model": "s4d",
+      "clipped": 0,
+      "Full": 0.23065128381073666,
+      "Active": 0.08688257179512748,
+      "Note": -0.060774728134293916,
+      "Within": 0.24536892148450115,
+      "Error": 1.5942854098492607,
+      "b2": 2.2487587311605712,
+      "c2": 0.2929872368976541,
+      "eligible_notes": 563,
+      "defined_shape_notes": 563,
+      "fixed_output_scales": {
+        "log_corr": 0.7304493026739101,
+        "log_smooth_0.05s": 0.8539063760238139,
+        "log_smooth_0.1s": 0.8850246733265997,
+        "log_smooth_0.2s": 0.9011512826200418,
+        "log_smooth_0.5s": 0.9207349604512503,
+        "log_smooth_1s": 0.9410983274658157,
+        "linear_smooth_0.05s": 0.2983095375920996,
+        "linear_smooth_0.1s": 0.353897526274458,
+        "linear_smooth_0.2s": 0.3900146328301546,
+        "linear_smooth_0.5s": 0.45748912331056835,
+        "linear_smooth_1s": 0.5069061569491016
+      }
+    }
+  ],
+  "summary": {
+    "gate": {
+      "Full": {
+        "mean": 0.16156214551330098,
+        "n": 21
+      },
+      "Active": {
+        "mean": null,
+        "n": 0
+      },
+      "Note": {
+        "mean": null,
+        "n": 0
+      },
+      "Within": {
+        "mean": null,
+        "n": 0
+      },
+      "Error": {
+        "mean": 3.124502832519746,
+        "n": 21
+      },
+      "b2": {
+        "mean": 9.62797700047312,
+        "n": 21
+      },
+      "c2": {
+        "mean": 0.28107380936751847,
+        "n": 21
+      }
+    },
+    "global_ols": {
+      "Full": {
+        "mean": 0.14441674234502638,
+        "n": 21
+      },
+      "Active": {
+        "mean": 0.06345474185189644,
+        "n": 21
+      },
+      "Note": {
+        "mean": 0.06400727766117129,
+        "n": 21
+      },
+      "Within": {
+        "mean": 0.04941101297604761,
+        "n": 21
+      },
+      "Error": {
+        "mean": 1.1289350489981747,
+        "n": 21
+      },
+      "b2": {
+        "mean": 1.0945839399634891,
+        "n": 21
+      },
+      "c2": {
+        "mean": 0.2909143098552376,
+        "n": 21
+      }
+    },
+    "instrument_ols": {
+      "Full": {
+        "mean": 0.07627402990154054,
+        "n": 21
+      },
+      "Active": {
+        "mean": 0.0016346237626635482,
+        "n": 21
+      },
+      "Note": {
+        "mean": -0.05631263371880689,
+        "n": 21
+      },
+      "Within": {
+        "mean": 0.022791522649283656,
+        "n": 21
+      },
+      "Error": {
+        "mean": 0.9588562992424029,
+        "n": 21
+      },
+      "b2": {
+        "mean": 0.6465188256074006,
+        "n": 21
+      },
+      "c2": {
+        "mean": 0.38678429108863643,
+        "n": 21
+      }
+    },
+    "mamba": {
+      "Full": {
+        "mean": 0.17639098508142717,
+        "n": 21
+      },
+      "Active": {
+        "mean": 0.11476255890513015,
+        "n": 21
+      },
+      "Note": {
+        "mean": 0.10165142407219088,
+        "n": 21
+      },
+      "Within": {
+        "mean": 0.06580951673640698,
+        "n": 21
+      },
+      "Error": {
+        "mean": 0.8763758525768066,
+        "n": 21
+      },
+      "b2": {
+        "mean": 0.5739905228492264,
+        "n": 21
+      },
+      "c2": {
+        "mean": 0.29676115865335356,
+        "n": 21
+      }
+    },
+    "note_ols": {
+      "Full": {
+        "mean": 0.14718704381917788,
+        "n": 21
+      },
+      "Active": {
+        "mean": 0.04623097373479158,
+        "n": 21
+      },
+      "Note": {
+        "mean": 0.05947763597168043,
+        "n": 21
+      },
+      "Within": {
+        "mean": 0.10090355734193336,
+        "n": 14
+      },
+      "Error": {
+        "mean": 1.069084735891976,
+        "n": 21
+      },
+      "b2": {
+        "mean": 0.9405861866809228,
+        "n": 21
+      },
+      "c2": {
+        "mean": 0.29679591159735286,
+        "n": 21
+      }
+    },
+    "note_shape": {
+      "Full": {
+        "mean": 0.14143202291221882,
+        "n": 21
+      },
+      "Active": {
+        "mean": 0.058635100340771365,
+        "n": 21
+      },
+      "Note": {
+        "mean": 0.06150244845994309,
+        "n": 21
+      },
+      "Within": {
+        "mean": 0.02600484731570738,
+        "n": 21
+      },
+      "Error": {
+        "mean": 1.0691292452610628,
+        "n": 21
+      },
+      "b2": {
+        "mean": 0.9411733936230413,
+        "n": 21
+      },
+      "c2": {
+        "mean": 0.29639806354528936,
+        "n": 21
+      }
+    },
+    "s4d": {
+      "Full": {
+        "mean": 0.19606690556572715,
+        "n": 21
+      },
+      "Active": {
+        "mean": 0.12927635655187966,
+        "n": 21
+      },
+      "Note": {
+        "mean": 0.12771264385516962,
+        "n": 21
+      },
+      "Within": {
+        "mean": 0.0828300589281021,
+        "n": 21
+      },
+      "Error": {
+        "mean": 0.9915826142296221,
+        "n": 21
+      },
+      "b2": {
+        "mean": 0.7898453748065174,
+        "n": 21
+      },
+      "c2": {
+        "mean": 0.27802622441566927,
+        "n": 21
+      }
+    }
+  },
+  "groups": [
+    "BWV1001",
+    "BWV1002",
+    "BWV1006",
+    "BWV1009",
+    "BWV1010"
+  ],
+  "pairs": {
+    "mamba minus instrument_ols": {
+      "deltas": {
+        "Full": {
+          "mean": 0.10011695517988659,
+          "n": 21,
+          "exploratory_group_ci": [
+            0.04297291608020209,
+            0.13471567242068985
+          ],
+          "equal_work_mean": 0.08446612480902913
+        },
+        "Active": {
+          "mean": 0.11312793514246659,
+          "n": 21,
+          "exploratory_group_ci": [
+            0.07222275043330761,
+            0.14151658615995857
+          ],
+          "equal_work_mean": 0.10666114230119805
+        },
+        "Note": {
+          "mean": 0.15796405779099779,
+          "n": 21,
+          "exploratory_group_ci": [
+            0.11595977283889454,
+            0.22504332203387142
+          ],
+          "equal_work_mean": 0.17741815368640235
+        },
+        "Within": {
+          "mean": 0.043017994087123326,
+          "n": 21,
+          "exploratory_group_ci": [
+            -0.04453878439010212,
+            0.09393161945901708
+          ],
+          "equal_work_mean": 0.013925578753771938
+        },
+        "Error": {
+          "mean": -0.08248044666559609,
+          "n": 21,
+          "exploratory_group_ci": [
+            -0.139231542060077,
+            -0.028248487322216638
+          ],
+          "equal_work_mean": -0.07275208009462905
+        },
+        "b2": {
+          "mean": -0.07252830275817426,
+          "n": 21,
+          "exploratory_group_ci": [
+            -0.16457245443097995,
+            0.03533215290323347
+          ],
+          "equal_work_mean": -0.0774473108216414
+        },
+        "c2": {
+          "mean": -0.09002313243528287,
+          "n": 21,
+          "exploratory_group_ci": [
+            -0.14347388799098232,
+            -0.0031656546572712933
+          ],
+          "equal_work_mean": -0.06643794520067858
+        }
+      },
+      "by_work": {
+        "Full": {
+          "BWV1001": 0.07588213451541605,
+          "BWV1002": 0.0061096235329139255,
+          "BWV1006": 0.06535863646592034,
+          "BWV1009": 0.15155240937768996,
+          "BWV1010": 0.12342782015320536
+        },
+        "Active": {
+          "BWV1001": 0.1048522952244865,
+          "BWV1002": 0.027669942298065214,
+          "BWV1006": 0.13285830342524366,
+          "BWV1009": 0.15062623778280962,
+          "BWV1010": 0.11729893277538533
+        },
+        "Note": {
+          "BWV1001": 0.2276505556529863,
+          "BWV1002": 0.11077763060671858,
+          "BWV1006": 0.3044163484637471,
+          "BWV1009": 0.14393213985791917,
+          "BWV1010": 0.10031409385064056
+        },
+        "Within": {
+          "BWV1001": -0.029192336915230436,
+          "BWV1002": -0.026515931471512433,
+          "BWV1006": -0.08691951124285835,
+          "BWV1009": 0.10037841606267804,
+          "BWV1010": 0.11187725733578287
+        },
+        "Error": {
+          "BWV1001": -0.10176951847604443,
+          "BWV1002": -0.02501555590022379,
+          "BWV1006": -0.042971829552148344,
+          "BWV1009": -0.027411062661557777,
+          "BWV1010": -0.16659243388317094
+        },
+        "b2": {
+          "BWV1001": -0.11813516389945783,
+          "BWV1002": -0.0887826960471952,
+          "BWV1006": -0.07442663769677027,
+          "BWV1009": 0.0816314222593875,
+          "BWV1010": -0.18752347872417122
+        },
+        "c2": {
+          "BWV1001": -0.013860509264090479,
+          "BWV1002": 0.02171097283822245,
+          "BWV1006": -0.03501611871647578,
+          "BWV1009": -0.13922156104110678,
+          "BWV1010": -0.1658025098199423
+        }
+      },
+      "full_improved": 19,
+      "note_decreased": 3,
+      "discordant_tracks": [
+        "MusicNet/2220",
+        "MusicNet/2221",
+        "MusicNet/2294"
+      ]
+    },
+    "mamba minus note_shape": {
+      "deltas": {
+        "Full": {
+          "mean": 0.03495896216920833,
+          "n": 21,
+          "exploratory_group_ci": [
+            -0.025681606117971403,
+            0.06527924631279819
+          ],
+          "equal_work_mean": 0.017783681136193923
+        },
+        "Active": {
+          "mean": 0.05612745856435879,
+          "n": 21,
+          "exploratory_group_ci": [
+            -0.03005097149559729,
+            0.09921667359433681
+          ],
+          "equal_work_mean": 0.030651777540338127
+        },
+        "Note": {
+          "mean": 0.04014897561224781,
+          "n": 21,
+          "exploratory_group_ci": [
+            -0.10149418796878822,
+            0.1125915994860255
+          ],
+          "equal_work_mean": 0.002265341812244551
+        },
+        "Within": {
+          "mean": 0.039804669420699594,
+          "n": 21,
+          "exploratory_group_ci": [
+            0.009735896437916123,
+            0.05484799118836611
+          ],
+          "equal_work_mean": 0.028931410720224572
+        },
+        "Error": {
+          "mean": -0.1927533926842564,
+          "n": 21,
+          "exploratory_group_ci": [
+            -0.2567459378023532,
+            -0.07731600332190802
+          ],
+          "equal_work_mean": -0.15722605348743515
+        },
+        "b2": {
+          "mean": -0.36718287077381484,
+          "n": 21,
+          "exploratory_group_ci": [
+            -0.5003541741445164,
+            -0.1644307054010891
+          ],
+          "equal_work_mean": -0.3027840359815462
+        },
+        "c2": {
+          "mean": 0.0003630951080641249,
+          "n": 21,
+          "exploratory_group_ci": [
+            -0.03051618058121202,
+            0.024281175605266332
+          ],
+          "equal_work_mean": -0.005104388952808253
+        }
+      },
+      "by_work": {
+        "Full": {
+          "BWV1001": 0.04017046779132213,
+          "BWV1002": -0.07975188325556226,
+          "BWV1006": -0.01042826432087864,
+          "BWV1009": 0.07074462169231359,
+          "BWV1010": 0.06818346377377481
+        },
+        "Active": {
+          "BWV1001": 0.0559796217114457,
+          "BWV1002": -0.09118318023995431,
+          "BWV1006": -0.02438325158610477,
+          "BWV1009": 0.11013681285626942,
+          "BWV1010": 0.1027088849600346
+        },
+        "Note": {
+          "BWV1001": 0.028919418651972843,
+          "BWV1002": -0.23452974512570438,
+          "BWV1006": -0.032354458854175025,
+          "BWV1009": 0.14480183467273672,
+          "BWV1010": 0.10448965971639258
+        },
+        "Within": {
+          "BWV1001": 0.034355438063473694,
+          "BWV1002": 0.011849136743944203,
+          "BWV1006": -0.018053505646683583,
+          "BWV1009": 0.05352921017962304,
+          "BWV1010": 0.0629767742607655
+        },
+        "Error": {
+          "BWV1001": -0.11639309959279687,
+          "BWV1002": -0.06022582968915002,
+          "BWV1006": -0.06387416750015618,
+          "BWV1009": -0.25956424045561327,
+          "BWV1010": -0.28607293019945934
+        },
+        "b2": {
+          "BWV1001": -0.1822966313033438,
+          "BWV1002": -0.23401630770403567,
+          "BWV1006": -0.07650965186936964,
+          "BWV1009": -0.4595756926606189,
+          "BWV1010": -0.5615218963703629
+        },
+        "c2": {
+          "BWV1001": 0.014678588424696118,
+          "BWV1002": 0.053408026897560495,
+          "BWV1006": -0.08758448084891698,
+          "BWV1009": -0.0024463529199350805,
+          "BWV1010": -0.003577726317445814
+        }
+      },
+      "full_improved": 16,
+      "note_decreased": 4,
+      "discordant_tracks": [
+        "MusicNet/2186",
+        "MusicNet/2221",
+        "MusicNet/2241",
+        "MusicNet/2244"
+      ]
+    },
+    "s4d minus instrument_ols": {
+      "deltas": {
+        "Full": {
+          "mean": 0.11979287566418659,
+          "n": 21,
+          "exploratory_group_ci": [
+            0.05949898116612119,
+            0.1512001511805267
+          ],
+          "equal_work_mean": 0.10198295986523556
+        },
+        "Active": {
+          "mean": 0.12764173278921614,
+          "n": 21,
+          "exploratory_group_ci": [
+            0.08913471592026853,
+            0.1480792781588818
+          ],
+          "equal_work_mean": 0.11782920998823929
+        },
+        "Note": {
+          "mean": 0.1840252775739765,
+          "n": 21,
+          "exploratory_group_ci": [
+            0.11963583204161564,
+            0.2553059387270735
+          ],
+          "equal_work_mean": 0.1897974941798573
+        },
+        "Within": {
+          "mean": 0.060038536278818444,
+          "n": 21,
+          "exploratory_group_ci": [
+            -0.03665804508056912,
+            0.11945589746251208
+          ],
+          "equal_work_mean": 0.03015251871976521
+        },
+        "Error": {
+          "mean": 0.032726314987219396,
+          "n": 21,
+          "exploratory_group_ci": [
+            -0.13043627432002664,
+            0.13954822900463018
+          ],
+          "equal_work_mean": -0.010932762861992799
+        },
+        "b2": {
+          "mean": 0.14332654919911694,
+          "n": 21,
+          "exploratory_group_ci": [
+            -0.25171212367361,
+            0.3750990538315812
+          ],
+          "equal_work_mean": 0.03215161621813245
+        },
+        "c2": {
+          "mean": -0.10875806667296727,
+          "n": 21,
+          "exploratory_group_ci": [
+            -0.15983637771298817,
+            -0.023500307360063793
+          ],
+          "equal_work_mean": -0.08387348584784379
+        }
+      },
+      "by_work": {
+        "Full": {
+          "BWV1001": 0.09861416243068656,
+          "BWV1002": 0.03063966815172503,
+          "BWV1006": 0.06367276942315003,
+          "BWV1009": 0.15285419455759133,
+          "BWV1010": 0.16413400476302484
+        },
+        "Active": {
+          "BWV1001": 0.12378698317357556,
+          "BWV1002": 0.048637381820989554,
+          "BWV1006": 0.11522844981587997,
+          "BWV1009": 0.1461137728956469,
+          "BWV1010": 0.15537946223510443
+        },
+        "Note": {
+          "BWV1001": 0.30464800855869933,
+          "BWV1002": 0.04958391069563443,
+          "BWV1006": 0.26783656178447757,
+          "BWV1009": 0.15160551904750838,
+          "BWV1010": 0.17531347081296678
+        },
+        "Within": {
+          "BWV1001": -0.03227282932438436,
+          "BWV1002": -0.01848060501095916,
+          "BWV1006": -0.05906155664514614,
+          "BWV1009": 0.11747045632558163,
+          "BWV1010": 0.1431071282537341
+        },
+        "Error": {
+          "BWV1001": -0.13582498179792774,
+          "BWV1002": -0.13968617027538585,
+          "BWV1006": -0.08113175654234461,
+          "BWV1009": 0.1979155106764173,
+          "BWV1010": 0.10406358362927688
+        },
+        "b2": {
+          "BWV1001": -0.12305369568746784,
+          "BWV1002": -0.41085109780604073,
+          "BWV1006": -0.14166209046110612,
+          "BWV1009": 0.48348366828147055,
+          "BWV1010": 0.35284129676380643
+        },
+        "c2": {
+          "BWV1001": -0.04842343914692718,
+          "BWV1002": 4.258351865399357e-05,
+          "BWV1006": -0.03389151189127709,
+          "BWV1009": -0.1488321909648397,
+          "BWV1010": -0.18826287075482895
+        }
+      },
+      "full_improved": 21,
+      "note_decreased": 2,
+      "discordant_tracks": [
+        "MusicNet/2221",
+        "MusicNet/2294"
+      ]
+    },
+    "s4d minus note_shape": {
+      "deltas": {
+        "Full": {
+          "mean": 0.05463488265350831,
+          "n": 21,
+          "exploratory_group_ci": [
+            -0.009155541032052295,
+            0.09107937882348804
+          ],
+          "equal_work_mean": 0.03530051619240036
+        },
+        "Active": {
+          "mean": 0.07064125621110831,
+          "n": 21,
+          "exploratory_group_ci": [
+            -0.020692116174422463,
+            0.11861266680689499
+          ],
+          "equal_work_mean": 0.04181984522737935
+        },
+        "Note": {
+          "mean": 0.06621019539522652,
+          "n": 21,
+          "exploratory_group_ci": [
+            -0.11617216329455471,
+            0.15740137474011712
+          ],
+          "equal_work_mean": 0.014644682305699508
+        },
+        "Within": {
+          "mean": 0.05682521161239472,
+          "n": 21,
+          "exploratory_group_ci": [
+            0.02025888268916989,
+            0.08016238923176212
+          ],
+          "equal_work_mean": 0.04515835068621784
+        },
+        "Error": {
+          "mean": -0.07754663103144095,
+          "n": 21,
+          "exploratory_group_ci": [
+            -0.15356470979275116,
+            -0.030766274870634654
+          ],
+          "equal_work_mean": -0.09540673625479887
+        },
+        "b2": {
+          "mean": -0.15132801881652358,
+          "n": 21,
+          "exploratory_group_ci": [
+            -0.33288209483410885,
+            -0.04746373151994084
+          ],
+          "equal_work_mean": -0.1931851089417723
+        },
+        "c2": {
+          "mean": -0.018371839129620274,
+          "n": 21,
+          "exploratory_group_ci": [
+            -0.041914906689805013,
+            0.0026258341502826935
+          ],
+          "equal_work_mean": -0.022539929599973467
+        }
+      },
+      "by_work": {
+        "Full": {
+          "BWV1001": 0.06290249570659265,
+          "BWV1002": -0.055221838636751154,
+          "BWV1006": -0.012114131363648943,
+          "BWV1009": 0.07204640687221495,
+          "BWV1010": 0.10888964838359429
+        },
+        "Active": {
+          "BWV1001": 0.07491430966053478,
+          "BWV1002": -0.07021574071702995,
+          "BWV1006": -0.04201310519546847,
+          "BWV1009": 0.1056243479691067,
+          "BWV1010": 0.1407894144197537
+        },
+        "Note": {
+          "BWV1001": 0.10591687155768585,
+          "BWV1002": -0.29572346503678854,
+          "BWV1006": -0.06893424553344454,
+          "BWV1009": 0.15247521386232596,
+          "BWV1010": 0.17948903667871877
+        },
+        "Within": {
+          "BWV1001": 0.03127494565431977,
+          "BWV1002": 0.019884463204497476,
+          "BWV1006": 0.009804448951028628,
+          "BWV1009": 0.07062125044252665,
+          "BWV1010": 0.0942066451787167
+        },
+        "Error": {
+          "BWV1001": -0.15044856291468017,
+          "BWV1002": -0.17489644406431207,
+          "BWV1006": -0.10203409449035244,
+          "BWV1009": -0.03423766711763817,
+          "BWV1010": -0.015416912687011508
+        },
+        "b2": {
+          "BWV1001": -0.18721516309135386,
+          "BWV1002": -0.5560847094628812,
+          "BWV1006": -0.1437451046337055,
+          "BWV1009": -0.05772344663853582,
+          "BWV1010": -0.021157120882385094
+        },
+        "c2": {
+          "BWV1001": -0.01988434145814058,
+          "BWV1002": 0.03173963757799204,
+          "BWV1006": -0.0864598740237183,
+          "BWV1009": -0.012056982843668018,
+          "BWV1010": -0.026038087252332476
+        }
+      },
+      "full_improved": 17,
+      "note_decreased": 3,
+      "discordant_tracks": [
+        "MusicNet/2186",
+        "MusicNet/2221",
+        "MusicNet/2244"
+      ]
+    },
+    "note_shape minus note_ols": {
+      "deltas": {
+        "Full": {
+          "mean": -0.005755020906959065,
+          "n": 21,
+          "exploratory_group_ci": [
+            -0.013247981469066389,
+            0.009177537285119075
+          ],
+          "equal_work_mean": -0.00360638955894369
+        },
+        "Active": {
+          "mean": 0.012404126605979776,
+          "n": 21,
+          "exploratory_group_ci": [
+            -0.004116705806178679,
+            0.023123771033014388
+          ],
+          "equal_work_mean": 0.009347428920879457
+        },
+        "Note": {
+          "mean": 0.002024812488262662,
+          "n": 21,
+          "exploratory_group_ci": [
+            0.00036974046227884825,
+            0.004080302273956653
+          ],
+          "equal_work_mean": 0.0015437427381253845
+        },
+        "Within": {
+          "mean": -0.10025846377344784,
+          "n": 14,
+          "exploratory_group_ci": [
+            -0.18852335785382476,
+            -0.03392360073508713
+          ],
+          "equal_work_mean": -0.09184627946969846
+        },
+        "Error": {
+          "mean": 4.4509369087106896e-05,
+          "n": 21,
+          "exploratory_group_ci": [
+            -0.0005205537436646868,
+            0.00045414720803156085
+          ],
+          "equal_work_mean": -0.00012366677115577076
+        },
+        "b2": {
+          "mean": 0.0005872069421184783,
+          "n": 21,
+          "exploratory_group_ci": [
+            -0.0008251206669103291,
+            0.0014423706067126102
+          ],
+          "equal_work_mean": 8.445302007214707e-05
+        },
+        "c2": {
+          "mean": -0.00039784805206339815,
+          "n": 21,
+          "exploratory_group_ci": [
+            -0.0007758667724589043,
+            -8.294519797163011e-05
+          ],
+          "equal_work_mean": -0.0003040999994808775
+        }
+      },
+      "by_work": {
+        "Full": {
+          "BWV1001": -0.007203196554025192,
+          "BWV1002": 0.02961925611137044,
+          "BWV1006": -0.015446905737057818,
+          "BWV1009": -0.01327689328019901,
+          "BWV1010": -0.01172420833480687
+        },
+        "Active": {
+          "BWV1001": -0.01361446599891477,
+          "BWV1002": 0.030982236316447056,
+          "BWV1006": -0.011445392012675797,
+          "BWV1009": 0.02011668478347109,
+          "BWV1010": 0.02069808151606971
+        },
+        "Note": {
+          "BWV1001": 0.0006925740364558111,
+          "BWV1002": -4.970844615555711e-10,
+          "BWV1006": 0.0006015183271468501,
+          "BWV1009": 0.005219662320824596,
+          "BWV1010": 0.0012049595032841266
+        },
+        "Within": {
+          "BWV1001": -0.08588949326492311,
+          "BWV1002": null,
+          "BWV1006": -0.014676773837549825,
+          "BWV1009": -0.21749778852320392,
+          "BWV1010": -0.049321062253116985
+        },
+        "Error": {
+          "BWV1001": -0.0005272677115779889,
+          "BWV1002": -6.449433579784151e-11,
+          "BWV1006": -0.0008975410672158457,
+          "BWV1009": 7.613668599295205e-05,
+          "BWV1010": 0.0007303383015163645
+        },
+        "b2": {
+          "BWV1001": -0.0004298424702218833,
+          "BWV1002": -4.210961949506024e-10,
+          "BWV1006": -0.002234517244647821,
+          "BWV1009": 0.0011323819991713262,
+          "BWV1010": 0.0019542432371553085
+        },
+        "c2": {
+          "BWV1001": -0.00019652123280267803,
+          "BWV1002": 1.9503249940970116e-10,
+          "BWV1006": -9.378725264677645e-05,
+          "BWV1009": -0.0009809645470199302,
+          "BWV1010": -0.0002492271599675022
+        }
+      },
+      "full_improved": 7,
+      "note_decreased": 4,
+      "discordant_tracks": [
+        "MusicNet/2218",
+        "MusicNet/2243",
+        "MusicNet/2288",
+        "MusicNet/2289"
+      ]
+    },
+    "s4d minus mamba": {
+      "deltas": {
+        "Full": {
+          "mean": 0.019675920484299992,
+          "n": 21,
+          "exploratory_group_ci": [
+            0.004340425676008866,
+            0.0341778208563455
+          ],
+          "equal_work_mean": 0.01751683505620643
+        },
+        "Active": {
+          "mean": 0.014513797646749534,
+          "n": 21,
+          "exploratory_group_ci": [
+            -0.0035696974489251333,
+            0.030746348058235635
+          ],
+          "equal_work_mean": 0.011168067687041223
+        },
+        "Note": {
+          "mean": 0.026061219782978724,
+          "n": 21,
+          "exploratory_group_ci": [
+            -0.029215074440377978,
+            0.06558238970159452
+          ],
+          "equal_work_mean": 0.012379340493454957
+        },
+        "Within": {
+          "mean": 0.017020542191695114,
+          "n": 21,
+          "exploratory_group_ci": [
+            0.0046541193425626085,
+            0.027707916434460293
+          ],
+          "equal_work_mean": 0.016226939965993274
+        },
+        "Error": {
+          "mean": 0.1152067616528155,
+          "n": 21,
+          "exploratory_group_ci": [
+            -0.06977751767852076,
+            0.22597966293171853
+          ],
+          "equal_work_mean": 0.06181931723263625
+        },
+        "b2": {
+          "mean": 0.2158548519572912,
+          "n": 21,
+          "exploratory_group_ci": [
+            -0.15864473919731834,
+            0.4298920067148298
+          ],
+          "equal_work_mean": 0.10959892703977388
+        },
+        "c2": {
+          "mean": -0.018734934237684398,
+          "n": 21,
+          "exploratory_group_ci": [
+            -0.028088888994255788,
+            -0.009254436828563467
+          ],
+          "equal_work_mean": -0.017435540647165213
+        }
+      },
+      "by_work": {
+        "Full": {
+          "BWV1001": 0.022732027915270524,
+          "BWV1002": 0.024530044618811104,
+          "BWV1006": -0.0016858670427703018,
+          "BWV1009": 0.001301785179901362,
+          "BWV1010": 0.04070618460981947
+        },
+        "Active": {
+          "BWV1001": 0.018934687949089066,
+          "BWV1002": 0.020967439522924337,
+          "BWV1006": -0.0176298536093637,
+          "BWV1009": -0.004512464887162701,
+          "BWV1010": 0.038080529459719105
+        },
+        "Note": {
+          "BWV1001": 0.07699745290571301,
+          "BWV1002": -0.06119371991108414,
+          "BWV1006": -0.036579786679269526,
+          "BWV1009": 0.007673379189589218,
+          "BWV1010": 0.07499937696232623
+        },
+        "Within": {
+          "BWV1001": -0.003080492409153925,
+          "BWV1002": 0.008035326460553271,
+          "BWV1006": 0.02785795459771221,
+          "BWV1009": 0.017092040262903608,
+          "BWV1010": 0.031229870917951198
+        },
+        "Error": {
+          "BWV1001": -0.03405546332188332,
+          "BWV1002": -0.11467061437516206,
+          "BWV1006": -0.03815992699019627,
+          "BWV1009": 0.22532657333797504,
+          "BWV1010": 0.2706560175124479
+        },
+        "b2": {
+          "BWV1001": -0.00491853178801002,
+          "BWV1002": -0.32206840175884555,
+          "BWV1006": -0.06723545276433585,
+          "BWV1009": 0.4018522460220831,
+          "BWV1010": 0.5403647754879777
+        },
+        "c2": {
+          "BWV1001": -0.0345629298828367,
+          "BWV1002": -0.021668389319568455,
+          "BWV1006": 0.0011246068251986874,
+          "BWV1009": -0.009610629923732938,
+          "BWV1010": -0.022460360934886663
+        }
+      },
+      "full_improved": 15,
+      "note_decreased": 4,
+      "discordant_tracks": [
+        "MusicNet/2191",
+        "MusicNet/2244",
+        "MusicNet/2288",
+        "MusicNet/2289"
+      ]
+    }
+  },
+  "selection": {
+    "Full": "mamba",
+    "Note": "s4d"
+  },
+  "work_summary": {
+    "gate": {
+      "BWV1001": {
+        "Full": 0.11842083153467178,
+        "Active": null,
+        "Note": null,
+        "Within": null,
+        "Error": 3.743048155024222,
+        "b2": 13.866077429807214,
+        "c2": 0.19242102692530882
+      },
+      "BWV1002": {
+        "Full": 0.1697331886422504,
+        "Active": null,
+        "Note": null,
+        "Within": null,
+        "Error": 2.7729037816969506,
+        "b2": 7.466996091646689,
+        "c2": 0.23059986045741263
+      },
+      "BWV1006": {
+        "Full": 0.2318612753037318,
+        "Active": null,
+        "Note": null,
+        "Within": null,
+        "Error": 3.3539277470060593,
+        "b2": 10.92241544762804,
+        "c2": 0.39138022186228516
+      },
+      "BWV1009": {
+        "Full": 0.17204995420794397,
+        "Active": null,
+        "Note": null,
+        "Within": null,
+        "Error": 3.0088217979200405,
+        "b2": 8.774920000770647,
+        "c2": 0.3017465739031689
+      },
+      "BWV1010": {
+        "Full": 0.15231664797645914,
+        "Active": null,
+        "Note": null,
+        "Within": null,
+        "Error": 2.9271448726990954,
+        "b2": 8.304644685981112,
+        "c2": 0.3079710700834719
+      }
+    },
+    "global_ols": {
+      "BWV1001": {
+        "Full": 0.14975338126157672,
+        "Active": 0.08723198579502761,
+        "Note": 0.18110989172506162,
+        "Within": -0.02108075672100152,
+        "Error": 0.5648016198469645,
+        "b2": 0.1324736515597715,
+        "c2": 0.1935020433275247
+      },
+      "BWV1002": {
+        "Full": 0.2611391592576573,
+        "Active": 0.2140358377966207,
+        "Note": 0.24897520646291763,
+        "Within": 0.21391586185832903,
+        "Error": 1.3670313702668249,
+        "b2": 1.6560428886763514,
+        "c2": 0.21845822597677386
+      },
+      "BWV1006": {
+        "Full": 0.30188190855876135,
+        "Active": 0.20605296467464834,
+        "Note": 0.38542034326149327,
+        "Within": -0.051013084166843865,
+        "Error": 0.9412883259065397,
+        "b2": 0.5492026723792592,
+        "c2": 0.3592979165172793
+      },
+      "BWV1009": {
+        "Full": 0.11584230636971421,
+        "Active": 0.024111431723228258,
+        "Note": -0.018275164101291524,
+        "Within": 0.056455060126025906,
+        "Error": 1.2457881525068737,
+        "b2": 1.2506179549116483,
+        "c2": 0.3191721191383938
+      },
+      "BWV1010": {
+        "Full": 0.058583821848411155,
+        "Active": -0.03587673289480223,
+        "Note": -0.13140034288660662,
+        "Within": 0.04058375356392518,
+        "Error": 1.331671645319836,
+        "b2": 1.4810210654561216,
+        "c2": 0.3410315179757744
+      }
+    },
+    "instrument_ols": {
+      "BWV1001": {
+        "Full": 0.08736261222272892,
+        "Active": 0.010379258257166603,
+        "Note": -0.07675136346189088,
+        "Within": 0.05105835324235569,
+        "Error": 0.6732234481711662,
+        "b2": 0.239036746613426,
+        "c2": 0.22762285595445683
+      },
+      "BWV1002": {
+        "Full": 0.1446906825411318,
+        "Active": 0.04005355342338657,
+        "Note": -0.18613134800223727,
+        "Within": 0.2652731961672936,
+        "Error": 1.5701851825677051,
+        "b2": 2.213350333193642,
+        "c2": 0.25901797509325675
+      },
+      "BWV1006": {
+        "Full": 0.07965694898283565,
+        "Active": -0.1365074381011861,
+        "Note": -0.31557538289893006,
+        "Within": -0.011306393559801592,
+        "Error": 1.1188082962993648,
+        "b2": 0.829930187651978,
+        "c2": 0.44452384919021504
+      },
+      "BWV1009": {
+        "Full": 0.061363712196476176,
+        "Active": 0.016084785279314562,
+        "Note": 0.04866340377272199,
+        "Within": -0.03219789795279426,
+        "Error": 0.7819493587198707,
+        "b2": 0.1976978072961352,
+        "c2": 0.4422660510221943
+      },
+      "BWV1010": {
+        "Full": 0.0484559933789187,
+        "Active": 0.008192595040598877,
+        "Note": 0.0036674221534764664,
+        "Within": -0.05093847516666301,
+        "Error": 0.9672033664641209,
+        "b2": 0.5224416887733355,
+        "c2": 0.4820467932083619
+      }
+    },
+    "mamba": {
+      "BWV1001": {
+        "Full": 0.16324474673814499,
+        "Active": 0.11523155348165309,
+        "Note": 0.15089919219109546,
+        "Within": 0.02186601632712526,
+        "Error": 0.5714539296951218,
+        "b2": 0.12090158271396816,
+        "c2": 0.21376234669036637
+      },
+      "BWV1002": {
+        "Full": 0.15080030607404568,
+        "Active": 0.06772349572145178,
+        "Note": -0.07535371739551867,
+        "Within": 0.2387572646957812,
+        "Error": 1.545169626667481,
+        "b2": 2.124567637146447,
+        "c2": 0.2807289479314792
+      },
+      "BWV1006": {
+        "Full": 0.14501558544875598,
+        "Active": -0.0036491346759424392,
+        "Note": -0.011159034435183013,
+        "Within": -0.09822590480265994,
+        "Error": 1.0758364667472164,
+        "b2": 0.7555035499552079,
+        "c2": 0.40950773047373923
+      },
+      "BWV1009": {
+        "Full": 0.21291612157416617,
+        "Active": 0.16671102306212418,
+        "Note": 0.19259554363064116,
+        "Within": 0.06818051810988378,
+        "Error": 0.7545382960583128,
+        "b2": 0.2793292295555228,
+        "c2": 0.3030444899810876
+      },
+      "BWV1010": {
+        "Full": 0.17188381353212404,
+        "Active": 0.1254915278159842,
+        "Note": 0.10398151600411702,
+        "Within": 0.06093878216911989,
+        "Error": 0.8006109325809501,
+        "b2": 0.33491821004916417,
+        "c2": 0.3162442833884197
+      }
+    },
+    "note_ols": {
+      "BWV1001": {
+        "Full": 0.13027747550084803,
+        "Active": 0.07286639776912215,
+        "Note": 0.12128719950266678,
+        "Within": 0.14551521921720878,
+        "Error": 0.6883742969994966,
+        "b2": 0.3036280564875339,
+        "c2": 0.1992802794984729
+      },
+      "BWV1002": {
+        "Full": 0.20093293321823755,
+        "Active": 0.12792443964495903,
+        "Note": 0.15917602822727017,
+        "Within": null,
+        "Error": 1.6053954564211255,
+        "b2": 2.358583945271579,
+        "c2": 0.22732092083888622
+      },
+      "BWV1006": {
+        "Full": 0.17089075550669244,
+        "Active": 0.03217950892283813,
+        "Note": 0.020593906091845162,
+        "Within": -0.06549562531842654,
+        "Error": 1.1406081753145885,
+        "b2": 0.8342477190692252,
+        "c2": 0.497185998575303
+      },
+      "BWV1009": {
+        "Full": 0.15544839316205158,
+        "Active": 0.036457525422383674,
+        "Note": 0.04257404663707986,
+        "Within": 0.20740331423900596,
+        "Error": 1.0140263998279333,
+        "b2": 0.7377725402169703,
+        "c2": 0.30647180744804253
+      },
+      "BWV1010": {
+        "Full": 0.1154245580931561,
+        "Active": 0.0020845613398798994,
+        "Note": -0.0017131032155596835,
+        "Within": 0.05549642776325403,
+        "Error": 1.085953524478893,
+        "b2": 0.8944858631823717,
+        "c2": 0.320071236865833
+      }
+    },
+    "note_shape": {
+      "BWV1001": {
+        "Full": 0.12307427894682282,
+        "Active": 0.05925193177020738,
+        "Note": 0.1219797735391226,
+        "Within": -0.012489421736348441,
+        "Error": 0.6878470292879185,
+        "b2": 0.30319821401731195,
+        "c2": 0.19908375826567026
+      },
+      "BWV1002": {
+        "Full": 0.23055218932960797,
+        "Active": 0.15890667596140606,
+        "Note": 0.15917602773018572,
+        "Within": 0.22690812795183699,
+        "Error": 1.605395456356631,
+        "b2": 2.3585839448504826,
+        "c2": 0.22732092103391868
+      },
+      "BWV1006": {
+        "Full": 0.15544384976963463,
+        "Active": 0.02073411691016233,
+        "Note": 0.021195424418992012,
+        "Within": -0.08017239915597636,
+        "Error": 1.1397106342473726,
+        "b2": 0.8320132018245774,
+        "c2": 0.49709221132265624
+      },
+      "BWV1009": {
+        "Full": 0.14217149988185254,
+        "Active": 0.056574210205854764,
+        "Note": 0.04779370895790445,
+        "Within": 0.014651307930260727,
+        "Error": 1.0141025365139262,
+        "b2": 0.7389049222161416,
+        "c2": 0.30549084290102263
+      },
+      "BWV1010": {
+        "Full": 0.10370034975834924,
+        "Active": 0.02278264285594961,
+        "Note": -0.0005081437122755611,
+        "Within": -0.002037992091645626,
+        "Error": 1.0866838627804094,
+        "b2": 0.896440106419527,
+        "c2": 0.31982200970586555
+      }
+    },
+    "s4d": {
+      "BWV1001": {
+        "Full": 0.18597677465341547,
+        "Active": 0.13416624143074213,
+        "Note": 0.22789664509680846,
+        "Within": 0.018785523917971336,
+        "Error": 0.5373984663732384,
+        "b2": 0.11598305092595815,
+        "c2": 0.17919941680752965
+      },
+      "BWV1002": {
+        "Full": 0.17533035069285682,
+        "Active": 0.08869093524437612,
+        "Note": -0.13654743730660282,
+        "Within": 0.24679259115633448,
+        "Error": 1.4304990122923191,
+        "b2": 1.8024992353876013,
+        "c2": 0.25906055861191074
+      },
+      "BWV1006": {
+        "Full": 0.14332971840598568,
+        "Active": -0.02127898828530614,
+        "Note": -0.04773882111445254,
+        "Within": -0.07036795020494772,
+        "Error": 1.0376765397570202,
+        "b2": 0.6882680971908719,
+        "c2": 0.4106323372989379
+      },
+      "BWV1009": {
+        "Full": 0.21421790675406752,
+        "Active": 0.16219855817496148,
+        "Note": 0.20026892282023037,
+        "Within": 0.08527255837278737,
+        "Error": 0.9798648693962879,
+        "b2": 0.6811814755776058,
+        "c2": 0.2934338600573546
+      },
+      "BWV1010": {
+        "Full": 0.21258999814194354,
+        "Active": 0.1635720572757033,
+        "Note": 0.17898089296644323,
+        "Within": 0.09216865308707108,
+        "Error": 1.071266950093398,
+        "b2": 0.8752829855371419,
+        "c2": 0.293783922453533
+      }
+    }
+  },
+  "equal_work_summary": {
+    "gate": {
+      "Full": 0.16887637953301143,
+      "Active": null,
+      "Note": null,
+      "Within": null,
+      "Error": 3.161169270869274,
+      "b2": 9.86701073116674,
+      "c2": 0.2848237506463295
+    },
+    "global_ols": {
+      "Full": 0.17744011545922414,
+      "Active": 0.09911109741894455,
+      "Note": 0.13316598689231487,
+      "Within": 0.047772166932086954,
+      "Error": 1.090116222769408,
+      "b2": 1.0138716465966304,
+      "c2": 0.28629236458714924
+    },
+    "instrument_ols": {
+      "Full": 0.08430598986441826,
+      "Active": -0.0123594492201439,
+      "Note": -0.10522545368737193,
+      "Within": 0.04437775654607808,
+      "Error": 1.0222739304444457,
+      "b2": 0.8004913527057035,
+      "c2": 0.37109550489369697
+    },
+    "mamba": {
+      "Full": 0.16877211467344735,
+      "Active": 0.09430169308105416,
+      "Note": 0.0721926999990304,
+      "Within": 0.05830333529985003,
+      "Error": 0.9495218503498165,
+      "b2": 0.723044041884062,
+      "c2": 0.30465755969301844
+    },
+    "note_ols": {
+      "Full": 0.15459482309619715,
+      "Active": 0.054302486619836575,
+      "Note": 0.06838361544866045,
+      "Within": 0.08572983397526056,
+      "Error": 1.1068715706084074,
+      "b2": 1.025743624845536,
+      "c2": 0.3100660486453075
+    },
+    "note_shape": {
+      "Full": 0.1509884335372534,
+      "Active": 0.06364991554071603,
+      "Note": 0.06992735818678583,
+      "Within": 0.02937192457962546,
+      "Error": 1.1067479038372516,
+      "b2": 1.0258280778656081,
+      "c2": 0.3097619486458266
+    },
+    "s4d": {
+      "Full": 0.1862889497296538,
+      "Active": 0.10546976076809536,
+      "Note": 0.08457204049248535,
+      "Within": 0.0745302752658433,
+      "Error": 1.0113411675824528,
+      "b2": 0.8326429689238358,
+      "c2": 0.2872220190458532
+    }
+  },
+  "frozen_plan_sha256": "a7b2b6defc3e77fe303a2581ec4e4d7f246c0bbd3ab9407455a9a43b54a88550",
+  "analysis_sha256": "38f47a398b105c2808ed22d3654b97d1b082301166ba35c29d4e49c36c2a0de0",
+  "dataset_sha256": "6313769d6d2e21636358d6a0550e131787379bcf336f66d5f73e0ae35bcb9248",
+  "selection_sha256": "86a0e1036361ecdea3ec66b100e7d643c24f6d0e297258c26547ea4a34759875"
+}

@@ -1,0 +1,10 @@
+{
+  "tracks": 44,
+  "maximum_absolute_differences": {
+    "global_ols": 1.1175870895385742e-08,
+    "instrument_ols": 1.6391277313232422e-07,
+    "note_ols": 0.0,
+    "note_shape": 0.0,
+    "gate": 0.0
+  }
+}

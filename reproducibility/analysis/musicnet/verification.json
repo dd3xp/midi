@@ -1,0 +1,22 @@
+{
+  "utc": "2026-09-16T08:32:08.927394+00:00",
+  "unique_recordings": 21,
+  "composition_groups": 5,
+  "prediction_models": 7,
+  "model_recording_pairs": 147,
+  "all_waveform_horizons_preserved": true,
+  "finite_nonnegative_predictions": true,
+  "independent_error_recomputation_max_difference": 8.881784197001252e-16,
+  "separately_reported_from_original_186": true,
+  "seed": 42,
+  "fold": 0,
+  "dataset_sha256": "6313769d6d2e21636358d6a0550e131787379bcf336f66d5f73e0ae35bcb9248",
+  "results_sha256": "63ab6673736140b17f287b9537de22eaf548492486ceef44cb267611fb323c02",
+  "group_sizes": {
+    "BWV1001": 4,
+    "BWV1002": 3,
+    "BWV1006": 2,
+    "BWV1009": 6,
+    "BWV1010": 6
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "utc": "2026-09-13T19:48:23.181746+00:00",
+  "status": "passed",
+  "summary_checks": 540,
+  "paired_bootstrap_checks": 60,
+  "max_arithmetic_error": 8.881784197001252e-16,
+  "report_sha256": "7208756d4dd8e1e62a6f61b1d02e21a6846b790fcb343074a3e3a26971a77720",
+  "all_primary_metrics_full_track_coverage": true,
+  "scale_values_verified_in_all_prespecified_subsets": true,
+  "scope": "Numerical/report integrity; not proof of unseen public-checkpoint data or architecture superiority"
+}

@@ -1,0 +1,8 @@
+{
+  "frames": 34000,
+  "seconds": 14.578977199998917,
+  "peak_gpu_bytes": 1104608256,
+  "backend_max_abs_difference": 2.0489096641540527e-08,
+  "backend": "torch.backends.mha fastpath disabled; full attention, float32",
+  "training_source": "datagen/solo/URMP/processed_vn/01_Jupiter_vn_vc_track1_vn/data.npz"
+}

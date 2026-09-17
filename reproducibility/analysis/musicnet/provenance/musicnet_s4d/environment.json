@@ -1,0 +1,12 @@
+{
+  "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+  "torch": "2.10.0+cu128",
+  "gpu": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "allocator_fraction": 0.8,
+  "checkpoint_sha256": "3d8d9944de88016a137b6024445912f572e6292c860cfbd9bc76523d453e8e59",
+  "runner_sha256": "739fa2c41ddf6f8196a0e5400d0d83e15153abc5bba5beadc4e4ebd37dcd4e41",
+  "plan_sha256": "a7b2b6defc3e77fe303a2581ec4e4d7f246c0bbd3ab9407455a9a43b54a88550",
+  "precision": "float32",
+  "seed": 42,
+  "inference": "batch one, full sequence, no truncation or gain fitting"
+}

@@ -1,0 +1,55 @@
+{
+  "files": [
+    {
+      "path": "musicnet_s4d/environment.json",
+      "sha256": "1c9c9d01b50da930630253ba28feb41e4b54011f6742752695d5743749e9282c",
+      "bytes": 592
+    },
+    {
+      "path": "musicnet_s4d/input.json",
+      "sha256": "3949a41da6a2ce786549027b5b0c2678561cd0082130498bccf4682700010b5c",
+      "bytes": 183
+    },
+    {
+      "path": "musicnet_s4d/predictions.pt",
+      "sha256": "17ba86455cedd3b18e53b5c95a5e9aa7bb9266a42d3e2339c4a485a2f20dc2de",
+      "bytes": 2720309
+    },
+    {
+      "path": "musicnet_s4d/status.json",
+      "sha256": "de59ff2c1d189a63c35656ce0a21635c40203a1bd523215063e17dd7aa74435f",
+      "bytes": 347
+    },
+    {
+      "path": "musicnet_s4d/timings.json",
+      "sha256": "65557941ef15baffd9e1f5e319b946f42cb4e95484937fda426c009a22bd963d",
+      "bytes": 2073
+    },
+    {
+      "path": "validation_s4d_verified/environment.json",
+      "sha256": "1c9c9d01b50da930630253ba28feb41e4b54011f6742752695d5743749e9282c",
+      "bytes": 592
+    },
+    {
+      "path": "validation_s4d_verified/feasibility.json",
+      "sha256": "406188a4d4cee57f7cf7d4d5b1767ae0b2e384e1e93f6f01b5041e37936a40de",
+      "bytes": 318
+    },
+    {
+      "path": "validation_s4d_verified/predictions.pt",
+      "sha256": "7a94174fba56d99458276d4ca643b7620a918fce5a1b27c6dc815fe1bcd4189a",
+      "bytes": 1064437
+    },
+    {
+      "path": "validation_s4d_verified/status.json",
+      "sha256": "0fef11874b33dba98ceb0f595242f7cade851f1b93026a18b89a0e4c4e098357",
+      "bytes": 343
+    },
+    {
+      "path": "validation_s4d_verified/timings.json",
+      "sha256": "55183281f1b26d2a82d590e2bb176f39cdf27c08ed9f0ca7fde9a4bcf9034fe3",
+      "bytes": 4528
+    }
+  ],
+  "count": 10
+}

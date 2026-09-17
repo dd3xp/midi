@@ -1,0 +1,14 @@
+{
+  "utc": "2026-09-16T15:28:44.357317+00:00",
+  "state": "passed",
+  "recordings": 21,
+  "works": 5,
+  "models": 7,
+  "pairs": 6,
+  "all_metrics_and_fixed_scales_recomputed": true,
+  "all_work_and_bootstrap_results_recomputed": true,
+  "reference_outputs_reconstructed_without_fitting": true,
+  "validation_choice_recomputed_from_saved_validation_metrics": true,
+  "maximum_difference": 0.0,
+  "input_manifest_checked": true
+}

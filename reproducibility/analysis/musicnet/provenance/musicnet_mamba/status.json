@@ -1,0 +1,12 @@
+{
+  "utc": "2026-09-16T08:28:58.014862+00:00",
+  "pid": 12472,
+  "state": "complete",
+  "model": "mamba",
+  "completed": 21,
+  "total": 21,
+  "seconds": 552.7030000000086,
+  "frames_per_second": 860.7332762432142,
+  "prediction_sha256": "baa6f2dc2d6ce279ab3fe29dd93bafe25b61e3462530942ac5d556872e7df66a",
+  "peak_gpu_bytes": 1078581248
+}

@@ -1,0 +1,152 @@
+[
+  {
+    "track": "datagen/solo/URMP/processed_vn/08_Spring_fl_vn_track2_vn/data.npz",
+    "frames": 3502,
+    "seconds": 1.5398419999983162
+  },
+  {
+    "track": "datagen/solo/URMP/processed_vn/12_Spring_vn_vn_vc_track1_vn/data.npz",
+    "frames": 13092,
+    "seconds": 5.981620700011263
+  },
+  {
+    "track": "datagen/solo/URMP/processed_vn/12_Spring_vn_vn_vc_track2_vn/data.npz",
+    "frames": 13092,
+    "seconds": 5.952403499992215
+  },
+  {
+    "track": "datagen/solo/URMP/processed_vc/12_Spring_vn_vn_vc_track3_vc/data.npz",
+    "frames": 13092,
+    "seconds": 5.698824100007187
+  },
+  {
+    "track": "datagen/solo/URMP/processed_fl/08_Spring_fl_vn_track1_fl/data.npz",
+    "frames": 3502,
+    "seconds": 1.594642500000191
+  },
+  {
+    "track": "datagen/solo/URMP/processed_cl/21_Rejouissance_cl_tbn_tba_track1_cl/data.npz",
+    "frames": 7579,
+    "seconds": 3.472940599996946
+  },
+  {
+    "track": "datagen/solo/URMP/processed_cl/23_Rejouissance_cl_sax_tba_track1_cl/data.npz",
+    "frames": 7579,
+    "seconds": 3.159814300001017
+  },
+  {
+    "track": "datagen/solo/URMP/processed_sax/16_Surprise_tpt_tpt_sax_track3_sax/data.npz",
+    "frames": 5303,
+    "seconds": 2.1171796999988146
+  },
+  {
+    "track": "datagen/solo/URMP/processed_sax/22_Rejouissance_sax_tbn_tba_track1_sax/data.npz",
+    "frames": 7579,
+    "seconds": 3.3077661999996053
+  },
+  {
+    "track": "datagen/solo/URMP/processed_sax/23_Rejouissance_cl_sax_tba_track2_sax/data.npz",
+    "frames": 7579,
+    "seconds": 2.7694323000032455
+  },
+  {
+    "track": "datagen/solo/URMP/processed_tpt/15_Surprise_tpt_tpt_tbn_track1_tpt/data.npz",
+    "frames": 5303,
+    "seconds": 2.0223174999991897
+  },
+  {
+    "track": "datagen/solo/URMP/processed_tpt/15_Surprise_tpt_tpt_tbn_track2_tpt/data.npz",
+    "frames": 5303,
+    "seconds": 2.1062426999997115
+  },
+  {
+    "track": "datagen/solo/URMP/processed_tpt/15_Surprise_tpt_tpt_tbn_track3_tpt/data.npz",
+    "frames": 5303,
+    "seconds": 2.2946481999970274
+  },
+  {
+    "track": "datagen/solo/URMP/processed_tpt/16_Surprise_tpt_tpt_sax_track1_tpt/data.npz",
+    "frames": 5303,
+    "seconds": 2.299091099994257
+  },
+  {
+    "track": "datagen/solo/URMP/processed_tpt/16_Surprise_tpt_tpt_sax_track2_tpt/data.npz",
+    "frames": 5303,
+    "seconds": 2.612737000003108
+  },
+  {
+    "track": "datagen/solo/URMP/processed_tbn/21_Rejouissance_cl_tbn_tba_track2_tbn/data.npz",
+    "frames": 7579,
+    "seconds": 2.965822300000582
+  },
+  {
+    "track": "datagen/solo/URMP/processed_tbn/22_Rejouissance_sax_tbn_tba_track2_tbn/data.npz",
+    "frames": 7579,
+    "seconds": 2.7339314999990165
+  },
+  {
+    "track": "datagen/solo/Bach10/processed_vn/02-AchLiebenChristen/data.npz",
+    "frames": 4049,
+    "seconds": 1.545706099990639
+  },
+  {
+    "track": "datagen/solo/Bach10/processed_vn/07-HerrGott/data.npz",
+    "frames": 3252,
+    "seconds": 1.4987375999917276
+  },
+  {
+    "track": "datagen/solo/Bach10/processed_vn/10-NunBitten/data.npz",
+    "frames": 3735,
+    "seconds": 1.480856500013033
+  },
+  {
+    "track": "datagen/solo/Bach10/processed_cl/02-AchLiebenChristen/data.npz",
+    "frames": 4049,
+    "seconds": 1.572803600007319
+  },
+  {
+    "track": "datagen/solo/Bach10/processed_cl/07-HerrGott/data.npz",
+    "frames": 3252,
+    "seconds": 1.22951330000069
+  },
+  {
+    "track": "datagen/solo/Bach10/processed_cl/10-NunBitten/data.npz",
+    "frames": 3735,
+    "seconds": 1.6260454000002937
+  },
+  {
+    "track": "datagen/solo/Bach10/processed_sax/02-AchLiebenChristen/data.npz",
+    "frames": 4049,
+    "seconds": 1.594230000002426
+  },
+  {
+    "track": "datagen/solo/Bach10/processed_sax/07-HerrGott/data.npz",
+    "frames": 3252,
+    "seconds": 1.6695431000116514
+  },
+  {
+    "track": "datagen/solo/Bach10/processed_sax/10-NunBitten/data.npz",
+    "frames": 3735,
+    "seconds": 1.4567848000006052
+  },
+  {
+    "track": "datagen/solo/Bach10/processed_bn/02-AchLiebenChristen/data.npz",
+    "frames": 4049,
+    "seconds": 1.6551221999980044
+  },
+  {
+    "track": "datagen/solo/Bach10/processed_bn/07-HerrGott/data.npz",
+    "frames": 3252,
+    "seconds": 1.5614486999984365
+  },
+  {
+    "track": "datagen/solo/Bach10/processed_bn/10-NunBitten/data.npz",
+    "frames": 3735,
+    "seconds": 1.6451046000001952
+  },
+  {
+    "track": "datagen/solo/PHENICX/processed_bn/mozart_bassoon/data.npz",
+    "frames": 22710,
+    "seconds": 10.447023100001388
+  }
+]

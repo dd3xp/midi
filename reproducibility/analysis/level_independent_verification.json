@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "note_error_metric_checks": 4464,
+  "paired_error_and_aggregation_checks": 45,
+  "max_error": 1.7763568394002505e-15,
+  "source_npz_sha256": "d58482206bc7f740098f8e53cb802f17eae8d9ebcb6712b8273ac69edfbefe0a",
+  "implementation": "cumulative sums and explicit resampled group-row concatenation; no refitting"
+}

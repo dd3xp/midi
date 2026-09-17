@@ -1,0 +1,68 @@
+{
+  "utc": "2026-09-16T15:28:48.138925+00:00",
+  "plan_sha256": "60ad13810bf12ca204a7a853feaf1894f147c1e79a425af11d7980e072705e65",
+  "template_audit_sha256": "5869595092294f705149902558b96942a39026a6225840de0e873da4bbba3a7c",
+  "musicnet_results_sha256": "63ab6673736140b17f287b9537de22eaf548492486ceef44cb267611fb323c02",
+  "musicnet": {
+    "mamba": {
+      "discordant": [
+        {
+          "track": "MusicNet/2220",
+          "Full_gain": 0.015224014192479762,
+          "Note_change": -0.050294250688289965
+        },
+        {
+          "track": "MusicNet/2221",
+          "Full_gain": 0.05477069525125522,
+          "Note_change": -0.079246830624255
+        },
+        {
+          "track": "MusicNet/2294",
+          "Full_gain": 0.03342531732061553,
+          "Note_change": -0.0904701970341337
+        }
+      ],
+      "above_005": {
+        "full_up": 14,
+        "note_down": 1
+      }
+    },
+    "s4d": {
+      "discordant": [
+        {
+          "track": "MusicNet/2221",
+          "Full_gain": 0.059828207141396667,
+          "Note_change": -0.05752164533014778
+        },
+        {
+          "track": "MusicNet/2294",
+          "Full_gain": 0.06295141319484922,
+          "Note_change": -0.032211545770299777
+        }
+      ],
+      "above_005": {
+        "full_up": 18,
+        "note_down": 1
+      }
+    }
+  },
+  "original_nonoverlap": {
+    "tracks": 133,
+    "groups": 34,
+    "Full_gain": 0.07869732067558051,
+    "interval": [
+      0.05854697587979048,
+      0.10287802899152358
+    ],
+    "corpora": {
+      "Bach10": {
+        "n": 40,
+        "mean": 0.14519061560586607
+      },
+      "URMP": {
+        "n": 93,
+        "mean": 0.050098054038898575
+      }
+    }
+  }
+}

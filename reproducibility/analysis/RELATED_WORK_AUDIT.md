@@ -1,0 +1,17 @@
+# Source-based related-work audit
+
+Checked against primary sources during this revision. These distinctions guide the paper's positioning, not an assertion that earlier work used an invalid metric.
+
+- Cancino-Chacon et al., 2017, *An evaluation of linear and non-linear models of expressive dynamics in classical piano and symphonic music*: Section 6.1/Table 2 reports R-squared and Pearson correlation in five-fold evaluation across piano and orchestral corpora. Its richer score basis functions and per-note/passage representations differ from our MIDI-frame OLS references. The paper supplies a substantive precedent for comparing nonlinear dynamics models with linear controls and for reporting error as well as correlation. Source: https://carloscancinochacon.com/documents/peer_reviewed/CancinoEtAl-MLJ-2017.pdf
+- Hu et al., 2024, *Towards musically informed evaluation of piano transcription models*: Section 3 separates timing, articulation, harmony and dynamics. The dynamics metric correlates a log melody/bass loudness ratio estimated from MIDI velocity; it is not our recorded-RMS note-interval mean. Its behavior-aware metric design motivates the question, while our fixed performed timing and paired level/shape references isolate a different measurement problem. Source: https://arxiv.org/html/2406.08454v1
+- Cancino-Chacon et al., 2018, *Computational Models of Expressive Music Performance*: used only for the broader distinction among performance representations/tasks, not to claim every earlier system scores continuous audio with Pearson. Source: https://www.frontiersin.org/journals/digital-humanities/articles/10.3389/fdigh.2018.00025/full
+- MIDI2Params and MIDI-DDSP motivate rendering amplitude from symbolic inputs. The manuscript distinguishes their output controls from final-audio RMS, original MIDI2Params from its later reimplementation, and public pretrained/adapted pipelines from same-fold internal comparisons. Source and checkpoint provenance remain in the frozen external protocols supplied with the companion.
+
+The contribution is the paired behavioral diagnosis of fixed amplitude predictions and its reference/population dependence. Neither nonlinear-vs-linear comparison nor the mathematical fact that smoothing changes correlation is claimed as a new invention.
+
+## Final positioning check (v0.17)
+
+- Vinay and Lerch (ISMIR 2022), *Evaluating Generative Audio Systems and Their Metrics*, pp. 858–865, compare three audio synthesizers with objective reconstruction metrics and a listening study. Sections 4–5 discuss discrepancies between objective metrics and listener judgments. This is a direct precedent for diagnosis of audio evaluation. Our question concerns note-interval behaviors reflected in a trajectory score; it does not provide new perceptual validation. Primary full paper: https://archives.ismir.net/ismir2022/paper/000103.pdf
+- Lin (1989), *A Concordance Correlation Coefficient to Evaluate Reproducibility*, Biometrics 45(1), pp. 255–268, distinguishes agreement around the identity line from correlation. We cite that distinction and retain separate Pearson and error measures to keep co-variation and numerical agreement visible. We do not introduce a new concordance measure. Primary abstract: https://pubmed.ncbi.nlm.nih.gov/2720055/
+
+The main text now states the concrete empirical contribution affirmatively and acknowledges this nearby evaluation literature. It does not claim that earlier synthesis papers used only Pearson correlation or that this study invalidates their metrics.

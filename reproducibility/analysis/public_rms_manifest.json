@@ -1,0 +1,2336 @@
+{
+  "systems": {
+    "midi_ddsp": {
+      "rows": [
+        {
+          "track": "datagen/solo/URMP/processed_cl/03_Dance_fl_cl_track2_cl/data.npz",
+          "prefix": "t082",
+          "array_key": "midi_ddsp_t082",
+          "group": "Dance",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/034371071a02e7e1/rms.npy",
+          "source_sha256": "df96ce4cb3d5c0cf501bcb446364c385ba94bdcafcefcb5edbbc2b6e3eabe4ed",
+          "completion_sha256": "100ddd0b24b5775113ce04b1fa82818ca3c8de95ebaefe9b67635d84c9d61fa0",
+          "rms_frames": 9708
+        },
+        {
+          "track": "datagen/solo/URMP/processed_tpt/20_Pavane_tpt_vn_vc_track1_tpt/data.npz",
+          "prefix": "t114",
+          "array_key": "midi_ddsp_t114",
+          "group": "Pavane",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/04900f1698f7b243/rms.npy",
+          "source_sha256": "8bdab224b08f41e77db6a46afdc9eb84130fe7d02c72e47dde207c6c891085c4",
+          "completion_sha256": "6d7875eb3a7ea5dc3491a82f3f9802e4b78d7479e37de1af2658de2c63746e4a",
+          "rms_frames": 13335
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_cl/01-AchGottundHerr/data.npz",
+          "prefix": "t146",
+          "array_key": "midi_ddsp_t146",
+          "group": "bach10_b10_AchGottundHerr",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/08412669466f0e6c/rms.npy",
+          "source_sha256": "ff90703846721c93cfc18eb249cbea7ffd2bd4f79b6613fc609444dfe278d553",
+          "completion_sha256": "2d324b4f03ebcb045f5b92ae735066e16f9c2afa9b15bf98a4c2f3d25601c77a",
+          "rms_frames": 2519
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_sax/07-HerrGott/data.npz",
+          "prefix": "t162",
+          "array_key": "midi_ddsp_t162",
+          "group": "bach10_b10_HerrGott",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/09c4c6678d1d2810/rms.npy",
+          "source_sha256": "a860101244c709c5c8671e41da157beb69ee03a1ad73a6c22e73a6cb8d5ec8a7",
+          "completion_sha256": "f35aab2b91c4a537c58a8645cdff8ef65e339118ceffd9d5f1b8a01796231aab",
+          "rms_frames": 3252
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_sax/04-ChristeDuBeistand/data.npz",
+          "prefix": "t159",
+          "array_key": "midi_ddsp_t159",
+          "group": "bach10_b10_ChristeDuBeistand",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/0b7f9dc60ad1228c/rms.npy",
+          "source_sha256": "c696303f988a5ff2a93d9169a33be8ee70185774c692326349c9871473f056bf",
+          "completion_sha256": "c735fd2f767b1e48d097f09dba164f28ecf98436ecf280793d628a335c8ce701",
+          "rms_frames": 4162
+        },
+        {
+          "track": "datagen/solo/URMP/processed_fl/29_Fugue_fl_fl_ob_cl_track2_fl/data.npz",
+          "prefix": "t068",
+          "array_key": "midi_ddsp_t068",
+          "group": "Fugue",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/0cc6f6fc600871a3/rms.npy",
+          "source_sha256": "9dea54e0f10464c6f0ec9f8a294caf7687e9ce56d49bd7541e910d080b50c987",
+          "completion_sha256": "4d871a53e9f069ff833ba1dbb209a6de80baa65ab74242c4f4dbc81a5f14fdc0",
+          "rms_frames": 17199
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/44_K515_vn_vn_va_va_vc_track1_vn/data.npz",
+          "prefix": "t032",
+          "array_key": "midi_ddsp_t032",
+          "group": "K515",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/0e3e659b5140ae24/rms.npy",
+          "source_sha256": "c4c5cf5187a9ffb57e8b09a0f93e971ff2a17fe4e7ab074e92f9041ff5d5437a",
+          "completion_sha256": "49b0bdc51b2607d8c4f5186a0b8adebdc34d4b0eafa78a3fdf8cd037975676f0",
+          "rms_frames": 22520
+        },
+        {
+          "track": "datagen/solo/URMP/processed_tpt/10_March_tpt_sax_track1_tpt/data.npz",
+          "prefix": "t107",
+          "array_key": "midi_ddsp_t107",
+          "group": "March",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/0ffb10b3b9d2ade2/rms.npy",
+          "source_sha256": "b9ac97c9aec2a4aba0134dade38457346a964b87fcd59715a55237619c7b4fab",
+          "completion_sha256": "25fb439a91d6c03f1344510fb8fc5597bb5ca375c45b7f405fbb0dede0d9dc42",
+          "rms_frames": 10275
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/19_Pavane_cl_vn_vc_track2_vn/data.npz",
+          "prefix": "t011",
+          "array_key": "midi_ddsp_t011",
+          "group": "Pavane",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/109ecd43f1f1a06c/rms.npy",
+          "source_sha256": "120dcd2b7cb149b87a0fe21d734d838366db2575ec91c8a81f653972c3925d30",
+          "completion_sha256": "a5de12f3227ebeda106df149e3e91682fff11edb99cef1d509977988974a3618",
+          "rms_frames": 13335
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/39_Jerusalem_vn_vn_va_sax_db_track1_vn/data.npz",
+          "prefix": "t030",
+          "array_key": "midi_ddsp_t030",
+          "group": "Jerusalem",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/12b9bb36e621fa3b/rms.npy",
+          "source_sha256": "5912156b8626a8d92c610f26874055b7de31ced29d347d079d0959248eae171e",
+          "completion_sha256": "f7a2862072da5a3d14a5dec62ce764566a00c0dcb88e4988bda1aefdf4ec3c4b",
+          "rms_frames": 11910
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/27_King_vn_vn_va_sax_track2_vn/data.npz",
+          "prefix": "t020",
+          "array_key": "midi_ddsp_t020",
+          "group": "King",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/12bd332eb47ff1a6/rms.npy",
+          "source_sha256": "cedb5c2555ec1e91b071b3bfcaef38f16d861d39e9f65cf47d4953662eeb17aa",
+          "completion_sha256": "2a994ac868309332c895893c0f92a72efb8c305814ced19edf5eaa4df6388c2b",
+          "rms_frames": 8516
+        },
+        {
+          "track": "datagen/solo/URMP/processed_ob/11_Maria_ob_vc_track1_ob/data.npz",
+          "prefix": "t076",
+          "array_key": "midi_ddsp_t076",
+          "group": "Maria",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/143fe464d30f55f4/rms.npy",
+          "source_sha256": "25d8d255dc8eabd9582ef286c43417bec63d3af70e62ff8dbf95839d7b2d4573",
+          "completion_sha256": "8f2a0b76f22bc3adfb0835e335150a005920a350144163ea5778bd407956df62",
+          "rms_frames": 10418
+        },
+        {
+          "track": "datagen/solo/URMP/processed_tpt/15_Surprise_tpt_tpt_tbn_track1_tpt/data.npz",
+          "prefix": "t108",
+          "array_key": "midi_ddsp_t108",
+          "group": "Surprise",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/15873963fcc32602/rms.npy",
+          "source_sha256": "429d520dd88bd43f86b69c78e19a61350cb9daf945793749d186c8c9d70ddc20",
+          "completion_sha256": "bb044e76c2e83845dbf9f8a5e99ab2a683bfda950dc919e1ea7af160e026c99d",
+          "rms_frames": 5303
+        },
+        {
+          "track": "datagen/solo/URMP/processed_bn/28_Fugue_fl_ob_cl_bn_track4_bn/data.npz",
+          "prefix": "t133",
+          "array_key": "midi_ddsp_t133",
+          "group": "Fugue",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/17f4c938db419e2b/rms.npy",
+          "source_sha256": "f34d2b58d0a90869de09f665a2e50b48d1395f2f86d947f5dfde21e666c6d3db",
+          "completion_sha256": "952f701a3df402be21a183bcfad7eb4b61e82567831746b3c7e39e4ce59066fb",
+          "rms_frames": 17456
+        },
+        {
+          "track": "datagen/solo/URMP/processed_cl/23_Rejouissance_cl_sax_tba_track1_cl/data.npz",
+          "prefix": "t087",
+          "array_key": "midi_ddsp_t087",
+          "group": "Rejouissance",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/17f720b817d8eebb/rms.npy",
+          "source_sha256": "12f23620af45a7e10765478bf36de9a7e8c0c35bf6c1a776b3b753e27c2bce5b",
+          "completion_sha256": "6d105e780bac85e80e68adad7d0f370bd36b4015d43ef3ac99ff02cb81e95ffa",
+          "rms_frames": 7579
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/02_Sonata_vn_vn_track2_vn/data.npz",
+          "prefix": "t002",
+          "array_key": "midi_ddsp_t002",
+          "group": "Sonata",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/18214e040172a2c0/rms.npy",
+          "source_sha256": "dd7ef58a3da8b88db23da3b8b18713302a5dd83253145ef4e89d7476177ca75b",
+          "completion_sha256": "e4e59ba11d57f0c8ef6fd5961953eb2469aa935a1edd5b89eef4d596ffe07bc1",
+          "rms_frames": 4603
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vc/12_Spring_vn_vn_vc_track3_vc/data.npz",
+          "prefix": "t049",
+          "array_key": "midi_ddsp_t049",
+          "group": "Spring",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/18a48a13e860a504/rms.npy",
+          "source_sha256": "167d06683f802fc0aede3d4cd5bcb51a4c52f6d55ca4939749495e6842255142",
+          "completion_sha256": "f039eea03838b0031a73727b16394ffc7b6e8b31919c767e80300fb444890ba1",
+          "rms_frames": 13092
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_bn/09-Jesus/data.npz",
+          "prefix": "t174",
+          "array_key": "midi_ddsp_t174",
+          "group": "bach10_b10_Jesus",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/1a604f1759bcc88d/rms.npy",
+          "source_sha256": "cbea6c1cffc48f639eb95eaff4d1317c86fd1087cdab4281f5ab9acfe4b57faa",
+          "completion_sha256": "6a98e8aa136e4ea1e6213668a7311758e7abe9ab6abffb4c38b60097af6d1164",
+          "rms_frames": 2931
+        },
+        {
+          "track": "datagen/solo/URMP/processed_va/32_Fugue_vn_vn_va_vc_track3_va/data.npz",
+          "prefix": "t039",
+          "array_key": "midi_ddsp_t039",
+          "group": "Fugue",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/1a8c1083252256cd/rms.npy",
+          "source_sha256": "2dba514e3e43892d2f3d542efa6998f359baf5c4c0e2fd4c18924f995cbf7504",
+          "completion_sha256": "a36f39212110e0770a5015e40f8f5b495974ea43426e21bf0ec4b4fa0e588985",
+          "rms_frames": 17362
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_sax/08-FuerDeinenThron/data.npz",
+          "prefix": "t163",
+          "array_key": "midi_ddsp_t163",
+          "group": "bach10_b10_FuerDeinenThron",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/21f9dbd500be3bbb/rms.npy",
+          "source_sha256": "f3d8707b1ecced86b045ea62d94c18b7794a8b7045e8cc2a152561af33f047cb",
+          "completion_sha256": "8ea98f006fbd3f69492977768e079fa86d92c3792874925327bf022313eb5135",
+          "rms_frames": 3320
+        },
+        {
+          "track": "datagen/solo/PHENICX/processed_vc/beethoven_cello/data.npz",
+          "prefix": "t176",
+          "array_key": "midi_ddsp_t176",
+          "group": "phenicx_beethoven",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/24213aa361a0aeb1/rms.npy",
+          "source_sha256": "bcf60339a83c8d3e9929ab980cad967198421a40e7d78b10bda7a4cf44416656",
+          "completion_sha256": "61cfc67f77357296c148523692f839572b495cb7738febc3378962dcef3e0712",
+          "rms_frames": 19106
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/12_Spring_vn_vn_vc_track1_vn/data.npz",
+          "prefix": "t005",
+          "array_key": "midi_ddsp_t005",
+          "group": "Spring",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/24fba221c3166332/rms.npy",
+          "source_sha256": "6db0631e933fd4d71147e9337d4f39b25af87955e2e050f035e793dc5674d1bc",
+          "completion_sha256": "bd035e8b87807ebeeab2fa63ebcc9f340bfe0625b45f5e7b5b71190a185dbd1d",
+          "rms_frames": 13092
+        },
+        {
+          "track": "datagen/solo/URMP/processed_fl/37_Rondeau_fl_vn_va_cl_track1_fl/data.npz",
+          "prefix": "t071",
+          "array_key": "midi_ddsp_t071",
+          "group": "Rondeau",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/2610e69bccd2cbc4/rms.npy",
+          "source_sha256": "9f5b7b119c508b64b10ae2fc7c3661e7f1cc3ab4c25926a1f1dcf3b46fb8127e",
+          "completion_sha256": "72bcb9bdb860e748c74973c9a733c6879f87d7361d0b722c0c56f44adeb2f4e6",
+          "rms_frames": 12817
+        },
+        {
+          "track": "datagen/solo/URMP/processed_tbn/33_Elise_tpt_tpt_hn_tbn_track4_tbn/data.npz",
+          "prefix": "t129",
+          "array_key": "midi_ddsp_t129",
+          "group": "Elise",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/272ee8b1f63fb445/rms.npy",
+          "source_sha256": "c9dc0263461fc9435fc2622222fe5a0ee9cefcb58a6552c0fcf6624e46b16e78",
+          "completion_sha256": "f8bd76b9ab9b5f1c069fd962d1968a36e1f03066e5973ed29b3632967a48f84d",
+          "rms_frames": 4769
+        },
+        {
+          "track": "datagen/solo/URMP/processed_sax/25_Pirates_vn_vn_va_sax_track4_sax/data.npz",
+          "prefix": "t098",
+          "array_key": "midi_ddsp_t098",
+          "group": "Pirates",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/2ce704f9deeeca22/rms.npy",
+          "source_sha256": "9007912f717deef20aa69ed49b4554c2e19968e0c7b4fd20c0518176b83625c8",
+          "completion_sha256": "0e8079d32fe7f4ad6f8e4500577a8229358f74d76d5f78a71d3f8b0979af07cc",
+          "rms_frames": 4979
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vc/11_Maria_ob_vc_track2_vc/data.npz",
+          "prefix": "t048",
+          "array_key": "midi_ddsp_t048",
+          "group": "Maria",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/2efce6d711b98ea7/rms.npy",
+          "source_sha256": "2cdf34ea17af59c51b687613902218262e9ca0ae72aae419c478ec3168201181",
+          "completion_sha256": "2fd905d067918f2f77f4e44a9477707d9fbbd81bef7f5a167d1a273423d823fd",
+          "rms_frames": 10418
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vc/38_Jerusalem_vn_vn_va_vc_db_track4_vc/data.npz",
+          "prefix": "t056",
+          "array_key": "midi_ddsp_t056",
+          "group": "Jerusalem",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/344737d88abda77a/rms.npy",
+          "source_sha256": "dcd6a97135192752b280f86185d4cefc0a530fcb269351412aeff45b62346bd9",
+          "completion_sha256": "c285589283e6749691d36f6ea8b469320e600a43536f4bccb0f34c7586433802",
+          "rms_frames": 11910
+        },
+        {
+          "track": "datagen/solo/URMP/processed_fl/04_Allegro_fl_fl_track2_fl/data.npz",
+          "prefix": "t060",
+          "array_key": "midi_ddsp_t060",
+          "group": "Allegro",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/34f95519321f9f33/rms.npy",
+          "source_sha256": "b5050d08f2ec176f8cf185737951777691462ee84d6ef40581ba441150784571",
+          "completion_sha256": "dffc022b15eeb1b6a7180b7aabf40f5f18e8236212a49806505af36e23a69c96",
+          "rms_frames": 15713
+        },
+        {
+          "track": "datagen/solo/URMP/processed_va/25_Pirates_vn_vn_va_sax_track3_va/data.npz",
+          "prefix": "t036",
+          "array_key": "midi_ddsp_t036",
+          "group": "Pirates",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/361d57e13e2c049a/rms.npy",
+          "source_sha256": "0e934976cc98db235791f2f9a7d79e75763246d8a4b1cfcced01d53e7d34d0fe",
+          "completion_sha256": "c3c70d3bc97bbf2817856bdd4f868bd1d893fda719c4cf19b5f8f1a54fd8b19b",
+          "rms_frames": 4979
+        },
+        {
+          "track": "datagen/solo/TRIOS/processed_vn/brahms_violin/data.npz",
+          "prefix": "t178",
+          "array_key": "midi_ddsp_t178",
+          "group": "trios_brahms",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/367246a2b8ae61bd/rms.npy",
+          "source_sha256": "d03ddf5533ad82a9a1d6ecdfde2ffe5bcf2079b3b134b8773daea21a51f7d9e3",
+          "completion_sha256": "cbf8e77a044274f398ee0aaf9a1a32236fdf835d60af4e0f0aab4fc04c64daf6",
+          "rms_frames": 4301
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_bn/05-DieNacht/data.npz",
+          "prefix": "t170",
+          "array_key": "midi_ddsp_t170",
+          "group": "bach10_b10_DieNacht",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/376e702009e6cc6b/rms.npy",
+          "source_sha256": "7bf6cfdfd0fc6eebdedff452eb7834f4286ab81e0fb52893624a4d8acc138f97",
+          "completion_sha256": "e95f8cd6c058b017ade3571dd1e37be8d21adce3c2aa199a26f0138e4f7c7e32",
+          "rms_frames": 3577
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_vn/01-AchGottundHerr/data.npz",
+          "prefix": "t136",
+          "array_key": "midi_ddsp_t136",
+          "group": "bach10_b10_AchGottundHerr",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/3950d769e5709896/rms.npy",
+          "source_sha256": "a689bc829017408fdaa8ab00a4bf1abb8252f1e7b9aa7464af764c1c59c89268",
+          "completion_sha256": "18f9a387b6344676d8685e4e9f7dbefdc708a69bb76982db22b105e2d68e16a0",
+          "rms_frames": 2519
+        },
+        {
+          "track": "datagen/solo/URMP/processed_va/27_King_vn_vn_va_sax_track3_va/data.npz",
+          "prefix": "t038",
+          "array_key": "midi_ddsp_t038",
+          "group": "King",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/39e4aa3a39055a5f/rms.npy",
+          "source_sha256": "715fa99a6159b6597028719b6823b6400e7dbf0e3da390e3daf63eed6e633cef",
+          "completion_sha256": "e7a0fc992f4e050107697de9ccb6b231b3085c9c4865f3621265b84fd588353b",
+          "rms_frames": 8516
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_cl/03-ChristederdubistTagundLicht/data.npz",
+          "prefix": "t148",
+          "array_key": "midi_ddsp_t148",
+          "group": "bach10_b10_ChristederdubistTagundLicht",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/39e6cdb4f5186657/rms.npy",
+          "source_sha256": "e44020723978b5d6dcd50bfa95b58f0266a10bd7e275973f842e8045a466d901",
+          "completion_sha256": "d6943b6097f832eec5c893c5cf2084c6f900438f3d2c122b458fbb7a8c605fae",
+          "rms_frames": 2532
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/25_Pirates_vn_vn_va_sax_track2_vn/data.npz",
+          "prefix": "t016",
+          "array_key": "midi_ddsp_t016",
+          "group": "Pirates",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/3c102285d941fc7c/rms.npy",
+          "source_sha256": "ea97d87149837eeb3c3eda3190469d051020bcabaf5c1d143e86d895fd1da6ee",
+          "completion_sha256": "dc6b530eea488f6cb8b9eb93c6fa68fbeab7451fea988f696e0f9c280f241fc7",
+          "rms_frames": 4979
+        },
+        {
+          "track": "datagen/solo/URMP/processed_va/39_Jerusalem_vn_vn_va_sax_db_track3_va/data.npz",
+          "prefix": "t044",
+          "array_key": "midi_ddsp_t044",
+          "group": "Jerusalem",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/3cca6e52f119d397/rms.npy",
+          "source_sha256": "25f0e675fd686e95cf730846086dd7b79e829462814fdd2123dbce42b8506376",
+          "completion_sha256": "f8ce796bf87c50e25c900bf42f594f9ea3548b58a5463f9aada989c296f6cc28",
+          "rms_frames": 11910
+        },
+        {
+          "track": "datagen/solo/URMP/processed_va/37_Rondeau_fl_vn_va_cl_track3_va/data.npz",
+          "prefix": "t042",
+          "array_key": "midi_ddsp_t042",
+          "group": "Rondeau",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/3eb1495ee43c0c72/rms.npy",
+          "source_sha256": "4431aa56f88c1dba46581621761155736a536fbe2f772b000ccf8bcf6f6b984f",
+          "completion_sha256": "ba231da508bf9fcfd1461ec48f8c2d629dd02299a678e6a24553597ac417a2c9",
+          "rms_frames": 12817
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_cl/09-Jesus/data.npz",
+          "prefix": "t154",
+          "array_key": "midi_ddsp_t154",
+          "group": "bach10_b10_Jesus",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/3eeb55434b367032/rms.npy",
+          "source_sha256": "9fbeab8ec6b0781954d07a826798bae0539d4ae6b7b92bc3d80f7faadbfb902d",
+          "completion_sha256": "50b211549ba5220e925811bb766ab814fc4adea0f5455a7fce081a51f41ab3b4",
+          "rms_frames": 2931
+        },
+        {
+          "track": "datagen/solo/URMP/processed_fl/17_Nocturne_vn_fl_cl_track2_fl/data.npz",
+          "prefix": "t064",
+          "array_key": "midi_ddsp_t064",
+          "group": "Nocturne",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/41d852020a9add2d/rms.npy",
+          "source_sha256": "f52a4b9e4ff16e79284a85413e478c685835a87b5ab1f4db1cabb0683351ac5b",
+          "completion_sha256": "ba6983edc9828f02ecbcb501d34a1529a71ec85632fef6360476ec331c529eb8",
+          "rms_frames": 9561
+        },
+        {
+          "track": "datagen/solo/URMP/processed_fl/08_Spring_fl_vn_track1_fl/data.npz",
+          "prefix": "t061",
+          "array_key": "midi_ddsp_t061",
+          "group": "Spring",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/4306e0914674fb2c/rms.npy",
+          "source_sha256": "12f7f9ef164cadc136a39ed6c051a3f52bbf0432138a4e2662b0ad53aa311b54",
+          "completion_sha256": "210e32eec43a6405d9bb2311a38f245966b886b0751aaa4b919f424a6ec9e6a8",
+          "rms_frames": 3502
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/12_Spring_vn_vn_vc_track2_vn/data.npz",
+          "prefix": "t006",
+          "array_key": "midi_ddsp_t006",
+          "group": "Spring",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/433fa331a7daba2c/rms.npy",
+          "source_sha256": "e41bc0de2fe40d3a0290bad189ee594f6e0632cd88ea1c0f012f034d06b9b074",
+          "completion_sha256": "e9c20283f5b7020eb31a4fb8f2cb0eed2b3a2bd57db9fe0136948b3e574ea72c",
+          "rms_frames": 13092
+        },
+        {
+          "track": "datagen/solo/URMP/processed_tbn/21_Rejouissance_cl_tbn_tba_track2_tbn/data.npz",
+          "prefix": "t126",
+          "array_key": "midi_ddsp_t126",
+          "group": "Rejouissance",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/43de47200ba3ce83/rms.npy",
+          "source_sha256": "6507f3d70b40c70da14672f9684b55287ed1f0f126a140676c3a36c83fca60de",
+          "completion_sha256": "f22ff3331987f25662eb2e5d0dec3ed3e7ae1ffcfbcec7100166eff3c66428f5",
+          "rms_frames": 7579
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_vn/03-ChristederdubistTagundLicht/data.npz",
+          "prefix": "t138",
+          "array_key": "midi_ddsp_t138",
+          "group": "bach10_b10_ChristederdubistTagundLicht",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/454156146e1b03c3/rms.npy",
+          "source_sha256": "b0cc2d62765b7767551e7e1c99c887c90344e6564b8c0a6dcc6fc6c5deb36cbd",
+          "completion_sha256": "ce30f7ee0083ec4f13ca37d7ab63a12ef1593b1d8c434f0b960352b928ee267f",
+          "rms_frames": 2532
+        },
+        {
+          "track": "datagen/solo/URMP/processed_tbn/31_Slavonic_tpt_tpt_hn_tbn_track4_tbn/data.npz",
+          "prefix": "t128",
+          "array_key": "midi_ddsp_t128",
+          "group": "Slavonic",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/4616b5ca7cea8867/rms.npy",
+          "source_sha256": "c53ced73055b7d409ff7a46209ec8688808b158339f92c1c9f808bb3709948ca",
+          "completion_sha256": "23685547260d15d88926ab15f938b445b7e3eabd2557cfef62317076fa5c1933",
+          "rms_frames": 8176
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vc/19_Pavane_cl_vn_vc_track3_vc/data.npz",
+          "prefix": "t050",
+          "array_key": "midi_ddsp_t050",
+          "group": "Pavane",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/47233548e0aec754/rms.npy",
+          "source_sha256": "c5dfdb7b39df0c90f4d017a28f9cc33832c79d7a4bb08c9dc9f973adbb954260",
+          "completion_sha256": "f6bee249f4164daa861e7679296065de2a19bbb4fcdf19a94a0fb3a6f59c5cb1",
+          "rms_frames": 13335
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/09_Jesus_tpt_vn_track2_vn/data.npz",
+          "prefix": "t004",
+          "array_key": "midi_ddsp_t004",
+          "group": "Jesus",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/47891e06a6363585/rms.npy",
+          "source_sha256": "a1c5ae9e15287f8eb6184d79a05b591508a8619634e3f4933984e554d82c99ea",
+          "completion_sha256": "dc8fb770b71b615dd35c64a8ea71da260b808a9539cffff8064ea5d0711cbde1",
+          "rms_frames": 19884
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_vn/06-DieSonne/data.npz",
+          "prefix": "t141",
+          "array_key": "midi_ddsp_t141",
+          "group": "bach10_b10_DieSonne",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/47b90767ac785da2/rms.npy",
+          "source_sha256": "960ea9c77447a73d11714a52b23c9a69b31976b81433cc87f81e92045d951dc3",
+          "completion_sha256": "82a960b3d8f8dc8efc669b5804e0cfcac131df0936a3505ff00aaf2aeef4d5f4",
+          "rms_frames": 3325
+        },
+        {
+          "track": "datagen/solo/URMP/processed_tpt/34_Fugue_tpt_tpt_hn_tbn_track2_tpt/data.npz",
+          "prefix": "t120",
+          "array_key": "midi_ddsp_t120",
+          "group": "Fugue",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/47c146f2c24fd05f/rms.npy",
+          "source_sha256": "7511e7bebdd07e543a6fec9c6dff671023951e5dd453133225e72560ae4726a3",
+          "completion_sha256": "e46c9da16b14b56eae054cc57bd0608526f847012ad30585f76003dce185177f",
+          "rms_frames": 17415
+        },
+        {
+          "track": "datagen/solo/URMP/processed_sax/16_Surprise_tpt_tpt_sax_track3_sax/data.npz",
+          "prefix": "t095",
+          "array_key": "midi_ddsp_t095",
+          "group": "Surprise",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/488c9565bd1e32b3/rms.npy",
+          "source_sha256": "db2548b1944a413e33c96b0186cae5e01d859b5bb6de9560c03884d931f0f108",
+          "completion_sha256": "d6da1147fdb9f9259bb3694a474c3a5d322e15e8fc2d94b5a14198ca30b9a5f7",
+          "rms_frames": 5303
+        },
+        {
+          "track": "datagen/solo/URMP/processed_tbn/42_Arioso_tpt_tpt_hn_tbn_tba_track4_tbn/data.npz",
+          "prefix": "t131",
+          "array_key": "midi_ddsp_t131",
+          "group": "Arioso",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/488f166e5b545734/rms.npy",
+          "source_sha256": "f6e286bb5d0aaa6c74d66296f044b97b506cef31de1628e869275b794cda2ebc",
+          "completion_sha256": "2d27307965e6d241c870a944988ca0bd4b9ca8eea1a347ceb763a84b66bb3a71",
+          "rms_frames": 25500
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_vn/07-HerrGott/data.npz",
+          "prefix": "t142",
+          "array_key": "midi_ddsp_t142",
+          "group": "bach10_b10_HerrGott",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/4893c6e006ba9438/rms.npy",
+          "source_sha256": "deec87d425c5a5d4037f4798c62f154dac237c220c1174861dddb2e48031b49f",
+          "completion_sha256": "591848ab29f1aad9168ea51664bcce0c2fcdc6add93463162b6379e89098807e",
+          "rms_frames": 3252
+        },
+        {
+          "track": "datagen/solo/URMP/processed_cl/28_Fugue_fl_ob_cl_bn_track3_cl/data.npz",
+          "prefix": "t088",
+          "array_key": "midi_ddsp_t088",
+          "group": "Fugue",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/4a1fcdb5282bca6c/rms.npy",
+          "source_sha256": "c4f3c21bdef1b164849da2cdb0cc33da8e0e3b7fdb1ed01ae47e9eed06889c39",
+          "completion_sha256": "49df153059b39f20bcd7a2a7d0394aee9f5166cd13edd094eab9262d5f2fdb5a",
+          "rms_frames": 17456
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vc/24_Pirates_vn_vn_va_vc_track4_vc/data.npz",
+          "prefix": "t052",
+          "array_key": "midi_ddsp_t052",
+          "group": "Pirates",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/4a6bed6b5f92f7db/rms.npy",
+          "source_sha256": "dc8618e61991165e2bc6e3b1a981341a71d10cecae1156a9921ada8b4f5665a2",
+          "completion_sha256": "ea4df4f96bbd09373ac739e43231e01e9426e948c03a3e3728881d433ada0acd",
+          "rms_frames": 4979
+        },
+        {
+          "track": "datagen/solo/URMP/processed_ob/29_Fugue_fl_fl_ob_cl_track3_ob/data.npz",
+          "prefix": "t078",
+          "array_key": "midi_ddsp_t078",
+          "group": "Fugue",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/4b22e122b73faf81/rms.npy",
+          "source_sha256": "e507070ca3fa58df35d90712ae9ce5051be3c3b6964394837e4fd9d63410fd1f",
+          "completion_sha256": "9cfa0bbff61db188776d3bc4433a9e6959336657d603f40fbf2896240c390dde",
+          "rms_frames": 17199
+        },
+        {
+          "track": "datagen/solo/URMP/processed_cl/29_Fugue_fl_fl_ob_cl_track4_cl/data.npz",
+          "prefix": "t089",
+          "array_key": "midi_ddsp_t089",
+          "group": "Fugue",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/4b52045ed317d0bb/rms.npy",
+          "source_sha256": "264866b42d23453ae9bea5b216450cb35cf49d43d9af0d91d16c5aaf5eea36be",
+          "completion_sha256": "af65b32c4a79c5a73236cae309f92aac658d5096e46d90f35a28b7e9432180ab",
+          "rms_frames": 17199
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_sax/09-Jesus/data.npz",
+          "prefix": "t164",
+          "array_key": "midi_ddsp_t164",
+          "group": "bach10_b10_Jesus",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/4b8133a5ace9ac79/rms.npy",
+          "source_sha256": "82cd7e57d4997d9b6a0a1f2d66095d3629a846e0e4857a0a2ceeba02d7dcc5f6",
+          "completion_sha256": "318e62a52f1fc37472ffc8e5fda97e8a603e3812cb4a00033718be7834a07ac8",
+          "rms_frames": 2931
+        },
+        {
+          "track": "datagen/solo/URMP/processed_tpt/33_Elise_tpt_tpt_hn_tbn_track2_tpt/data.npz",
+          "prefix": "t118",
+          "array_key": "midi_ddsp_t118",
+          "group": "Elise",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/4da267a320463c17/rms.npy",
+          "source_sha256": "3836e625b08dac62fa074fd7876b3cb9caadbb70895dc9ec027c96aaff880aa8",
+          "completion_sha256": "ed09906634e03dea2b1c67b4cbc4df29f50c5cdf78ada6af1d335d0d948fd4bb",
+          "rms_frames": 4769
+        },
+        {
+          "track": "datagen/solo/URMP/processed_va/38_Jerusalem_vn_vn_va_vc_db_track3_va/data.npz",
+          "prefix": "t043",
+          "array_key": "midi_ddsp_t043",
+          "group": "Jerusalem",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/4e0b6c821a1b569f/rms.npy",
+          "source_sha256": "12dcde3b31d8d72ca6869729947c0a3bb5d44866a92b8728b5268d8c93ee2ddd",
+          "completion_sha256": "41d8c7a7a582d8a8fbf2a62c67706ba77a4eb2a1043f23278dacba2dc66bfab1",
+          "rms_frames": 11910
+        },
+        {
+          "track": "datagen/solo/URMP/processed_cl/14_Waltz_fl_fl_cl_track3_cl/data.npz",
+          "prefix": "t083",
+          "array_key": "midi_ddsp_t083",
+          "group": "Waltz",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/4e13e3cf8ec0ace4/rms.npy",
+          "source_sha256": "cd0b21989b81bcdb7d4142c26340c45e914eb0ec54e1d22a8c5949230a1dec6a",
+          "completion_sha256": "e9e99a7c44da60a9d74363d728177d63336aa1293371121620e7993a1ca1caa3",
+          "rms_frames": 9277
+        },
+        {
+          "track": "datagen/solo/URMP/processed_tpt/05_Entertainer_tpt_tpt_track2_tpt/data.npz",
+          "prefix": "t104",
+          "array_key": "midi_ddsp_t104",
+          "group": "Entertainer",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/4e1d7aab3eeead0e/rms.npy",
+          "source_sha256": "df8b5d77404a4062ffedbb9b99168e53a99fb375183a96680b6371547dd0710e",
+          "completion_sha256": "2b340b6bf618aa89520d725b94bb320d89c570acf4d48a47a47ae37b221c3b94",
+          "rms_frames": 8707
+        },
+        {
+          "track": "datagen/solo/URMP/processed_cl/17_Nocturne_vn_fl_cl_track3_cl/data.npz",
+          "prefix": "t084",
+          "array_key": "midi_ddsp_t084",
+          "group": "Nocturne",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/4ea4e2891ddee142/rms.npy",
+          "source_sha256": "4078d34aacdbdeacd97a28056ec1fbb74b989d0835c8d8e4ca87f7815ca77da9",
+          "completion_sha256": "91604961a13cd9572e20e5d9efe0de324aa792d85e07bf3c0cf13b2dc78d30b2",
+          "rms_frames": 9561
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/38_Jerusalem_vn_vn_va_vc_db_track1_vn/data.npz",
+          "prefix": "t028",
+          "array_key": "midi_ddsp_t028",
+          "group": "Jerusalem",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/51e55604a8164f76/rms.npy",
+          "source_sha256": "f8733eacedcdb9745e680b89d41fb2a55234518422714ac3de4ee092d4b0f9f0",
+          "completion_sha256": "4961b5019f6dbeb79a59d1bee9fec501adc1c079582680be01c6d661842ba2ca",
+          "rms_frames": 11910
+        },
+        {
+          "track": "datagen/solo/URMP/processed_tpt/31_Slavonic_tpt_tpt_hn_tbn_track1_tpt/data.npz",
+          "prefix": "t115",
+          "array_key": "midi_ddsp_t115",
+          "group": "Slavonic",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/53ef509a674b3749/rms.npy",
+          "source_sha256": "018b7ac3ad957e93b6e37e887febc702e5767b8c636ccabedad6415a49fe7454",
+          "completion_sha256": "03311ea8f03def8ceb1e652c47d91d45efdd38a8930939cfdd68f7b1d07c4399",
+          "rms_frames": 8176
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vc/26_King_vn_vn_va_vc_track4_vc/data.npz",
+          "prefix": "t053",
+          "array_key": "midi_ddsp_t053",
+          "group": "King",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/54c53a56e7b6d7f5/rms.npy",
+          "source_sha256": "5013953532e4fbd340b523b131ec97c40af630d3177fa567eb20d598b13522d8",
+          "completion_sha256": "a805932fae99279f006cc3354ada23ad003fe8f72925f074d7e108800801f225",
+          "rms_frames": 8516
+        },
+        {
+          "track": "datagen/solo/URMP/processed_fl/40_Miserere_fl_fl_ob_cl_bn_track2_fl/data.npz",
+          "prefix": "t073",
+          "array_key": "midi_ddsp_t073",
+          "group": "Miserere",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/59810328081b4a6f/rms.npy",
+          "source_sha256": "95c8339702fca23d222951f4691af370c7441b3e5318f5d385b94aae89cbe320",
+          "completion_sha256": "c7ad9ed921c87c05d95212ea9877ed4d3847e8a0c5c6d69608c0a9fbe28b9a06",
+          "rms_frames": 3992
+        },
+        {
+          "track": "datagen/solo/URMP/processed_tpt/15_Surprise_tpt_tpt_tbn_track2_tpt/data.npz",
+          "prefix": "t109",
+          "array_key": "midi_ddsp_t109",
+          "group": "Surprise",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/5ae10a7633b54ea3/rms.npy",
+          "source_sha256": "3a3e157361277f19122ad7d30ca984b55938d89c28e5668b91e2c778db06b260",
+          "completion_sha256": "f4e1a162e5dc1b2f14465b04d70e6e83e33a28fc5fc95a12c1bf8622003c400c",
+          "rms_frames": 5303
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_cl/02-AchLiebenChristen/data.npz",
+          "prefix": "t147",
+          "array_key": "midi_ddsp_t147",
+          "group": "bach10_b10_AchLiebenChristen",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/5b2d5ae85126aeaa/rms.npy",
+          "source_sha256": "56a28d9bf86a538af454150e45abc642e64a8de03fbe5e02c3feb1fdb79ba004",
+          "completion_sha256": "3371ec3ce8cdd468ffed8bcb266fd196b4bffee4fba8495d9a5896a161ab9bbe",
+          "rms_frames": 4049
+        },
+        {
+          "track": "datagen/solo/URMP/processed_tbn/07_GString_tpt_tbn_track2_tbn/data.npz",
+          "prefix": "t125",
+          "array_key": "midi_ddsp_t125",
+          "group": "GString",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/5b50e6841ad2fe14/rms.npy",
+          "source_sha256": "82aeb1b537a408c684fae4922eb3244895d7c7442adb6f106b2cb4ac8a337138",
+          "completion_sha256": "74b3016247937ff85836a800f9f342aec1a941f34ff3dbe7d97d6cebf060ae00",
+          "rms_frames": 26972
+        },
+        {
+          "track": "datagen/solo/URMP/processed_tpt/43_Chorale_tpt_tpt_hn_tbn_tba_track2_tpt/data.npz",
+          "prefix": "t124",
+          "array_key": "midi_ddsp_t124",
+          "group": "Chorale",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/5b9b6d68dd6fcada/rms.npy",
+          "source_sha256": "4fd7818706617738b341d3e2c92640154aa42c2fa368de8dbc9f3e34b259e97a",
+          "completion_sha256": "77015aadca42ef51b98770f2201f0395e28c62cff26130403ec13307a0a82cc6",
+          "rms_frames": 5343
+        },
+        {
+          "track": "datagen/solo/URMP/processed_ob/41_Miserere_fl_fl_ob_sax_bn_track3_ob/data.npz",
+          "prefix": "t081",
+          "array_key": "midi_ddsp_t081",
+          "group": "Miserere",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/611dd394b7ae61fb/rms.npy",
+          "source_sha256": "8936f0973433bb059b804b9d0635c690e658439c13fd566ff8f2aca8d80299fc",
+          "completion_sha256": "7e4d9bd7e916a39a5dbf07ab3b8294b7e961ca5b59c7144b4f0e94321be675b8",
+          "rms_frames": 3992
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_vn/09-Jesus/data.npz",
+          "prefix": "t144",
+          "array_key": "midi_ddsp_t144",
+          "group": "bach10_b10_Jesus",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/62bb21b1bd974fc9/rms.npy",
+          "source_sha256": "bfd6d62c801204710d57062d971e71512768aac77765d8613e46fad1677459f0",
+          "completion_sha256": "612a003da3b785d6262f6565ad6187ad4959af4d1bfdbcdd653a94c780ba692d",
+          "rms_frames": 2931
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_bn/02-AchLiebenChristen/data.npz",
+          "prefix": "t167",
+          "array_key": "midi_ddsp_t167",
+          "group": "bach10_b10_AchLiebenChristen",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/643634848b72080b/rms.npy",
+          "source_sha256": "42f1f4dfb068dc8ebc5625856cfa50aebf31d14e78c408bcc102c22cf20c387b",
+          "completion_sha256": "908fb0bbbdb0ab368ce2c7a1057dd1e4811a0ffa48b98ab16ce93eb228425d94",
+          "rms_frames": 4049
+        },
+        {
+          "track": "datagen/solo/TRIOS/processed_tpt/lussier_trumpet/data.npz",
+          "prefix": "t184",
+          "array_key": "midi_ddsp_t184",
+          "group": "trios_lussier",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/65a73d86c29e0669/rms.npy",
+          "source_sha256": "b5e0353ff1038669eaa4731842ba63fc999feefd6c7965b094bd54fd2c045b4a",
+          "completion_sha256": "e31a0b825147206bed4a0cdd4c8eeab27b367e8f2c89db5163014ea2385d6347",
+          "rms_frames": 1801
+        },
+        {
+          "track": "datagen/solo/URMP/processed_bn/41_Miserere_fl_fl_ob_sax_bn_track5_bn/data.npz",
+          "prefix": "t135",
+          "array_key": "midi_ddsp_t135",
+          "group": "Miserere",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/66552fd9ff365b28/rms.npy",
+          "source_sha256": "8fc7af4b570b812bef6ea4c1f46fd7deb443cd7b9355d8c65cc6cdac90d40a88",
+          "completion_sha256": "411325201ded4360ff04777b53dcc01b1c332bc14dfdab16aa3fe990e04171d7",
+          "rms_frames": 3992
+        },
+        {
+          "track": "datagen/solo/URMP/processed_sax/39_Jerusalem_vn_vn_va_sax_db_track4_sax/data.npz",
+          "prefix": "t101",
+          "array_key": "midi_ddsp_t101",
+          "group": "Jerusalem",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/669e48f71e6314c7/rms.npy",
+          "source_sha256": "e89a9673d9f6aa6004305807696389869d3ce71c6481a73feb69bfe1c0c1fea4",
+          "completion_sha256": "4a38824f869f84c0c07b43056212830b3237ed5743e4bb20b3e0931eec565878",
+          "rms_frames": 11910
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/17_Nocturne_vn_fl_cl_track1_vn/data.npz",
+          "prefix": "t009",
+          "array_key": "midi_ddsp_t009",
+          "group": "Nocturne",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/6758407e96338ba7/rms.npy",
+          "source_sha256": "968e087245ae95c95dac8f77abfc14aae90d54c8a45494bf67104051ca72a4cd",
+          "completion_sha256": "7716ead1239f72f097376fcddc8ea933185a5a17548817db78c40d9025d4f4f3",
+          "rms_frames": 9561
+        },
+        {
+          "track": "datagen/solo/URMP/processed_cl/40_Miserere_fl_fl_ob_cl_bn_track4_cl/data.npz",
+          "prefix": "t091",
+          "array_key": "midi_ddsp_t091",
+          "group": "Miserere",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/67b158a5de1a6be7/rms.npy",
+          "source_sha256": "470f22641ea9f69a4d7e8311dcd5261f835a532e6f45553d0a075235bdb6f1f7",
+          "completion_sha256": "d21a3157c606b00257f97bcb8e3153bb5127bd7e63bfafdd4a0ad6a44fd25c1b",
+          "rms_frames": 3992
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_vn/02-AchLiebenChristen/data.npz",
+          "prefix": "t137",
+          "array_key": "midi_ddsp_t137",
+          "group": "bach10_b10_AchLiebenChristen",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/69ce05e7c542031e/rms.npy",
+          "source_sha256": "84ecc707075085a069e4498bc3d545499138d001811804d2879587d2cf57ac09",
+          "completion_sha256": "513310baa1eccb7fcdbdc8db15efd892bedb2cb3e7cec019e61600ef3f21774f",
+          "rms_frames": 4049
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_cl/07-HerrGott/data.npz",
+          "prefix": "t152",
+          "array_key": "midi_ddsp_t152",
+          "group": "bach10_b10_HerrGott",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/69d8cf856b4966a8/rms.npy",
+          "source_sha256": "22d0ab919a1e8999a8af2b0d5065b08c06b18bbf83b749571eb2807510fea230",
+          "completion_sha256": "6b23314333c5249fc0eac8e7e777b2edcacbc39806dd2fedf15c74919ac35036",
+          "rms_frames": 3252
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/24_Pirates_vn_vn_va_vc_track1_vn/data.npz",
+          "prefix": "t013",
+          "array_key": "midi_ddsp_t013",
+          "group": "Pirates",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/6a2e586eb0f91931/rms.npy",
+          "source_sha256": "b330ebedaa81b03614655f0992144ba42e4e725d0f515dc867774b3cdb79f4b2",
+          "completion_sha256": "7798080377d21dc644f7f8c2628aef2fe81ea10cc2acc1b82c94f0d2723e3f5b",
+          "rms_frames": 4979
+        },
+        {
+          "track": "datagen/solo/URMP/processed_tpt/15_Surprise_tpt_tpt_tbn_track3_tpt/data.npz",
+          "prefix": "t110",
+          "array_key": "midi_ddsp_t110",
+          "group": "Surprise",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/6cd6f4949bc5f1cb/rms.npy",
+          "source_sha256": "20968d35de7d7af2f65c76c0b063c56b2471b0a551de5f07a753d353ec33de5a",
+          "completion_sha256": "b750c05c14c59788b4fa9a8078a206e7535ed4c34861ca4b02fa32f0861459ca",
+          "rms_frames": 5303
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_bn/07-HerrGott/data.npz",
+          "prefix": "t172",
+          "array_key": "midi_ddsp_t172",
+          "group": "bach10_b10_HerrGott",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/6cfa9d1537772fe0/rms.npy",
+          "source_sha256": "8b9891042cd77fd83e56ff41599b592c0731e8f383289ea4f356a4aca7c21bee",
+          "completion_sha256": "437e86763c2727c16a7fb2b68494f3130d2a6f35825fd4b1d66c575d0b70a05b",
+          "rms_frames": 3252
+        },
+        {
+          "track": "datagen/solo/URMP/processed_tpt/16_Surprise_tpt_tpt_sax_track2_tpt/data.npz",
+          "prefix": "t112",
+          "array_key": "midi_ddsp_t112",
+          "group": "Surprise",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/70bc083d515fa036/rms.npy",
+          "source_sha256": "24dd4f8033be8f4824eb3a60228cfd9bc0ca9fd108adbd91d6a23ed482edb5ac",
+          "completion_sha256": "451379a4bc73ad7ff8f323797b9ad89f32768c1402b0cef0fa4113d610184530",
+          "rms_frames": 5303
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_cl/10-NunBitten/data.npz",
+          "prefix": "t155",
+          "array_key": "midi_ddsp_t155",
+          "group": "bach10_b10_NunBitten",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/711d56828702796e/rms.npy",
+          "source_sha256": "4b4643e8ef72dd7cec668442df894b1872ca37b732d7ba6356580c831fa9e294",
+          "completion_sha256": "0126701963e2d85e5e6402ca955f207f46998640abab3a065f071f435094d426",
+          "rms_frames": 3735
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/26_King_vn_vn_va_vc_track1_vn/data.npz",
+          "prefix": "t017",
+          "array_key": "midi_ddsp_t017",
+          "group": "King",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/71fbee04b8aea60b/rms.npy",
+          "source_sha256": "4c3361d6d165dc17fd960878e1c69273afda8924c84501b1d362d07a6032f137",
+          "completion_sha256": "e7de3faf2c9de7a289fc875b27406945843615ca00b89492b26533a8d0ceb997",
+          "rms_frames": 8516
+        },
+        {
+          "track": "datagen/solo/TRIOS/processed_sax/take_five_saxophone/data.npz",
+          "prefix": "t183",
+          "array_key": "midi_ddsp_t183",
+          "group": "trios_take",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/72df146b91b605a0/rms.npy",
+          "source_sha256": "6ce29e2d1f373714fef1aba7b2f704eae41705f0823b80d5e6fc1b51d97609d6",
+          "completion_sha256": "81efbb79831299b861fda4a809f8d1ea78257029f734ebe7e0f6d6853390b686",
+          "rms_frames": 4351
+        },
+        {
+          "track": "datagen/solo/URMP/processed_sax/06_Entertainer_sax_sax_track2_sax/data.npz",
+          "prefix": "t093",
+          "array_key": "midi_ddsp_t093",
+          "group": "Entertainer",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/731649df67c31a73/rms.npy",
+          "source_sha256": "a658e3090d365971574d56adcede8773b8f64667f66d8a4bf961338b8f5162ba",
+          "completion_sha256": "b80301ae1d20f5dea77350e1be9e35cb797c298bad1fa1872248bf8b34945577",
+          "rms_frames": 8750
+        },
+        {
+          "track": "datagen/solo/URMP/processed_ob/40_Miserere_fl_fl_ob_cl_bn_track3_ob/data.npz",
+          "prefix": "t080",
+          "array_key": "midi_ddsp_t080",
+          "group": "Miserere",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/734cf8056065d7c7/rms.npy",
+          "source_sha256": "b2b506871e636d9f80f96367ba9ef11d4ad81511239b29e7e3894f775e3efa1f",
+          "completion_sha256": "5f6101fd638d32c9af8b59819b353c761724c08b62e78c78c4d7184b52d2ab17",
+          "rms_frames": 3992
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/32_Fugue_vn_vn_va_vc_track2_vn/data.npz",
+          "prefix": "t022",
+          "array_key": "midi_ddsp_t022",
+          "group": "Fugue",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/74c0cee63921644d/rms.npy",
+          "source_sha256": "dc34cd6cfbeeb58722597ce01a983efad89b0756c7c8fef5517ff33d7672b53b",
+          "completion_sha256": "4fec406d7678189ad85fe6c84e28f72cf108dcdeb808fb910b0108596bff0802",
+          "rms_frames": 17362
+        },
+        {
+          "track": "datagen/solo/URMP/processed_fl/40_Miserere_fl_fl_ob_cl_bn_track1_fl/data.npz",
+          "prefix": "t072",
+          "array_key": "midi_ddsp_t072",
+          "group": "Miserere",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/7720541c47a36d14/rms.npy",
+          "source_sha256": "20dd4159c74ef142d10282c90d37a044cf88ddc6031150069f6d912c5dae5139",
+          "completion_sha256": "7a13b6d4f2b5df352946a4195d8e4fc85df8a45211483f5e89e2cd3c490b748c",
+          "rms_frames": 3992
+        },
+        {
+          "track": "datagen/solo/URMP/processed_va/44_K515_vn_vn_va_va_vc_track3_va/data.npz",
+          "prefix": "t045",
+          "array_key": "midi_ddsp_t045",
+          "group": "K515",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/774a3740f280c5f0/rms.npy",
+          "source_sha256": "a88a058ac37bb8f057fb1504c27619fcb4ca331021ab7d13e2d6b1be832d39ff",
+          "completion_sha256": "68b971da28f3c909e18867b6f894b1f9b371ea5e87b7b421a0934bb60748e2b7",
+          "rms_frames": 22520
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_bn/03-ChristederdubistTagundLicht/data.npz",
+          "prefix": "t168",
+          "array_key": "midi_ddsp_t168",
+          "group": "bach10_b10_ChristederdubistTagundLicht",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/79bfc94d8cfc9db3/rms.npy",
+          "source_sha256": "2c5a027d787316481829ef2be13a653944684505077a53a2e58015e27d09ef31",
+          "completion_sha256": "c3433eb390e165bda38fa6ef585b109482607c116aa1d0ff9b2aaa7cd87b40f5",
+          "rms_frames": 2532
+        },
+        {
+          "track": "datagen/solo/URMP/processed_fl/04_Allegro_fl_fl_track1_fl/data.npz",
+          "prefix": "t059",
+          "array_key": "midi_ddsp_t059",
+          "group": "Allegro",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/7ca54e52502fbfa0/rms.npy",
+          "source_sha256": "972ff4e9c2783aac878970a606cc71b21ba385984369a13c7b760a92a2b4ffc1",
+          "completion_sha256": "057283c57e81862bd081b2ee4be048b719a53aba4a26825bbe56ab5ac85538a0",
+          "rms_frames": 15713
+        },
+        {
+          "track": "datagen/solo/URMP/processed_tpt/34_Fugue_tpt_tpt_hn_tbn_track1_tpt/data.npz",
+          "prefix": "t119",
+          "array_key": "midi_ddsp_t119",
+          "group": "Fugue",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/7caf9fbd9958fd91/rms.npy",
+          "source_sha256": "4f77510a1084378d900dbd4c7d6ba5815e6781452d736cf452aea2c5e7dcc85a",
+          "completion_sha256": "0ce7a0f38278cab6340b9d32c91fd1fda9f588df8defb4ef2eeb140dc3a74a38",
+          "rms_frames": 17415
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vc/32_Fugue_vn_vn_va_vc_track4_vc/data.npz",
+          "prefix": "t054",
+          "array_key": "midi_ddsp_t054",
+          "group": "Fugue",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/7cc73b30b6b84840/rms.npy",
+          "source_sha256": "c8c7ca353e47ba197c87c48fd236cf62d00292adde7d2b0d56ffaf2fac8ab90e",
+          "completion_sha256": "effeac0a65f1fd174087c1c41909b1f160aafe3270181f909cb904d8b858317c",
+          "rms_frames": 17362
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_sax/01-AchGottundHerr/data.npz",
+          "prefix": "t156",
+          "array_key": "midi_ddsp_t156",
+          "group": "bach10_b10_AchGottundHerr",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/7cdf71534d8d44a2/rms.npy",
+          "source_sha256": "53c8f5aaebb526de4ffcdb8f11c189c463f7bd8416cad9d70a1eef50f5b47f69",
+          "completion_sha256": "79069d6c884329803502e1d5f07d2855b257ad2dffab74842d42af34db1c06e0",
+          "rms_frames": 2519
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_bn/08-FuerDeinenThron/data.npz",
+          "prefix": "t173",
+          "array_key": "midi_ddsp_t173",
+          "group": "bach10_b10_FuerDeinenThron",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/7eeadfee5d3c5563/rms.npy",
+          "source_sha256": "e42e77254eccede8d37604bbcdda518400ee84e9466fd4863e5bfea20d21a5a7",
+          "completion_sha256": "e81937c8c9cbda73bca6afa1a82b4bdf99d43dc35de2b44bf605d7293dc6e909",
+          "rms_frames": 3320
+        },
+        {
+          "track": "datagen/solo/URMP/processed_sax/27_King_vn_vn_va_sax_track4_sax/data.npz",
+          "prefix": "t099",
+          "array_key": "midi_ddsp_t099",
+          "group": "King",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/7f904a1fc45a6654/rms.npy",
+          "source_sha256": "a6f3ce6e97efa3ed71bd1d73a02a88d63cfba25f26967f99a071e530163ff7fb",
+          "completion_sha256": "34aca418b2284b3d600cce32326db2e55f8dfb49b4843591883be9f5fe99222f",
+          "rms_frames": 8516
+        },
+        {
+          "track": "datagen/solo/URMP/processed_cl/19_Pavane_cl_vn_vc_track1_cl/data.npz",
+          "prefix": "t085",
+          "array_key": "midi_ddsp_t085",
+          "group": "Pavane",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/82bb499297a4f163/rms.npy",
+          "source_sha256": "fac4f7fc3a4801306f2dac6c6a0e1b1945b79820bec9574d8550374fbf5399a3",
+          "completion_sha256": "e13f5b3118aba738fcf5b58f4c3e521e5e44a55ac89beb43552b1b96cba323d3",
+          "rms_frames": 13335
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_sax/06-DieSonne/data.npz",
+          "prefix": "t161",
+          "array_key": "midi_ddsp_t161",
+          "group": "bach10_b10_DieSonne",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/82f40ae113eece70/rms.npy",
+          "source_sha256": "8d4000adde4d1c65b75f97f97261d8e85dff253b3ca974d62a5a7dfa54b86a31",
+          "completion_sha256": "c9eb27bb551ad1d6918cdb2bcb8cbbc4507316e9ee619f590364d3aaabb8d335",
+          "rms_frames": 3325
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/25_Pirates_vn_vn_va_sax_track1_vn/data.npz",
+          "prefix": "t015",
+          "array_key": "midi_ddsp_t015",
+          "group": "Pirates",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/844543b47dab1f83/rms.npy",
+          "source_sha256": "7a4537766db6bb87ca6daa80e3971cec02878a1c5dc60b3e668f30516c203c4a",
+          "completion_sha256": "2890e81d511fe44af863319972d79916e00f833b5b83aece852a5d0756f90188",
+          "rms_frames": 4979
+        },
+        {
+          "track": "datagen/solo/URMP/processed_ob/30_Fugue_fl_fl_ob_sax_track3_ob/data.npz",
+          "prefix": "t079",
+          "array_key": "midi_ddsp_t079",
+          "group": "Fugue",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/856f69b3772d0afe/rms.npy",
+          "source_sha256": "cd7a4f1a8f555ec5e6ee02c7e29774489c51ae44d53fe47e86648aaecfd2b3df",
+          "completion_sha256": "ae57c78ceb6e6cdbf1cd126f5a3a6247fe737b7a25121d7de7d88f2374de5815",
+          "rms_frames": 17199
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/38_Jerusalem_vn_vn_va_vc_db_track2_vn/data.npz",
+          "prefix": "t029",
+          "array_key": "midi_ddsp_t029",
+          "group": "Jerusalem",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/859b30694f135a78/rms.npy",
+          "source_sha256": "a00a46c51b71c0de24dbf5cb1135d21f55e75c6688eadb9482143f6a4e249d11",
+          "completion_sha256": "8ccc40f67c907aaf311dfcdb95397fc04194eb930372e8bc766b3dbbe021518f",
+          "rms_frames": 11910
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/13_Hark_vn_vn_va_track1_vn/data.npz",
+          "prefix": "t007",
+          "array_key": "midi_ddsp_t007",
+          "group": "Hark",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/85c32213db2bdbd3/rms.npy",
+          "source_sha256": "d3d1e4ed5a9c89acbf908a7b2c71ec982fc7d9a94d7fa78e240b6aefd8d35f74",
+          "completion_sha256": "ccfd306a8b5325d5dd0a90bc07f72509d54adb8211aaa52d6465bb0317723e08",
+          "rms_frames": 4669
+        },
+        {
+          "track": "datagen/solo/URMP/processed_va/36_Rondeau_vn_vn_va_vc_track3_va/data.npz",
+          "prefix": "t041",
+          "array_key": "midi_ddsp_t041",
+          "group": "Rondeau",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/85dafb246b4ec644/rms.npy",
+          "source_sha256": "4bd18659aceb5e95808fc14737e99aaf2075306c4722f8d5890ebe80a8bba64d",
+          "completion_sha256": "73e24ae374227e22af078c5f190a823da9ee3900e9b2de7d3f7c5d8251c2c779",
+          "rms_frames": 12817
+        },
+        {
+          "track": "datagen/solo/URMP/processed_tpt/31_Slavonic_tpt_tpt_hn_tbn_track2_tpt/data.npz",
+          "prefix": "t116",
+          "array_key": "midi_ddsp_t116",
+          "group": "Slavonic",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/85ef5894b22fa95c/rms.npy",
+          "source_sha256": "a7b8bcef619f6db161cf63e0417494df18fb9e7b2cbbd7469abae715a99c2d31",
+          "completion_sha256": "b56f04b90890490ddcf7a13a4a9fed566cd0a45a73020fa2081d9642c54c277c",
+          "rms_frames": 8176
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/35_Rondeau_vn_vn_va_db_track2_vn/data.npz",
+          "prefix": "t024",
+          "array_key": "midi_ddsp_t024",
+          "group": "Rondeau",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/8cf71026dcc718d0/rms.npy",
+          "source_sha256": "03f86ed4abe89457ea2be4105029cf843515546f8ef9c0a19c9623b0335483d3",
+          "completion_sha256": "c91f1ec1e24a2b78413088b8d342b84ec02be139aad0cd1bfd194e7589c4f0b4",
+          "rms_frames": 12817
+        },
+        {
+          "track": "datagen/solo/PHENICX/processed_bn/mozart_bassoon/data.npz",
+          "prefix": "t177",
+          "array_key": "midi_ddsp_t177",
+          "group": "phenicx_mozart",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/905b3e42f20a418b/rms.npy",
+          "source_sha256": "84afa26995dc278bbcb41ea1f790d712ed4a1e89e2ccb42a7ea730e3c29fb5c1",
+          "completion_sha256": "a8e9974b119c8d18cd928368c13c8d48ae494d22ccf709664a29bed07efd3581",
+          "rms_frames": 22710
+        },
+        {
+          "track": "datagen/solo/URMP/processed_sax/10_March_tpt_sax_track2_sax/data.npz",
+          "prefix": "t094",
+          "array_key": "midi_ddsp_t094",
+          "group": "March",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/90dac480c74092e1/rms.npy",
+          "source_sha256": "2741a605bfc2909e19a12d303a961333af6d4748cf9dc01282b9fbad60c08c47",
+          "completion_sha256": "c950405e59d1d24a3d0548000fcba28885050156605e157a9ce6355bb53a9c6d",
+          "rms_frames": 10275
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/18_Nocturne_vn_fl_tpt_track1_vn/data.npz",
+          "prefix": "t010",
+          "array_key": "midi_ddsp_t010",
+          "group": "Nocturne",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/911f5febeac41532/rms.npy",
+          "source_sha256": "9a3232237d43ed0e3dc29201de9f206fe598f8de3389eb9a9d2ae3a4dccb1630",
+          "completion_sha256": "5992e9d68bd7debb7d271186e23f522e89b71372d28f9a937eda7feed238ed08",
+          "rms_frames": 9561
+        },
+        {
+          "track": "datagen/solo/URMP/processed_tpt/16_Surprise_tpt_tpt_sax_track1_tpt/data.npz",
+          "prefix": "t111",
+          "array_key": "midi_ddsp_t111",
+          "group": "Surprise",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/9220ebbedb590b47/rms.npy",
+          "source_sha256": "0951287abbf67a514df8322bc43565fdc5f94e8e3e7449afa3ff0d7817e1b17f",
+          "completion_sha256": "35d8490aad021f15a43569f6982f7ffd0d05c1362f337ac9cde82dbcc8e2f928",
+          "rms_frames": 5303
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_bn/04-ChristeDuBeistand/data.npz",
+          "prefix": "t169",
+          "array_key": "midi_ddsp_t169",
+          "group": "bach10_b10_ChristeDuBeistand",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/92a5e365ada5cf63/rms.npy",
+          "source_sha256": "a5a2cbffaa4c560456c409e1dee9daca00bce68e7f5fb7dfcccd98d1222d6d10",
+          "completion_sha256": "266e96e37dff32267823fe65da6f2e84c726222c4f89b8faaa7bc2333974462e",
+          "rms_frames": 4162
+        },
+        {
+          "track": "datagen/solo/URMP/processed_sax/23_Rejouissance_cl_sax_tba_track2_sax/data.npz",
+          "prefix": "t097",
+          "array_key": "midi_ddsp_t097",
+          "group": "Rejouissance",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/93af45fe5397f75b/rms.npy",
+          "source_sha256": "1fdc08341ce1491d7c8439c0d07418d4d9c836362eeb89e7fa41bc0ec5d9846c",
+          "completion_sha256": "8d9d456c6f4a4256f2c2860cb8660ed010fb0f1c63a9369603305b5ab550553c",
+          "rms_frames": 7579
+        },
+        {
+          "track": "datagen/solo/URMP/processed_bn/40_Miserere_fl_fl_ob_cl_bn_track5_bn/data.npz",
+          "prefix": "t134",
+          "array_key": "midi_ddsp_t134",
+          "group": "Miserere",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/93bf50cd4f85a1a1/rms.npy",
+          "source_sha256": "c175f1d8bbf7b7436c49801f83125be48e22adf754b463d4b81ac09cb60723e4",
+          "completion_sha256": "985bd9f6f5d503b193e4cb9e8ae3f759326880d61d912b52b15a44d94f4afc67",
+          "rms_frames": 3992
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/01_Jupiter_vn_vc_track1_vn/data.npz",
+          "prefix": "t000",
+          "array_key": "midi_ddsp_t000",
+          "group": "Jupiter",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/94ae9094f30ddf65/rms.npy",
+          "source_sha256": "b9a1681353b225cf85a5b6d99465ac2f97b8e7fede741e7b42307ca5d72f7cde",
+          "completion_sha256": "a7b6c11b3051ba4197532aa62c2f8b469d6f58fa00893448bc964b7b295cde10",
+          "rms_frames": 6264
+        },
+        {
+          "track": "datagen/solo/URMP/processed_fl/29_Fugue_fl_fl_ob_cl_track1_fl/data.npz",
+          "prefix": "t067",
+          "array_key": "midi_ddsp_t067",
+          "group": "Fugue",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/95a3d79a24b9b290/rms.npy",
+          "source_sha256": "bf7bef1643b326ab04f64a0eb28737c340f687db4177aa93f0e7f84f2118e8cc",
+          "completion_sha256": "4056a9e64e20c64e683e6999cf84106fe14712fda947c94e34e77962889a5081",
+          "rms_frames": 17199
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/24_Pirates_vn_vn_va_vc_track2_vn/data.npz",
+          "prefix": "t014",
+          "array_key": "midi_ddsp_t014",
+          "group": "Pirates",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/98f81aa34aba5bb5/rms.npy",
+          "source_sha256": "941ce160119a65ac930b6d7e2ef7618a1539807e534ba917a8f3597d896e83d3",
+          "completion_sha256": "ee79f30ce5060e3386775f7eadaa50abf56aa4d54113d0ce66a077a73da55dab",
+          "rms_frames": 4979
+        },
+        {
+          "track": "datagen/solo/TRIOS/processed_vc/schubert_cello/data.npz",
+          "prefix": "t181",
+          "array_key": "midi_ddsp_t181",
+          "group": "trios_schubert",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/99ef09b60f10f9c9/rms.npy",
+          "source_sha256": "4d66d8b0145f9eeecd34f42438772037722a03cd85e488d37804a714a0d7b317",
+          "completion_sha256": "04c613570e0b4821051bc7c5fff60180dd09ccb9cdac5a068b135496fc7abcb6",
+          "rms_frames": 5313
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/35_Rondeau_vn_vn_va_db_track1_vn/data.npz",
+          "prefix": "t023",
+          "array_key": "midi_ddsp_t023",
+          "group": "Rondeau",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/9d9b89d288d2022b/rms.npy",
+          "source_sha256": "33b3df4c043823180b368cbef81a40407d6a3ff59c7e13dc4b8d81d632dfaffc",
+          "completion_sha256": "980816dced8938a9c047ed2be153ab9882af5129f8cb347bed07a926b0a51062",
+          "rms_frames": 12817
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/39_Jerusalem_vn_vn_va_sax_db_track2_vn/data.npz",
+          "prefix": "t031",
+          "array_key": "midi_ddsp_t031",
+          "group": "Jerusalem",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/9dae6703df56526e/rms.npy",
+          "source_sha256": "f7e690e78c8d1e543985776cd8e9b1f4041a9348401fa517f7f24187f252b39e",
+          "completion_sha256": "15528af0b50a235c384a421eb216185ca54a1c94a22f5b403571090bf07a97df",
+          "rms_frames": 11910
+        },
+        {
+          "track": "datagen/solo/URMP/processed_cl/37_Rondeau_fl_vn_va_cl_track4_cl/data.npz",
+          "prefix": "t090",
+          "array_key": "midi_ddsp_t090",
+          "group": "Rondeau",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/9eb751997c9ba759/rms.npy",
+          "source_sha256": "d0b385c50bfd0261b54bd3d99ec217b30422b5ca3cc3bd5eb71a2438b321e0c7",
+          "completion_sha256": "2283e8f6a0c031960e201c154525ca5e9b3c7f1c06b68dbfaaad8e20908da275",
+          "rms_frames": 12817
+        },
+        {
+          "track": "datagen/solo/URMP/processed_tpt/42_Arioso_tpt_tpt_hn_tbn_tba_track2_tpt/data.npz",
+          "prefix": "t122",
+          "array_key": "midi_ddsp_t122",
+          "group": "Arioso",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/9f4c20c13238cd27/rms.npy",
+          "source_sha256": "0321caedfc0f00228f34dece8676b31c796a1247a4c5ce3debe8b2a49c9efcce",
+          "completion_sha256": "af9d56b5263891ce4979db042a79cef4004dc68d74324b42b625bec6cb926d1f",
+          "rms_frames": 25500
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vc/01_Jupiter_vn_vc_track2_vc/data.npz",
+          "prefix": "t047",
+          "array_key": "midi_ddsp_t047",
+          "group": "Jupiter",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/9f6ad93b26aadda4/rms.npy",
+          "source_sha256": "e2a26af33feb4245f3c43af9990882d2dfced59e59a75d8c8aa357263c19313d",
+          "completion_sha256": "fffa2cda372b8ca50b1cee0343881fc5c6ebe44ab953c6ed7a474d662e907cf2",
+          "rms_frames": 6264
+        },
+        {
+          "track": "datagen/solo/TRIOS/processed_vn/schubert_violin/data.npz",
+          "prefix": "t179",
+          "array_key": "midi_ddsp_t179",
+          "group": "trios_schubert",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/a05899be8bebb42d/rms.npy",
+          "source_sha256": "d37cad6c44a21f5c8770f4570a9e64d4b16a23b423c4adc5392c3f6680f0e0dd",
+          "completion_sha256": "e4bb40743d724d4eb18981850434584586fc0a5a7f793067fa212a1061558f77",
+          "rms_frames": 5313
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/02_Sonata_vn_vn_track1_vn/data.npz",
+          "prefix": "t001",
+          "array_key": "midi_ddsp_t001",
+          "group": "Sonata",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/a388e135c1120c36/rms.npy",
+          "source_sha256": "931bba262567ecc9f1973ba0f406a5b7868ba73df3f68fc0ab215b5e1d1f28bf",
+          "completion_sha256": "786bc8acfc7886e2c3f3379d4c14898ca2253cdc88f6d0e89e3513095fdba6c8",
+          "rms_frames": 4603
+        },
+        {
+          "track": "datagen/solo/URMP/processed_fl/28_Fugue_fl_ob_cl_bn_track1_fl/data.npz",
+          "prefix": "t066",
+          "array_key": "midi_ddsp_t066",
+          "group": "Fugue",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/a770dd7c081add71/rms.npy",
+          "source_sha256": "9558ee72a55611570e8894b34f80072497d689eca565fad3c63faea87ae1b2da",
+          "completion_sha256": "f5f2a79ed5ef08e36bbba951bab9305f7dff82baec4139ac2e875b0bfa4cef32",
+          "rms_frames": 17456
+        },
+        {
+          "track": "datagen/solo/TRIOS/processed_va/mozart_viola/data.npz",
+          "prefix": "t180",
+          "array_key": "midi_ddsp_t180",
+          "group": "trios_mozart",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/a7cc3017f0dce3a0/rms.npy",
+          "source_sha256": "c7981c2d031b71df693ae3f6a1bb2365cbfc214d48dae009d5d8e34d3bff346f",
+          "completion_sha256": "3ee991a13a94408881d118b7b577976c19b7c69b1cf276dc824ca700d600771e",
+          "rms_frames": 3351
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/36_Rondeau_vn_vn_va_vc_track1_vn/data.npz",
+          "prefix": "t025",
+          "array_key": "midi_ddsp_t025",
+          "group": "Rondeau",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/a83802fd2c32763a/rms.npy",
+          "source_sha256": "9158e32ffc282df65ca01b4ace314902e926ab5e771d1fa99068319811b7c34a",
+          "completion_sha256": "286fa042ff404df16c77e06d8413c1fe2f75fbe0c47304f39b3a94552850d2ad",
+          "rms_frames": 12817
+        },
+        {
+          "track": "datagen/solo/URMP/processed_tpt/33_Elise_tpt_tpt_hn_tbn_track1_tpt/data.npz",
+          "prefix": "t117",
+          "array_key": "midi_ddsp_t117",
+          "group": "Elise",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/a8907d019f6a3f81/rms.npy",
+          "source_sha256": "22b776b784aa9bd84f387b5670871f8a79e02ec6c9fe05fd90378d27334a1333",
+          "completion_sha256": "32ad4c3899c820547c2f57acb188217987db300b7785746e54eeb4ac99d392d0",
+          "rms_frames": 4769
+        },
+        {
+          "track": "datagen/solo/URMP/processed_sax/41_Miserere_fl_fl_ob_sax_bn_track4_sax/data.npz",
+          "prefix": "t102",
+          "array_key": "midi_ddsp_t102",
+          "group": "Miserere",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/aed029e69155d48d/rms.npy",
+          "source_sha256": "3436fc8266c677010160e2a887372888d6f34ca31a703d01b962d504bebba0f0",
+          "completion_sha256": "d9e8d83eee995c5c4272317ed73d29f81591235099f86fff419e9bd12bf8780c",
+          "rms_frames": 3992
+        },
+        {
+          "track": "datagen/solo/URMP/processed_sax/30_Fugue_fl_fl_ob_sax_track4_sax/data.npz",
+          "prefix": "t100",
+          "array_key": "midi_ddsp_t100",
+          "group": "Fugue",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/b174782fa03dd30c/rms.npy",
+          "source_sha256": "c8ee58c7ff1435118e9a6447ac334da26aa1f92f622e040055464b3fca0ef0d3",
+          "completion_sha256": "6e1312aa895b1eafa42fe76fe31d966bcfac17fd7d9e4c7e88d763076f66ffb2",
+          "rms_frames": 17199
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_vn/08-FuerDeinenThron/data.npz",
+          "prefix": "t143",
+          "array_key": "midi_ddsp_t143",
+          "group": "bach10_b10_FuerDeinenThron",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/b30c89d20e33fe68/rms.npy",
+          "source_sha256": "429b95ac8217a5fbf035c193a51bcfab0895da18c569f8dc36dd0af91e7cee8f",
+          "completion_sha256": "563b7ec3786b7163b5a6e510eacc9ce2f87b1f17dde671ce327cbab045b4e699",
+          "rms_frames": 3320
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_sax/03-ChristederdubistTagundLicht/data.npz",
+          "prefix": "t158",
+          "array_key": "midi_ddsp_t158",
+          "group": "bach10_b10_ChristederdubistTagundLicht",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/b59bfdfde7bf1c6b/rms.npy",
+          "source_sha256": "2365da71f682d2f419510dc592ecf8c6b8b1ed385a36ecc6facb77350452a843",
+          "completion_sha256": "aedcdb7aa2cb3dcb967a82b9f775e6770b372e5578b62a116d63a81a68ae04ed",
+          "rms_frames": 2532
+        },
+        {
+          "track": "datagen/solo/URMP/processed_fl/41_Miserere_fl_fl_ob_sax_bn_track1_fl/data.npz",
+          "prefix": "t074",
+          "array_key": "midi_ddsp_t074",
+          "group": "Miserere",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/b61ec31b29509a0b/rms.npy",
+          "source_sha256": "8cd68048c6f3e44519e4615590f0c4bc1c680476ee537d4500c50012bada1b7d",
+          "completion_sha256": "5af31118a3a50a133ac1328c288b70b7fb9663dd9f5a17f4fc35cb8cfc4f4e6c",
+          "rms_frames": 3992
+        },
+        {
+          "track": "datagen/solo/URMP/processed_fl/30_Fugue_fl_fl_ob_sax_track2_fl/data.npz",
+          "prefix": "t070",
+          "array_key": "midi_ddsp_t070",
+          "group": "Fugue",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/b67074939b32f766/rms.npy",
+          "source_sha256": "6cdaaf25dcdf562d774596045c395c3577527e7932335a8d8afd7761caeb2829",
+          "completion_sha256": "74658a7fd3c165a4fc014bc1f1c86189897353d4c24812a54e1598c66a381c49",
+          "rms_frames": 17199
+        },
+        {
+          "track": "datagen/solo/URMP/processed_fl/14_Waltz_fl_fl_cl_track1_fl/data.npz",
+          "prefix": "t062",
+          "array_key": "midi_ddsp_t062",
+          "group": "Waltz",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/b731144282604acc/rms.npy",
+          "source_sha256": "b3734096216c85c6fcd191eb72461ed79c900c103cc55f7ce985076d5271192e",
+          "completion_sha256": "f22da29761907a9725985c5ce91f185a19a3efffd28d4293fda090b89fe0a95b",
+          "rms_frames": 9277
+        },
+        {
+          "track": "datagen/solo/URMP/processed_tpt/42_Arioso_tpt_tpt_hn_tbn_tba_track1_tpt/data.npz",
+          "prefix": "t121",
+          "array_key": "midi_ddsp_t121",
+          "group": "Arioso",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/b75f0b4055766d89/rms.npy",
+          "source_sha256": "db062b00e7028d23405c87cab5da23b868123f5ef688ee266157d497ff102aa1",
+          "completion_sha256": "f3587febec63075792bc8af3b15e46752040f74ad0d33046d33f462d0936e34a",
+          "rms_frames": 25500
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/44_K515_vn_vn_va_va_vc_track2_vn/data.npz",
+          "prefix": "t033",
+          "array_key": "midi_ddsp_t033",
+          "group": "K515",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/b810f40c902e15d6/rms.npy",
+          "source_sha256": "7e80ec9db40db800b5b6c43aa31e6cd58db9dc3632a3ac223d22400dca769e50",
+          "completion_sha256": "93dc75ecb2d6b00d6a887d53021bb5941c73bd830111f11aca40bb17b5ceec34",
+          "rms_frames": 22520
+        },
+        {
+          "track": "datagen/solo/TRIOS/processed_cl/mozart_clarinet/data.npz",
+          "prefix": "t182",
+          "array_key": "midi_ddsp_t182",
+          "group": "trios_mozart",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/b871d9ddcd4e073c/rms.npy",
+          "source_sha256": "c00a203ee6cb33651f6b485283decf6d27c27ada6b06019bf8948637f6af119c",
+          "completion_sha256": "0a1a2a7bf2277604a19298bb371906b8577314e379c1504213728bed643432eb",
+          "rms_frames": 3351
+        },
+        {
+          "track": "datagen/solo/URMP/processed_sax/22_Rejouissance_sax_tbn_tba_track1_sax/data.npz",
+          "prefix": "t096",
+          "array_key": "midi_ddsp_t096",
+          "group": "Rejouissance",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/bb78926a9f473ca9/rms.npy",
+          "source_sha256": "ad21bf0e44432997837d00de432127ae93227222399648743388575c7f059528",
+          "completion_sha256": "ad52fa66c25333c50ed6364bd03e6e70ceb65f3c914c446021c0f5048a011aaa",
+          "rms_frames": 7579
+        },
+        {
+          "track": "datagen/solo/URMP/processed_tbn/34_Fugue_tpt_tpt_hn_tbn_track4_tbn/data.npz",
+          "prefix": "t130",
+          "array_key": "midi_ddsp_t130",
+          "group": "Fugue",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/bb9c2c3c3010429f/rms.npy",
+          "source_sha256": "265d73bd85ce3f142a8ba0dfb2ceb009dc8b41db84d8d1e8c488a8c648e187e7",
+          "completion_sha256": "a8b5294bdb3c09ebb37bb26358f5bd87af391276936ad086c5aa727d6270f4df",
+          "rms_frames": 17415
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/08_Spring_fl_vn_track2_vn/data.npz",
+          "prefix": "t003",
+          "array_key": "midi_ddsp_t003",
+          "group": "Spring",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/bba8c6c0b16f91ed/rms.npy",
+          "source_sha256": "9b88b7fd9ff23e5883c1d056d20bf2853d4a4d18a45aeca36f2faaec9e37250f",
+          "completion_sha256": "e9fcc4801b91a8a7799a8466961bb0f02db2369d551083a778e037b937f11bd8",
+          "rms_frames": 3502
+        },
+        {
+          "track": "datagen/solo/URMP/processed_tpt/05_Entertainer_tpt_tpt_track1_tpt/data.npz",
+          "prefix": "t103",
+          "array_key": "midi_ddsp_t103",
+          "group": "Entertainer",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/bbda23e887f4bb07/rms.npy",
+          "source_sha256": "6f3c0e0b51b3348a5d0865765114588f3c6164c8b2af4ef1d36227a91f05119d",
+          "completion_sha256": "b2b7976c4875067baa7251ff724f443042e99d17687d72d681102ea30b636cee",
+          "rms_frames": 8707
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_vn/04-ChristeDuBeistand/data.npz",
+          "prefix": "t139",
+          "array_key": "midi_ddsp_t139",
+          "group": "bach10_b10_ChristeDuBeistand",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/bc34ff3e0162fd31/rms.npy",
+          "source_sha256": "2cc1618ce0580e524b0e77f2d8a64b164e0f6b5680a6fd6ab2772334f2c5d5e4",
+          "completion_sha256": "c40e188ee706890e7ff6d68e9ecdfe1b98723879af913258ee44caf7b3e8c015",
+          "rms_frames": 4162
+        },
+        {
+          "track": "datagen/solo/URMP/processed_tpt/18_Nocturne_vn_fl_tpt_track3_tpt/data.npz",
+          "prefix": "t113",
+          "array_key": "midi_ddsp_t113",
+          "group": "Nocturne",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/bcbbadce370e8670/rms.npy",
+          "source_sha256": "c6caf7c1c304213bc7c9e01569502874c31c3837f86b3991b5fe13854e83ccbf",
+          "completion_sha256": "4a40755a80624c26c167f6805af962cf7242c90d491f68ef7529243cf2166e59",
+          "rms_frames": 9561
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_vn/05-DieNacht/data.npz",
+          "prefix": "t140",
+          "array_key": "midi_ddsp_t140",
+          "group": "bach10_b10_DieNacht",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/bda1280d6cb084bc/rms.npy",
+          "source_sha256": "3f2b25093e9b738b42ded7760ef6439a627c38735c3634d4c7253b1deb64cfe5",
+          "completion_sha256": "d86de44d50aeb3a0242ebeb22178c574504442cc938f6301ab683e262c5e2eec",
+          "rms_frames": 3577
+        },
+        {
+          "track": "datagen/solo/URMP/processed_va/44_K515_vn_vn_va_va_vc_track4_va/data.npz",
+          "prefix": "t046",
+          "array_key": "midi_ddsp_t046",
+          "group": "K515",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/bde0d3d1a7450173/rms.npy",
+          "source_sha256": "d7c1c7a0db2b59a6f68251ca5ff71196874eff4ce2491dc9fa9447c2609b24ed",
+          "completion_sha256": "09cd766c1761daa77d2e67ec168d9be7b9d9c085d68d8b1021a3922e217afd6f",
+          "rms_frames": 22520
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_sax/05-DieNacht/data.npz",
+          "prefix": "t160",
+          "array_key": "midi_ddsp_t160",
+          "group": "bach10_b10_DieNacht",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/bf88d181c06c3ac3/rms.npy",
+          "source_sha256": "d75b76de91e9f71977d7bd0c25c58e1e783b11c059e5b895e24daa4d7af1febc",
+          "completion_sha256": "88b9e089e1a8c1129067a1d032a25c6fac83deefe7026439121cf6020c843275",
+          "rms_frames": 3577
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/27_King_vn_vn_va_sax_track1_vn/data.npz",
+          "prefix": "t019",
+          "array_key": "midi_ddsp_t019",
+          "group": "King",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/bff053b46eae0de1/rms.npy",
+          "source_sha256": "adb84e5093d761719823a24c7d0c322ab400604babed92814b66552e4cd23259",
+          "completion_sha256": "3e4509b3635849c560a06ac6da82ea2e50b245e70eb9258e0ca090bc45506ae2",
+          "rms_frames": 8516
+        },
+        {
+          "track": "datagen/solo/URMP/processed_tpt/09_Jesus_tpt_vn_track1_tpt/data.npz",
+          "prefix": "t106",
+          "array_key": "midi_ddsp_t106",
+          "group": "Jesus",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/c0506d398303ffdc/rms.npy",
+          "source_sha256": "2f7224743e9a6373ec02909377a43a3add2085e55e03e7ccb7e33d521f3303e4",
+          "completion_sha256": "c8ac2f1ae72200ee6edec32caea655ed54a549b6297af17cb3dd9d1dff8d017d",
+          "rms_frames": 19884
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_bn/06-DieSonne/data.npz",
+          "prefix": "t171",
+          "array_key": "midi_ddsp_t171",
+          "group": "bach10_b10_DieSonne",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/c21a2f200eabd68f/rms.npy",
+          "source_sha256": "cf3a3a11bcf975e5dea666117f170121ce1291ae59d0a615996c1396344285b4",
+          "completion_sha256": "01e96a4f42865dd20a5d1ea2e1df3e2740cdb260e79c5efe55b6b510a96fe282",
+          "rms_frames": 3325
+        },
+        {
+          "track": "datagen/solo/URMP/processed_fl/14_Waltz_fl_fl_cl_track2_fl/data.npz",
+          "prefix": "t063",
+          "array_key": "midi_ddsp_t063",
+          "group": "Waltz",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/c306b0aaa3c3c7f4/rms.npy",
+          "source_sha256": "2238e9448d450f925c2e48a8e78448a2769fde57018768064e178a0670404a33",
+          "completion_sha256": "4702f4fa30ba5e87939ecc018fdac4e2c21fe48b2f7332a936a454ed24c4bfdb",
+          "rms_frames": 9277
+        },
+        {
+          "track": "datagen/solo/TRIOS/processed_bn/lussier_bassoon/data.npz",
+          "prefix": "t185",
+          "array_key": "midi_ddsp_t185",
+          "group": "trios_lussier",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/c89f13c130e96554/rms.npy",
+          "source_sha256": "a982bd7356301e457400a92f24f29d7cb0114847157e49dcfbaa6a5858ffb7ca",
+          "completion_sha256": "61f114c2f8adeca7ba5102550238d2d9de77dd536105d8464de128d09f3b0a4c",
+          "rms_frames": 1801
+        },
+        {
+          "track": "datagen/solo/URMP/processed_va/24_Pirates_vn_vn_va_vc_track3_va/data.npz",
+          "prefix": "t035",
+          "array_key": "midi_ddsp_t035",
+          "group": "Pirates",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/cba34d42cfcdf516/rms.npy",
+          "source_sha256": "22f329c3091503ed66a7d8247e8b7fb24b11a8d1136c4b1749242386572c06ab",
+          "completion_sha256": "18443bf79bb1d9bce65cbf46f0936ffba267c582b639723007ad27b7af41241e",
+          "rms_frames": 4979
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/32_Fugue_vn_vn_va_vc_track1_vn/data.npz",
+          "prefix": "t021",
+          "array_key": "midi_ddsp_t021",
+          "group": "Fugue",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/cd2cf609c898fa4f/rms.npy",
+          "source_sha256": "2ec667fffbb7dc516f2f23bcdf84bcae09abfd3665d6e95a6ccc8be69548bcc5",
+          "completion_sha256": "51ee176b6d24c5f1a47d288ec3878d75e375ef5060edcd122b11a1b967584486",
+          "rms_frames": 17362
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_bn/10-NunBitten/data.npz",
+          "prefix": "t175",
+          "array_key": "midi_ddsp_t175",
+          "group": "bach10_b10_NunBitten",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/cdd65bd329d71de3/rms.npy",
+          "source_sha256": "1f9087af1c5e99164671002bb2c5145c44e00dded4f641eb1ec93c149067659b",
+          "completion_sha256": "f0b09a71934ba1aeeb294837ca9f3008e6b755934dc587ffa63324ad0025d5ef",
+          "rms_frames": 3735
+        },
+        {
+          "track": "datagen/solo/URMP/processed_fl/41_Miserere_fl_fl_ob_sax_bn_track2_fl/data.npz",
+          "prefix": "t075",
+          "array_key": "midi_ddsp_t075",
+          "group": "Miserere",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/cfa7fcb0d4f66fd7/rms.npy",
+          "source_sha256": "04fa1de19de86ceb9c41b986d0d2d9cf6e31b954437e37b97f0d6f7c61f3e1e0",
+          "completion_sha256": "6d02833aa09122ba12c2f1b528e6aea1e5d5b1f0de27f7aab94c8fbe1b02c644",
+          "rms_frames": 3992
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/20_Pavane_tpt_vn_vc_track2_vn/data.npz",
+          "prefix": "t012",
+          "array_key": "midi_ddsp_t012",
+          "group": "Pavane",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/d5b1e58b766c1893/rms.npy",
+          "source_sha256": "26709e3a637871924a8c6467c6592570264a754a720806db58fb0b9b9243278c",
+          "completion_sha256": "6d2fb9913bb90c266d44fb8ef263dc44ff03738aeb193da4d28b1ad82e761498",
+          "rms_frames": 13335
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_sax/10-NunBitten/data.npz",
+          "prefix": "t165",
+          "array_key": "midi_ddsp_t165",
+          "group": "bach10_b10_NunBitten",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/d5b666998b172c42/rms.npy",
+          "source_sha256": "ae8e981bc7149081e84ee1029951c8f81c706a7e2d414123b566954ff9ddff15",
+          "completion_sha256": "0712a42bcc8dc7904bb33cc795c0c73711016ebff0fc9d5dec4b4e07a39e3118",
+          "rms_frames": 3735
+        },
+        {
+          "track": "datagen/solo/URMP/processed_tpt/07_GString_tpt_tbn_track1_tpt/data.npz",
+          "prefix": "t105",
+          "array_key": "midi_ddsp_t105",
+          "group": "GString",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/d9df90ae310861af/rms.npy",
+          "source_sha256": "6b16cd69a70ff1d0e4b0b0272b0b88a9816f3d4931c31c0c740ab2e7df2a90ca",
+          "completion_sha256": "8572b18f5c23ec3cf20a9497ec76464e4b2d27228174d35e8f96b0b98f248cf3",
+          "rms_frames": 26972
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_cl/08-FuerDeinenThron/data.npz",
+          "prefix": "t153",
+          "array_key": "midi_ddsp_t153",
+          "group": "bach10_b10_FuerDeinenThron",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/da5ac3e678a0ba95/rms.npy",
+          "source_sha256": "263080a1e5651b0cf4ef62dd59dcd6657b6fdeda0ffe0833b68cc32427feba7e",
+          "completion_sha256": "43831f9a0098d204aa2e35dd282cb1fa54d39db83a9576ac036875dc5b12114c",
+          "rms_frames": 3320
+        },
+        {
+          "track": "datagen/solo/URMP/processed_va/13_Hark_vn_vn_va_track3_va/data.npz",
+          "prefix": "t034",
+          "array_key": "midi_ddsp_t034",
+          "group": "Hark",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/db870909a48cea05/rms.npy",
+          "source_sha256": "d4ee83445b38d0ba9c8dbdc626efe832cb083d3d9a82e3e373a834caa270d4ca",
+          "completion_sha256": "8c2200c6cc281d9741ced5ba0d0f83aca231862619ba6cbb49c5e4d71997fd54",
+          "rms_frames": 4669
+        },
+        {
+          "track": "datagen/solo/URMP/processed_sax/06_Entertainer_sax_sax_track1_sax/data.npz",
+          "prefix": "t092",
+          "array_key": "midi_ddsp_t092",
+          "group": "Entertainer",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/de4a91f14cab2e24/rms.npy",
+          "source_sha256": "af2059fdafe64de45b0f8026208de1a09bbacc35aab84326ab99c9b09f2d1b71",
+          "completion_sha256": "9d11c6a579d1dd407036279c8656c3904bad30b2c2a40939aee4c5d66728356f",
+          "rms_frames": 8750
+        },
+        {
+          "track": "datagen/solo/URMP/processed_tbn/43_Chorale_tpt_tpt_hn_tbn_tba_track4_tbn/data.npz",
+          "prefix": "t132",
+          "array_key": "midi_ddsp_t132",
+          "group": "Chorale",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/de72c19e996e869b/rms.npy",
+          "source_sha256": "3431aed444db124d31da7e8552f90f8475e90a28e7ce850209260b071e391ca8",
+          "completion_sha256": "f3ff8fe3c1feef643d5c7a34c535ee623dd426e3e4b032bccff41d4ee6ab5693",
+          "rms_frames": 5343
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/13_Hark_vn_vn_va_track2_vn/data.npz",
+          "prefix": "t008",
+          "array_key": "midi_ddsp_t008",
+          "group": "Hark",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/df5148586f29128d/rms.npy",
+          "source_sha256": "dce1e245805111c96d28076a75eb8fc59189ed24597a8d0401c917d200820751",
+          "completion_sha256": "46ae99079a8bb94e0c8a75f84f4ec0cee521a8c5c0db0f873a5f6150cc028a0f",
+          "rms_frames": 4669
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_sax/02-AchLiebenChristen/data.npz",
+          "prefix": "t157",
+          "array_key": "midi_ddsp_t157",
+          "group": "bach10_b10_AchLiebenChristen",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/e0ea7848a9af2a98/rms.npy",
+          "source_sha256": "74737a3b2c5981cce4f7c176f34a21295ada3e9e14f447634fc1c6aadeda89e1",
+          "completion_sha256": "b5b13695980cd23dbaec9e8b0a530de337cf0c9e3e529d57669c9f46993f6d1f",
+          "rms_frames": 4049
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_cl/06-DieSonne/data.npz",
+          "prefix": "t151",
+          "array_key": "midi_ddsp_t151",
+          "group": "bach10_b10_DieSonne",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/e251cc9ba1772f95/rms.npy",
+          "source_sha256": "8aa4cc29c20e5bf492a4fbe261719f8922e026360e21568de0d2b7f23566dc15",
+          "completion_sha256": "c47168258c6add9238b570dc2fbc68dff2f1e75ecd7d4738877679dfa79111dc",
+          "rms_frames": 3325
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vc/36_Rondeau_vn_vn_va_vc_track4_vc/data.npz",
+          "prefix": "t055",
+          "array_key": "midi_ddsp_t055",
+          "group": "Rondeau",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/e2e39d40374d2b0b/rms.npy",
+          "source_sha256": "6e5f5d10a3d05c524551131d9fff0d6073253df3f3e5e7a464fe4cbdb25d668d",
+          "completion_sha256": "b87d8b56f5c96e2ac6c65be354ea12506fa13ddd3aa4195d695ee5e6b10e595c",
+          "rms_frames": 12817
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_cl/05-DieNacht/data.npz",
+          "prefix": "t150",
+          "array_key": "midi_ddsp_t150",
+          "group": "bach10_b10_DieNacht",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/e7a5a046deff3f3f/rms.npy",
+          "source_sha256": "f2b860656b07c4dbc7b5edf25313880ec17ff3e427badd9c0cd46e1a5506066a",
+          "completion_sha256": "d9acc357b9bfaee50b31addc4414b83fbf3dce9870fa2974b54773c0adbc150f",
+          "rms_frames": 3577
+        },
+        {
+          "track": "datagen/solo/URMP/processed_fl/18_Nocturne_vn_fl_tpt_track2_fl/data.npz",
+          "prefix": "t065",
+          "array_key": "midi_ddsp_t065",
+          "group": "Nocturne",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/e99509c788b7042c/rms.npy",
+          "source_sha256": "8f0124d1bbc95373503d6245251f22a7dd7eefbabbf23591a234b0219cbe9d2d",
+          "completion_sha256": "f991b4384bf1ace4f9233085359f02b57aaf0e3fdedab21fa77285db12c9f9d0",
+          "rms_frames": 9561
+        },
+        {
+          "track": "datagen/solo/URMP/processed_fl/03_Dance_fl_cl_track1_fl/data.npz",
+          "prefix": "t058",
+          "array_key": "midi_ddsp_t058",
+          "group": "Dance",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/ea3319a84099c38a/rms.npy",
+          "source_sha256": "a096ee578d5b4d8cdc662cb56874ab7ab8fe8c6c660dac8f016b56da2bc050c4",
+          "completion_sha256": "f9273bbab16a3af5fca8b4777752c977b22c63066387310971b09553ed61dc2a",
+          "rms_frames": 9708
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/26_King_vn_vn_va_vc_track2_vn/data.npz",
+          "prefix": "t018",
+          "array_key": "midi_ddsp_t018",
+          "group": "King",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/eab546635f7132ff/rms.npy",
+          "source_sha256": "f566148cc3aef28614dde4fce8dd7e0ea31cbfc0e8c1306745f83a34c629284b",
+          "completion_sha256": "67f70924287d9e8cfaee359755341cfdb1c4cddd4143216458afabf50367bd15",
+          "rms_frames": 8516
+        },
+        {
+          "track": "datagen/solo/URMP/processed_ob/28_Fugue_fl_ob_cl_bn_track2_ob/data.npz",
+          "prefix": "t077",
+          "array_key": "midi_ddsp_t077",
+          "group": "Fugue",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/ec885d6eaccf4d6f/rms.npy",
+          "source_sha256": "e3c34997d8ac6ecce706113a63c7528275e1ff973c49f2e7d8714c3331705534",
+          "completion_sha256": "993b452f1ab58c96e8c6b83d1fdd75dbc01ca96877735a7d210e0fb9bda54f7e",
+          "rms_frames": 17456
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vc/44_K515_vn_vn_va_va_vc_track5_vc/data.npz",
+          "prefix": "t057",
+          "array_key": "midi_ddsp_t057",
+          "group": "K515",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/ef4966e3f0c42068/rms.npy",
+          "source_sha256": "2758163f894ba4e69609a7bb62df29aad21706e3864d41f0a0157b1e3873154d",
+          "completion_sha256": "d1e0328d9dacc1b1bb74a8c2dcb893c0a58f5351cb86993d90608c37dc0aaf4c",
+          "rms_frames": 22520
+        },
+        {
+          "track": "datagen/solo/URMP/processed_cl/21_Rejouissance_cl_tbn_tba_track1_cl/data.npz",
+          "prefix": "t086",
+          "array_key": "midi_ddsp_t086",
+          "group": "Rejouissance",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/f29c33ca8ddf1086/rms.npy",
+          "source_sha256": "e3d5fd01c097354359f835b6863ec1f10ac907a4f5ff079dbf38f101806f4cf1",
+          "completion_sha256": "fa58f3bc1137e057129af0829c3062f8e898724a101c99bc6bbc319791980b07",
+          "rms_frames": 7579
+        },
+        {
+          "track": "datagen/solo/URMP/processed_va/26_King_vn_vn_va_vc_track3_va/data.npz",
+          "prefix": "t037",
+          "array_key": "midi_ddsp_t037",
+          "group": "King",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/f2e6ca8fdee50922/rms.npy",
+          "source_sha256": "c5974fe538ce6085f4622efc803badce0466be1d9338dc2d85bc1718fc43511b",
+          "completion_sha256": "2a5fccdc38cd7fb638fccf718406030dbc647502315f28c60b85483ff91ba400",
+          "rms_frames": 8516
+        },
+        {
+          "track": "datagen/solo/URMP/processed_fl/30_Fugue_fl_fl_ob_sax_track1_fl/data.npz",
+          "prefix": "t069",
+          "array_key": "midi_ddsp_t069",
+          "group": "Fugue",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/f3c3bdb7b3a59086/rms.npy",
+          "source_sha256": "c4271250e306dcb8b6306626286d5c66ab2effe905c6327ecf2d2d39a740b51f",
+          "completion_sha256": "dbeb3f5cf64ddd90eae7e2992264f0b25a599a0639365dd46ca2f87ed3e20549",
+          "rms_frames": 17199
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_vn/10-NunBitten/data.npz",
+          "prefix": "t145",
+          "array_key": "midi_ddsp_t145",
+          "group": "bach10_b10_NunBitten",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/f3ce6ff474b9d724/rms.npy",
+          "source_sha256": "88c8d67fc44457f8b96feaadfa6425947f1e5aa07e202cbd36efe49477b8c7b4",
+          "completion_sha256": "f51c0b18404c4c34904e48d2b644cca2a456f45d719fc924c5cb56178cb7466c",
+          "rms_frames": 3735
+        },
+        {
+          "track": "datagen/solo/URMP/processed_tbn/22_Rejouissance_sax_tbn_tba_track2_tbn/data.npz",
+          "prefix": "t127",
+          "array_key": "midi_ddsp_t127",
+          "group": "Rejouissance",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/f43a7fa6f83db97d/rms.npy",
+          "source_sha256": "0082f1dbb4f569d92ef4ee85789e82cd503e2b023be7acecfb5edce9556fdc59",
+          "completion_sha256": "ee55a1342660f4d4de8ee4ecc94b9dd5bb13d6b269e9697b58aca7cdc0c58417",
+          "rms_frames": 7579
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/36_Rondeau_vn_vn_va_vc_track2_vn/data.npz",
+          "prefix": "t026",
+          "array_key": "midi_ddsp_t026",
+          "group": "Rondeau",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/f684378797d63ff1/rms.npy",
+          "source_sha256": "e52d965f1227dfc3890e983904a4c0fd88e8d517a0c55323ef9ed56a165c41e6",
+          "completion_sha256": "44dd03716f68b512bfa8967985dbd13c48119b63161e680232d74ee642acd96a",
+          "rms_frames": 12817
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/37_Rondeau_fl_vn_va_cl_track2_vn/data.npz",
+          "prefix": "t027",
+          "array_key": "midi_ddsp_t027",
+          "group": "Rondeau",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/f7adf8dbe726b585/rms.npy",
+          "source_sha256": "8c43420bbbb29839332a6d3f5fb92fcf526d8a02727f4ce8813382e18009dd98",
+          "completion_sha256": "9f958b2704df4af81f980ddace0892f440e9d1253dc23f28e06f1759b668f68e",
+          "rms_frames": 12817
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_cl/04-ChristeDuBeistand/data.npz",
+          "prefix": "t149",
+          "array_key": "midi_ddsp_t149",
+          "group": "bach10_b10_ChristeDuBeistand",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/f9e9651fa08dd640/rms.npy",
+          "source_sha256": "413d35a7083cc063287035f6309a1fdd1f844f131c3db92f2e52922a0308482d",
+          "completion_sha256": "9ab00ae3b9d1b07513197a63095639b4d6a2b73a08d66ac524aeec79dc25279e",
+          "rms_frames": 4162
+        },
+        {
+          "track": "datagen/solo/URMP/processed_tpt/43_Chorale_tpt_tpt_hn_tbn_tba_track1_tpt/data.npz",
+          "prefix": "t123",
+          "array_key": "midi_ddsp_t123",
+          "group": "Chorale",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/fbaf5ce0a44a7a48/rms.npy",
+          "source_sha256": "c292f68ad157a85238491054f08cf6e71539cec82f44acb6a03c0df49e6542f3",
+          "completion_sha256": "a3fd1b6202148ffa1b51615629596efd814e4f4c887de5b0e26b84c501d06ac2",
+          "rms_frames": 5343
+        },
+        {
+          "track": "datagen/solo/URMP/processed_va/35_Rondeau_vn_vn_va_db_track3_va/data.npz",
+          "prefix": "t040",
+          "array_key": "midi_ddsp_t040",
+          "group": "Rondeau",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/fccc4bfe8a018100/rms.npy",
+          "source_sha256": "c4ac9227d554b3810b887c74964abee374b99d309e9e4adda9df5b6381c6d08f",
+          "completion_sha256": "4cc3d819ecb0e74ba8edfc3125e0007fb791765940392113a6a0be6f0d6fbb7e",
+          "rms_frames": 12817
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vc/20_Pavane_tpt_vn_vc_track3_vc/data.npz",
+          "prefix": "t051",
+          "array_key": "midi_ddsp_t051",
+          "group": "Pavane",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/fdc02694b2b62c04/rms.npy",
+          "source_sha256": "fa24fbb69b68657ad4e2a318d0db51b0e27bc6e432cff5a43dd15f302c79032d",
+          "completion_sha256": "ef099ed5db9760ac47c2c5d12d6c7e83ec107972d42b6dd3b6a7864a62df29bc",
+          "rms_frames": 13335
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_bn/01-AchGottundHerr/data.npz",
+          "prefix": "t166",
+          "array_key": "midi_ddsp_t166",
+          "group": "bach10_b10_AchGottundHerr",
+          "source_file": "external_baselines/runs/midi_ddsp_public_v1/collected_audio/audio/ffdcf031efde57fa/rms.npy",
+          "source_sha256": "c52989aac340d919d127711edde13ab4e021bad7124ceb7b405ad34222aa4a48",
+          "completion_sha256": "6826f27428a614926e8ed0723e55f1d9226f414ca9995d4859782fe9f4ff3314",
+          "rms_frames": 2519
+        }
+      ],
+      "report_sha256": "7208756d4dd8e1e62a6f61b1d02e21a6846b790fcb343074a3e3a26971a77720"
+    },
+    "midi2params": {
+      "rows": [
+        {
+          "track": "datagen/solo/URMP/processed_vn/44_K515_vn_vn_va_va_vc_track1_vn/data.npz",
+          "prefix": "t032",
+          "array_key": "midi2params_t032",
+          "group": "K515",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/0e3e659b5140ae24/rms.npy",
+          "source_sha256": "70a1da537c2833b2a798073ce570eebee475ba9869f021747d3e6602899022bf",
+          "completion_sha256": "f9f9ed7cd9a28b4fda754bf4bd5189496bbe88dd82c9eb073019b975edf82d28",
+          "rms_frames": 22520
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/19_Pavane_cl_vn_vc_track2_vn/data.npz",
+          "prefix": "t011",
+          "array_key": "midi2params_t011",
+          "group": "Pavane",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/109ecd43f1f1a06c/rms.npy",
+          "source_sha256": "5bde70cbdb93c9e377026a24b08af92f5dbe59a175572d0e4a7b9a3e08aa05b9",
+          "completion_sha256": "02c99175ee8d0f58621e26dcb8581e2933dc534d5795229f1ceb1898030aa925",
+          "rms_frames": 13335
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/39_Jerusalem_vn_vn_va_sax_db_track1_vn/data.npz",
+          "prefix": "t030",
+          "array_key": "midi2params_t030",
+          "group": "Jerusalem",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/12b9bb36e621fa3b/rms.npy",
+          "source_sha256": "a2c4081a43d035c037012bf74b7580d10df7340c628e6a7b5beee863e31133eb",
+          "completion_sha256": "bbda7d09d7f00f5f204ec6f90eb0c32a449e449f8cb10895ddb938846bb360d3",
+          "rms_frames": 11910
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/27_King_vn_vn_va_sax_track2_vn/data.npz",
+          "prefix": "t020",
+          "array_key": "midi2params_t020",
+          "group": "King",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/12bd332eb47ff1a6/rms.npy",
+          "source_sha256": "d5f013f326d220a7a4a607b60d5d55be79d37419f3f4e021e2bbc52292ec7feb",
+          "completion_sha256": "372f877c9f1bd3208e88bc7f668ec43fa33b0467171cf6150818249eef7e2197",
+          "rms_frames": 8516
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/02_Sonata_vn_vn_track2_vn/data.npz",
+          "prefix": "t002",
+          "array_key": "midi2params_t002",
+          "group": "Sonata",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/18214e040172a2c0/rms.npy",
+          "source_sha256": "30502db9b2205e8fa768e0144e112122ac3f2f0b654a58985eee38429e8ce865",
+          "completion_sha256": "ce910dbfa0c9933050c4da4e2fe49510450dee33ddbd97b45512266a46be5aa9",
+          "rms_frames": 4603
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/12_Spring_vn_vn_vc_track1_vn/data.npz",
+          "prefix": "t005",
+          "array_key": "midi2params_t005",
+          "group": "Spring",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/24fba221c3166332/rms.npy",
+          "source_sha256": "8f172359497f4a971b877de110229cb2a09ad1e20d53d821987cba1e299c6b25",
+          "completion_sha256": "025cb6f52284c93fad494826daf811e58cb23a907e93c5c262d19098dbe50979",
+          "rms_frames": 13092
+        },
+        {
+          "track": "datagen/solo/TRIOS/processed_vn/brahms_violin/data.npz",
+          "prefix": "t178",
+          "array_key": "midi2params_t178",
+          "group": "trios_brahms",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/367246a2b8ae61bd/rms.npy",
+          "source_sha256": "2468a6155f371900a42985e57c2dc0d17422fd89c5d6700f23c9b9751f4a9627",
+          "completion_sha256": "9b7fde31ce82c9842ef9fd133a3198866ab1086c9c125b1e78e41867045cc80f",
+          "rms_frames": 4301
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_vn/01-AchGottundHerr/data.npz",
+          "prefix": "t136",
+          "array_key": "midi2params_t136",
+          "group": "bach10_b10_AchGottundHerr",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/3950d769e5709896/rms.npy",
+          "source_sha256": "121ce7a5aae8817d5e544632f3469e4bc4756d1ce953f25c817355eb946684de",
+          "completion_sha256": "e242509fcf0368bd13401037c727061c4523afd1687773983cdd3fd730c104e0",
+          "rms_frames": 2519
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/25_Pirates_vn_vn_va_sax_track2_vn/data.npz",
+          "prefix": "t016",
+          "array_key": "midi2params_t016",
+          "group": "Pirates",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/3c102285d941fc7c/rms.npy",
+          "source_sha256": "266794cf1a7c76aa2eb9b13bd0a707e4912e27f7f8af5b682467bc71ede1f39b",
+          "completion_sha256": "b349a71a216e700288f29725e61c6681e59079bd356481aba6358ba3fac62185",
+          "rms_frames": 4979
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/12_Spring_vn_vn_vc_track2_vn/data.npz",
+          "prefix": "t006",
+          "array_key": "midi2params_t006",
+          "group": "Spring",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/433fa331a7daba2c/rms.npy",
+          "source_sha256": "0283fab2c2b507b763dc3c66b6368ab0501d402aef41cecf52e38a70be5163b5",
+          "completion_sha256": "5de2fa6c8f2724db00d11e534cb74edb48c925cbba9d58e8cba20ea029e23ac7",
+          "rms_frames": 13092
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_vn/03-ChristederdubistTagundLicht/data.npz",
+          "prefix": "t138",
+          "array_key": "midi2params_t138",
+          "group": "bach10_b10_ChristederdubistTagundLicht",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/454156146e1b03c3/rms.npy",
+          "source_sha256": "d572dd3aa13c45e07d0730df65220d7ea5ad1d44ecb8cbfdbd0bb842411895cd",
+          "completion_sha256": "4a47c2e68c91559fbfd7ec457ea5a3c2b93d973c28d2900f397e4e19526a21fa",
+          "rms_frames": 2532
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/09_Jesus_tpt_vn_track2_vn/data.npz",
+          "prefix": "t004",
+          "array_key": "midi2params_t004",
+          "group": "Jesus",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/47891e06a6363585/rms.npy",
+          "source_sha256": "0fcd35f35a400e2d3753f72a8302d4839a74b6d2005681a214c5deaae8fe3714",
+          "completion_sha256": "6f8e0f5b7b2729b0088640e4c2745fb35286b0f51d018813ccb8d76b6051f3bd",
+          "rms_frames": 19884
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_vn/06-DieSonne/data.npz",
+          "prefix": "t141",
+          "array_key": "midi2params_t141",
+          "group": "bach10_b10_DieSonne",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/47b90767ac785da2/rms.npy",
+          "source_sha256": "9090d3415ddc3d7d2ef63f0593158a8412c2bbf19a33df07b19e3a86f2113c28",
+          "completion_sha256": "2b2fa5d87708e032a0790b073b46c2d126cf7fd886d5cb4d312de45d3f95797a",
+          "rms_frames": 3325
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_vn/07-HerrGott/data.npz",
+          "prefix": "t142",
+          "array_key": "midi2params_t142",
+          "group": "bach10_b10_HerrGott",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/4893c6e006ba9438/rms.npy",
+          "source_sha256": "33aed081e3d47e975a2288fc5bcd83ac2bb3add1a10216f6cc46cb57b3a2bd68",
+          "completion_sha256": "646ea96e88fbd8c989e6fa563cab5684f275a2af24a8ea80349ff42c76823e00",
+          "rms_frames": 3252
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/38_Jerusalem_vn_vn_va_vc_db_track1_vn/data.npz",
+          "prefix": "t028",
+          "array_key": "midi2params_t028",
+          "group": "Jerusalem",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/51e55604a8164f76/rms.npy",
+          "source_sha256": "891e67c0c4c3395fcd971254ef5538967c44d5a73829b15dca9982fa61259843",
+          "completion_sha256": "b112ec1ed1e8474bda9699b8604325322c33936785e0ef69efec43df3284e7ac",
+          "rms_frames": 11910
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_vn/09-Jesus/data.npz",
+          "prefix": "t144",
+          "array_key": "midi2params_t144",
+          "group": "bach10_b10_Jesus",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/62bb21b1bd974fc9/rms.npy",
+          "source_sha256": "ba312b43b76640a3f106ec7b0d870fb51e1978e297386af46b13be411f4ba4b2",
+          "completion_sha256": "f7364bc80316f2a0524f13387da700cb11aa06c4f1c53a40fea18c70968dad91",
+          "rms_frames": 2931
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/17_Nocturne_vn_fl_cl_track1_vn/data.npz",
+          "prefix": "t009",
+          "array_key": "midi2params_t009",
+          "group": "Nocturne",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/6758407e96338ba7/rms.npy",
+          "source_sha256": "898828470f78b4a3755179fc4dc268ffcb249d36aa0a89c22bad9060b38efe2f",
+          "completion_sha256": "dd12dcac16eb3a55d38dd7d2d72aca828080824bc00ebe8befd5e516428fb041",
+          "rms_frames": 9561
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_vn/02-AchLiebenChristen/data.npz",
+          "prefix": "t137",
+          "array_key": "midi2params_t137",
+          "group": "bach10_b10_AchLiebenChristen",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/69ce05e7c542031e/rms.npy",
+          "source_sha256": "5d80e21d59b92ccd5d2f28d13ea138db276800c101acd0f0a1a8c7291e59bdf9",
+          "completion_sha256": "0cc406bd5176854c2863c5ad3089b1332d60de6394dad2f53b1d48fa59e2facb",
+          "rms_frames": 4049
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/24_Pirates_vn_vn_va_vc_track1_vn/data.npz",
+          "prefix": "t013",
+          "array_key": "midi2params_t013",
+          "group": "Pirates",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/6a2e586eb0f91931/rms.npy",
+          "source_sha256": "d27f5318df2ad3a20a9a43f190e087eb1839066b278d26dfe1ff1af16562f153",
+          "completion_sha256": "a1bca0d88009c868c12ac0ceb5445e77c93ad1784660b56965b404f357dec222",
+          "rms_frames": 4979
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/26_King_vn_vn_va_vc_track1_vn/data.npz",
+          "prefix": "t017",
+          "array_key": "midi2params_t017",
+          "group": "King",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/71fbee04b8aea60b/rms.npy",
+          "source_sha256": "d3e1186a4ed543ee50034c7efdaa2066e515e099c4e8b49d78d86ee3f11154da",
+          "completion_sha256": "58e75fe844896b6681e07b226af1b1889139a13592365ff83587405d37a9f441",
+          "rms_frames": 8516
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/32_Fugue_vn_vn_va_vc_track2_vn/data.npz",
+          "prefix": "t022",
+          "array_key": "midi2params_t022",
+          "group": "Fugue",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/74c0cee63921644d/rms.npy",
+          "source_sha256": "45a8bf4f7c00f9981d84a9c6a7bed637fd61e43314f41c3df5633e2520dae542",
+          "completion_sha256": "d904ebc1392e3c7e48d4b6a1c925a5975e313bdd0600d31fb65b3e7bf0b09695",
+          "rms_frames": 17362
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/25_Pirates_vn_vn_va_sax_track1_vn/data.npz",
+          "prefix": "t015",
+          "array_key": "midi2params_t015",
+          "group": "Pirates",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/844543b47dab1f83/rms.npy",
+          "source_sha256": "b4222ceb4455b4b68ecc182c08c4ad9d42334c1fdcbff0ce4fd5fd6182ce7d10",
+          "completion_sha256": "d3bd6b88fff8fe025abde038c5ade12eb55b5b81c980018442997198b5d675f5",
+          "rms_frames": 4979
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/38_Jerusalem_vn_vn_va_vc_db_track2_vn/data.npz",
+          "prefix": "t029",
+          "array_key": "midi2params_t029",
+          "group": "Jerusalem",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/859b30694f135a78/rms.npy",
+          "source_sha256": "ce4354bac989e1a8b511fb3c19a6c8b6b0d3493633107eadfdd8ee66243bbd83",
+          "completion_sha256": "04a61b576e8a8a6cd47dfb869b416014c20ce9db060a3763f9b16adee7bbe356",
+          "rms_frames": 11910
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/13_Hark_vn_vn_va_track1_vn/data.npz",
+          "prefix": "t007",
+          "array_key": "midi2params_t007",
+          "group": "Hark",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/85c32213db2bdbd3/rms.npy",
+          "source_sha256": "d1f170fe0661dc7cba6f68b5e6ce707386ec12e5ce7f5b2bed0d1b445110adc2",
+          "completion_sha256": "7671ea644e81bc0bddc59b9daf22c943cc608a6cbf0de5c55d3b8df4443fe979",
+          "rms_frames": 4669
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/35_Rondeau_vn_vn_va_db_track2_vn/data.npz",
+          "prefix": "t024",
+          "array_key": "midi2params_t024",
+          "group": "Rondeau",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/8cf71026dcc718d0/rms.npy",
+          "source_sha256": "6845a2fea995facd0420612f54f6c149c938be31a8c4340d62105adf73427254",
+          "completion_sha256": "0acd8b3ad49935aec88a42bb573942400d983207780a11f6ecdf7f6bfd925118",
+          "rms_frames": 12817
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/18_Nocturne_vn_fl_tpt_track1_vn/data.npz",
+          "prefix": "t010",
+          "array_key": "midi2params_t010",
+          "group": "Nocturne",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/911f5febeac41532/rms.npy",
+          "source_sha256": "9dd98d662983e6c6b381b8ee1578132c19e6239a4a0372c9b8fdd81b71517dda",
+          "completion_sha256": "2320ab419640fba8d245ac2472acdab28b4f33879c4a2dcbb9e812c61b876e01",
+          "rms_frames": 9561
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/01_Jupiter_vn_vc_track1_vn/data.npz",
+          "prefix": "t000",
+          "array_key": "midi2params_t000",
+          "group": "Jupiter",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/94ae9094f30ddf65/rms.npy",
+          "source_sha256": "7bd5f586ae0981b2ca20029a42ba075426abccc10853027806ff5890f7c65bbb",
+          "completion_sha256": "a5154c3c328a220cd46b8b27b6f20667f76001543519047090917f3e11e6108d",
+          "rms_frames": 6264
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/24_Pirates_vn_vn_va_vc_track2_vn/data.npz",
+          "prefix": "t014",
+          "array_key": "midi2params_t014",
+          "group": "Pirates",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/98f81aa34aba5bb5/rms.npy",
+          "source_sha256": "f5d8973abd9cf3531c0715bcb46fb05e5825ba2e89c9678bfa28e6e3a6296f6d",
+          "completion_sha256": "ab13a26958388e456c74e48b7daffb40a1dd908f576671c8ae8624baa254a3b5",
+          "rms_frames": 4979
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/35_Rondeau_vn_vn_va_db_track1_vn/data.npz",
+          "prefix": "t023",
+          "array_key": "midi2params_t023",
+          "group": "Rondeau",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/9d9b89d288d2022b/rms.npy",
+          "source_sha256": "493506e2ff67b3efcdd4e32b9b8add38f0c2c42be6aa4de5c8ac8d121bafcd2e",
+          "completion_sha256": "f6373718527233f37918325dcf7fd44aa4e9f6b11946138f020d8531d556cae7",
+          "rms_frames": 12817
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/39_Jerusalem_vn_vn_va_sax_db_track2_vn/data.npz",
+          "prefix": "t031",
+          "array_key": "midi2params_t031",
+          "group": "Jerusalem",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/9dae6703df56526e/rms.npy",
+          "source_sha256": "1ea45733a39df24e884bb625c1599d240243675b80a224dbe0395e8075fd54ed",
+          "completion_sha256": "9f09ff8e2c0ca59569dd92fb915965a6a70e474291a203bb3eadaef0c09816d4",
+          "rms_frames": 11910
+        },
+        {
+          "track": "datagen/solo/TRIOS/processed_vn/schubert_violin/data.npz",
+          "prefix": "t179",
+          "array_key": "midi2params_t179",
+          "group": "trios_schubert",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/a05899be8bebb42d/rms.npy",
+          "source_sha256": "8d02bfe829dc0795119154c2577fd09dc4bb97cfabc8d2ab04d3a80a79d7b26c",
+          "completion_sha256": "c5a4c75ce2f358cd4e0406cee4b3a5487ac8e89567187ea6f023e1d4e67ac505",
+          "rms_frames": 5313
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/02_Sonata_vn_vn_track1_vn/data.npz",
+          "prefix": "t001",
+          "array_key": "midi2params_t001",
+          "group": "Sonata",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/a388e135c1120c36/rms.npy",
+          "source_sha256": "4c430b56e2e645d5c71f43ed9ce57be183a870d5e99bf5ea0c6a6f2c33743dac",
+          "completion_sha256": "257c662ab29bc216d9b002f21adf5211ae3ef8e31d955f809ea829e08c56685b",
+          "rms_frames": 4603
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/36_Rondeau_vn_vn_va_vc_track1_vn/data.npz",
+          "prefix": "t025",
+          "array_key": "midi2params_t025",
+          "group": "Rondeau",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/a83802fd2c32763a/rms.npy",
+          "source_sha256": "1ccf5f82c45b7cb7c855273b157aa71254cc4c95ca72d89362eac2263efb6b20",
+          "completion_sha256": "ac60cf062ff4a030635c2dbae73addde1b8f7837acfbf06e54072c977d1e06f9",
+          "rms_frames": 12817
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_vn/08-FuerDeinenThron/data.npz",
+          "prefix": "t143",
+          "array_key": "midi2params_t143",
+          "group": "bach10_b10_FuerDeinenThron",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/b30c89d20e33fe68/rms.npy",
+          "source_sha256": "72f85d111d9491c6348bd26233a459cc8917ea3d03dff800e6e87d7d3b9e414d",
+          "completion_sha256": "a1a73cf32061afc9f0ac3893499e8b02aa297bd5ce82364eabbbf1e2c4d6e1b0",
+          "rms_frames": 3320
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/44_K515_vn_vn_va_va_vc_track2_vn/data.npz",
+          "prefix": "t033",
+          "array_key": "midi2params_t033",
+          "group": "K515",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/b810f40c902e15d6/rms.npy",
+          "source_sha256": "9de8e4c34d0374cc0740652d266da612c54907968034f47f009b01111bd92794",
+          "completion_sha256": "e04693f11c2588aed23d8bee069cb9cd8a7b001ab63c3f6387556da4cc28312f",
+          "rms_frames": 22520
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/08_Spring_fl_vn_track2_vn/data.npz",
+          "prefix": "t003",
+          "array_key": "midi2params_t003",
+          "group": "Spring",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/bba8c6c0b16f91ed/rms.npy",
+          "source_sha256": "b52f98cd8013eb274de5154cb54894078ed9e55357721b367c7ac0386f549b6c",
+          "completion_sha256": "94366dde15700bd69bd268658c2ea8c16d750f51700e6619d0566b44a1c22bf9",
+          "rms_frames": 3502
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_vn/04-ChristeDuBeistand/data.npz",
+          "prefix": "t139",
+          "array_key": "midi2params_t139",
+          "group": "bach10_b10_ChristeDuBeistand",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/bc34ff3e0162fd31/rms.npy",
+          "source_sha256": "95f601b9c8775cd8142327ba2617e72867f5907a7ee8a3e29ad216e95b55b8e2",
+          "completion_sha256": "5ad84cc14977b4dc44405d34b8f7f0bddde75b190a16f17aebee3863abc4ffda",
+          "rms_frames": 4162
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_vn/05-DieNacht/data.npz",
+          "prefix": "t140",
+          "array_key": "midi2params_t140",
+          "group": "bach10_b10_DieNacht",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/bda1280d6cb084bc/rms.npy",
+          "source_sha256": "de048a89e24377e6fde88b3865a78bbd15ab619ec6f8387d8d56ca3fb4767de3",
+          "completion_sha256": "3c297b5c373b65de03514e82b644d1a39ccb792b65a08d4a1aee2af55563286d",
+          "rms_frames": 3577
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/27_King_vn_vn_va_sax_track1_vn/data.npz",
+          "prefix": "t019",
+          "array_key": "midi2params_t019",
+          "group": "King",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/bff053b46eae0de1/rms.npy",
+          "source_sha256": "94fe4e4bf155b4c3bb424304b3bd694f617451b658c75ae175bafcb8693c19ac",
+          "completion_sha256": "e2e4d5a382804df433b297d3b2d7586c3f5c74ca7478574baaaa5957b20b6b66",
+          "rms_frames": 8516
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/32_Fugue_vn_vn_va_vc_track1_vn/data.npz",
+          "prefix": "t021",
+          "array_key": "midi2params_t021",
+          "group": "Fugue",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/cd2cf609c898fa4f/rms.npy",
+          "source_sha256": "385e1c666f006b140bf14920552fe89f947e913714c8077e35eeb469e0c285ad",
+          "completion_sha256": "91f0a94e7a1b556342062998757633e1b529dbc15503a435948b8cca2db605d2",
+          "rms_frames": 17362
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/20_Pavane_tpt_vn_vc_track2_vn/data.npz",
+          "prefix": "t012",
+          "array_key": "midi2params_t012",
+          "group": "Pavane",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/d5b1e58b766c1893/rms.npy",
+          "source_sha256": "7d26deac99bd66eefc9d5cc99e8ec7ed71ad99e910de78207c1fb401806e65d7",
+          "completion_sha256": "cdf9757f80b1cadf390f4af4fc9986beb48924f9fee0dec603ff85a7dc3dfd8e",
+          "rms_frames": 13335
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/13_Hark_vn_vn_va_track2_vn/data.npz",
+          "prefix": "t008",
+          "array_key": "midi2params_t008",
+          "group": "Hark",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/df5148586f29128d/rms.npy",
+          "source_sha256": "ac41cc24e6b7bcaa8b7cedaf33f6c9137f63b5ebc39cbe98933dc7e10462a127",
+          "completion_sha256": "75f844a2468d40b67c27783cf6688f3777b278a8385fd46c44b2d24eff106dee",
+          "rms_frames": 4669
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/26_King_vn_vn_va_vc_track2_vn/data.npz",
+          "prefix": "t018",
+          "array_key": "midi2params_t018",
+          "group": "King",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/eab546635f7132ff/rms.npy",
+          "source_sha256": "a1c16c1c44b1d1d49f7992e7ebf9ba70b3a6ea546c98d9eda7cb5a25fce5f377",
+          "completion_sha256": "35057b11ae93e30c636421bdb356e2a55ff83390f925975de5859a85c2337e39",
+          "rms_frames": 8516
+        },
+        {
+          "track": "datagen/solo/Bach10/processed_vn/10-NunBitten/data.npz",
+          "prefix": "t145",
+          "array_key": "midi2params_t145",
+          "group": "bach10_b10_NunBitten",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/f3ce6ff474b9d724/rms.npy",
+          "source_sha256": "67f24b5fec4f68949a66521ca256ebff8f0d6dac94432c3be36bf965590b0c11",
+          "completion_sha256": "ce424d12097e6b9e2d1e72fb6d21ebf96fefc09d4a234943792a1f81966b1d50",
+          "rms_frames": 3735
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/36_Rondeau_vn_vn_va_vc_track2_vn/data.npz",
+          "prefix": "t026",
+          "array_key": "midi2params_t026",
+          "group": "Rondeau",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/f684378797d63ff1/rms.npy",
+          "source_sha256": "ba5cc50218fa51077d4ee8976e5f16c01b399add0d2d6f62506a9d9c3145647f",
+          "completion_sha256": "275557a4d962a9a2d15f7559dbe1a9f836a008ccd453a0eeec911051102a51a1",
+          "rms_frames": 12817
+        },
+        {
+          "track": "datagen/solo/URMP/processed_vn/37_Rondeau_fl_vn_va_cl_track2_vn/data.npz",
+          "prefix": "t027",
+          "array_key": "midi2params_t027",
+          "group": "Rondeau",
+          "source_file": "external_baselines/runs/midi2params_public_v1/collected_audio/audio/f7adf8dbe726b585/rms.npy",
+          "source_sha256": "824082de2f843a9bbb6211d97c6504a6d38ebd4170b32806125d0ca4a1631221",
+          "completion_sha256": "8a39b587a2b333426203b21ab70c24baadfadb9626bf77ef15f2935719d3b9ba",
+          "rms_frames": 12817
+        }
+      ],
+      "report_sha256": "9681d947934bbf84be73b50fb2002808f14677062b71d987f130e997de2c4f07"
+    }
+  },
+  "npz_sha256": "5adf51119e7115bc67cf286ad6f6dab05a16a81fbf872b159ef7a75fa7f12b8b",
+  "scope": "Collected final-audio RMS only. No new generation/extraction; does not reproduce original audio synthesis."
+}

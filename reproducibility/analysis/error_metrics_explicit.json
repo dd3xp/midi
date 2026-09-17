@@ -1,0 +1,201 @@
+{
+  "display_to_legacy_field": {
+    "full_linear_rmse": "rmse_linear",
+    "active_linear_rmse": "rmse_linear_active",
+    "full_log_rmse": "rmse_log",
+    "active_log_rmse": "rmse_log_active"
+  },
+  "all186": {
+    "gate": {
+      "full_linear_rmse": {
+        "mean": 0.8595371624720373,
+        "tracks": 186
+      },
+      "active_linear_rmse": {
+        "mean": 0.9655377189855054,
+        "tracks": 186
+      },
+      "full_log_rmse": {
+        "mean": 5.360734590295641,
+        "tracks": 186
+      },
+      "active_log_rmse": {
+        "mean": 3.9381524922460125,
+        "tracks": 186
+      }
+    },
+    "global_ols": {
+      "full_linear_rmse": {
+        "mean": 0.027491298707109268,
+        "tracks": 186
+      },
+      "active_linear_rmse": {
+        "mean": 0.02970315566337256,
+        "tracks": 186
+      },
+      "full_log_rmse": {
+        "mean": 1.0754593629780294,
+        "tracks": 186
+      },
+      "active_log_rmse": {
+        "mean": 0.9689966104239922,
+        "tracks": 186
+      }
+    },
+    "instrument_ols": {
+      "full_linear_rmse": {
+        "mean": 0.0264154429154338,
+        "tracks": 186
+      },
+      "active_linear_rmse": {
+        "mean": 0.028909583505338638,
+        "tracks": 186
+      },
+      "full_log_rmse": {
+        "mean": 1.0192797561967175,
+        "tracks": 186
+      },
+      "active_log_rmse": {
+        "mean": 0.9150898424110214,
+        "tracks": 186
+      }
+    },
+    "note_ols": {
+      "full_linear_rmse": {
+        "mean": 0.025958331915404576,
+        "tracks": 186
+      },
+      "active_linear_rmse": {
+        "mean": 0.02804197773348335,
+        "tracks": 186
+      },
+      "full_log_rmse": {
+        "mean": 4.028926449322408,
+        "tracks": 186
+      },
+      "active_log_rmse": {
+        "mean": 0.9266965895676537,
+        "tracks": 186
+      }
+    },
+    "note_shape": {
+      "full_linear_rmse": {
+        "mean": 0.025478401985924697,
+        "tracks": 186
+      },
+      "active_linear_rmse": {
+        "mean": 0.02749050187165818,
+        "tracks": 186
+      },
+      "full_log_rmse": {
+        "mean": 4.0196451322039275,
+        "tracks": 186
+      },
+      "active_log_rmse": {
+        "mean": 0.8717874441757779,
+        "tracks": 186
+      }
+    },
+    "mamba": {
+      "full_linear_rmse": {
+        "mean": 0.024021106424921255,
+        "tracks": 186
+      },
+      "active_linear_rmse": {
+        "mean": 0.025967646252850175,
+        "tracks": 186
+      },
+      "full_log_rmse": {
+        "mean": 0.9135819513018328,
+        "tracks": 186
+      },
+      "active_log_rmse": {
+        "mean": 0.8258688722041537,
+        "tracks": 186
+      }
+    },
+    "s4d": {
+      "full_linear_rmse": {
+        "mean": 0.025178889240329055,
+        "tracks": 186
+      },
+      "active_linear_rmse": {
+        "mean": 0.0271877027986826,
+        "tracks": 186
+      },
+      "full_log_rmse": {
+        "mean": 0.9357386952162329,
+        "tracks": 186
+      },
+      "active_log_rmse": {
+        "mean": 0.8442426154588191,
+        "tracks": 186
+      }
+    },
+    "bigru": {
+      "full_linear_rmse": {
+        "mean": 0.022344140083993377,
+        "tracks": 186
+      },
+      "active_linear_rmse": {
+        "mean": 0.024430656430796255,
+        "tracks": 186
+      },
+      "full_log_rmse": {
+        "mean": 0.8691738187340406,
+        "tracks": 186
+      },
+      "active_log_rmse": {
+        "mean": 0.780695442763971,
+        "tracks": 186
+      }
+    }
+  },
+  "note_error_fields": {
+    "note_linear_rmse": "note_linear_rmse",
+    "note_log_rmse": "note_log_rmse",
+    "note_linear_mae": "note_linear_mae"
+  },
+  "note_error_all186": {
+    "gate": {
+      "note_linear_rmse": 0.9634976000478345,
+      "note_log_rmse": 3.7084261777090406,
+      "note_linear_mae": 0.9633348175217462
+    },
+    "global_ols": {
+      "note_linear_rmse": 0.027222248329983715,
+      "note_log_rmse": 0.8141999384425557,
+      "note_linear_mae": 0.02366960835084913
+    },
+    "instrument_ols": {
+      "note_linear_rmse": 0.02616961979362898,
+      "note_log_rmse": 0.745228512914584,
+      "note_linear_mae": 0.022023124809188794
+    },
+    "note_ols": {
+      "note_linear_rmse": 0.024914128685568936,
+      "note_log_rmse": 0.7232530153505219,
+      "note_linear_mae": 0.021389046798607675
+    },
+    "note_shape": {
+      "note_linear_rmse": 0.02491629663310167,
+      "note_log_rmse": 0.7233433306759358,
+      "note_linear_mae": 0.02139061579553855
+    },
+    "mamba": {
+      "note_linear_rmse": 0.023160914222855638,
+      "note_log_rmse": 0.6889524553395927,
+      "note_linear_mae": 0.01987612375115441
+    },
+    "s4d": {
+      "note_linear_rmse": 0.024760616373355134,
+      "note_log_rmse": 0.7182748601740533,
+      "note_linear_mae": 0.021262974169079928
+    },
+    "bigru": {
+      "note_linear_rmse": 0.021582217997840773,
+      "note_log_rmse": 0.6498310824551071,
+      "note_linear_mae": 0.0176261918607218
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "public_tracks": {
+    "midi_ddsp": 186,
+    "midi2params": 46
+  },
+  "per_track_metric_checks": 1392,
+  "public_subset_summary_checks": 36,
+  "primary_paired_bootstrap_checks": 120,
+  "max_error": 1.2212453270876722e-15,
+  "scope": "Six public RMS views and primary paired intervals from archived RMS, against independently verified internal metrics; not synthesis or source-audio reproduction."
+}

@@ -1,0 +1,4352 @@
+{
+  "utc": "2026-09-15T16:42:01.711335+00:00",
+  "systems": {
+    "midi_ddsp": {
+      "subsets": {
+        "all186": {
+          "tracks": 186,
+          "groups": 44,
+          "comparisons": {
+            "instrument_ols": {
+              "full_up": 97,
+              "note_down": 16,
+              "error_up": 38,
+              "note_loss_median": 0.12999046503628475,
+              "paired": {
+                "Full": {
+                  "mean": 0.012179982076387949,
+                  "ci95": [
+                    -0.007362764150996648,
+                    0.030607104942901503
+                  ]
+                },
+                "Note": {
+                  "mean": -0.029045703573752683,
+                  "ci95": [
+                    -0.09097346541355153,
+                    0.031450842885560916
+                  ]
+                },
+                "Error": {
+                  "mean": 0.17290304826956893,
+                  "ci95": [
+                    0.034737313452866424,
+                    0.341583101694988
+                  ]
+                }
+              }
+            },
+            "note_shape": {
+              "full_up": 68,
+              "note_down": 10,
+              "error_up": 37,
+              "note_loss_median": 0.054875644377048824,
+              "paired": {
+                "Full": {
+                  "mean": -0.026186065404659824,
+                  "ci95": [
+                    -0.04324524951916723,
+                    -0.010464827774802676
+                  ]
+                },
+                "Note": {
+                  "mean": 0.0368481102664427,
+                  "ci95": [
+                    -0.03441666952175639,
+                    0.09980499775702627
+                  ]
+                },
+                "Error": {
+                  "mean": 0.19478823050821706,
+                  "ci95": [
+                    0.07974261807912264,
+                    0.33766857816175627
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "target_hash_deduplicated": {
+          "tracks": 163,
+          "groups": 44,
+          "comparisons": {
+            "instrument_ols": {
+              "full_up": 84,
+              "note_down": 15,
+              "error_up": 34,
+              "note_loss_median": 0.12500741158746814,
+              "paired": {
+                "Full": {
+                  "mean": 0.013284385920158015,
+                  "ci95": [
+                    -0.007647592008761847,
+                    0.033291983544748355
+                  ]
+                },
+                "Note": {
+                  "mean": -0.03498092723556845,
+                  "ci95": [
+                    -0.09681359395980105,
+                    0.028829537949189854
+                  ]
+                },
+                "Error": {
+                  "mean": 0.20259688258953937,
+                  "ci95": [
+                    0.04807922223386625,
+                    0.3821565337286231
+                  ]
+                }
+              }
+            },
+            "note_shape": {
+              "full_up": 62,
+              "note_down": 9,
+              "error_up": 33,
+              "note_loss_median": 0.04656104100643235,
+              "paired": {
+                "Full": {
+                  "mean": -0.025329031638167777,
+                  "ci95": [
+                    -0.04402649840309209,
+                    -0.007866799297753415
+                  ]
+                },
+                "Note": {
+                  "mean": 0.032915977770754744,
+                  "ci95": [
+                    -0.038011118321382174,
+                    0.09589157073877154
+                  ]
+                },
+                "Error": {
+                  "mean": 0.22125107764702062,
+                  "ci95": [
+                    0.09201448164181346,
+                    0.3720682647305172
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "native_single_lane": {
+          "tracks": 95,
+          "groups": 27,
+          "comparisons": {
+            "instrument_ols": {
+              "full_up": 48,
+              "note_down": 9,
+              "error_up": 24,
+              "note_loss_median": 0.12500741158746814,
+              "paired": {
+                "Full": {
+                  "mean": 0.01861478387874716,
+                  "ci95": [
+                    -0.009103075548390491,
+                    0.04326530119414759
+                  ]
+                },
+                "Note": {
+                  "mean": -0.04910436730557645,
+                  "ci95": [
+                    -0.12219107202611203,
+                    0.023296687422011072
+                  ]
+                },
+                "Error": {
+                  "mean": 0.38258321345456286,
+                  "ci95": [
+                    0.15762844011043783,
+                    0.6325208687653826
+                  ]
+                }
+              }
+            },
+            "note_shape": {
+              "full_up": 38,
+              "note_down": 6,
+              "error_up": 25,
+              "note_loss_median": 0.0443061920542092,
+              "paired": {
+                "Full": {
+                  "mean": -0.02022604277395676,
+                  "ci95": [
+                    -0.04150077616647936,
+                    0.0002658568746023346
+                  ]
+                },
+                "Note": {
+                  "mean": -0.0054614621746613785,
+                  "ci95": [
+                    -0.07882641911176619,
+                    0.06331584605520983
+                  ]
+                },
+                "Error": {
+                  "mean": 0.34501223409849363,
+                  "ci95": [
+                    0.15729229098857958,
+                    0.5576384325491566
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "per_track": {
+        "datagen/solo/URMP/processed_cl/03_Dance_fl_cl_track2_cl/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.6398521116864411,
+            "Note": 0.3020117072802605,
+            "Error": 0.4845487664625328
+          },
+          "instrument_ols": {
+            "Full": 0.6020053316718268,
+            "Note": 0.25111788494760223,
+            "Error": 1.0326575872867985
+          },
+          "note_shape": {
+            "Full": 0.746234679891767,
+            "Note": 0.2789586211956875,
+            "Error": 0.44978266858845556
+          }
+        },
+        "datagen/solo/URMP/processed_tpt/20_Pavane_tpt_vn_vc_track1_tpt/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.4844385882408753,
+            "Note": 0.18474767245448923,
+            "Error": 0.5855720238413097
+          },
+          "instrument_ols": {
+            "Full": 0.6034137514241419,
+            "Note": 0.6632686273522408,
+            "Error": 0.49578127551077533
+          },
+          "note_shape": {
+            "Full": 0.3951208520527339,
+            "Note": 0.01922622100928184,
+            "Error": 0.7454808690102306
+          }
+        },
+        "datagen/solo/Bach10/processed_cl/01-AchGottundHerr/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.37098130516730954,
+            "Note": -0.08576463406499962,
+            "Error": 1.7548812970992924
+          },
+          "instrument_ols": {
+            "Full": 0.5644448042200401,
+            "Note": 0.3731483914375114,
+            "Error": 1.0053551418830364
+          },
+          "note_shape": {
+            "Full": 0.4754288909849312,
+            "Note": 0.34127838018560996,
+            "Error": 1.201554850808923
+          }
+        },
+        "datagen/solo/Bach10/processed_sax/07-HerrGott/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.48921610406141264,
+            "Note": 0.37921062520489524,
+            "Error": 2.297156737589119
+          },
+          "instrument_ols": {
+            "Full": 0.503753462270901,
+            "Note": 0.5679757111116704,
+            "Error": 0.954383142365789
+          },
+          "note_shape": {
+            "Full": 0.5453891466743843,
+            "Note": 0.633021685867442,
+            "Error": 0.6650902345189919
+          }
+        },
+        "datagen/solo/Bach10/processed_sax/04-ChristeDuBeistand/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.4363348610495807,
+            "Note": 0.47814922072598903,
+            "Error": 2.3004658790114294
+          },
+          "instrument_ols": {
+            "Full": 0.4967692070434982,
+            "Note": 0.6211335363000386,
+            "Error": 0.9483831606408689
+          },
+          "note_shape": {
+            "Full": 0.6345050029713826,
+            "Note": 0.7590362155192644,
+            "Error": 1.1680616705002087
+          }
+        },
+        "datagen/solo/URMP/processed_fl/29_Fugue_fl_fl_ob_cl_track2_fl/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.43458400509370954,
+            "Note": 0.04247764218296742,
+            "Error": 0.623141145195518
+          },
+          "instrument_ols": {
+            "Full": 0.6906774053577596,
+            "Note": 0.5085535519075716,
+            "Error": 0.5270707527910856
+          },
+          "note_shape": {
+            "Full": 0.5658152869256655,
+            "Note": -0.06399504177488766,
+            "Error": 0.733475823872666
+          }
+        },
+        "datagen/solo/URMP/processed_vn/44_K515_vn_vn_va_va_vc_track1_vn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.5835290202749158,
+            "Note": 0.4585781685511134,
+            "Error": 0.6651744940435694
+          },
+          "instrument_ols": {
+            "Full": 0.5675251452381458,
+            "Note": 0.22525919110972406,
+            "Error": 0.5371361296152073
+          },
+          "note_shape": {
+            "Full": 0.5021749053611281,
+            "Note": -0.1142784546078266,
+            "Error": 0.5836667089167409
+          }
+        },
+        "datagen/solo/URMP/processed_tpt/10_March_tpt_sax_track1_tpt/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.5595615676618337,
+            "Note": 0.24840651069040018,
+            "Error": 0.833040403233479
+          },
+          "instrument_ols": {
+            "Full": 0.6680809377832654,
+            "Note": 0.41392202556479035,
+            "Error": 0.7041010622855902
+          },
+          "note_shape": {
+            "Full": 0.7339946119794701,
+            "Note": 0.4230177215940593,
+            "Error": 0.8330142138448081
+          }
+        },
+        "datagen/solo/URMP/processed_vn/19_Pavane_cl_vn_vc_track2_vn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.4063916335502363,
+            "Note": -0.00456851296385744,
+            "Error": 0.6191758951779116
+          },
+          "instrument_ols": {
+            "Full": 0.42658436883389145,
+            "Note": 0.1916492900053423,
+            "Error": 0.8097142639780299
+          },
+          "note_shape": {
+            "Full": 0.5348298756660386,
+            "Note": 0.1467895643315923,
+            "Error": 0.7239019367911673
+          }
+        },
+        "datagen/solo/URMP/processed_vn/39_Jerusalem_vn_vn_va_sax_db_track1_vn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.037694044384289666,
+            "Note": -0.29435237865116815,
+            "Error": 0.7372028449145078
+          },
+          "instrument_ols": {
+            "Full": 0.1790118898192789,
+            "Note": 0.008282391014765965,
+            "Error": 0.8136248694510718
+          },
+          "note_shape": {
+            "Full": 0.29757912296573263,
+            "Note": 0.03350336485718069,
+            "Error": 0.6803996243595172
+          }
+        },
+        "datagen/solo/URMP/processed_vn/27_King_vn_vn_va_sax_track2_vn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.539843038142783,
+            "Note": 0.26494647657534465,
+            "Error": 0.4595723133078417
+          },
+          "instrument_ols": {
+            "Full": 0.36494747219620455,
+            "Note": -0.33653562449623914,
+            "Error": 0.6597070509637215
+          },
+          "note_shape": {
+            "Full": 0.6268502293107148,
+            "Note": 0.3354087813924932,
+            "Error": 0.4451783037915536
+          }
+        },
+        "datagen/solo/URMP/processed_ob/11_Maria_ob_vc_track1_ob/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.5079710502014347,
+            "Note": 0.2921690496347026,
+            "Error": 0.9019698153289535
+          },
+          "instrument_ols": {
+            "Full": 0.5649713889484033,
+            "Note": 0.35578349053405567,
+            "Error": 0.5552695529321754
+          },
+          "note_shape": {
+            "Full": 0.7018557205954644,
+            "Note": 0.30049417625151126,
+            "Error": 0.4614299951315769
+          }
+        },
+        "datagen/solo/URMP/processed_tpt/15_Surprise_tpt_tpt_tbn_track1_tpt/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.6574878984358387,
+            "Note": 0.20944765622100106,
+            "Error": 0.5881091012457852
+          },
+          "instrument_ols": {
+            "Full": 0.8049692110518567,
+            "Note": 0.8283263439412322,
+            "Error": 0.5276157573358375
+          },
+          "note_shape": {
+            "Full": 0.7672684440697808,
+            "Note": 0.6677600847309315,
+            "Error": 0.5684412894934966
+          }
+        },
+        "datagen/solo/URMP/processed_bn/28_Fugue_fl_ob_cl_bn_track4_bn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.748579774794731,
+            "Note": 0.3610753592901247,
+            "Error": 0.2796377479044512
+          },
+          "instrument_ols": {
+            "Full": 0.5733741006486087,
+            "Note": 0.10153447627491709,
+            "Error": 1.1006428163130348
+          },
+          "note_shape": {
+            "Full": 0.8456428906165055,
+            "Note": -0.01137180280754498,
+            "Error": 0.7393845217359604
+          }
+        },
+        "datagen/solo/URMP/processed_cl/23_Rejouissance_cl_sax_tba_track1_cl/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.6719021057646143,
+            "Note": 0.4504569836341704,
+            "Error": 0.4249284142001912
+          },
+          "instrument_ols": {
+            "Full": 0.5546220173834465,
+            "Note": -0.16777623877973355,
+            "Error": 1.4992036011631176
+          },
+          "note_shape": {
+            "Full": 0.7084764295402144,
+            "Note": 0.13386609923974557,
+            "Error": 0.621666297942485
+          }
+        },
+        "datagen/solo/URMP/processed_vn/02_Sonata_vn_vn_track2_vn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.2154829701304454,
+            "Note": -0.185605159184625,
+            "Error": 0.6747312015621423
+          },
+          "instrument_ols": {
+            "Full": 0.28915428815528904,
+            "Note": -0.01778891200479722,
+            "Error": 0.617761512490405
+          },
+          "note_shape": {
+            "Full": 0.41453954097596213,
+            "Note": 0.09282064942498316,
+            "Error": 0.6236288949030556
+          }
+        },
+        "datagen/solo/URMP/processed_vc/12_Spring_vn_vn_vc_track3_vc/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.5104695009990681,
+            "Note": 0.5085358329284838,
+            "Error": 0.4503425649376866
+          },
+          "instrument_ols": {
+            "Full": 0.09223437565081093,
+            "Note": -0.3123470854635744,
+            "Error": 1.2269825958953846
+          },
+          "note_shape": {
+            "Full": 0.4907265255906256,
+            "Note": 0.47944574829273046,
+            "Error": 0.6807955287012275
+          }
+        },
+        "datagen/solo/Bach10/processed_bn/09-Jesus/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.39491695797389614,
+            "Note": 0.013058440633369943,
+            "Error": 2.19210856969784
+          },
+          "instrument_ols": {
+            "Full": 0.09359858514883082,
+            "Note": -0.11745830295632836,
+            "Error": 0.5084178129340917
+          },
+          "note_shape": {
+            "Full": 0.212642811625151,
+            "Note": -0.10106432215132223,
+            "Error": 0.667474106261997
+          }
+        },
+        "datagen/solo/URMP/processed_va/32_Fugue_vn_vn_va_vc_track3_va/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.461497081011389,
+            "Note": 0.11411296787937929,
+            "Error": 0.5576755432486693
+          },
+          "instrument_ols": {
+            "Full": 0.39884890698413245,
+            "Note": 0.037409932213192554,
+            "Error": 0.6043460372333563
+          },
+          "note_shape": {
+            "Full": 0.4949924395198241,
+            "Note": 0.0904866145985439,
+            "Error": 0.48333089658736245
+          }
+        },
+        "datagen/solo/Bach10/processed_sax/08-FuerDeinenThron/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.4260525301653318,
+            "Note": 0.5403176516134116,
+            "Error": 2.0540515402520296
+          },
+          "instrument_ols": {
+            "Full": 0.5472889991784705,
+            "Note": 0.4723543975372748,
+            "Error": 0.8921933702354222
+          },
+          "note_shape": {
+            "Full": 0.5690517405056793,
+            "Note": 0.5795228407973673,
+            "Error": 0.7812451428887404
+          }
+        },
+        "datagen/solo/PHENICX/processed_vc/beethoven_cello/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.4715974363404983,
+            "Note": 0.16671555607831287,
+            "Error": 1.6205746304468915
+          },
+          "instrument_ols": {
+            "Full": 0.2660787771575991,
+            "Note": -0.08754907365895265,
+            "Error": 1.381546216272688
+          },
+          "note_shape": {
+            "Full": 0.4448092271702166,
+            "Note": -0.021631548322741168,
+            "Error": 1.0337033621569776
+          }
+        },
+        "datagen/solo/URMP/processed_vn/12_Spring_vn_vn_vc_track1_vn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.21786699354024158,
+            "Note": -0.05674921404939507,
+            "Error": 0.6963856803179418
+          },
+          "instrument_ols": {
+            "Full": 0.25114585533945794,
+            "Note": 0.03873190964549758,
+            "Error": 0.8175076277814701
+          },
+          "note_shape": {
+            "Full": 0.22981125999102917,
+            "Note": -0.057371044132301034,
+            "Error": 0.6618892629919518
+          }
+        },
+        "datagen/solo/URMP/processed_fl/37_Rondeau_fl_vn_va_cl_track1_fl/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.5708595276761709,
+            "Note": 0.4104741420284034,
+            "Error": 0.39047140326941204
+          },
+          "instrument_ols": {
+            "Full": 0.5626702998027937,
+            "Note": 0.29095048553922465,
+            "Error": 0.44217235564528035
+          },
+          "note_shape": {
+            "Full": 0.6050594314700303,
+            "Note": 0.3203743367471703,
+            "Error": 0.4532751397750781
+          }
+        },
+        "datagen/solo/URMP/processed_tbn/33_Elise_tpt_tpt_hn_tbn_track4_tbn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.7917763121066442,
+            "Note": 0.08018747824017688,
+            "Error": 0.6715226247019034
+          },
+          "instrument_ols": {
+            "Full": 0.8158571002571036,
+            "Note": 0.29568226663990754,
+            "Error": 0.8585151899927302
+          },
+          "note_shape": {
+            "Full": 0.8524587708782347,
+            "Note": 0.23658620764672325,
+            "Error": 0.767120546551923
+          }
+        },
+        "datagen/solo/URMP/processed_sax/25_Pirates_vn_vn_va_sax_track4_sax/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.5152571137921202,
+            "Note": 0.43461045312609614,
+            "Error": 0.8461952559682633
+          },
+          "instrument_ols": {
+            "Full": 0.37088511131306334,
+            "Note": -0.044703117788313464,
+            "Error": 0.7081408981719579
+          },
+          "note_shape": {
+            "Full": 0.4823155134089125,
+            "Note": 0.189847626442887,
+            "Error": 0.6196556087449834
+          }
+        },
+        "datagen/solo/URMP/processed_vc/11_Maria_ob_vc_track2_vc/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.46277721967058616,
+            "Note": 0.23064319299162547,
+            "Error": 0.5202976352688925
+          },
+          "instrument_ols": {
+            "Full": 0.3539714051020082,
+            "Note": 0.032540470709855454,
+            "Error": 1.2276261486226059
+          },
+          "note_shape": {
+            "Full": 0.4375881061683039,
+            "Note": -0.010773740998080265,
+            "Error": 0.608614319021204
+          }
+        },
+        "datagen/solo/URMP/processed_vc/38_Jerusalem_vn_vn_va_vc_db_track4_vc/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.4502628637829017,
+            "Note": 0.43657927880682923,
+            "Error": 0.5729089183086523
+          },
+          "instrument_ols": {
+            "Full": 0.3300303158686464,
+            "Note": 0.2665749410184814,
+            "Error": 0.5710828257061533
+          },
+          "note_shape": {
+            "Full": 0.3147889656575059,
+            "Note": 0.33652968159587476,
+            "Error": 0.6407651354326077
+          }
+        },
+        "datagen/solo/URMP/processed_fl/04_Allegro_fl_fl_track2_fl/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.69017387537217,
+            "Note": 0.45007770055751667,
+            "Error": 0.3661277815078114
+          },
+          "instrument_ols": {
+            "Full": 0.7226267484289385,
+            "Note": 0.4384717152861646,
+            "Error": 0.41174788024307013
+          },
+          "note_shape": {
+            "Full": 0.746812348840239,
+            "Note": 0.29353836821766127,
+            "Error": 0.44934061791978513
+          }
+        },
+        "datagen/solo/URMP/processed_va/25_Pirates_vn_vn_va_sax_track3_va/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.5304320834811388,
+            "Note": 0.20537646641866655,
+            "Error": 0.46279640464163657
+          },
+          "instrument_ols": {
+            "Full": 0.42228027119026024,
+            "Note": -0.2873558559502811,
+            "Error": 0.4997064589658562
+          },
+          "note_shape": {
+            "Full": 0.5479006090308113,
+            "Note": 0.22740296864081436,
+            "Error": 0.5056646774972555
+          }
+        },
+        "datagen/solo/TRIOS/processed_vn/brahms_violin/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.5149495068180996,
+            "Note": 0.24390914221125667,
+            "Error": 1.0438200132748892
+          },
+          "instrument_ols": {
+            "Full": 0.2876557100140729,
+            "Note": -0.10648018397904706,
+            "Error": 0.8912176139616973
+          },
+          "note_shape": {
+            "Full": 0.5966078971099166,
+            "Note": 0.19616348094120334,
+            "Error": 0.6389557307737077
+          }
+        },
+        "datagen/solo/Bach10/processed_bn/05-DieNacht/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.21947430923289885,
+            "Note": -0.25860415948551135,
+            "Error": 2.2034083951045913
+          },
+          "instrument_ols": {
+            "Full": 0.25642236343417785,
+            "Note": -0.07034242447298841,
+            "Error": 0.41601068999896057
+          },
+          "note_shape": {
+            "Full": 0.23042629535400405,
+            "Note": -0.10649289463356622,
+            "Error": 0.8587012863158613
+          }
+        },
+        "datagen/solo/Bach10/processed_vn/01-AchGottundHerr/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.49797262491562355,
+            "Note": 0.4765384958455659,
+            "Error": 1.7305633142755648
+          },
+          "instrument_ols": {
+            "Full": 0.40124381947047105,
+            "Note": 0.500830131096019,
+            "Error": 1.5531211261896478
+          },
+          "note_shape": {
+            "Full": 0.4185358532755194,
+            "Note": 0.024789005694894572,
+            "Error": 1.7431638535632517
+          }
+        },
+        "datagen/solo/URMP/processed_va/27_King_vn_vn_va_sax_track3_va/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.5154746238910453,
+            "Note": 0.1965989183474094,
+            "Error": 0.46698711202576776
+          },
+          "instrument_ols": {
+            "Full": 0.505592621754724,
+            "Note": 0.061259553655289,
+            "Error": 0.4752440218107817
+          },
+          "note_shape": {
+            "Full": 0.5868866833984726,
+            "Note": 0.2547704224075407,
+            "Error": 0.45186428014737673
+          }
+        },
+        "datagen/solo/Bach10/processed_cl/03-ChristederdubistTagundLicht/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.4415086954022276,
+            "Note": 0.15336014768922665,
+            "Error": 1.6973409763587621
+          },
+          "instrument_ols": {
+            "Full": 0.14200171245347806,
+            "Note": -0.34641514879082913,
+            "Error": 0.9731990674345757
+          },
+          "note_shape": {
+            "Full": 0.05394280699566096,
+            "Note": -0.5371424032396234,
+            "Error": 1.0834001874403538
+          }
+        },
+        "datagen/solo/URMP/processed_vn/25_Pirates_vn_vn_va_sax_track2_vn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.39158020433079926,
+            "Note": 0.3607769499297138,
+            "Error": 0.7341233727343263
+          },
+          "instrument_ols": {
+            "Full": 0.5033449407525227,
+            "Note": 0.6230770469401532,
+            "Error": 0.6555421251721621
+          },
+          "note_shape": {
+            "Full": 0.28500568119954467,
+            "Note": -0.1881351669702843,
+            "Error": 0.7862110481271107
+          }
+        },
+        "datagen/solo/URMP/processed_va/39_Jerusalem_vn_vn_va_sax_db_track3_va/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.4364495147966392,
+            "Note": 0.30179788042142214,
+            "Error": 0.44044902089061827
+          },
+          "instrument_ols": {
+            "Full": 0.2751722105770137,
+            "Note": 0.09588496559902644,
+            "Error": 0.5114197885892128
+          },
+          "note_shape": {
+            "Full": 0.34973473330939936,
+            "Note": 0.006981167654117495,
+            "Error": 0.4309286797718786
+          }
+        },
+        "datagen/solo/URMP/processed_va/37_Rondeau_fl_vn_va_cl_track3_va/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.5100908647646938,
+            "Note": 0.45696151620176756,
+            "Error": 0.4346394593290118
+          },
+          "instrument_ols": {
+            "Full": 0.38114560884331794,
+            "Note": -0.0898013686806569,
+            "Error": 0.4980170099837614
+          },
+          "note_shape": {
+            "Full": 0.47029064293367906,
+            "Note": -0.045706811441612163,
+            "Error": 0.5031393122478748
+          }
+        },
+        "datagen/solo/Bach10/processed_cl/09-Jesus/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.48032562508253085,
+            "Note": 0.2937550770788512,
+            "Error": 1.7867332367409805
+          },
+          "instrument_ols": {
+            "Full": 0.3840844612590338,
+            "Note": 0.1899521524310943,
+            "Error": 0.8603231000108438
+          },
+          "note_shape": {
+            "Full": 0.342892559850599,
+            "Note": 0.13031905590824167,
+            "Error": 0.8953529587764378
+          }
+        },
+        "datagen/solo/URMP/processed_fl/17_Nocturne_vn_fl_cl_track2_fl/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.5932308304434206,
+            "Note": 0.2709696368612455,
+            "Error": 0.45125150054285645
+          },
+          "instrument_ols": {
+            "Full": 0.5690341837193962,
+            "Note": 0.2547435374464858,
+            "Error": 0.44224006681568073
+          },
+          "note_shape": {
+            "Full": 0.6134420532901047,
+            "Note": 0.39033470111328167,
+            "Error": 0.40916698591758044
+          }
+        },
+        "datagen/solo/URMP/processed_fl/08_Spring_fl_vn_track1_fl/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.6812822931447312,
+            "Note": 0.4327735467329715,
+            "Error": 0.5227637120246833
+          },
+          "instrument_ols": {
+            "Full": 0.7456171663142207,
+            "Note": 0.5454895048512358,
+            "Error": 0.6523677456110674
+          },
+          "note_shape": {
+            "Full": 0.7595513337856983,
+            "Note": 0.5839066201663723,
+            "Error": 0.5878287655894879
+          }
+        },
+        "datagen/solo/URMP/processed_vn/12_Spring_vn_vn_vc_track2_vn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.5114670332039656,
+            "Note": 0.3960351706849399,
+            "Error": 0.6113930882634108
+          },
+          "instrument_ols": {
+            "Full": 0.5684390224781075,
+            "Note": 0.3932340291078983,
+            "Error": 0.5200580916800843
+          },
+          "note_shape": {
+            "Full": 0.49125971512218025,
+            "Note": -0.1025897912861538,
+            "Error": 0.5872163760704877
+          }
+        },
+        "datagen/solo/URMP/processed_tbn/21_Rejouissance_cl_tbn_tba_track2_tbn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.6903290097858054,
+            "Note": 0.24187428623431195,
+            "Error": 0.3186918878980619
+          },
+          "instrument_ols": {
+            "Full": 0.6285820183765284,
+            "Note": 0.06675378604639039,
+            "Error": 0.43860869671080027
+          },
+          "note_shape": {
+            "Full": 0.7663909451232848,
+            "Note": 0.30646360904690373,
+            "Error": 0.3058200229278965
+          }
+        },
+        "datagen/solo/Bach10/processed_vn/03-ChristederdubistTagundLicht/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.2985062576767802,
+            "Note": 0.04963246127085019,
+            "Error": 1.8499491403389139
+          },
+          "instrument_ols": {
+            "Full": 0.2093634549814932,
+            "Note": -0.11420246580216367,
+            "Error": 1.656989749416255
+          },
+          "note_shape": {
+            "Full": 0.5877913851522819,
+            "Note": 0.73542108363188,
+            "Error": 1.620244518734956
+          }
+        },
+        "datagen/solo/URMP/processed_tbn/31_Slavonic_tpt_tpt_hn_tbn_track4_tbn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.7604239622809825,
+            "Note": 0.24573983595480653,
+            "Error": 0.3572715332016982
+          },
+          "instrument_ols": {
+            "Full": 0.6267404001939891,
+            "Note": -0.21802682680930505,
+            "Error": 0.46871222951965086
+          },
+          "note_shape": {
+            "Full": 0.8136082742204461,
+            "Note": 0.07505187821903073,
+            "Error": 0.4494612139909031
+          }
+        },
+        "datagen/solo/URMP/processed_vc/19_Pavane_cl_vn_vc_track3_vc/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.6038894732296032,
+            "Note": 0.5415983988361344,
+            "Error": 0.5819011258234927
+          },
+          "instrument_ols": {
+            "Full": 0.45669423377879603,
+            "Note": 0.2708158116814545,
+            "Error": 0.7002884649094293
+          },
+          "note_shape": {
+            "Full": 0.46310430553863646,
+            "Note": 0.12319889083569587,
+            "Error": 0.9021468969521004
+          }
+        },
+        "datagen/solo/URMP/processed_vn/09_Jesus_tpt_vn_track2_vn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.4211282990335723,
+            "Note": 0.27242899642454116,
+            "Error": 0.7863035150775971
+          },
+          "instrument_ols": {
+            "Full": 0.3779652556041283,
+            "Note": 0.11947469374061233,
+            "Error": 0.9159626108452575
+          },
+          "note_shape": {
+            "Full": 0.4480611322247389,
+            "Note": 0.09873491154698713,
+            "Error": 0.9603570478057161
+          }
+        },
+        "datagen/solo/Bach10/processed_vn/06-DieSonne/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.4623816699774917,
+            "Note": 0.19019346676710452,
+            "Error": 1.7521616975411842
+          },
+          "instrument_ols": {
+            "Full": 0.2729033146280639,
+            "Note": 0.09189062955127711,
+            "Error": 1.724735592758052
+          },
+          "note_shape": {
+            "Full": 0.4349753008237968,
+            "Note": 0.13907029167718354,
+            "Error": 1.705473858571524
+          }
+        },
+        "datagen/solo/URMP/processed_tpt/34_Fugue_tpt_tpt_hn_tbn_track2_tpt/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.7538553627464876,
+            "Note": 0.43504113750183804,
+            "Error": 0.32966813302294695
+          },
+          "instrument_ols": {
+            "Full": 0.8390766637207275,
+            "Note": 0.684736657028211,
+            "Error": 0.3200322855092361
+          },
+          "note_shape": {
+            "Full": 0.7597503320602048,
+            "Note": 0.13176769219986165,
+            "Error": 0.3684041317413814
+          }
+        },
+        "datagen/solo/URMP/processed_sax/16_Surprise_tpt_tpt_sax_track3_sax/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.7818832080562556,
+            "Note": 0.4617057333645773,
+            "Error": 0.6680267811436688
+          },
+          "instrument_ols": {
+            "Full": 0.6057473403607845,
+            "Note": 0.03228099579872204,
+            "Error": 1.3569681190880203
+          },
+          "note_shape": {
+            "Full": 0.6923636454593732,
+            "Note": 0.12024433953200411,
+            "Error": 0.6830693505182402
+          }
+        },
+        "datagen/solo/URMP/processed_tbn/42_Arioso_tpt_tpt_hn_tbn_tba_track4_tbn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.606236279970527,
+            "Note": -0.12414600921972585,
+            "Error": 0.6674734270076506
+          },
+          "instrument_ols": {
+            "Full": 0.7837126022668551,
+            "Note": 0.4891009518857285,
+            "Error": 0.4676814096449589
+          },
+          "note_shape": {
+            "Full": 0.6984379184650141,
+            "Note": -0.0360596925996466,
+            "Error": 0.4668666702500559
+          }
+        },
+        "datagen/solo/Bach10/processed_vn/07-HerrGott/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.4887958501714918,
+            "Note": 0.35956371441021834,
+            "Error": 1.8832793918265547
+          },
+          "instrument_ols": {
+            "Full": 0.3045405812808608,
+            "Note": 0.35101298747977333,
+            "Error": 1.3994810598932723
+          },
+          "note_shape": {
+            "Full": 0.4387350387487613,
+            "Note": 0.3239115529362727,
+            "Error": 1.4401434073829318
+          }
+        },
+        "datagen/solo/URMP/processed_cl/28_Fugue_fl_ob_cl_bn_track3_cl/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.802444007627551,
+            "Note": 0.4002153706222856,
+            "Error": 0.3292053820944393
+          },
+          "instrument_ols": {
+            "Full": 0.6865043825569676,
+            "Note": 0.09666840444819569,
+            "Error": 0.8125706583465061
+          },
+          "note_shape": {
+            "Full": 0.7609710353598292,
+            "Note": -0.10898171627857825,
+            "Error": 0.6905444368041027
+          }
+        },
+        "datagen/solo/URMP/processed_vc/24_Pirates_vn_vn_va_vc_track4_vc/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.4650346552525644,
+            "Note": 0.22679284073187608,
+            "Error": 0.8942024612485214
+          },
+          "instrument_ols": {
+            "Full": 0.19123108488276333,
+            "Note": -0.15331323054916934,
+            "Error": 0.7986464381936114
+          },
+          "note_shape": {
+            "Full": 0.47433284916639945,
+            "Note": 0.004882842287591583,
+            "Error": 0.5266825311206692
+          }
+        },
+        "datagen/solo/URMP/processed_ob/29_Fugue_fl_fl_ob_cl_track3_ob/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.6409968524364978,
+            "Note": 0.16492557441669223,
+            "Error": 0.6036704749181521
+          },
+          "instrument_ols": {
+            "Full": 0.590580134254234,
+            "Note": 0.15490798794042365,
+            "Error": 0.6561933139747627
+          },
+          "note_shape": {
+            "Full": 0.6816565525626058,
+            "Note": 0.039407618206465836,
+            "Error": 0.9144246068487717
+          }
+        },
+        "datagen/solo/URMP/processed_cl/29_Fugue_fl_fl_ob_cl_track4_cl/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.6852780737341244,
+            "Note": 0.2705898258243336,
+            "Error": 0.5073211011858746
+          },
+          "instrument_ols": {
+            "Full": 0.6478948636972715,
+            "Note": 0.22464039696766833,
+            "Error": 1.2996740033691334
+          },
+          "note_shape": {
+            "Full": 0.7152201303684829,
+            "Note": 0.11723791396299861,
+            "Error": 0.8120162076501495
+          }
+        },
+        "datagen/solo/Bach10/processed_sax/09-Jesus/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.44959225092756083,
+            "Note": 0.0007728568316201225,
+            "Error": 2.4254531604983147
+          },
+          "instrument_ols": {
+            "Full": 0.4472739310026661,
+            "Note": 0.353156935435172,
+            "Error": 0.6912653251792487
+          },
+          "note_shape": {
+            "Full": 0.43651449111524304,
+            "Note": 0.44240043631259796,
+            "Error": 0.9142508075641546
+          }
+        },
+        "datagen/solo/URMP/processed_tpt/33_Elise_tpt_tpt_hn_tbn_track2_tpt/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.6696391751988691,
+            "Note": -0.03125800508386954,
+            "Error": 0.8782436878301106
+          },
+          "instrument_ols": {
+            "Full": 0.8264659166732906,
+            "Note": 0.7675779956428405,
+            "Error": 0.6679021591446674
+          },
+          "note_shape": {
+            "Full": 0.8067847492561987,
+            "Note": 0.3209228034661337,
+            "Error": 0.700482170031974
+          }
+        },
+        "datagen/solo/URMP/processed_va/38_Jerusalem_vn_vn_va_vc_db_track3_va/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.42596598157564963,
+            "Note": 0.26618027719570614,
+            "Error": 0.44455752790233927
+          },
+          "instrument_ols": {
+            "Full": 0.2751722105770137,
+            "Note": 0.09588496559902644,
+            "Error": 0.5114197885892128
+          },
+          "note_shape": {
+            "Full": 0.34973473330939936,
+            "Note": 0.006981167654117495,
+            "Error": 0.4309286797718786
+          }
+        },
+        "datagen/solo/URMP/processed_cl/14_Waltz_fl_fl_cl_track3_cl/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.6276669969042676,
+            "Note": 0.37726221672310506,
+            "Error": 0.402305519347805
+          },
+          "instrument_ols": {
+            "Full": 0.6108742757777179,
+            "Note": 0.3246701445075442,
+            "Error": 0.5019136445286095
+          },
+          "note_shape": {
+            "Full": 0.706524103160185,
+            "Note": 0.2331504490090937,
+            "Error": 0.4107397236208591
+          }
+        },
+        "datagen/solo/URMP/processed_tpt/05_Entertainer_tpt_tpt_track2_tpt/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.7314999115336912,
+            "Note": 0.28964356960274573,
+            "Error": 0.38324443296904603
+          },
+          "instrument_ols": {
+            "Full": 0.8459638367902138,
+            "Note": 0.6873652536816915,
+            "Error": 0.6703359136497846
+          },
+          "note_shape": {
+            "Full": 0.8873426951817414,
+            "Note": 0.6135257089847471,
+            "Error": 0.3617214565671708
+          }
+        },
+        "datagen/solo/URMP/processed_cl/17_Nocturne_vn_fl_cl_track3_cl/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.7499493185880226,
+            "Note": 0.23069916936350324,
+            "Error": 0.24542905492482384
+          },
+          "instrument_ols": {
+            "Full": 0.7498316967235222,
+            "Note": 0.294706382685285,
+            "Error": 0.3079193961086458
+          },
+          "note_shape": {
+            "Full": 0.8144860166488824,
+            "Note": 0.3835015904149494,
+            "Error": 0.25551838292810225
+          }
+        },
+        "datagen/solo/URMP/processed_vn/38_Jerusalem_vn_vn_va_vc_db_track1_vn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.03818343770368876,
+            "Note": -0.29226757813473647,
+            "Error": 0.735381696904412
+          },
+          "instrument_ols": {
+            "Full": 0.1790118898192789,
+            "Note": 0.008282391014765965,
+            "Error": 0.8136248694510718
+          },
+          "note_shape": {
+            "Full": 0.29757912296573263,
+            "Note": 0.03350336485718069,
+            "Error": 0.6803996243595172
+          }
+        },
+        "datagen/solo/URMP/processed_tpt/31_Slavonic_tpt_tpt_hn_tbn_track1_tpt/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.6586878326239466,
+            "Note": 0.326860974057103,
+            "Error": 0.4678315937746848
+          },
+          "instrument_ols": {
+            "Full": 0.7597165851661155,
+            "Note": 0.5596851193659277,
+            "Error": 0.39492348522968623
+          },
+          "note_shape": {
+            "Full": 0.741395576210065,
+            "Note": 0.3774894261708648,
+            "Error": 0.46641615894631383
+          }
+        },
+        "datagen/solo/URMP/processed_vc/26_King_vn_vn_va_vc_track4_vc/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.49562394960929235,
+            "Note": 0.1917333878701175,
+            "Error": 0.6251221010240686
+          },
+          "instrument_ols": {
+            "Full": 0.4494281116833077,
+            "Note": 0.31674079945758565,
+            "Error": 0.6379379063734633
+          },
+          "note_shape": {
+            "Full": 0.5762043671467312,
+            "Note": 0.3933896276730228,
+            "Error": 0.5230188852172873
+          }
+        },
+        "datagen/solo/URMP/processed_fl/40_Miserere_fl_fl_ob_cl_bn_track2_fl/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.6251014228422219,
+            "Note": -0.023680437728354632,
+            "Error": 0.6323705395132646
+          },
+          "instrument_ols": {
+            "Full": 0.741402615195807,
+            "Note": 0.6054742949563053,
+            "Error": 0.5072862584432856
+          },
+          "note_shape": {
+            "Full": 0.6936419718581577,
+            "Note": 0.4294233248279499,
+            "Error": 0.5001986879451044
+          }
+        },
+        "datagen/solo/URMP/processed_tpt/15_Surprise_tpt_tpt_tbn_track2_tpt/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.7728641046034124,
+            "Note": 0.2716793731880575,
+            "Error": 0.39381938795215976
+          },
+          "instrument_ols": {
+            "Full": 0.8283646592411575,
+            "Note": 0.6403245034061744,
+            "Error": 0.45846362572499594
+          },
+          "note_shape": {
+            "Full": 0.859348972212735,
+            "Note": 0.6241289340770606,
+            "Error": 0.3752435485007654
+          }
+        },
+        "datagen/solo/Bach10/processed_cl/02-AchLiebenChristen/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.4062288587524388,
+            "Note": 0.022724986977091882,
+            "Error": 1.7482637715470908
+          },
+          "instrument_ols": {
+            "Full": 0.5703141227215769,
+            "Note": 0.6073902508512631,
+            "Error": 0.9429372281210959
+          },
+          "note_shape": {
+            "Full": 0.6078132879062188,
+            "Note": 0.6013774574207129,
+            "Error": 1.128811235528843
+          }
+        },
+        "datagen/solo/URMP/processed_tbn/07_GString_tpt_tbn_track2_tbn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.48876419869372256,
+            "Note": 0.025919546977785948,
+            "Error": 0.7550998517630859
+          },
+          "instrument_ols": {
+            "Full": 0.6547219056431529,
+            "Note": 0.42838743554802045,
+            "Error": 0.3236699669936439
+          },
+          "note_shape": {
+            "Full": 0.7079068328293852,
+            "Note": 0.3025221792137652,
+            "Error": 0.3261202523562967
+          }
+        },
+        "datagen/solo/URMP/processed_tpt/43_Chorale_tpt_tpt_hn_tbn_tba_track2_tpt/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.6854230941248148,
+            "Note": 0.0315214769398223,
+            "Error": 0.4607380430232002
+          },
+          "instrument_ols": {
+            "Full": 0.6952235413314152,
+            "Note": 0.15137603445835304,
+            "Error": 0.5361204653240393
+          },
+          "note_shape": {
+            "Full": 0.8073297913968421,
+            "Note": 0.186511513702215,
+            "Error": 0.4915777487060243
+          }
+        },
+        "datagen/solo/URMP/processed_ob/41_Miserere_fl_fl_ob_sax_bn_track3_ob/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.6385566659642984,
+            "Note": 0.36704240231694146,
+            "Error": 0.38893348368046204
+          },
+          "instrument_ols": {
+            "Full": 0.6060234754034087,
+            "Note": 0.36332506001580034,
+            "Error": 0.4206363276033643
+          },
+          "note_shape": {
+            "Full": 0.659572831308597,
+            "Note": 0.2819020547553334,
+            "Error": 0.84958743376343
+          }
+        },
+        "datagen/solo/Bach10/processed_vn/09-Jesus/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.5255467947141748,
+            "Note": 0.2515879945745344,
+            "Error": 1.7801158631342129
+          },
+          "instrument_ols": {
+            "Full": 0.38272278645974533,
+            "Note": 0.31436071164418794,
+            "Error": 1.6390328835180943
+          },
+          "note_shape": {
+            "Full": 0.37798249291046176,
+            "Note": 0.29363933767652045,
+            "Error": 1.6671227742205832
+          }
+        },
+        "datagen/solo/Bach10/processed_bn/02-AchLiebenChristen/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.38347979927720915,
+            "Note": 0.12819207874249416,
+            "Error": 2.1004179314135176
+          },
+          "instrument_ols": {
+            "Full": 0.19387660362238024,
+            "Note": -0.021763087622702647,
+            "Error": 0.6893757400359427
+          },
+          "note_shape": {
+            "Full": 0.42449761109714995,
+            "Note": 0.22317724428841773,
+            "Error": 0.8183852381587122
+          }
+        },
+        "datagen/solo/TRIOS/processed_tpt/lussier_trumpet/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.5281642564187492,
+            "Note": 0.15452681135464652,
+            "Error": 1.5144090707787774
+          },
+          "instrument_ols": {
+            "Full": 0.7157668574568683,
+            "Note": 0.7695379157207963,
+            "Error": 1.6778011231977843
+          },
+          "note_shape": {
+            "Full": 0.7029032322883247,
+            "Note": 0.7009771868575532,
+            "Error": 1.6041490285620197
+          }
+        },
+        "datagen/solo/URMP/processed_bn/41_Miserere_fl_fl_ob_sax_bn_track5_bn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.7188003796836057,
+            "Note": 0.35449295714465723,
+            "Error": 0.5329334826813986
+          },
+          "instrument_ols": {
+            "Full": 0.45699979200316726,
+            "Note": 0.07702191663913172,
+            "Error": 0.4529175892145915
+          },
+          "note_shape": {
+            "Full": 0.6893324351802839,
+            "Note": 0.17639401130384996,
+            "Error": 0.4032312274792662
+          }
+        },
+        "datagen/solo/URMP/processed_sax/39_Jerusalem_vn_vn_va_sax_db_track4_sax/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.4780768008664431,
+            "Note": 0.3631074275594152,
+            "Error": 0.5834859642446026
+          },
+          "instrument_ols": {
+            "Full": 0.3041938667133875,
+            "Note": 0.29629069438163225,
+            "Error": 0.7446671015816098
+          },
+          "note_shape": {
+            "Full": 0.40013510815129566,
+            "Note": 0.2742583620970647,
+            "Error": 0.8329568352285018
+          }
+        },
+        "datagen/solo/URMP/processed_vn/17_Nocturne_vn_fl_cl_track1_vn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.38005776312123907,
+            "Note": 0.25818912214923967,
+            "Error": 0.5521024357816469
+          },
+          "instrument_ols": {
+            "Full": 0.46487546175128014,
+            "Note": 0.30794436299529754,
+            "Error": 0.47199106842304467
+          },
+          "note_shape": {
+            "Full": 0.26125823164585454,
+            "Note": -0.3700419966693928,
+            "Error": 0.5578212441626531
+          }
+        },
+        "datagen/solo/URMP/processed_cl/40_Miserere_fl_fl_ob_cl_bn_track4_cl/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.6079555105760589,
+            "Note": 0.2709502744985298,
+            "Error": 0.35969072090516946
+          },
+          "instrument_ols": {
+            "Full": 0.5588785260728034,
+            "Note": 0.44200212242547693,
+            "Error": 0.6900523110010072
+          },
+          "note_shape": {
+            "Full": 0.6469781321787876,
+            "Note": 0.44984301082642986,
+            "Error": 0.5638974956941845
+          }
+        },
+        "datagen/solo/Bach10/processed_vn/02-AchLiebenChristen/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.4588753075206689,
+            "Note": 0.3023803000269112,
+            "Error": 1.7816329681751322
+          },
+          "instrument_ols": {
+            "Full": 0.4841094187410521,
+            "Note": 0.6492890222600081,
+            "Error": 1.6278926308862263
+          },
+          "note_shape": {
+            "Full": 0.34629993998974046,
+            "Note": -0.1223647729369196,
+            "Error": 1.7659465941792878
+          }
+        },
+        "datagen/solo/Bach10/processed_cl/07-HerrGott/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.3829854306250661,
+            "Note": -0.05655015067081541,
+            "Error": 1.7398635683199855
+          },
+          "instrument_ols": {
+            "Full": 0.37416872190123834,
+            "Note": 0.08095102538818563,
+            "Error": 0.4869715699408955
+          },
+          "note_shape": {
+            "Full": 0.37015355605500805,
+            "Note": -0.009989109664383058,
+            "Error": 0.8976949035918323
+          }
+        },
+        "datagen/solo/URMP/processed_vn/24_Pirates_vn_vn_va_vc_track1_vn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.4100209862796247,
+            "Note": 0.3179746902197867,
+            "Error": 0.7606851042483074
+          },
+          "instrument_ols": {
+            "Full": 0.4231851701305001,
+            "Note": 0.24507920001616826,
+            "Error": 0.570125074607152
+          },
+          "note_shape": {
+            "Full": 0.4208129697052649,
+            "Note": -0.05764512193794696,
+            "Error": 0.6029191285837219
+          }
+        },
+        "datagen/solo/URMP/processed_tpt/15_Surprise_tpt_tpt_tbn_track3_tpt/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.8597428293685618,
+            "Note": 0.29370814413974683,
+            "Error": 0.5996623043204468
+          },
+          "instrument_ols": {
+            "Full": 0.7736299979244445,
+            "Note": 0.2598958987906425,
+            "Error": 0.8115565815119358
+          },
+          "note_shape": {
+            "Full": 0.8225989201167533,
+            "Note": 0.2363977086535383,
+            "Error": 0.47175434951770184
+          }
+        },
+        "datagen/solo/Bach10/processed_bn/07-HerrGott/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.3762349275386276,
+            "Note": -0.02546222667051072,
+            "Error": 1.9478675410357011
+          },
+          "instrument_ols": {
+            "Full": 0.3214236071468974,
+            "Note": 0.06489855309053927,
+            "Error": 0.5998412968853277
+          },
+          "note_shape": {
+            "Full": 0.32013442357405875,
+            "Note": 0.12180528279677053,
+            "Error": 0.6493554745294017
+          }
+        },
+        "datagen/solo/URMP/processed_tpt/16_Surprise_tpt_tpt_sax_track2_tpt/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.7701227179161757,
+            "Note": 0.26167114073592995,
+            "Error": 0.39514251363246855
+          },
+          "instrument_ols": {
+            "Full": 0.8283646592411575,
+            "Note": 0.6403245034061744,
+            "Error": 0.45846362572499594
+          },
+          "note_shape": {
+            "Full": 0.859348972212735,
+            "Note": 0.6241289340770606,
+            "Error": 0.3752435485007654
+          }
+        },
+        "datagen/solo/Bach10/processed_cl/10-NunBitten/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.4781948393272722,
+            "Note": 0.3021768776059092,
+            "Error": 1.8477457529048793
+          },
+          "instrument_ols": {
+            "Full": 0.5474566487035983,
+            "Note": 0.23405191725718072,
+            "Error": 1.1198538419115016
+          },
+          "note_shape": {
+            "Full": 0.4729533239918466,
+            "Note": 0.1507985981078391,
+            "Error": 1.2658349653261685
+          }
+        },
+        "datagen/solo/URMP/processed_vn/26_King_vn_vn_va_vc_track1_vn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.45892025372340695,
+            "Note": -0.014106532282135296,
+            "Error": 0.8065408617658023
+          },
+          "instrument_ols": {
+            "Full": 0.4397368592797276,
+            "Note": 0.128211510852518,
+            "Error": 0.6593030811287675
+          },
+          "note_shape": {
+            "Full": 0.4315330720134903,
+            "Note": 0.06932486754735662,
+            "Error": 0.6687645009409656
+          }
+        },
+        "datagen/solo/TRIOS/processed_sax/take_five_saxophone/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.6723959017030093,
+            "Note": -0.043897099511998945,
+            "Error": 2.311067651384137
+          },
+          "instrument_ols": {
+            "Full": 0.8060650015778125,
+            "Note": 0.09203852898554402,
+            "Error": 1.8396457030550573
+          },
+          "note_shape": {
+            "Full": 0.756738281056542,
+            "Note": 0.15384738664874842,
+            "Error": 1.3064219613074366
+          }
+        },
+        "datagen/solo/URMP/processed_sax/06_Entertainer_sax_sax_track2_sax/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.43971116476481936,
+            "Note": -0.01612264698936273,
+            "Error": 0.7262462681582922
+          },
+          "instrument_ols": {
+            "Full": 0.6090974778625643,
+            "Note": 0.2685605333133423,
+            "Error": 0.5567828765509306
+          },
+          "note_shape": {
+            "Full": 0.6357149733628463,
+            "Note": 0.1367925339280242,
+            "Error": 0.5397930190002386
+          }
+        },
+        "datagen/solo/URMP/processed_ob/40_Miserere_fl_fl_ob_cl_bn_track3_ob/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.6236984826736178,
+            "Note": 0.22835154153069895,
+            "Error": 0.40415316281597924
+          },
+          "instrument_ols": {
+            "Full": 0.6060234754034087,
+            "Note": 0.36332506001580034,
+            "Error": 0.4206363276033643
+          },
+          "note_shape": {
+            "Full": 0.659572831308597,
+            "Note": 0.2819020547553334,
+            "Error": 0.84958743376343
+          }
+        },
+        "datagen/solo/URMP/processed_vn/32_Fugue_vn_vn_va_vc_track2_vn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.5074344282935663,
+            "Note": 0.2538723754615802,
+            "Error": 0.5830504788925769
+          },
+          "instrument_ols": {
+            "Full": 0.49592623691925725,
+            "Note": 0.24409751954946363,
+            "Error": 0.6916604250642527
+          },
+          "note_shape": {
+            "Full": 0.5237615387536109,
+            "Note": 0.07469617664235405,
+            "Error": 0.5800880278024214
+          }
+        },
+        "datagen/solo/URMP/processed_fl/40_Miserere_fl_fl_ob_cl_bn_track1_fl/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.6610335436450474,
+            "Note": 0.48367722588594947,
+            "Error": 0.3775937746781003
+          },
+          "instrument_ols": {
+            "Full": 0.5384160735383121,
+            "Note": -0.16931929935617981,
+            "Error": 0.5658096536749407
+          },
+          "note_shape": {
+            "Full": 0.5773148303548357,
+            "Note": -0.2524335792478625,
+            "Error": 0.41270110804902493
+          }
+        },
+        "datagen/solo/URMP/processed_va/44_K515_vn_vn_va_va_vc_track3_va/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.34230838089921317,
+            "Note": 0.0469515905870543,
+            "Error": 0.6467875395547222
+          },
+          "instrument_ols": {
+            "Full": 0.3965229227019068,
+            "Note": 0.0867705797569062,
+            "Error": 0.585694369317438
+          },
+          "note_shape": {
+            "Full": 0.4315780475418137,
+            "Note": 0.011693753106529196,
+            "Error": 0.6743331120826163
+          }
+        },
+        "datagen/solo/Bach10/processed_bn/03-ChristederdubistTagundLicht/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.30150824383714625,
+            "Note": -0.3841464481998283,
+            "Error": 2.1932652058999014
+          },
+          "instrument_ols": {
+            "Full": 0.4760610186945614,
+            "Note": 0.2031946588309357,
+            "Error": 0.257297301931728
+          },
+          "note_shape": {
+            "Full": 0.4189356347460191,
+            "Note": 0.3526657978845864,
+            "Error": 0.7702385126075261
+          }
+        },
+        "datagen/solo/URMP/processed_fl/04_Allegro_fl_fl_track1_fl/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.6259561277031142,
+            "Note": 0.36524243477524865,
+            "Error": 0.4374382920930214
+          },
+          "instrument_ols": {
+            "Full": 0.6228380168845504,
+            "Note": 0.2042009243221822,
+            "Error": 0.39441679510940486
+          },
+          "note_shape": {
+            "Full": 0.6598936619527315,
+            "Note": 0.17206559532901752,
+            "Error": 0.44332847834595507
+          }
+        },
+        "datagen/solo/URMP/processed_tpt/34_Fugue_tpt_tpt_hn_tbn_track1_tpt/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.6252797522704793,
+            "Note": -0.058972571451786984,
+            "Error": 0.46786404769640044
+          },
+          "instrument_ols": {
+            "Full": 0.7736390141502162,
+            "Note": 0.5901363267818195,
+            "Error": 0.3451182479364011
+          },
+          "note_shape": {
+            "Full": 0.7250102888590606,
+            "Note": 0.11486878631443596,
+            "Error": 0.45158145415349904
+          }
+        },
+        "datagen/solo/URMP/processed_vc/32_Fugue_vn_vn_va_vc_track4_vc/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.6993645190645412,
+            "Note": 0.599986138799567,
+            "Error": 0.39572398368636225
+          },
+          "instrument_ols": {
+            "Full": 0.5131334039450972,
+            "Note": 0.22801941681355303,
+            "Error": 0.6101285408494828
+          },
+          "note_shape": {
+            "Full": 0.51760804407324,
+            "Note": 0.06883359727091433,
+            "Error": 0.6575063202724435
+          }
+        },
+        "datagen/solo/Bach10/processed_sax/01-AchGottundHerr/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.4111785005293535,
+            "Note": 0.03290182424207905,
+            "Error": 2.1560638758876465
+          },
+          "instrument_ols": {
+            "Full": 0.5479879303345004,
+            "Note": 0.4850479026732169,
+            "Error": 0.809005870554027
+          },
+          "note_shape": {
+            "Full": 0.4986275824705716,
+            "Note": 0.39635134656496496,
+            "Error": 1.065098802310129
+          }
+        },
+        "datagen/solo/Bach10/processed_bn/08-FuerDeinenThron/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.43371562194818125,
+            "Note": 0.13145854723102282,
+            "Error": 2.0387050375156437
+          },
+          "instrument_ols": {
+            "Full": 0.22115450451431,
+            "Note": 0.23262217287552256,
+            "Error": 0.8714518154363036
+          },
+          "note_shape": {
+            "Full": 0.3565589428200986,
+            "Note": 0.14090013252299916,
+            "Error": 0.6614184151703812
+          }
+        },
+        "datagen/solo/URMP/processed_sax/27_King_vn_vn_va_sax_track4_sax/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.696533639212763,
+            "Note": 0.3362719892551286,
+            "Error": 0.5070540538169178
+          },
+          "instrument_ols": {
+            "Full": 0.5802897220209351,
+            "Note": 0.2957455609808501,
+            "Error": 0.975196212593751
+          },
+          "note_shape": {
+            "Full": 0.68942961391286,
+            "Note": 0.36062128169331514,
+            "Error": 0.45466032731719674
+          }
+        },
+        "datagen/solo/URMP/processed_cl/19_Pavane_cl_vn_vc_track1_cl/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.6241143581066567,
+            "Note": 0.3279408447440977,
+            "Error": 0.43294061391203437
+          },
+          "instrument_ols": {
+            "Full": 0.5480117870297555,
+            "Note": 0.3769198877272765,
+            "Error": 1.4521440897509599
+          },
+          "note_shape": {
+            "Full": 0.44406121737609866,
+            "Note": 0.04420219594639263,
+            "Error": 0.8872333494434729
+          }
+        },
+        "datagen/solo/Bach10/processed_sax/06-DieSonne/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.42656411433326485,
+            "Note": 0.44080052310834067,
+            "Error": 2.230732460370046
+          },
+          "instrument_ols": {
+            "Full": 0.6310936869909629,
+            "Note": 0.6558967582090155,
+            "Error": 0.9505120837472804
+          },
+          "note_shape": {
+            "Full": 0.5953975758109606,
+            "Note": 0.7110530868829106,
+            "Error": 1.1302558796521884
+          }
+        },
+        "datagen/solo/URMP/processed_vn/25_Pirates_vn_vn_va_sax_track1_vn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.4119546813449668,
+            "Note": 0.3307942860591875,
+            "Error": 0.7570284273254992
+          },
+          "instrument_ols": {
+            "Full": 0.4231851701305001,
+            "Note": 0.24507920001616826,
+            "Error": 0.570125074607152
+          },
+          "note_shape": {
+            "Full": 0.4208129697052649,
+            "Note": -0.05764512193794696,
+            "Error": 0.6029191285837219
+          }
+        },
+        "datagen/solo/URMP/processed_ob/30_Fugue_fl_fl_ob_sax_track3_ob/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.6349724903705427,
+            "Note": 0.1563422982528866,
+            "Error": 0.6147140739106983
+          },
+          "instrument_ols": {
+            "Full": 0.5905801346517106,
+            "Note": 0.15490798905303543,
+            "Error": 0.6561932914486157
+          },
+          "note_shape": {
+            "Full": 0.6816565534339434,
+            "Note": 0.03940762124155863,
+            "Error": 0.9144246445298736
+          }
+        },
+        "datagen/solo/URMP/processed_vn/38_Jerusalem_vn_vn_va_vc_db_track2_vn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.27894143392094145,
+            "Note": -0.04040155012937771,
+            "Error": 0.5644474283722749
+          },
+          "instrument_ols": {
+            "Full": 0.15541388801179665,
+            "Note": -0.2001539359817694,
+            "Error": 0.6504945137097767
+          },
+          "note_shape": {
+            "Full": 0.3332140097591086,
+            "Note": 0.16861754275708962,
+            "Error": 0.5042118920886974
+          }
+        },
+        "datagen/solo/URMP/processed_vn/13_Hark_vn_vn_va_track1_vn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.468438640747717,
+            "Note": 0.11707798050654178,
+            "Error": 0.5492146762861122
+          },
+          "instrument_ols": {
+            "Full": 0.4270344062576851,
+            "Note": -0.014737670657327971,
+            "Error": 0.6170032826507588
+          },
+          "note_shape": {
+            "Full": 0.465038601342408,
+            "Note": -0.027081915315444148,
+            "Error": 0.561565298318946
+          }
+        },
+        "datagen/solo/URMP/processed_va/36_Rondeau_vn_vn_va_vc_track3_va/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.5173040444135178,
+            "Note": 0.4671778415879229,
+            "Error": 0.8310890556408634
+          },
+          "instrument_ols": {
+            "Full": 0.3811456016176982,
+            "Note": -0.08980138075995159,
+            "Error": 0.7767892188035315
+          },
+          "note_shape": {
+            "Full": 0.470290640071313,
+            "Note": -0.045706828381231364,
+            "Error": 0.6608645016604991
+          }
+        },
+        "datagen/solo/URMP/processed_tpt/31_Slavonic_tpt_tpt_hn_tbn_track2_tpt/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.5941649963327199,
+            "Note": 0.1999846551546697,
+            "Error": 0.5084451669579961
+          },
+          "instrument_ols": {
+            "Full": 0.7952915448663855,
+            "Note": 0.6718283928312517,
+            "Error": 0.4217917833631396
+          },
+          "note_shape": {
+            "Full": 0.7541995344591854,
+            "Note": 0.30458128840157606,
+            "Error": 0.5325968205729696
+          }
+        },
+        "datagen/solo/URMP/processed_vn/35_Rondeau_vn_vn_va_db_track2_vn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.18456257347868615,
+            "Note": -0.1583746173652211,
+            "Error": 0.6032037737997049
+          },
+          "instrument_ols": {
+            "Full": 0.4646928617701949,
+            "Note": 0.309047174579946,
+            "Error": 0.45648103810135443
+          },
+          "note_shape": {
+            "Full": 0.3444698262639242,
+            "Note": -0.24989010458912078,
+            "Error": 0.5023179986005751
+          }
+        },
+        "datagen/solo/PHENICX/processed_bn/mozart_bassoon/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.7977280803179545,
+            "Note": 0.3488441466631766,
+            "Error": 2.390371866700433
+          },
+          "instrument_ols": {
+            "Full": 0.6843109550387758,
+            "Note": 0.10182045789137538,
+            "Error": 1.7767423549465278
+          },
+          "note_shape": {
+            "Full": 0.8122458372773353,
+            "Note": 0.12620025245452965,
+            "Error": 1.423741293475232
+          }
+        },
+        "datagen/solo/URMP/processed_sax/10_March_tpt_sax_track2_sax/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.4537088626920766,
+            "Note": 0.12837520218684761,
+            "Error": 0.7598752430526157
+          },
+          "instrument_ols": {
+            "Full": 0.3629242781215121,
+            "Note": 0.24456215622617355,
+            "Error": 1.2262104640980978
+          },
+          "note_shape": {
+            "Full": 0.44252613372275634,
+            "Note": 0.1915654499345129,
+            "Error": 1.1421831149243582
+          }
+        },
+        "datagen/solo/URMP/processed_vn/18_Nocturne_vn_fl_tpt_track1_vn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.38555955660241176,
+            "Note": 0.27940553548239255,
+            "Error": 0.5395206268420362
+          },
+          "instrument_ols": {
+            "Full": 0.4522750773413981,
+            "Note": 0.3017124999255165,
+            "Error": 0.46825109758645295
+          },
+          "note_shape": {
+            "Full": 0.2553381327731678,
+            "Note": -0.371421676074187,
+            "Error": 0.5512172675659011
+          }
+        },
+        "datagen/solo/URMP/processed_tpt/16_Surprise_tpt_tpt_sax_track1_tpt/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.6600243829354395,
+            "Note": 0.21926716728582707,
+            "Error": 0.5897042519100243
+          },
+          "instrument_ols": {
+            "Full": 0.8049692110518567,
+            "Note": 0.8283263439412322,
+            "Error": 0.5276157573358375
+          },
+          "note_shape": {
+            "Full": 0.7672684440697808,
+            "Note": 0.6677600847309315,
+            "Error": 0.5684412894934966
+          }
+        },
+        "datagen/solo/Bach10/processed_bn/04-ChristeDuBeistand/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.4341958697526913,
+            "Note": 0.061185618698927816,
+            "Error": 2.322470074151344
+          },
+          "instrument_ols": {
+            "Full": 0.2669631335512069,
+            "Note": 0.03022523581451938,
+            "Error": 0.47836493759328613
+          },
+          "note_shape": {
+            "Full": 0.3298198999633342,
+            "Note": 0.08686862422060868,
+            "Error": 0.8808782270734239
+          }
+        },
+        "datagen/solo/URMP/processed_sax/23_Rejouissance_cl_sax_tba_track2_sax/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.5225504389805402,
+            "Note": 0.03577377380364016,
+            "Error": 0.49149987926046224
+          },
+          "instrument_ols": {
+            "Full": 0.5431170413537086,
+            "Note": 0.09321670500239075,
+            "Error": 0.8580935032202118
+          },
+          "note_shape": {
+            "Full": 0.6536999240510927,
+            "Note": -0.01485814730712231,
+            "Error": 0.593796521381913
+          }
+        },
+        "datagen/solo/URMP/processed_bn/40_Miserere_fl_fl_ob_cl_bn_track5_bn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.710193742718999,
+            "Note": 0.3218868590063859,
+            "Error": 0.5383341445589783
+          },
+          "instrument_ols": {
+            "Full": 0.45699979200316726,
+            "Note": 0.07702191663913172,
+            "Error": 0.4529175892145915
+          },
+          "note_shape": {
+            "Full": 0.6893324351802839,
+            "Note": 0.17639401130384996,
+            "Error": 0.4032312274792662
+          }
+        },
+        "datagen/solo/URMP/processed_vn/01_Jupiter_vn_vc_track1_vn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.4006657259156346,
+            "Note": 0.07928348575487956,
+            "Error": 0.8272933551070083
+          },
+          "instrument_ols": {
+            "Full": 0.5234856305064548,
+            "Note": 0.04107114975121855,
+            "Error": 0.5014693998386985
+          },
+          "note_shape": {
+            "Full": 0.5543864874020283,
+            "Note": 0.13760390229968394,
+            "Error": 0.6005150592441246
+          }
+        },
+        "datagen/solo/URMP/processed_fl/29_Fugue_fl_fl_ob_cl_track1_fl/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.5205472622832885,
+            "Note": 0.056618446407431286,
+            "Error": 0.5842287482663914
+          },
+          "instrument_ols": {
+            "Full": 0.5749132970147695,
+            "Note": 0.34900455046004564,
+            "Error": 0.6017800797716292
+          },
+          "note_shape": {
+            "Full": 0.580739453362563,
+            "Note": 0.10416214346954616,
+            "Error": 0.5878690827348003
+          }
+        },
+        "datagen/solo/URMP/processed_vn/24_Pirates_vn_vn_va_vc_track2_vn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.36343375045578047,
+            "Note": 0.3115357522639361,
+            "Error": 0.7400587233590246
+          },
+          "instrument_ols": {
+            "Full": 0.5033449395647069,
+            "Note": 0.6230770472403718,
+            "Error": 0.6555421165890932
+          },
+          "note_shape": {
+            "Full": 0.2850056802083683,
+            "Note": -0.1881351680574296,
+            "Error": 0.7862110409681488
+          }
+        },
+        "datagen/solo/TRIOS/processed_vc/schubert_cello/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.32574581902587396,
+            "Note": -0.044605292444193784,
+            "Error": 1.075929794931345
+          },
+          "instrument_ols": {
+            "Full": 0.46894676548632236,
+            "Note": 0.20212726473214324,
+            "Error": 0.7622023848076416
+          },
+          "note_shape": {
+            "Full": 0.5562209295933332,
+            "Note": 0.2629828721539855,
+            "Error": 0.6069167095499138
+          }
+        },
+        "datagen/solo/URMP/processed_vn/35_Rondeau_vn_vn_va_db_track1_vn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.5502484640378552,
+            "Note": 0.5693687106574383,
+            "Error": 0.5316780487444992
+          },
+          "instrument_ols": {
+            "Full": 0.3384280238955141,
+            "Note": 0.007035344689384571,
+            "Error": 0.45803648920012935
+          },
+          "note_shape": {
+            "Full": 0.30139885746996525,
+            "Note": -0.15627590268623506,
+            "Error": 0.4773109688713071
+          }
+        },
+        "datagen/solo/URMP/processed_vn/39_Jerusalem_vn_vn_va_sax_db_track2_vn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.28263013679629917,
+            "Note": -0.04232766309277035,
+            "Error": 0.5634526878801733
+          },
+          "instrument_ols": {
+            "Full": 0.15541388801179665,
+            "Note": -0.2001539359817694,
+            "Error": 0.6504945137097767
+          },
+          "note_shape": {
+            "Full": 0.3332140097591086,
+            "Note": 0.16861754275708962,
+            "Error": 0.5042118920886974
+          }
+        },
+        "datagen/solo/URMP/processed_cl/37_Rondeau_fl_vn_va_cl_track4_cl/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.606318503009625,
+            "Note": 0.29264327828083203,
+            "Error": 0.4602861838028868
+          },
+          "instrument_ols": {
+            "Full": 0.5921028108564451,
+            "Note": 0.09138630354737391,
+            "Error": 0.4077519939520427
+          },
+          "note_shape": {
+            "Full": 0.7182095117236341,
+            "Note": 0.29211378909602337,
+            "Error": 0.4169522989607417
+          }
+        },
+        "datagen/solo/URMP/processed_tpt/42_Arioso_tpt_tpt_hn_tbn_tba_track2_tpt/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.8055056616884028,
+            "Note": 0.30823450971896,
+            "Error": 0.38820341394695224
+          },
+          "instrument_ols": {
+            "Full": 0.8506187861857686,
+            "Note": 0.6123489536622553,
+            "Error": 0.5657590940294065
+          },
+          "note_shape": {
+            "Full": 0.8252400988583384,
+            "Note": 0.4768610563160494,
+            "Error": 0.4188155080690753
+          }
+        },
+        "datagen/solo/URMP/processed_vc/01_Jupiter_vn_vc_track2_vc/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.7832562975184892,
+            "Note": 0.8423294879598442,
+            "Error": 0.3426367772463283
+          },
+          "instrument_ols": {
+            "Full": 0.33944755493295126,
+            "Note": 0.1449635396874675,
+            "Error": 1.3502261525053032
+          },
+          "note_shape": {
+            "Full": 0.4629405962070907,
+            "Note": 0.4556019532220086,
+            "Error": 0.6887871520328974
+          }
+        },
+        "datagen/solo/TRIOS/processed_vn/schubert_violin/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.3917302395546215,
+            "Note": -0.3614704281910833,
+            "Error": 0.9784151060678354
+          },
+          "instrument_ols": {
+            "Full": 0.47945843887036743,
+            "Note": -0.23915962484410244,
+            "Error": 0.9763972377379332
+          },
+          "note_shape": {
+            "Full": 0.6179609610135736,
+            "Note": 0.4195656390534865,
+            "Error": 0.7498079291497425
+          }
+        },
+        "datagen/solo/URMP/processed_vn/02_Sonata_vn_vn_track1_vn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.503834624088269,
+            "Note": 0.3488226977858901,
+            "Error": 0.7321640739716769
+          },
+          "instrument_ols": {
+            "Full": 0.5790383452911833,
+            "Note": 0.5556521790196999,
+            "Error": 0.664497619387894
+          },
+          "note_shape": {
+            "Full": 0.34614772970986807,
+            "Note": -0.43478117593030136,
+            "Error": 0.7801338623255211
+          }
+        },
+        "datagen/solo/URMP/processed_fl/28_Fugue_fl_ob_cl_bn_track1_fl/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.6920952778028181,
+            "Note": 0.3249087640384628,
+            "Error": 0.36808099477220657
+          },
+          "instrument_ols": {
+            "Full": 0.6852594247224407,
+            "Note": 0.19993644987519266,
+            "Error": 0.3668647422615908
+          },
+          "note_shape": {
+            "Full": 0.7174542354759195,
+            "Note": 0.09442515883112443,
+            "Error": 0.4366271189709721
+          }
+        },
+        "datagen/solo/TRIOS/processed_va/mozart_viola/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.5129350859610737,
+            "Note": -0.14309199456996474,
+            "Error": 1.130088829093129
+          },
+          "instrument_ols": {
+            "Full": 0.6923390395187903,
+            "Note": 0.5171202339245143,
+            "Error": 0.8618293131401935
+          },
+          "note_shape": {
+            "Full": 0.6640998620958635,
+            "Note": 0.08212723689681938,
+            "Error": 0.9559478238319157
+          }
+        },
+        "datagen/solo/URMP/processed_vn/36_Rondeau_vn_vn_va_vc_track1_vn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.5374306580060044,
+            "Note": 0.5508893818850594,
+            "Error": 0.5331764628970257
+          },
+          "instrument_ols": {
+            "Full": 0.3384280238955141,
+            "Note": 0.007035344689384571,
+            "Error": 0.45803648920012935
+          },
+          "note_shape": {
+            "Full": 0.30139885746996525,
+            "Note": -0.15627590268623506,
+            "Error": 0.4773109688713071
+          }
+        },
+        "datagen/solo/URMP/processed_tpt/33_Elise_tpt_tpt_hn_tbn_track1_tpt/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.6274005718156448,
+            "Note": 0.14810093630468227,
+            "Error": 0.8350133944712391
+          },
+          "instrument_ols": {
+            "Full": 0.7633751524793836,
+            "Note": 0.6478841358336762,
+            "Error": 0.6528721409248975
+          },
+          "note_shape": {
+            "Full": 0.7208782032553902,
+            "Note": 0.42055284435449336,
+            "Error": 0.6707937044881547
+          }
+        },
+        "datagen/solo/URMP/processed_sax/41_Miserere_fl_fl_ob_sax_bn_track4_sax/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.6724738726341177,
+            "Note": -0.2311962793289393,
+            "Error": 0.5654737415929428
+          },
+          "instrument_ols": {
+            "Full": 0.523743839644852,
+            "Note": -0.38240834939326496,
+            "Error": 0.5657504118783083
+          },
+          "note_shape": {
+            "Full": 0.5816383529322532,
+            "Note": -0.5306190564316907,
+            "Error": 0.5649185740266711
+          }
+        },
+        "datagen/solo/URMP/processed_sax/30_Fugue_fl_fl_ob_sax_track4_sax/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.6867926332822526,
+            "Note": 0.005004236160406678,
+            "Error": 0.4908806413397606
+          },
+          "instrument_ols": {
+            "Full": 0.5101331232950558,
+            "Note": -0.06359309895802678,
+            "Error": 0.9040389443935467
+          },
+          "note_shape": {
+            "Full": 0.6789485894713263,
+            "Note": -0.06999211736760944,
+            "Error": 0.6856724327061428
+          }
+        },
+        "datagen/solo/Bach10/processed_vn/08-FuerDeinenThron/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.40460682015112176,
+            "Note": 0.3408008588011941,
+            "Error": 2.112842362783228
+          },
+          "instrument_ols": {
+            "Full": 0.4213180939951776,
+            "Note": 0.5765818193665079,
+            "Error": 1.6138269088312975
+          },
+          "note_shape": {
+            "Full": 0.40913487733315074,
+            "Note": 0.3761654865053593,
+            "Error": 1.6032616909947566
+          }
+        },
+        "datagen/solo/Bach10/processed_sax/03-ChristederdubistTagundLicht/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.45597989376131776,
+            "Note": 0.09521166358327753,
+            "Error": 2.283386093312757
+          },
+          "instrument_ols": {
+            "Full": 0.5609619929416948,
+            "Note": 0.6634481504554232,
+            "Error": 0.7199296092478643
+          },
+          "note_shape": {
+            "Full": 0.5454756536438246,
+            "Note": 0.5730079651966863,
+            "Error": 0.9932879315823924
+          }
+        },
+        "datagen/solo/URMP/processed_fl/41_Miserere_fl_fl_ob_sax_bn_track1_fl/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.6796728390152347,
+            "Note": 0.49045623503937796,
+            "Error": 0.3801946263169475
+          },
+          "instrument_ols": {
+            "Full": 0.5384160735383121,
+            "Note": -0.16931929935617981,
+            "Error": 0.5658096536749407
+          },
+          "note_shape": {
+            "Full": 0.5773148303548357,
+            "Note": -0.2524335792478625,
+            "Error": 0.41270110804902493
+          }
+        },
+        "datagen/solo/URMP/processed_fl/30_Fugue_fl_fl_ob_sax_track2_fl/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.5106661704818322,
+            "Note": 0.08121733528360207,
+            "Error": 0.6121383682879262
+          },
+          "instrument_ols": {
+            "Full": 0.6906774053577596,
+            "Note": 0.5085535519075716,
+            "Error": 0.5270707527910856
+          },
+          "note_shape": {
+            "Full": 0.5658152869256655,
+            "Note": -0.06399504177488766,
+            "Error": 0.733475823872666
+          }
+        },
+        "datagen/solo/URMP/processed_fl/14_Waltz_fl_fl_cl_track1_fl/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.4145093665487437,
+            "Note": 0.33510902782227686,
+            "Error": 0.47440674765254554
+          },
+          "instrument_ols": {
+            "Full": 0.4318538778708687,
+            "Note": 0.12429448775229159,
+            "Error": 0.4666049398996199
+          },
+          "note_shape": {
+            "Full": 0.452970127031894,
+            "Note": 0.09468753498197813,
+            "Error": 0.47144549329321644
+          }
+        },
+        "datagen/solo/URMP/processed_tpt/42_Arioso_tpt_tpt_hn_tbn_tba_track1_tpt/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.647888219951697,
+            "Note": 0.40039802313910233,
+            "Error": 0.4122660726152675
+          },
+          "instrument_ols": {
+            "Full": 0.694669788907342,
+            "Note": 0.4627760432401729,
+            "Error": 0.40534932399723805
+          },
+          "note_shape": {
+            "Full": 0.6026732046196303,
+            "Note": 0.13299608290431278,
+            "Error": 0.46613700233744126
+          }
+        },
+        "datagen/solo/URMP/processed_vn/44_K515_vn_vn_va_va_vc_track2_vn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.4590282339180184,
+            "Note": 0.31614650995506105,
+            "Error": 0.5542662045267305
+          },
+          "instrument_ols": {
+            "Full": 0.41432659274170924,
+            "Note": 0.01067423125576099,
+            "Error": 0.5769678539300438
+          },
+          "note_shape": {
+            "Full": 0.43263604169353237,
+            "Note": -0.051850672463616874,
+            "Error": 0.5371973075342594
+          }
+        },
+        "datagen/solo/TRIOS/processed_cl/mozart_clarinet/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.34060733225879036,
+            "Note": -0.3423655254966847,
+            "Error": 1.9681014145184041
+          },
+          "instrument_ols": {
+            "Full": 0.5755743376370475,
+            "Note": 0.41950637313371036,
+            "Error": 0.872446562462618
+          },
+          "note_shape": {
+            "Full": 0.6693343041276404,
+            "Note": 0.47353252548586916,
+            "Error": 1.3164326155361834
+          }
+        },
+        "datagen/solo/URMP/processed_sax/22_Rejouissance_sax_tbn_tba_track1_sax/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.6338697000453052,
+            "Note": 0.18828089436382195,
+            "Error": 0.39743422263533035
+          },
+          "instrument_ols": {
+            "Full": 0.624981633504122,
+            "Note": 0.11601289380273351,
+            "Error": 1.0480004189446106
+          },
+          "note_shape": {
+            "Full": 0.7239662368563742,
+            "Note": 0.06345718998115184,
+            "Error": 0.6149980506960924
+          }
+        },
+        "datagen/solo/URMP/processed_tbn/34_Fugue_tpt_tpt_hn_tbn_track4_tbn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.7289301660380668,
+            "Note": 0.12488324019449709,
+            "Error": 0.47928390227353873
+          },
+          "instrument_ols": {
+            "Full": 0.7579832433403056,
+            "Note": 0.03939365700421247,
+            "Error": 0.4251813185968586
+          },
+          "note_shape": {
+            "Full": 0.7929314327444416,
+            "Note": 0.15254774318250225,
+            "Error": 0.34483317482273285
+          }
+        },
+        "datagen/solo/URMP/processed_vn/08_Spring_fl_vn_track2_vn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.46563435335810804,
+            "Note": 0.11704346499170667,
+            "Error": 0.44494616814641913
+          },
+          "instrument_ols": {
+            "Full": 0.48467137245564956,
+            "Note": 0.18326371326801327,
+            "Error": 0.40640368901863455
+          },
+          "note_shape": {
+            "Full": 0.48150534243022136,
+            "Note": -0.09153548655656651,
+            "Error": 0.505875290716543
+          }
+        },
+        "datagen/solo/URMP/processed_tpt/05_Entertainer_tpt_tpt_track1_tpt/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.6421582375885264,
+            "Note": 0.35256587190403593,
+            "Error": 0.4445179709430345
+          },
+          "instrument_ols": {
+            "Full": 0.7651990375592741,
+            "Note": 0.5762094568331203,
+            "Error": 0.37142682168429536
+          },
+          "note_shape": {
+            "Full": 0.7651259392596418,
+            "Note": 0.4268264587305317,
+            "Error": 0.4289275319251178
+          }
+        },
+        "datagen/solo/Bach10/processed_vn/04-ChristeDuBeistand/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.45276812965236773,
+            "Note": 0.48935052419258024,
+            "Error": 1.8293348014237698
+          },
+          "instrument_ols": {
+            "Full": 0.45472565059705444,
+            "Note": 0.4434391072528731,
+            "Error": 1.681270635523418
+          },
+          "note_shape": {
+            "Full": 0.35426808345863503,
+            "Note": 0.21607738948727914,
+            "Error": 1.7028484234253807
+          }
+        },
+        "datagen/solo/URMP/processed_tpt/18_Nocturne_vn_fl_tpt_track3_tpt/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.6752382539966734,
+            "Note": -0.06359895402657731,
+            "Error": 0.4085386802679779
+          },
+          "instrument_ols": {
+            "Full": 0.7407757705791487,
+            "Note": 0.517551964789626,
+            "Error": 0.5530352674942597
+          },
+          "note_shape": {
+            "Full": 0.7853508411638879,
+            "Note": 0.49292261426434353,
+            "Error": 0.3260000263120723
+          }
+        },
+        "datagen/solo/Bach10/processed_vn/05-DieNacht/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.4159867179611844,
+            "Note": 0.3890524240978763,
+            "Error": 1.821563255281127
+          },
+          "instrument_ols": {
+            "Full": 0.4793559476225546,
+            "Note": 0.5640025053880122,
+            "Error": 1.7170055986152835
+          },
+          "note_shape": {
+            "Full": 0.4073042089227685,
+            "Note": 0.16799103464438805,
+            "Error": 1.728834269132342
+          }
+        },
+        "datagen/solo/URMP/processed_va/44_K515_vn_vn_va_va_vc_track4_va/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.40133258994287757,
+            "Note": 0.1589710040676075,
+            "Error": 0.38703798889166785
+          },
+          "instrument_ols": {
+            "Full": 0.3780491698961328,
+            "Note": -0.16302762669974966,
+            "Error": 0.45833839719772934
+          },
+          "note_shape": {
+            "Full": 0.47691112312407563,
+            "Note": 0.06220100724339241,
+            "Error": 0.3918249027275316
+          }
+        },
+        "datagen/solo/Bach10/processed_sax/05-DieNacht/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.3941661928968678,
+            "Note": 0.06982025396100704,
+            "Error": 2.275683267981355
+          },
+          "instrument_ols": {
+            "Full": 0.5692366313567526,
+            "Note": 0.6639985153324376,
+            "Error": 0.9322325557977985
+          },
+          "note_shape": {
+            "Full": 0.582096198776125,
+            "Note": 0.6885376934976015,
+            "Error": 1.1525684932403422
+          }
+        },
+        "datagen/solo/URMP/processed_vn/27_King_vn_vn_va_sax_track1_vn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.45129561227933496,
+            "Note": -0.032106085927291986,
+            "Error": 0.798914107523009
+          },
+          "instrument_ols": {
+            "Full": 0.4397368592797276,
+            "Note": 0.128211510852518,
+            "Error": 0.6593030811287675
+          },
+          "note_shape": {
+            "Full": 0.4315330720134903,
+            "Note": 0.06932486754735662,
+            "Error": 0.6687645009409656
+          }
+        },
+        "datagen/solo/URMP/processed_tpt/09_Jesus_tpt_vn_track1_tpt/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.41191412383478143,
+            "Note": -0.014537496028446811,
+            "Error": 1.203949639270672
+          },
+          "instrument_ols": {
+            "Full": 0.7607459476990001,
+            "Note": 0.6816869769943078,
+            "Error": 1.1142214705684284
+          },
+          "note_shape": {
+            "Full": 0.6092513853286559,
+            "Note": 0.30733055303381074,
+            "Error": 1.133430871045646
+          }
+        },
+        "datagen/solo/Bach10/processed_bn/06-DieSonne/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.3825772822755717,
+            "Note": 0.2216233200108868,
+            "Error": 2.27265819488703
+          },
+          "instrument_ols": {
+            "Full": 0.3148074300508165,
+            "Note": 0.0807735554470414,
+            "Error": 0.35887636045910526
+          },
+          "note_shape": {
+            "Full": 0.30522823673645244,
+            "Note": 0.029713607165324982,
+            "Error": 0.9485892794961163
+          }
+        },
+        "datagen/solo/URMP/processed_fl/14_Waltz_fl_fl_cl_track2_fl/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.6970103360822069,
+            "Note": 0.3496708740427697,
+            "Error": 0.5031725122251792
+          },
+          "instrument_ols": {
+            "Full": 0.7214780883090945,
+            "Note": 0.4406396206750322,
+            "Error": 0.6035494952101093
+          },
+          "note_shape": {
+            "Full": 0.7039285224969496,
+            "Note": 0.2597837743395801,
+            "Error": 0.4566155830731065
+          }
+        },
+        "datagen/solo/TRIOS/processed_bn/lussier_bassoon/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.6869150865325814,
+            "Note": 0.16721771798555632,
+            "Error": 1.7125771460356385
+          },
+          "instrument_ols": {
+            "Full": 0.4915219205473548,
+            "Note": 0.3687850298099012,
+            "Error": 1.1587101305063394
+          },
+          "note_shape": {
+            "Full": 0.6948846248813308,
+            "Note": 0.5249984369214534,
+            "Error": 0.815809548026699
+          }
+        },
+        "datagen/solo/URMP/processed_va/24_Pirates_vn_vn_va_vc_track3_va/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.5357714122553621,
+            "Note": 0.23374341004257856,
+            "Error": 0.4560507211856881
+          },
+          "instrument_ols": {
+            "Full": 0.42228027119026024,
+            "Note": -0.2873558559502811,
+            "Error": 0.4997064589658562
+          },
+          "note_shape": {
+            "Full": 0.5479006090308113,
+            "Note": 0.22740296864081436,
+            "Error": 0.5056646774972555
+          }
+        },
+        "datagen/solo/URMP/processed_vn/32_Fugue_vn_vn_va_vc_track1_vn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.6270985949501193,
+            "Note": 0.6358300509591588,
+            "Error": 0.511625243530514
+          },
+          "instrument_ols": {
+            "Full": 0.5168982738406079,
+            "Note": 0.38358273963640277,
+            "Error": 0.5645572359883457
+          },
+          "note_shape": {
+            "Full": 0.48029403305240637,
+            "Note": 0.13855735593262475,
+            "Error": 0.5565193262092138
+          }
+        },
+        "datagen/solo/Bach10/processed_bn/10-NunBitten/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.3443638511317931,
+            "Note": 0.14616687395063407,
+            "Error": 2.3227370783524184
+          },
+          "instrument_ols": {
+            "Full": 0.12524221241313022,
+            "Note": -0.15929284561450968,
+            "Error": 0.42033338215137583
+          },
+          "note_shape": {
+            "Full": 0.30405400029690804,
+            "Note": -0.09630976624953422,
+            "Error": 0.6289227362979113
+          }
+        },
+        "datagen/solo/URMP/processed_fl/41_Miserere_fl_fl_ob_sax_bn_track2_fl/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.6472519584541783,
+            "Note": 0.04348394976283865,
+            "Error": 0.621780017771198
+          },
+          "instrument_ols": {
+            "Full": 0.741402615195807,
+            "Note": 0.6054742949563053,
+            "Error": 0.5072862584432856
+          },
+          "note_shape": {
+            "Full": 0.6936419718581577,
+            "Note": 0.4294233248279499,
+            "Error": 0.5001986879451044
+          }
+        },
+        "datagen/solo/URMP/processed_vn/20_Pavane_tpt_vn_vc_track2_vn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.4111542437374477,
+            "Note": 0.004560398209066765,
+            "Error": 0.6118933180623525
+          },
+          "instrument_ols": {
+            "Full": 0.4265843681676954,
+            "Note": 0.19164929238624592,
+            "Error": 0.8097142632716046
+          },
+          "note_shape": {
+            "Full": 0.5348298752349615,
+            "Note": 0.14678956894583792,
+            "Error": 0.7239019192611943
+          }
+        },
+        "datagen/solo/Bach10/processed_sax/10-NunBitten/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.33256051584158614,
+            "Note": 0.22647836988758818,
+            "Error": 2.334544519715105
+          },
+          "instrument_ols": {
+            "Full": 0.39813135309580827,
+            "Note": 0.26637997065103264,
+            "Error": 0.9649453774647396
+          },
+          "note_shape": {
+            "Full": 0.35065052825008514,
+            "Note": 0.3513241438468655,
+            "Error": 1.0496818668158097
+          }
+        },
+        "datagen/solo/URMP/processed_tpt/07_GString_tpt_tbn_track1_tpt/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.536733710250326,
+            "Note": 0.3767833911880234,
+            "Error": 0.3499758660815672
+          },
+          "instrument_ols": {
+            "Full": 0.5890790402933272,
+            "Note": 0.45387727553255375,
+            "Error": 0.5667337238333671
+          },
+          "note_shape": {
+            "Full": 0.6156337983963033,
+            "Note": 0.38436017700156644,
+            "Error": 0.3600641802189889
+          }
+        },
+        "datagen/solo/Bach10/processed_cl/08-FuerDeinenThron/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.47839369509316176,
+            "Note": 0.05380640080922908,
+            "Error": 1.7593245265398079
+          },
+          "instrument_ols": {
+            "Full": 0.49826827610794827,
+            "Note": 0.09571533486683201,
+            "Error": 0.29892352369220077
+          },
+          "note_shape": {
+            "Full": 0.47171501174382746,
+            "Note": -0.13759687804440238,
+            "Error": 0.9900433074189059
+          }
+        },
+        "datagen/solo/URMP/processed_va/13_Hark_vn_vn_va_track3_va/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.5720962589231977,
+            "Note": 0.44471863319532084,
+            "Error": 0.501367549516055
+          },
+          "instrument_ols": {
+            "Full": 0.45923512593460175,
+            "Note": 0.3375144438403119,
+            "Error": 0.7123185944821919
+          },
+          "note_shape": {
+            "Full": 0.44295792858094335,
+            "Note": 0.000518107061011633,
+            "Error": 0.7801678761376926
+          }
+        },
+        "datagen/solo/URMP/processed_sax/06_Entertainer_sax_sax_track1_sax/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.5434800181576052,
+            "Note": 0.17658147629622026,
+            "Error": 0.8648333769317836
+          },
+          "instrument_ols": {
+            "Full": 0.5637277797975009,
+            "Note": 0.0938885300624323,
+            "Error": 0.7324122854752501
+          },
+          "note_shape": {
+            "Full": 0.5603555957536908,
+            "Note": 0.05504198373608989,
+            "Error": 0.6336228363908547
+          }
+        },
+        "datagen/solo/URMP/processed_tbn/43_Chorale_tpt_tpt_hn_tbn_tba_track4_tbn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.6933757793299141,
+            "Note": 0.2801805950036801,
+            "Error": 0.3154341651356713
+          },
+          "instrument_ols": {
+            "Full": 0.7595963111294173,
+            "Note": 0.23427490578608998,
+            "Error": 0.32998608091725223
+          },
+          "note_shape": {
+            "Full": 0.7149890813770619,
+            "Note": 0.05366478508760315,
+            "Error": 0.3560235029749568
+          }
+        },
+        "datagen/solo/URMP/processed_vn/13_Hark_vn_vn_va_track2_vn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.5144210197361013,
+            "Note": 0.23782089479883717,
+            "Error": 0.5545744103263958
+          },
+          "instrument_ols": {
+            "Full": 0.4452261807639899,
+            "Note": 0.09141847596627056,
+            "Error": 0.6910881814855223
+          },
+          "note_shape": {
+            "Full": 0.4858253512826554,
+            "Note": 0.1902126249144901,
+            "Error": 0.6126809228601526
+          }
+        },
+        "datagen/solo/Bach10/processed_sax/02-AchLiebenChristen/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.3341803679215135,
+            "Note": -0.10525830238270191,
+            "Error": 2.2521361550474226
+          },
+          "instrument_ols": {
+            "Full": 0.5045344293933701,
+            "Note": 0.5458626275709995,
+            "Error": 0.9064605566537968
+          },
+          "note_shape": {
+            "Full": 0.44796523509300196,
+            "Note": 0.42802174163493434,
+            "Error": 1.0014176340591145
+          }
+        },
+        "datagen/solo/Bach10/processed_cl/06-DieSonne/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.5724103122422015,
+            "Note": 0.4407059242686693,
+            "Error": 1.7206761186433892
+          },
+          "instrument_ols": {
+            "Full": 0.5968884986885992,
+            "Note": 0.4986312715413674,
+            "Error": 1.1112523380986816
+          },
+          "note_shape": {
+            "Full": 0.6115078117228014,
+            "Note": 0.5099612662615802,
+            "Error": 1.2483810190848794
+          }
+        },
+        "datagen/solo/URMP/processed_vc/36_Rondeau_vn_vn_va_vc_track4_vc/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.6398365471944977,
+            "Note": 0.7211891341408317,
+            "Error": 0.3907656152338589
+          },
+          "instrument_ols": {
+            "Full": 0.1556530521633855,
+            "Note": -0.08003888923103915,
+            "Error": 0.8876219961661652
+          },
+          "note_shape": {
+            "Full": 0.22665384332604613,
+            "Note": -0.06278089265647009,
+            "Error": 0.5711371689772693
+          }
+        },
+        "datagen/solo/Bach10/processed_cl/05-DieNacht/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.4919897991790558,
+            "Note": 0.3525877352860858,
+            "Error": 1.7000011049443582
+          },
+          "instrument_ols": {
+            "Full": 0.4019815663188412,
+            "Note": 0.04939590954391732,
+            "Error": 1.1128791676741014
+          },
+          "note_shape": {
+            "Full": 0.35677441452001357,
+            "Note": 0.0034646100151036296,
+            "Error": 1.2071700459953525
+          }
+        },
+        "datagen/solo/URMP/processed_fl/18_Nocturne_vn_fl_tpt_track2_fl/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.5892053980336861,
+            "Note": 0.2824826224000124,
+            "Error": 0.447735106521638
+          },
+          "instrument_ols": {
+            "Full": 0.5690341837193962,
+            "Note": 0.2547435374464858,
+            "Error": 0.44224006681568073
+          },
+          "note_shape": {
+            "Full": 0.6134420532901047,
+            "Note": 0.39033470111328167,
+            "Error": 0.40916698591758044
+          }
+        },
+        "datagen/solo/URMP/processed_fl/03_Dance_fl_cl_track1_fl/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.5696036165734006,
+            "Note": 0.003988216203348748,
+            "Error": 0.620560392701178
+          },
+          "instrument_ols": {
+            "Full": 0.7009263605329374,
+            "Note": 0.5511172695290693,
+            "Error": 0.5029446703051508
+          },
+          "note_shape": {
+            "Full": 0.661182143230697,
+            "Note": 0.06590006906557036,
+            "Error": 0.5788050325572406
+          }
+        },
+        "datagen/solo/URMP/processed_vn/26_King_vn_vn_va_vc_track2_vn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.5441181238160783,
+            "Note": 0.27162928811248904,
+            "Error": 0.46494093083440685
+          },
+          "instrument_ols": {
+            "Full": 0.36494747219620455,
+            "Note": -0.33653562449623914,
+            "Error": 0.6597070509637215
+          },
+          "note_shape": {
+            "Full": 0.6268502293107148,
+            "Note": 0.3354087813924932,
+            "Error": 0.4451783037915536
+          }
+        },
+        "datagen/solo/URMP/processed_ob/28_Fugue_fl_ob_cl_bn_track2_ob/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.4715849821792695,
+            "Note": -0.009827929979666479,
+            "Error": 0.6744926929764351
+          },
+          "instrument_ols": {
+            "Full": 0.5822024322682642,
+            "Note": 0.36348979581658725,
+            "Error": 0.5339435368353016
+          },
+          "note_shape": {
+            "Full": 0.5939607645410317,
+            "Note": -0.16620318933367004,
+            "Error": 0.8687836190330827
+          }
+        },
+        "datagen/solo/URMP/processed_vc/44_K515_vn_vn_va_va_vc_track5_vc/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.5691561617247305,
+            "Note": 0.43451863770389787,
+            "Error": 0.5895900776157397
+          },
+          "instrument_ols": {
+            "Full": 0.4160823303269441,
+            "Note": 0.35008074139063816,
+            "Error": 0.7831759282462692
+          },
+          "note_shape": {
+            "Full": 0.5690082901444503,
+            "Note": 0.22673212816697388,
+            "Error": 0.7798428439863805
+          }
+        },
+        "datagen/solo/URMP/processed_cl/21_Rejouissance_cl_tbn_tba_track1_cl/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.6713124903751423,
+            "Note": 0.4495097816908568,
+            "Error": 0.4223236729075437
+          },
+          "instrument_ols": {
+            "Full": 0.5546220173834465,
+            "Note": -0.16777623877973355,
+            "Error": 1.4992036011631176
+          },
+          "note_shape": {
+            "Full": 0.7084764295402144,
+            "Note": 0.13386609923974557,
+            "Error": 0.621666297942485
+          }
+        },
+        "datagen/solo/URMP/processed_va/26_King_vn_vn_va_vc_track3_va/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.5126081068012975,
+            "Note": 0.19131234585160709,
+            "Error": 0.46738096919365923
+          },
+          "instrument_ols": {
+            "Full": 0.505592621754724,
+            "Note": 0.061259553655289,
+            "Error": 0.4752440218107817
+          },
+          "note_shape": {
+            "Full": 0.5868866833984726,
+            "Note": 0.2547704224075407,
+            "Error": 0.45186428014737673
+          }
+        },
+        "datagen/solo/URMP/processed_fl/30_Fugue_fl_fl_ob_sax_track1_fl/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.5250911433123908,
+            "Note": 0.0615983368426565,
+            "Error": 0.5796800657417268
+          },
+          "instrument_ols": {
+            "Full": 0.5749132970147695,
+            "Note": 0.34900455046004564,
+            "Error": 0.6017800797716292
+          },
+          "note_shape": {
+            "Full": 0.580739453362563,
+            "Note": 0.10416214346954616,
+            "Error": 0.5878690827348003
+          }
+        },
+        "datagen/solo/Bach10/processed_vn/10-NunBitten/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.4548225694088378,
+            "Note": 0.39609785830804767,
+            "Error": 1.860198450299893
+          },
+          "instrument_ols": {
+            "Full": 0.25778153537035237,
+            "Note": 0.10768933680016247,
+            "Error": 1.6152420202368116
+          },
+          "note_shape": {
+            "Full": 0.4032058647771064,
+            "Note": 0.18305128571363585,
+            "Error": 1.8013361402598866
+          }
+        },
+        "datagen/solo/URMP/processed_tbn/22_Rejouissance_sax_tbn_tba_track2_tbn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.682196853392542,
+            "Note": 0.24217527985896634,
+            "Error": 0.3152335975420538
+          },
+          "instrument_ols": {
+            "Full": 0.6285820183765284,
+            "Note": 0.06675378604639039,
+            "Error": 0.43860869671080027
+          },
+          "note_shape": {
+            "Full": 0.7663909451232848,
+            "Note": 0.30646360904690373,
+            "Error": 0.3058200229278965
+          }
+        },
+        "datagen/solo/URMP/processed_vn/36_Rondeau_vn_vn_va_vc_track2_vn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.17809595418376623,
+            "Note": -0.15899483305760315,
+            "Error": 0.6032474889191574
+          },
+          "instrument_ols": {
+            "Full": 0.4646928617701949,
+            "Note": 0.309047174579946,
+            "Error": 0.45648103810135443
+          },
+          "note_shape": {
+            "Full": 0.3444698262639242,
+            "Note": -0.24989010458912078,
+            "Error": 0.5023179986005751
+          }
+        },
+        "datagen/solo/URMP/processed_vn/37_Rondeau_fl_vn_va_cl_track2_vn/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.17920519838214213,
+            "Note": -0.15903571491847407,
+            "Error": 0.6064306220565534
+          },
+          "instrument_ols": {
+            "Full": 0.4646928617701949,
+            "Note": 0.309047174579946,
+            "Error": 0.45648103810135443
+          },
+          "note_shape": {
+            "Full": 0.3444698262639242,
+            "Note": -0.24989010458912078,
+            "Error": 0.5023179986005751
+          }
+        },
+        "datagen/solo/Bach10/processed_cl/04-ChristeDuBeistand/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.25341054836708676,
+            "Note": 0.18328452827195937,
+            "Error": 1.8652326527403151
+          },
+          "instrument_ols": {
+            "Full": 0.5754642184129038,
+            "Note": 0.5627067995439852,
+            "Error": 1.2131599071486456
+          },
+          "note_shape": {
+            "Full": 0.4849119542175385,
+            "Note": 0.6237369960056239,
+            "Error": 1.23283456567777
+          }
+        },
+        "datagen/solo/URMP/processed_tpt/43_Chorale_tpt_tpt_hn_tbn_tba_track1_tpt/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.7257616074641614,
+            "Note": 0.1707175003581955,
+            "Error": 0.4488916218052137
+          },
+          "instrument_ols": {
+            "Full": 0.6812725020534873,
+            "Note": 0.5402796671549724,
+            "Error": 0.5555589591627282
+          },
+          "note_shape": {
+            "Full": 0.8076292107568922,
+            "Note": 0.47538875821680576,
+            "Error": 0.5804176021073278
+          }
+        },
+        "datagen/solo/URMP/processed_va/35_Rondeau_vn_vn_va_db_track3_va/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.5067550333776645,
+            "Note": 0.4469751889335787,
+            "Error": 0.43513536790486085
+          },
+          "instrument_ols": {
+            "Full": 0.38114560916016593,
+            "Note": -0.08980136750409151,
+            "Error": 0.4980170078639755
+          },
+          "note_shape": {
+            "Full": 0.47029064236114804,
+            "Note": -0.045706811577481035,
+            "Error": 0.5031392999988268
+          }
+        },
+        "datagen/solo/URMP/processed_vc/20_Pavane_tpt_vn_vc_track3_vc/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.6108994013869974,
+            "Note": 0.5402731108879502,
+            "Error": 0.585234178627451
+          },
+          "instrument_ols": {
+            "Full": 0.45669423374689927,
+            "Note": 0.27081581231530566,
+            "Error": 0.7002884943463964
+          },
+          "note_shape": {
+            "Full": 0.46310430502321814,
+            "Note": 0.12319888827020511,
+            "Error": 0.9021469460616387
+          }
+        },
+        "datagen/solo/Bach10/processed_bn/01-AchGottundHerr/data.npz": {
+          "midi_ddsp": {
+            "Full": 0.3146136767831871,
+            "Note": 0.1862639420355177,
+            "Error": 2.0531070218494474
+          },
+          "instrument_ols": {
+            "Full": 0.32231089428808973,
+            "Note": 0.04502203456360521,
+            "Error": 0.6726236168242457
+          },
+          "note_shape": {
+            "Full": 0.3246222379464057,
+            "Note": 0.1900764724026509,
+            "Error": 0.8747495852716135
+          }
+        }
+      }
+    },
+    "midi2params": {
+      "subsets": {
+        "all46": {
+          "tracks": 46,
+          "groups": 25,
+          "comparisons": {
+            "instrument_ols": {
+              "full_up": 3,
+              "note_down": 0,
+              "error_up": 2,
+              "note_loss_median": null,
+              "paired": {
+                "Full": {
+                  "mean": -0.27672111823755285,
+                  "ci95": [
+                    -0.3294555941286796,
+                    -0.21360538130078666
+                  ]
+                },
+                "Note": {
+                  "mean": -0.06897185018657269,
+                  "ci95": [
+                    -0.17002013950405043,
+                    0.044609531091447996
+                  ]
+                },
+                "Error": {
+                  "mean": 0.6867822700279508,
+                  "ci95": [
+                    0.21615611847161625,
+                    1.0036805615594875
+                  ]
+                }
+              }
+            },
+            "note_shape": {
+              "full_up": 0,
+              "note_down": 0,
+              "error_up": 0,
+              "note_loss_median": null,
+              "paired": {
+                "Full": {
+                  "mean": -0.2965504085596112,
+                  "ci95": [
+                    -0.3451726671154398,
+                    -0.25346426272963096
+                  ]
+                },
+                "Note": {
+                  "mean": 0.06678067785541905,
+                  "ci95": [
+                    -0.000432137694709016,
+                    0.13412710130166408
+                  ]
+                },
+                "Error": {
+                  "mean": 0.6947998147834581,
+                  "ci95": [
+                    0.21738538306687186,
+                    1.0137299512995668
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "target_hash_deduplicated": {
+          "tracks": 37,
+          "groups": 25,
+          "comparisons": {
+            "instrument_ols": {
+              "full_up": 2,
+              "note_down": 0,
+              "error_up": 1,
+              "note_loss_median": null,
+              "paired": {
+                "Full": {
+                  "mean": -0.27289550898761256,
+                  "ci95": [
+                    -0.31834966462290887,
+                    -0.22197905378008823
+                  ]
+                },
+                "Note": {
+                  "mean": -0.06449500179917952,
+                  "ci95": [
+                    -0.16175481871584133,
+                    0.048577966111643875
+                  ]
+                },
+                "Error": {
+                  "mean": 0.5431749402177221,
+                  "ci95": [
+                    0.08698458164899237,
+                    0.8986365149020178
+                  ]
+                }
+              }
+            },
+            "note_shape": {
+              "full_up": 0,
+              "note_down": 0,
+              "error_up": 0,
+              "note_loss_median": null,
+              "paired": {
+                "Full": {
+                  "mean": -0.29556754716340183,
+                  "ci95": [
+                    -0.3427771391590457,
+                    -0.2543054052518838
+                  ]
+                },
+                "Note": {
+                  "mean": 0.07049478742862837,
+                  "ci95": [
+                    0.006117442667378219,
+                    0.13386793120290244
+                  ]
+                },
+                "Error": {
+                  "mean": 0.5461733318205969,
+                  "ci95": [
+                    0.08207190493909096,
+                    0.9066644099970111
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "native_single_lane": {
+          "tracks": 18,
+          "groups": 15,
+          "comparisons": {
+            "instrument_ols": {
+              "full_up": 1,
+              "note_down": 0,
+              "error_up": 0,
+              "note_loss_median": null,
+              "paired": {
+                "Full": {
+                  "mean": -0.2340288506707341,
+                  "ci95": [
+                    -0.2942206956466752,
+                    -0.1694485272025622
+                  ]
+                },
+                "Note": {
+                  "mean": -0.00788962188138722,
+                  "ci95": [
+                    -0.124805618238866,
+                    0.12111004361470681
+                  ]
+                },
+                "Error": {
+                  "mean": -0.22745598009119117,
+                  "ci95": [
+                    -0.9038335683012537,
+                    0.320895221167819
+                  ]
+                }
+              }
+            },
+            "note_shape": {
+              "full_up": 0,
+              "note_down": 0,
+              "error_up": 0,
+              "note_loss_median": null,
+              "paired": {
+                "Full": {
+                  "mean": -0.287184657927066,
+                  "ci95": [
+                    -0.35415589049482205,
+                    -0.2317194501208631
+                  ]
+                },
+                "Note": {
+                  "mean": 0.07815026504973516,
+                  "ci95": [
+                    -0.023097443177776608,
+                    0.1810268379874135
+                  ]
+                },
+                "Error": {
+                  "mean": -0.2505009001030414,
+                  "ci95": [
+                    -0.9486988976723859,
+                    0.3204623863967222
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "per_track": {
+        "datagen/solo/URMP/processed_vn/44_K515_vn_vn_va_va_vc_track1_vn/data.npz": {
+          "midi2params": {
+            "Full": 0.1875419965428306,
+            "Note": -0.004917351816030716,
+            "Error": 1.8604023634875486
+          },
+          "instrument_ols": {
+            "Full": 0.5675251452381458,
+            "Note": 0.22525919110972406,
+            "Error": 0.5371361296152073
+          },
+          "note_shape": {
+            "Full": 0.5021749053611281,
+            "Note": -0.1142784546078266,
+            "Error": 0.5836667089167409
+          }
+        },
+        "datagen/solo/URMP/processed_vn/19_Pavane_cl_vn_vc_track2_vn/data.npz": {
+          "midi2params": {
+            "Full": -0.07503179266104035,
+            "Note": -0.049750503741049674,
+            "Error": 2.054903160032001
+          },
+          "instrument_ols": {
+            "Full": 0.42658436883389145,
+            "Note": 0.1916492900053423,
+            "Error": 0.8097142639780299
+          },
+          "note_shape": {
+            "Full": 0.5348298756660386,
+            "Note": 0.1467895643315923,
+            "Error": 0.7239019367911673
+          }
+        },
+        "datagen/solo/URMP/processed_vn/39_Jerusalem_vn_vn_va_sax_db_track1_vn/data.npz": {
+          "midi2params": {
+            "Full": 0.06327343046746452,
+            "Note": -0.20623905053297545,
+            "Error": 1.93776265318375
+          },
+          "instrument_ols": {
+            "Full": 0.1790118898192789,
+            "Note": 0.008282391014765965,
+            "Error": 0.8136248694510718
+          },
+          "note_shape": {
+            "Full": 0.29757912296573263,
+            "Note": 0.03350336485718069,
+            "Error": 0.6803996243595172
+          }
+        },
+        "datagen/solo/URMP/processed_vn/27_King_vn_vn_va_sax_track2_vn/data.npz": {
+          "midi2params": {
+            "Full": 0.0536605112240603,
+            "Note": 0.25450883653151507,
+            "Error": 1.652753810267958
+          },
+          "instrument_ols": {
+            "Full": 0.36494747219620455,
+            "Note": -0.33653562449623914,
+            "Error": 0.6597070509637215
+          },
+          "note_shape": {
+            "Full": 0.6268502293107148,
+            "Note": 0.3354087813924932,
+            "Error": 0.4451783037915536
+          }
+        },
+        "datagen/solo/URMP/processed_vn/02_Sonata_vn_vn_track2_vn/data.npz": {
+          "midi2params": {
+            "Full": 0.1162464344212208,
+            "Note": -0.055953126463729484,
+            "Error": 1.8804793898803271
+          },
+          "instrument_ols": {
+            "Full": 0.28915428815528904,
+            "Note": -0.01778891200479722,
+            "Error": 0.617761512490405
+          },
+          "note_shape": {
+            "Full": 0.41453954097596213,
+            "Note": 0.09282064942498316,
+            "Error": 0.6236288949030556
+          }
+        },
+        "datagen/solo/URMP/processed_vn/12_Spring_vn_vn_vc_track1_vn/data.npz": {
+          "midi2params": {
+            "Full": 0.054186661345046114,
+            "Note": 0.04168087580911989,
+            "Error": 2.3330626422362375
+          },
+          "instrument_ols": {
+            "Full": 0.25114585533945794,
+            "Note": 0.03873190964549758,
+            "Error": 0.8175076277814701
+          },
+          "note_shape": {
+            "Full": 0.22981125999102917,
+            "Note": -0.057371044132301034,
+            "Error": 0.6618892629919518
+          }
+        },
+        "datagen/solo/TRIOS/processed_vn/brahms_violin/data.npz": {
+          "midi2params": {
+            "Full": 0.1842941159388992,
+            "Note": 0.03693936317097329,
+            "Error": 1.599256146476227
+          },
+          "instrument_ols": {
+            "Full": 0.2876557100140729,
+            "Note": -0.10648018397904706,
+            "Error": 0.8912176139616973
+          },
+          "note_shape": {
+            "Full": 0.5966078971099166,
+            "Note": 0.19616348094120334,
+            "Error": 0.6389557307737077
+          }
+        },
+        "datagen/solo/Bach10/processed_vn/01-AchGottundHerr/data.npz": {
+          "midi2params": {
+            "Full": 0.1112024015454996,
+            "Note": 0.1781580365380305,
+            "Error": 0.3941042404445242
+          },
+          "instrument_ols": {
+            "Full": 0.40124381947047105,
+            "Note": 0.500830131096019,
+            "Error": 1.5531211261896478
+          },
+          "note_shape": {
+            "Full": 0.4185358532755194,
+            "Note": 0.024789005694894572,
+            "Error": 1.7431638535632517
+          }
+        },
+        "datagen/solo/URMP/processed_vn/25_Pirates_vn_vn_va_sax_track2_vn/data.npz": {
+          "midi2params": {
+            "Full": 0.1401434767478317,
+            "Note": -0.04872946127735923,
+            "Error": 1.6213279710937183
+          },
+          "instrument_ols": {
+            "Full": 0.5033449407525227,
+            "Note": 0.6230770469401532,
+            "Error": 0.6555421251721621
+          },
+          "note_shape": {
+            "Full": 0.28500568119954467,
+            "Note": -0.1881351669702843,
+            "Error": 0.7862110481271107
+          }
+        },
+        "datagen/solo/URMP/processed_vn/12_Spring_vn_vn_vc_track2_vn/data.npz": {
+          "midi2params": {
+            "Full": 0.11359925987887833,
+            "Note": 0.12592484080600486,
+            "Error": 2.045901283684862
+          },
+          "instrument_ols": {
+            "Full": 0.5684390224781075,
+            "Note": 0.3932340291078983,
+            "Error": 0.5200580916800843
+          },
+          "note_shape": {
+            "Full": 0.49125971512218025,
+            "Note": -0.1025897912861538,
+            "Error": 0.5872163760704877
+          }
+        },
+        "datagen/solo/Bach10/processed_vn/03-ChristederdubistTagundLicht/data.npz": {
+          "midi2params": {
+            "Full": 0.2419566070784631,
+            "Note": 0.46140912043275806,
+            "Error": 0.43830134714492525
+          },
+          "instrument_ols": {
+            "Full": 0.2093634549814932,
+            "Note": -0.11420246580216367,
+            "Error": 1.656989749416255
+          },
+          "note_shape": {
+            "Full": 0.5877913851522819,
+            "Note": 0.73542108363188,
+            "Error": 1.620244518734956
+          }
+        },
+        "datagen/solo/URMP/processed_vn/09_Jesus_tpt_vn_track2_vn/data.npz": {
+          "midi2params": {
+            "Full": 0.10115850307203186,
+            "Note": 0.0961579951322543,
+            "Error": 2.567576388114337
+          },
+          "instrument_ols": {
+            "Full": 0.3779652556041283,
+            "Note": 0.11947469374061233,
+            "Error": 0.9159626108452575
+          },
+          "note_shape": {
+            "Full": 0.4480611322247389,
+            "Note": 0.09873491154698713,
+            "Error": 0.9603570478057161
+          }
+        },
+        "datagen/solo/Bach10/processed_vn/06-DieSonne/data.npz": {
+          "midi2params": {
+            "Full": 0.1854120682504345,
+            "Note": 0.40435281097097786,
+            "Error": 0.3028473911359125
+          },
+          "instrument_ols": {
+            "Full": 0.2729033146280639,
+            "Note": 0.09189062955127711,
+            "Error": 1.724735592758052
+          },
+          "note_shape": {
+            "Full": 0.4349753008237968,
+            "Note": 0.13907029167718354,
+            "Error": 1.705473858571524
+          }
+        },
+        "datagen/solo/Bach10/processed_vn/07-HerrGott/data.npz": {
+          "midi2params": {
+            "Full": 0.13143369293887805,
+            "Note": 0.4106339456034408,
+            "Error": 0.3576569632923047
+          },
+          "instrument_ols": {
+            "Full": 0.3045405812808608,
+            "Note": 0.35101298747977333,
+            "Error": 1.3994810598932723
+          },
+          "note_shape": {
+            "Full": 0.4387350387487613,
+            "Note": 0.3239115529362727,
+            "Error": 1.4401434073829318
+          }
+        },
+        "datagen/solo/URMP/processed_vn/38_Jerusalem_vn_vn_va_vc_db_track1_vn/data.npz": {
+          "midi2params": {
+            "Full": 0.0303561914613931,
+            "Note": -0.146451164965074,
+            "Error": 1.8885792985119851
+          },
+          "instrument_ols": {
+            "Full": 0.1790118898192789,
+            "Note": 0.008282391014765965,
+            "Error": 0.8136248694510718
+          },
+          "note_shape": {
+            "Full": 0.29757912296573263,
+            "Note": 0.03350336485718069,
+            "Error": 0.6803996243595172
+          }
+        },
+        "datagen/solo/Bach10/processed_vn/09-Jesus/data.npz": {
+          "midi2params": {
+            "Full": 0.15772835099083127,
+            "Note": 0.5510302535096302,
+            "Error": 0.3931201446107751
+          },
+          "instrument_ols": {
+            "Full": 0.38272278645974533,
+            "Note": 0.31436071164418794,
+            "Error": 1.6390328835180943
+          },
+          "note_shape": {
+            "Full": 0.37798249291046176,
+            "Note": 0.29363933767652045,
+            "Error": 1.6671227742205832
+          }
+        },
+        "datagen/solo/URMP/processed_vn/17_Nocturne_vn_fl_cl_track1_vn/data.npz": {
+          "midi2params": {
+            "Full": 0.00912968567360404,
+            "Note": 0.024473136728311414,
+            "Error": 1.8668222792498985
+          },
+          "instrument_ols": {
+            "Full": 0.46487546175128014,
+            "Note": 0.30794436299529754,
+            "Error": 0.47199106842304467
+          },
+          "note_shape": {
+            "Full": 0.26125823164585454,
+            "Note": -0.3700419966693928,
+            "Error": 0.5578212441626531
+          }
+        },
+        "datagen/solo/Bach10/processed_vn/02-AchLiebenChristen/data.npz": {
+          "midi2params": {
+            "Full": 0.14750905513529725,
+            "Note": 0.2152593590825976,
+            "Error": 0.5200363017115964
+          },
+          "instrument_ols": {
+            "Full": 0.4841094187410521,
+            "Note": 0.6492890222600081,
+            "Error": 1.6278926308862263
+          },
+          "note_shape": {
+            "Full": 0.34629993998974046,
+            "Note": -0.1223647729369196,
+            "Error": 1.7659465941792878
+          }
+        },
+        "datagen/solo/URMP/processed_vn/24_Pirates_vn_vn_va_vc_track1_vn/data.npz": {
+          "midi2params": {
+            "Full": 0.1867474329952724,
+            "Note": 0.17661560677798463,
+            "Error": 1.5645686528733207
+          },
+          "instrument_ols": {
+            "Full": 0.4231851701305001,
+            "Note": 0.24507920001616826,
+            "Error": 0.570125074607152
+          },
+          "note_shape": {
+            "Full": 0.4208129697052649,
+            "Note": -0.05764512193794696,
+            "Error": 0.6029191285837219
+          }
+        },
+        "datagen/solo/URMP/processed_vn/26_King_vn_vn_va_vc_track1_vn/data.npz": {
+          "midi2params": {
+            "Full": 0.12381365373435675,
+            "Note": 0.025317430301515252,
+            "Error": 1.5533384566218933
+          },
+          "instrument_ols": {
+            "Full": 0.4397368592797276,
+            "Note": 0.128211510852518,
+            "Error": 0.6593030811287675
+          },
+          "note_shape": {
+            "Full": 0.4315330720134903,
+            "Note": 0.06932486754735662,
+            "Error": 0.6687645009409656
+          }
+        },
+        "datagen/solo/URMP/processed_vn/32_Fugue_vn_vn_va_vc_track2_vn/data.npz": {
+          "midi2params": {
+            "Full": 0.12183261498267627,
+            "Note": -0.0403636959594851,
+            "Error": 1.8626132662479822
+          },
+          "instrument_ols": {
+            "Full": 0.49592623691925725,
+            "Note": 0.24409751954946363,
+            "Error": 0.6916604250642527
+          },
+          "note_shape": {
+            "Full": 0.5237615387536109,
+            "Note": 0.07469617664235405,
+            "Error": 0.5800880278024214
+          }
+        },
+        "datagen/solo/URMP/processed_vn/25_Pirates_vn_vn_va_sax_track1_vn/data.npz": {
+          "midi2params": {
+            "Full": 0.13459670678363342,
+            "Note": 0.22167104101065513,
+            "Error": 1.383353805417502
+          },
+          "instrument_ols": {
+            "Full": 0.4231851701305001,
+            "Note": 0.24507920001616826,
+            "Error": 0.570125074607152
+          },
+          "note_shape": {
+            "Full": 0.4208129697052649,
+            "Note": -0.05764512193794696,
+            "Error": 0.6029191285837219
+          }
+        },
+        "datagen/solo/URMP/processed_vn/38_Jerusalem_vn_vn_va_vc_db_track2_vn/data.npz": {
+          "midi2params": {
+            "Full": 0.22845762887725019,
+            "Note": 0.18986473929356618,
+            "Error": 2.0575792751484983
+          },
+          "instrument_ols": {
+            "Full": 0.15541388801179665,
+            "Note": -0.2001539359817694,
+            "Error": 0.6504945137097767
+          },
+          "note_shape": {
+            "Full": 0.3332140097591086,
+            "Note": 0.16861754275708962,
+            "Error": 0.5042118920886974
+          }
+        },
+        "datagen/solo/URMP/processed_vn/13_Hark_vn_vn_va_track1_vn/data.npz": {
+          "midi2params": {
+            "Full": 0.32498891421592413,
+            "Note": 0.24768169632653206,
+            "Error": 1.5293232942702768
+          },
+          "instrument_ols": {
+            "Full": 0.4270344062576851,
+            "Note": -0.014737670657327971,
+            "Error": 0.6170032826507588
+          },
+          "note_shape": {
+            "Full": 0.465038601342408,
+            "Note": -0.027081915315444148,
+            "Error": 0.561565298318946
+          }
+        },
+        "datagen/solo/URMP/processed_vn/35_Rondeau_vn_vn_va_db_track2_vn/data.npz": {
+          "midi2params": {
+            "Full": -0.09475889079814154,
+            "Note": -0.41194439085779055,
+            "Error": 1.9767265428345684
+          },
+          "instrument_ols": {
+            "Full": 0.4646928617701949,
+            "Note": 0.309047174579946,
+            "Error": 0.45648103810135443
+          },
+          "note_shape": {
+            "Full": 0.3444698262639242,
+            "Note": -0.24989010458912078,
+            "Error": 0.5023179986005751
+          }
+        },
+        "datagen/solo/URMP/processed_vn/18_Nocturne_vn_fl_tpt_track1_vn/data.npz": {
+          "midi2params": {
+            "Full": 0.014081023973490484,
+            "Note": -0.14213401744073617,
+            "Error": 1.7033730959236928
+          },
+          "instrument_ols": {
+            "Full": 0.4522750773413981,
+            "Note": 0.3017124999255165,
+            "Error": 0.46825109758645295
+          },
+          "note_shape": {
+            "Full": 0.2553381327731678,
+            "Note": -0.371421676074187,
+            "Error": 0.5512172675659011
+          }
+        },
+        "datagen/solo/URMP/processed_vn/01_Jupiter_vn_vc_track1_vn/data.npz": {
+          "midi2params": {
+            "Full": 0.36830934339578364,
+            "Note": 0.2699659684601653,
+            "Error": 1.1933709387160725
+          },
+          "instrument_ols": {
+            "Full": 0.5234856305064548,
+            "Note": 0.04107114975121855,
+            "Error": 0.5014693998386985
+          },
+          "note_shape": {
+            "Full": 0.5543864874020283,
+            "Note": 0.13760390229968394,
+            "Error": 0.6005150592441246
+          }
+        },
+        "datagen/solo/URMP/processed_vn/24_Pirates_vn_vn_va_vc_track2_vn/data.npz": {
+          "midi2params": {
+            "Full": 0.05397396454078904,
+            "Note": 0.11669526300537128,
+            "Error": 1.8824690747400767
+          },
+          "instrument_ols": {
+            "Full": 0.5033449395647069,
+            "Note": 0.6230770472403718,
+            "Error": 0.6555421165890932
+          },
+          "note_shape": {
+            "Full": 0.2850056802083683,
+            "Note": -0.1881351680574296,
+            "Error": 0.7862110409681488
+          }
+        },
+        "datagen/solo/URMP/processed_vn/35_Rondeau_vn_vn_va_db_track1_vn/data.npz": {
+          "midi2params": {
+            "Full": 0.12912461554175694,
+            "Note": 0.07795161522769523,
+            "Error": 1.9725602085719829
+          },
+          "instrument_ols": {
+            "Full": 0.3384280238955141,
+            "Note": 0.007035344689384571,
+            "Error": 0.45803648920012935
+          },
+          "note_shape": {
+            "Full": 0.30139885746996525,
+            "Note": -0.15627590268623506,
+            "Error": 0.4773109688713071
+          }
+        },
+        "datagen/solo/URMP/processed_vn/39_Jerusalem_vn_vn_va_sax_db_track2_vn/data.npz": {
+          "midi2params": {
+            "Full": 0.24766762588783797,
+            "Note": 0.2562751770815741,
+            "Error": 1.9483511403129965
+          },
+          "instrument_ols": {
+            "Full": 0.15541388801179665,
+            "Note": -0.2001539359817694,
+            "Error": 0.6504945137097767
+          },
+          "note_shape": {
+            "Full": 0.3332140097591086,
+            "Note": 0.16861754275708962,
+            "Error": 0.5042118920886974
+          }
+        },
+        "datagen/solo/TRIOS/processed_vn/schubert_violin/data.npz": {
+          "midi2params": {
+            "Full": -0.0389222207688035,
+            "Note": 0.30096570739383954,
+            "Error": 1.5691316886526092
+          },
+          "instrument_ols": {
+            "Full": 0.47945843887036743,
+            "Note": -0.23915962484410244,
+            "Error": 0.9763972377379332
+          },
+          "note_shape": {
+            "Full": 0.6179609610135736,
+            "Note": 0.4195656390534865,
+            "Error": 0.7498079291497425
+          }
+        },
+        "datagen/solo/URMP/processed_vn/02_Sonata_vn_vn_track1_vn/data.npz": {
+          "midi2params": {
+            "Full": 0.27878366025256374,
+            "Note": 0.14286627432058366,
+            "Error": 2.0052305018128864
+          },
+          "instrument_ols": {
+            "Full": 0.5790383452911833,
+            "Note": 0.5556521790196999,
+            "Error": 0.664497619387894
+          },
+          "note_shape": {
+            "Full": 0.34614772970986807,
+            "Note": -0.43478117593030136,
+            "Error": 0.7801338623255211
+          }
+        },
+        "datagen/solo/URMP/processed_vn/36_Rondeau_vn_vn_va_vc_track1_vn/data.npz": {
+          "midi2params": {
+            "Full": 0.15101960938310724,
+            "Note": 0.13860597160299204,
+            "Error": 2.106130795164196
+          },
+          "instrument_ols": {
+            "Full": 0.3384280238955141,
+            "Note": 0.007035344689384571,
+            "Error": 0.45803648920012935
+          },
+          "note_shape": {
+            "Full": 0.30139885746996525,
+            "Note": -0.15627590268623506,
+            "Error": 0.4773109688713071
+          }
+        },
+        "datagen/solo/Bach10/processed_vn/08-FuerDeinenThron/data.npz": {
+          "midi2params": {
+            "Full": 0.10937592283248854,
+            "Note": 0.2528156913067608,
+            "Error": 0.42780826988236476
+          },
+          "instrument_ols": {
+            "Full": 0.4213180939951776,
+            "Note": 0.5765818193665079,
+            "Error": 1.6138269088312975
+          },
+          "note_shape": {
+            "Full": 0.40913487733315074,
+            "Note": 0.3761654865053593,
+            "Error": 1.6032616909947566
+          }
+        },
+        "datagen/solo/URMP/processed_vn/44_K515_vn_vn_va_va_vc_track2_vn/data.npz": {
+          "midi2params": {
+            "Full": 0.13467312368413167,
+            "Note": 0.12488059363500266,
+            "Error": 1.898264300059551
+          },
+          "instrument_ols": {
+            "Full": 0.41432659274170924,
+            "Note": 0.01067423125576099,
+            "Error": 0.5769678539300438
+          },
+          "note_shape": {
+            "Full": 0.43263604169353237,
+            "Note": -0.051850672463616874,
+            "Error": 0.5371973075342594
+          }
+        },
+        "datagen/solo/URMP/processed_vn/08_Spring_fl_vn_track2_vn/data.npz": {
+          "midi2params": {
+            "Full": 0.04449001152462705,
+            "Note": -0.07516191893692509,
+            "Error": 1.8744356759716292
+          },
+          "instrument_ols": {
+            "Full": 0.48467137245564956,
+            "Note": 0.18326371326801327,
+            "Error": 0.40640368901863455
+          },
+          "note_shape": {
+            "Full": 0.48150534243022136,
+            "Note": -0.09153548655656651,
+            "Error": 0.505875290716543
+          }
+        },
+        "datagen/solo/Bach10/processed_vn/04-ChristeDuBeistand/data.npz": {
+          "midi2params": {
+            "Full": 0.11151139979495683,
+            "Note": 0.24898498373035835,
+            "Error": 0.4966899721338315
+          },
+          "instrument_ols": {
+            "Full": 0.45472565059705444,
+            "Note": 0.4434391072528731,
+            "Error": 1.681270635523418
+          },
+          "note_shape": {
+            "Full": 0.35426808345863503,
+            "Note": 0.21607738948727914,
+            "Error": 1.7028484234253807
+          }
+        },
+        "datagen/solo/Bach10/processed_vn/05-DieNacht/data.npz": {
+          "midi2params": {
+            "Full": 0.328855400538723,
+            "Note": 0.58719476161453,
+            "Error": 0.36261400297076013
+          },
+          "instrument_ols": {
+            "Full": 0.4793559476225546,
+            "Note": 0.5640025053880122,
+            "Error": 1.7170055986152835
+          },
+          "note_shape": {
+            "Full": 0.4073042089227685,
+            "Note": 0.16799103464438805,
+            "Error": 1.728834269132342
+          }
+        },
+        "datagen/solo/URMP/processed_vn/27_King_vn_vn_va_sax_track1_vn/data.npz": {
+          "midi2params": {
+            "Full": 0.0301851592354341,
+            "Note": -0.1543144686042657,
+            "Error": 1.8496160464851046
+          },
+          "instrument_ols": {
+            "Full": 0.4397368592797276,
+            "Note": 0.128211510852518,
+            "Error": 0.6593030811287675
+          },
+          "note_shape": {
+            "Full": 0.4315330720134903,
+            "Note": 0.06932486754735662,
+            "Error": 0.6687645009409656
+          }
+        },
+        "datagen/solo/URMP/processed_vn/32_Fugue_vn_vn_va_vc_track1_vn/data.npz": {
+          "midi2params": {
+            "Full": 0.30398432143826143,
+            "Note": 0.16283407746956824,
+            "Error": 1.9805189159891634
+          },
+          "instrument_ols": {
+            "Full": 0.5168982738406079,
+            "Note": 0.38358273963640277,
+            "Error": 0.5645572359883457
+          },
+          "note_shape": {
+            "Full": 0.48029403305240637,
+            "Note": 0.13855735593262475,
+            "Error": 0.5565193262092138
+          }
+        },
+        "datagen/solo/URMP/processed_vn/20_Pavane_tpt_vn_vc_track2_vn/data.npz": {
+          "midi2params": {
+            "Full": 0.05273943697947284,
+            "Note": 0.015422707768349328,
+            "Error": 2.10073534824009
+          },
+          "instrument_ols": {
+            "Full": 0.4265843681676954,
+            "Note": 0.19164929238624592,
+            "Error": 0.8097142632716046
+          },
+          "note_shape": {
+            "Full": 0.5348298752349615,
+            "Note": 0.14678956894583792,
+            "Error": 0.7239019192611943
+          }
+        },
+        "datagen/solo/URMP/processed_vn/13_Hark_vn_vn_va_track2_vn/data.npz": {
+          "midi2params": {
+            "Full": 0.09904854601799236,
+            "Note": -0.13934932011403053,
+            "Error": 1.5091178095792044
+          },
+          "instrument_ols": {
+            "Full": 0.4452261807639899,
+            "Note": 0.09141847596627056,
+            "Error": 0.6910881814855223
+          },
+          "note_shape": {
+            "Full": 0.4858253512826554,
+            "Note": 0.1902126249144901,
+            "Error": 0.6126809228601526
+          }
+        },
+        "datagen/solo/URMP/processed_vn/26_King_vn_vn_va_vc_track2_vn/data.npz": {
+          "midi2params": {
+            "Full": 0.15778122834861266,
+            "Note": 0.27162175515302506,
+            "Error": 1.6322013687517907
+          },
+          "instrument_ols": {
+            "Full": 0.36494747219620455,
+            "Note": -0.33653562449623914,
+            "Error": 0.6597070509637215
+          },
+          "note_shape": {
+            "Full": 0.6268502293107148,
+            "Note": 0.3354087813924932,
+            "Error": 0.4451783037915536
+          }
+        },
+        "datagen/solo/Bach10/processed_vn/10-NunBitten/data.npz": {
+          "midi2params": {
+            "Full": 0.10735495276578633,
+            "Note": 0.32015758383701526,
+            "Error": 0.41236058482044985
+          },
+          "instrument_ols": {
+            "Full": 0.25778153537035237,
+            "Note": 0.10768933680016247,
+            "Error": 1.6152420202368116
+          },
+          "note_shape": {
+            "Full": 0.4032058647771064,
+            "Note": 0.18305128571363585,
+            "Error": 1.8013361402598866
+          }
+        },
+        "datagen/solo/URMP/processed_vn/36_Rondeau_vn_vn_va_vc_track2_vn/data.npz": {
+          "midi2params": {
+            "Full": -0.02604487060032335,
+            "Note": -0.19058026158049027,
+            "Error": 2.1047216984104034
+          },
+          "instrument_ols": {
+            "Full": 0.4646928617701949,
+            "Note": 0.309047174579946,
+            "Error": 0.45648103810135443
+          },
+          "note_shape": {
+            "Full": 0.3444698262639242,
+            "Note": -0.24989010458912078,
+            "Error": 0.5023179986005751
+          }
+        },
+        "datagen/solo/URMP/processed_vn/37_Rondeau_fl_vn_va_cl_track2_vn/data.npz": {
+          "midi2params": {
+            "Full": -0.018092698525659964,
+            "Note": -0.19245753490073236,
+            "Error": 2.0009528409141972
+          },
+          "instrument_ols": {
+            "Full": 0.4646928617701949,
+            "Note": 0.309047174579946,
+            "Error": 0.45648103810135443
+          },
+          "note_shape": {
+            "Full": 0.3444698262639242,
+            "Note": -0.24989010458912078,
+            "Error": 0.5023179986005751
+          }
+        }
+      }
+    }
+  },
+  "scope": "Fixed adapted pipeline output diagnostics, not fair architecture ranking or independent unseen-data evaluation",
+  "sha256": {
+    "analysis_arrays.npz": "d58482206bc7f740098f8e53cb802f17eae8d9ebcb6712b8273ac69edfbefe0a",
+    "public_rms_arrays.npz": "5adf51119e7115bc67cf286ad6f6dab05a16a81fbf872b159ef7a75fa7f12b8b",
+    "PLAN.md": "3b734e632e6fe7caf9ffe72b9e25d360a5e6ebf92f81ecd43ed71b842f69c741",
+    "public_directions.py": "f5be6fc74a2b77b24bff560415e7f5300ea687d5e7db0275fc3594c59ce38df6"
+  }
+}

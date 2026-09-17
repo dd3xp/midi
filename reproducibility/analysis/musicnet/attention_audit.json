@@ -1,0 +1,45 @@
+{
+  "track": "datagen/solo/URMP/processed_vn/01_Jupiter_vn_vc_track1_vn/data.npz",
+  "frames": 512,
+  "torch": "2.10.0+cu128",
+  "tests": [
+    {
+      "cudnn_tf32": true,
+      "fastpath": true,
+      "max_abs_cpu": 3.945082426071167e-05,
+      "rms_cpu": 7.786143214616459e-06,
+      "max_amp": 0.05664137005805969
+    },
+    {
+      "cudnn_tf32": true,
+      "fastpath": false,
+      "max_abs_cpu": 1.7546117305755615e-06,
+      "rms_cpu": 2.0356671370791446e-07,
+      "max_amp": 0.05667516589164734
+    },
+    {
+      "cudnn_tf32": true,
+      "max_abs_between_backends": 3.7711113691329956e-05,
+      "allclose": false
+    },
+    {
+      "cudnn_tf32": false,
+      "fastpath": true,
+      "max_abs_cpu": 3.775954246520996e-05,
+      "rms_cpu": 7.62718354962999e-06,
+      "max_amp": 0.056641872972249985
+    },
+    {
+      "cudnn_tf32": false,
+      "fastpath": false,
+      "max_abs_cpu": 3.725290298461914e-08,
+      "rms_cpu": 5.196167496279713e-09,
+      "max_amp": 0.056675754487514496
+    },
+    {
+      "cudnn_tf32": false,
+      "max_abs_between_backends": 3.777444362640381e-05,
+      "allclose": false
+    }
+  ]
+}

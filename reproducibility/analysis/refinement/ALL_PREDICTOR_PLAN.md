@@ -1,0 +1,5 @@
+# Same diagnostics for the three internal neural predictors
+
+15 September 2026, after the v0.26 review. Apply the already defined direction, magnitude and cutoff calculations to Mamba, S4D and BiGRU against instrument OLS and shared envelope. Use all186 original tracks, note intervals, frozen per-track metrics and error reports. Report the complete 0/.01/.025/.05/.10 grid, quartiles for opposing Note-correlation changes and worsening log note-RMSE among Full-improved tracks. Group-bootstrap proportions use the unchanged 5000-draw seed20260911 recipe. This extends description across the available predictors, not independent validation.
+
+Additionally display full-track original note-mean scatter plots for the same four previously selected RMS examples; do not choose new examples or windows by appearance. Plot both predictions against recorded target note means with an identity line and no fitted rescaling. Supply composition tables from the existing track/fold metadata (instruments, corpus groups, fold sizes). No retraining, changed predictions or new method selection.

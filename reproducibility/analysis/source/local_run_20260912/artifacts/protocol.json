@@ -1,0 +1,71 @@
+{
+  "version": "paper1-internal-confirmation-v1",
+  "created_utc": "2026-09-11T22:43:21.101705+00:00",
+  "status": "fixed-protocol internal re-evaluation on previously studied corpora; not pristine external confirmation",
+  "input": "20 features; velocity zeroed BEFORE extraction for every instrument, no teacher or audio-side inference inputs",
+  "split": "four outer piece/duplicate-group folds; inner 20% of remaining groups for validation; seed 20260911",
+  "selection": "minimum validation loss on eight deterministic windows per validation track; evaluation only after training",
+  "models": [
+    "mamba",
+    "s4d"
+  ],
+  "model_seed": 42,
+  "max_epochs": 300,
+  "early_stopping_patience": 60,
+  "crop_frames": 512,
+  "batch_size": 32,
+  "initial_lr": 0.001,
+  "optimizer": "Adam, no weight decay",
+  "schedule": "10 epoch warmup then cosine to 1e-6",
+  "amp_head": "existing note_aware_amp_v2, attention 2 layers / 8 heads / ff1024",
+  "loss": {
+    "lam": 2.0,
+    "per_crop_amp_norm": true,
+    "huber_loss": true,
+    "huber_delta": 1.0,
+    "corr_weight": 0.3,
+    "grad_weight": 0.2,
+    "multiscale_weight": 0.3
+  },
+  "matched_training": "same crop, objectives, batches, optimizer for both encoders; encoder size differs and is reported",
+  "baseline_models": [
+    "note gate",
+    "global log-OLS",
+    "per-instrument log-OLS",
+    "note-level log-OLS",
+    "note-level OLS with training-fitted per-instrument shape"
+  ],
+  "primary_metrics": [
+    "raw",
+    "active_raw",
+    "note_mean",
+    "within_note"
+  ],
+  "sensitivity": {
+    "sigma_seconds": [
+      0.05,
+      0.1,
+      0.2,
+      0.5,
+      1.0
+    ],
+    "log_eps": [
+      1e-08,
+      1e-07,
+      1e-06
+    ],
+    "min_note_frames": [
+      2,
+      4,
+      8
+    ]
+  },
+  "statistics": "paired bootstrap over unique piece/duplicate groups, 5000 resamples; no significance claims from initialization SD",
+  "gpu_limit": 1,
+  "gpu_index": 0,
+  "automatic_gpu_switching": false,
+  "automatic_restart_after_kill": false,
+  "resumption": "atomic epoch checkpoints include model, optimizer, scheduler, RNG, best score and completed epoch",
+  "scope": "paper1 diagnostic analysis only; no ensemble search, external dataset search, or SOTA claims",
+  "gpu_sharing": "existing processes allowed; require >=24 GiB free before each job; PyTorch allocator cap 20% (~16 GiB); stop on kill/error"
+}
