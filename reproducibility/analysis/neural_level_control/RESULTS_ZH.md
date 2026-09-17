@@ -19,4 +19,4 @@
 
 verify.py使用独立的区间积分、中心化点积Pearson和显式拼接整组bootstrap，复核全部266个模型—轨道控制对。结果通过；原Note OLS与共享形状的Full复算仍为.467和.546。prepare.py最初两次预检仅因角色字段名及原哈希定义读取错误而停止，修正为validation/evaluation及amp+f0后通过；当时尚未计算新的对比结果，未更改研究计划。
 
-原始输入位于paper1/revision_20260915/companion。analyze.py拒绝覆盖已有results.json；重新执行时应在复制的独立目录中运行，保留已冻结结果。公开仓库已有相同analysis_arrays.npz、tracks.json、folds.json；本轮新代码与数组先保存在本地完整交付包，没有自动发布。
+原始输入位于paper1/revision_20260915/companion。analyze.py拒绝覆盖已有results.json；重新执行时应在复制的独立目录中运行，保留已冻结结果。公开仓库已有相同analysis_arrays.npz、tracks.json、folds.json；新增代码与核验结果见复现目录，新生成的受控数组随本地完整交付包提供，也可直接运行代码重建。
