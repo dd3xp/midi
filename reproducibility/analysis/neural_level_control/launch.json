@@ -1,0 +1,7 @@
+{
+  "utc": "2026-09-17T22:47:35.699410+00:00",
+  "command": "python paper1/strong_level_control_20260918/analyze.py",
+  "plan_sha256": "3548401e004ecd4f1f0cfbceda967d7750a5540d9c02d189d2fba1991af0147a",
+  "code_sha256": "ef0bf07fbf675cca874516d6fc0d3fcdf89cb140123290af8be2412c42dabd76",
+  "input_manifest_sha256": "117f811b6978d1e16d744ac38c7bde5f6585973195fe7b121d8eb79b2fc81c99"
+}

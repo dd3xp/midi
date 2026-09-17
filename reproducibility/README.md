@@ -65,6 +65,16 @@ Use these root-level replay entry points. The execution archive preserves the hi
 
 Fresh training commands are documented in `assets/execution/README.md`. They require a new output directory and a compatible GPU, and do not overwrite checkpoints. The training source and original protocol are retained, but restarting on different hardware need not reproduce an identical floating-point training trajectory. Running this repository's default commands does not launch GPU training.
 
+## Additional fixed-level shape control
+
+The additional retrospective control fixes the archived Mamba/S4D note means and gap predictions, then compares constant versus the same training-fitted shared shapes on 133 nonoverlapping tracks. Note and Error remain invariant while Full changes. It requires no retraining or GPU and does not alter the MusicNet protocol:
+
+```sh
+python analysis/neural_level_control/reproduce.py --inputs analysis
+```
+
+The runner uses a new output directory and verifies every per-track result. See `analysis/neural_level_control/README.md` for the recorded plan, scope and results.
+
 ## Scope and provenance
 
 The 186-track study is retrospective: model development had access to this population. Additional seeds do not remove that history. MusicNet recordings were previously unused and the transfer choices were frozen before their outputs. Results retain unfavorable comparisons and the absence of average template gain on MusicNet.

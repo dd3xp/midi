@@ -1,0 +1,29 @@
+{
+  "utc": "2026-09-17T22:49:13.110693+00:00",
+  "status": "passed",
+  "saved_model_track_arrays_checked": 266,
+  "checks": [
+    "interval sum conservation",
+    "unchanged gaps and horizon",
+    "independent centered-dot-product Pearson",
+    "independent explicit-concatenation group bootstrap"
+  ],
+  "models": {
+    "mamba": {
+      "tracks": 133,
+      "groups": 34,
+      "independent_interval": [
+        0.052005993092463045,
+        0.08891730670470736
+      ]
+    },
+    "s4d": {
+      "tracks": 133,
+      "groups": 34,
+      "independent_interval": [
+        0.052470124504408855,
+        0.09002138374588864
+      ]
+    }
+  }
+}
