@@ -34,14 +34,14 @@ Each checker asserts agreement with the retained reference outputs. The basic in
 
 ## 2. Replay checkpoints and reproduce additional seeds
 
-Larger cached inputs and checkpoints are distributed as SHA256-verified GitHub Release assets rather than Git objects. After installing a suitable CPU or CUDA build of PyTorch 2.10.0, run:
+Larger cached inputs and checkpoints are distributed as SHA256-verified GitHub Release assets rather than Git objects. Install PyTorch 2.10.0 in the same environment (for CPU replay: `python -m pip install torch==2.10.0 --index-url https://download.pytorch.org/whl/cpu`), then run:
 
 ```sh
 python fetch_assets.py execution
-python assets/execution/replay.py
+python replay_checkpoints.py
 ```
 
-This performs CPU inference using all twelve seed-42 checkpoints, one complete evaluation track per checkpoint, compared with stored predictions at `rtol=1e-3, atol=1e-5`. Add `--all-tracks` to the replay command for complete inference. The default replay is an execution check, not a substitute for the full-coverage metric reproduction above. PyTorch 2.10.0+cu128, NumPy 2.4.3 and SciPy 1.17.1 were used for the local execution check; no cross-hardware bitwise identity is claimed.
+This performs CPU inference using all twelve seed-42 checkpoints, one complete evaluation track per checkpoint, compared with stored predictions at `rtol=1e-3, atol=1e-5`. Add `--all-tracks` to the replay command for complete inference. Results go into a new file under `runs/`; the downloaded archive remains unchanged. The default replay is an execution check, not a substitute for the full-coverage metric reproduction above. PyTorch 2.10.0+cu128, NumPy 2.4.3 and SciPy 1.17.1 were used for the local execution check; no cross-hardware bitwise identity is claimed.
 
 ```sh
 python fetch_assets.py mamba-seeds s4d-seeds
@@ -50,6 +50,18 @@ python analysis/acceptance/analyze_seeds.py --model s4d --root assets/s4d-seeds 
 ```
 
 Run the fixed-output command first so `runs/` exists. The seed programs verify checkpoint/prediction hashes, fold roles, timeline correspondence, finite outputs and 186 unique tracks per seed, then recompute metrics and paired comparisons separately. They do not pool the repeated tracks into 558 independent observations. The last Mamba seed456/fold3 job ran on a different device, as recorded in its provenance.
+
+Frozen MusicNet neural predictions can also be replayed from the same execution asset:
+
+```sh
+python replay_musicnet.py
+# Optional: replay both models on all 21 complete recordings
+python replay_musicnet.py --all-tracks
+```
+
+The default checks each model on the shortest complete recording. It verifies the pre-outcome fold-0 checkpoint hashes, uses the retained features without fitting, and compares CPU predictions with the archived transfer at `rtol=1e-4, atol=1e-6`. Full-recording attention can require substantial CPU memory. This does not change the transfer model choice or protocol.
+
+Use these root-level replay entry points. The execution archive preserves the historical `replay.py`, which writes its original result path and is not the repeatable public entry point.
 
 Fresh training commands are documented in `assets/execution/README.md`. They require a new output directory and a compatible GPU, and do not overwrite checkpoints. The training source and original protocol are retained, but restarting on different hardware need not reproduce an identical floating-point training trajectory. Running this repository's default commands does not launch GPU training.
 

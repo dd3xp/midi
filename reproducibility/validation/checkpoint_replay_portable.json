@@ -1,0 +1,102 @@
+{
+  "torch": "2.10.0+cu128",
+  "all_tracks": false,
+  "results": [
+    {
+      "model": "mamba",
+      "fold": 0,
+      "track": "datagen/solo/Bach10/processed_bn/06-DieSonne/data.npz",
+      "seconds": 3.6570000000065193,
+      "max_abs": 4.6253204345703125e-05,
+      "close": true
+    },
+    {
+      "model": "mamba",
+      "fold": 1,
+      "track": "datagen/solo/TRIOS/processed_bn/lussier_bassoon/data.npz",
+      "seconds": 1.8280000000086147,
+      "max_abs": 1.673772931098938e-05,
+      "close": true
+    },
+    {
+      "model": "mamba",
+      "fold": 2,
+      "track": "datagen/solo/Bach10/processed_bn/01-AchGottundHerr/data.npz",
+      "seconds": 2.625,
+      "max_abs": 3.978610038757324e-06,
+      "close": true
+    },
+    {
+      "model": "mamba",
+      "fold": 3,
+      "track": "datagen/solo/Bach10/processed_bn/07-HerrGott/data.npz",
+      "seconds": 3.202999999979511,
+      "max_abs": 8.102506399154663e-06,
+      "close": true
+    },
+    {
+      "model": "s4d",
+      "fold": 0,
+      "track": "datagen/solo/Bach10/processed_bn/06-DieSonne/data.npz",
+      "seconds": 9.53100000001723,
+      "max_abs": 5.8881938457489014e-05,
+      "close": true
+    },
+    {
+      "model": "s4d",
+      "fold": 1,
+      "track": "datagen/solo/TRIOS/processed_bn/lussier_bassoon/data.npz",
+      "seconds": 4.60899999999674,
+      "max_abs": 2.6766210794448853e-06,
+      "close": true
+    },
+    {
+      "model": "s4d",
+      "fold": 2,
+      "track": "datagen/solo/Bach10/processed_bn/01-AchGottundHerr/data.npz",
+      "seconds": 7.062999999994645,
+      "max_abs": 8.435919880867004e-06,
+      "close": true
+    },
+    {
+      "model": "s4d",
+      "fold": 3,
+      "track": "datagen/solo/Bach10/processed_bn/07-HerrGott/data.npz",
+      "seconds": 8.969000000011874,
+      "max_abs": 2.430751919746399e-06,
+      "close": true
+    },
+    {
+      "model": "bigru",
+      "fold": 0,
+      "track": "datagen/solo/Bach10/processed_bn/06-DieSonne/data.npz",
+      "seconds": 0.4370000000053551,
+      "max_abs": 4.00543212890625e-05,
+      "close": true
+    },
+    {
+      "model": "bigru",
+      "fold": 1,
+      "track": "datagen/solo/TRIOS/processed_bn/lussier_bassoon/data.npz",
+      "seconds": 0.23399999999674037,
+      "max_abs": 6.4782798290252686e-06,
+      "close": true
+    },
+    {
+      "model": "bigru",
+      "fold": 2,
+      "track": "datagen/solo/Bach10/processed_bn/01-AchGottundHerr/data.npz",
+      "seconds": 0.34400000001187436,
+      "max_abs": 7.063150405883789e-06,
+      "close": true
+    },
+    {
+      "model": "bigru",
+      "fold": 3,
+      "track": "datagen/solo/Bach10/processed_bn/07-HerrGott/data.npz",
+      "seconds": 0.42199999999138527,
+      "max_abs": 2.1010637283325195e-06,
+      "close": true
+    }
+  ]
+}

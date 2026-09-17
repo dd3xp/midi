@@ -1,0 +1,22 @@
+{
+  "torch": "2.10.0+cu128",
+  "all_tracks": false,
+  "results": [
+    {
+      "model": "mamba",
+      "track": "MusicNet/2191",
+      "frames": 10285,
+      "seconds": 11.719000000011874,
+      "max_abs": 7.450580596923828e-08,
+      "close": true
+    },
+    {
+      "model": "s4d",
+      "track": "MusicNet/2191",
+      "frames": 10285,
+      "seconds": 32.155999999988126,
+      "max_abs": 6.146728992462158e-08,
+      "close": true
+    }
+  ]
+}
